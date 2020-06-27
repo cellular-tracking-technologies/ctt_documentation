@@ -1,0 +1,116 @@
+---
+title: "Leveraging your CTT Infrastructure with Motus"
+author: "motus@birdscanada.org"
+date: "6/24/2020"
+output:
+  pdf_document:
+    toc: yes
+  html_document:
+    toc: yes
+    number_sections: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+![](/Users/davidlapuma/Dropbox/MyR/RMarkdown/images/motus-logo.png){#id .class width=20%}
+![](/Users/davidlapuma/Dropbox/MyR/RMarkdown/images/BirdsCanadaLogo.png){#id .class width=20%}
+![](/Users/davidlapuma/Dropbox/MyR/RMarkdown/images/ctt_logo_300DPI.jpg){#id .class width=25%}
+
+# The Motus Wildlife Tracking System
+
+When tracking wildlife with automated radio telemetry over vast distances, the challenge of deploying enough receivers to get detections grows exponentially. To remedy this, data can be shared between all researchers so that essentially everyone is sharing receivers. This greatly expands the potential for this technology, but it comes with the added responsibility of coordinating projects, detection data and metadata - that’s where Motus comes in.
+
+## What is Motus?
+
+The Motus Wildlife Tracking System is an international collaborative network of researchers that use automated radio telemetry to simultaneously track hundreds of individuals of numerous species of birds, bats, and insects. The system enables a community of researchers, educators, organizations, and citizens to undertake impactful research and education on the ecology and conservation of migratory animals. When compared to other technologies, automated radio telemetry currently allows researchers to track the smallest animals possible, with high temporal and geographic precision, over great distances.
+
+## How does Motus work?
+
+The entire philosophy behind Motus is that we’re all working together. At its core, Motus is community science. A community of researchers around the world conducting research on animals are tracked by a network of receiving stations maintained by a community of researchers, organizations, non-profits, governments, and individuals. In order for this concept to work, the system requires a centralized database and management system that all participants use. Most importantly, in order for your tags to be detected on any other station in the network, or for other project tags to be detected elsewhere, projects, receivers and tags need to be registered with, and have data processed by Motus. 
+
+While any automated telemetry project can operate in isolation, operating as a Motus project combines the collective impact of local, regional, and even hemispheric projects into one massive collaborative effort that expands the scale and scope of everyone’s work and maximizes the use of scarce research dollars.  It also makes data available and more useful for future projects, collaborative endeavors and large-scale meta analyses. 
+
+## What’s the cost? 
+
+There is NO cost to register your project and receivers to the Motus network and contribute your data. Tags registered to the network are charged a nominal fee to support data processing and ongoing maintenance and development of the system. See the collaboration policy and fee schedule for more information. 
+
+## Data Ownership/Privacy 
+
+The collaborative nature of Motus relies on a certain level of transparency with respect to data. While basic project and tag summary information is made publicly available, researchers have the ability to customize data accessibility and keep their project and data private if necessary. See the collaboration policy for more information.
+
+***
+
+## How to join Motus? *In 3 or 5 easy steps*
+
+1. [Register with Motus](https://motus.org/data/user/new) 
+2. **Create your Project.** Once registered with Motus you can join an existing project, or if registered as a Principal Investigator, you can create your own project. Manage landowners, users, data access levels, and project descriptions.
+3. **Register and manage your Receivers.** Enter and update important metadata about your receiver and station configuration, and upload data. 
+4. ***(Optional)* Register your Tags.** Enter and update important metadata about your tags and animals.
+5. ***(Optional)* Explore your data.** Use our online resources to explore your data, or download and begin to analyze your data using the Motus R Book.
+
+*** 
+
+## Motus provides
+
+### Collaboration and Community
+
+* Coordinated global network of automated radio telemetry receivers. See Motus by the numbers.
+* Become part of a global research and conservation community.
+* Collaborators have full control over data access.
+* Projects can be designed based on the placement of third-party stations.
+* Tagging data from multiple projects can be utilized in large-scale studies.
+* Troubleshooting and consultation advice from other researchers in the community, Motus staff and technology partners.
+
+### Data archive and management
+
+* One centralized data hub at Birds Canada National Data Centre.
+* Standardized data format across all projects.
+* Permanent archive of data.
+* Access to the research software platform data visualization and management tools.
+* Metadata management platform.
+* Combined data from multiple stations into one simple to use database accessible through R.
+* Import data to Movebank. 
+
+### Data access
+
+* Data is available from all stations in the network as soon as it is uploaded.
+* Real-time data uploads for stations with internet connectivity 
+* Automatic data streaming from the receiver to Motus.org.
+* Public access to station and tag summary data, tracks, and maps via Motus.org.
+
+### Data Analysis and Tools
+
+* All data is automatically packaged and available in real-time through the Motus R Package. 
+* Opportunities to Join a community of scientists developing new code for data processing, modeling, and manipulation.
+* Motus Research Software Platform visualization tools.
+
+### Technology
+
+* Draw on a community Supports options for local-to-hemispheric tracking infrastructure.
+* Partnerships with multiple technology firms for receivers and tags across numerous cutting-edge technologies. 
+* Open-source hardware and software solutions via sensorgnome.org.
+
+***
+
+## Motus is advancing
+
+* **Multi-disciplinary Science**
+	* Movement, migration, and population ecology
+	* Animal behavior and physiology
+	* Environmental management
+* **Conservation**
+	* Populations, survival, and species dynamics
+	* Stopover, site-based, and full life-cycle knowledge 
+	* Informing use of flyways and landscapes
+* **Education**
+	* Undergraduate through postgraduate studies
+	* Open framework for development, code, and analysis sharing
+	* Grade X-12 STEM curricula (science, technology, engineering, math)
+* **Public engagement and storytelling**
+	* Visit https://motus.org/education
+
+***
+
+We are welcoming new collaborators and supporters each week! **For more information or discuss how you or your organization can support Motus, contact [motus@birdscanada.org](motus@birdscanada.org)**

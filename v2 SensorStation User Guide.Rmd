@@ -1,0 +1,469 @@
+---
+title: "Installation Guide for the CTT SensorStation and CTT Nodes"
+author: "david.lapuma@celltracktech.com"
+date: "6/19/2020"
+output:
+  pdf_document:
+    toc: yes
+  html_document:
+    toc: yes
+    number_sections: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+***
+
+# Congratulations
+
+If you are reading this document, then you most likely have purchased one of our Internet of Wildlife (IoW) components. Whether you're doing localized detailed studies of small mammals or songbirds, or you're setting up SensorStations as part of the global Motus Wildlife Tracking System (motus.org), or you're doing something in-between, we've got you covered, and this document is meant to help you get started quickly and painlessly. If for some reason you get stuck along the way, please don't hesitate to reach out to us directly either via email (support@celltracktech.com) or through our online Help Desk here: https://celltracktech.atlassian.net/servicedesk/customer/portals.
+
+# Setting up your CTT IoW System
+
+CTT’s Internet of Wildlife System (IoW) is a complete radio telemetry system that consists of transmitters (radio tags), and receivers. Currently CTT produces two transmitters, the LifeTag^TM^ and the PowerTag^TM^. 
+
+## LifeTag
+
+The **CTT LifeTag** is 100% solar powered, and therefore has no battery. This allows the tag to persist for many years, beeping out its unique digital ID whenever it has sunlight. For species active during the day, and for small animals for which multi-season or multi-year data are required, LifeTags are the obvious choice.
+
+## PowerTag
+
+The **CTT PowerTag** is battery powered which means it can beep out its digitally coded ID 24-hours a day. The life span of a PowerTag is defined by the beep rate (# of beeps per minute) and battery size. For species where nighttime data is important, PowerTags are the perfect fit.
+
+## CTT SensorStation
+
+The **CTT SensorStation** collect data directly from tags and can collect data from a series of Nodes to more precisely locate tags within a study site. The SensorStation stores data and, with an optional GSM data plan, can also send those data directly to the CTT Servers. 
+
+## CTT Node
+
+**CTT Nodes** are essentially *mini-base stations*: devices with integrated solar panels, a lithium battery, and an antenna to collect data from **PowerTags** and **LifeTags** and send those data to the **SensorStation**. These data can then be post-processed to localize tags within a grid of nodes over user-defined time steps.
+
+### Understanding Detection Distances
+
+The detection distance **from Node to Tag** varies for various reasons, including terrain, vegetation, and the behavior of the tagged animals. For instance, a bird flying overhead may be picked up over a kilometer away by a node, but one foraging in dense vegetation may only be detected from a few hundred meters. When using nodes for localization it's important to note that the accuracy of locations of animals wearing tags can be as little as less than 5m, but can range widely depending on the density of Nodes. For localizing tag positions, the spacing and placement of nodes must allow for tags to be detected simultaneously by three or more nodes.
+
+The detection distance from SensorStation to Node is also affected by terrain and vegetation, but also antenna height and type (omni-directional vs. directional). **Therefore, while there is no hard and fast rule, a good starting point is to keep your farthest node within 1-1.5km of the SensorStation.** The number of SensorStations needed for each system depends on the size of the study area. For instance, in a 2 KM^2^ plot, a SensorStation placed at the center of the plot could detect nodes across the entire study area, in most cases with only an omni-directional antenna. Because Nodes are dependent on the SensorStation to receive their data and aggregate it for analysis, it is critical to ensure each node is within the detection radius of at least one SensorStation at all times. 
+
+### Antennas
+
+Either Yagi or omni-directional antennas may be used to either detect tags directly, or to receive data collected by nodes within the study area. Any one SensorStation can be outfitted with multiple antennas to create a customized solution for any wildlife tracking applications.  For example, a bird migration monitoring site  (like a banding/ringing site) might be interested in both mapping specific habitat usage, and detecting passage migrants moving overhead. A grid of nodes placed across focal habitats would achieve the stopover habitat mapping goal and would require a single omni-diretional antenna placed on the SensorStation to receive all of the Node data. Several Yagi antennas programmed to pick up tags would accomplish the second goal of recording presence and direction of overhead passage migrants.
+
+There are many antennas to choose from, so this is by no means an exhaustive list...but these are a few with which we have had success.
+
+  * Omni-directional
+    * [Data Alliance A433O5](https://www.data-alliance.net/antenna-433mhz-5dbi-omnidirectional-fiberglass-w-n-male-vhf-uhf-marine/)
+      * and you'll need [this bracket](https://www.data-alliance.net/l-mount-for-antenna-pole-or-wall-mount-hole-for-n-female-or-rp-sma/)
+      * and [this adapter](https://www.data-alliance.net/n-type-female-to-female-coupler-adapter-w-o-ring-weatherproof-bulkhead/)
+    
+  * Yagi
+    * [ M2Inc 440-6SS](https://www.m2inc.com/FG4406SS
+https://www.dxengineering.com/parts/msq-4406ss)
+
+    * [Laird YS4306](https://www.mouser.com/ProductDetail/Laird-Connectivity/YS4306?qs=EU6FO9ffTwelQ7%2FXOHiHew%3D%3D)
+    
+*__Whatever you choose, make sure you get the proper coaxaial end to connect your antenna to your SensorStation!__*
+
+## Mounting your SensorStation or Nodes
+
+The SensorStation and Nodes are typically attached to **EMT conduit**.  We recommend this because it is rigid and easy to set up. This is *not* what’s commonly referred to as *Black Pipe* used for water and gas lines, but the **galvanized steel pipe** used for running electrical wiring inside. 
+
+![](/Users/davidlapuma/Dropbox/MyR/RMarkdown/images/EMT.png){#id .class width=25%}
+
+**We don’t recommend PVC** because it moves in the wind, becomes brittle, and will snap over time. EMT can be painted if you would like them camouflaged.
+The conduit can be attached to a tripod, mounted directly into the ground, or onto a building or other structure. The Nodes and SensorStations are then attached to the conduit. The diameter of the conduit is typically 1” for the top mast section of the SensorStation (the section to which the antennas are attached; light green in the picture below).
+
+![](/Users/davidlapuma/Dropbox/MyR/RMarkdown/images/SSinstall.png){#id .class width=25%}
+### SensorStation Masts
+
+For every 7 feet of height the base section will increase in diameter by ¼”. For example, in the picture above, a 15 foot mast will have a 1” section (light green) inserted into a 1 ¼” (orange) and then into a 1 ½” (blue). If the conduit is inserted into the ground, the 1 ½” conduit should be inserted into a 4’ section of 2” pipe (dark green). The pipe in the ground is cut in half, the bottom flattened slightly with sledge hammer to keep soil from entering when it is driven into the ground. A block of wood can be used to pound the pipe into the ground to prevent bending the pipe.  If the antenna mast is shorter,  the next size up gets driven into the ground (1/ ¼”). Note that standard EMT conduit does eventually rust, however it will remain very strong for 6-10 years. 
+
+If desired, stainless conduit can be purchased, however it is much more expensive, but **recommended if you are in an area that receives high winds**. It is crucial to overlap each section of pipe by at least 2 feet. **Self tapping screws** are used to hold pipes together, but should not be used within 3-4” of the end of the pipes and/or seams. The chart below should help with what is needed for your setup per SensorStation.
+
+| Total Approx Mast Ht.| EMT Needed for mast (10')| Ground Section Needed (4')| Coax Length Per Antenna |
+| :------------------: | :----------------------: | :-----------------------: | :---------------------: |
+|     7'               |    1"                    |     1 1/4"                |   min 10ft              |
+|    15’               |    1”,1 ¼”               |     1 ½”                  |   min 20’               |
+|    23’               |    1”, 1 ¼”, 1 ½”        |     2”                    |   min 25’               |
+|    28’               |    1”, 1 ¼”, 1 ½”        |     2”- Use full 10’      |   min 30’               |
+
+***Masts higher than 28' not recommended with standard free-standing EMT conduit. Guy wires and/or scaffolded or tripod masts are other options for higher towers.***
+
+### Mounting Nodes
+
+Nodes are typically attached to the top of a ¾” piece of EMT. The clamps shown below come standard with the nodes and accept ¾ or 1” conduit. 
+
+![](/Users/davidlapuma/Dropbox/MyR/RMarkdown/images/nodeClamp.jpg){#id .class width=25%}
+
+A 7/16” socket is used to tighten the clamp bolts. The EMT is typically driven into the ground approximately 2 feet. The height of the nodes can be changed depending on the project, but for best results should be consistent within a study site. We recommend 8’ for most setups, see below for pictures of the node setup in the field. If you choose an alternate mounting method, care should be taken that they are secure. If they are mounted on anything that sways greatly with the wind, the readings won’t be consistent. 
+
+![](/Users/davidlapuma/Dropbox/MyR/RMarkdown/images/nodeBernh.jpg){#id .class width=25%}
+![](/Users/davidlapuma/Dropbox/MyR/RMarkdown/images/NodeBernh2.jpg){#id .class width=25%}
+
+**Note:** ***Nodes purchased in 2020 and beyond have a built-in GPS. Prior to 2020 you must take accurate GPS readings and record that data with the Node ID in order to run post-hoc localization analyses.***
+
+
+## Node Placement
+
+Setting up the CTT Nodes is typically done in a grid in your study site. It is not imperative that they are exactly in a grid, but the closer you can set them up in a grid, the more accurate positioning you will get from the tags. In sites where this is not practical, you can simply set them up where you can, 100-300m apart, and record GPS of the Node locations. Even in a grid setup, it is best practice to take GPS coordinates whether or not they differ from the layout.
+
+## SensorStation Placement
+
+The CTT IoW SensorStation may be placed anywhere within range of the farthest node, which is typically 1-1.5km (although higher placement of SensorStation antennas, and clear line-of-sight between stations and nodes, can achieve longer detection distances). See the next section on SensorStation Configuration and Antenna Detail for more details on this. It is recommended to place the SensorStation antennas at least 2 meters high. The higher the antennas, the better range you will get. 
+
+
+## SensorStation Configuration and Antenna Detail
+
+The standard configuration for the CTT SensorStation allows for receiving data on *five 434MHz* radio ports simultaneously. These can be configured to either record signals from LifeTags/PowerTags and ES-200 GPS loggers (hereafter "tags"), or to collect data from CTT Nodes. *Tags and Nodes cannot be picked up on the same channel*, and how you configure your station depends depends on your study goals. The number of channels necessary on a SensorStation depends on the number of Nodes, whether you want to detect tags/transmitters and/or Nodes directly with the SensorStation, and the distance the Nodes are from the SensorStation.There is no hard limit to the number of nodes that can be detected by a single radio channel, but it's best to keep that number around 50 or less. *Distance to the SensorStation will usually be the limiting factor for the number of nodes detectable by a single radio channel.*
+
+Two types of antennas are commonly used with the SensorStation: *Omnidirectional* and *Yagi*. Omnidirectional antennas efficiently receive energy in a horizontal plane 360 degrees around the SensorStation. Omnidirectional antennas typically do not have as great a range as Yagis, but a benefit is their great detection of tags and nodes that are near the station. 
+
+**Note: Whereas in the past we have recommended specific polarization for omnidirectional antennas picking up Nodes vs. Tags, in our testing we have found the difference negligeable and find vertical omni antennas to be much simpler and less expensive for a greater value over horizontally polarized omnis.** 
+
+Yagis are directional antennas used to detect tags and nodes in a specific direction from the SensorStation. They typically have a 30-60 degree detection range that extends away from the SensorStation. For that reason typically 4 antennas are used, one pointed in each cardinal direction, or two pointed in opposite directions and used to make a “fence”. Yagis can also be used to pick up Nodes that are farther away from the SensorStation. For any Node beyond 500m we recommend a Yagi be used to get better reception. 
+
+**Note that this is meant to be an overview of these antenna types and uses - CTT can help you pick antennas and make recommendations specific to your project and goals.**
+
+# Participating in the Motus Wildlife Tracking System
+
+If you are setting up your SensorStation to participate in the Motus Wildlife Tracking System (motus.org), your station can still be used with CTT Nodes. In general, we recommend Motus stations to include 4 Yagi 10-element antennas pointing in the 4 cardinal directions. A fifth Omni antenna can be installed and dedicated to detecting nodes, or one of the Yagi antennas can be used for nodes while the other three are positioned at 120 degrees for full coverage.  A clear view of the horizon is preferred to get maximum range, so a height as high as possible is also advised. Also see [Appendix I](#appendix_1).
+
+# Operating your SensorStation with a solar panel and 12V Battery
+
+The SensorStation can be hooked up directly to a 12V charge controller. Typical setup would be a 50-100W solar panel connected to a charge controller. The charge controller typically has 3 ports. The 3 ports are 1.) Solar panel 2.) 12V battery 3.)Accessory/Device/consumer- which is whatever you are powering. The Sensor Station is connected to 3rd, the accessory port of the charge controller. That line goes into the Power in of the Sensor Station, see pictures to the right. The ends of the wires that are attached should be tinned for best results. If you do not have access to a soldering gun, twisting the ends of the cables tightly will help them slide in cleanly to the power block. To insert, press the orange tabs with a screwdriver, insert, then release. Pull gently on the wire to make sure it is seated properly and does not come loose.  If you would like to monitor your solar voltage remotely, you will need to use the solar two min connector. it is located above te on/off switch. Simply run two wires from the solar input of the charge controller to a two pin connector . You can solder these and heat-shrink them or simply use wire nuts as shown on the right.
+
+# Attaching the antennas
+
+Antennas are attached to the EMT conduit with the clamps that come with the antennas. If you have a setup that uses 4 yagis, than you will attach the yagis to a 4 or 5-way mounting “hat” you can purchase via online retailers.  Once the antennas are on EMT, attach the coax and wrap the connection with coax tape. Run down the poles to where it will attach to the SensorStation. You can use zip ties to secure the coax to poles where needed. Make sure you have enough coax to form a drip loop for each connection. The SensorStation can be placed inside a building, or fastened to the pole or building, etc. It should either be close to the ground for easy access, or have an ethernet cable run down to an accessible location.
+
+# SensorStation installation example
+
+## Materials
+
+* **LifeTag/PowerTag or ES-200**
+* **Nodes (each)**
+  * 1 x Node box
+  * 1 x Antenna
+  * 1 x Clamp hardware
+  * 1 x  ¾” EMT conduit
+
+* **SensorStation**
+  * 1 x SensorStation
+  * 1 x Enclosure
+  * 4 x SensorStation Screws:  #8-16 X ¼ phillips self tapping screws for plastic:    
+    https://www.mcmaster.com/99461a330
+  * 1 x Power cable
+  * 1 x Omni Antenna
+  * 1 x Coax cable
+
+* **Mounting hardware**
+  * 10’ long  1’’ EMT conduit
+  * 10’ long  1 ¼’’ EMT conduit
+  * 10’ long  1 ½’’ EMT conduit
+  * Tripod
+  * SensorStation Clamp
+  * Tap screws
+  * zip ties
+  * coax tape
+
+* **Optional**
+  * colored electrical tape for color-coding antenna wire ends
+
+
+# SensorStation LEDs
+
+
+## Blue GSM Cellular LED
+
+# Connecting to the SensorStation Web Interface
+
+# The SensorStation Web Interface Overview
+
+# SensorStation LCD Menu
+
+- `File Transfer`
+	- `Mount USB` - mounts a properly formatted (FAT-32 or MS-DOS) USB drive to the SensorStation.
+	- `Unmount USB` - un-mounts a properly formatted (FAT-32 or MS-DOS) USB drive from the SensorStation. This should be used before removing a USB drive from your SensorStation.
+	- `Download` - downloads all data on the SensorStation to the mounted USB drive.
+	- `Get WiFi` - loads WiFi credentials from JSON document located in `wifi` folder on mounted USB drive (see **Connecting your SensorStation to a local wireless network** below).
+- `System`
+	- `About`
+		- `Image` - provides the image creation date, and the date of last update.
+		- `Ids` - displays the `System Ids` which include the `SensorStation serial number` `SIM number` `Broadcom chip id` and `Raspberry Pi serial number`
+		- `Memory` - displays the amount of used memory and the total disk size.
+		- `Uptime` - Displays the total up time since the station was last rebooted.
+	- `QAQC` - this is an internal function which will eventually be useful to the end-user but not as of this printing.
+	- `Time` - The three clocks on the SensorStation, refreshing every two seconds. `r`eal time clock, `g`ps clock and `s`ystem clock.
+	- `Restart` - Triggers a system restart.
+- `Network`
+	- `Cellular`
+		- `Ids` -  - Displays the SIM ID, the IMEI, and the name of the Modem
+		- `Carrier` - Displays the cellular carrier name and signal strength of the connetion, refreshing every 2 seconds. This may be useful when troubleshooting problematic GSM connections, and aiming an external cellular antenna (not included).
+	- `Ping` - This will ping a known web address to determine whether an internet connection is present. If present, it will return **connected**.
+	- `Hostname` - Typically this is `sensorstation.local` and can be used to reach your station when it is connected to WiFi, a local network via Ethernet, or directly to a computer via Ethernet. Once connected, simply navigate to http://sensorstation.local in your web browser to access the SensorStation interface.
+	- `IP Address` - Displays the port of connection and IP address assigned to the SensorStation. You can use the IP address to connect to your SensorStation using the same process outlined above under `Hostname`. For example, if the IP Address were 10.1.10.17, typing `http://10.1.10.17` into your web browswer's URL field would bring up the SensorStation web interface.
+- `Server` - causes the SensorStation to force a checkin to the CTT hardware server. Requires that the SensorStation is connected to the internet via either GSM, WiFi or Ethernet. Note that this process may take a long time depending on connection speed and/or amount of data being sent/received.
+
+***
+
+# Mount a USB thumb drive and download your data
+
+1. Insert a properly formatted (currently only MS DOS or Fat32 formatting is supported) USB drive in one of the seven USB ports.
+2. Navigate to `File Transfer > Mount USB` and press the `SELECT` button. You should see a confirmation message saying `USB Mount:success`.
+3. Use the `BACK` button to go up to the `File Transfer` menu, and select `Download`. A successful download will be followed by a success message.
+4. Use the `Back` button to go up to the `File Transfer` menu and select `Unmount USB`. Once you receive the success message you may remove the USB drive from the SensorStation which will now contain a copy of all the files from the station.
+
+## What's in the folder?
+
+On your USB drive you will find several files... 
+
+  * **gps** files - these contain the GPS coordinates of the SensorStation's location
+	  * `recorded at` - time/date stamp for the time the row was written to the file (UTC)
+	  * `gps at` - time/date stamp for the instantaneous time of the last GPS fix (UTC)
+	  * `latitude` - in decimal degrees
+	  * `longitude` - in decimal degrees
+	  * `altitude` - in meters
+	  * `quality`
+		  * `1` - No fix.
+		  * `2` - 2D fix. Medium quality.
+		  * `3` - 3D fix. Highest quality.
+	  * `mean lat` - in decimal degrees, based on n fixes.
+	  * `mean lng` - in decimal degrees, based on n fixes.
+	  * `n fixes` - number of fixes used to calculate mean lat and lng. 
+
+* **log** files
+	* `msg at` - The date/time stamp of the message.
+	* `msg` - The text string of the message at that time.
+
+* **raw-data** files
+	* `Time` - Date/time stamp of the data point in `YYYY-MM-DD HH:MM:SS`.
+	* `RadioID` - The ID of the radio from which the data point was collected. These correspond to the Radios L1 - L5 on your SensorStation (standard 434MHz radios).
+	* `TagID` - The 8-digit ID of the tag that was detected. Note that for tags with 10-digit IDs (e.g. V2 LifeTag), this will be represented by the first 8 digits in that ID.
+	* `TagRSSI` - The signal strength of the transmission, measured in Decibals (DB). Values. closer to zero represent stronger signals. Values below -110 DB are typically not useful for estimating distance.
+	* `NodeId` - The unique ID of the node from which the transmission was received.
+	* `Validated` - Binary value that indicates whether the CRC value corroborated the unique tag ID. 0 = invalidated; 1 = validated. **MORE EXPLANATION HERE**
+
+And two folders:
+
+  * `SGData` - contains any 166MHz data collected by your station.
+  * `uploaded` - contains any 434MHz data that has been previously uploaded to CTT servers.
+  
+***
+# Connecting to your SensorStation via Ethernet
+
+## Before you get started you will need...
+
+  * 2 USB to Ethernet adapters (we recommend: https://tinyurl.com/yc6llze4)
+  * An Ethernet cable
+  
+## Making the Connection
+
+  1. Connect each end of the Ethernet cable to the two USB->Ethernet adapters.
+  2. Plug one USB end of an adapter into any of the USB ports on your SensorStation.
+  3. Plug the USB end of the second adapter into your computer and wait up to two minutes to allow the SensorStation to acquire the IP address from your computer.
+  4. You can test this connection through several diagnostics in the LCD menu.
+    * `Network > Ping` will indicate a connection.
+    * `Network > IP Address` will display a valid IP address.
+  5. Open a web browser on your computer, and put the IP address from Step 5 into the URL window of the browser. The web interface should appear.
+  
+  *If for some reason you are unable to connect after Step 3, try restarting both the SensorStation and your computer and continue to Step 4.*
+  
+***
+
+# Connecting your SensorStation to a local wireless network
+
+You can connect your SensorStation to a local wireless network with a few simple steps.
+
+## Before you get started you will need...
+
+  * WiFi adapter Like this one: https://store.celltracktech.com/products/wifi-usb-adapter-add-on-for-sensorstation-v2.
+  * Properly formatted USB thumb drive (Fat-32 or MS-DOS formatting currently supported).
+  * A code editor where you can control the programming language and line encoding. We recommend the free Visual Studio Code (https://code.visualstudio.com).
+  
+## Creating the JSON file
+
+  1. In your code editor, create a new file and set the **Language Mode** to `JSON` and the **End of Line Sequence** to **LF** (for Line Feed).
+  2. Type the following into the file:
+  ```
+    {
+      "ssid":"my_ssid",
+      "psk":"my_password" 
+    }
+  ````
+  
+  **Make sure you change "my_ssid" to the name of your wifi network and "my_password" to the password for your wifi network!**
+  
+  
+  3. Save the file and name it `credentials.json`.
+  4. Create an empty folder on your USB thumb drive called `wifi`.
+  5. Copy `credentials.json` file to the `wifi` folder.
+
+## Loading the JSON file onto your SensorStation
+
+  1. Make sure your SensorStation is powered on and the menu is visible on the LCD screen
+  2. Insert your USB thumb drive into any of the USB ports on your SensorStation.
+  3. Using the four buttons right of the LCD screen, navigate to `File Transfer > Mount USB` and click the `Select` button.
+  4. You should receive a `success` message.
+  5. Now navigate to `File Transfer > Get WiFi` and click the `Select` button.
+  6. You should receive a `success` message.
+  7. Restart your SensorStation.
+  8. After restart, your SensorStation should be connected to your local wifi network. You can test this connection through several diagnostics in the LCD menu.
+  * `Network > Ping` will indicate a connection.
+  * `Network > IP Address` will display a valid IP address.
+  
+## Connecting to your wifi-enabled SensorStation
+
+Once your station has connected to your wifi network, you can connect to your SensorStation wirelessly via any device on the **same wifi network** as the station.
+
+  * Connect your computer, tablet or smartphone to the same wifi network as your SensorStation.
+  * open a web browser on your computer, tablet or smartphone and navigate to the IP address found via the `Network > IP Address` on your SensorStation's LCD screen. Alternatively you can use the name found in `Network > Hostname`, which is typically `sensorstation.local`.
+  
+***
+  
+# Updating your SensorStation to the latest build
+
+You can now update your SensorStation to the latest deployment build right through the web interface.
+
+**Requirement:**
+
+  * Because the update will be downloaded from the cloud, your SensorStation must be connected to the internet, either via the *on-board LTE module*, hardwired via *Ethernet* (this includes being connected to a computer via Ethernet which is connected to the internet), or wirelessly via a *WiFi adapter*.
+
+## Updating your SensorStation
+
+  1. With the CTT Sensor Station Overview page open in your browser, scroll down to `Server Utilities` on the right sidebar. 
+  2. Click the button labeled `Station Update`, which will open the `Sensor Station Software Updater` console
+  3. Scroll down below the console window and click on the `Update Station` button. This will begin the update process. Be aware that the station will be pulling code from five different code bases, which may take up to several minutes depending on your connection speed. 
+  4. When the process is complete, you will receive a `Station connection disconnected` dialogue. **This indicates that the update is complete** and that the system has restarted. You may now click the dialogue to clear it, and then click the button at the bottom of the screen to go `Back to Main Interface`. 
+  
+***
+  
+# Troubleshooting
+
+**I get an error when I attempt to mount my USB drive**
+
+*Your USB drive may not be formatted properly*
+
+**I have successfully mounted my USB drive but when I go to `Add Wifi` I get an error**
+
+*Either your USB drive is not formatted properly (some formats will allow you to mount, but not to read the file, such as X-Fat on Mac)* **or** *your JSON file is not properly formatted.*
+
+  * Verify the following:
+    * Your file is named `credentials.json`
+    * Your file is in a folder called `wifi`
+    * There is only one folder called `wifi` on your USB thumb drive
+    * Your JSON file was created with the End of Line Sequence set to **LF**
+    * Your JSON file was properly formatted (see **#2** under **Creating the JSON file** above)
+    * Note you can always check your code validity by pasting it into this website: https://jsonlint.com and clicking `Validate JSON`
+    
+***
+
+# Known Bugs
+
+***
+
+# Appendix I: Leveraging your CTT Infrastructure with Motus {#appendix_1}
+
+![](/Users/davidlapuma/Dropbox/MyR/RMarkdown/images/motus-logo.png){#id .class width=20%}
+![](/Users/davidlapuma/Dropbox/MyR/RMarkdown/images/BirdsCanadaLogo.png){#id .class width=20%}
+![](/Users/davidlapuma/Dropbox/MyR/RMarkdown/images/ctt_logo_300DPI.jpg){#id .class width=25%}
+
+## The Motus Wildlife Tracking System
+
+When tracking wildlife with automated radio telemetry over vast distances, the challenge of deploying enough receivers to get detections grows exponentially. To remedy this, data can be shared between all researchers so that essentially everyone is sharing receivers. This greatly expands the potential for this technology, but it comes with the added responsibility of coordinating projects, detection data and metadata - that’s where Motus comes in.
+
+## What is Motus?
+
+The Motus Wildlife Tracking System is an international collaborative network of researchers that use automated radio telemetry to simultaneously track hundreds of individuals of numerous species of birds, bats, and insects. The system enables a community of researchers, educators, organizations, and citizens to undertake impactful research and education on the ecology and conservation of migratory animals. When compared to other technologies, automated radio telemetry currently allows researchers to track the smallest animals possible, with high temporal and geographic precision, over great distances.
+
+## How does Motus work?
+
+The entire philosophy behind Motus is that we’re all working together. At its core, Motus is community science. A community of researchers around the world conducting research on animals are tracked by a network of receiving stations maintained by a community of researchers, organizations, non-profits, governments, and individuals. In order for this concept to work, the system requires a centralized database and management system that all participants use. Most importantly, in order for your tags to be detected on any other station in the network, or for other project tags to be detected elsewhere, projects, receivers and tags need to be registered with, and have data processed by Motus. 
+
+While any automated telemetry project can operate in isolation, operating as a Motus project combines the collective impact of local, regional, and even hemispheric projects into one massive collaborative effort that expands the scale and scope of everyone’s work and maximizes the use of scarce research dollars.  It also makes data available and more useful for future projects, collaborative endeavors and large-scale meta analyses. 
+
+## What’s the cost? 
+
+There is NO cost to register your project and receivers to the Motus network and contribute your data. Tags registered to the network are charged a nominal fee to support data processing and ongoing maintenance and development of the system. See the collaboration policy and fee schedule for more information. 
+
+## Data Ownership/Privacy 
+
+The collaborative nature of Motus relies on a certain level of transparency with respect to data. While basic project and tag summary information is made publicly available, researchers have the ability to customize data accessibility and keep their project and data private if necessary. See the collaboration policy for more information.
+
+***
+
+## How to join Motus? *In 3 or 5 easy steps*
+
+1. [Register with Motus](https://motus.org/data/user/new) 
+2. **Create your Project.** Once registered with Motus you can join an existing project, or if registered as a Principal Investigator, you can create your own project. Manage landowners, users, data access levels, and project descriptions.
+3. **Register and manage your Receivers.** Enter and update important metadata about your receiver and station configuration, and upload data. 
+4. ***(Optional)* Register your Tags.** Enter and update important metadata about your tags and animals.
+5. ***(Optional)* Explore your data.** Use our online resources to explore your data, or download and begin to analyze your data using the Motus R Book.
+
+*** 
+
+## Motus provides
+
+### Collaboration and Community
+
+* Coordinated global network of automated radio telemetry receivers. See Motus by the numbers.
+* Become part of a global research and conservation community.
+* Collaborators have full control over data access.
+* Projects can be designed based on the placement of third-party stations.
+* Tagging data from multiple projects can be utilized in large-scale studies.
+* Troubleshooting and consultation advice from other researchers in the community, Motus staff and technology partners.
+
+### Data archive and management
+
+* One centralized data hub at Birds Canada National Data Centre.
+* Standardized data format across all projects.
+* Permanent archive of data.
+* Access to the research software platform data visualization and management tools.
+* Metadata management platform.
+* Combined data from multiple stations into one simple to use database accessible through R.
+* Import data to Movebank. 
+
+### Data access
+
+* Data is available from all stations in the network as soon as it is uploaded.
+* Real-time data uploads for stations with internet connectivity 
+* Automatic data streaming from the receiver to Motus.org.
+* Public access to station and tag summary data, tracks, and maps via Motus.org.
+
+### Data Analysis and Tools
+
+* All data is automatically packaged and available in real-time through the Motus R Package. 
+* Opportunities to Join a community of scientists developing new code for data processing, modeling, and manipulation.
+* Motus Research Software Platform visualization tools.
+
+### Technology
+
+* Draw on a community Supports options for local-to-hemispheric tracking infrastructure.
+* Partnerships with multiple technology firms for receivers and tags across numerous cutting-edge technologies. 
+* Open-source hardware and software solutions via sensorgnome.org.
+
+***
+
+## Motus is advancing
+
+* **Multi-disciplinary Science**
+	* Movement, migration, and population ecology
+	* Animal behavior and physiology
+	* Environmental management
+* **Conservation**
+	* Populations, survival, and species dynamics
+	* Stopover, site-based, and full life-cycle knowledge 
+	* Informing use of flyways and landscapes
+* **Education**
+	* Undergraduate through postgraduate studies
+	* Open framework for development, code, and analysis sharing
+	* Grade X-12 STEM curricula (science, technology, engineering, math)
+* **Public engagement and storytelling**
+	* Visit https://motus.org/education
+
+***
+
+We are welcoming new collaborators and supporters each week! **For more information or discuss how you or your organization can support Motus, contact [motus@birdscanada.org](motus@birdscanada.org)**
+
+
+
