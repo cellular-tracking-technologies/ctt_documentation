@@ -3,11 +3,11 @@ title: "Installation Guide for the CTT SensorStation and CTT Nodes"
 author: "david.lapuma@celltracktech.com"
 date: "6/19/2020"
 output:
+  pdf_document:
+    toc: yes
   html_document:
     toc: yes
     number_sections: yes
-  pdf_document:
-    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -59,14 +59,13 @@ For both the SensorStation and Nodes we recommend attaching to **EMT conduit**. 
 
 ![](/Users/davidlapuma/github/ctt_documentation/images/EMT.png){#id .class width=25%}
 
+### Building a mast for your SensorStation
+
 **We don’t recommend PVC** because it moves in the wind, becomes brittle, and will snap over time. EMT can be painted if you would like them camouflaged.
 
 The conduit can be attached to a tripod, mounted directly into the ground, or onto a building or other structure. The Nodes and SensorStations are then attached to the conduit. The diameter of the conduit is typically 1” for the top mast section of the SensorStation (the section to which the antennas are attached; light green in the picture below).
 
 ![](/Users/davidlapuma/github/ctt_documentation/images/SSinstall.png){#id .class width=25%}
-### SensorStation Masts
-
-### Building a mast for your SensorStation
 
 For every 7 feet of height the base section will increase in diameter by ¼”. For example, in the picture above, a 15 foot mast will have a 1” section (light green) inserted into a 1 ¼” (orange) and then into a 1 ½” (blue). If the conduit is inserted into the ground, the 1 ½” conduit should be inserted into a 4’ section of 2” pipe (dark green). The pipe in the ground is cut in half, the bottom flattened slightly with sledge hammer to keep soil from entering when it is driven into the ground. A block of wood can be used to pound the pipe into the ground to prevent bending the pipe.  If the antenna mast is shorter,  the next size up gets driven into the ground (1/ ¼”). Note that standard EMT conduit does eventually rust, however it will remain very strong for 6-10 years. 
 
@@ -132,7 +131,8 @@ While there are many antennas to choose from, these are a few that we can recomm
 
 Antennas are attached to the EMT conduit with the clamps that come with the antennas. If you have a setup that uses 4 yagis, than you will attach the yagis to a 4 or 5-way mounting “hat” you can purchase via online retailers.  Once the antennas are on EMT, attach the coax and wrap the connection with coax tape. Run down the poles to where it will attach to the SensorStation. You can use zip ties to secure the coax to poles where needed. Make sure you have enough coax to form a drip loop for each connection.
 
-![](/Users/davidlapuma/github/ctt_documentation/images/diagram_drip-loop.jpg)
+![](/Users/davidlapuma/github/ctt_documentation/images/diagram_drip-loop.jpg){#id .class width="25%"}
+
 ### Placing your SensorStation
 The SensorStation can be placed inside a building, or fastened to the pole or building, etc. It should either be close to the ground for easy access, or have an ethernet cable run down to an accessible location.
 
