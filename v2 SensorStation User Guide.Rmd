@@ -3,16 +3,18 @@ title: "Installation Guide for the CTT SensorStation and CTT Nodes"
 author: "david.lapuma@celltracktech.com"
 date: "6/19/2020"
 output:
-  pdf_document:
-    toc: yes
   html_document:
     toc: yes
     number_sections: yes
+  pdf_document:
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+
 
 ***
 
@@ -24,58 +26,43 @@ If you are reading this document, then you most likely have purchased one of our
 
 CTT’s Internet of Wildlife System (IoW) is a complete radio telemetry system that consists of transmitters (radio tags), and receivers. Currently CTT produces two transmitters, the LifeTag^TM^ and the PowerTag^TM^. 
 
-## LifeTag
+### LifeTag
 
 The **CTT LifeTag** is 100% solar powered, and therefore has no battery. This allows the tag to persist for many years, beeping out its unique digital ID whenever it has sunlight. For species active during the day, and for small animals for which multi-season or multi-year data are required, LifeTags are the obvious choice.
 
-## PowerTag
+### PowerTag
 
 The **CTT PowerTag** is battery powered which means it can beep out its digitally coded ID 24-hours a day. The life span of a PowerTag is defined by the beep rate (# of beeps per minute) and battery size. For species where nighttime data is important, PowerTags are the perfect fit.
 
-## CTT SensorStation
+### CTT SensorStation
 
 The **CTT SensorStation** collect data directly from tags and can collect data from a series of Nodes to more precisely locate tags within a study site. The SensorStation stores data and, with an optional GSM data plan, can also send those data directly to the CTT Servers. 
 
-## CTT Node
+### CTT Node
 
 **CTT Nodes** are essentially *mini-base stations*: devices with integrated solar panels, a lithium battery, and an antenna to collect data from **PowerTags** and **LifeTags** and send those data to the **SensorStation**. These data can then be post-processed to localize tags within a grid of nodes over user-defined time steps.
 
-### Understanding Detection Distances
+## Understanding Detection Distances
 
 The detection distance **from Node to Tag** varies for various reasons, including terrain, vegetation, and the behavior of the tagged animals. For instance, a bird flying overhead may be picked up over a kilometer away by a node, but one foraging in dense vegetation may only be detected from a few hundred meters. When using nodes for localization it's important to note that the accuracy of locations of animals wearing tags can be as little as less than 5m, but can range widely depending on the density of Nodes. For localizing tag positions, the spacing and placement of nodes must allow for tags to be detected simultaneously by three or more nodes.
 
 The detection distance from SensorStation to Node is also affected by terrain and vegetation, but also antenna height and type (omni-directional vs. directional). **Therefore, while there is no hard and fast rule, a good starting point is to keep your farthest node within 1-1.5km of the SensorStation.** The number of SensorStations needed for each system depends on the size of the study area. For instance, in a 2 KM^2^ plot, a SensorStation placed at the center of the plot could detect nodes across the entire study area, in most cases with only an omni-directional antenna. Because Nodes are dependent on the SensorStation to receive their data and aggregate it for analysis, it is critical to ensure each node is within the detection radius of at least one SensorStation at all times. 
 
-### Antennas
 
-Either Yagi or omni-directional antennas may be used to either detect tags directly, or to receive data collected by nodes within the study area. Any one SensorStation can be outfitted with multiple antennas to create a customized solution for any wildlife tracking applications.  For example, a bird migration monitoring site  (like a banding/ringing site) might be interested in both mapping specific habitat usage, and detecting passage migrants moving overhead. A grid of nodes placed across focal habitats would achieve the stopover habitat mapping goal and would require a single omni-diretional antenna placed on the SensorStation to receive all of the Node data. Several Yagi antennas programmed to pick up tags would accomplish the second goal of recording presence and direction of overhead passage migrants.
+## Mounting your Equipment
 
-There are many antennas to choose from, so this is by no means an exhaustive list...but these are a few with which we have had success.
+For both the SensorStation and Nodes we recommend attaching to **EMT conduit**.  We recommend this because it is rigid and easy to set up. This is *not* what’s commonly referred to as *Black Pipe* used for water and gas lines, but the **galvanized steel pipe** used for running electrical wiring inside. 
 
-  * Omni-directional
-    * [Data Alliance A433O5](https://www.data-alliance.net/antenna-433mhz-5dbi-omnidirectional-fiberglass-w-n-male-vhf-uhf-marine/)
-      * and you'll need [this bracket](https://www.data-alliance.net/l-mount-for-antenna-pole-or-wall-mount-hole-for-n-female-or-rp-sma/)
-      * and [this adapter](https://www.data-alliance.net/n-type-female-to-female-coupler-adapter-w-o-ring-weatherproof-bulkhead/)
-    
-  * Yagi
-    * [ M2Inc 440-6SS](https://www.m2inc.com/FG4406SS
-https://www.dxengineering.com/parts/msq-4406ss)
-
-    * [Laird YS4306](https://www.mouser.com/ProductDetail/Laird-Connectivity/YS4306?qs=EU6FO9ffTwelQ7%2FXOHiHew%3D%3D)
-    
-*__Whatever you choose, make sure you get the proper coaxaial end to connect your antenna to your SensorStation!__*
-
-## Mounting your SensorStation or Nodes
-
-The SensorStation and Nodes are typically attached to **EMT conduit**.  We recommend this because it is rigid and easy to set up. This is *not* what’s commonly referred to as *Black Pipe* used for water and gas lines, but the **galvanized steel pipe** used for running electrical wiring inside. 
-
-![](/Users/davidlapuma/Dropbox/MyR/RMarkdown/images/EMT.png){#id .class width=25%}
+![](/Users/davidlapuma/github/ctt_documentation/images/EMT.png){#id .class width=25%}
 
 **We don’t recommend PVC** because it moves in the wind, becomes brittle, and will snap over time. EMT can be painted if you would like them camouflaged.
+
 The conduit can be attached to a tripod, mounted directly into the ground, or onto a building or other structure. The Nodes and SensorStations are then attached to the conduit. The diameter of the conduit is typically 1” for the top mast section of the SensorStation (the section to which the antennas are attached; light green in the picture below).
 
-![](/Users/davidlapuma/Dropbox/MyR/RMarkdown/images/SSinstall.png){#id .class width=25%}
+![](/Users/davidlapuma/github/ctt_documentation/images/SSinstall.png){#id .class width=25%}
 ### SensorStation Masts
+
+### Building a mast for your SensorStation
 
 For every 7 feet of height the base section will increase in diameter by ¼”. For example, in the picture above, a 15 foot mast will have a 1” section (light green) inserted into a 1 ¼” (orange) and then into a 1 ½” (blue). If the conduit is inserted into the ground, the 1 ½” conduit should be inserted into a 4’ section of 2” pipe (dark green). The pipe in the ground is cut in half, the bottom flattened slightly with sledge hammer to keep soil from entering when it is driven into the ground. A block of wood can be used to pound the pipe into the ground to prevent bending the pipe.  If the antenna mast is shorter,  the next size up gets driven into the ground (1/ ¼”). Note that standard EMT conduit does eventually rust, however it will remain very strong for 6-10 years. 
 
@@ -94,12 +81,12 @@ If desired, stainless conduit can be purchased, however it is much more expensiv
 
 Nodes are typically attached to the top of a ¾” piece of EMT. The clamps shown below come standard with the nodes and accept ¾ or 1” conduit. 
 
-![](/Users/davidlapuma/Dropbox/MyR/RMarkdown/images/nodeClamp.jpg){#id .class width=25%}
+![](/Users/davidlapuma/github/ctt_documentation/images/nodeClamp.jpg){#id .class width=25%}
 
 A 7/16” socket is used to tighten the clamp bolts. The EMT is typically driven into the ground approximately 2 feet. The height of the nodes can be changed depending on the project, but for best results should be consistent within a study site. We recommend 8’ for most setups, see below for pictures of the node setup in the field. If you choose an alternate mounting method, care should be taken that they are secure. If they are mounted on anything that sways greatly with the wind, the readings won’t be consistent. 
 
-![](/Users/davidlapuma/Dropbox/MyR/RMarkdown/images/nodeBernh.jpg){#id .class width=25%}
-![](/Users/davidlapuma/Dropbox/MyR/RMarkdown/images/NodeBernh2.jpg){#id .class width=25%}
+![](/Users/davidlapuma/github/ctt_documentation/images/nodeBernh.jpg){#id .class width=25%}
+![](/Users/davidlapuma/github/ctt_documentation/images/NodeBernh2.jpg){#id .class width=25%}
 
 **Note:** ***Nodes purchased in 2020 and beyond have a built-in GPS. Prior to 2020 you must take accurate GPS readings and record that data with the Node ID in order to run post-hoc localization analyses.***
 
@@ -115,15 +102,29 @@ The CTT IoW SensorStation may be placed anywhere within range of the farthest no
 
 ## SensorStation Configuration and Antenna Detail
 
-The standard configuration for the CTT SensorStation allows for receiving data on *five 434MHz* radio ports simultaneously. These can be configured to either record signals from LifeTags/PowerTags and ES-200 GPS loggers (hereafter "tags"), or to collect data from CTT Nodes. *Tags and Nodes cannot be picked up on the same channel*, and how you configure your station depends depends on your study goals. The number of channels necessary on a SensorStation depends on the number of Nodes, whether you want to detect tags/transmitters and/or Nodes directly with the SensorStation, and the distance the Nodes are from the SensorStation.There is no hard limit to the number of nodes that can be detected by a single radio channel, but it's best to keep that number around 50 or less. *Distance to the SensorStation will usually be the limiting factor for the number of nodes detectable by a single radio channel.*
+The standard configuration for the CTT SensorStation allows for receiving data on *five 434MHz* radio ports simultaneously. These can be configured to either record signals from LifeTags/PowerTags and ES-200 GPS loggers (hereafter "tags"), or to collect data from CTT Nodes. *Tags and Nodes cannot be picked up on the same channel*, and how you configure your station depends depends on your study goals. The number of channels necessary on a SensorStation depends on the number of Nodes, whether you want to detect tags/transmitters and/or Nodes directly with the SensorStation, and the distance the Nodes are from the SensorStation.There is no hard limit to the number of nodes that can be detected by a single SensorStation, but it's best to keep that number around 50 or less. *Distance to the SensorStation will usually be the limiting factor for the number of nodes detectable by a single SensorStation.*
 
 Two types of antennas are commonly used with the SensorStation: *Omnidirectional* and *Yagi*. Omnidirectional antennas efficiently receive energy in a horizontal plane 360 degrees around the SensorStation. Omnidirectional antennas typically do not have as great a range as Yagis, but a benefit is their great detection of tags and nodes that are near the station. 
 
 **Note: Whereas in the past we have recommended specific polarization for omnidirectional antennas picking up Nodes vs. Tags, in our testing we have found the difference negligeable and find vertical omni antennas to be much simpler and less expensive for a greater value over horizontally polarized omnis.** 
 
-Yagis are directional antennas used to detect tags and nodes in a specific direction from the SensorStation. They typically have a 30-60 degree detection range that extends away from the SensorStation. For that reason typically 4 antennas are used, one pointed in each cardinal direction, or two pointed in opposite directions and used to make a “fence”. Yagis can also be used to pick up Nodes that are farther away from the SensorStation. For any Node beyond 500m we recommend a Yagi be used to get better reception. 
+Yagis are directional antennas used to detect tags and nodes in a specific direction from the SensorStation. They typically have a 30-60 degree detection range that extends away from the SensorStation. For that reason typically 4 antennas are used, one pointed in each cardinal direction, or two pointed in opposite directions and used to make a “fence”. Yagis can also be used to pick up Nodes that are farther away from the SensorStation.
 
-**Note that this is meant to be an overview of these antenna types and uses - CTT can help you pick antennas and make recommendations specific to your project and goals.**
+While there are many antennas to choose from, these are a few that we can recommend from experience:
+
+  * Omni-directional
+    * [Data Alliance A433O5](https://www.data-alliance.net/antenna-433mhz-5dbi-omnidirectional-fiberglass-w-n-male-vhf-uhf-marine/)
+      * and you'll need [this bracket](https://www.data-alliance.net/l-mount-for-antenna-pole-or-wall-mount-hole-for-n-female-or-rp-sma/)
+      * and [this adapter](https://www.data-alliance.net/n-type-female-to-female-coupler-adapter-w-o-ring-weatherproof-bulkhead/)
+    
+  * Yagi
+    * [M2Inc 440-6SS](https://www.m2inc.com/FG4406SS)
+    * [Laird YS4306](https://www.mouser.com/ProductDetail/Laird-Connectivity/YS4306?qs=EU6FO9ffTwelQ7%2FXOHiHew%3D%3D)
+    * [Diamond A430S10](https://www.hamradio.com/detail.cfm?pid=H0-005816)
+    * [Diamond A430S15](https://www.dxengineering.com/parts/dmn-a430s15) *for specialized applications where longer-range is required
+    
+*__Whatever you choose, make sure you get the proper coaxaial end to connect your antenna to your SensorStation!__*
+
 
 # Participating in the Motus Wildlife Tracking System
 
@@ -364,9 +365,9 @@ You can now update your SensorStation to the latest deployment build right throu
 
 # Appendix I: Leveraging your CTT Infrastructure with Motus {#appendix_1}
 
-![](/Users/davidlapuma/Dropbox/MyR/RMarkdown/images/motus-logo.png){#id .class width=20%}
-![](/Users/davidlapuma/Dropbox/MyR/RMarkdown/images/BirdsCanadaLogo.png){#id .class width=20%}
-![](/Users/davidlapuma/Dropbox/MyR/RMarkdown/images/ctt_logo_300DPI.jpg){#id .class width=25%}
+![](/Users/davidlapuma/github/ctt_documentation/images/motus-logo.png){#id .class width=10%}
+![](/Users/davidlapuma/github/ctt_documentation/images/BirdsCanadaLogo.png){#id .class width=10%}
+![](/Users/davidlapuma/github/ctt_documentation/images/ctt_logo_300DPI.jpg){#id .class width=15%}
 
 ## The Motus Wildlife Tracking System
 
