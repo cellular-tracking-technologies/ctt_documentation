@@ -3,11 +3,11 @@ title: "Installation Guide for the CTT SensorStation and CTT Nodes"
 author: "david.lapuma@celltracktech.com"
 date: "6/19/2020"
 output:
-  pdf_document:
-    toc: yes
   html_document:
     toc: yes
     number_sections: yes
+  pdf_document:
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -21,6 +21,10 @@ knitr::opts_chunk$set(echo = TRUE)
 # Congratulations
 
 If you are reading this document, then you most likely have purchased one of our Internet of Wildlife (IoW) components. Whether you're doing localized detailed studies of small mammals or songbirds, or you're setting up SensorStations as part of the global Motus Wildlife Tracking System (motus.org), or you're doing something in-between, we've got you covered, and this document is meant to help you get started quickly and painlessly. If for some reason you get stuck along the way, please don't hesitate to reach out to us directly either via email (support@celltracktech.com) or through our online Help Desk here: https://celltracktech.atlassian.net/servicedesk/customer/portals.
+
+# Participating in the Motus Wildlife Tracking System
+
+If you are setting up your SensorStation to participate in the Motus Wildlife Tracking System (motus.org), your station can still be used with CTT Nodes. In general, we recommend Motus stations to include 4 Yagi 10-element antennas pointing in the 4 cardinal directions. A fifth Omni antenna can be installed and dedicated to detecting nodes, or one of the Yagi antennas can be used for nodes while the other three are positioned at 120 degrees for full coverage.  You may also add any number of 166MHz antennas by using a Software Defined Radio (SDR), such as a FunCube or RTL-SDR, via any of the USB ports on the SensorStation (SDRs are sold separately via third-party companies). A clear view of the horizon is preferred to get maximum range, so a height as high as possible is also advised. For more information on Motus, see [Appendix 2](#appendix_2).
 
 # Setting up your CTT IoW System
 
@@ -50,10 +54,43 @@ The **CTT SensorStation** collect data directly from tags and can collect data f
 
 The detection distance **from Node to Tag** varies for various reasons, including terrain, vegetation, and the behavior of the tagged animals. For instance, a bird flying overhead may be picked up over a kilometer away by a node, but one foraging in dense vegetation may only be detected from a few hundred meters. When using nodes for localization it's important to note that the accuracy of locations of animals wearing tags can be as little as less than 5m, but can range widely depending on the density of Nodes. For localizing tag positions, the spacing and placement of nodes must allow for tags to be detected simultaneously by three or more nodes.
 
-The detection distance from SensorStation to Node is also affected by terrain and vegetation, but also antenna height and type (omni-directional vs. directional). **Therefore, while there is no hard and fast rule, a good starting point is to keep your farthest node within 1-1.5km of the SensorStation.** The number of SensorStations needed for each system depends on the size of the study area. For instance, in a 2 KM^2^ plot, a SensorStation placed at the center of the plot could detect nodes across the entire study area, in most cases with only an omni-directional antenna. Because Nodes are dependent on the SensorStation to receive their data and aggregate it for analysis, it is critical to ensure each node is within the detection radius of at least one SensorStation at all times. 
+The detection distance from **SensorStation to Node** is also affected by terrain and vegetation, but also antenna height and type (omni-directional vs. directional). **Therefore, while there is no hard and fast rule, a good starting point is to keep your farthest node within 1-1.5km of the SensorStation.** The number of SensorStations needed for each system depends on the size of the study area. For instance, in a 2 KM^2^ plot, a SensorStation placed at the center of the plot could detect nodes across the entire study area, in most cases with only an omni-directional antenna. Because Nodes are dependent on the SensorStation to receive their data and aggregate it for analysis, it is critical to ensure each node is within the detection radius of at least one SensorStation at all times. 
 
+The detection distance from **SensorStation to Tag** is affected by the same factors as SensorStation to Node, but because many tags are on birds, bats and insects, the relationship between the two objects can change drastically over very short time steps. With line-of-sight, a tag on a bird has been shown to be detectable for **dozens of kilometers** by a SensorStation. On the other hand, birds foraging in dense vegetation may only be detectible by a station within a few kilometers. Therefore, careful consideration of station position with relation to the biological questions being asked is critical for a successful deployment.
+## SensorStation installation example
 
-## Mounting your Equipment
+### Materials
+
+* **LifeTag/PowerTag or ES-200**
+* **Nodes (each)**
+  * 1 x Node box
+  * 1 x Antenna
+  * 1 x Clamp hardware
+  * 1 x  ¾” EMT conduit
+
+* **SensorStation**
+  * 1 x SensorStation
+  * 1 x Enclosure
+  * 4 x SensorStation Screws:  #8-16 X ¼ phillips self tapping screws for plastic:    
+    https://www.mcmaster.com/99461a330
+  * 1 x Power cable
+  * 1 x Omni Antenna
+  * 1 x Coax cable
+
+* **Mounting hardware**
+  * 10’ long  1’’ EMT conduit
+  * 10’ long  1 ¼’’ EMT conduit
+  * 10’ long  1 ½’’ EMT conduit
+  * Tripod
+  * SensorStation Clamp
+  * Tap screws
+  * zip ties
+  * coax tape
+
+* **Optional**
+  * colored electrical tape for color-coding antenna wire ends
+
+### Mounting your Equipment
 
 For both the SensorStation and Nodes we recommend attaching to **EMT conduit**.  We recommend this because it is rigid and easy to set up. This is *not* what’s commonly referred to as *Black Pipe* used for water and gas lines, but the **galvanized steel pipe** used for running electrical wiring inside. 
 
@@ -136,10 +173,6 @@ Antennas are attached to the EMT conduit with the clamps that come with the ante
 ### Placing your SensorStation
 The SensorStation can be placed inside a building, or fastened to the pole or building, etc. It should either be close to the ground for easy access, or have an ethernet cable run down to an accessible location.
 
-# Participating in the Motus Wildlife Tracking System
-
-If you are setting up your SensorStation to participate in the Motus Wildlife Tracking System (motus.org), your station can still be used with CTT Nodes. In general, we recommend Motus stations to include 4 Yagi 10-element antennas pointing in the 4 cardinal directions. A fifth Omni antenna can be installed and dedicated to detecting nodes, or one of the Yagi antennas can be used for nodes while the other three are positioned at 120 degrees for full coverage.  You may also add any number of 166MHz antennas by using a Software Defined Radio (SDR), such as a FunCube or RTL-SDR, via any of the USB ports on the SensorStation (SDRs are sold separately via third-party companies). A clear view of the horizon is preferred to get maximum range, so a height as high as possible is also advised. For more information on Motus, see [Appendix I](#appendix_1).
-
 # Operating your SensorStation with a solar panel and 12V Battery
 
 The SensorStation can be connected directly to a 12V DC power source, or via a charge controller. Typical setup would be a 50-100W solar panel connected to a charge controller. The charge controller typically has 3 ports. The 3 ports are 1.) Solar panel 2.) 12V battery 3.) Accessory/Device/consumer- which is whatever you are powering- in this case your SensorStation. That line goes into the green *Power In* terminal on the SensorStation board. The positive and negative wire ports are labeled on the board, and to insert the wire simply loosen the set screws on the top, and slide the wire leads in to the holes just under the set screws (see the pictures below). 
@@ -152,40 +185,6 @@ The ends of the wires that are attached should be tinned with solder for best re
 ## Monitoring your solar voltage
 
 If you would like to monitor your solar voltage remotely, you will need to use the solar monitor connector. it is located above the on/off switch. Simply run two wires from the solar input of the charge controller to a two pin connector.
-
-# SensorStation installation example
-
-## Materials
-
-* **LifeTag/PowerTag or ES-200**
-* **Nodes (each)**
-  * 1 x Node box
-  * 1 x Antenna
-  * 1 x Clamp hardware
-  * 1 x  ¾” EMT conduit
-
-* **SensorStation**
-  * 1 x SensorStation
-  * 1 x Enclosure
-  * 4 x SensorStation Screws:  #8-16 X ¼ phillips self tapping screws for plastic:    
-    https://www.mcmaster.com/99461a330
-  * 1 x Power cable
-  * 1 x Omni Antenna
-  * 1 x Coax cable
-
-* **Mounting hardware**
-  * 10’ long  1’’ EMT conduit
-  * 10’ long  1 ¼’’ EMT conduit
-  * 10’ long  1 ½’’ EMT conduit
-  * Tripod
-  * SensorStation Clamp
-  * Tap screws
-  * zip ties
-  * coax tape
-
-* **Optional**
-  * colored electrical tape for color-coding antenna wire ends
-
 
 # SensorStation LEDs
 
@@ -262,14 +261,19 @@ And two folders:
   * `uploaded` - contains any 434MHz data that has been previously uploaded to CTT servers.
   
 ***
-# Connecting to the SensorStation Web Interface via Ethernet
 
-## Before you get started you will need...
+# The SensorStation Web Interface 
+
+## Overview
+
+## Connecting to the SensorStation Web Interface via Ethernet
+
+### Before you get started you will need...
 
   * 2 USB to Ethernet adapters (we recommend: https://tinyurl.com/yc6llze4)
   * An Ethernet cable
   
-## Making the Connection
+### Making the Connection
 
   1. Connect each end of the Ethernet cable to the two USB->Ethernet adapters.
   2. Plug one USB end of an adapter into any of the USB ports on your SensorStation.
@@ -283,17 +287,17 @@ And two folders:
   
 ***
 
-# Connecting to the SensorStation Web Interface via Local Wireless Network
+## Connecting to the SensorStation Web Interface via Local Wireless Network
 
 You can connect your SensorStation to a local wireless network with a few simple steps.
 
-## Before you get started you will need...
+### Before you get started you will need...
 
   * WiFi adapter Like this one: https://store.celltracktech.com/products/wifi-usb-adapter-add-on-for-sensorstation-v2.
   * Properly formatted USB thumb drive (Fat-32 or MS-DOS formatting currently supported).
   * A code editor where you can control the programming language and line encoding. We recommend the free Visual Studio Code (https://code.visualstudio.com).
   
-## Creating the JSON file
+### Creating the JSON file
 
   1. In your code editor, create a new file and set the **Language Mode** to `JSON` and the **End of Line Sequence** to **LF** (for Line Feed).
   2. Type the following into the file:
@@ -311,7 +315,7 @@ You can connect your SensorStation to a local wireless network with a few simple
   4. Create an empty folder on your USB thumb drive called `wifi`.
   5. Copy `credentials.json` file to the `wifi` folder.
 
-## Loading the JSON file onto your SensorStation
+### Loading the JSON file onto your SensorStation
 
   1. Make sure your SensorStation is powered on and the menu is visible on the LCD screen
   2. Insert your USB thumb drive into any of the USB ports on your SensorStation.
@@ -324,7 +328,7 @@ You can connect your SensorStation to a local wireless network with a few simple
   * `Network > Ping` will indicate a connection.
   * `Network > IP Address` will display a valid IP address.
   
-## Connecting to your wifi-enabled SensorStation
+### Connecting to your wifi-enabled SensorStation
 
 Once your station has connected to your wifi network, you can connect to your SensorStation wirelessly via any device on the **same wifi network** as the station.
 
@@ -332,10 +336,6 @@ Once your station has connected to your wifi network, you can connect to your Se
   * open a web browser on your computer, tablet or smartphone and navigate to the IP address found via the `Network > IP Address` on your SensorStation's LCD screen. Alternatively you can use the name found in `Network > Hostname`, which is typically `sensorstation.local`.
   
 ***
-
-# The SensorStation Web Interface Overview 
-
-## Overview
 
 ## Programming Radios
 
@@ -381,8 +381,25 @@ From the Server Utilities section on the web interface, you can now `Update Your
 # Known Bugs
 
 ***
+# Appendix I: Qickstart Guide
 
-# Appendix I: Leveraging your CTT Infrastructure with Motus {#appendix_1}
+## Powering up your SensorStation
+
+  1. Ensure your station is in the `OFF` power position.
+
+  2. If you purchased your SensorStation complete with a case and AD/DC power block, simply plug in your SensorStation and turn the on/off switch to `ON`. 
+
+  3. Otherwise, follow the directions under **Connecting your SensorStation with a solar panel to a 12v Battery**
+
+## Connecting antennas
+
+To connect antennas to your SensorStation you will need coaxial cable (we recommend LMR-400 or better) with the proper ends to connect to the antenna (manufacturer specific) and your SensorStation. If connecting directly to the board, each 434MHz radio has a **SMA Female** port, so your coaxial will require an **SMA Male** connector. 
+
+If connecting to our NEMA case, your coaxial will need a **Type N Male connector**. 
+
+If connecting an antenna for a different frequency, such as 166MHz, you will need to attach your Software Defined Radio (SDR) to one of the USB ports and your coaxial cable to the SMA connector on the SDR. Note that any 166MHz radios will only show up in the SensorGnome section of the Web Interface (see **Sensor Station Web Interface**).
+
+# Appendix II: Leveraging your CTT Infrastructure with Motus {#appendix_2}
 
 ![](/Users/davidlapuma/github/ctt_documentation/images/motus-logo.png){#id .class width=10%}
 ![](/Users/davidlapuma/github/ctt_documentation/images/BirdsCanadaLogo.png){#id .class width=10%}
