@@ -3,11 +3,11 @@ title: "Installation Guide for the CTT SensorStation and CTT Nodes"
 author: "david.lapuma@celltracktech.com"
 date: "6/19/2020"
 output:
+  pdf_document:
+    toc: yes
   html_document:
     toc: yes
     number_sections: yes
-  pdf_document:
-    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -57,6 +57,7 @@ The detection distance **from Node to Tag** varies for various reasons, includin
 The detection distance from **SensorStation to Node** is also affected by terrain and vegetation, but also antenna height and type (omni-directional vs. directional). **Therefore, while there is no hard and fast rule, a good starting point is to keep your farthest node within 1-1.5km of the SensorStation.** The number of SensorStations needed for each system depends on the size of the study area. For instance, in a 2 KM^2^ plot, a SensorStation placed at the center of the plot could detect nodes across the entire study area, in most cases with only an omni-directional antenna. Because Nodes are dependent on the SensorStation to receive their data and aggregate it for analysis, it is critical to ensure each node is within the detection radius of at least one SensorStation at all times. 
 
 The detection distance from **SensorStation to Tag** is affected by the same factors as SensorStation to Node, but because many tags are on birds, bats and insects, the relationship between the two objects can change drastically over very short time steps. With line-of-sight, a tag on a bird has been shown to be detectable for **dozens of kilometers** by a SensorStation. On the other hand, birds foraging in dense vegetation may only be detectible by a station within a few kilometers. Therefore, careful consideration of station position with relation to the biological questions being asked is critical for a successful deployment.
+
 ## SensorStation installation example
 
 ### Materials
