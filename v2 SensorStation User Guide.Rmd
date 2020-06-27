@@ -3,11 +3,11 @@ title: "Installation Guide for the CTT SensorStation and CTT Nodes"
 author: "david.lapuma@celltracktech.com"
 date: "6/19/2020"
 output:
-  pdf_document:
-    toc: yes
   html_document:
     toc: yes
     number_sections: yes
+  pdf_document:
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -24,7 +24,7 @@ If you are reading this document, then you most likely have purchased one of our
 
 # Setting up your CTT IoW System
 
-CTT’s Internet of Wildlife System (IoW) is a complete radio telemetry system that consists of transmitters (radio tags), and receivers. Currently CTT produces two transmitters, the LifeTag^TM^ and the PowerTag^TM^. 
+CTT’s Internet of Wildlife System (IoW) is a complete radio telemetry system that consists of transmitters (radio tags), and receivers. Currently CTT produces four radio transmitters: the LifeTag^TM^, PowerTag^TM^, ES-200 and ES-150. 
 
 ### LifeTag
 
@@ -33,6 +33,10 @@ The **CTT LifeTag** is 100% solar powered, and therefore has no battery. This al
 ### PowerTag
 
 The **CTT PowerTag** is battery powered which means it can beep out its digitally coded ID 24-hours a day. The life span of a PowerTag is defined by the beep rate (# of beeps per minute) and battery size. For species where nighttime data is important, PowerTags are the perfect fit.
+
+### ES-200 and ES-150
+
+The **ES-200** and **ES-150** are GPS logger tags that can also send data over the 434MHz frequency, and therefore can send archived telemetry data to the SensorStation. Since they communicate on the same frequency as LifeTags and PowerTags, no special radio configuration is needed. The difference between the two is that the ES-150 also has an Argos radio to send data via the Argos satellite network.
 
 ### CTT SensorStation
 
@@ -97,18 +101,17 @@ Setting up the CTT Nodes is typically done in a grid in your study site. It is n
 
 ## SensorStation Placement
 
-The CTT IoW SensorStation may be placed anywhere within range of the farthest node, which is typically 1-1.5km (although higher placement of SensorStation antennas, and clear line-of-sight between stations and nodes, can achieve longer detection distances). See the next section on SensorStation Configuration and Antenna Detail for more details on this. It is recommended to place the SensorStation antennas at least 2 meters high. The higher the antennas, the better range you will get. 
-
+The CTT IoW SensorStation may be placed anywhere within range of the farthest node, which is typically 1-1.5km (although higher placement of SensorStation antennas, and clear line-of-sight between stations and nodes, can achieve longer detection distances). See the next section on SensorStation Configuration and Antenna Detail for more details on this. It is recommended to place the SensorStation antennas at least 2 meters high. The higher the antennas, the better range you will get.
 
 ## SensorStation Configuration and Antenna Detail
 
 The standard configuration for the CTT SensorStation allows for receiving data on *five 434MHz* radio ports simultaneously. These can be configured to either record signals from LifeTags/PowerTags and ES-200 GPS loggers (hereafter "tags"), or to collect data from CTT Nodes. *Tags and Nodes cannot be picked up on the same channel*, and how you configure your station depends depends on your study goals. The number of channels necessary on a SensorStation depends on the number of Nodes, whether you want to detect tags/transmitters and/or Nodes directly with the SensorStation, and the distance the Nodes are from the SensorStation.There is no hard limit to the number of nodes that can be detected by a single SensorStation, but it's best to keep that number around 50 or less. *Distance to the SensorStation will usually be the limiting factor for the number of nodes detectable by a single SensorStation.*
 
-Two types of antennas are commonly used with the SensorStation: *Omnidirectional* and *Yagi*. Omnidirectional antennas efficiently receive energy in a horizontal plane 360 degrees around the SensorStation. Omnidirectional antennas typically do not have as great a range as Yagis, but a benefit is their great detection of tags and nodes that are near the station. 
+Two types of antennas are commonly used with the SensorStation: *Omnidirectional* and *Yagi*. *Omnidirectional antennas* efficiently receive energy in a *horizontal plane 360 degrees around the SensorStation*. Omnidirectional antennas typically do not have as great a range as Yagis, but a benefit is the 360 degree detection, and great detection of tags and nodes that are near the station. 
 
 **Note: Whereas in the past we have recommended specific polarization for omnidirectional antennas picking up Nodes vs. Tags, in our testing we have found the difference negligeable and find vertical omni antennas to be much simpler and less expensive for a greater value over horizontally polarized omnis.** 
 
-Yagis are directional antennas used to detect tags and nodes in a specific direction from the SensorStation. They typically have a 30-60 degree detection range that extends away from the SensorStation. For that reason typically 4 antennas are used, one pointed in each cardinal direction, or two pointed in opposite directions and used to make a “fence”. Yagis can also be used to pick up Nodes that are farther away from the SensorStation.
+*Yagis are directional antennas* used to detect tags and nodes in a specific direction from the SensorStation. They *typically have a 30-60 degree detection range that extends away from the SensorStation*. For that reason typically 2-4 antennas are used, one pointed in each cardinal direction, or two pointed in opposite directions and used to make a “fence”. Yagis can also be used to pick up Nodes that are farther away from the SensorStation.
 
 While there are many antennas to choose from, these are a few that we can recommend from experience:
 
@@ -125,18 +128,30 @@ While there are many antennas to choose from, these are a few that we can recomm
     
 *__Whatever you choose, make sure you get the proper coaxaial end to connect your antenna to your SensorStation!__*
 
+### Mounting the antennas
+
+Antennas are attached to the EMT conduit with the clamps that come with the antennas. If you have a setup that uses 4 yagis, than you will attach the yagis to a 4 or 5-way mounting “hat” you can purchase via online retailers.  Once the antennas are on EMT, attach the coax and wrap the connection with coax tape. Run down the poles to where it will attach to the SensorStation. You can use zip ties to secure the coax to poles where needed. Make sure you have enough coax to form a drip loop for each connection.
+
+![](/Users/davidlapuma/github/ctt_documentation/images/diagram_drip-loop.jpg)
+### Placing your SensorStation
+The SensorStation can be placed inside a building, or fastened to the pole or building, etc. It should either be close to the ground for easy access, or have an ethernet cable run down to an accessible location.
 
 # Participating in the Motus Wildlife Tracking System
 
-If you are setting up your SensorStation to participate in the Motus Wildlife Tracking System (motus.org), your station can still be used with CTT Nodes. In general, we recommend Motus stations to include 4 Yagi 10-element antennas pointing in the 4 cardinal directions. A fifth Omni antenna can be installed and dedicated to detecting nodes, or one of the Yagi antennas can be used for nodes while the other three are positioned at 120 degrees for full coverage.  A clear view of the horizon is preferred to get maximum range, so a height as high as possible is also advised. Also see [Appendix I](#appendix_1).
+If you are setting up your SensorStation to participate in the Motus Wildlife Tracking System (motus.org), your station can still be used with CTT Nodes. In general, we recommend Motus stations to include 4 Yagi 10-element antennas pointing in the 4 cardinal directions. A fifth Omni antenna can be installed and dedicated to detecting nodes, or one of the Yagi antennas can be used for nodes while the other three are positioned at 120 degrees for full coverage.  You may also add any number of 166MHz antennas by using a Software Defined Radio (SDR), such as a FunCube or RTL-SDR, via any of the USB ports on the SensorStation (SDRs are sold separately via third-party companies). A clear view of the horizon is preferred to get maximum range, so a height as high as possible is also advised. For more information on Motus, see [Appendix I](#appendix_1).
 
 # Operating your SensorStation with a solar panel and 12V Battery
 
-The SensorStation can be hooked up directly to a 12V charge controller. Typical setup would be a 50-100W solar panel connected to a charge controller. The charge controller typically has 3 ports. The 3 ports are 1.) Solar panel 2.) 12V battery 3.)Accessory/Device/consumer- which is whatever you are powering. The Sensor Station is connected to 3rd, the accessory port of the charge controller. That line goes into the Power in of the Sensor Station, see pictures to the right. The ends of the wires that are attached should be tinned for best results. If you do not have access to a soldering gun, twisting the ends of the cables tightly will help them slide in cleanly to the power block. To insert, press the orange tabs with a screwdriver, insert, then release. Pull gently on the wire to make sure it is seated properly and does not come loose.  If you would like to monitor your solar voltage remotely, you will need to use the solar two min connector. it is located above te on/off switch. Simply run two wires from the solar input of the charge controller to a two pin connector . You can solder these and heat-shrink them or simply use wire nuts as shown on the right.
+The SensorStation can be connected directly to a 12V DC power source, or via a charge controller. Typical setup would be a 50-100W solar panel connected to a charge controller. The charge controller typically has 3 ports. The 3 ports are 1.) Solar panel 2.) 12V battery 3.) Accessory/Device/consumer- which is whatever you are powering- in this case your SensorStation. That line goes into the green *Power In* terminal on the SensorStation board. The positive and negative wire ports are labeled on the board, and to insert the wire simply loosen the set screws on the top, and slide the wire leads in to the holes just under the set screws (see the pictures below). 
 
-# Attaching the antennas
+![Power not connected](/Users/davidlapuma/github/ctt_documentation/images/power_out.png){#id .class width="20%"}
+![Power connected](/Users/davidlapuma/github/ctt_documentation/images/power_in.png){#id .class width="20%"}
 
-Antennas are attached to the EMT conduit with the clamps that come with the antennas. If you have a setup that uses 4 yagis, than you will attach the yagis to a 4 or 5-way mounting “hat” you can purchase via online retailers.  Once the antennas are on EMT, attach the coax and wrap the connection with coax tape. Run down the poles to where it will attach to the SensorStation. You can use zip ties to secure the coax to poles where needed. Make sure you have enough coax to form a drip loop for each connection. The SensorStation can be placed inside a building, or fastened to the pole or building, etc. It should either be close to the ground for easy access, or have an ethernet cable run down to an accessible location.
+The ends of the wires that are attached should be tinned with solder for best results. If you do not have access to a soldering gun, twisting the ends of the cables tightly will help them slide in cleanly to the power block. 
+
+## Monitoring your solar voltage
+
+If you would like to monitor your solar voltage remotely, you will need to use the solar monitor connector. it is located above the on/off switch. Simply run two wires from the solar input of the charge controller to a two pin connector.
 
 # SensorStation installation example
 
@@ -177,10 +192,6 @@ Antennas are attached to the EMT conduit with the clamps that come with the ante
 
 ## Blue GSM Cellular LED
 
-# Connecting to the SensorStation Web Interface
-
-# The SensorStation Web Interface Overview
-
 # SensorStation LCD Menu
 
 - `File Transfer`
@@ -208,9 +219,9 @@ Antennas are attached to the EMT conduit with the clamps that come with the ante
 
 ***
 
-# Mount a USB thumb drive and download your data
+# Downloading your data via a USB Thumb Drive
 
-1. Insert a properly formatted (currently only MS DOS or Fat32 formatting is supported) USB drive in one of the seven USB ports.
+1. Insert a properly formatted (currently only MS DOS or Fat32 formatting is supported) USB thumb drive in one of the seven USB ports.
 2. Navigate to `File Transfer > Mount USB` and press the `SELECT` button. You should see a confirmation message saying `USB Mount:success`.
 3. Use the `BACK` button to go up to the `File Transfer` menu, and select `Download`. A successful download will be followed by a success message.
 4. Use the `Back` button to go up to the `File Transfer` menu and select `Unmount USB`. Once you receive the success message you may remove the USB drive from the SensorStation which will now contain a copy of all the files from the station.
@@ -251,7 +262,7 @@ And two folders:
   * `uploaded` - contains any 434MHz data that has been previously uploaded to CTT servers.
   
 ***
-# Connecting to your SensorStation via Ethernet
+# Connecting to the SensorStation Web Interface via Ethernet
 
 ## Before you get started you will need...
 
@@ -272,7 +283,7 @@ And two folders:
   
 ***
 
-# Connecting your SensorStation to a local wireless network
+# Connecting to the SensorStation Web Interface via Local Wireless Network
 
 You can connect your SensorStation to a local wireless network with a few simple steps.
 
@@ -321,16 +332,24 @@ Once your station has connected to your wifi network, you can connect to your Se
   * open a web browser on your computer, tablet or smartphone and navigate to the IP address found via the `Network > IP Address` on your SensorStation's LCD screen. Alternatively you can use the name found in `Network > Hostname`, which is typically `sensorstation.local`.
   
 ***
-  
-# Updating your SensorStation to the latest build
 
-You can now update your SensorStation to the latest deployment build right through the web interface.
+# The SensorStation Web Interface Overview 
+
+## Overview
+
+## Programming Radios
+
+Your five 343MHz radios will typically arrive pre-configured to detect tags. You can see the configuration for each radio displayed on the web interface. Changing the programming is as simple as clicking the appropriate button. Click `Node` for detecting nodes or `Tag` for detecting LifeTags, PowerTags or ES-200 devices. The `OOK` tag is a specific legacy tag type only used on a few projects. **Note that once you have changed the radio settings, the change is immediately saved and the data will flow from whichever you changed it to; node or tag, but in order to see the text description change on the web interface, you will need to refresh the webpage.**
+
+## Managing your SensorStation from the Web Interface Server Utilities
+
+From the Server Utilities section on the web interface, you can now `Update Your SensorStation` to the latest deployment build, as well as force `Check In` and force `Upload Data` to the CTT servers.
 
 **Requirement:**
 
-  * Because the update will be downloaded from the cloud, your SensorStation must be connected to the internet, either via the *on-board LTE module*, hardwired via *Ethernet* (this includes being connected to a computer via Ethernet which is connected to the internet), or wirelessly via a *WiFi adapter*.
+  * Because these buttons require connecting to servers via the internet, your SensorStation must be connected to the internet, either via the *on-board LTE module*, hardwired via *Ethernet* (this includes being connected to a computer via Ethernet which is connected to the internet), or wirelessly via a *WiFi adapter*.
 
-## Updating your SensorStation
+### Updating your SensorStation
 
   1. With the CTT Sensor Station Overview page open in your browser, scroll down to `Server Utilities` on the right sidebar. 
   2. Click the button labeled `Station Update`, which will open the `Sensor Station Software Updater` console
@@ -465,6 +484,4 @@ The collaborative nature of Motus relies on a certain level of transparency with
 ***
 
 We are welcoming new collaborators and supporters each week! **For more information or discuss how you or your organization can support Motus, contact [motus@birdscanada.org](motus@birdscanada.org)**
-
-
 
