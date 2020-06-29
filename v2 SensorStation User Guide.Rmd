@@ -1,7 +1,7 @@
 ---
-title: "Installation Guide for the CTT SensorStation and CTT Nodes"
-author: "david.lapuma@celltracktech.com"
-date: "6/19/2020"
+title: "Installation Guide for the CTT SensorStation and CTT Nodes - DRAFT"
+author: "support@celltracktech.com"
+date: "6/29/2020"
 output:
   html_document:
     toc: yes
@@ -56,7 +56,7 @@ The detection distance **from Node to Tag** varies for various reasons, includin
 
 The detection distance from **SensorStation to Node** is also affected by terrain and vegetation, but also antenna height and type (omni-directional vs. directional). **Therefore, while there is no hard and fast rule, a good starting point is to keep your farthest node within 1-1.5km of the SensorStation.** The number of SensorStations needed for each system depends on the size of the study area. For instance, in a 2 KM^2^ plot, a SensorStation placed at the center of the plot could detect nodes across the entire study area, in most cases with only an omni-directional antenna. Because Nodes are dependent on the SensorStation to receive their data and aggregate it for analysis, it is critical to ensure each node is within the detection radius of at least one SensorStation at all times. 
 
-The detection distance from **SensorStation to Tag** is affected by the same factors as SensorStation to Node, but because many tags are on birds, bats and insects, the relationship between the two objects can change drastically over very short time steps. With line-of-sight, a tag on a bird has been shown to be detectable for **dozens of kilometers** by a SensorStation. On the other hand, birds foraging in dense vegetation may only be detectible by a station within a few kilometers. Therefore, careful consideration of station position with relation to the biological questions being asked is critical for a successful deployment.
+The detection distance from **SensorStation to Tag** is affected by the same factors as SensorStation to Node, but because many tags are on birds, bats and insects, the relationship between the two objects can change drastically over very short time steps. With line-of-sight, a tag on a bird has been shown to be detectable for **dozens of kilometers** by a SensorStation. On the other hand, birds foraging in dense vegetation may only be detectable by a station within a few kilometers. Therefore, careful consideration of station position with relation to the biological questions being asked is critical for a successful deployment.
 
 ## SensorStation installation example
 
@@ -116,7 +116,7 @@ If desired, stainless conduit can be purchased, however it is much more expensiv
 |    23’               |    1”, 1 ¼”, 1 ½”        |     2”                    |   min 25’               |
 |    28’               |    1”, 1 ¼”, 1 ½”        |     2”- Use full 10’      |   min 30’               |
 
-***Masts higher than 28' not recommended with standard free-standing EMT conduit. Guy wires and/or scaffolded or tripod masts are other options for higher towers.***
+***Masts higher than 28' not recommended with standard free-standing EMT conduit. Guy wires and/or scaffold or tripod masts are other options for higher towers.***
 
 ### Mounting Nodes
 
@@ -146,7 +146,7 @@ The standard configuration for the CTT SensorStation allows for receiving data o
 
 Two types of antennas are commonly used with the SensorStation: *Omnidirectional* and *Yagi*. *Omnidirectional antennas* efficiently receive energy in a *horizontal plane 360 degrees around the SensorStation*. Omnidirectional antennas typically do not have as great a range as Yagis, but a benefit is the 360 degree detection, and great detection of tags and nodes that are near the station. 
 
-**Note: Whereas in the past we have recommended specific polarization for omnidirectional antennas picking up Nodes vs. Tags, in our testing we have found the difference negligeable and find vertical omni antennas to be much simpler and less expensive for a greater value over horizontally polarized omnis.** 
+**Note: Whereas in the past we have recommended specific polarization for omnidirectional antennas picking up Nodes vs. Tags, in our testing we have found the difference negligible and find vertical omni antennas to be much simpler and less expensive for a greater value over horizontally polarized omnis.** 
 
 *Yagis are directional antennas* used to detect tags and nodes in a specific direction from the SensorStation. They *typically have a 30-60 degree detection range that extends away from the SensorStation*. For that reason typically 2-4 antennas are used, one pointed in each cardinal direction, or two pointed in opposite directions and used to make a “fence”. Yagis can also be used to pick up Nodes that are farther away from the SensorStation.
 
@@ -163,7 +163,7 @@ While there are many antennas to choose from, these are a few that we can recomm
     * [Diamond A430S10](https://www.hamradio.com/detail.cfm?pid=H0-005816)
     * [Diamond A430S15](https://www.dxengineering.com/parts/dmn-a430s15) *for specialized applications where longer-range is required
     
-*__Whatever you choose, make sure you get the proper coaxaial end to connect your antenna to your SensorStation!__*
+*__Whatever you choose, make sure you get the proper coaxial end to connect your antenna to your SensorStation!__*
 
 ### Mounting the antennas
 
@@ -211,11 +211,11 @@ If you would like to monitor your solar voltage remotely, you will need to use t
 - `Network`
 	- `Cellular`
 		- `Ids` -  - Displays the SIM ID, the IMEI, and the name of the Modem
-		- `Carrier` - Displays the cellular carrier name and signal strength of the connetion, refreshing every 2 seconds. This may be useful when troubleshooting problematic GSM connections, and aiming an external cellular antenna (not included).
+		- `Carrier` - Displays the cellular carrier name and signal strength of the connection, refreshing every 2 seconds. This may be useful when troubleshooting problematic GSM connections, and aiming an external cellular antenna (not included).
 	- `Ping` - This will ping a known web address to determine whether an internet connection is present. If present, it will return **connected**.
 	- `Hostname` - Typically this is `sensorstation.local` and can be used to reach your station when it is connected to WiFi, a local network via Ethernet, or directly to a computer via Ethernet. Once connected, simply navigate to http://sensorstation.local in your web browser to access the SensorStation interface.
-	- `IP Address` - Displays the port of connection and IP address assigned to the SensorStation. You can use the IP address to connect to your SensorStation using the same process outlined above under `Hostname`. For example, if the IP Address were 10.1.10.17, typing `http://10.1.10.17` into your web browswer's URL field would bring up the SensorStation web interface.
-- `Server` - causes the SensorStation to force a checkin to the CTT hardware server. Requires that the SensorStation is connected to the internet via either GSM, WiFi or Ethernet. Note that this process may take a long time depending on connection speed and/or amount of data being sent/received.
+	- `IP Address` - Displays the port of connection and IP address assigned to the SensorStation. You can use the IP address to connect to your SensorStation using the same process outlined above under `Hostname`. For example, if the IP Address were 10.1.10.17, typing `http://10.1.10.17` into your web browser's URL field would bring up the SensorStation web interface.
+- `Server` - causes the SensorStation to force a check-in to the CTT hardware server. Requires that the SensorStation is connected to the internet via either GSM, WiFi or Ethernet. Note that this process may take a long time depending on connection speed and/or amount of data being sent/received.
 
 ***
 
@@ -252,7 +252,7 @@ On your USB drive you will find several files...
 	* `Time` - Date/time stamp of the data point in `YYYY-MM-DD HH:MM:SS`.
 	* `RadioID` - The ID of the radio from which the data point was collected. These correspond to the Radios L1 - L5 on your SensorStation (standard 434MHz radios).
 	* `TagID` - The 8-digit ID of the tag that was detected. Note that for tags with 10-digit IDs (e.g. V2 LifeTag), this will be represented by the first 8 digits in that ID.
-	* `TagRSSI` - The signal strength of the transmission, measured in Decibals (DB). Values. closer to zero represent stronger signals. Values below -110 DB are typically not useful for estimating distance.
+	* `TagRSSI` - The signal strength of the transmission, measured in Decibels (DB). Values. closer to zero represent stronger signals. Values below -110 DB are typically not useful for estimating distance.
 	* `NodeId` - The unique ID of the node from which the transmission was received.
 	* `Validated` - Binary value that indicates whether the CRC value corroborated the unique tag ID. 0 = invalidated; 1 = validated. **MORE EXPLANATION HERE**
 
@@ -435,7 +435,7 @@ The collaborative nature of Motus relies on a certain level of transparency with
 
 ### Data archive and management
 
-* One centralized data hub at Birds Canada National Data Centre.
+* One centralized data hub at Birds Canada National Data Center.
 * Standardized data format across all projects.
 * Permanent archive of data.
 * Access to the research software platform data visualization and management tools.
