@@ -3,11 +3,11 @@ title: "Installation Guide for the CTT SensorStation and CTT Nodes - DRAFT"
 author: "support@celltracktech.com"
 date: "6/29/2020"
 output:
+  pdf_document:
+    toc: yes
   html_document:
     toc: yes
     number_sections: yes
-  pdf_document:
-    toc: yes
 ---
 
 ```{r setup, include=FALSE}
