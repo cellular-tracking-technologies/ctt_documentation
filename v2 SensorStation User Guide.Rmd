@@ -189,6 +189,7 @@ If you would like to monitor your solar voltage remotely, you will need to use t
 
 # SensorStation LEDs
 
+There are several LED lights on the SensorStation which may assist you in diagnosing issues. Note that with the introduction of the SensorStation V2's LCD screen, all diagnoses can be carried out via the lCD. 
 
 ## Blue GSM Cellular LED
 
@@ -214,8 +215,24 @@ If you would like to monitor your solar voltage remotely, you will need to use t
 		- `Carrier` - Displays the cellular carrier name and signal strength of the connection, refreshing every 2 seconds. This may be useful when troubleshooting problematic GSM connections, and aiming an external cellular antenna (not included).
 	- `Ping` - This will ping a known web address to determine whether an internet connection is present. If present, it will return **connected**.
 	- `Hostname` - Typically this is `sensorstation.local` and can be used to reach your station when it is connected to WiFi, a local network via Ethernet, or directly to a computer via Ethernet. Once connected, simply navigate to http://sensorstation.local in your web browser to access the SensorStation interface.
-	- `IP Address` - Displays the port of connection and IP address assigned to the SensorStation. You can use the IP address to connect to your SensorStation using the same process outlined above under `Hostname`. For example, if the IP Address were 10.1.10.17, typing `http://10.1.10.17` into your web browser's URL field would bring up the SensorStation web interface.
+	- `IP Address` - Displays the port of connection and IP address assigned to the SensorStation. You can use the IP address to connect to your SensorStation using the same process outlined above under `Hostname`. For example, if the IP Address was 10.1.10.17, typing `http://10.1.10.17` into your web browser's URL field would bring up the SensorStation web interface.
 - `Server` - causes the SensorStation to force a check-in to the CTT hardware server. Requires that the SensorStation is connected to the internet via either GSM, WiFi or Ethernet. Note that this process may take a long time depending on connection speed and/or amount of data being sent/received.
+- `Power` - Provides voltages for `Battery` (which represents whatever power source is connected to your SensorStation), `RTC` or Real Time Clock, the coin cell battery on the board, and `Solar` if you have connected a solar monitoring cable from the charge controller to the SensorStation board.
+- `Temperature` - Provides the temperature of the SensorStation board. Note temperature will usually be higher than ambient when the board is powered.
+- `Location` - provides the Lat/Long for the SensorStation from the on-board GPS.
+- `LED` - allows you to select various LED and toggle them `on`, `off` or `blink`. 
+  - `Diagnostic A` - this LED represents the connectivity to CTT servers.
+    - `On` - Turns the LED `on`, if current state is `off`.
+    - `Off` - Turns the LED `off`, if current state is `on`.
+    - `Blink` - Blinks the LED once.
+  - `Diagnostic B` - this LED represents the connectivity to the cellular network (if a cell modem is installed).
+    - `On` - Turns the LED `on`, if current state is `off`.
+    - `Off` - Turns the LED `off`, if current state is `on`.
+    - `Blink` - Blinks the LED once.
+  - `GPS` - this green LED has three states: Solid (3D Fix), Blinking 2x/second (2D fix), Blinking 5x/second (No Fix).
+    - `On` - Turns the LED `on`, if current state is `off`.
+    - `Off` - Turns the LED `off`, if current state is `on`.
+    - `Blink` - Blinks the LED once.
 
 ***
 

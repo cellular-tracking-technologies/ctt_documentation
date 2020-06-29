@@ -643,6 +643,7 @@ summary {
 </div>
 <div id="sensorstation-leds" class="section level1">
 <h1><span class="header-section-number">5</span> SensorStation LEDs</h1>
+<p>There are several LED lights on the SensorStation which may assist you in diagnosing issues. Note that with the introduction of the SensorStation V2’s LCD screen, all diagnoses can be carried out via the lCD.</p>
 <div id="blue-gsm-cellular-led" class="section level2">
 <h2><span class="header-section-number">5.1</span> Blue GSM Cellular LED</h2>
 </div>
@@ -679,9 +680,33 @@ summary {
 </ul></li>
 <li><code>Ping</code> - This will ping a known web address to determine whether an internet connection is present. If present, it will return <strong>connected</strong>.</li>
 <li><code>Hostname</code> - Typically this is <code>sensorstation.local</code> and can be used to reach your station when it is connected to WiFi, a local network via Ethernet, or directly to a computer via Ethernet. Once connected, simply navigate to <a href="http://sensorstation.local" class="uri">http://sensorstation.local</a> in your web browser to access the SensorStation interface.</li>
-<li><code>IP Address</code> - Displays the port of connection and IP address assigned to the SensorStation. You can use the IP address to connect to your SensorStation using the same process outlined above under <code>Hostname</code>. For example, if the IP Address were 10.1.10.17, typing <code>http://10.1.10.17</code> into your web browser’s URL field would bring up the SensorStation web interface.</li>
+<li><code>IP Address</code> - Displays the port of connection and IP address assigned to the SensorStation. You can use the IP address to connect to your SensorStation using the same process outlined above under <code>Hostname</code>. For example, if the IP Address was 10.1.10.17, typing <code>http://10.1.10.17</code> into your web browser’s URL field would bring up the SensorStation web interface.</li>
 </ul></li>
 <li><code>Server</code> - causes the SensorStation to force a check-in to the CTT hardware server. Requires that the SensorStation is connected to the internet via either GSM, WiFi or Ethernet. Note that this process may take a long time depending on connection speed and/or amount of data being sent/received.</li>
+<li><code>Power</code> - Provides voltages for <code>Battery</code> (which represents whatever power source is connected to your SensorStation), <code>RTC</code> or Real Time Clock, the coin cell battery on the board, and <code>Solar</code> if you have connected a solar monitoring cable from the charge controller to the SensorStation board.</li>
+<li><code>Temperature</code> - Provides the temperature of the SensorStation board. Note temperature will usually be higher than ambient when the board is powered.</li>
+<li><code>Location</code> - provides the Lat/Long for the SensorStation from the on-board GPS.</li>
+<li><code>LED</code> - allows you to select various LED and toggle them <code>on</code>, <code>off</code> or <code>blink</code>.
+<ul>
+<li><code>Diagnostic A</code> - this LED represents the connectivity to CTT servers.
+<ul>
+<li><code>On</code> - Turns the LED <code>on</code>, if current state is <code>off</code>.</li>
+<li><code>Off</code> - Turns the LED <code>off</code>, if current state is <code>on</code>.</li>
+<li><code>Blink</code> - Blinks the LED once.</li>
+</ul></li>
+<li><code>Diagnostic B</code> - this LED represents the connectivity to the cellular network (if a cell modem is installed).
+<ul>
+<li><code>On</code> - Turns the LED <code>on</code>, if current state is <code>off</code>.</li>
+<li><code>Off</code> - Turns the LED <code>off</code>, if current state is <code>on</code>.</li>
+<li><code>Blink</code> - Blinks the LED once.</li>
+</ul></li>
+<li><code>GPS</code> - this green LED has three states: Solid (3D Fix), Blinking 2x/second (2D fix), Blinking 5x/second (No Fix).
+<ul>
+<li><code>On</code> - Turns the LED <code>on</code>, if current state is <code>off</code>.</li>
+<li><code>Off</code> - Turns the LED <code>off</code>, if current state is <code>on</code>.</li>
+<li><code>Blink</code> - Blinks the LED once.</li>
+</ul></li>
+</ul></li>
 </ul>
 <hr />
 </div>
