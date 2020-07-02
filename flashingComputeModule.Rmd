@@ -73,4 +73,4 @@ You will need drivers for your computer to recognize the module as a new drive, 
 * Select the Compute Module for the target (middle). `example: RPi-MSGD- 0001 - 7.8 GB`
 * Flash the image by clicking on the `WRITE` button.
   *   This will take a while, but once the image is written you will get a success message and the process is complete. 
-* Move the **USB Boot Jumper Pin** in to the `DISABLED` position (to the `right` 1 pin, for horizontally placed pins, or `up` 1 pin for vertically placed pins). 
+* Move the **USB Boot Jumper Pin** to the `DISABLED` position (to the `right` 1 pin, for horizontally placed pins, or `up` 1 pin for vertically placed pins). 
