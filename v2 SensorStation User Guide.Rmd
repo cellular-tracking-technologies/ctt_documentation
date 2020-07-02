@@ -3,11 +3,11 @@ title: "Installation Guide for the CTT SensorStation and CTT Nodes - DRAFT"
 author: "support@celltracktech.com"
 date: "6/29/2020"
 output:
-  pdf_document:
-    toc: yes
   html_document:
     toc: yes
     number_sections: yes
+  pdf_document:
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -357,7 +357,7 @@ Once your station has connected to your wifi network, you can connect to your Se
 
 ## Programming Radios
 
-Your five 343MHz radios will typically arrive pre-configured to detect tags. You can see the configuration for each radio displayed on the web interface. Changing the programming is as simple as clicking the appropriate button. Click `Node` for detecting nodes or `Tag` for detecting LifeTags, PowerTags or ES-200 devices. The `OOK` tag is a specific legacy tag type only used on a few projects. **Note that once you have changed the radio settings, the change is immediately saved and the data will flow from whichever you changed it to; node or tag, but in order to see the text description change on the web interface, you will need to refresh the webpage.**
+Your five 434MHz radios will typically arrive pre-configured to detect tags. You can see the configuration for each radio displayed on the web interface. Changing the programming is as simple as clicking the appropriate button. Click `Node` for detecting nodes or `Tag` for detecting LifeTags, PowerTags or ES-200 devices. The `OOK` tag is a specific legacy tag type only used on a few projects. **Note that once you have changed the radio settings, the change is immediately saved and the data will flow from whichever you changed it to; node or tag, but in order to see the text description change on the web interface, you will need to refresh the webpage.**
 
 ## Managing your SensorStation from the Web Interface Server Utilities
 
@@ -397,6 +397,8 @@ From the Server Utilities section on the web interface, you can now `Update Your
 ***
 
 # Known Bugs
+
+1. SensorStations without a modem installed will not check in to the CTT system.
 
 ***
 # Appendix I: Leveraging your CTT Infrastructure with Motus {#appendix_1}
