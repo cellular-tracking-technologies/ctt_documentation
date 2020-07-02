@@ -48,7 +48,9 @@ You will need drivers for your computer to recognize the module as a new drive, 
 ## Steps to Burn a New Image
 
 1. Ensure the SensorStation has no power
-2. Move the USB Boot Jumper Pin to the enabled position (to the left 1 pin).
+2. Move the **USB Boot Jumper Pin** to the `ENABLED` position (to the `left` 1 pin, for horizontally placed pins, or `down` 1 pin for vertically placed pins). 
+
+* *Note: The location of your USB Boot Jumper may vary, and is typically vertically placed near the lower left corner of the Raspberry Pi module on V1 boards, or horizontally placed just above the power switch on V2 boards.*
 
 ![](/Users/davidlapuma/github/ctt_documentation/images/boot_enabled2.png){#id .class width=25%}
 
@@ -70,3 +72,5 @@ You will need drivers for your computer to recognize the module as a new drive, 
 * Select the SensorStation image file on the left.
 * Select the Compute Module for the target (middle). `example: RPi-MSGD- 0001 - 7.8 GB`
 * Flash the image by clicking on the `WRITE` button.
+  *   This will take a while, but once the image is written you will get a success message and the process is complete. 
+* Move the **USB Boot Jumper Pin** in to the `DISABLED` position (to the `right` 1 pin, for horizontally placed pins, or `up` 1 pin for vertically placed pins). 
