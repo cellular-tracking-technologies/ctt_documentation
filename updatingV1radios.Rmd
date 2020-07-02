@@ -6,8 +6,10 @@ output:
   html_document:
     toc: yes
     number_sections: no
+    theme: default
+    highlight: default
   pdf_document:
-    toc: yes
+     toc: yes
 ---
 
 ```{r setup, include=FALSE}
