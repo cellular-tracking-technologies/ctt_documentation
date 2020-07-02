@@ -1,6 +1,6 @@
 ---
-title: "Updating V1 Station Radios to Detect New Tags and Notes"
-author: "david.lapuma@celltracktech.com"
+title: "Updating Your V1 SensorStation Radios"
+author: "support@celltracktech.com"
 date: "7/1/2020"
 output:
   html_document:
@@ -13,8 +13,15 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+# Why update?
 
-# Before you begin
+This is a valid question. In 2020 we introduced the 2nd version of the `CTT SensorStation`, and simultaneously released new versions of the `CTT Node` and `CTT LifeTag`. For the latter two products we made some significant advances in the way they communicate with our SensorStation radios, and they way they confirm their digital ID. Technology moves at lightning speed, and while we made these changes with every intention of full backwards compatibility, we soon learned that the radios would need to be manually updated once before they could join the V2 SensorStations in receiving over-the-air radio programming.
+
+*So should you update?* If you plan to add `Version 2 CTT Nodes` to your study, then the answer is absolutely **yes**. If your station is `listening for V2 LifeTags`, it will still pick up the tag ID like it always has, but will not be able to use the tag ID confirmation code to absolutely validate the ID. So if you want the highest degree of confirmation for LifeTags, then the answer is also **yes**. 
+
+If you're doing a localized study using PowerTags and not using any of the newer Nodes, then you don't need to update the radios at all...*but of course you still can!* To find out how, read on...
+
+# Getting Started
 
 ## Things you'll need
 
@@ -122,6 +129,9 @@ In order to run the above using the `USBasp` device instead of the `USBtinyISP` 
 4. From the `Options` menu check the box for `List all devices`
 5. Choose `USBAsp` from the dropdown list
 6. select `libusb-win32 (v1.2.6.0)` in the right menu
+
+![](/Users/davidlapuma/github/ctt_documentation/images/zadig.png){#id .class width=50%}
+
 7. select `reinstall driver`
 
 
