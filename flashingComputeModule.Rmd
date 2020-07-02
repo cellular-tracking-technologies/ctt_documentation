@@ -2,7 +2,12 @@
 title: "Flashing Your SensorStation Compute Module"
 author: "support@celltracktech.com"
 date: "7/1/2020"
-output: html_document
+output:
+  html_document:
+    toc: yes
+    number_sections: no
+  pdf_document:
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
