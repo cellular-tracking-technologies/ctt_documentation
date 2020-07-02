@@ -40,7 +40,9 @@ If you're doing a localized study using PowerTags and not using any of the newer
 2. From the main page, select `Software` > `Downloads`
 3. Download the Arduino IDE *
   * (\* if using the USBasp device, you must download `Arduino IDE 1.6.9` or earlier. You can do so [here](https://www.arduino.cc/en/main/OldSoftwareReleases)). Again, see [Appendix I](#Appendix_I) for full instructions for using that programmer.
-4. In the window for `Additional Boards Manager URLs` paste the following:
+  
+5. From the `File` menu, select `Preferences`
+6. Near the bottom of the `Preferences` page you'll see a window for `Additional Boards Manager URLs`. Past the following in that window:
 ```
 https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
 ```
@@ -62,7 +64,7 @@ https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
 1. Ensure the SensorStation is `OFF`, and the **power has been disconnected**.
 2. Remove the Raspberry Pi module by carefully pushing apart the tabs holding the Pi in place. This will cause the Pi to pop out at an angle from the top of the Pi (the bottom is hinged), at which point you can remove it by pulling up at an angle.
 
-![removing the Raspberry Pi Module](/Users/davidlapuma/github/ctt_documentation/images/removePi.GIF){#id .class width=25%}
+![removing the Raspberry Pi Module](/Users/davidlapuma/github/ctt_documentation/images/removePiOpt.GIF){#id .class width=25%}
 
 3. Set the Raspberry Pi aside.
 
@@ -72,7 +74,7 @@ https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
 
 1. Place the adapter pins into the holes on the header for the first radio (**Note: You will need to apply some downward pressure to ensure a connection to the header.**)
 	
-	![Connecting the programmer to the radio programming header](/Users/davidlapuma/github/ctt_documentation/images/attachProgrammer.GIF){#id .class width=25%}
+	![Connecting the programmer to the radio programming header](/Users/davidlapuma/github/ctt_documentation/images/attachProgrammerOpt.GIF){#id .class width=25%}
 	
 2. With the adapter connected to the header, from the `Tools` menu on the Arduino IDE click `Burn Bootloader`.
 3. At this point you will see dialogue on the Arduino IDE interface indicating that the Bootloader is being burned on to the radio. This should take less than a minute for each radio. Once it is complete, the radio light will be pulsing red. 
