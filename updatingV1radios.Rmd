@@ -1,6 +1,4 @@
 ---
-title: "Updating Your V1 SensorStation Radios"
-author: "support@celltracktech.com"
 date: "7/1/2020"
 output:
   html_document:
@@ -15,7 +13,9 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-# Why update?
+# Updating your V1 SensorStation Radios to Detect New Hardware
+
+## Why Update?
 
 This is a valid question. In 2020 we introduced the 2nd version of the `CTT SensorStation`, and simultaneously released new versions of the `CTT Node` and `CTT LifeTag`. For the latter two products we made some significant advances in the way they communicate with our SensorStation radios, and they way they confirm their digital ID. Technology moves at lightning speed, and while we made these changes with every intention of full backwards compatibility, we soon learned that the radios would need to be manually updated once before they could join the V2 SensorStations in receiving over-the-air radio programming.
 
@@ -23,9 +23,9 @@ This is a valid question. In 2020 we introduced the 2nd version of the `CTT Sens
 
 If you're doing a localized study using PowerTags and not using any of the newer Nodes, then you don't need to update the radios at all...*but of course you still can!* To find out how, read on...
 
-# Getting Started
+## Getting Started
 
-## Things you'll need
+### Things you'll need
 
 * **USB Programmer with a ribbon cable** and 6-pin female header (if male header exists on your V1 station radios) or male header (if no header exists on your V1 station radios)
   * If your V1 SensorStation radios do not have headers, you'll also need this part to make the connection between the programmer cable and the board: [click here](https://www.sparkfun.com/products/12807)
@@ -35,7 +35,8 @@ If you're doing a localized study using PowerTags and not using any of the newer
 
 * **Computer** (Mac or PC)
 
-# Part 1: Setting up Arduino IDE
+## Part 1: Setting up Arduino IDE
+
 1. Using your favorite browser, navigate to http://arduino.cc
 2. From the main page, select `Software` > `Downloads`
 3. Download the Arduino IDE *
@@ -59,7 +60,7 @@ https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
 
 7. Go to `Tools` > `Programmer` and select `USBtinyISP`
 
-# Part 2: Prepping your SensorStation for updating the radios
+## Part 2: Prepping your SensorStation for updating the radios
 
 1. Ensure the SensorStation is `OFF`, and the **power has been disconnected**.
 2. Remove the Raspberry Pi module by carefully pushing apart the tabs holding the Pi in place. This will cause the Pi to pop out at an angle from the top of the Pi (the bottom is hinged), at which point you can remove it by pulling up at an angle.
@@ -68,7 +69,7 @@ https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
 
 3. Set the Raspberry Pi aside.
 
-# Part 3: Burning the Bootloader on the Radios
+## Part 3: Burning the Bootloader on the Radios
 
 **The first step of Part 3 will differ depending on whether your V1 SensorStation came with the radio programming headers or not (whether there are six holes, or six pins, in a 2x3 grid just above the radio SMA ports). The directions below are written assuming no headers are present, so the header pins are on the end of the adapter instead. If your board has headers already, simply insert the female 6-pin header onto the radio pins instead.**
 
@@ -82,7 +83,7 @@ https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
 
 **You’re done!…well, almost…**
 
-# Part 4: Running the Radio Update Software
+## Part 4: Running the Radio Update Software
 
 Now that the radios are reprogrammed, you will need to SSH into your SensorStation, so...
 
@@ -111,7 +112,7 @@ chmod a+x ./program-radios.sh
 
 **You should now see your radio lights now switch off, and only blink when detecting tags.**
 
-# Step 5: Flashing a Compute Module for a SensorStation
+## Step 5: Flashing a Compute Module for a SensorStation
 
 Now that you’ve updated the radios, you’ll need to update your SensorStation to detect the newer tags and nodes.
 
@@ -121,7 +122,7 @@ Please follow the directions here to do so: https://account.celltracktech.com/st
 
 
 
-# Appendix I {#Appendix_I}
+## Appendix I {#Appendix_I}
 
 Programmer drama! So it appears all programmers are not created equal. 
 In order to run the above using the `USBasp` device instead of the `USBtinyISP` programmer, please follow the steps below. Note this **ONLY works on PC** computers so far...so Mac users should get the `USBtinyISP`.
