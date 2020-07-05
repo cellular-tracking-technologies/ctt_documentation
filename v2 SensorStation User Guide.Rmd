@@ -624,7 +624,88 @@ We are welcoming new collaborators and supporters each week! **For more informat
 
 ***
 
-# Appendix II: Qickstart Guide
+# Appendix II: Qickstart Guide (SensorStation V1)
+
+#### Courtesy David Brinker
+
+## Powering Up
+
+1. Plug in the e-ink screen (if you have one).
+    a. Your screen fits snugly onto the Pi-Hat expansion port provided, and will sit right on top of your Pi Compute Module. *Note: Make sure the unit is off when swapping any components, and be careful when removing the screen not to bend the pins, it should lift straight up.*
+2. Plug in power wires.
+    a. Make sure the **ON/OFF** switch is in the `OFF` position.
+    b. Locate the **Green power block** about an inch below the on ON/OFF switch. IT is marked with `POWER` on the left and `12VDC` on the right of the block.
+    c. Make sure that the power source is properly connected to a solar charge controller or a 12VDC Power adapter and the wires are labeled or color coded to positive and negative.
+    d. We recommend leaving the power disconnected while connecting the wires to the SensorStation. It also works better to install wires that are tinned with solder with about ¼” showing.
+    e. Depress each orange tab with a small straight screwdriver on the green power block to insert each wire. The positive is on the left and negative is on the right and marked with a +/- below the block. See images to right.
+    f. Make sure the wires are not swapped!
+    
+![](/Users/davidlapuma/github/ctt_documentation/images/MODEM SERIAL2.jpg){#id .class width=25%}
+![](/Users/davidlapuma/github/ctt_documentation/images/U POWER.jpg){#id .class width=25%}
+
+
+## Initial Boot-up of a SensorStation
+
+1. This is a simple set of instructions for the initial boot up of a SensorStation.
+Turn on the SensorStation using the slide switch on the left center of the SensorStation board.
+2. The SensorStation board will show two constantly illuminated LEDs, an orange one and a green one on the left side of the board.  There will also be green and blue flashing LEDs.
+
+![](/Users/davidlapuma/github/ctt_documentation/images/Battery.png){#id .class width=40%}
+
+3. A normally operating SensorStation will present all four LEDs.
+4. The Inkyphat display will show the CTT SensorStation welcome.
+
+![](/Users/davidlapuma/github/ctt_documentation/images/PI-HAT EXPANSION.png){#id .class width=50%}
+
+5. The display normally updates every 90 seconds.  During initial boot-up the display update usually takes longer than 90 seconds.  Wait for the SensorStation to complete boot-up.  Once the display updates it will change to the default operating screen display.
+
+![](/Users/davidlapuma/github/ctt_documentation/images/EXPANSION.png){#id .class width=50%}
+
+6. This display shows that the SensorStation is operating, the battery voltage and the number of CTT transmitter detections (Beeps).  Note that in the top bar the display shows “No Cable”.  This indicates that no Ethernet connection is available between the SensorStation board and a laptop computer.
+7. Insert a USB to Ethernet connector into one of the open USB ports on the SensorStation.
+
+![](/Users/davidlapuma/github/ctt_documentation/images/ethernetConnected.png){#id .class width=50%}
+
+8. Connect your laptop to the SensorStation with an Ethernet cable.  Wait for the Inkyphat display to update.  Once the display updates you will see the IP address assigned to the combination of your laptop and SensorStation in the top bar of the display.  In this example the assigned IP address is 169.254.54.185.
+
+![](/Users/davidlapuma/github/ctt_documentation/images/pimoroni.cominkyphat.jpg){#id .class width=50%}
+
+9. Now you are ready to view the operating status of the SensorStation on two different, and necessary, web interfaces.  There are separate web interfaces for the CTT and Motus (Sensorgnome) systems.  Open your web browser and enter the IP address into the address bar to open a new web page.  The CTT web interface will open.
+
+
+10. If you have CTT LifeTags with you as test tags, they will show up as hits in the “Tags” window.  The Station summary on the left includes information similar to the header of the familiar Sensorgnome display.  The most important item is the “ID” number as that is needed to register the station with Motus.  It also includes the time of the last boot and a boot counter.  For more information on status scroll down through the display.  The additional information includes windows for each of the five CTT antenna ports.
+
+
+11. There is a section for data management that we can skip when setting up a station, 
+that section may be more useful to us in the future.  Just below data management there is a blue button “Sensorgnome Interface”.  Clicking on this button will open the familiar Sensorgnome web interface in a new window. 
+
+![](/Users/davidlapuma/github/ctt_documentation/images/Data Management.png){#id .class width=75%}
+
+
+
+12. FYI - you can edit the “deployment.txt” file in the provided box.  At the bottom of the box there is a red “Save Changes” button.  If you edit the deployment.txt file, do not forget to save your changes!  The “Reboot” button also works as expected and pressing it will reboot the SensorStation.
+
+
+13. You can leave both the CTT web interface and the Sensorgnome web interface open at the same time in your web browser and switch back and forth as necessary.  The Sensorgnome web interface pretty much operates as expected.  Please note that SensorStations do not use the GPS’s clock to manage time and that you will always get the ***PPS missing*** warning on the Sensorgnome interface.
+
+***
+
+![](/Users/davidlapuma/github/ctt_documentation/images/am your Sensor Gnome.png){#id .class width=75%}
+
+***
+
+Clicking on “Sensor Station Interface” will open a new SensorStation page and move you to it.  It is generally easier to switch back and forth between pages rather than clicking on the words to keep opening new windows.
+
+
+14. You can set Funcube frequencies directly in the “Devices” window and most other functions should operate as expected.  Currently there is no way to upload a tag database to the SensorStation.
+
+
+This should be enough to get us started and allow us to leave sites with confidence that the SensorStations are operating correctly.
+
+
+***
+
+# Appendix III: Qickstart Guide (SensorStation V2)
 
 ## Powering up your SensorStation
 
@@ -642,3 +723,24 @@ If connecting to our NEMA case, your coaxial will need a **Type N Male connector
 
 If connecting an antenna for a different frequency, such as 166MHz, you will need to attach your Software Defined Radio (SDR) to one of the USB ports and your coaxial cable to the SMA connector on the SDR. Note that any 166MHz radios will only show up in the SensorGnome section of the Web Interface (see **Sensor Station Web Interface**).
 
+***
+
+
+# Appendix IV: Materials List
+
+|  **Item** | **Group** | **Description** | **Part Number** | **Connection Type(s)** | **Number Required** | **Supplier Link** |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+|  A | Comm. | HO-432 Loop -- for receiving LifeTags omnidirectionally | M2 HO-432 | Type N Female | Depends on number of antennas | [Link](https://www.hamradio.com/detail.cfm?pid=H0-000720) |
+|  B | Comm. | A430S10 10 element yagi -- directional antenna for receiving distant nodes and LifeTags | Diamond Antenna A430S10 | SO-238 Female | Depends on number of antennas | [Link](https://www.hamradio.com/detail.cfm?pid=H0-005816) |
+|  C | Comm. | 433MHz 5dBi omni directional antenna -- for receiving nodes from any direction, up to 700 meters away in some conditions | Data Alliance A433O5 | Type N Male | Depends on number of antennas | [Link](https://www.data-alliance.net/antenna-433mhz-5dbi-omnidirectional-fiberglass-w-n-male-vhf-uhf-marine/) |
+|  D | Comm. | Cable from Antenna to SensorStation | USA Coax | Depends on antenna and SensorStation type | Depends on number of antennas | [Link](https://usacoax.com/cables.html) |
+|  E | Mounting Hardware | Tri-Pod | Various, Amazon |  | Depends on number of SensorStations | [Link](https://www.amazon.com/feet-Satellite-Tripod-Mount-2-Inch/dp/B0043OAI9M/ref=sr_1_3?keywords=antenna+tripod&qid=1555017820&s=electronics&sr=1-3) |
+|  F | Mounting Hardware | Mast (electrical conduit) | Lowes, Home Depot, Other Hardware Stores |  | See Setup Guide | [Link](https://www.lowes.com/search?searchTerm=emt+conduit) |
+|  G | AC Power | 110-250 A/C, 50Hz/60Hz, Universal power supply, USA adapter unless specified | Optional. If purchased separately its important to use 12V DC only |  |  |  |
+|  H | Solar Power | Panel 50 Watt | Various | 50-100 Watt Panel is a good range. If you have the space 100W works better under most conditions. | one panel per station | [Link](https://www.amazon.com/Newpowa-Polycrystalline-Efficiency-Module-Marine/dp/B0725RZ22H/ref=sr_1_9?keywords=100%2Bwatt%2Bsolar&qid=1552483408&s=lawn-garden&sr=1-9&th=1) |
+|  I | Solar Power | 12v Deep Cycle (Marine) Battery | Everstart, others |  |  | [Link](https://www.walmart.com/ip/Everstart-Battery-Marine-12-Volt/868580543) |
+|  J | Solar Power | Charge Controller | Various |  | One per station | [Link](https://www.amazon.com/gp/product/B072MMDY4F?pf_rd_p=183f5289-9dc0-416f-942e-e8f213ef368b&pf_rd_r=Z8QBVS0MGEQFA746ENSH) |
+|  K | Solar Power | Pole-mount for Solar |  | Panel can be mounted on the ground but a tilt/pole mount makes it easier to mount. | 1 set | [Link](https://www.amazon.com/WindyNation-Side-Solar-Panel-Mount/dp/B01NAKQMKW/ref=sr_1_4?keywords=solar+panel+pole+mount&qid=1552483552&s=lawn-garden&sr=1-4) |
+|  L | Node | Mast | Many | The EMT for the SensorStation (2, 1.5, 1 1/4, 1 ) |  | [Link](https://www.lowes.com/pd/Common-3-4-in-Actual-75-In-Metallic-Emt-10-ft-Conduit/3129553) |
+|  M | Mounting Mast | Clamp |  | This should be the size of the bottom section of your mast- usually 1 ¼ to 2” |  | [Link](https://www.lowes.com/search?searchTerm=universal+strut+pipe+strap) |
+|  N | Mounting Mast | Mounting Rail | Can be useful for mounting EMT mas on building or | Two 2-3’ sections |  | [Link](https://www.lowes.com/search?searchTerm=superstrut+gold-galvanized+half+slot+channel+strut) |
