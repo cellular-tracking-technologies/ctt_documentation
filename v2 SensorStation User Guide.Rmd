@@ -626,7 +626,7 @@ We are welcoming new collaborators and supporters each week! **For more informat
 
 # Appendix II: Qickstart Guide (SensorStation V1)
 
-#### Courtesy David Brinker
+***Courtesy of David Brinker***
 
 ## Powering Up
 
