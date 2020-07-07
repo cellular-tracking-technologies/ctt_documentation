@@ -1,7 +1,7 @@
 ---
-title: "Installation Guide for the CTT SensorStation and CTT Nodes - DRAFT"
+title: "Installation Guide for the CTT SensorStation and CTT Nodes"
 author: "support@celltracktech.com"
-date: "6/29/2020"
+date: "7/7/2020"
 output:
   html_document:
     toc: yes
@@ -17,6 +17,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ***
+# Note on Version 1 SensorStations vs. Version 2 SensorStations
+
+This User Guide has been redesigned around the new (ca.2020) Version 2 SensorStation (V2) which includes an LCD display. Otherwise, Version 1 stations (ca.2019) are nearly identical to V2 stations. In cases where they differ, we have made note in the manual. If you are setting up a V1 station you may want to begin at the [QuickStart Guide in Appendix II](#V1Quickstart). If you find inconsistencies in this manual please email us at support@celltracktech.com as we will be updating the manual regularly.
 
 # Congratulations
 
@@ -24,7 +27,7 @@ If you are reading this document, then you most likely have purchased one of our
 
 # Participating in the Motus Wildlife Tracking System
 
-If you are setting up your SensorStation to participate in the Motus Wildlife Tracking System (motus.org), your station can still be used with CTT Nodes. In general, we recommend Motus stations to include 4 Yagi 10-element antennas pointing in the 4 cardinal directions. A fifth Omni antenna can be installed and dedicated to detecting nodes, or one of the Yagi antennas can be used for nodes while the other three are positioned at 120 degrees for full coverage.  You may also add any number of 166MHz antennas by using a Software Defined Radio (SDR), such as a FunCube or RTL-SDR, via any of the USB ports on the SensorStation (SDRs are sold separately via third-party companies). A clear view of the horizon is preferred to get maximum range, so a height as high as possible is also advised. For more information on Motus, see [Appendix 1](#appendix_1).
+If you are setting up your SensorStation to participate in the Motus Wildlife Tracking System (motus.org), your station can still be used with CTT Nodes. In general, we recommend Motus stations to include 4 Yagi 10-element antennas pointing in the 4 cardinal directions. A fifth Omni antenna can be installed and dedicated to detecting nodes, or one of the Yagi antennas can be used for nodes while the other three are positioned at 120 degrees for full coverage.  You may also add any number of 166MHz antennas by using a Software Defined Radio (SDR), such as a FunCube or RTL-SDR, via any of the USB ports on the SensorStation (SDRs are sold separately via third-party companies). A clear view of the horizon is preferred to get maximum range, so a height as high as possible is also advised. For more information on Motus, see [Appendix I](#appendix_1).
 
 
 # SensorStation Precautions
@@ -171,6 +174,14 @@ While there are many antennas to choose from, these are a few that we can recomm
     
 *__Whatever you choose, make sure you get the proper coaxial end to connect your antenna to your SensorStation!__*
 
+### Connecting antennas to your SensorStation
+
+To connect antennas to your SensorStation you will need coaxial cable (we recommend LMR-400 or better) with the proper ends to connect to the antenna (manufacturer specific) and your SensorStation. If connecting directly to the board, each 434MHz radio has a **SMA Female** port, so your coaxial will require an **SMA Male** connector. 
+
+If connecting to our NEMA case, your coaxial will need a **Type N Male connector**. 
+
+If connecting an antenna for a different frequency, such as 166MHz, you will need to attach your Software Defined Radio (SDR) to one of the USB ports and your coaxial cable to the SMA connector on the SDR. Note that any 166MHz radios will only show up in the SensorGnome section of the Web Interface (see **Sensor Station Web Interface**).
+
 ### Mounting the antennas
 
 Antennas are attached to the EMT conduit with the clamps that come with the antennas. If you have a setup that uses 4 yagis, than you will attach the yagis to a 4 or 5-way mounting “hat” you can purchase via online retailers.  Once the antennas are on EMT, attach the coax and wrap the connection with coax tape. Run down the poles to where it will attach to the SensorStation. You can use zip ties to secure the coax to poles where needed. Make sure you have enough coax to form a drip loop for each connection.
@@ -182,7 +193,7 @@ The SensorStation can be placed inside a building, or fastened to the pole or bu
 
 # Powering your SensorStation
 
-The SensorStation can be connected directly to a 12V DC power source, via a charge controller, or to an AC to DC power supply which can then be plugged directly into your standard AC power source. In many cases, though, SensorStations are deployed remotely and are in need of a remote power supply such as a solar charged deep-cycle marine battery. A typical setup would be a 50-100W solar panel connected to a charge controller. The charge controller typically has 3 ports. The 3 ports are 1.) Solar panel 2.) 12V battery 3.) Accessory/Device/consumer, which, in this case, is your SensorStation. That line goes into the green *Power In* terminal on the SensorStation board. The positive and negative wire ports are labeled on the board, and to insert the wire simply loosen the set screws on the top, and slide the wire leads in to the holes just under the set screws (see the pictures below; note for V1 stations see the QuickStart Guide in Appendix II). 
+The SensorStation can be connected directly to a 12V DC power source, via a charge controller, or to an AC to DC power supply which can then be plugged directly into your standard AC power source. In many cases, though, SensorStations are deployed remotely and are in need of a remote power supply such as a solar charged deep-cycle marine battery. A typical setup would be a 50-100W solar panel connected to a charge controller. The charge controller typically has 3 ports. The 3 ports are 1.) Solar panel 2.) 12V battery 3.) Accessory/Device/consumer, which, in this case, is your SensorStation. That line goes into the green *Power In* terminal on the SensorStation board. The positive and negative wire ports are labeled on the board, and to insert the wire simply loosen the set screws on the top, and slide the wire leads in to the holes just under the set screws (see the pictures below; note for V1 stations see the [QuickStart Guide in Appendix II](#V1Quickstart)). 
 
 ![Power not connected](/Users/davidlapuma/github/ctt_documentation/images/power_out.png){#id .class width="20%"}
 ![Power connected](/Users/davidlapuma/github/ctt_documentation/images/power_in.png){#id .class width="20%"}
@@ -634,7 +645,7 @@ We are welcoming new collaborators and supporters each week! **For more informat
 
 ***
 
-# Appendix II: Qickstart Guide (SensorStation V1)
+# Appendix II: Qickstart Guide (SensorStation V1){#V1Quickstart}
 
 ***Courtesy of David Brinker***
 
@@ -715,28 +726,8 @@ This should be enough to get us started and allow us to leave sites with confide
 
 ***
 
-# Appendix III: Qickstart Guide (SensorStation V2)
 
-## Powering up your SensorStation
-
-  1. Ensure your station is in the `OFF` power position.
-
-  2. If you purchased your SensorStation complete with a case and AD/DC power block, simply plug in your SensorStation and turn the on/off switch to `ON`. 
-
-  3. Otherwise, follow the directions under **Connecting your SensorStation with a solar panel to a 12v Battery**
-
-## Connecting antennas
-
-To connect antennas to your SensorStation you will need coaxial cable (we recommend LMR-400 or better) with the proper ends to connect to the antenna (manufacturer specific) and your SensorStation. If connecting directly to the board, each 434MHz radio has a **SMA Female** port, so your coaxial will require an **SMA Male** connector. 
-
-If connecting to our NEMA case, your coaxial will need a **Type N Male connector**. 
-
-If connecting an antenna for a different frequency, such as 166MHz, you will need to attach your Software Defined Radio (SDR) to one of the USB ports and your coaxial cable to the SMA connector on the SDR. Note that any 166MHz radios will only show up in the SensorGnome section of the Web Interface (see **Sensor Station Web Interface**).
-
-***
-
-
-# Appendix IV: Materials List
+# Appendix III: Materials List
 
 |  **Item** | **Group** | **Description** | **Part Number** | **Connection Type(s)** | **Number Required** | **Supplier Link** |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
