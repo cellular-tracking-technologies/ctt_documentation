@@ -333,6 +333,9 @@ And two folders:
 
 ## Overview
 
+The SensorStation Web Interface provides an overview of your station's operation, including real-time statistics on detections of tags and nodes, as well as a user interface to change settings, update your SensorStation, toggle the GSM modem, and reboot the station.
+
+
 ### Nodes
 
 This is a list of Nodes the station has detected since connecting. For each Node it lists: 
