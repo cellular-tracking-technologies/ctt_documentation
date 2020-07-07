@@ -3,11 +3,11 @@ title: "Installation Guide for the CTT SensorStation and CTT Nodes - DRAFT"
 author: "support@celltracktech.com"
 date: "6/29/2020"
 output:
-  pdf_document:
-    toc: yes
   html_document:
     toc: yes
     number_sections: yes
+  pdf_document:
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -180,9 +180,9 @@ Antennas are attached to the EMT conduit with the clamps that come with the ante
 ### Placing your SensorStation
 The SensorStation can be placed inside a building, or fastened to the pole or building, etc. It should either be close to the ground for easy access, or have an ethernet cable run down to an accessible location.
 
-# Operating your SensorStation with a solar panel and 12V Battery
+# Powering your SensorStation
 
-The SensorStation can be connected directly to a 12V DC power source, or via a charge controller. Typical setup would be a 50-100W solar panel connected to a charge controller. The charge controller typically has 3 ports. The 3 ports are 1.) Solar panel 2.) 12V battery 3.) Accessory/Device/consumer- which is whatever you are powering- in this case your SensorStation. That line goes into the green *Power In* terminal on the SensorStation board. The positive and negative wire ports are labeled on the board, and to insert the wire simply loosen the set screws on the top, and slide the wire leads in to the holes just under the set screws (see the pictures below). 
+The SensorStation can be connected directly to a 12V DC power source, via a charge controller, or to an AC to DC power supply which can then be plugged directly into your standard AC power source. In many cases, though, SensorStations are deployed remotely and are in need of a remote power supply such as a solar charged deep-cycle marine battery. A typical setup would be a 50-100W solar panel connected to a charge controller. The charge controller typically has 3 ports. The 3 ports are 1.) Solar panel 2.) 12V battery 3.) Accessory/Device/consumer, which, in this case, is your SensorStation. That line goes into the green *Power In* terminal on the SensorStation board. The positive and negative wire ports are labeled on the board, and to insert the wire simply loosen the set screws on the top, and slide the wire leads in to the holes just under the set screws (see the pictures below; note for V1 stations see the QuickStart Guide in Appendix II). 
 
 ![Power not connected](/Users/davidlapuma/github/ctt_documentation/images/power_out.png){#id .class width="20%"}
 ![Power connected](/Users/davidlapuma/github/ctt_documentation/images/power_in.png){#id .class width="20%"}
@@ -195,22 +195,32 @@ If you would like to monitor your solar voltage remotely, you will need to use t
 
 # SensorStation LEDs
 
-There are several LED lights on the SensorStation which may assist you in diagnosing issues. Note that with the introduction of the SensorStation V2's LCD screen, all diagnoses can be carried out via the lCD. 
+There are several LED lights on the SensorStation which may assist you in diagnosing issues. Note that with the introduction of the SensorStation V2's LCD screen, all diagnoses can be carried out via the LCD. 
 
-* **Diagnostic A** (green) - When blinks it means the software reading the data from the radios is writing it to disk (the system is working). If solid on or off, it indicates that the software has stopped running and is no longer writing data.
+## Diagnostic A (green)
 
-* **Diagnostic B** (red) - On when SensorStation has established a point-to-point connection with the on-board modem. It checks every second for a connection. The PPP connection is just the layer that allows the modem to communicate to the network it is on, but doens't always indicate that the connection is working (in the case of a very weak signal). 
+| LED Behavior  | Meaning | Troubleshooting Steps |
+| :------------------ | :---------------------- | :----------------------- |
+| OFF or SOLID | The software has stopped reading data from the radios and writing to the disk. | Restart your SensorStation. |
+|   Blinking | The software is reading data from the radios and writing that data to disk.  | The system is operating properly. |
 
-## Blue GSM Cellular LED
+## Diagnostic B (red) 
+
+| LED Behavior  | Meaning | Troubleshooting Steps |
+| :------------------ | :---------------------- | :----------------------- |
+| ON| Indicates that the SensorStation has established a point-to-point protocol (PPP) connection between the network and the on-board modem. | The SensorStation checks for the connection every second. The PPP connection is just the layer that allows the modem to communicate to the network **if it is on**, but doesn't always indicate that a connection is working (such as in the case of a weak signal)  |
+| OFF | Indicates that the SensorStation modem is not connected to the network.   | If there is no modem on the SensorStation this would be the typical state and behavior. If a modem exists but this behavior continues, it indicates that the modem is unable to secure a connection to the network. |
+
+## GSM Cellular LED (blue)
 
 The blue LED by the cellular module, labeled D9, is called the Netlight. The Netlight blinks differently, depending on the modem state. You can use this blink rate to identify if your SensorStation is connected to the Internet or unable to connect.
 
 | LED Behavior  | Meaning | Troubleshooting Steps |
 | :------------------ | :---------------------- | :----------------------- |
-| Off | The modem is not currently powered on. | Check to make sure the Raspberry Pi is running. |
-|   Blinking once a second. | The modem is searching for a signal and is not yet connected to a network.  |   Wait a minute or two for the modem to find a signal. If it continues to blink, try using an external antenna or moving the SensorStation to a better location. Also, be sure that your SensorStation has a data plan and is activated.|
-|Slow blinking (once every 3 seconds). |The modem is connected to the network, but no data connection has been established.|The Raspberry Pi software has not initiated a connection, the data plan is not activated, or the signal is too weak to establish a connection. Wait a few moments for the modem to try again.|
-|Fast blinking (3 times per second). |The modem is connected to the network, or if just starting to flash rapidly, attempting to connect to the network. |Internet connection is active and the modem can now transmit and receive data, copy data files, and send health reports. If the modem returns to a slower blink rate after rapidly blinking, the connection attempt was unsuccessful.|
+| OFF | The modem is not currently powered on. | Check to make sure the Raspberry Pi is running. |
+| Moderate blinking (5 times per second) | The modem is searching for a signal and is not yet connected to a network.  |   Wait a minute or two for the modem to find a signal. If it continues to blink, try using an external antenna or moving the SensorStation to a better location. Also, be sure that your SensorStation has a data plan and is activated.|
+|Slow blinking (once every 2 seconds) |The modem is connected to the network but is idle.| |
+|Fast blinking (8 times per second) |The modem is connected to the network and is transferring data. | |
 
 # SensorStation Navigation Buttons
 
@@ -673,7 +683,7 @@ Turn on the SensorStation using the slide switch on the left center of the Senso
 9. Now you are ready to view the operating status of the SensorStation on two different, and necessary, web interfaces.  There are separate web interfaces for the CTT and Motus (Sensorgnome) systems.  Open your web browser and enter the IP address into the address bar to open a new web page.  The CTT web interface will open.
 
 
-10. If you have CTT LifeTags with you as test tags, they will show up as hits in the “Tags” window.  The Station summary on the left includes information similar to the header of the familiar Sensorgnome display.  The most important item is the “ID” number as that is needed to register the station with Motus.  It also includes the time of the last boot and a boot counter.  For more information on status scroll down through the display.  The additional information includes windows for each of the five CTT antenna ports.
+10. If you have CTT LifeTags with you as test tags, they will show up as hits in the “Tags” window.  The Station summary on the right includes information similar to the header of the familiar Sensorgnome display.  The most important item is the “ID” number as that is needed to register the station with Motus.  It also includes the time of the last boot and a boot counter.  For more information on status scroll down through the display.  The additional information includes windows for each of the five CTT antenna ports.
 
 
 11. There is a section for data management that we can skip when setting up a station, 
