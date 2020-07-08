@@ -36,8 +36,6 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={Updating V1 Station Radios to Detect New Tags and Notes},
-  pdfauthor={david.lapuma@celltracktech.com},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
@@ -60,22 +58,50 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 
-\title{Updating V1 Station Radios to Detect New Tags and Notes}
-\author{\href{mailto:david.lapuma@celltracktech.com}{\nolinkurl{david.lapuma@celltracktech.com}}}
-\date{7/1/2020}
+\author{}
+\date{\vspace{-2.5em}7/1/2020}
 
 \begin{document}
-\maketitle
 
 {
 \setcounter{tocdepth}{2}
 \tableofcontents
 }
-\hypertarget{before-you-begin}{%
-\section{Before you begin}\label{before-you-begin}}
+\hypertarget{updating-your-v1-sensorstation-radios-to-detect-new-hardware}{%
+\section{Updating your V1 SensorStation Radios to Detect New
+Hardware}\label{updating-your-v1-sensorstation-radios-to-detect-new-hardware}}
+
+\hypertarget{why-update}{%
+\subsection{Why Update?}\label{why-update}}
+
+This is a valid question. In 2020 we introduced the 2nd version of the
+\texttt{CTT\ SensorStation}, and simultaneously released new versions of
+the \texttt{CTT\ Node} and \texttt{CTT\ LifeTag}. For the latter two
+products we made some significant advances in the way they communicate
+with our SensorStation radios, and they way they confirm their digital
+ID. Technology moves at lightning speed, and while we made these changes
+with every intention of full backwards compatibility, we soon learned
+that the radios would need to be manually updated once before they could
+join the V2 SensorStations in receiving over-the-air radio programming.
+
+\emph{So should you update?} If you plan to add
+\texttt{Version\ 2\ CTT\ Nodes} to your study, then the answer is
+absolutely \textbf{yes}. If your station is
+\texttt{listening\ for\ V2\ LifeTags}, it will still pick up the tag ID
+like it always has, but will not be able to use the tag ID confirmation
+code to absolutely validate the ID. So if you want the highest degree of
+confirmation for LifeTags, then the answer is also \textbf{yes}.
+
+If you're doing a localized study using PowerTags and not using any of
+the newer Nodes, then you don't need to update the radios at
+all\ldots{}\emph{but of course you still can!} To find out how, read
+on\ldots{}
+
+\hypertarget{getting-started}{%
+\subsection{Getting Started}\label{getting-started}}
 
 \hypertarget{things-youll-need}{%
-\subsection{Things you'll need}\label{things-youll-need}}
+\subsubsection{Things you'll need}\label{things-youll-need}}
 
 \begin{itemize}
 \tightlist
@@ -103,8 +129,9 @@
     \begin{itemize}
     \tightlist
     \item
-      \textbf{If you are using this programmer, see
-      \protect\hyperlink{Appendix_I}{Appendix I} for special
+      \textbf{If you are using this programmer, or having issues with
+      your \texttt{USBtinyISP} see
+      \protect\hyperlink{troubleshooting}{Troubleshooting} for special
       instructions before proceeding.}
     \end{itemize}
   \end{itemize}
@@ -113,7 +140,7 @@
 \end{itemize}
 
 \hypertarget{part-1-setting-up-arduino-ide}{%
-\section{Part 1: Setting up Arduino
+\subsection{Part 1: Setting up Arduino
 IDE}\label{part-1-setting-up-arduino-ide}}
 
 \begin{enumerate}
@@ -140,11 +167,14 @@ IDE}\label{part-1-setting-up-arduino-ide}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{3}
+\setcounter{enumi}{4}
 \tightlist
 \item
-  In the window for \texttt{Additional\ Boards\ Manager\ URLs} paste the
-  following:
+  From the \texttt{File} menu, select \texttt{Preferences}
+\item
+  Near the bottom of the \texttt{Preferences} page you'll see a window
+  for \texttt{Additional\ Boards\ Manager\ URLs}. Past the following in
+  that window:
 \end{enumerate}
 
 \begin{verbatim}
@@ -181,7 +211,7 @@ do\ldots{}}
 \end{enumerate}
 
 \hypertarget{part-2-prepping-your-sensorstation-for-updating-the-radios}{%
-\section{Part 2: Prepping your SensorStation for updating the
+\subsection{Part 2: Prepping your SensorStation for updating the
 radios}\label{part-2-prepping-your-sensorstation-for-updating-the-radios}}
 
 \begin{enumerate}
@@ -200,7 +230,7 @@ radios}\label{part-2-prepping-your-sensorstation-for-updating-the-radios}}
 \begin{figure}
 \hypertarget{id}{%
 \centering
-\includegraphics[width=0.25\textwidth,height=\textheight]{/Users/davidlapuma/github/ctt_documentation/images/removePi.GIF}
+\includegraphics[width=0.25\textwidth,height=\textheight]{/Users/davidlapuma/github/ctt_documentation/images/removePiOpt.GIF}
 \caption{removing the Raspberry Pi Module}\label{id}
 }
 \end{figure}
@@ -214,7 +244,7 @@ radios}\label{part-2-prepping-your-sensorstation-for-updating-the-radios}}
 \end{enumerate}
 
 \hypertarget{part-3-burning-the-bootloader-on-the-radios}{%
-\section{Part 3: Burning the Bootloader on the
+\subsection{Part 3: Burning the Bootloader on the
 Radios}\label{part-3-burning-the-bootloader-on-the-radios}}
 
 \textbf{The first step of Part 3 will differ depending on whether your
@@ -235,7 +265,7 @@ onto the radio pins instead.}
   \begin{figure}
   \hypertarget{id}{%
   \centering
-  \includegraphics[width=0.25\textwidth,height=\textheight]{/Users/davidlapuma/github/ctt_documentation/images/attachProgrammer.GIF}
+  \includegraphics[width=0.25\textwidth,height=\textheight]{/Users/davidlapuma/github/ctt_documentation/images/attachProgrammerOpt.GIF}
   \caption{Connecting the programmer to the radio programming
   header}\label{id}
   }
@@ -255,7 +285,7 @@ onto the radio pins instead.}
 \textbf{You're done!\ldots well, almost\ldots{}}
 
 \hypertarget{part-4-running-the-radio-update-software}{%
-\section{Part 4: Running the Radio Update
+\subsection{Part 4: Running the Radio Update
 Software}\label{part-4-running-the-radio-update-software}}
 
 Now that the radios are reprogrammed, you will need to SSH into your
@@ -268,7 +298,7 @@ SensorStation, so\ldots{}
   adapter, or by plugging it into a router and accessing the IP over
   your local internet.
 \item
-  Download the following three files from xxx:
+  Download the following three files to your Downloads folder:
 \end{enumerate}
 
 \texttt{ssr\_v2\_3\_1.ino.hex} \texttt{program-radio.sh}
@@ -277,15 +307,29 @@ SensorStation, so\ldots{}
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{2}
+\item
+  Open the PowerShell Command Prompt (PC) or Terminal (Mac)
+\item
+  Change your directory to the Downloads folder:
+\end{enumerate}
+
+On Mac: \texttt{cd\ \textasciitilde{}/Downloads}
+
+On PC: \texttt{cd\ Downloads}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
 \tightlist
 \item
-  Using the PowerShell Command Prompt (PC) or Terminal (Mac) and
-  assuming you have downloaded the files to your Downloads folder, enter
-  the following:
+  Run the following lines of code, replacing the words
+  \texttt{sensorstation.local} with the \textbf{IP address} of your
+  SensorStation. So, for instance, if your station IP address is
+  \texttt{255.255.233.0} the first \texttt{scp} command above would read
+  \texttt{scp\ ssr\_v2\_3\_1.ino.hex\ pi@255.255.233.0:/home/pi/}.
 \end{enumerate}
 
 \begin{verbatim}
-cd ~/Downloads
 scp ssr_v2_3_1.ino.hex pi@sensorstation.local:/home/pi/
 scp program-radio.sh pi@sensorstation.local:/home/pi/
 scp program-radios_sh.sh pi@sensorstation.local:/home/pi/program-radios.sh
@@ -301,7 +345,7 @@ chmod a+x ./program-radios.sh
 blink when detecting tags.}
 
 \hypertarget{step-5-flashing-a-compute-module-for-a-sensorstation}{%
-\section{Step 5: Flashing a Compute Module for a
+\subsection{Step 5: Flashing a Compute Module for a
 SensorStation}\label{step-5-flashing-a-compute-module-for-a-sensorstation}}
 
 Now that you've updated the radios, you'll need to update your
@@ -311,12 +355,49 @@ You can use the Sensor Station to burn a new operating system onto the
 compute module using a micro USB cable attached to your computer.
 
 Please follow the directions here to do so:
-\url{https://account.celltracktech.com/station/instructions/}
+\url{https://woodcreeper.github.io/ctt_documentation/flashingComputeModule.html}
 
-\hypertarget{Appendix_I}{%
-\section{Appendix I}\label{Appendix_I}}
+\hypertarget{troubleshooting}{%
+\subsection{Troubleshooting}\label{troubleshooting}}
 
 Programmer drama! So it appears all programmers are not created equal.
+
+\hypertarget{im-having-issues-with-usbtinyisp}{%
+\subsubsection{\texorpdfstring{I'm having issues with
+\texttt{USBtinyISP}}{I'm having issues with USBtinyISP}}\label{im-having-issues-with-usbtinyisp}}
+
+Try this\ldots{}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Go to
+  \url{https://github.com/adafruit/Adafruit_Windows_Drivers/releases/tag/2.4.0.0}
+\item
+  Download the driver
+\item
+  Run the file to install the driver
+\item
+  click \texttt{agree}
+\item
+  Make sure \texttt{usbtinyisp} is ticked
+\end{enumerate}
+
+\includegraphics{/Users/davidlapuma/github/ctt_documentation/images/tinyUSB.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Click \texttt{install}
+\end{enumerate}
+
+\hypertarget{im-using-usbasp-instead-of-usbtinyisp}{%
+\subsubsection{\texorpdfstring{I'm using \texttt{USBasp} instead of
+\texttt{USBtinyISP}}{I'm using USBasp instead of USBtinyISP}}\label{im-using-usbasp-instead-of-usbtinyisp}}
+
 In order to run the above using the \texttt{USBasp} device instead of
 the \texttt{USBtinyISP} programmer, please follow the steps below. Note
 this \textbf{ONLY works on PC} computers so far\ldots so Mac users
@@ -352,6 +433,14 @@ should get the \texttt{USBtinyISP}.
   Choose \texttt{USBAsp} from the dropdown list
 \item
   select \texttt{libusb-win32\ (v1.2.6.0)} in the right menu
+\end{enumerate}
+
+\includegraphics[width=0.5\textwidth,height=\textheight]{/Users/davidlapuma/github/ctt_documentation/images/zadig.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
 \item
   select \texttt{reinstall\ driver}
 \end{enumerate}

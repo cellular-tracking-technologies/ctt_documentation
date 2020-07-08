@@ -1,13 +1,13 @@
 ---
-date: "7/1/2020"
+title: "Updating your V1 SensorStation Radios"
+author: "support@celltracktech.com"
+date: "7/7/2020"
 output:
   html_document:
     toc: yes
-    number_sections: no
-    theme: default
-    highlight: default
+    number_sections: yes
   pdf_document:
-     toc: yes
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -31,7 +31,7 @@ If you're doing a localized study using PowerTags and not using any of the newer
   * If your V1 SensorStation radios do not have headers, you'll also need this part to make the connection between the programmer cable and the board: [click here](https://www.sparkfun.com/products/12807)
   * We recommend this programmer: [click this here](https://www.amazon.com/USBtinyISP-Programmer-Bootloader-Download-Interface/dp/B01FDD4EP0/ref=sr_1_1?crid=3AEXHPTVD9KER&dchild=1&keywords=usbtinyisp&qid=1593638163&sprefix=usbtiny%2Caps%2C149&sr=8-1)
   * but this one will also work with a little more effort (PC-only): [click here](https://www.amazon.com/ARCELI-USBASP-USBasp_H6-Programmer-Support/dp/B0785RQ766/ref=sr_1_12?dchild=1&keywords=bootloader&qid=1593638232&s=electronics&sr=1-12)
-      * **If you are using this programmer, see [Appendix I](#Appendix_I) for special instructions before proceeding.**
+      * **If you are using this programmer, or having issues with your `USBtinyISP` see [Troubleshooting](#troubleshooting) for special instructions before proceeding.**
 
 * **Computer** (Mac or PC)
 
@@ -89,16 +89,29 @@ Now that the radios are reprogrammed, you will need to SSH into your SensorStati
 
 1. reconnect the power and connect to your station via the Ethernet adapter, or by plugging it into a router and accessing the IP over your local internet.
 
-2. Download the following three files from xxx:
+2. Download the following three files to your Downloads folder:
 
 `ssr_v2_3_1.ino.hex`
 `program-radio.sh`
 `program-radios_sh.sh`
 
-3. Using the PowerShell Command Prompt (PC) or Terminal (Mac) and assuming you have downloaded the files to your `Downloads` folder, enter the following:
+3. Open the PowerShell Command Prompt (PC) or Terminal (Mac) 
+
+4. Change your directory to the Downloads folder:
+
+  On Mac:
+  ```
+  cd ~/Downloads
+  ```
+
+  On PC:
+  ```
+  cd Downloads
+  ```
+
+5. Run the following lines of code, replacing the words `sensorstation.local` with the **IP address** of your SensorStation. So, for instance, if your station IP address is `255.255.233.0` the first `scp` command above would read `scp ssr_v2_3_1.ino.hex pi@255.255.233.0:/home/pi/`.
 
 ```
-cd ~/Downloads (mac) or cd Downloads (pc)
 scp ssr_v2_3_1.ino.hex pi@sensorstation.local:/home/pi/
 scp program-radio.sh pi@sensorstation.local:/home/pi/
 scp program-radios_sh.sh pi@sensorstation.local:/home/pi/program-radios.sh
@@ -111,7 +124,6 @@ chmod a+x ./program-radios.sh
 
 ```
 
-***Note: if you run into issues resolving the host `sensorstation.local`, replace `sensorstation.local` with the IP address of your station. So, for instance, if your station IP address is `255.255.233.0` the first `scp` command above would read `scp ssr_v2_3_1.ino.hex pi@255.255.233.0:/home/pi/`.***
 **You should now see your radio lights now switch off, and only blink when detecting tags.**
 
 ## Step 5: Flashing a Compute Module for a SensorStation
@@ -120,13 +132,31 @@ Now that you’ve updated the radios, you’ll need to update your SensorStation
 
 You can use the Sensor Station to burn a new operating system onto the compute module using a micro USB cable attached to your computer.
 
-Please follow the directions here to do so: https://account.celltracktech.com/station/instructions/
+Please follow the directions here to do so: https://woodcreeper.github.io/ctt_documentation/flashingComputeModule.html
 
 
 
-## Appendix I {#Appendix_I}
+
+## Troubleshooting {#troubleshooting}
 
 Programmer drama! So it appears all programmers are not created equal. 
+
+### I'm having issues with `USBtinyISP`
+
+Try this...
+
+1. Go to https://github.com/adafruit/Adafruit_Windows_Drivers/releases/tag/2.4.0.0
+2. Download the driver 
+3. Run the file to install the driver
+4. click `agree`
+5. Make sure `usbtinyisp` is ticked
+
+![](/Users/davidlapuma/github/ctt_documentation/images/tinyUSB.png)
+
+6. Click `install`
+
+### I'm using `USBasp` instead of `USBtinyISP`
+
 In order to run the above using the `USBasp` device instead of the `USBtinyISP` programmer, please follow the steps below. Note this **ONLY works on PC** computers so far...so Mac users should get the `USBtinyISP`.
 
 1. Install Arduino IDE 1.6.9 (scroll down on this page to find it: https://www.arduino.cc/en/main/OldSoftwareReleases)
@@ -140,8 +170,6 @@ In order to run the above using the `USBasp` device instead of the `USBtinyISP` 
 ![](/Users/davidlapuma/github/ctt_documentation/images/zadig.png){#id .class width=50%}
 
 7. select `reinstall driver`
-
-
 
 
 

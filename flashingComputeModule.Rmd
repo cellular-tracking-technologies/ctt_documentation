@@ -1,9 +1,11 @@
 ---
-date: "7/1/2020"
+title: "Flashing your SensorStation's Compute Module"
+author: "support@celltracktech.com"
+date: "7/7/2020"
 output:
   html_document:
     toc: yes
-    number_sections: no
+    number_sections: yes
   pdf_document:
     toc: yes
 ---
@@ -29,24 +31,25 @@ While CTT offers many over-the-air updates to your `CTT SensorStation` sometimes
 
 ***
 
-### Software Requirements
+## Software Requirements
 
 You will need drivers for your computer to recognize the module as a new drive, and software to burn new images to disk.
 
-#### Windows Drivers
+### Windows Drivers
 
 * Drivers - Download and run the [Windows Installer](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe) which will install the `rpiboot.exe`.
 
-#### Linux / Mac
+### Linux / Mac
 
 * Linux / MAC users will have to clone the rpiboot source code, compile and run the rpiboot.exe file that is generated. Detailed instructions [here](https://www.raspberrypi.org/documentation/hardware/computemodule/cm-emmc-flashing.md).
 
-#### All Users
+### All Users
 
 * All users require software to burn an image such as [Raspberry Pi Imager](https://www.raspberrypi.org/downloads/) or [balenaEtcher](https://www.balena.io/etcher/)
 
+***
 
-### Steps to Burn a New Image
+## Steps to Burn a New Image
 
 1. Ensure the SensorStation power is turned `OFF`
 2. Move the **USB Boot Jumper Pin** to the `ENABLED` position (to the `left` 1 pin, for horizontally placed pins, or `down` 1 pin for vertically placed pins). 
