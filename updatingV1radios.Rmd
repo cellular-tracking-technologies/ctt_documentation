@@ -95,10 +95,10 @@ Now that the radios are reprogrammed, you will need to SSH into your SensorStati
 `program-radio.sh`
 `program-radios_sh.sh`
 
-3. Using the PowerShell Command Prompt (PC) or Terminal (Mac) and assuming you have downloaded the files to your Downloads folder, enter the following:
+3. Using the PowerShell Command Prompt (PC) or Terminal (Mac) and assuming you have downloaded the files to your `Downloads` folder, enter the following:
 
 ```
-cd ~/Downloads
+cd ~/Downloads (mac) or cd Downloads (pc)
 scp ssr_v2_3_1.ino.hex pi@sensorstation.local:/home/pi/
 scp program-radio.sh pi@sensorstation.local:/home/pi/
 scp program-radios_sh.sh pi@sensorstation.local:/home/pi/program-radios.sh
@@ -108,8 +108,10 @@ mv ./program-radio.sh /usr/sbin/program-radio
 chmod a+x /usr/sbin/program-radio
 chmod a+x ./program-radios.sh
 ./program-radios.sh ./ssr_v2_3_1.ino.hex
+
 ```
 
+***Note: if you run into issues resolving the host `sensorstation.local`, replace `sensorstation.local` with the IP address of your station. So, for instance, if your station IP address is `255.255.233.0` the first `scp` command above would read `scp ssr_v2_3_1.ino.hex pi@255.255.233.0:/home/pi/`.***
 **You should now see your radio lights now switch off, and only blink when detecting tags.**
 
 ## Step 5: Flashing a Compute Module for a SensorStation
