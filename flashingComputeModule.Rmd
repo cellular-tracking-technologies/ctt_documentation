@@ -25,9 +25,19 @@ While CTT offers many over-the-air updates to your `CTT SensorStation` sometimes
 
 ***
 
-### SensorStation Image Downloads
+## SensorStation Image Downloads
 
-**V1 Station Image - compatible with V2 hardware** [Download Station Image	(1.3 GB)](https://s3.amazonaws.com/media.celltracktech.com/sensor-station/d7522108-017e-11ea-86b6-784f43a7974d/sensor-station.2020-03-23.zip)
+### For Version 1 SensorStations
+
+**V1 SensorStation Current Stable Image**
+*OTA Update enabled. Station health reports. RTL-SDR support. Pickup new Nodes / Tags with updated protocol.* 
+[Download Station Image](https://s3.amazonaws.com/media.celltracktech.com/sensor-station/d7522108-017e-11ea-86b6-784f43a7974d/sensor-station.2020-03-23.zip)
+
+### For Version 2 SensorStations
+
+**V2 SensorStation Current Stable Image**
+*Records Tag, GPS, SensorGnome, and Telemetry data. Monthly reboot on the 3rd of the month.* 
+[Download Station Image](https://s3.amazonaws.com/media.celltracktech.com/sensor-station/d7522108-017e-11ea-86b6-784f43a7974d/sensor-station.2020-06-09.zip)
 
 ***
 

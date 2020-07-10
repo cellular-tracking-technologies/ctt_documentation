@@ -81,15 +81,17 @@ https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
 3. At this point you will see dialogue on the Arduino IDE interface indicating that the Bootloader is being burned on to the radio. This should take less than a minute for each radio. Once it is complete, the radio light will be pulsing red. 
 4. Repeat steps 3.1 - 3.3 for each of the remaining four 434MHz radios
 
-**You’re done!…well, almost…**
-
 ## Part 4: Running the Radio Update Software
 
 Now that the radios are reprogrammed, you will need to SSH into your SensorStation, so...
 
 1. reconnect the power and connect to your station via the Ethernet adapter, or by plugging it into a router and accessing the IP over your local internet.
 
-2. Download the following three files to your Downloads folder:
+2. Download the following zip file:
+
+https://s3.amazonaws.com/media.celltracktech.com/sensor-station/SensorStationFiles+2.zip
+
+and then expand the file into your `Downloads` folder. Once done, you should see the following files in your `Downloads` folder:
 
 `ssr_v2_3_1.ino.hex`
 `program-radio.sh`
