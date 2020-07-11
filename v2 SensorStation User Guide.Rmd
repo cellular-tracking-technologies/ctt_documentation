@@ -428,7 +428,9 @@ The Sensorgnome Deployment file can be edited here and saved by clicked `Save Ch
 
 Reboots the system.
 
-## Connecting to the SensorStation Web Interface via Ethernet
+# Connecting to your SensorStation Web Interface
+
+## Connecting via Ethernet Cable
 
 ### Before you get started you will need...
 
@@ -449,9 +451,71 @@ Reboots the system.
   
 ***
 
-## Connecting to the SensorStation Web Interface via Local Wireless Network
+## Connecting via Local Wireless Network on **V1 SensorStation** (but also works on V2)
 
-You can connect your SensorStation to a local wireless network with a few simple steps.
+### Before you get started you will need...
+
+  * WiFi adapter Like this one: https://store.celltracktech.com/products/wifi-usb-adapter-add-on-for-sensorstation-v2.
+  * 2 USB to Ethernet adapters (we recommend: https://tinyurl.com/yc6llze4)
+  * An Ethernet cable
+  
+### Gather important information
+  
+1. Take note of the **Wifi name** and **password** for the network you want to link with your SensorStation.
+2. Connect to your SensorStation via the Ethernet cable (see above section for details)
+3. Open a terminal window (Terminal on Mac, Command Prompt on PC) and issue the following command:
+
+`arp -a`
+
+This will give you a list of all of the connected devices. 
+
+4. Take a screenshot of this list, or jot them down. You’ll need this later.
+
+### SSH into the Pi to update the connectivity settings
+
+5. Type the following:
+
+`ssh pi@xxx.xxx.xxx.xxx` (where the x’s represent your SensorStation IP address) 
+
+6. Answer `yes` to any dialogues, and when prompted for the password, the default password is `raspberry`.
+
+7. At this point you should be in the Secure Shell within your Raspberry Pi. From here issue the following command:
+
+`sudo raspi-config`
+
+8. From the config dialogue use the DOWN ARROW to select `Network Options`
+
+9. Then choose `N2 Wireless LAN - Enter SSID and PASSPHRASE`
+
+10. From there enter your `wireless network ID (SSID)` and the `password/phrase` for your WiFi network.
+
+11. `Save` and `exit`. 
+
+12. Close the terminal. 
+
+13. Restart your SensorStation. 
+
+### Wirelessly connect to your SensorStation
+
+Once your SensorStation reboots, it should automatically connect to the existing wireless network, and you will be able to reach the station via any device on the same wireless network. Note that the IP address for your station will have changed- but in most cases you can use the `Hostname` to connect, or you can run `arp -a` from the command-line to search for your station's new IP address.
+
+14. Open up a web browser and try and connect by typing the following Hostname into the address bar:
+
+*For V1 SensorStations:*
+`raspberrypi.local`
+
+*For V2 SensorStations:*
+`sensorstation.local`
+
+15. If that doesn’t work, open up another terminal window and type:
+
+  `arp -a`
+
+Look for a change in the connected device IP addresses. You should be able to identify a new one that wasn’t there the last time. This is your SensorStation. You can now type that IP address in the web address bar and should see the SensorStation dialogue pop up.
+
+## Connecting via Local Wireless Network on **V2 SensorStation**
+
+On the new V2 SensorStation, instead of manually updating the WiFi credentials via SSH, you can use the `Get WiFi` function available via the LCD menu to upload a credentials file. Follow the steps below to learn how.
 
 ### Before you get started you will need...
 
