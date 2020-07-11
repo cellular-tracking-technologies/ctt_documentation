@@ -1,7 +1,7 @@
 ---
 title: "Installation Guide for the CTT SensorStation and CTT Nodes"
 author: "support@celltracktech.com"
-date: "7/7/2020"
+date: "7/11/2020"
 output:
   html_document:
     toc: yes
@@ -329,105 +329,6 @@ And two folders:
   
 ***
 
-# The SensorStation Web Interface 
-
-## Overview
-
-The SensorStation Web Interface provides an overview of your station's operation, including real-time statistics on detections of tags and nodes, as well as a user interface to change settings, update your SensorStation, toggle the GSM modem, and reboot the station.
-
-  
-
-
-### Nodes
-
-This is a list of Nodes the station has detected since connecting. For each Node it lists: 
-
-`Node ID` 
-`Last Heard` - the time of the last health report
-`Node RSSI` - the RSSI of the Node signal in decibels
-`Battery Voltage` - the Node’s battery voltage, which can be used to estimate its remaining life. 4.2 V is very full. 3.5 Vis low. 3 V is nearly empty.
-`Node Firmware Version`
-
-### Tags
-
-This is a list of unique LifeTags that have been detected by your radios. For each tag it lists
-
-* `Tag ID`
-* `Count` - number of beeps since last page refresh
-* `Alias` - for convenience, a name can be given to a particular tag and saved in the browser by hitting the `Update` button. This information is saved in your browser only. Name it whatever you’d like. Great for keeping track of particular tags during a test.
-* `“Update” Button` - save the name of a particular tag to your browser
-* `“Remove” Button` - reset the saved name
-
-### Station
-
-Various information about your SensorStation is stored here.
-
-* `ID` - the serial number of your SensorStation (the cell modem’s IMEI)
-* `Compute Module Serial` - the serial number of your Raspberry Pi Compute Module
-* `Module Hardware` - the compute module’s hardware version
-* `Module Revision` - the compute module’s hardware revision
-* `Boot Count` - the number of times the system has been booted
-* `Total Memory` - the amount of RAM currently being used by the system
-* `Last Boot` - Datetime of last boot
-
-* `Memory Usage` - A pie chart indicating the amount of system RAM currently being used.
-* `CPU Usage` - A pie chart indicating the amount of processing power currently being used.
-* `Tag Histogram` - A histogram of tags detected since opening the interface. The bars indicate the number of beeps detected.
-* `Time Sync Stats` - Detailed information of how the system time is being retrieved synced (e.g. from GPS or the internet)
-
-### SensorStation Log
-
-A log of SensorStation activity. Includes things such as screen updates and data retrieval flushes.
-
-### GPS
-
-Information retrieved over GPS: Time, Satellites, Latitude, Longitude, Altitude. If there is currently no valid fix, these fields will be blank.
-
-### Radios (1-5)
-
-There is a display box for each Radio port. The boxes will display all new data from each Radio port as they are detected, informing you of the following:
-
-* `Time`
-* `Tag ID`
-* `RSSI`
-* `Node`from which it came (if applicable).
-
-#### Port configuration
-
-Each radio can be individually configured to receive `Nodes`, `Tags (FSK)`, or `OOK (legacy tags)` by clicking the corresponding button. On V1 SensorStations this configuration will only persist until the next webpage refresh unless you press the “Save Radio Configuration” button below, which will save the configuration permanently to memory. For V2 SensorStations the setting is automatically saved as soon as you acknowledge the confirmation popup after clicking the `Node`, `Tag` or `OOK` buttons for a particular radio. Configurations can be changed at any time.
-
-`Clear Session Data` simply clears the scrolling log of tags displayed for each radio port. It does not delete any data from system memory.
-
-### Data Management
-
-The data management section is the interface through which your station data is retrieved and deleted.
-
-#### Station Log
-
-Allows you to **download** (`Download Log File`) and **PERMANENTLY DELETE** (`Clear Log File`) the system log file. Used for informational and debugging purposes.
-
-#### CTT Tag Data
-
-The tag data is divided into `Current Data`, `Data Not Uploaded`, and `Data Already Uploaded`. Current Data is data from the last 30 minutes. After 30 minutes, data is rotated into Data Not Uploaded, which is data beyond the last 30 minutes which has not yet been uploaded to CTT servers. If there is an internet connection via cell or ethernet, an upload attempt occurs every 2 hours. After data is uploaded, it is rotated into `Data Already Uploaded` and will stay there until you explicitly delete it. The red Delete buttons will **PERMANENTLY DELETE** the corresponding data from the SensorStation. An *are you sure* dialogue will make sure you do not accidentally delete data.
-
-#### Nanotag Data
-
-Nanotag Data uses the same scheme as CTT Tag Data, except that currently data from the last 30 minutes is unavailable from this screen. The Sensorgnome interface is separately accessible as described below.
-
-### Nanotag Data / Sensorgnome Interface
-
-#### Sensorgnome Interface
-
-Click the “Sensorgnome Interface” button to go to the Sensorgnome interface.
-
-#### Sensorgnome Deployment File
-
-The Sensorgnome Deployment file can be edited here and saved by clicked `Save Changes`.
-
-### Reboot Button
-
-Reboots the system.
-
 # Connecting to your SensorStation Web Interface
 
 ## Connecting via Ethernet Cable
@@ -563,11 +464,82 @@ Once your station has connected to your wifi network, you can connect to your Se
   
 ***
 
-## Programming Radios
+# The SensorStation Web Interface 
 
-Your five 434MHz radios will typically arrive pre-configured to detect tags. You can see the configuration for each radio displayed on the web interface. Changing the programming is as simple as clicking the appropriate button. Click `Node` for detecting nodes or `Tag` for detecting LifeTags, PowerTags or ES-200 devices. The `OOK` tag is a specific legacy tag type only used on a few projects. **Note that once you have changed the radio settings, the change is immediately saved and the data will flow from whichever you changed it to; node or tag, but in order to see the text description change on the web interface, you will need to refresh the webpage.**
+## Overview
 
-## Managing your SensorStation from the Web Interface Server Utilities
+The SensorStation Web Interface provides an overview of your station's operation, including real-time statistics on detections of tags and nodes, as well as a user interface to change settings, update your SensorStation, toggle the GSM modem, and reboot the station.
+
+## Nodes
+
+This is a list of Nodes the station has detected since connecting. For each Node it lists: 
+
+`Node ID` 
+`Last Heard` - the time of the last health report
+`Node RSSI` - the RSSI of the Node signal in decibels
+`Battery Voltage` - the Node’s battery voltage, which can be used to estimate its remaining life. 4.2 V is very full. 3.5 Vis low. 3 V is nearly empty.
+`Node Firmware Version`
+
+## Tags
+
+This is a list of unique LifeTags that have been detected by your radios. For each tag it lists
+
+* `Tag ID`
+* `Count` - number of beeps since last page refresh
+* `Alias` - for convenience, a name can be given to a particular tag and saved in the browser by hitting the `Update` button. This information is saved in your browser only. Name it whatever you’d like. Great for keeping track of particular tags during a test.
+* `“Update” Button` - save the name of a particular tag to your browser
+* `“Remove” Button` - reset the saved name
+
+## Station
+
+Various information about your SensorStation is stored here.
+
+* `ID` - the serial number of your SensorStation (the cell modem’s IMEI)
+* `Compute Module Serial` - the serial number of your Raspberry Pi Compute Module
+* `Module Hardware` - the compute module’s hardware version
+* `Module Revision` - the compute module’s hardware revision
+* `Boot Count` - the number of times the system has been booted
+* `Total Memory` - the amount of RAM currently being used by the system
+* `Last Boot` - Datetime of last boot
+
+* `Memory Usage` - A pie chart indicating the amount of system RAM currently being used.
+* `CPU Usage` - A pie chart indicating the amount of processing power currently being used.
+* `Tag Histogram` - A histogram of tags detected since opening the interface. The bars indicate the number of beeps detected.
+* `Time Sync Stats` - Detailed information of how the system time is being retrieved synced (e.g. from GPS or the internet)
+
+## SensorStation Log
+
+A log of SensorStation activity. Includes things such as screen updates and data retrieval flushes.
+
+## GPS
+
+Information retrieved over GPS: Time, Satellites, Latitude, Longitude, Altitude. If there is currently no valid fix, these fields will be blank.
+
+## Radios (1-5)
+
+There is a display box for each Radio port. The boxes will display all new data from each Radio port as they are detected, informing you of the following:
+
+* `Time`
+* `Tag ID`
+* `RSSI`
+* `Node`from which it came (if applicable).
+
+### Radio Configuration
+
+Each of the five 434MHz radios can be individually configured to receive `Nodes`, `Tags (FSK)`, or `OOK (legacy tags)` by clicking the corresponding button. On V1 SensorStations this configuration will only persist until the next webpage refresh unless you press the “Save Radio Configuration” button below, which will save the configuration permanently to memory. For V2 SensorStations the setting is automatically saved as soon as you acknowledge the confirmation popup after clicking the `Node`, `Tag` or `OOK` buttons for a particular radio. Configurations can be changed at any time. **Note that once you have changed the radio settings, the change is immediately saved and the data will flow from whichever you changed it to; node or tag, but in order to see the text description change on the web interface, you will need to refresh the webpage.**
+
+`Node` = CTT Nodes Only
+`Tag` = CTT LifeTags, PowerTags, ES-200 and ES-150 GPS tags
+`OOK` = Legacy-style LifeTag only for limited specialized project
+
+`Clear Session Data` simply clears the scrolling log of tags displayed for each radio port. It does not delete any data from system memory.
+
+## Data Management
+
+The data management section is the interface through which your station data is retrieved and deleted.
+
+
+## Server Utilities
 
 From the Server Utilities section on the web interface, you can now `Update Your SensorStation` to the latest deployment build, as well as force `Check In` and force `Upload Data` to the CTT servers.
 
@@ -582,6 +554,33 @@ From the Server Utilities section on the web interface, you can now `Update Your
   3. Scroll down below the console window and click on the `Update Station` button. This will begin the update process. Be aware that the station will be pulling code from five different code bases, which may take up to several minutes depending on your connection speed. 
   4. When the process is complete, you will receive a `Station connection disconnected` dialogue. **This indicates that the update is complete** and that the system has restarted. You may now click the dialogue to clear it, and then click the button at the bottom of the screen to go `Back to Main Interface`. 
   
+
+## Station Log
+
+Allows you to **download** (`Download Log File`) and **PERMANENTLY DELETE** (`Clear Log File`) the system log file. Used for informational and debugging purposes.
+
+## CTT Tag Data
+
+The tag data is divided into `Current Data`, `Data Not Uploaded`, and `Data Already Uploaded`. Current Data is data from the last 30 minutes. After 30 minutes, data is rotated into Data Not Uploaded, which is data beyond the last 30 minutes which has not yet been uploaded to CTT servers. If there is an internet connection via cell or ethernet, an upload attempt occurs every 2 hours. After data is uploaded, it is rotated into `Data Already Uploaded` and will stay there until you explicitly delete it. The red Delete buttons will **PERMANENTLY DELETE** the corresponding data from the SensorStation. An *are you sure* dialogue will make sure you do not accidentally delete data.
+
+## Nanotag Data
+
+Nanotag Data uses the same scheme as CTT Tag Data, except that currently data from the last 30 minutes is unavailable from this screen. The Sensorgnome interface is separately accessible as described below.
+
+### Nanotag Data / Sensorgnome Interface
+
+## Sensorgnome Interface
+
+Click the “Sensorgnome Interface” button to go to the Sensorgnome interface.
+
+## Sensorgnome Deployment File
+
+The Sensorgnome Deployment file can be edited here and saved by clicked `Save Changes`.
+
+## Reboot Button
+
+Reboots the system.
+
 ***
   
 # Troubleshooting
