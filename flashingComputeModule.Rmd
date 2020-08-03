@@ -77,7 +77,7 @@ cd usbboot
 Then install the libusb libraries:
 
 ```
-Brew install libusb
+brew install libusb
 ```
 
 Then make the rpiboot installer:
