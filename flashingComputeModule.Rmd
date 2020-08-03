@@ -96,7 +96,7 @@ At this point you should see a message in your terminal that says something to t
 
 `Waiting for BCM2835/6/7/2711...`
 
-This indicates that the USB port has been opened, and your computer is waiting to see a Raspberry Pi on that port. *Now complete Step 2 below, and skip steps 3 and 4.*
+This indicates that the USB port has been opened, and your computer is waiting to see a Raspberry Pi on that port. **Now complete Steps 1 and 2 below, and skip steps 3 and 4.**
 
 ***
 
