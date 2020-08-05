@@ -1,0 +1,175 @@
+---
+title: "Updating your V1 SensorStation Radios"
+author: "support@celltracktech.com"
+date: "8/05/2020"
+output:
+  pdf_document:
+    toc: yes
+  html_document:
+    toc: yes
+    number_sections: yes
+---
+
+
+# Updating your V1 SensorStation Radios to Detect New Hardware
+
+## Why Update?
+
+This is a valid question. In 2020 we introduced the 2nd version of the `CTT SensorStation`, and simultaneously released new versions of the `CTT Node` and `CTT LifeTag`. For the latter two products we made some significant advances in the way they communicate with our SensorStation radios, and they way they confirm their digital ID. Technology moves at lightning speed, and while we made these changes with every intention of full backwards compatibility, we soon learned that the radios would need to be manually updated once before they could join the V2 SensorStations in receiving over-the-air radio programming.
+
+*So should you update?* If you plan to add `Version 2 CTT Nodes` to your study, then the answer is absolutely **yes**. If your station is `listening for V2 LifeTags`, it will still pick up the tag ID like it always has, but will not be able to use the tag ID confirmation code to absolutely validate the ID. So if you want the highest degree of confirmation for LifeTags, then the answer is also **yes**. 
+
+If you're doing a localized study using PowerTags and not using any of the newer Nodes, then you don't need to update the radios at all...*but of course you still can!* To find out how, read on...
+
+## Getting Started
+
+### Things you'll need
+
+* **USB Programmer with a ribbon cable** and 6-pin female header (if male header exists on your V1 station radios) or male header (if no header exists on your V1 station radios)
+  * If your V1 SensorStation radios do not have headers, you'll also need this part to make the connection between the programmer cable and the board: [click here](https://www.sparkfun.com/products/12807)
+  * We recommend this programmer: [click this here](https://www.amazon.com/USBtinyISP-Programmer-Bootloader-Download-Interface/dp/B01FDD4EP0/ref=sr_1_1?crid=3AEXHPTVD9KER&dchild=1&keywords=usbtinyisp&qid=1593638163&sprefix=usbtiny%2Caps%2C149&sr=8-1)
+  * but this one will also work with a little more effort (PC-only): [click here](https://www.amazon.com/ARCELI-USBASP-USBasp_H6-Programmer-Support/dp/B0785RQ766/ref=sr_1_12?dchild=1&keywords=bootloader&qid=1593638232&s=electronics&sr=1-12)
+      * **If you are using this programmer, or having issues with your `USBtinyISP` see [Troubleshooting](#troubleshooting) for special instructions before proceeding.**
+
+* **Computer** (Mac or PC)
+
+## Part 1: Setting up Arduino IDE
+
+1. Using your favorite browser, navigate to http://arduino.cc
+2. From the main page, select `Software` > `Downloads`
+3. Download the Arduino IDE *
+  * (\* if using the USBasp device, you must download `Arduino IDE 1.6.9` or earlier. You can do so [here](https://www.arduino.cc/en/main/OldSoftwareReleases)). Again, see [Appendix I](#Appendix_I) for full instructions for using that programmer.
+  
+5. From the `File` menu, select `Preferences`
+6. Near the bottom of the `Preferences` page you'll see a window for `Additional Boards Manager URLs`. Past the following in that window:
+```
+https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
+```
+
+5. Now go to `Tools` > `Board “xxx”` > `Boards Manager`
+
+8. Install the latest version of `Adafruit AVR Boards`
+
+9. Now the Adafruit boards will appear un the `Tools` > `Board:”xxx”` menu…choose `Adafruit Feather 32u4`
+
+*At this point you are almost ready to connect the adapter on the USBtinyISP to the header on the SensorStation radios and burn the new bootloader on each radio, but first we have a little prep work to do…*
+
+6. Connect the USBtinyISP device to your compute using a USB cable. 
+
+7. Go to `Tools` > `Programmer` and select `USBtinyISP`
+
+## Part 2: Prepping your SensorStation for updating the radios
+
+1. Ensure the SensorStation is `OFF`, and the **power has been disconnected**.
+2. Remove the Raspberry Pi module by carefully pushing apart the tabs holding the Pi in place. This will cause the Pi to pop out at an angle from the top of the Pi (the bottom is hinged), at which point you can remove it by pulling up at an angle.
+
+![removing the Raspberry Pi Module](/Users/davidlapuma/github/ctt_documentation/images/removePiOpt.GIF){#id .class width=25%}
+
+3. Set the Raspberry Pi aside.
+
+## Part 3: Burning the Bootloader on the Radios
+
+**The first step of Part 3 will differ depending on whether your V1 SensorStation came with the radio programming headers or not (whether there are six holes, or six pins, in a 2x3 grid just above the radio SMA ports). The directions below are written assuming no headers are present, so the header pins are on the end of the adapter instead. If your board has headers already, simply insert the female 6-pin header onto the radio pins instead.**
+
+1. Place the adapter pins into the holes on the header for the first radio (**Note: You will need to apply some downward pressure to ensure a connection to the header.**)
+	
+	![Connecting the programmer to the radio programming header](/Users/davidlapuma/github/ctt_documentation/images/attachProgrammerOpt.GIF){#id .class width=25%}
+	
+2. With the adapter connected to the header, from the `Tools` menu on the Arduino IDE click `Burn Bootloader`.
+3. At this point you will see dialogue on the Arduino IDE interface indicating that the Bootloader is being burned on to the radio. This should take less than a minute for each radio. Once it is complete, the radio light will be pulsing red. 
+4. Repeat steps 3.1 - 3.3 for each of the remaining four 434MHz radios
+
+## Part 4: Running the Radio Update Software
+
+Now that the radios are reprogrammed, you will need to SSH into your SensorStation, so...
+
+1. reconnect the power and connect to your station via the Ethernet adapter, or by plugging it into a router and accessing the IP over your local internet.
+
+2. Download the following zip file:
+
+https://s3.amazonaws.com/media.celltracktech.com/sensor-station/SensorStationFiles+2.zip
+
+and then expand the file into your `Downloads` folder. Once done, you should see the following files in your `Downloads` folder:
+
+`ssr_v2_3_1.ino.hex`
+`program-radio.sh`
+`program-radios_sh.sh`
+
+3. Open the PowerShell Command Prompt (PC) or Terminal (Mac) 
+
+4. Change your directory to the Downloads folder:
+
+  On Mac:
+  ```
+  cd ~/Downloads
+  ```
+
+  On PC:
+  ```
+  cd Downloads
+  ```
+
+5. Run the following lines of code, replacing the words `sensorstation.local` with the **IP address** of your SensorStation. So, for instance, if your station IP address is `255.255.233.0` the first `scp` command above would read `scp ssr_v2_3_1.ino.hex pi@255.255.233.0:/home/pi/`.
+
+```
+scp ssr_v2_3_1.ino.hex pi@sensorstation.local:/home/pi/
+scp program-radio.sh pi@sensorstation.local:/home/pi/
+scp program-radios_sh.sh pi@sensorstation.local:/home/pi/program-radios.sh
+ssh pi@raspberrypi.local 
+sudo su
+mv ./program-radio.sh /usr/sbin/program-radio
+chmod a+x /usr/sbin/program-radio
+chmod a+x ./program-radios.sh
+./program-radios.sh ./ssr_v2_3_1.ino.hex
+
+```
+
+**You should now see your radio lights now switch off, and only blink when detecting tags.**
+
+## Step 5: Flashing a Compute Module for a SensorStation
+
+Now that you’ve updated the radios, you’ll need to update your SensorStation to detect the newer tags and nodes.
+
+You can use the Sensor Station to burn a new operating system onto the compute module using a micro USB cable attached to your computer.
+
+Please follow the directions here to do so: https://woodcreeper.github.io/ctt_documentation/flashingComputeModule.html
+
+
+
+
+## Troubleshooting {#troubleshooting}
+
+Programmer drama! So it appears all programmers are not created equal. 
+
+### I'm having issues with `USBtinyISP`
+
+Try this...
+
+1. Go to https://github.com/adafruit/Adafruit_Windows_Drivers/releases/tag/2.4.0.0
+2. Download the driver 
+3. Run the file to install the driver
+4. click `agree`
+5. Make sure `usbtinyisp` is ticked
+
+![](/Users/davidlapuma/github/ctt_documentation/images/tinyUSB.png)
+
+6. Click `install`
+
+### I'm using `USBasp` instead of `USBtinyISP`
+
+In order to run the above using the `USBasp` device instead of the `USBtinyISP` programmer, please follow the steps below. Note this **ONLY works on PC** computers so far...so Mac users should get the `USBtinyISP`.
+
+1. Install Arduino IDE 1.6.9 (scroll down on this page to find it: https://www.arduino.cc/en/main/OldSoftwareReleases)
+* Note, if you have a previous version installed, this will uninstall that version before installing 1.6.9).
+2. Download and install `Zadig` (https://zadig.akeo.ie)
+3. Open `Zadig`
+4. From the `Options` menu check the box for `List all devices`
+5. Choose `USBAsp` from the dropdown list
+6. select `libusb-win32 (v1.2.6.0)` in the right menu
+
+![](/Users/davidlapuma/github/ctt_documentation/images/zadig.png){#id .class width=50%}
+
+7. select `reinstall driver`
+
+
+

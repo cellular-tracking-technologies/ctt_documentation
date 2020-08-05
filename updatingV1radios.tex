@@ -36,6 +36,8 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
+  pdftitle={Updating your V1 SensorStation Radios},
+  pdfauthor={support@celltracktech.com},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
@@ -58,10 +60,12 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 
-\author{}
-\date{\vspace{-2.5em}7/1/2020}
+\title{Updating your V1 SensorStation Radios}
+\author{\href{mailto:support@celltracktech.com}{\nolinkurl{support@celltracktech.com}}}
+\date{8/05/2020}
 
 \begin{document}
+\maketitle
 
 {
 \setcounter{tocdepth}{2}
@@ -282,8 +286,6 @@ onto the radio pins instead.}
   Repeat steps 3.1 - 3.3 for each of the remaining four 434MHz radios
 \end{enumerate}
 
-\textbf{You're done!\ldots well, almost\ldots{}}
-
 \hypertarget{part-4-running-the-radio-update-software}{%
 \subsection{Part 4: Running the Radio Update
 Software}\label{part-4-running-the-radio-update-software}}
@@ -298,8 +300,13 @@ SensorStation, so\ldots{}
   adapter, or by plugging it into a router and accessing the IP over
   your local internet.
 \item
-  Download the following three files to your Downloads folder:
+  Download the following zip file:
 \end{enumerate}
+
+\url{https://s3.amazonaws.com/media.celltracktech.com/sensor-station/SensorStationFiles+2.zip}
+
+and then expand the file into your \texttt{Downloads} folder. Once done,
+you should see the following files in your \texttt{Downloads} folder:
 
 \texttt{ssr\_v2\_3\_1.ino.hex} \texttt{program-radio.sh}
 \texttt{program-radios\_sh.sh}

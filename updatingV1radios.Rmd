@@ -1,13 +1,13 @@
 ---
 title: "Updating your V1 SensorStation Radios"
 author: "support@celltracktech.com"
-date: "7/24/2020"
+date: "8/05/2020"
 output:
+  pdf_document:
+    toc: yes
   html_document:
     toc: yes
     number_sections: yes
-  pdf_document:
-    toc: yes
 ---
 
 ```{r setup, include=FALSE}
