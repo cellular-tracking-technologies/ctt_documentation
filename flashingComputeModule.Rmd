@@ -1,13 +1,13 @@
 ---
 title: "Flashing your SensorStation's Compute Module"
 author: "support@celltracktech.com"
-date: "7/7/2020"
+date: "8/5/2020"
 output:
+  pdf_document:
+    toc: yes
   html_document:
     toc: yes
     number_sections: yes
-  pdf_document:
-    toc: yes
 ---
 
 ```{r setup, include=FALSE}
