@@ -81,16 +81,20 @@ To exit Coverage Area Testing Mode, remove the batteries, and replace them.
 
 ## LED Pulse Patterns
 
-10 seconds = Device boot up or reboot
-Fading in 5 times = Device was commanded to enter Coverage Area Testing Mode with button press at boot
-Flashing 3 times (100ms) = Occurs during bootup and indicates a custom configuration was loaded from EEPROM memory
-Single flash (100ms) = Occurs during bootup and indicates default configuration is loaded
-Flashing goes from fast to slow = Radio configuration problem
-Flashing goes from slow to fast = Frequency provisioning error
-Slow flash (5x at 500ms) = Maximum transmission retries, SensorStation did not acknowldge 
-2 flashes at 100ms = Message confirmed from SensorStation
+| LED Pattern | Meaning|
+|-------------|--------|
+|10 seconds | Device boot up or reboot |
+|Fading in 5 times | Device was commanded to enter Coverage Area Testing Mode with button press at boot|
+|Flashing 3 times (100ms) | Occurs during bootup and indicates a custom configuration was loaded from EEPROM memory|
+|Single flash (100ms) | Occurs during bootup and indicates default configuration is loaded|
+|Flashing goes from fast to slow | Radio configuration problem|
+|Flashing goes from slow to fast | Frequency provisioning error|
+|Slow flash (5x at 500ms) | Maximum transmission retries, SensorStation did not acknowldge |
+|2 flashes at 100ms | Message confirmed from SensorStation|
 
 ## Coverage Area Testing Mode LED Patterns
 
-Constant Solid LED = Device in coverage area
-No LED = Device outside coverage area
+| LED Pattern | Meaning|
+|-------------|--------|
+Constant Solid LED | Device in coverage area
+No LED | Device outside coverage area
