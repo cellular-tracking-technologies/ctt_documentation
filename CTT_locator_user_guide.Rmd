@@ -45,7 +45,7 @@ In a few moments, a webpage will load and show the main locator screen.
 
 # Screen Overview
 
-![Home View] (https://octodex.github.com/images/yaktocat.png)
+![Home View] (https://user-images.githubusercontent.com/1101026/105431612-ee816400-5c23-11eb-8a11-b1b6b08be0dd.png)
 
 # Home View
 
