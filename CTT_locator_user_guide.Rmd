@@ -43,7 +43,13 @@ https://locator.click/
 
 In a few moments, a webpage will load and show the main locator screen. 
 
+# Screen Overview
 
+![Home View] (https://octodex.github.com/images/yaktocat.png)
+
+# Home View
+
+The Home View 
 
 
 
