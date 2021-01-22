@@ -1,7 +1,7 @@
 ---
 title: "CTT Locator User Manual"
 author: "support@celltracktech.com"
-date: "8/5/2020"
+date: "1/21/2021"
 output:
   pdf_document:
     toc: yes
@@ -16,8 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## The CTT Locator
 
-What is the CTT Locator? The CTT Locator is...
-
+The CTT Locator is a portal device that can receive a variety of wildlife tag signals. It is compatible with the entire radio tag line, including ES200 devices. 
 
 # Getting Started
 
@@ -27,6 +26,24 @@ What is the CTT Locator? The CTT Locator is...
 * BNC to SMA coaxial adapter
 * SMA coaxial cable
 * CTT Locator with integrated Lithium Polymer battery and USB charger port
+
+# Powering on the Locator
+
+To power on the Locator, press the switch to on. A blue light will immedately shine, indicating the Locator has power. After a short bootup sequence, the Locator will create a hotspot for your phone to connect to. Due to technical limitations, Android phones will need to turn off Cellular Data. This is not required on iPhone devices. 
+
+In addition to phones, the Locator can be used with laptops, tablets, and other modern devices.
+
+When the blue light flashes, the Locator is in its final stages of booting. It will be ready in about 10 seconds after this indication.
+
+Connect to a WiFi network created by the Locator. 
+
+Next, enter this full url into the browser. Note that the https:// is important:
+
+https://locator.click/
+
+In a few moments, a webpage will load and show the main locator screen. 
+
+
 
 
 
