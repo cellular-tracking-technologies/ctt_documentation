@@ -21,6 +21,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This User Guide has been redesigned around the new (ca.2020) Version 2 SensorStation (V2) which includes an LCD display. Otherwise, Version 1 stations (ca.2019) are nearly identical to V2 stations. In cases where they differ, we have made note in the manual. If you are setting up a V1 station you may want to begin at the [QuickStart Guide in Appendix II](#V1Quickstart). If you find inconsistencies in this manual please email us at support@celltracktech.com as we will be updating the manual regularly.
 
+# Join us in our SLACK User Community
+
+We now have a SLACK workspace dedicated to CTT users. Topics range from station logistics to study design, and from data management to current development of novel analytic tool. Come be a part of the discussion and engage with other users as we push the boundaries of remotely sensed telemetry data! 
+https://join.slack.com/t/celltracktechsupport/shared_invite/zt-m6phfypu-aIV4zznt0Xe3G3oUsC6KRQ
+
 # Congratulations
 
 If you are reading this document, then you most likely have purchased one of our Internet of Wildlife (IoW) components. Whether you're doing localized detailed studies of small mammals or songbirds, or you're setting up SensorStations as part of the global Motus Wildlife Tracking System (motus.org), or you're doing something in-between, we've got you covered, and this document is meant to help you get started quickly and painlessly. If for some reason you get stuck along the way, please don't hesitate to reach out to us directly either via email (support@celltracktech.com) or through our online Help Desk here: https://celltracktech.atlassian.net/servicedesk/customer/portals.
