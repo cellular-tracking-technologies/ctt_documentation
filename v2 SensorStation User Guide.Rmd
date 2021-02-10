@@ -21,9 +21,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This User Guide has been redesigned around the new (ca.2020) Version 2 SensorStation (V2) which includes an LCD display. Otherwise, Version 1 stations (ca.2019) are nearly identical to V2 stations. In cases where they differ, we have made note in the manual. If you are setting up a V1 station you may want to begin at the [QuickStart Guide in Appendix II](#V1Quickstart). If you find inconsistencies in this manual please email us at support@celltracktech.com as we will be updating the manual regularly.
 
-# Join us in our SLACK User Community
+# Join us in our **Slack** User Community
 
-We now have a SLACK workspace dedicated to CTT users. Topics range from station logistics to study design, and from data management to current development of novel analytic tool. Come be a part of the discussion and engage with other users as we push the boundaries of remotely sensed telemetry data! 
+We now have a `Slack` workspace dedicated to CTT users. Topics range from station logistics to study design, and from data management to current development of novel analytic tool. Come be a part of the discussion and engage with other users as we push the boundaries of remotely sensed telemetry data! 
 https://join.slack.com/t/celltracktechsupport/shared_invite/zt-m6phfypu-aIV4zznt0Xe3G3oUsC6KRQ
 
 # Congratulations
@@ -38,7 +38,7 @@ If you are setting up your SensorStation to participate in the Motus Wildlife Tr
 # SensorStation Precautions
 Treat your SensorStation board like you would any other motherboard, Arduino or Raspberry Pi. All electronics, no matter how robust, can be static sensitive. Take care no metal objects touch the board while it is operating, such as antenna connectors or GSM antennas, as this could cause electrical shorts that will damage the board. It is advised to wear an anti-static bracelet when handling SensorStation.
 
-![](/Users/davidlapuma/github/ctt_documentation/images/attention.png){#id .class width=25%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/attention.png){#id .class width=25%}
 
 # Setting up your CTT IoW System
 
@@ -109,7 +109,7 @@ The detection distance from **SensorStation to Tag** is affected by the same fac
 
 For both the SensorStation and Nodes we recommend attaching to **EMT conduit**.  We recommend this because it is rigid and easy to set up. This is *not* what’s commonly referred to as *Black Pipe* used for water and gas lines, but the **galvanized steel pipe** used for running electrical wiring inside. 
 
-![](/Users/davidlapuma/github/ctt_documentation/images/EMT.png){#id .class width=25%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/EMT.png){#id .class width=25%}
 
 ### Building a mast for your SensorStation
 
@@ -117,7 +117,7 @@ For both the SensorStation and Nodes we recommend attaching to **EMT conduit**. 
 
 The conduit can be attached to a tripod, mounted directly into the ground, or onto a building or other structure. The Nodes and SensorStations are then attached to the conduit. The diameter of the conduit is typically 1” for the top mast section of the SensorStation (the section to which the antennas are attached; light green in the picture below).
 
-![](/Users/davidlapuma/github/ctt_documentation/images/SSinstall.png){#id .class width=25%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/SSinstall.png){#id .class width=25%}
 
 For every 7 feet of height the base section will increase in diameter by ¼”. For example, in the picture above, a 15 foot mast will have a 1” section (light green) inserted into a 1 ¼” (orange) and then into a 1 ½” (blue). If the conduit is inserted into the ground, the 1 ½” conduit should be inserted into a 4’ section of 2” pipe (dark green). The pipe in the ground is cut in half, the bottom flattened slightly with sledge hammer to keep soil from entering when it is driven into the ground. A block of wood can be used to pound the pipe into the ground to prevent bending the pipe.  If the antenna mast is shorter,  the next size up gets driven into the ground (1/ ¼”). Note that standard EMT conduit does eventually rust, however it will remain very strong for 6-10 years. 
 
@@ -136,12 +136,12 @@ If desired, stainless conduit can be purchased, however it is much more expensiv
 
 Nodes are typically attached to the top of a ¾” piece of EMT. The clamps shown below come standard with the nodes and accept ¾ or 1” conduit. 
 
-![](/Users/davidlapuma/github/ctt_documentation/images/nodeClamp.jpg){#id .class width=25%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/nodeClamp.jpg){#id .class width=25%}
 
 A 7/16” socket is used to tighten the clamp bolts. The EMT is typically driven into the ground approximately 2 feet. The height of the nodes can be changed depending on the project, but for best results should be consistent within a study site. We recommend 8’ for most setups, see below for pictures of the node setup in the field. If you choose an alternate mounting method, care should be taken that they are secure. If they are mounted on anything that sways greatly with the wind, the readings won’t be consistent. 
 
-![](/Users/davidlapuma/github/ctt_documentation/images/nodeBernh.jpg){#id .class width=25%}
-![](/Users/davidlapuma/github/ctt_documentation/images/NodeBernh2.jpg){#id .class width=25%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/nodeBernh.jpg){#id .class width=25%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeBernh2.jpg){#id .class width=25%}
 
 **Note:** ***Nodes purchased in 2020 and beyond have a built-in GPS. Prior to 2020 you must take accurate GPS readings and record that data with the Node ID in order to run post-hoc localization analyses.***
 
@@ -191,7 +191,7 @@ If connecting an antenna for a different frequency, such as 166MHz, you will nee
 
 Antennas are attached to the EMT conduit with the clamps that come with the antennas. If you have a setup that uses 4 yagis, than you will attach the yagis to a 4 or 5-way mounting “hat” you can purchase via online retailers.  Once the antennas are on EMT, attach the coax and wrap the connection with coax tape. Run down the poles to where it will attach to the SensorStation. You can use zip ties to secure the coax to poles where needed. Make sure you have enough coax to form a drip loop for each connection.
 
-![](/Users/davidlapuma/github/ctt_documentation/images/diagram_drip-loop.jpg){#id .class width="25%"}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/diagram_drip-loop.jpg){#id .class width="25%"}
 
 ### Placing your SensorStation
 The SensorStation can be placed inside a building, or fastened to the pole or building, etc. It should either be close to the ground for easy access, or have an ethernet cable run down to an accessible location.
@@ -200,8 +200,8 @@ The SensorStation can be placed inside a building, or fastened to the pole or bu
 
 The SensorStation can be connected directly to a 12V DC power source, via a charge controller, or to an AC to DC power supply which can then be plugged directly into your standard AC power source. In many cases, though, SensorStations are deployed remotely and are in need of a remote power supply such as a solar charged deep-cycle marine battery. A typical setup would be a 50-100W solar panel connected to a charge controller. The charge controller typically has 3 ports. The 3 ports are 1.) Solar panel 2.) 12V battery 3.) Accessory/Device/consumer, which, in this case, is your SensorStation. That line goes into the green *Power In* terminal on the SensorStation board. The positive and negative wire ports are labeled on the board, and to insert the wire simply loosen the set screws on the top, and slide the wire leads in to the holes just under the set screws (see the pictures below; note for V1 stations see the [QuickStart Guide in Appendix II](#V1Quickstart)). 
 
-![Power not connected](/Users/davidlapuma/github/ctt_documentation/images/power_out.png){#id .class width="20%"}
-![Power connected](/Users/davidlapuma/github/ctt_documentation/images/power_in.png){#id .class width="20%"}
+![Power not connected](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/power_out.png){#id .class width="20%"}
+![Power connected](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/power_in.png){#id .class width="20%"}
 
 The ends of the wires that are attached should be tinned with solder for best results. If you do not have access to a soldering gun, twisting the ends of the cables tightly will help them slide in cleanly to the power block. 
 
@@ -615,9 +615,9 @@ Reboots the system.
 ***
 # Appendix I: Leveraging your CTT Infrastructure with Motus {#appendix_1}
 
-![](/Users/davidlapuma/github/ctt_documentation/images/motus-logo.png){#id .class width=10%}
-![](/Users/davidlapuma/github/ctt_documentation/images/BirdsCanadaLogo.png){#id .class width=10%}
-![](/Users/davidlapuma/github/ctt_documentation/images/ctt_logo_300DPI.jpg){#id .class width=15%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/motus-logo.png){#id .class width=10%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/BirdsCanadaLogo.png){#id .class width=10%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo_300DPI.jpg){#id .class width=15%}
 
 ## The Motus Wildlife Tracking System
 
@@ -734,8 +734,8 @@ We are welcoming new collaborators and supporters each week! **For more informat
     e. Depress each orange tab with a small straight screwdriver on the green power block to insert each wire. The positive is on the left and negative is on the right and marked with a +/- below the block. See images to right.
     f. Make sure the wires are not swapped!
     
-![](/Users/davidlapuma/github/ctt_documentation/images/MODEM SERIAL2.jpg){#id .class width=25%}
-![](/Users/davidlapuma/github/ctt_documentation/images/U POWER.jpg){#id .class width=25%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/MODEM SERIAL2.jpg){#id .class width=25%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/U POWER.jpg){#id .class width=25%}
 
 
 ## Initial Boot-up of a SensorStation
@@ -744,25 +744,25 @@ We are welcoming new collaborators and supporters each week! **For more informat
 Turn on the SensorStation using the slide switch on the left center of the SensorStation board.
 2. The SensorStation board will show two constantly illuminated LEDs, an orange one and a green one on the left side of the board.  There will also be green and blue flashing LEDs.
 
-![](/Users/davidlapuma/github/ctt_documentation/images/Battery.png){#id .class width=40%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Battery.png){#id .class width=40%}
 
 3. A normally operating SensorStation will present all four LEDs.
 4. The Inkyphat display will show the CTT SensorStation welcome.
 
-![](/Users/davidlapuma/github/ctt_documentation/images/PI-HAT EXPANSION.png){#id .class width=50%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/PI-HAT EXPANSION.png){#id .class width=50%}
 
 5. The display normally updates every 90 seconds.  During initial boot-up the display update usually takes longer than 90 seconds.  Wait for the SensorStation to complete boot-up.  Once the display updates it will change to the default operating screen display.
 
-![](/Users/davidlapuma/github/ctt_documentation/images/EXPANSION.png){#id .class width=50%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/EXPANSION.png){#id .class width=50%}
 
 6. This display shows that the SensorStation is operating, the battery voltage and the number of CTT transmitter detections (Beeps).  Note that in the top bar the display shows “No Cable”.  This indicates that no Ethernet connection is available between the SensorStation board and a laptop computer.
 7. Insert a USB to Ethernet connector into one of the open USB ports on the SensorStation.
 
-![](/Users/davidlapuma/github/ctt_documentation/images/ethernetConnected.png){#id .class width=50%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ethernetConnected.png){#id .class width=50%}
 
 8. Connect your laptop to the SensorStation with an Ethernet cable.  Wait for the Inkyphat display to update.  Once the display updates you will see the IP address assigned to the combination of your laptop and SensorStation in the top bar of the display.  In this example the assigned IP address is 169.254.54.185.
 
-![](/Users/davidlapuma/github/ctt_documentation/images/pimoroni.cominkyphat.jpg){#id .class width=50%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/pimoroni.cominkyphat.jpg){#id .class width=50%}
 
 9. Now you are ready to view the operating status of the SensorStation on two different, and necessary, web interfaces.  There are separate web interfaces for the CTT and Motus (Sensorgnome) systems.  Open your web browser and enter the IP address into the address bar to open a new web page.  The CTT web interface will open.
 
@@ -773,7 +773,7 @@ Turn on the SensorStation using the slide switch on the left center of the Senso
 11. There is a section for data management that we can skip when setting up a station, 
 that section may be more useful to us in the future.  Just below data management there is a blue button “Sensorgnome Interface”.  Clicking on this button will open the familiar Sensorgnome web interface in a new window. 
 
-![](/Users/davidlapuma/github/ctt_documentation/images/Data Management.png){#id .class width=75%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Data Management.png){#id .class width=75%}
 
 
 
@@ -784,7 +784,7 @@ that section may be more useful to us in the future.  Just below data management
 
 ***
 
-![](/Users/davidlapuma/github/ctt_documentation/images/am your Sensor Gnome.png){#id .class width=75%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/am your Sensor Gnome.png){#id .class width=75%}
 
 ***
 
