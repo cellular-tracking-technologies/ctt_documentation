@@ -45,7 +45,6 @@ In a few moments, a webpage will load and show the main locator screen.
 
 # Screen Overview
 
-![Home View] (https://user-images.githubusercontent.com/1101026/105431612-ee816400-5c23-11eb-8a11-b1b6b08be0dd.png)
 
 When you load the Locator screen, an interface will appear. You can change the various modes of the locator by clicking on the icons at the bottom.
 
@@ -73,7 +72,10 @@ The "Settings" icon allows you to control various locator settings and options. 
 
 # Home View
 
-The Home View 
+![Home View] (https://user-images.githubusercontent.com/1101026/105431612-ee816400-5c23-11eb-8a11-b1b6b08be0dd.png)
 
+The home view shows all nearby tags. If a tag is first seen, it will show up as red, to indicate a new tag has been detected. If the tag is seen again, it will turn black. Each time the tag is detected, the text will briefly flash yellow to indicate it has been updated.
+
+![mainview-locator](https://user-images.githubusercontent.com/1101026/110704154-94803200-81c2-11eb-9a92-9746662533c3.jpg)
 
 
