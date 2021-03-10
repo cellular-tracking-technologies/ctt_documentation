@@ -55,6 +55,22 @@ First, we will go over the title bar:
 
 The circle on the right will flash red when a tag is detected. A rotating circle animation indicates that the locator is actively connected to the phone. The far right icon indicates battery life, and contains the voltage. Approximately 4.10 volts is a full battery, 3.7 volts is half full, and 3.4 volts is empty. This will also be indicated by the battery slowly reducing, similar to your smart phone. 
 
+Next we will go over the icons at the bottom:
+
+<img width="690" alt="Screen Shot 2021-03-10 at 4 49 50 PM" src="https://user-images.githubusercontent.com/1101026/110702544-a82a9900-81c0-11eb-84f1-a844e8c9f164.png">
+
+The "Home" icon shows all detected tags in a list, which is the default view when you first connect to the device. For more details, see the Home View section.
+
+The "Identify" icon helps you identify unknown tags or verify a tag's ID when it is in close range. For more details, see the Identify View section.
+
+The "Favorites" icon is a place where you can see the tags you have specified as favorites. This is useful when a lot of other tags are nearby and you wish to focus on a specific tag. For more details, see the Favorites View section.
+
+The "Search" icon is where you can search for tags within all of the tags recently detected during your session. For more details, see the Search View section.
+
+The "Download" icon allows you to download all collected tag data as well as ES200 data. For more details, see the Download View section.
+
+The "Settings" icon allows you to control various locator settings and options. For more details, see the Settings View section.
+
 # Home View
 
 The Home View 
