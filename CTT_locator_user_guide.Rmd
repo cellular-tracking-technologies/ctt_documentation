@@ -102,3 +102,23 @@ In the identify view, tags will appear if they have signals stronger than -30 dB
 
 Any tags that are selected as favorites will enter the favorite view. You can click on any tag here to see the Tag View of any tag in this list, just as you would in the main view.
 
+# Search View 
+
+<img width="532" alt="searchview" src="https://user-images.githubusercontent.com/1101026/110850316-a672db00-827d-11eb-8eca-01d773755ac7.png">
+
+The search view lets you type in a tag ID, which is then searched against tags detected during that session. Note that the history of tags clears each time you open or reload the locator interface. It will not search against any tag ever detected with the locator.
+
+# Download View
+
+<img width="523" alt="downloadview" src="https://user-images.githubusercontent.com/1101026/110851296-da9acb80-827e-11eb-905f-59649bc14a68.png">
+
+The Download View is where you can download both ES200 and Tag Data. Clicking on these will initiate a download to your device.
+
+# Settings View
+
+<img width="522" alt="settingsview1" src="https://user-images.githubusercontent.com/1101026/110851252-cd7ddc80-827e-11eb-8980-ce98a956d307.png">
+
+<img width="530" alt="settingsview2" src="https://user-images.githubusercontent.com/1101026/110851261-cfe03680-827e-11eb-824f-a0f1c666c6ff.png">
+
+
+
