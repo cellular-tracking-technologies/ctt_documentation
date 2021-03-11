@@ -78,4 +78,27 @@ The home view shows all nearby tags. If a tag is first seen, it will show up as 
 
 ![mainview-locator](https://user-images.githubusercontent.com/1101026/110704154-94803200-81c2-11eb-9a92-9746662533c3.jpg)
 
+# Tag View
+
+<img width="523" alt="tagview" src="https://user-images.githubusercontent.com/1101026/110847880-7296b600-827b-11eb-8a4f-2a0f54bd3b7f.png">
+
+The tag view provides a signal strength indicator to help you localize a tag. As the tag signal gets stronger, more bars appear. the negative number under the signal bars is the signal strength in dBm, or decibel milliwatts. The lower the number, the weaker the signal. 
+
+A large circle is at the top of the Tag View. This flashes when the tag is received. Under this is the last time the tag was seen.
+
+Touching or clicking the X in the top right corner closes tha tag view.
+
+You can add a tag to your favorites list by tapping the "Favorite" button. Tapping this again removes the tag from your favorites.
+
+# Identify View
+
+<img width="524" alt="identifyview" src="https://user-images.githubusercontent.com/1101026/110849281-0ddc5b00-827d-11eb-9c56-1e7f5698627d.png">
+
+In the identify view, tags will appear if they have signals stronger than -30 dBm. This would be a tag in very close proximity to the locator. 
+
+# Favorite View
+
+<img width="519" alt="favoriteview" src="https://user-images.githubusercontent.com/1101026/110849575-37958200-827d-11eb-9241-26b034bc2e64.png">
+
+Any tags that are selected as favorites will enter the favorite view. You can click on any tag here to see the Tag View of any tag in this list, just as you would in the main view.
 
