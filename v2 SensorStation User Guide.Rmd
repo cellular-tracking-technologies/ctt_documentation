@@ -1,7 +1,7 @@
 ---
 title: "Installation Guide for the CTT SensorStation and CTT Nodes"
 author: "support@celltracktech.com"
-date: "02/10/2021"
+date: "03/12/2021"
 output:
   pdf_document:
     toc: yes
@@ -17,6 +17,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ***
+# Before you begin
+
+In order to connect directly to your SensorStation, you'll need 2 `USB->Ethernet Adapters` (we recommend: https://tinyurl.com/yc6llze4), and an Ethernet Cable, or a `Raspberry Pi compatible USB WiFi adapter` like this one https://store.celltracktech.com/products/wifi-usb-adapter-add-on-for-sensorstation-v2. **Make sure to have these on-hand prior to receiving your SensorStation so there is no delay in setup.**
+
 # Note on Version 1 SensorStations vs. Version 2 SensorStations
 
 This User Guide has been redesigned around the new (ca.2020) Version 2 SensorStation (V2) which includes an LCD display. Otherwise, Version 1 stations (ca.2019) are nearly identical to V2 stations. In cases where they differ, we have made note in the manual. If you are setting up a V1 station you may want to begin at the [QuickStart Guide in Appendix II](#V1Quickstart). If you find inconsistencies in this manual please email us at support@celltracktech.com as we will be updating the manual regularly.
