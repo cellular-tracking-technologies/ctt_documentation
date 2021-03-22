@@ -27,13 +27,58 @@ The CTT Locator is a portal device that can receive a variety of wildlife tag si
 * SMA coaxial cable
 * CTT Locator with integrated Lithium Polymer battery and USB charger port
 
+## You will need
+
+* Any smart device with a web browser (Mozilla Firefox or Google Chrome recommended) and WiFi capability (Android, iPhone, iPad, Laptop, etc)
+* USB AC adapter or laptop to charge your CTT Locator
+* Micro USB cable (Commonly called an Android charger cable)
+
+# Prior to Assembly and Use
+
+Connect a Micro USB cable to the USB port on the CTT Locator. The USB port is located at the side of the device next to the power switch. This will start the charging process and top off the battery. The battery is fully charged when the red indicator light goes out and the blue light comes on. This can take several hours. 
+
+# Tips Regarding CTT Locator’s Battery
+
+The locator features a lithium battery and does not have any memory effects. You can fully discharge the locator, charge the locator partially, keep it always connected to a charger, or even make use of an external battery pack (such as the type that charge cell phones). 
+
+That being said, it is important not to leave the CTT Locator’s power switch on with a completely dead battery for long periods of time. This will eventually damage the battery and shorten its operating life.
+
+Charging will be fastest when the device is switched to the “Off” position. The device can be used in the “On” position while connected to a charger, but it may take twice as long. If you wish to run the CTT Locator for very long periods of time, it is okay to leave the unit on and connected to a charger. However, you may notice the red and blue charge LED flicker when charging is complete.
+
+For safety during transport, the battery is at a half charged state. While you can use the CTT Locator without fully charging the battery, you will not experience the full battery life until the unit is fully charged.
+
+
+
+# Assembly Instructions
+
+Unpack the hand held yagi antenna from the packaging.
+
+To assemble the antenna look at the diagram below. Pair the antenna sections by size, note that antenna elements will become longer incrementally as they approach the handle and that the coaxial connection is the second element from the handle. Screw them together like the diagram below. 
+
+![antenna](https://user-images.githubusercontent.com/1101026/112035108-9d9fc600-8b15-11eb-9f23-93a522973c38.png)
+
+Unpack the BNC to SMA adapter and twist the adapter onto the antenna BNC connector. 
+
+Connect the SMA coax from the BNC to SMA adapter to the CTT Locator, making sure that all the connections are hand tight. Do not overtighten using any tools, as this could damage the antenna connectors.
+
+![locatorsetup](https://user-images.githubusercontent.com/1101026/112035333-d2ac1880-8b15-11eb-9cc8-27227be12059.png)
+
+Unscrew the black hand nut and place the bolt through the hole next to the foam handle. Attach and tighten the black hand nut. Please not not overtighten the nut.
+
+You may also attach your phone to the built in phone clip. Note that while the phone clip is sturdy, it may not properly hold your phone in all use cases. It is possible that some models of phones or operating conditions may cause the phone to fall out of the clip. Your phone may also be damaged if you inadvertently drop the locator antenna on the ground or in water. Use at your own risk.
+
+# Locator Buttons and Indications
+
+![diagram](https://user-images.githubusercontent.com/1101026/112035536-05561100-8b16-11eb-93a9-bc09ae71f612.png)
+
+
 # Powering on the Locator
 
 1. To power on the Locator, press the switch to on. 
   A blue light will immediately shine, indicating the Locator has power. 
   After a short bootup sequence, the Locator will create a hotspot for your phone to connect to. **Due to technical limitations, Android phones will need to turn off Cellular Data. This is not required on iPhone devices.** In addition to phones, the Locator can be used with laptops, tablets, and other modern devices.
 
-When the blue light flashes, the Locator is in its final stages of booting. It will be ready in about 10 seconds after this indication.
+When the blue light flashes, the Locator is in its final stages of booting. It will be ready in about 15 seconds after this indication.
 
 2. Connect to a WiFi network created by the Locator. 
 
@@ -44,6 +89,26 @@ https://locator.click/
 ```
 
 In a few moments, a webpage will load and show the main locator screen. 
+
+# Parts of the CTT Locator
+
+
+| Indicator Light | Meaning |
+|-----------------|---------|
+|Power and Low Battery Indicator|Blue: The unit is turned on<br>Yellow Flash: The unit has a low battery<br>Dark: Off, No power is applied, dead battery, or when first switched on|
+|Tag Detection Indicator|Red Flash: tag signal received and detected|
+|Charging Indicator|Blue: Battery charged<br>Red: Battery charging|
+
+
+|Port or Switch|Usage|
+|--------------|-----|
+|Power Switch|Toggle switch to the left to turn the unit on. Wait a few seconds before usage.|
+|USB Charging Port|Connect micro-USB cord to any computer USB port or USB wall wart to charge.|
+|SMA Coax Connector|Connect the supplied coaxial cable to this port and the antenna connector on the back of the antenna. You will need to make use of the BNC to SMA adapter on the antenna.|
+|Button A and Button B|For use with a future version of software or when instructed by CTT’s support team. It is okay to inadvertently press these buttons.|
+
+
+
 
 # Screen Overview
 
@@ -72,6 +137,11 @@ Next we will go over the icons at the bottom:
 
 * The `Settings` icon allows you to control various locator settings and options. For more details, see the Settings View section.
 
+The signal strength next to the tag ID is measured in decibel milliwatts or dBm. This will always be a negative number, with -40 dBm being very strong (and within a few feet), while -115 to -120 dBm is typically the weakest signal possible to receive. This would indicate a signal coming from very far away or propagating through difficult RF conditions, such as heavy foliage.
+
+Note: You can enable the tag “ping” sound on mobile devices by touching any part of the display, such as the top bar. Otherwise, it will be silent.
+
+
 # Home View
 
 ![*Home View*](https://user-images.githubusercontent.com/1101026/105431612-ee816400-5c23-11eb-8a11-b1b6b08be0dd.png)
@@ -82,7 +152,7 @@ The `home` view shows all nearby tags. If a tag is first seen, it will show up a
 
 # Tag View
 
-<img width="523" alt="tagview" src="https://user-images.githubusercontent.com/1101026/110847880-7296b600-827b-11eb-8a4f-2a0f54bd3b7f.png">
+![*Tag View*](https://user-images.githubusercontent.com/1101026/110847880-7296b600-827b-11eb-8a4f-2a0f54bd3b7f.png)
 
 The `tag` view provides a signal strength indicator to help you localize a tag. As the tag signal gets stronger, more bars appear. the negative number under the signal bars is the signal strength in dBm, or decibel milliwatts. The lower the number, the weaker the signal. 
 
@@ -120,7 +190,66 @@ The `Download` view is where you can download both ES200 and Tag Data. Clicking 
 
 <img width="522" alt="settingsview1" src="https://user-images.githubusercontent.com/1101026/110851252-cd7ddc80-827e-11eb-8980-ce98a956d307.png">
 
+The Sound options allow you to enable or disable the ping sound. Signal based volume will slightly adjust sound levels to indicate signal strength (not all phones support this feature).
+
+WiFi network settings allow you to configure a local WiFi network. This is useful for software upgrades as well as accessing the locator while it is connected to a local WiFi network, such as an information TV display.
+
+WiFi Access Point mode, switching to off, will disable the hotspot functionality and allow it to connect to a local network. This is not required for software updates.
+
+The locator will then respond to https://locator.local/
+
+Storage indicates space left on the locator. Note that the operating system and locator software do take a majority of the space on the device, which is normal. There is enough space for several million tag reads. The record count and space used is updated about every 15-30 seconds. 
+
+Clicking delete logs clears out the system logs. While clicking delete tag and ES200 data will permanently delete tag logs.
+
 <img width="530" alt="settingsview2" src="https://user-images.githubusercontent.com/1101026/110851261-cfe03680-827e-11eb-824f-a0f1c666c6ff.png">
+
+The clock is the current seconds from 1970, also known as the epoch time. You will want to make sure these are about the same. If they differ, click "sync clocks". Due to the nature of how time is indicated from your phone, a difference of 1 second is normal, as the actual time is rounded.
+
+About will tell you information about your locator, such as version. Help is where future help and videos will be stored on the locator.
+
+Software update updates the locator to a new version of software. Note it is not advised to do this unless instructed by Cellular Tracking Technologies.
+
+Diagnostics will provide technical hardware information that is sometimes useful for technical support.
+
+# Importance of Shutdown
+
+When you are finished using your locator, it is important to click shutdown. This shuts down the locator gracefully and avoids data loss of the most recently detected tags. While switching off the Locator will not damage the unit, it is alwas best to use this when possible before switching the Locator off.
+
+When the lights turn off, your locator is now safe to be turned off.
+
+# Localization Tips
+
+Before going out in the field, it helps to practice localizing a tag. Here are a few tips in finding a tag:
+
+Hold the antenna away from your body and from obstructions. Since most wildlife tags are horizontally polarized, make sure the elements on the yagi are horizontal.
+
+Hold the yagi parallel to the ground, even with tags in flight. 
+
+For some reptile and mammal tags, the antenna is pointing upward. Likewise, you may want to try to hold the yagi in a vertical position to see if signal improves.
+
+On your first reading with a steady signal, rotate slowly to identify the initial bearing of the tag.  You may want to make two full rotations to verify direction. Once you master this technique, you can scan side-to-side for faster localization.
+
+Note the direction on a compass and map, while noting the time. Although the magnetometer will log the data, it is sometimes helpful to collect data separately.  
+
+Move in the direction of the tag and rotate the antenna left and right to keep on track.
+
+You may want to surround the potential tag location by taking additional samples. 
+
+Keep a look out for reflections and multipath! Much like visible light, signals can bounce off bodies of water, buildings, and other smooth surfaces. 
+
+# Troubleshooting Guide
+
+
+|Symptom|Cause|Solution|
+|-------|-----|--------|
+|Unable to connect phone to base station|Not waiting long enough for initial boot<br><br> Not connected to WiFi hotspot<br><br> Battery is dead<br><br> Mobile data service not disabled (Android Only)|Wait 2 minutes before trying to connect<br><br> Check WiFi settings for “Locator (serial number)” connectivity<br><br> Charge battery<br><br> Follow android phone instructions for disabling data service|
+|“Low Battery” sign appears or yellow light flashes|Battery is close to being dead, but you will still have some time left.|Charge battery|
+|Not detecting tags, some tags missing|Antenna cable not connected<br><br>Antenna cable damaged<br><br>Tags not transmitting|Connect Antenna<br><br>Replace antenna cable<br><br>Read instructions for LifeTag and PowerTag usage|
+|Can’t access internet|LifeTag base station’s hotspot overrides phone internet connection|Disconnect from WiFi<br><br>Android users should re-enable their mobile data service|
+
+
+
 
 
 
