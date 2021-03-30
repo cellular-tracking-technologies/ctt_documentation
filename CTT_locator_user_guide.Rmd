@@ -228,21 +228,15 @@ When the lights turn off, your locator is now safe to be turned off.
 
 Before going out in the field, it helps to practice localizing a tag. Here are a few tips in finding a tag:
 
-Hold the antenna away from your body and from obstructions. Since most wildlife tags are horizontally polarized, make sure the elements on the yagi are horizontal.
+* Hold the antenna away from your body and from obstructions. Since most wildlife tags are horizontally polarized, make sure the elements on the yagi are horizontal.
+* Hold the yagi parallel to the ground, even with tags in flight. 
+* For some reptile and mammal tags, the antenna is pointing upward. Likewise, you may want to try to hold the yagi in a vertical position to see if signal improves.
+* On your first reading with a steady signal, rotate slowly to identify the initial bearing of the tag.  You may want to make two full rotations to verify direction. Once you master this technique, you can scan side-to-side for faster localization.
+* Note the direction on a compass and map, while noting the time. Although the magnetometer will log the data, it is sometimes helpful to collect data separately.  
+* Move in the direction of the tag and rotate the antenna left and right to keep on track.
+* You may want to surround the potential tag location by taking additional samples. 
+* Keep a look out for reflections and multipath! Much like visible light, signals can bounce off bodies of water, buildings, and other smooth surfaces. 
 
-Hold the yagi parallel to the ground, even with tags in flight. 
-
-For some reptile and mammal tags, the antenna is pointing upward. Likewise, you may want to try to hold the yagi in a vertical position to see if signal improves.
-
-On your first reading with a steady signal, rotate slowly to identify the initial bearing of the tag.  You may want to make two full rotations to verify direction. Once you master this technique, you can scan side-to-side for faster localization.
-
-Note the direction on a compass and map, while noting the time. Although the magnetometer will log the data, it is sometimes helpful to collect data separately.  
-
-Move in the direction of the tag and rotate the antenna left and right to keep on track.
-
-You may want to surround the potential tag location by taking additional samples. 
-
-Keep a look out for reflections and multipath! Much like visible light, signals can bounce off bodies of water, buildings, and other smooth surfaces. 
 
 # Troubleshooting Guide
 
