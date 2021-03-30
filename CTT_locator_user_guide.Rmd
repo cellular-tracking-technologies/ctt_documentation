@@ -3,11 +3,11 @@ title: "CTT Locator User Manual"
 author: "support@celltracktech.com"
 date: "3/12/2021"
 output:
-  pdf_document:
-    toc: yes
   html_document:
     toc: yes
     number_sections: yes
+  pdf_document:
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -55,13 +55,13 @@ Unpack the hand held yagi antenna from the packaging.
 
 To assemble the antenna look at the diagram below. Pair the antenna sections by size, note that antenna elements will become longer incrementally as they approach the handle and that the coaxial connection is the second element from the handle. Screw them together like the diagram below. 
 
-![Yagi Antenna](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/antenna1.png)
+![*Yagi Antenna*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/antenna1.png)
 
 Unpack the BNC to SMA adapter and twist the adapter onto the antenna BNC connector. 
 
 Connect the SMA coax from the BNC to SMA adapter to the CTT Locator, making sure that all the connections are hand tight. Do not overtighten using any tools, as this could damage the antenna connectors.
 
-![Locator Setup](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/locatorsetup.png)
+![*Locator Setup*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/locatorsetup.png)
 
 Unscrew the black hand nut and place the bolt through the hole next to the foam handle. Attach and tighten the black hand nut. Please not not overtighten the nut.
 
@@ -69,7 +69,7 @@ You may also attach your phone to the built in phone clip. Note that while the p
 
 # Locator Buttons and Indications
 
-![Locator Diagram](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/diagram.png)
+![*Locator Diagram*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/diagram.png)
 
 
 # Powering on the Locator
@@ -147,16 +147,16 @@ Note: You can enable the tag “ping” sound on mobile devices by touching any 
 
 The `home` view shows all nearby tags. If a tag is first seen, it will show up as red, to indicate a new tag has been detected. If the tag is seen again, it will turn black. Each time the tag is detected, the text will briefly flash yellow to indicate it has been updated.
 
-![Home View](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/HomeView.png){#id .class width=50%}
+![*Home View*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/HomeView.png){#id .class width=50%}
 
 
-![Locator Main View](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/LocatorMainView.jpg){#id .class width=75%}
+![*Locator Main View*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/LocatorMainView.jpg){#id .class width=75%}
 
 # Tag View
 
 The `tag` view provides a signal strength indicator to help you localize a tag. As the tag signal gets stronger, more bars appear. the negative number under the signal bars is the signal strength in dBm, or decibel milliwatts. The lower the number, the weaker the signal. 
 
-![Tag View](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/TagView.png){#id .class width=50%}
+![*Tag View*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/TagView.png){#id .class width=50%}
 
 A large circle is at the top of the Tag View. This flashes when the tag is received. Under this is the last time the tag was seen.
 
@@ -168,28 +168,28 @@ You can add a tag to your favorites list by tapping the "Favorite" button. Tappi
 
 In the `Identify` view, tags will appear if they have signals stronger than -30 dBm. This would be a tag in very close proximity to the locator. 
 
-![Identify View](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/identifyview.png){#id .class width=50%}
+![*Identify View*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/identifyview.png){#id .class width=50%}
 
 
 # Favorite View
 
 Any tags that are selected as favorites will enter the `Favorite` view. You can click on any tag here to see the Tag View of any tag in this list, just as you would in the main view.
 
-![Favorite View](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/favoritesView.png){#id .class width=50%}
+![*Favorite View*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/favoritesView.png){#id .class width=50%}
 
 # Search View
 
 
 The `Search` view lets you type in a tag ID, which is then searched against tags detected during that session. Note that the history of tags clears each time you open or reload the locator interface. It will not search against any tag ever detected with the locator.
 
-![Search View](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Search_View.png){#id .class width=50%}
+![*Search View*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Search_View.png){#id .class width=50%}
 
 
 # Download View
 
 The `Download` view is where you can download both ES200 and Tag Data. Clicking on these will initiate a download to your device.
 
-![Download View](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/downloadview.png){#id .class width=50%}
+![*Download View*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/downloadview.png){#id .class width=50%}
 
 
 # Settings View
@@ -202,7 +202,7 @@ WiFi Access Point mode, switching to off, will disable the hotspot functionality
 
 The locator will then respond to https://locator.local/
 
-![Settings View](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/settingsview1.png){#id .class width=50%}
+![*Settings View*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/settingsview1.png){#id .class width=50%}
 
 Storage indicates space left on the locator. Note that the operating system and locator software do take a majority of the space on the device, which is normal. There is enough space for several million tag reads. The record count and space used is updated about every 15-30 seconds. 
 

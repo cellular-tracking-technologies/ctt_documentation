@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.3.22)  30 MAR 2021 16:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.3.22)  30 MAR 2021 16:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -591,7 +591,7 @@ mages/locatorsetup.png  used on input line 187.
 [2] [3 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/antenna1.pn
 g>]
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/diagram.png, id=14
-0, 701.62125pt x 430.60875pt>
+1, 701.62125pt x 430.60875pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/diagram.png G
 raphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/diagram.png>
@@ -605,7 +605,7 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [4 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/locatorsetup.
 png>]
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/110702200-37837c80
--81c0-11eb-8b96-cd1b77ff5d68.png, id=155, 687.56876pt x 125.46875pt>
+-81c0-11eb-8b96-cd1b77ff5d68.png, id=156, 687.56876pt x 125.46875pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/110702200-378
 37c80-81c0-11eb-8b96-cd1b77ff5d68.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/110702200-3783
@@ -621,7 +621,7 @@ Overfull \vbox (316.67525pt too high) has occurred while \output is active []
 Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/110702200-37837c80-8
 1c0-11eb-8b96-cd1b77ff5d68.png>]
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/110702544-a82a9900
--81c0-11eb-84f1-a844e8c9f164.png, id=163, 692.5875pt x 82.3075pt>
+-81c0-11eb-84f1-a844e8c9f164.png, id=164, 692.5875pt x 82.3075pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/110702544-a82
 a9900-81c0-11eb-84f1-a844e8c9f164.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/110702544-a82a
@@ -631,7 +631,7 @@ mages/110702544-a82a9900-81c0-11eb-84f1-a844e8c9f164.png  used on input line 30
 5.
 (pdftex.def)             Requested size: 469.76964pt x 55.82768pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/HomeView.png, id=1
-64, 525.965pt x 643.40375pt>
+65, 525.965pt x 643.40375pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/HomeView.png 
 Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/HomeView.png>
@@ -639,7 +639,7 @@ Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
 mages/HomeView.png  used on input line 358.
 (pdftex.def)             Requested size: 234.8763pt x 287.32007pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/LocatorMainView.jp
-g, id=165, 1003.75pt x 250.9375pt>
+g, id=166, 1003.75pt x 250.9375pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/LocatorMainVi
 ew.jpg Graphic file (type jpg)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/LocatorMainVie
@@ -648,7 +648,7 @@ Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
 mages/LocatorMainView.jpg  used on input line 366.
 (pdftex.def)             Requested size: 352.31331pt x 88.07831pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/TagView.png, id=16
-6, 524.96124pt x 457.71pt>
+7, 524.96124pt x 457.71pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/TagView.png G
 raphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/TagView.png>
@@ -656,7 +656,7 @@ Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
 mages/TagView.png  used on input line 382.
 (pdftex.def)             Requested size: 234.87663pt x 204.7873pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/identifyview.png, 
-id=167, 525.965pt x 643.40375pt>
+id=168, 525.965pt x 643.40375pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/identifyview.
 png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/identifyview.p
@@ -679,7 +679,7 @@ name{id}) has been already used, duplicate ignored
 l.420 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/favoritesView.png,
- id=183, 520.94624pt x 644.4075pt>
+ id=184, 520.94624pt x 644.4075pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/favoritesView
 .png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/favoritesView.
@@ -694,7 +694,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
 l.437 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Search_View.png, i
-d=184, 524.45938pt x 277.035pt>
+d=185, 524.45938pt x 277.035pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Search_View.p
 ng Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Search_View.pn
@@ -709,7 +709,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
 l.451 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/downloadview.png, 
-id=185, 524.96124pt x 647.41875pt>
+id=186, 524.96124pt x 647.41875pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/downloadview.
 png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/downloadview.p
@@ -724,7 +724,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
 l.477 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/settingsview1.png,
- id=187, 523.9575pt x 616.3025pt>
+ id=188, 523.9575pt x 616.3025pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/settingsview1
 .png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/settingsview1.
@@ -749,7 +749,7 @@ l.478 \end{figure}
 images/Search_View.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
 mages/downloadview.png>]
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/settingsview2.png,
- id=209, 531.9875pt x 649.42625pt>
+ id=210, 531.9875pt x 649.42625pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/settingsview2
 .png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/settingsview2.
@@ -768,11 +768,11 @@ Package rerunfilecheck Info: File `CTT_locator_user_guide.out' has not changed.
 (rerunfilecheck)             Checksum: 144527D5702B85FB3D0524A7484C3155;2923.
  ) 
 Here is how much of TeX's memory you used:
- 10799 strings out of 480962
- 161592 string characters out of 5906341
- 465740 words of memory out of 5000000
- 27736 multiletter control sequences out of 15000+600000
- 449399 words of font info for 67 fonts, out of 8000000 for 9000
+ 10801 strings out of 480962
+ 161615 string characters out of 5906341
+ 465743 words of memory out of 5000000
+ 27737 multiletter control sequences out of 15000+600000
+ 453662 words of font info for 68 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  71i,7n,74p,527b,434s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{
@@ -782,11 +782,13 @@ Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><
 /Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><
 /Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><
 /Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><
-/Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on CTT_locator_user_guide.pdf (13 pages, 1191475 bytes).
+/Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb>
+</Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb
+>
+Output written on CTT_locator_user_guide.pdf (13 pages, 1209837 bytes).
 PDF statistics:
- 272 PDF objects out of 1000 (max. 8388607)
- 234 compressed objects within 3 object streams
+ 276 PDF objects out of 1000 (max. 8388607)
+ 237 compressed objects within 3 object streams
  75 named destinations out of 1000 (max. 500000)
  239 words of extra memory for PDF output out of 10000 (max. 10000000)
 
