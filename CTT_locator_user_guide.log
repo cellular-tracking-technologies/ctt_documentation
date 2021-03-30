@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.3.22)  30 MAR 2021 16:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.3.22)  30 MAR 2021 16:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -553,11 +553,11 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 82.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./CTT_locator_user_guide.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 1.
+(Font)              <10> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 1.
+(Font)              <7> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 1.
+(Font)              <5> on input line 3.
 )
 \tf@toc=\write4
 \openout4 = `CTT_locator_user_guide.toc'.
@@ -759,13 +759,18 @@ mages/settingsview2.png  used on input line 489.
 (pdftex.def)             Requested size: 234.87073pt x 286.71956pt.
 [11 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/settingsview1.
 png>] [12 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/settings
-view2.png>] [13] (./CTT_locator_user_guide.aux)
+view2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 543--547
+
+ []
+
+[13] (./CTT_locator_user_guide.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `CTT_locator_user_guide.out' has not changed.
 
-(rerunfilecheck)             Checksum: 144527D5702B85FB3D0524A7484C3155;2923.
+(rerunfilecheck)             Checksum: 2EC4199D675F26FDE1BC0CB6D7FCC54F;2923.
  ) 
 Here is how much of TeX's memory you used:
  10801 strings out of 480962
@@ -785,7 +790,7 @@ Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><
 /Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb>
 </Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb
 >
-Output written on CTT_locator_user_guide.pdf (13 pages, 1209837 bytes).
+Output written on CTT_locator_user_guide.pdf (13 pages, 1209891 bytes).
 PDF statistics:
  276 PDF objects out of 1000 (max. 8388607)
  237 compressed objects within 3 object streams

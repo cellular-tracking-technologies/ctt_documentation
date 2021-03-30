@@ -14,7 +14,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## The CTT Locator
+# The CTT Locator
 
 The CTT Locator is a portal device that can receive a variety of wildlife tag signals. It is compatible with the entire radio tag line, including ES200 devices. 
 
