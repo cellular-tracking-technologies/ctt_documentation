@@ -21,7 +21,7 @@ If you are making use of anything other than 434MHz FSK, you will need to use a 
 If you have a Trap Sensor Receiver and received one of our custom drilled cases, an additional antenna port will be provided. 
 
 <img src="https://user-images.githubusercontent.com/1101026/113342800-ed904100-92fc-11eb-8c12-668f44ed4580.png" width="400">
-<img src="https://user-images.githubusercontent.com/1101026/113345585-a7d57780-9300-11eb-9c90-acb0f7ca8cc4.png width="400">
+<img src="https://user-images.githubusercontent.com/1101026/113345585-a7d57780-9300-11eb-9c90-acb0f7ca8cc4.png" width="400">
 
 Make sure the coaxial connection is connected to your Trap Sensor Receiver, otherwise, the signal will not be received. Connect this Trap Sensor Receiver coaxial antenna to a quality 915MHz antenna (902-928MHz ISM antennas are fine), and place the antenna as high as practically possible. The higher the antenna, the greater the range, as the signal is near line of sight.
 
