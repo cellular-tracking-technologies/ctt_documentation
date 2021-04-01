@@ -14,7 +14,7 @@ Under normal motion conditions, usage, and signal levels, the Trap Sensor batter
 
 If you are making use of anything other than 434MHz FSK, you will need to use a special receiver dongle. This dongle must be plugged into USB Port 4, otherwise the receiver will not be able to communicate with the installed software. If it has not been pre-installed, you will also need to install the Trap Sensor Receiver Software.
 
-![trapsensorreceiver](https://user-images.githubusercontent.com/1101026/113343308-a9ea0700-92fd-11eb-8b2e-32c35363afc1.png =512x)
+<img src="https://user-images.githubusercontent.com/1101026/113343308-a9ea0700-92fd-11eb-8b2e-32c35363afc1.png" style="width: 512px">
 
 
 If you have a Trap Sensor Receiver and received one of our custom drilled cases, an additional antenna port will be provided. 
