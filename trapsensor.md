@@ -8,7 +8,7 @@ The sensitivity level, as well as other parameters, can be configured at time of
 
 The Trap Sensor makes use of LoRa modulation on the 902-928MHz unlicensed band. Other frequencies and modulations, such as 434MHz FSK (compatible with LifeTag and PowerTag infrastructure) are available on request. 
 
-Under normal motion conditions and usage, the Trap Sensor battery will last 1-2 years.
+Under normal motion conditions, usage, and signal levels, the Trap Sensor battery will last about a year.
 
 ## Setup
 
@@ -17,6 +17,7 @@ Open up the plastic case. Inside, you will see a circuit board with battery hold
 * ACDelco
 * Ikea
 * Duracell
+* AmazonBasics
 
 Rechargeable batteries, "Energizer" brand, and lithium batteries are not recommended.
 
@@ -41,7 +42,7 @@ Trap Sensors do not need to be paired with the SensorStation. They are ready for
 
 ## Operation Tips
 
-Excessive vibration, wind, and other movements can result in errant motion transmissions as well as additional power consumption. While some of these situations are unavoidable, it is important to keep an eye on battery levels until you baseline the power consumption. It is also adviced to place batteries while in field to avoid any inadvertent transmissions.
+Excessive vibration, wind, and other movements can result in errant motion transmissions as well as additional power consumption. While some of these situations are unavoidable, it is important to keep an eye on battery levels until you baseline the power consumption. It is also adviced to place batteries while in field to avoid any inadvertent transmissions before deployment. Constant movement, such as during transport, can reduce the battery life.
 
 ## Test Transmit
 
@@ -64,7 +65,7 @@ To exit Coverage Area Testing Mode, remove the batteries, and replace them.
 ## Technical Specifications
 
 * LoRa (Long Range) Chirp Spread Spectrum Transmitter
-* Open source software using the Arduino SDK
+* Can be programmable with user software using standard AVR Studio and Arduino development environments
 * 902-928MHz LoRa (standard), 868MHz (Optional), 434MHz LifeTag/PowerTag Compatible (Optional), 434MHz loRa (optional)
 * Omnidirectional motion detector
 * Factory configurable thresholds, transmission intervals, re-arming time
@@ -72,9 +73,9 @@ To exit Coverage Area Testing Mode, remove the batteries, and replace them.
 * ATMega328PB low power microprocessor
 * 6 pin ICSP programming header
 * WatchDog timer for extra reliability
-* FTDI serial programmer pinout
+* FTDI serial programmer/debugger pinout
 * Battery voltage detection circuit
-* Unique identifier
+* Unique identifier burnt into each processor IC
 * Test button
 * Coverage area testing mode
 
@@ -98,3 +99,5 @@ To exit Coverage Area Testing Mode, remove the batteries, and replace them.
 |-------------|--------|
 Constant Solid LED | Device in coverage area
 No LED | Device outside coverage area
+
+Note that it will take a few seconds for the device to detect the presence or absence of the coverage area. It also does consume a bit of power, so be sure to use fresh batteries when you ultimately deploy the device.
