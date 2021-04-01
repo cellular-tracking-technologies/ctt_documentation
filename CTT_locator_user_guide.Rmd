@@ -3,11 +3,11 @@ title: "CTT Locator User Manual"
 author: "support@celltracktech.com"
 date: "3/12/2021"
 output:
+  pdf_document:
+    toc: yes
   html_document:
     toc: yes
     number_sections: yes
-  pdf_document:
-    toc: yes
 ---
 
 ```{r setup, include=FALSE}
