@@ -14,18 +14,18 @@ Under normal motion conditions, usage, and signal levels, the Trap Sensor batter
 
 If you are making use of anything other than 434MHz FSK, you will need to use a special receiver dongle. This dongle must be plugged into USB Port 4, otherwise the receiver will not be able to communicate with the installed software. If it has not been pre-installed, you will also need to install the Trap Sensor Receiver Software.
 
-<img src="https://user-images.githubusercontent.com/1101026/113343308-a9ea0700-92fd-11eb-8b2e-32c35363afc1.png" width="320">
+<img src="https://user-images.githubusercontent.com/1101026/113343308-a9ea0700-92fd-11eb-8b2e-32c35363afc1.png" width="400">
 
 
 If you have a Trap Sensor Receiver and received one of our custom drilled cases, an additional antenna port will be provided. 
 
-![antennaport](https://user-images.githubusercontent.com/1101026/113342800-ed904100-92fc-11eb-8c12-668f44ed4580.png =512x)
+<img src="https://user-images.githubusercontent.com/1101026/113342800-ed904100-92fc-11eb-8c12-668f44ed4580.png" width="400">
 
 Make sure the coaxial connection is connected to your Trap Sensor Receiver, otherwise, the signal will not be received. Connect this Trap Sensor Receiver coaxial antenna to a quality 915MHz antenna (902-928MHz ISM antennas are fine), and place the antenna as high as practically possible. The higher the antenna, the greater the range, as the signal is near line of sight.
 
 ## TrapSensor Setup
 
-![trapsensor](https://user-images.githubusercontent.com/1101026/113343337-b2dad880-92fd-11eb-846a-14bed4be0669.png =512x)
+<img src="https://user-images.githubusercontent.com/1101026/113343337-b2dad880-92fd-11eb-846a-14bed4be0669.png" width="400">
 
 Open up the plastic case with a phillips screwdriver. Inside, you will see a circuit board with battery holder. Insert two AA alkaline batteries. Since battery capacities and chemistries vary wildly across battery manufacturers, only the following brands are recommended:
 
