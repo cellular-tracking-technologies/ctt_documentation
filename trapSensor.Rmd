@@ -59,7 +59,7 @@ After a short bootup process, and transmission of a "Hello" message to the Senso
 
 Make sure that the top is securely attached after installing batteries. While the case is water proof, it is not submersion proof. 
 
-It is also good to give the Trap Sensor a shake (similar to the conditions experinced in a real event) and verify it appears on the SensorStation.
+It is also good to give the Trap Sensor a shake (similar to the conditions experienced in a real event) and verify it appears on the SensorStation.
 
 ## Attaching Your Trap Sensor
 
@@ -70,15 +70,15 @@ The Trap Sensor can be attached using a variety of methods:
 
 ## SensorStation Pairing
 
-Trap Sensors do not need to be paired with the SensorStation. They are ready for use once deployed. Multiple overlapping recieving networks are possible.
+Trap Sensors do not need to be paired with the SensorStation. They are ready for use once deployed. Multiple overlapping receiving networks are possible.
 
 ## Operation Tips
 
-Excessive vibration, wind, and other movements can result in errant motion transmissions as well as additional power consumption. While some of these situations are unavoidable, it is important to keep an eye on battery levels until you baseline the power consumption. It is also adviced to place batteries while in field to avoid any inadvertent transmissions before deployment. Constant movement, such as during transport, can reduce the battery life.
+Excessive vibration, wind, and other movements can result in errant motion transmissions as well as additional power consumption. While some of these situations are unavoidable, it is important to keep an eye on battery levels until you baseline the power consumption. It is also advised to place batteries while in field to avoid any inadvertent transmissions before deployment. Constant movement, such as during transport, can reduce the battery life.
 
 ## Test Transmit
 
-If you wish to force the trap sensor to transmit while in normal opertion mode, press the button and hold for a few seconds. The device will transmit as if it recieved a motion event.
+If you wish to force the trap sensor to transmit while in normal operation mode, press the button and hold for a few seconds. The device will transmit as if it received a motion event.
 
 ## Over the Air Configuration
 
@@ -88,7 +88,7 @@ After each trap triggering, either by button or by motion, the trap sensor remai
 
 The trap sensor can enter a coverage area testing mode on startup. Simply press the button on the device, insert the batteries, and wait until a fading pattern appears. This means the device will enter test mode shortly.
 
-Test mode transmits at a 50% duty cycle about once a second, waiting for an "ACK" or ackknowledgement from the SensorStation that the message has been received. This is important to be able to test bi-directional communication. As long as the light remains on, it is in a good coverage area. If the light goes out, try to reposition the device and wait for the light to appear. 
+Test mode transmits at a 50% duty cycle about once a second, waiting for an "ACK" or acknowledgment from the SensorStation that the message has been received. This is important to be able to test bi-directional communication. As long as the light remains on, it is in a good coverage area. If the light goes out, try to reposition the device and wait for the light to appear. 
 
 NOTE: A device in Coverage Area Testing Mode will consume all bandwidth on the configured radio channel. It is advised to only do this during deployment. Be mindful that other devices may not be able to transmit their trap signals if a device is in this mode.
 
@@ -121,7 +121,7 @@ To exit Coverage Area Testing Mode, remove the batteries, and replace them.
 |Single flash (100ms) | Occurs during bootup and indicates default configuration is loaded|
 |Flashing goes from fast to slow | Radio configuration problem|
 |Flashing goes from slow to fast | Frequency provisioning error|
-|Slow flash (5x at 500ms) | Maximum transmission retries, SensorStation did not acknowldge |
+|Slow flash (5x at 500ms) | Maximum transmission retries, SensorStation did not acknowledge |
 |2 flashes at 100ms | Message confirmed from SensorStation|
 
 ## Coverage Area Testing Mode LED Patterns
