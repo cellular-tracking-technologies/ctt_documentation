@@ -1,0 +1,58 @@
+---
+title: "CTT Node User Guide"
+author: "support@celltracktech.com"
+date: "4/1/2021"
+output:
+  pdf_document:
+    toc: yes
+  html_document:
+    toc: yes
+    number_sections: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Introduction
+
+The CTT Node™ is a mini-base-station that allows you to localize LifeTags™, PowerTags™ and HybridTags™ with a high degree of accuracy. If deployed in a grid fashion, and employing post-hoc analysis, the CTT Nodes can operate as pseudo-reverse-GPS, providing near GPS accuracy in optimal conditions. With the addition of calibration data, Nodes can provide presence/absence and distance estimate of instantaneous detections from supported tags.
+
+The CTT Node uploads received tag detection data to the standard CTT SensorStation™, creating a dense, high resolution tracking network. Solar power recharges batteries in the CTT Nodes meaning no extra power cables or external solar systems are necessary.
+
+Each CTT Node has a detectable range of about 250-300 meters, and is able to relay data to a CTT Base Station as far away as several kilometers.
+
+
+## Node Setup
+
+
+## Attaching Your Node
+
+## SensorStation Pairing
+
+## Operation Tips
+
+## Test Transmit
+
+## Advanced Configuration via Node Client
+
+## Technical Specifications
+
+* One Thing
+* Two Things
+
+## LED Pulse Patterns
+
+| LED Pattern | Meaning|
+|-------------|--------|
+|10 seconds | Device boot up or reboot |
+|Fading in 5 times | Device was commanded to enter Coverage Area Testing Mode with button press at boot|
+|Flashing 3 times (100ms) | Occurs during bootup and indicates a custom configuration was loaded from EEPROM memory|
+|Single flash (100ms) | Occurs during bootup and indicates default configuration is loaded|
+|Flashing goes from fast to slow | Radio configuration problem|
+|Flashing goes from slow to fast | Frequency provisioning error|
+|Slow flash (5x at 500ms) | Maximum transmission retries, SensorStation did not acknowledge |
+|2 flashes at 100ms | Message confirmed from SensorStation|
+
+## some other things

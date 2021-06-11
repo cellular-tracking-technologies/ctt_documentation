@@ -1,0 +1,164 @@
+---
+title: "ES-420 User Guide: Device Care and Deployment"
+author: "support@celltracktech.com"
+date: "6/10/2021"
+output:
+  html_document:
+    toc: yes
+    number_sections: yes
+  pdf_document:
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\newpage
+
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/GooseCollarLatty06082021.jpg){#id .class width=25%}
+
+
+# Overview
+
+You have received a CTT®-ES420 telemetry device by Cellular Tracking Technologies. This is our newest GPS-GSM wildlife tracking device. It features LTE CAT M1 complete with CTT’s global coverage on over 400 carriers worldwide. LTE CAT M1 is designed specifically for IoT devices with drastically reduced power usage, dedicated IoT connectivity so there is little to no delays or downtime, remote updating capabilities, and extended cellular range. 
+
+This guide is intended to instruct you in the care of your wildlife tracking device. Please pay attention to these details, as several are different from any other devices on the market. This CTT® device is covered by US Patent No. 8,258,942.
+
+# General Specifications
+
+The CTT®-ES420 Goose Collar (ES-420 GC) is a solar recharging battery-powered GPS tracking device designed for geese. The transmitter is a collar that weighs ~ 30g. The device is designed to operate over long periods of time with adequate solar recharging, and it can operate at different sampling rates depending on its reprogrammable duty cycle. Cellular technology allows the device to update frequent batches of telemetry data at much lower costs than satellite-transmission devices. If cellular coverage is unavailable, the device will store data until it returns to a cellular coverage area. If the device cannot recharge during extended periods of unfavorable weather, it will enter a "power save" mode, recharging until it is safe to operate.
+
+# Unpacking Your Shipment, Caring for Your CTT® Devices, & Getting Started
+
+When a CTT® device is shipped to you, it is running in a special low power mode to reduce battery consumption. A CTT® device should be kept indoors and away from excessive heat, and in a place where there is adequate signal from a mobile phone tower. Do not place the device into metal containers or cabinets as this will obstruct the mobile phone and GPS signal.
+
+**NOTE: CTT® devices do not ship with the operational Duty Cycle for your project.**
+ 
+**<u>Within ten days of receiving your devices,</u>** **contact Cellular Tracking Technologies to let us know which devices will be deployed in the near future and which devices will remain in storage for more than three weeks.**
+ 
+If you would like to store your devices at any time, we will place them into CTT® Deep Freeze storage mode where very little power is consumed. Contact Cellular Tracking Technologies to notify us which devices need to be put into CTT® Deep Freeze.
+
+<u>CTT® **Deep Freeze**:</u> The CTT® device continuously monitors the state of charge of the battery. If stored for an extended period of time, the battery may need to be recharged. If the battery gets too low, our server will automatically send you an email notification when recharging is necessary. These notifications to your email address can be configured on the Cellular Tracking Technologies data access web page under your user profile. They will be sent to the default email address you have selected on your user profile.
+ 
+When instructed by our server to charge the battery, position the device outside in a location with mobile phone network coverage and an unobstructed panoramic view of the sky. Strong sunlight is needed to quickly recharge the batteries to full capacity (see helpful hints on charging below). A full charge is approximately 4.1 V. You can determine voltage on your account page on the Cellular Tracking Technologies data access web page. You will also receive an automated email from your device, once fully charged. At this point, return the device to an indoors location.
+
+**<u>At least ten days prior to deployment:</u>** Be sure that the duty cycle configuration has been updated on your devices prior to deployment. Contact Cellular Tracking Technologies to update your device to the correct configuration for deployment. Test each device by checking your account on the Cellular Tracking Technologies data access web page to verify that data have been recorded and transmitted properly. Be sure to charge the battery to full capacity. **Do not deploy the device on an animal until you are sure the device is functioning properly.**
+
+## Fitting device on an animal
+
+This should only be done only by someone who is **experienced**, **licensed**, and **has appropriate permissions to attach telemetry devices to the specific wildlife species**. Having prior experience fitting the particular style of attachment (i.e. backpack, goose collar, mammal collar, ear tag) on these animals is important; if you need guidance in this regard please contact us.
+
+## Removing the Collar 
+
+If you need to refit a collar after closing, or need to remove the door after it is fully closed, it is very important these directions are followed. Failure to do so will permanently damage the collar. Your collars shipped with extra doors. Contact us if more are needed.
+
+1. Note the lines on either edge of the door part of the collar as shown below
+
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Cut point.jpg){#id .class width=25%}
+
+
+2. To remove cut only the red line section of the tab on the door
+3. We recommend using small side cutters/ wire cutters as show below:
+
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/snips.jpg){#id .class width=25%}
+
+4. Cut from the top and only the line section of the door. Do not cut into the main unit. 
+
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Cut point_plyers.jpg){#id .class width=25%}
+
+
+<u>**IMPORTANT!**</u> For the ES-420 GC units, the **GPS bump** goes **towards the sky**. The sliding door will slide **down** into place until it locks.
+
+## Helpful hints
+
+There are some basic operating principles about this telemetry device of which you should be aware:
+ 
+### Test Devices before Deployment
+
+Check the GPS Data Collection & Cellular Data Connection for at least 24 hours in the area near where you will deploy them. This is always good policy. Check your account online to verify that each device transmitted appropriate data.
+ 
+### Recharging the Battery
+
+The optimal position for recharging is outside, with the solar panel facing south and tilted 45 degrees above horizontal, all day long. Devices running a low-power duty cycle should be stored <u>safely indoors</u> until the battery needs to be charged (~3.7 V). Recharge batteries outside as described above. Return devices to an inside location when full charge is reached (~4.1 V). Battery voltage can be monitored on the Cellular Tracking Technologies user interface website.
+
+### Handle with Care
+
+The devices are heat sensitive. They are designed to function well in outdoor environments; however, excessive heat (for example that which occurs on the dashboard of a car parked in direct sunlight) may permanently damage the waterproof seal or components in the device. While the telemetry device continuously monitors for excessive heat, and will not charge the battery if the device gets too hot, these conditions could <u>permanently</u> damage the device. **Cellular Tracking Technologies does not warranty telemetry devices damaged by exposure to excessive heat.**
+ 
+
+## Feedback
+
+Because you are using a relatively new telemetry system, please be sure to take extensive notes on the device, its performance, and improvements you would like to see. We are constantly working to develop our tracking devices’ hardware and operating systems and your feedback is priceless! We stand behind our products and continue our support for our customers and clients.
+
+# Programming Specifications
+
+## Duty Cycle
+
+**ATTENTION:** All devices are shipped in a special low power mode. They connect to the Cellular Tracking Technologies server on Monday, Wednesday and Friday. Additionally, we have a special **motion activated cellular connection trigger**. Please only perform this procedure in an area that has GSM cellular coverage. To perform a cellular data connection on demand within 5 minutes, do the following: Hold the device with the solar panel facing up and then proceed to **shake the device up and down continuously (as though it is a clogged salt shaker) for 45 seconds without stopping.** Then set the device down on a flat surface with GPS UP for up to 5 minutes. You can then verify that the device transmitted successfully by logging in to your account on the Cellular Tracking Technologies website. Please note that the device needs **>50 seconds of up/down agitation, and only on the precise axis that is up/down when the solar panel is facing straight up (the angle that would be optimized for solar energy from a direct overhead light source.)** This way, the device will be able to connect and download the specific duty cycle configuration file for your project at a time that is convenient to you, independent of the scheduled connections.  If check-in does not occur within 5 minutes, attempt again, paying close attention to the angle at which the device is held and that the up/down motion persists for at least 45 seconds.
+ 
+To ensure that the correct duty cycle for your project is set to be downloaded by these devices, please email Jessica Formento at [jessica.formento@celltracktech.com](mailto:jessica.formento@celltracktech.com), and cc: [sales@celltracktech.com](mailto:sales@celltracktech.com). You can also call us directly at 609-889-0305. <u>**If you do not contact us, the duty cycle for these devices will remain unchanged**.</u>
+
+# Navigating the new ES-420 User Interface (UI) Website
+
+## Logging in
+
+The ES-420 line of transmitters has a new portal independent from the old CTT web portal. Upon shipping your ES-420 you will be emailed your credentials for this new login, as well as a list of your Device IDs. To log into your new account please visit the ES-420 web portal here:
+
+https://beta.internetofwildlife.com/
+
+## Main Page
+
+*This section is still under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.*
+
+![](/Users/davidlapuma/Desktop/420 UI Slide 1.png){#id .class width=100%}
+\newpage
+
+## Charts Tab
+
+*This section is still under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.*
+
+![](/Users/davidlapuma/Desktop/420 UI Slide 2 Charts.png){#id .class width=100%}
+
+![](/Users/davidlapuma/Desktop/420 UI Slide 2.1 Charts Zoom.png){#id .class width=100%}
+
+![](/Users/davidlapuma/Desktop/420 UI Slide 2.3 Battery Chart Zoom and Zoom Out Button.png){#id .class width=100%}
+
+\newpage
+
+## Data Grid Tab
+
+*This section is still under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.*
+
+![](/Users/davidlapuma/Desktop/420 UI Slide 3 Data Grid.png){#id .class width=100%}
+
+## Configuration Tab
+
+From the configuration tab you can see both the current configuration loaded on your unit, and the assignment history.
+
+## Current Assignment Sub-tab
+
+This panel shows the **latest configuration** running on the unit **since the last check-in**. <u>**This is important, because newly assigned configs will not update until the check-in following the one where the unit took the config.**</u> 
+
+*This section is still under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.*
+
+![](/Users/davidlapuma/Desktop/420 UI Slide 4 Config.png){#id .class width=100%}
+\newpage
+
+## Assignment History Sub-tab
+
+This section is under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.
+
+![](/Users/davidlapuma/Desktop/420 UI Slide 5 Config Assign Hist.png){#id .class width=100%}
+
+## Download Tab
+
+*This section is still under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.*
+
+![](/Users/davidlapuma/Desktop/420 UI Slide 6 Download Data.png){#id .class width=100%}
+
+
+# Further Support
+
+*If for any reason you need further support with your Cellular Tracking Technologies ES-420 device, please email support@celltracktech.com or call us during business hours, 9am - 5pm Monday to Friday at 609-889-0305.*
+
