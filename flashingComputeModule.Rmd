@@ -37,7 +37,7 @@ While CTT offers many over-the-air updates to your `CTT SensorStation` sometimes
 
 **V2 SensorStation Current Stable Image**
 *Records Tag, GPS, SensorGnome, and Telemetry data. Monthly reboot on the 3rd of the month.* 
-[Download Station Image](https://s3.amazonaws.com/media.celltracktech.com/sensor-station/d7522108-017e-11ea-86b6-784f43a7974d/sensor-station.2020-06-09.zip)
+[Download Station Image](https://d25eksygu9dzud.cloudfront.net/sensor-station/d7522108-017e-11ea-86b6-784f43a7974d/sensor-station.2021-07-27.zip)
 
 ***
 
