@@ -3,11 +3,11 @@ title: "Flashing your SensorStation's Compute Module"
 author: "support@celltracktech.com"
 date: "8/25/2021"
 output:
+  pdf_document:
+    toc: yes
   html_document:
     toc: yes
     number_sections: yes
-  pdf_document:
-    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -67,12 +67,6 @@ For **Mac**, follow these directions:
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-2. With Terminal open, run the following code to install the USBBoot code in `Terminal`
-
-```
-git clone --depth=1 https://github.com/raspberrypi/usbboot
-cd usbboot
-```
 
 Then install the libusb libraries:
 
@@ -80,13 +74,32 @@ Then install the libusb libraries:
 brew install libusb
 ```
 
-Then make the rpiboot installer:
+2. From within Terminal, navigate to your preferred directory. 
+
+*Tip: I tend to use Dropbox, so I use the `cd` command to **c**hange **d**irectory into my `Dropbox` folder: ```cd Dropbox```*
+
+Once you are in your preferred directory, run the following code to install the USBBoot code in `Terminal`
+
+```
+git clone --depth=1 https://github.com/raspberrypi/usbboot
+```
+
+Then move into the `usbboot` directory:
+
+```
+cd usbboot
+```
+
+Now make the `rpiboot` installer:
 
 ```
 make
 ```
+At this point, you now have a standalone executable called `rpiboot` in the `usbboot` folder. You can move that executable anywhere you want so it's convenient for using again in the future.
 
-Then run rpiboot:
+Additionally, once you have moved the `rpiboot` executable, the `usbboot` folder can be trashed as its contents are only useful for making the `rpiboot` program. **From now on, if you need to flash more compute modules, you can start with running `rpiboot` and do not need to re-do steps 1 and 2 above.**
+
+If you are still in the `usbboot` directory, you can now run run rpiboot with the following command. Otherwise use the `CD` command in `Terminal` to change directory to wherever you moved `rpiboot`.
 
 ```
 ./rpiboot

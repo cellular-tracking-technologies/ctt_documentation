@@ -25,13 +25,38 @@ Each CTT Node has a detectable range of about 250-300 meters, and is able to rel
 
 
 ## Node Setup
+ 
+Because of shipping laws, your node arrives with a partially-charged Lithium battery and should be placed in the sun for several days prior to deployment to get its battery up to full charge. When your node arrives you will notice a few things.
 
+### Unboxing
+
+Remove the packing material that surrounds your node. You can do this by removing the two nuts on the mounting bracket, which will then allow you to slide the bubble wrap off of the node and save it for future use. 
+
+<node unboxing photos>
+
+Notice that there is a piece of blue tape securing a magnet to the node. This magnet operates the switch that determines whether your node is searching for tags. Note that even with the magnet on the node, your node will send health reports every five minutes. It can do this on a fully charged battery for over two years without charging, so is fine for storage. Once you remove the magnet, though, your node will function for roughly one week without a charge. We recommend only removing the magnet when deploying your nodes, or for temporary testing.
+
+<node magnet photo>
+
+Once you deploy your nodes, be sure to save the magnets for future use.
 
 ## Attaching Your Node
 
+Each node comes with the necessary hardware for mounting it to various materials. We typically recommend 3/4" or 1/2" EMT conduit, but you can mount it to practically anything. We recommend mounting your node either horizontally, with the solar panel facing the sky, or vertically, with the solar panel facing south, for optimal recharging performance. 
+
+### A note about solar recharging
+
+Note that mounting your node in shade, or canopy cover, will reduce recharge times and may require you to periodically move the node to a sunny location for recharging, or subsidize the node with an additional battery back (each node comes with a USB port which can be used for attaching an additional power supply).
+
 ## SensorStation Pairing
 
+There is no need to pair a node to a SensorStation. Simply placing the node within the range of a SensorStation antenna will cause the SensorStation to detect and process node data. 
+
 ## Operation Tips
+
+As a rule of thumb we recommend placing all nodes within 1-1.5km of a SensorStation. It is possible to increase the distance depending on your choice of antennas, but this distance has proved effective for many installations. Topography, density of vegetation, and other factors may impact the detection distance. 
+
+Since each node transmits health information every five minutes, one good benchmark when testing you nodes is to ensure that your SensorStation is detecting each node at least every five minutes. If not, you will likely be losing some data which will only be recoverable by opening the node, removing and reading the internal SD card. Put another way, any data not received by the SensorStation will not be sent later, but resides only on the internal node SD card.
 
 ## Test Transmit
 

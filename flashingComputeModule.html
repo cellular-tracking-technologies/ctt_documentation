@@ -262,16 +262,21 @@ summary {
 </ul></li>
 </ol>
 <pre><code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot;</code></pre>
-<ol start="2" style="list-style-type: decimal">
-<li>With Terminal open, run the following code to install the USBBoot code in <code>Terminal</code></li>
-</ol>
-<pre><code>git clone --depth=1 https://github.com/raspberrypi/usbboot
-cd usbboot</code></pre>
 <p>Then install the libusb libraries:</p>
 <pre><code>brew install libusb</code></pre>
-<p>Then make the rpiboot installer:</p>
+<ol start="2" style="list-style-type: decimal">
+<li>From within Terminal, navigate to your preferred directory.</li>
+</ol>
+<p><em>Tip: I tend to use Dropbox, so I use the <code>cd</code> command to <strong>c</strong>hange <strong>d</strong>irectory into my <code>Dropbox</code> folder: <code>cd Dropbox</code></em></p>
+<p>Once you are in your preferred directory, run the following code to install the USBBoot code in <code>Terminal</code></p>
+<pre><code>git clone --depth=1 https://github.com/raspberrypi/usbboot</code></pre>
+<p>Then move into the <code>usbboot</code> directory:</p>
+<pre><code>cd usbboot</code></pre>
+<p>Now make the <code>rpiboot</code> installer:</p>
 <pre><code>make</code></pre>
-<p>Then run rpiboot:</p>
+<p>At this point, you now have a standalone executable called <code>rpiboot</code> in the <code>usbboot</code> folder. You can move that executable anywhere you want so it’s convenient for using again in the future.</p>
+<p>Additionally, once you have moved the <code>rpiboot</code> executable, the <code>usbboot</code> folder can be trashed as its contents are only useful for making the <code>rpiboot</code> program. <strong>From now on, if you need to flash more compute modules, you can start with running <code>rpiboot</code> and do not need to re-do steps 1 and 2 above.</strong></p>
+<p>If you are still in the <code>usbboot</code> directory, you can now run run rpiboot with the following command. Otherwise use the <code>CD</code> command in <code>Terminal</code> to change directory to wherever you moved <code>rpiboot</code>.</p>
 <pre><code>./rpiboot</code></pre>
 <p>At this point you should see a message in your terminal that says something to the effect of:</p>
 <p><code>Waiting for BCM2835/6/7/2711...</code></p>
