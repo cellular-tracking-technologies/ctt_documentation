@@ -1,13 +1,14 @@
 ---
 title: "CTT Node User Guide"
 author: "support@celltracktech.com"
-date: "4/1/2021"
+date: "9/13/2021"
 output:
-  pdf_document:
-    toc: yes
   html_document:
     toc: yes
     number_sections: yes
+  pdf_document:
+    toc: yes
+    fig_caption: true
 ---
 
 ```{r setup, include=FALSE}
@@ -30,13 +31,18 @@ Because of shipping laws, your node arrives with a partially-charged Lithium bat
 
 ### Unboxing
 
+![*Node packaged for shipping*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeWrapped(1).jpg){#id .class width=50%}
+
 Remove the packing material that surrounds your node. You can do this by removing the two nuts on the mounting bracket, which will then allow you to slide the bubble wrap off of the node and save it for future use. 
 
-<node unboxing photos>
+Notice that there is a piece of blue tape securing a magnet to the node.
 
-Notice that there is a piece of blue tape securing a magnet to the node. This magnet operates the switch that determines whether your node is searching for tags. Note that even with the magnet on the node, your node will send health reports every five minutes. It can do this on a fully charged battery for over two years without charging, so is fine for storage. Once you remove the magnet, though, your node will function for roughly one week without a charge. We recommend only removing the magnet when deploying your nodes, or for temporary testing.
+![*Node with bubblewrap removed*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUnwrapped(2).jpg){#id .class width=50%}
 
-<node magnet photo>
+This magnet operates the switch that determines whether your node is searching for tags. Note that even with the magnet on the node, your node will send health reports every five minutes. It can do this on a fully charged battery for over two years without charging, so is fine for storage. Once you remove the magnet, though, your node will function for roughly one week without a charge. We recommend only removing the magnet when deploying your nodes, or for temporary testing.
+
+![*Note the black dot on the node indicates where the magnet must be aligned when not in use*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeMagnet(3).jpg){#id .class width=50%}
+
 
 Once you deploy your nodes, be sure to save the magnets for future use.
 
@@ -58,26 +64,139 @@ As a rule of thumb we recommend placing all nodes within 1-1.5km of a SensorStat
 
 Since each node transmits health information every five minutes, one good benchmark when testing you nodes is to ensure that your SensorStation is detecting each node at least every five minutes. If not, you will likely be losing some data which will only be recoverable by opening the node, removing and reading the internal SD card. Put another way, any data not received by the SensorStation will not be sent later, but resides only on the internal node SD card.
 
+### Connecting to the external USB port
+
+![*Node with USB cover installed*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUSBCover(5).jpg){#id .class width=50%}
+
+![*Node with USB cover removed, exposing 4 pins*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUSBPort(6).jpg){#id .class width=50%}
+
+![*Node with 4-pin to USB-A adapter inserted* ](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUSBAdapterIn(8).jpg){#id .class width=50%}
+
+
+### Opening your Node
+
+If you need to access the internal SD card, or troubleshoot a node, you can access it by removing the single screw on the bottom of the case, and separating the top of the node from the bottom with a little squeeze and pull procedure. 
+
+![*First remove the screw in the bottom of the Node*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeScrewOut(9).jpg){#id .class width=50%}
+
+![*Then apply equal pressure to the long sides of the case, and pull the top and bottom apart*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeOpen1(10).jpg){#id .class width=50%}
+
+![*Closeup of the Node board*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeCloseUpInternal(12).jpg){#id .class width=50%}
+
+
+On the board you will notice several buttons. Pressing them has the corresponding effect:
+
+* `SW1` - Forces the node to restart.
+* `SW2` - Forces the node to send a health message (requires a SensorStation to determine success).
+* `SW3` - Forces the node to look for new firmware on the SD card, and if it finds it, to install it.
+
+The Micro USB port is also apparent in the lower right side of the board, and labled `USB`. You can use this port to connect your node directly to a computer.
+
 ## Test Transmit
 
 ## Advanced Configuration via Node Client
 
-## Technical Specifications
+You can use a development program we've created called `Node Client` to troubleshoot your node and modify several parameters. The latest version of `Node Client` can be downloaded from our support Slack workspace. If you don't already have access, please email us at support@celltracktech.com. You can connect your node to a computer using either the provided 4-pin -> USB adapter and the port on the underside of the node, or the micro-usb port directly on the board (after opening the node).
 
-* One Thing
-* Two Things
+![*Opening screen of `Node Client`*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient1.png){#id .class width=75%}
 
-## LED Pulse Patterns
+Upon opening Node Client you will see the main screen with Steps 1 - 4 outlined. The window to the right is actually a screenshot of Device Manager - not Device Manager itself (hence "Figure 1"), but gives you an idea of what your Device Manager should look like if you have the proper dirvers installed. If not, the blue link that says "Driver" can be clicked to take you to the download page. You must have the Silicon Labs driver installed to run Node Clien. 
 
-| LED Pattern | Meaning|
-|-------------|--------|
-|10 seconds | Device boot up or reboot |
-|Fading in 5 times | Device was commanded to enter Coverage Area Testing Mode with button press at boot|
-|Flashing 3 times (100ms) | Occurs during bootup and indicates a custom configuration was loaded from EEPROM memory|
-|Single flash (100ms) | Occurs during bootup and indicates default configuration is loaded|
-|Flashing goes from fast to slow | Radio configuration problem|
-|Flashing goes from slow to fast | Frequency provisioning error|
-|Slow flash (5x at 500ms) | Maximum transmission retries, SensorStation did not acknowledge |
-|2 flashes at 100ms | Message confirmed from SensorStation|
+![*Clicking on `Update Ports` should populate both steps 2 and 3 values. If not you may need to install the proper driver.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient2.png){#id .class width=75%}
+
+With the proper driver installed, you can click on `Update Ports` which will then populate Steps 2 and 3 with values for available `COM` ports and default `Baud Rate`. You may have multiple `COM` ports available, so ensure that the one selected refers to your Silicon Labs driver port.
+
+![*Clicking `Open` will open the USB connection between the Node and your computer.* ](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient3.png){#id .class width=75%}
+
+Once you have selected the appropriate port and baud rate, click the `Open` button in Step 4. 
+
+![*Once the port is open, the button under `Step 4` will show `Close`. Clicking on it again will then close the port and disconnect the node from the computer.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient4.png){#id .class width=75%}
+
+This opens the port; once the port is open, the button will change to `Close`. Clicking on `Close` will close your connection- so leave it open and click on the `Local Console` button on the left sidebar of the window (upper left corner, under the `USB` button).
+
+![*With the port now open, you can click on `Local Console` to interact with your node in real-time.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient5.png){#id .class width=75%}
+
+Once in the `Local Console` section you'll see three windows: `Device Info`, `Tag Detections` and `Settings Summary`. Each of these windows have associated menus and buttons. 
+
+![*Device info showing dropdown options*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient6.png){#id .class width=75%}
+
+
+#### Device Info Window
+
+
+Device Info provides several pieces of information by default:
+
+* `BatteryVolts` - current battery voltage
+* `SolarCurrent` - instantaneous information on solar current being pushed into the battery
+* `SolarVolts` - instantaneous information on solar voltage being received via the solar panel
+* `TemperatureCelcius` - the instantaneous temperature of the node board
+
+At the bottom of the `Device Info` window there is a dropdown menu. Select any of the dropdown menu items and click the `Submit` button to issue a command to the node. Below are the menu items and their respective actions.
+
+* `Serial Number` - causes the  `Device Info` window to display the `DeviceID` and `Firmware` version.
+
+* `GPS Fix` - causes the Node to take a GPS fix, and display the `Latitude` and `Longitude` in the `Device Info` window.
+
+* `Health Report` - causes the Node to transmit a health report. If a SensorStation is within range, the SensorStation should detect the health report. Note that there is no acknowledgment of success within `Node Client`.
+
+* `Relay Beeps` - causes the Node to transmit whatever beep data is currently in the buffer. If a SensorStation is within range, the SensorStation should detect the beep records. Note that there is no acknowledgment of success within `Node Client`.
+
+* `Dynamics` - *this has no current application and is legacy option from a specific modified node that is not currently in production.*
+
+![*Here `GPS Fix` is selected from the dropdown, and the `Submit` button has been pressed, causing the Node to take a GPS fix and display the results in the `Device Info` window.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient7.png){#id .class width=75%}
+
+
+### Tag Detections Window
+If there are any tags within range of the node, you will see detection data populating in the `Tag Detections` window. These data include:
+
+* `Detection Time (Local)` - a date/time stamp in your local timezone.
+* `Tag Id` - the 8-digit tag ID from either a **LifeTag**, **PowerTag** or **HybridTag**
+* `Signal (dBm)` - the signal strength of the tag detection, measured in dBm, or *the power level measured in decibels relative to one milliwatt.*
+
+While the `Tag Detections` window is pretty self explanatory, it also contains the button for updating the node firmware. If you have downloaded a more recent firmware version, you can load that firmware onto your node by pressing the `Firmware` button which will then open your file explorer. Updating the firmware is covered more extensively in the `Updating Your Node Firmware` section.
+
+
+![*Pressing the `Refresh` button under the `Settings Summary` window causes the available settings to populate and gives you the opportunity to edit setting values.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient8.png){#id .class width=75%}
+
+
+### Settings Summary Window
+
+This window will initially be empty until you press the `Refresh` button. Once pressed, the available settings will populate the window, each with a gear button in the rightmost column.
+
+To modify a setting's parameter, click on the associated `gear icon` which will open a popup window specific to that setting. 
+
+![*Clicking on the gear icon in the rightmost cell of each setting row opens the parameterization window for that setting.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient9.png){#id .class width=75%}
+
+Here we have selected the `RadioTxPower` setting, which allows us to increase the power output of our onboard 434Mhz radio, thereby increasing the reach of our node to a nearby SensorStation. These parameters haven't been fully documented, so please consult with support@celltracktech.com before modifying settings unless otherwise specified in this guide. For instance, **`RadioTxPower` can be modified up to 10dBm, but should not be set greater than that.** To modify a value down below zero, use the negative value, for example, a value of **-10** for `RadioTxPower` would reduce the power output by -10dBm.
+
+
+![*Here you can modify the value, click `Send`, close the popup window, and then click `Save` and then `Refresh` at the bottom of the Settings Summary window.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient10.png){#id .class width=75%}
+
+To save these settings you first must click the `Send` button on the popup dialogue, and then click the `Save` button at the bottom of `Settings Summary`. To confirm that the settings have been set and saved, click the `Refresh` button at the bottom of the`Settings Summary` window.
+
+![*If done correctly, you should see the setting value updated in the `Settings Summary` table.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient11.png){#id .class width=75%}
+
+Above you can see that the `RadioTxPower` has been successfully updated to +10dBm.
+
+
+![*The `Directory` window in the `File Transfer` section.* ](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient12.png){#id .class width=75%}
+
+### File Transfer
+
+Moving back to the left sidebar you see another button under `Local Console`; this one for `File Transfer`. Clicking on this button brings you to the `Directory` window.
+
+Initially the window is empty, but clicking on `Update` in the upper right corner of the window will cause the console to list out all of the files on the SD card.
+
+These are typically `.csv` files with either `beep` data, or `gps` data. From here you can either download or delete these files via the console. 
+
+***Note:*** **Since the USB transfer rate is very slow, it is recommended that you don't use this console for downloading `beep` files, rather you can remove the SD card and use a 3rd party SD card reader to transfer these files to your computer, if desired.**
+
+
+![*Once you're done working with your node, return to the USB section and click `Close` under Step 4. Now it is safe to disconnect your Node.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient13.png){#id .class width=75%}
+
 
 ## some other things
+
+* Need to add photos of nodes set up in the field
+* What else do we need to include?
+* How about a quickstart guide?
