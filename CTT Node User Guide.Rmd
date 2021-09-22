@@ -1,14 +1,14 @@
 ---
 title: "CTT Node User Guide"
 author: "support@celltracktech.com"
-date: "9/13/2021"
+date: "9/22/2021"
 output:
-  html_document:
-    toc: yes
-    number_sections: yes
   pdf_document:
     toc: yes
     fig_caption: true
+  html_document:
+    toc: yes
+    number_sections: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-## Introduction
+# Introduction
 
 The CTT Node™ is a mini-base-station that allows you to localize LifeTags™, PowerTags™ and HybridTags™ with a high degree of accuracy. If deployed in a grid fashion, and employing post-hoc analysis, the CTT Nodes can operate as pseudo-reverse-GPS, providing near GPS accuracy in optimal conditions. With the addition of calibration data, Nodes can provide presence/absence and distance estimate of instantaneous detections from supported tags.
 
@@ -24,12 +24,55 @@ The CTT Node uploads received tag detection data to the standard CTT SensorStati
 
 Each CTT Node has a detectable range of about 250-300 meters, and is able to relay data to a CTT Base Station as far away as several kilometers.
 
+## Using This Guide
 
-## Node Setup
+Use the `Quick Start Guide` in the next section to get you up and running with your `CTT Nodes`. For more detailed information you can proceed to the sections below the `Quick Start Guide`. Please provide any feedback via our `Customer Service Desk` portal [here](https://celltracktech.com/support-customer-service-desk/).
+
+# Node Quick Start Guide
+
+What you will need:
+
+* At least one `CTT Node`
+* An operational `SensorStation` and a way to connect to it, either via ethernet or wirelessly
+* *(optional)* A test tag (`LifeTag`, `PowerTag` or `HybridTag`)
+
+1. Unpack your nodes.
+
+2. Place nodes outside in a sunny location and allow to fully charge for several days (more important if you will be testing with the magnet off)
+
+2. Bring nodes within range of an existing SensorStation (*note: if not using antennas on your SensorStation, make sure nodes are within a meter of the station*).
+
+3. Connect your computer to your SensorStation so you can view the web interface (*for SensorStation operation consult the online install guide [here](https://cellular-tracking-technologies.github.io/ctt_documentation/v2-SensorStation-User-Guide.html#connecting-to-your-sensorstation-web-interface))*.
+
+4. Ensure your SensorStation has at least one radio tuned to detect nodes (*if this isn't clear, consult the SensorStation online install guide*).
+
+5. With the magnets still on, a node will transmit health information once every five minutes and can do so for over two years without recharging the battery. With the SensorStation web interface open, you should begin to see nodes checking in and showing up in the Nodes list at the top of the SensorStation webpage like in the image below. A properly functioning node will send accurate GPS location and GPS time. Note time is always in UTC. If GPS data is empty, or GPS time is incorrect, either the node is in a place where it cannot get a GPS fix, or the GPS needs to be forced. See `Advanced Configuration via Node Client` below for how to force a GPS fix.
+
+![*Node display on SensorStation web interface.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodesOnSensorStation.png){#id .class width=75%}
+
+6. If you have a test tag, you can place it near the nodes and remove the magnet on the node case. Removing the magnet activates the node radio to listen for tags. You should begin to see tag data flowing in on SensorStation web interface under the radio(s) you programmed to listen for nodes.
+
+![*Here `Radio 1` is set to detect `Nodes`, while `Radio 2` is set to detect `Tags`. Looking at the data displayed you can see that `Radio 1` data includes a `Node ID` and the `RSSI` is the signal strength of the `Tag` hitting the `Node`, while `Radio 2` data is simply the tags being directely detected by the antenna on `Radio 2`, and therefore the `RSSI` refers to the signal strength of the `Tag` hitting the antenna on `Radio 2.`*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeDataOnSensorStation.png){#id .class width=75%}
+
+7. If you are deploying your `Nodes`, go ahead and remove the magnets and store them somewhere safe. You will want to reuse them if you ever want to shut down a node for storage.
+
+8. Attach your node to an appropriately sized support structure. We recommend 1/2" - 3/4" diameter EMT conduit, but there is no rule as to what can or can't be used. We also recommend placing your nodes at least 2 meters off of the ground.
+
+9. Place your nodes in the field within 1-1.5km of your SensorStation.
+
+10. Once set up, return to your SensorStation and ensure that all nodes are checking in. Ultimately you want your nodes to be received 100% of the time, so looking at your data after a few days will help diagnose any nodes 'on the fringe'.
+
+11. For any nodes not being detected consistently, you should consider one of the following possible solutions:
+* Move 'fringe' nodes closer to the SensorStation
+* Boost the node power by modifying the node's settings using the `Node Client` tool (see below)
+* Add additional antennas pointed at the problem node(s)
+* Add additional SensorStations to fill coverage gaps
+
+# Initial Node Setup
  
-Because of shipping laws, your node arrives with a partially-charged Lithium battery and should be placed in the sun for several days prior to deployment to get its battery up to full charge. When your node arrives you will notice a few things.
+Because of shipping laws, your node arrives with a partially-charged Lithium battery and should be placed in the sun for several days prior to deployment to get its battery up to full charge.
 
-### Unboxing
+## Unboxing
 
 ![*Node packaged for shipping*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeWrapped(1).jpg){#id .class width=50%}
 
@@ -46,25 +89,31 @@ This magnet operates the switch that determines whether your node is searching f
 
 Once you deploy your nodes, be sure to save the magnets for future use.
 
-## Attaching Your Node
+# Attaching Your Node
 
 Each node comes with the necessary hardware for mounting it to various materials. We typically recommend 3/4" or 1/2" EMT conduit, but you can mount it to practically anything. We recommend mounting your node either horizontally, with the solar panel facing the sky, or vertically, with the solar panel facing south, for optimal recharging performance. 
 
-### A note about solar recharging
+![*Node mounted horizontally at Bernheim Forest, Kentucky*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeBernheim.jpg){#id .class width=50%}
+
+![*Node mounted upright and facing south, at The Nature Conservancy's South Cape May Meadows Preserve, Cape May, NJ*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeMeadows.jpg){#id .class width=50%}
+
+## A note about solar recharging
 
 Note that mounting your node in shade, or canopy cover, will reduce recharge times and may require you to periodically move the node to a sunny location for recharging, or subsidize the node with an additional battery back (each node comes with a USB port which can be used for attaching an additional power supply).
 
-## SensorStation Pairing
+# SensorStation Pairing
 
 There is no need to pair a node to a SensorStation. Simply placing the node within the range of a SensorStation antenna will cause the SensorStation to detect and process node data. 
 
-## Operation Tips
+# Operation Tips
 
 As a rule of thumb we recommend placing all nodes within 1-1.5km of a SensorStation. It is possible to increase the distance depending on your choice of antennas, but this distance has proved effective for many installations. Topography, density of vegetation, and other factors may impact the detection distance. 
 
-Since each node transmits health information every five minutes, one good benchmark when testing you nodes is to ensure that your SensorStation is detecting each node at least every five minutes. If not, you will likely be losing some data which will only be recoverable by opening the node, removing and reading the internal SD card. Put another way, any data not received by the SensorStation will not be sent later, but resides only on the internal node SD card.
+Since each node transmits health information every five minutes, one good benchmark when testing you nodes is to ensure that your SensorStation is detecting each node at least every five minutes. If not, you will likely be losing some data which will only be recoverable by opening the node, removing and reading the internal SD card. Put another way, any data not received by the SensorStation will not be sent later, but resides only on the internal node SD card. **Using a node without a SensorStation is not recommended and outside of the manufacturer specs.**
 
-### Connecting to the external USB port
+## Connecting to the external USB port
+
+Each shipment of nodes comes with a 4-pin to USB-A adapter. This allows you to access the USB 
 
 ![*Node with USB cover installed*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUSBCover(5).jpg){#id .class width=50%}
 
@@ -73,7 +122,7 @@ Since each node transmits health information every five minutes, one good benchm
 ![*Node with 4-pin to USB-A adapter inserted* ](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUSBAdapterIn(8).jpg){#id .class width=50%}
 
 
-### Opening your Node
+## Opening your Node
 
 If you need to access the internal SD card, or troubleshoot a node, you can access it by removing the single screw on the bottom of the case, and separating the top of the node from the bottom with a little squeeze and pull procedure. 
 
@@ -92,15 +141,30 @@ On the board you will notice several buttons. Pressing them has the correspondin
 
 The Micro USB port is also apparent in the lower right side of the board, and labled `USB`. You can use this port to connect your node directly to a computer.
 
-## Test Transmit
+# Advanced Configuration via Node Client
 
-## Advanced Configuration via Node Client
+You can use a development program we've created called `Node Client` to troubleshoot your node and modify several parameters. The latest version of `Node Client` can be downloaded from our support Slack workspace under the `#ctt_nodes` channel. If you don't already have access, please email us at support@celltracktech.com. You can connect your node to a computer using either the provided 4-pin -> USB adapter and the port on the underside of the node, or the micro-usb port directly on the board (after opening the node).
 
-You can use a development program we've created called `Node Client` to troubleshoot your node and modify several parameters. The latest version of `Node Client` can be downloaded from our support Slack workspace. If you don't already have access, please email us at support@celltracktech.com. You can connect your node to a computer using either the provided 4-pin -> USB adapter and the port on the underside of the node, or the micro-usb port directly on the board (after opening the node).
+## Opening Node Client
+
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/nodeClientFolderSelect.png){#id .class width=75%}
+
+After downloading the `node-client_0_2_0_0.zip` folder to your computer, expand it in your location of choice and open the now-uncompressed folder.
+
+
+![*Inside the `node-client` folder you'll find two folders, `Assets` and `bin`*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/binSelect.png){#id .class width=75%}
+
+![*Inside the `bin` folder you'll see a folder titled `Debug`*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/DebugSelect.png){#id .class width=75%}
+
+You will see two folders. Open the one labeled `bin`, and then the one labeled `Debug`.
+
+![*Contents of the `Debug` folder showing the `node-client` application*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClientSelect.png){#id .class width=75%}
+
+Within `Debug` you will find the application file `node-client`. Double-click `node-client` to run the program.
 
 ![*Opening screen of `Node Client`*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient1.png){#id .class width=75%}
 
-Upon opening Node Client you will see the main screen with Steps 1 - 4 outlined. The window to the right is actually a screenshot of Device Manager - not Device Manager itself (hence "Figure 1"), but gives you an idea of what your Device Manager should look like if you have the proper dirvers installed. If not, the blue link that says "Driver" can be clicked to take you to the download page. You must have the Silicon Labs driver installed to run Node Clien. 
+Upon opening Node Client you will see the main screen with Steps 1 - 4 outlined. The window to the right is actually a screenshot of Device Manager - not Device Manager itself (hence "Figure 1"), but gives you an idea of what your Device Manager should look like if you have the proper drivers installed. If not, the blue link that says "Driver" can be clicked to take you to the `Silicon Labs` website. Click on the `DOWNLOADS` tab to access the appropriate driver for your operating system. **After installing the driver you must restart your computer. You must have the Silicon Labs driver installed to run Node Client.**
 
 ![*Clicking on `Update Ports` should populate both steps 2 and 3 values. If not you may need to install the proper driver.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient2.png){#id .class width=75%}
 
@@ -121,7 +185,7 @@ Once in the `Local Console` section you'll see three windows: `Device Info`, `Ta
 ![*Device info showing dropdown options*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient6.png){#id .class width=75%}
 
 
-#### Device Info Window
+## Device Info Window
 
 
 Device Info provides several pieces of information by default:
@@ -146,7 +210,7 @@ At the bottom of the `Device Info` window there is a dropdown menu. Select any o
 ![*Here `GPS Fix` is selected from the dropdown, and the `Submit` button has been pressed, causing the Node to take a GPS fix and display the results in the `Device Info` window.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient7.png){#id .class width=75%}
 
 
-### Tag Detections Window
+## Tag Detections Window
 If there are any tags within range of the node, you will see detection data populating in the `Tag Detections` window. These data include:
 
 * `Detection Time (Local)` - a date/time stamp in your local timezone.
@@ -159,7 +223,7 @@ While the `Tag Detections` window is pretty self explanatory, it also contains t
 ![*Pressing the `Refresh` button under the `Settings Summary` window causes the available settings to populate and gives you the opportunity to edit setting values.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient8.png){#id .class width=75%}
 
 
-### Settings Summary Window
+## Settings Summary Window
 
 This window will initially be empty until you press the `Refresh` button. Once pressed, the available settings will populate the window, each with a gear button in the rightmost column.
 
@@ -181,7 +245,7 @@ Above you can see that the `RadioTxPower` has been successfully updated to +10dB
 
 ![*The `Directory` window in the `File Transfer` section.* ](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient12.png){#id .class width=75%}
 
-### File Transfer
+## File Transfer
 
 Moving back to the left sidebar you see another button under `Local Console`; this one for `File Transfer`. Clicking on this button brings you to the `Directory` window.
 
@@ -194,9 +258,6 @@ These are typically `.csv` files with either `beep` data, or `gps` data. From he
 
 ![*Once you're done working with your node, return to the USB section and click `Close` under Step 4. Now it is safe to disconnect your Node.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient13.png){#id .class width=75%}
 
+# Final Thoughts
 
-## some other things
-
-* Need to add photos of nodes set up in the field
-* What else do we need to include?
-* How about a quickstart guide?
+This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/support-customer-service-desk/) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2021.
