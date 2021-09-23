@@ -218,7 +218,33 @@ summary {
 <li><a href="#settings-view"><span class="toc-section-number">16</span> Settings View</a></li>
 <li><a href="#importance-of-shutdown"><span class="toc-section-number">17</span> Importance of Shutdown</a></li>
 <li><a href="#localization-tips"><span class="toc-section-number">18</span> Localization Tips</a></li>
-<li><a href="#troubleshooting-guide"><span class="toc-section-number">19</span> Troubleshooting Guide</a></li>
+<li><a href="#release-notes"><span class="toc-section-number">19</span> Release Notes</a>
+<ul>
+<li><a href="#version-3.1.2-current-release-9222021"><span class="toc-section-number">19.1</span> Version 3.1.2 – Current release (9/22/2021)</a>
+<ul>
+<li><a href="#new-features"><span class="toc-section-number">19.1.1</span> New Features</a></li>
+<li><a href="#fixesimprovements"><span class="toc-section-number">19.1.2</span> Fixes/Improvements</a></li>
+<li><a href="#known-issues"><span class="toc-section-number">19.1.3</span> Known Issues</a></li>
+</ul></li>
+<li><a href="#version-3.1"><span class="toc-section-number">19.2</span> Version 3.1 –</a>
+<ul>
+<li><a href="#new-features-1"><span class="toc-section-number">19.2.1</span> New Features</a></li>
+<li><a href="#fixesimprovements-1"><span class="toc-section-number">19.2.2</span> Fixes/Improvements</a></li>
+</ul></li>
+<li><a href="#version-3.0.1"><span class="toc-section-number">19.3</span> Version 3.0.1</a>
+<ul>
+<li><a href="#new-features-2"><span class="toc-section-number">19.3.1</span> New Features</a></li>
+<li><a href="#fixesimprovements-2"><span class="toc-section-number">19.3.2</span> Fixes/Improvements</a></li>
+<li><a href="#known-issues-1"><span class="toc-section-number">19.3.3</span> Known Issues</a></li>
+</ul></li>
+<li><a href="#version-3.0"><span class="toc-section-number">19.4</span> Version 3.0</a>
+<ul>
+<li><a href="#new-features-3"><span class="toc-section-number">19.4.1</span> New Features</a></li>
+<li><a href="#known-issues-2"><span class="toc-section-number">19.4.2</span> Known Issues</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#troubleshooting-guide"><span class="toc-section-number">20</span> Troubleshooting Guide</a></li>
+<li><a href="#final-thoughts"><span class="toc-section-number">21</span> Final Thoughts</a></li>
 </ul>
 </div>
 
@@ -465,8 +491,141 @@ summary {
 <li>Keep a look out for reflections and multipath! Much like visible light, signals can bounce off bodies of water, buildings, and other smooth surfaces.</li>
 </ul>
 </div>
-<div id="troubleshooting-guide" class="section level1" number="19">
-<h1 number="19"><span class="header-section-number">19</span> Troubleshooting Guide</h1>
+<div id="release-notes" class="section level1" number="19">
+<h1 number="19"><span class="header-section-number">19</span> Release Notes</h1>
+<div id="version-3.1.2-current-release-9222021" class="section level2" number="19.1">
+<h2 number="19.1"><span class="header-section-number">19.1</span> Version 3.1.2 – Current release (9/22/2021)</h2>
+<div id="new-features" class="section level3" number="19.1.1">
+<h3 number="19.1.1"><span class="header-section-number">19.1.1</span> New Features</h3>
+<ul>
+<li>Checkbox shown next to verified tags (CRC tags)</li>
+<li>Configurable sounds, settings saved to each user</li>
+<li>New software update tool</li>
+<li>Can use multiple WiFi networks at the same time</li>
+</ul>
+</div>
+<div id="fixesimprovements" class="section level3" number="19.1.2">
+<h3 number="19.1.2"><span class="header-section-number">19.1.2</span> Fixes/Improvements</h3>
+<ul>
+<li>Fixed HTTP to HTTPS redirect</li>
+<li>Improved UI handling in settings menu</li>
+<li>Fixed bug scanning WiFi networks under certain circumstances</li>
+<li>(Hopefully) fixed websocket bug where only one beep was sent before the beep emitter failed, improving stability</li>
+<li>Switched to new CRC library</li>
+<li>System auto-configure scripts now appearing in rc.local to aide in build process</li>
+</ul>
+</div>
+<div id="known-issues" class="section level3" number="19.1.3">
+<h3 number="19.1.3"><span class="header-section-number">19.1.3</span> Known Issues</h3>
+<ul>
+<li>WiFi can become a little slow if AP channel does not match locator channel (this is handled after reboot, but multi AP networks can still be problematic)</li>
+<li>iPhone complains about WiFi network not having internet access sometimes</li>
+<li>WiFi config has to be “reset” in order to get unique SSID</li>
+</ul>
+</div>
+</div>
+<div id="version-3.1" class="section level2" number="19.2">
+<h2 number="19.2"><span class="header-section-number">19.2</span> Version 3.1 –</h2>
+<div id="new-features-1" class="section level3" number="19.2.1">
+<h3 number="19.2.1"><span class="header-section-number">19.2.1</span> New Features</h3>
+<ul>
+<li>GPS positioning now back in tag log (will use most recent GPS from any user if multiple users connected)</li>
+<li>Ability to download GPS position log</li>
+<li>GPS log supports multiple users, each track from unique ID</li>
+<li>Each user has a unique ID that is available under “about”</li>
+</ul>
+</div>
+<div id="fixesimprovements-1" class="section level3" number="19.2.2">
+<h3 number="19.2.2"><span class="header-section-number">19.2.2</span> Fixes/Improvements</h3>
+<ul>
+<li>Operating system upgraded to latest release</li>
+<li>Locator software now running as service</li>
+<li>Refreshed SSL certificates</li>
+<li>Migrated to new hotspot software</li>
+<li>Removed operating system disk usage from disk space free graph</li>
+<li>Removed log file start header</li>
+</ul>
+</div>
+</div>
+<div id="version-3.0.1" class="section level2" number="19.3">
+<h2 number="19.3"><span class="header-section-number">19.3</span> Version 3.0.1</h2>
+<div id="new-features-2" class="section level3" number="19.3.1">
+<h3 number="19.3.1"><span class="header-section-number">19.3.1</span> New Features</h3>
+<ul>
+<li>Locator power light now appears immediately when Locator is switched on</li>
+<li>Power switch off feature for safer handling of SD card</li>
+</ul>
+</div>
+<div id="fixesimprovements-2" class="section level3" number="19.3.2">
+<h3 number="19.3.2"><span class="header-section-number">19.3.2</span> Fixes/Improvements</h3>
+<ul>
+<li>Software version correction (properly displays 3.0.1)</li>
+<li>WiFi now running as a service, preventing AP startup failures</li>
+<li>Removed errant Raspberry Pi Desktop from spawning</li>
+<li>Shutting down WiFi stops dnsmasq and hostapd services</li>
+<li>Faster boot times</li>
+</ul>
+</div>
+<div id="known-issues-1" class="section level3" number="19.3.3">
+<h3 number="19.3.3"><span class="header-section-number">19.3.3</span> Known Issues</h3>
+<ul>
+<li>Sometimes clicking tag from “favorites” does not update the tag id in the modal</li>
+<li>On rare occasion, a favorite does not stay persistent</li>
+<li>On rare occasion, websocket stays connected, but tag emitter seems to fail</li>
+<li>Tag ID signal threshold fixed to -39 dBm or stronger</li>
+<li>ES200 data stored in raw form (no local decoding)</li>
+<li>I2C scan doesn’t fit on some smaller displays</li>
+<li>LED testing function not included</li>
+<li>Browser based heading and accelerometer functions removed</li>
+<li>No help documents and videos created</li>
+<li>Scrolling lacks rubberbanding effect</li>
+<li>Attenuator removed due to javascript/css issue</li>
+</ul>
+</div>
+</div>
+<div id="version-3.0" class="section level2" number="19.4">
+<h2 number="19.4"><span class="header-section-number">19.4</span> Version 3.0</h2>
+<div id="new-features-3" class="section level3" number="19.4.1">
+<h3 number="19.4.1"><span class="header-section-number">19.4.1</span> New Features</h3>
+<ul>
+<li>100% new single page front end</li>
+<li>Websocket stability enhancements</li>
+<li>Device preferences specific to device (using localStorage)</li>
+<li>New “home”, “identification”, “favorites” and tag search functions</li>
+<li>Tags are counted on a per tag basis and total tags seen</li>
+<li>New reference tag diagnostics screen</li>
+<li>Queries radio firmware version (1.0.0 contains ES200/checksum tag support)</li>
+<li>WiFi Hotspot disable feature enters client mode</li>
+<li>Real time data collection statistics in settings screen</li>
+<li>Faster load times</li>
+<li>Websocket connection indicator</li>
+<li>Signal based volume</li>
+<li>Ping sound can be enabled/disabled</li>
+<li>Future help section</li>
+<li>New Ratchet framework</li>
+</ul>
+</div>
+<div id="known-issues-2" class="section level3" number="19.4.2">
+<h3 number="19.4.2"><span class="header-section-number">19.4.2</span> Known Issues</h3>
+<ul>
+<li>Sometimes clicking tag from “favorites” does not update the tag id in the modal</li>
+<li>On rare occasion, a favorite does not stay persistent</li>
+<li>On rare occasion, websocket stays connected, but tag emitter seems to fail</li>
+<li>Tag ID signal threshold fixed to -39 dBm or stronger</li>
+<li>Rose graph removed</li>
+<li>ES200 data stored in raw form (no local decoding)</li>
+<li>I2C scan doesn’t fit on some smaller displays</li>
+<li>LED testing function not included</li>
+<li>Browser based heading and accelerometer functions removed</li>
+<li>Software version misleadingly indicates 2.5</li>
+<li>Scrolling lacks rubberbanding effect</li>
+<li>Attenuator removed due to javascript/css issue</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="troubleshooting-guide" class="section level1" number="20">
+<h1 number="20"><span class="header-section-number">20</span> Troubleshooting Guide</h1>
 <table>
 <colgroup>
 <col width="35%" />
@@ -503,6 +662,10 @@ summary {
 </tr>
 </tbody>
 </table>
+</div>
+<div id="final-thoughts" class="section level1" number="21">
+<h1 number="21"><span class="header-section-number">21</span> Final Thoughts</h1>
+<p>This User Guide is a living document. Your experiences and input are greatly appreciated so please don’t hesitate to reach out to us regarding what you’d like to see included here. You can submit your suggestions and any errors to our <code>Customer Service Desk</code> <a href="https://celltracktech.com/support-customer-service-desk/">here</a> and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2021.</p>
 </div>
 
 
