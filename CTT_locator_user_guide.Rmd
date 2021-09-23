@@ -1,7 +1,7 @@
 ---
 title: "CTT Locator User Manual"
 author: "support@celltracktech.com"
-date: "3/12/2021"
+date: "9/23/2021"
 output:
   pdf_document:
     toc: yes
@@ -238,6 +238,115 @@ Before going out in the field, it helps to practice localizing a tag. Here are a
 * Keep a look out for reflections and multipath! Much like visible light, signals can bounce off bodies of water, buildings, and other smooth surfaces. 
 
 
+# Release Notes
+
+## Version 3.1.2 --  Current release (9/22/2021)
+
+### New Features
+
+* Checkbox shown next to verified tags (CRC tags)
+* Configurable sounds, settings saved to each user
+* New software update tool
+* Can use multiple WiFi networks at the same time
+
+### Fixes/Improvements
+
+* Fixed HTTP to HTTPS redirect
+* Improved UI handling in settings menu
+* Fixed bug scanning WiFi networks under certain circumstances
+* (Hopefully) fixed websocket bug where only one beep was sent before the beep emitter failed, improving stability
+* Switched to new CRC library 
+* System auto-configure scripts now appearing in rc.local to aide in build process
+
+### Known Issues
+
+* WiFi can become a little slow if AP channel does not match locator channel (this is handled after reboot, but multi AP networks can still be problematic)
+* iPhone complains about WiFi network not having internet access sometimes
+* WiFi config has to be “reset” in order to get unique SSID 
+
+
+## Version 3.1 --
+
+### New Features
+
+* GPS positioning now back in tag log (will use most recent GPS from any user if multiple users connected)
+* Ability to download GPS position log 
+* GPS log supports multiple users, each track from unique ID 
+* Each user has a unique ID that is available under “about”
+
+### Fixes/Improvements
+
+* Operating system upgraded to latest release
+* Locator software now running as service 
+* Refreshed SSL certificates
+* Migrated to new hotspot software
+* Removed operating system disk usage from disk space free graph
+* Removed log file start header 
+
+## Version 3.0.1 
+
+### New Features
+
+* Locator power light now appears immediately when Locator is switched on
+* Power switch off feature for safer handling of SD card
+
+### Fixes/Improvements 
+
+* Software version correction (properly displays 3.0.1)
+* WiFi now running as a service, preventing AP startup failures
+* Removed errant Raspberry Pi Desktop from spawning
+* Shutting down WiFi stops dnsmasq and hostapd services
+* Faster boot times
+
+### Known Issues
+
+* Sometimes clicking tag from “favorites” does not update the tag id in the modal 
+* On rare occasion, a favorite does not stay persistent
+* On rare occasion, websocket stays connected, but tag emitter seems to fail
+* Tag ID signal threshold fixed to -39 dBm or stronger
+* ES200 data stored in raw form (no local decoding)
+* I2C scan doesn’t fit on some smaller displays
+* LED testing function not included
+* Browser based heading and accelerometer functions removed
+* No help documents and videos created
+* Scrolling lacks rubberbanding effect
+* Attenuator removed due to javascript/css issue
+
+## Version 3.0 
+
+### New Features
+
+* 100% new single page front end
+* Websocket stability enhancements
+* Device preferences specific to device (using localStorage)
+* New “home”, “identification”, “favorites” and tag search functions
+* Tags are counted on a per tag basis and total tags seen
+* New reference tag diagnostics screen
+* Queries radio firmware version (1.0.0 contains ES200/checksum tag support)
+* WiFi Hotspot disable feature enters client mode
+* Real time data collection statistics in settings screen
+* Faster load times
+* Websocket connection indicator
+* Signal based volume
+* Ping sound can be enabled/disabled
+* Future help section
+* New Ratchet framework
+
+### Known Issues
+
+* Sometimes clicking tag from “favorites” does not update the tag id in the modal 
+* On rare occasion, a favorite does not stay persistent
+* On rare occasion, websocket stays connected, but tag emitter seems to fail
+* Tag ID signal threshold fixed to -39 dBm or stronger
+* Rose graph removed
+* ES200 data stored in raw form (no local decoding)
+* I2C scan doesn’t fit on some smaller displays
+* LED testing function not included
+* Browser based heading and accelerometer functions removed
+* Software version misleadingly indicates 2.5
+* Scrolling lacks rubberbanding effect
+* Attenuator removed due to javascript/css issue
+
 # Troubleshooting Guide
 
 
@@ -248,7 +357,9 @@ Before going out in the field, it helps to practice localizing a tag. Here are a
 |Not detecting tags, some tags missing|Antenna cable not connected<br><br>Antenna cable damaged<br><br>Tags not transmitting|Connect Antenna<br><br>Replace antenna cable<br><br>Read instructions for LifeTag and PowerTag usage|
 |Can’t access internet|LifeTag base station’s hotspot overrides phone internet connection|Disconnect from WiFi<br><br>Android users should re-enable their mobile data service|
 
+# Final Thoughts
 
+This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/support-customer-service-desk/) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2021.
 
 
 
