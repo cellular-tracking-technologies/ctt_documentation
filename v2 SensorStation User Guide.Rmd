@@ -1,7 +1,7 @@
 ---
 title: "Installation Guide for the CTT SensorStation and CTT Nodes"
 author: "support@celltracktech.com"
-date: "03/12/2021"
+date: "9/23/2021"
 output:
   pdf_document:
     toc: yes
@@ -615,6 +615,12 @@ Reboots the system.
 # Known Bugs
 
 1. SensorStations without a modem installed will not check in to the CTT system.
+2. Download via USB does not include SensorGnome files, nor does it include any data previously uploaded remotely. To get these files manually, use the direct-connect method via USB->Ethernet and access via the web interface.
+
+***
+# Final Thoughts
+
+This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/support-customer-service-desk/) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2021.
 
 ***
 # Appendix I: Leveraging your CTT Infrastructure with Motus {#appendix_1}
