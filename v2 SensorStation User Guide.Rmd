@@ -46,33 +46,37 @@ Treat your SensorStation board like you would any other motherboard, Arduino or 
 
 # Setting up your CTT IoW System
 
-CTT’s Internet of Wildlife System (IoW) is a complete radio telemetry system that consists of transmitters (radio tags), and receivers. Currently CTT produces four radio transmitters: the LifeTag^TM^, PowerTag^TM^, ES-200 and ES-150. 
+CTT’s Internet of Wildlife System (IoW) is a complete radio telemetry system that consists of transmitters (radio tags), and receivers. Currently CTT produces five radio transmitters: the LifeTag^TM^, PowerTag^TM^, HybriTag^TM^, ES-200 and ES-150. 
 
-### LifeTag
+## LifeTag
 
-The **CTT LifeTag** is 100% solar powered, and therefore has no battery. This allows the tag to persist for many years, beeping out its unique digital ID whenever it has sunlight. For species active during the day, and for small animals for which multi-season or multi-year data are required, LifeTags are the obvious choice.
+The **CTT LifeTag** is 100% solar powered, and therefore has no battery. This allows the tag to persist for many years, beeping out its unique digital ID whenever it has sunlight. For species active during the day, and for small animals for which multi-season or multi-year data are required, LifeTags are the obvious choice. The `LifeTag` coding includes a CRC value that validates detections on all `V2 SensorStations`, reducing the chance of any false detections by over 99%. 
 
-### PowerTag
+## PowerTag
 
-The **CTT PowerTag** is battery powered which means it can beep out its digitally coded ID 24-hours a day. The life span of a PowerTag is defined by the beep rate (# of beeps per minute) and battery size. For species where nighttime data is important, PowerTags are the perfect fit.
+The **CTT PowerTag** is battery powered which means it can beep out its digitally coded ID 24-hours a day. The life span of a `PowerTag` is defined by the beep rate (# of beeps per minute) and battery size. For nocturnal species, `PowerTags` are the perfect fit.
 
-### ES-200 and ES-150
+## HybridTag
 
-The **ES-200** and **ES-150** are GPS logger tags that can also send data over the 434MHz frequency, and therefore can send archived telemetry data to the SensorStation. Since they communicate on the same frequency as LifeTags and PowerTags, no special radio configuration is needed. The difference between the two is that the ES-150 also has an Argos radio to send data via the Argos satellite network.
+The **CTT HybridTag** takes the best features of our `LifeTag` and `PowerTag` and combines them into the smallest fully rechargeable radio transmitter in the world. With as little as 30-minutes of solar exposure over three days, the HybridTag will maintain its battery charge indefinitely. The `HybridTag` can be turned off and on using a small magent place on the underside of the tag. In the absence of any solar exposure, the `HybridTag` battery can power the tag for anywhere from 36 hours to over two weeks (depending on battery size). The `HybridTag` employes the same CRC validation as the `LifeTag` meaning that your detections are over 99% certain.
 
-### CTT SensorStation
+## ES-200 and ES-150
 
-The **CTT SensorStation** collect data directly from tags and can collect data from a series of Nodes to more precisely locate tags within a study site. The SensorStation stores data and, with an optional GSM data plan, can also send those data directly to the CTT Servers. 
+The **ES-200** and **ES-150** are GPS logger tags that can also send data over the 434MHz frequency, and therefore can send archived telemetry data to the `SensorStation`. Since they communicate on the same frequency as the smaller radio tags, no special radio configuration is needed. The difference between the two is that the `ES-150` also has an `Argos` radio to send data via the `Argos` satellite network.
 
-### CTT Node
+## CTT SensorStation
 
-**CTT Nodes** are essentially *mini-base stations*: devices with integrated solar panels, a lithium battery, and an antenna to collect data from **PowerTags** and **LifeTags** and send those data to the **SensorStation**. These data can then be post-processed to localize tags within a grid of nodes over user-defined time steps.
+The **CTT SensorStation** collect data directly from tags and can collect data from a series of `Nodes` to more precisely locate tags within a study site. The `SensorStation` stores data and, with an optional GSM data plan, can also send those data directly to the CTT and Motus servers. 
+
+## CTT Node
+
+**CTT Nodes** are essentially *mini-base stations*: devices with integrated solar panels, a lithium battery, and an antenna to collect data from **PowerTags**, **LifeTags** and **HybridTags**, and send those data to the **SensorStation**. These data can then be post-processed to localize tags within a grid of nodes over user-defined time steps.
 
 ## Understanding Detection Distances
 
-The detection distance **from Node to Tag** varies for various reasons, including terrain, vegetation, and the behavior of the tagged animals. For instance, a bird flying overhead may be picked up over a kilometer away by a node, but one foraging in dense vegetation may only be detected from a few hundred meters. When using nodes for localization it's important to note that the accuracy of locations of animals wearing tags can be as little as less than 5m, but can range widely depending on the density of Nodes. For localizing tag positions, the spacing and placement of nodes must allow for tags to be detected simultaneously by three or more nodes.
+The detection distance **from Node to Tag** varies for various reasons, including terrain, vegetation, and the behavior of the tagged animals. For instance, a bird flying overhead may be picked up over a kilometer away by a node, but one foraging in dense vegetation may only be detected from a few hundred meters. When using nodes for localization it's important to note that the accuracy of locations of animals wearing tags can be as little as 30m, but can range widely depending on the density of Nodes. For localizing tag positions, the spacing and placement of nodes must allow for tags to be detected simultaneously by three or more nodes.
 
-The detection distance from **SensorStation to Node** is also affected by terrain and vegetation, but also antenna height and type (omni-directional vs. directional). **Therefore, while there is no hard and fast rule, a good starting point is to keep your farthest node within 1-1.5km of the SensorStation.** The number of SensorStations needed for each system depends on the size of the study area. For instance, in a 2 KM^2^ plot, a SensorStation placed at the center of the plot could detect nodes across the entire study area, in most cases with only an omni-directional antenna. Because Nodes are dependent on the SensorStation to receive their data and aggregate it for analysis, it is critical to ensure each node is within the detection radius of at least one SensorStation at all times. 
+The detection distance from **SensorStation to Node** is also affected by terrain and vegetation, but also antenna height and type (omni-directional vs. directional). **Therefore, while there is no hard and fast rule, a good starting point is to keep your farthest node within 1-1.5km of the SensorStation.** The number of SensorStations needed for each system depends on the size of the study area. For instance, in a 2 KM^2^ plot, a SensorStation placed at the center of the plot could detect nodes across the entire study area, in most cases with only an omni-directional antenna. Because `Nodes` are dependent on the SensorStation to receive their data and aggregate it for analysis, it is critical to ensure each node is within the detection radius of at least one `SensorStation` at all times. 
 
 The detection distance from **SensorStation to Tag** is affected by the same factors as SensorStation to Node, but because many tags are on birds, bats and insects, the relationship between the two objects can change drastically over very short time steps. With line-of-sight, a tag on a bird has been shown to be detectable for **dozens of kilometers** by a SensorStation. On the other hand, birds foraging in dense vegetation may only be detectable by a station within a few kilometers. Therefore, careful consideration of station position with relation to the biological questions being asked is critical for a successful deployment.
 
