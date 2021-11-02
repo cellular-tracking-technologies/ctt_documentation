@@ -28,11 +28,11 @@ This User Guide has been redesigned around the new (ca.2020) Version 2 SensorSta
 # Join us in our **Slack** User Community
 
 We now have a `Slack` workspace dedicated to CTT users. Topics range from station logistics to study design, and from data management to current development of novel analytic tool. Come be a part of the discussion and engage with other users as we push the boundaries of remotely sensed telemetry data! 
-https://join.slack.com/t/celltracktechsupport/shared_invite/zt-m6phfypu-aIV4zznt0Xe3G3oUsC6KRQ
+[Click here](https://celltracktech.com/support-ctt-slack/) to request access to our free and vibrant Slack workspace.
 
 # Congratulations
 
-If you are reading this document, then you most likely have purchased one of our Internet of Wildlife (IoW) components. Whether you're doing localized detailed studies of small mammals or songbirds, or you're setting up SensorStations as part of the global Motus Wildlife Tracking System (motus.org), or you're doing something in-between, we've got you covered, and this document is meant to help you get started quickly and painlessly. If for some reason you get stuck along the way, please don't hesitate to reach out to us directly either via email (support@celltracktech.com) or through our online Help Desk here: https://celltracktech.atlassian.net/servicedesk/customer/portals.
+If you are reading this document, then you most likely have purchased one of our Internet of Wildlife (IoW) components. Whether you're doing localized detailed studies of small mammals or songbirds, or you're setting up SensorStations as part of the global Motus Wildlife Tracking System (motus.org), or you're doing something in-between, we've got you covered, and this document is meant to help you get started quickly and painlessly. If for some reason you get stuck along the way, please don't hesitate to reach out to us directly either via email (support@celltracktech.com) or through our online Help Desk here: [https://celltracktech.com/support/](https://celltracktech.com/support/).
 
 # Participating in the Motus Wildlife Tracking System
 
@@ -105,7 +105,7 @@ The detection distance from **SensorStation to Tag** is affected by the same fac
   * 10’ long  1 ¼’’ EMT conduit
   * 10’ long  1 ½’’ EMT conduit
   * Tripod
-  * SensorStation Clamp
+  * Clamp for attaching SensorStation to conduit
   * Tap screws
   * zip ties
   * coax tape
@@ -156,15 +156,17 @@ A 7/16” socket is used to tighten the clamp bolts. The EMT is typically driven
 
 ## Node Placement
 
-Setting up the CTT Nodes is typically done in a grid in your study site. It is not imperative that they are exactly in a grid, but the closer you can set them up in a grid, the more accurate positioning you will get from the tags. In sites where this is not practical, you can simply set them up where you can, 100-300m apart, and record GPS of the Node locations. Even in a grid setup, it is best practice to take GPS coordinates whether or not they differ from the layout.
+Setting up the CTT Nodes is typically done in a grid in your study site. It is not imperative that they are exactly in a grid, but the closer you can set them up in a grid, the more accurate positioning you will get from the tags. In sites where this is not practical, you can simply set them up where you can, 100-300m apart, and record GPS of the Node locations. Even in a grid setup, it is best practice to take GPS coordinates whether or not they differ from the layout. Nodes should be placed above surrounding vegetation (to ensure solar recharging of the internal battery) or at least 2.5 meters above the ground.
 
 ## SensorStation Placement
 
-The CTT IoW SensorStation may be placed anywhere within range of the farthest node, which is typically 1-1.5km (although higher placement of SensorStation antennas, and clear line-of-sight between stations and nodes, can achieve longer detection distances). See the next section on SensorStation Configuration and Antenna Detail for more details on this. It is recommended to place the SensorStation antennas at least 2 meters high. The higher the antennas, the better range you will get.
+If you are using Nodes, your SensorStation may be placed anywhere within range of the farthest node, which is typically 1-1.5km (although higher placement of SensorStation antennas, and clear line-of-sight between stations and nodes, can achieve longer detection distances). See the next section on SensorStation Configuration and Antenna Detail for more details on this. It is recommended to place the SensorStation antennas at least 10 meters above the ground level. The higher the antennas, the better range you will get.
+
+![*Theoretical setup with SensorStation (diamond) in the middle of two node grids (colored circle markers). All nodes are within 1.5km of the SensorStation (black circle)*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/SensorStationNodeSetup.png){#id .class width=25%}
 
 ## SensorStation Configuration and Antenna Detail
 
-The standard configuration for the CTT SensorStation allows for receiving data on *five 434MHz* radio ports simultaneously. These can be configured to either record signals from LifeTags/PowerTags and ES-200 GPS loggers (hereafter "tags"), or to collect data from CTT Nodes. *Tags and Nodes cannot be picked up on the same channel simultaneously*, and how you configure your station depends depends on your study goals. The number of channels necessary on a SensorStation depends on the number of Nodes, whether you want to detect tags/transmitters and/or Nodes directly with the SensorStation, and the distance the Nodes are from the SensorStation.There is no hard limit to the number of nodes that can be detected by a single SensorStation, but it's best to keep that number around 50 or less. *Distance to the SensorStation will usually be the limiting factor for the number of nodes detectable by a single SensorStation.*
+The standard configuration for the CTT SensorStation allows for receiving data on *five 434MHz* radio ports simultaneously. These can be configured to either record signals from LifeTags/PowerTags/HybridTags and ES-200 GPS loggers (hereafter "tags"), or to collect data from CTT Nodes. **Tags and Nodes cannot be picked up on the same channel simultaneously**, and how you configure your station depends on your study goals. The number of channels necessary on a SensorStation depends on the number of Nodes, whether you want to detect tags/transmitters and/or Nodes directly with the SensorStation, and the distance the Nodes are from the SensorStation. There is no hard limit to the number of nodes that can be detected by a single SensorStation, but it's best to keep that number around 50 or less. *Distance to the SensorStation will usually be the limiting factor for the number of nodes detectable by a single SensorStation.*
 
 Two types of antennas are commonly used with the SensorStation: *Omnidirectional* and *Yagi*. *Omnidirectional antennas* efficiently receive energy in a *horizontal plane 360 degrees around the SensorStation*. Omnidirectional antennas typically do not have as great a range as Yagis, but a benefit is the 360 degree detection, and great detection of tags and nodes that are near the station. 
 
@@ -172,12 +174,16 @@ Two types of antennas are commonly used with the SensorStation: *Omnidirectional
 
 *Yagis are directional antennas* used to detect tags and nodes in a specific direction from the SensorStation. They *typically have a 30-60 degree detection range that extends away from the SensorStation*. For that reason typically 2-4 antennas are used, one pointed in each cardinal direction, or two pointed in opposite directions and used to make a “fence”. Yagis can also be used to pick up Nodes that are farther away from the SensorStation.
 
+![*This is another 434MHz-only station with four Yagi antennas for picking up tags and a single verticle omni to pick up the 50 nodes on site. The large white rectangular antenna is a 900MHz antenna used to retrieve data from a custom ES-200 GPS logger tag.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/WetlandsStation_NJ.png){#id .class width=25%}
+
 While there are many antennas to choose from, these are a few that we can recommend from experience:
 
   * Omni-directional
     * [Data Alliance A433O5](https://www.data-alliance.net/antenna-433mhz-5dbi-omnidirectional-fiberglass-w-n-male-vhf-uhf-marine/)
-      * and you'll need [this bracket](https://www.data-alliance.net/l-mount-for-antenna-pole-or-wall-mount-hole-for-n-female-or-rp-sma/)
-      * and [this adapter](https://www.data-alliance.net/n-type-female-to-female-coupler-adapter-w-o-ring-weatherproof-bulkhead/)
+      * and you'll need [this bracket](https://www.data-alliance.net/l-mount-for-antenna-pole-or-wall-mount-hole-for-n-female-or-rp-sma/) <br>
+    **Make sure you choose to include the U-bolt and set screws and choose the version for Type N female connector**
+      * and [this adapter](https://www.data-alliance.net/n-type-female-to-female-coupler-adapter-w-o-ring-weatherproof-bulkhead/) <br> 
+    **Make sure you choose the adapter with the Type N bulkhead with O-ring!**
     
   * Yagi
     * [M2Inc 440-6SS](https://www.m2inc.com/FG4406SS)
@@ -186,6 +192,8 @@ While there are many antennas to choose from, these are a few that we can recomm
     * [Diamond A430S15](https://www.dxengineering.com/parts/dmn-a430s15) *for specialized applications where longer-range is required
     
 *__Whatever you choose, make sure you get the proper coaxial end to connect your antenna to your SensorStation!__*
+
+![*Here is a dual-mode station in Bermuda, where four 434MHz Yagis are in the top plane, and five 166MHz Yagis are in the bottom plane. Mounting antennas in plane this way means you don't need to worry about stacking distances. This station is not listening for nodes, so all antennas are set to detect tags.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/BermudaDualMode.jpg){#id .class width=25%}
 
 ### Connecting antennas to your SensorStation
 
@@ -197,12 +205,16 @@ If connecting an antenna for a different frequency, such as 166MHz, you will nee
 
 ### Mounting the antennas
 
-Antennas are attached to the EMT conduit with the clamps that come with the antennas. If you have a setup that uses 4 yagis, than you will attach the yagis to a 4 or 5-way mounting “hat” you can purchase via online retailers.  Once the antennas are on EMT, attach the coax and wrap the connection with coax tape. Run down the poles to where it will attach to the SensorStation. You can use zip ties to secure the coax to poles where needed. Make sure you have enough coax to form a drip loop for each connection.
+Antennas are attached to the EMT conduit with the clamps that come with the antennas. If you have a setup that uses 4 yagis, than you will attach the yagis to a 4 or 5-way mounting “hat” you can purchase via online retailers.  Once the antennas are on EMT, attach the coax and wrap the connection with coax tape. Run down the poles to where it will attach to the SensorStation. You can use zip ties to secure the coax to poles where needed. 
+
+![*Example of a 434MHz-only station, with four directional Yagi antennas (programmed to pick up tags), one small "horseshoe omni" (programmed to pick up the 21 nodes on site) barely visible at the very top of the antenna mast, and a little weather station broken out to the side from the top of the mast. Note the drip loop under the station box!*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/MeadowsStation_NJ.png){#id .class width=25%}
+
+Make sure you have enough coax to form a drip loop for each connection.
 
 ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/diagram_drip-loop.jpg){#id .class width="25%"}
 
-### Placing your SensorStation
-The SensorStation can be placed inside a building, or fastened to the pole or building, etc. It should either be close to the ground for easy access, or have an ethernet cable run down to an accessible location.
+### Siting your SensorStation
+The SensorStation can be placed inside a building, or fastened to the pole or building, etc. It should either be close to the ground for easy access, or have an ethernet cable run down to an accessible location. **If placing your station inside a building be aware that this may affect GPS and/or GSM reception, possibly requiring an external antenna wired to the outside of the building.**
 
 # Powering your SensorStation
 
@@ -217,9 +229,13 @@ The ends of the wires that are attached should be tinned with solder for best re
 
 If you would like to monitor your solar voltage remotely, you will need to use the solar monitor connector. it is located above the on/off switch. Simply run two wires from the solar input of the charge controller to a two pin connector.
 
+# Powering On your SensorStation
+
+Once connected to power, flip the black switch left of the LCD into the `PWR ON` position. You will see a number of lights begin to flash during bootup and finally the LCD screen will display a menu which you can then access via the four buttons to the right of the LCD screen.
+
 # SensorStation LEDs
 
-There are several LED lights on the SensorStation which may assist you in diagnosing issues. Note that with the introduction of the SensorStation V2's LCD screen, all diagnoses can be carried out via the LCD. 
+There are several LED lights on the SensorStation which may assist you in diagnosing issues. Note that with the introduction of the SensorStation V2's LCD screen, all diagnoses can be carried out via the LCD. Take a moment to review each LED.
 
 ## Diagnostic A (green)
 
@@ -249,10 +265,6 @@ The blue LED by the cellular module, labeled D9, is called the Netlight. The Net
 # SensorStation Navigation Buttons
 
 The SensorStation features 4 navigation buttons labeled `UP`, `DN`, `BACK` and `SELECT`. They are typically used with the SensorStation software to navigate the LCD display. 
-
-## Technical Description
-
-These buttons are directly wired to the Compute Module’s GPIO lines BCM4, 5, 6, and 7. You will need to enable pullups on these lines to use these buttons.
 
 # SensorStation LCD Menu
 
@@ -300,10 +312,14 @@ These buttons are directly wired to the Compute Module’s GPIO lines BCM4, 5, 6
 
 # Downloading your data via a USB Thumb Drive
 
+To manually download data via USB, do the following:
+
 1. Insert a properly formatted (currently only MS DOS or Fat32 formatting is supported) USB thumb drive in one of the seven USB ports.
 2. Navigate to `File Transfer > Mount USB` and press the `SELECT` button. You should see a confirmation message saying `USB Mount:success`.
 3. Use the `BACK` button to go up to the `File Transfer` menu, and select `Download`. A successful download will be followed by a success message.
 4. Use the `Back` button to go up to the `File Transfer` menu and select `Unmount USB`. Once you receive the success message you may remove the USB drive from the SensorStation which will now contain a copy of all the files from the station.
+
+**Note: there are two known bugs in the USB manual download system. See the [Known Bugs](#known-bugs) section below. 
 
 ## What's in the folder?
 
@@ -333,7 +349,7 @@ On your USB drive you will find several files...
 	* `TagID` - The 8-digit ID of the tag that was detected. Note that for tags with 10-digit IDs (e.g. V2 LifeTag), this will be represented by the first 8 digits in that ID.
 	* `TagRSSI` - The signal strength of the transmission, measured in Decibels (DB). Values. closer to zero represent stronger signals. Values below -110 DB are typically not useful for estimating distance.
 	* `NodeId` - The unique ID of the node from which the transmission was received.
-	* `Validated` - Binary value that indicates whether the CRC value corroborated the unique tag ID. 0 = invalidated; 1 = validated. **MORE EXPLANATION HERE**
+	* `Validated` - Binary value that indicates whether the CRC value corroborated the unique tag ID. 0 = invalidated; 1 = validated. Note that only V2 LifeTags and above, and HybridTags, have a CRC value that can be read by SensorStations. If the CRC value corroborates the preceding 8 digit digital ID, then a "1" is shown in the `Validated` field. **This confirms, with a 99% accuracy, that that tag ID being detected is valid!**. *Note that PowerTags do not have a CRC value and therefore will never show a "1" in this field. PowerTags do not have variable power (like LifeTag and HybridTag) and therefore do not require the validation of a CRC value.* 
 
 And two folders:
 
@@ -343,6 +359,8 @@ And two folders:
 ***
 
 # Connecting to your SensorStation Web Interface
+
+Your SensorStation has a web server running locally on the RaspberryPi, which means you can interact with your station by directly connecting via Ethernet or through a wireless connection. **Note that this is different than viewing your SensorStation via the CTT Web Portal**. The SensorStation Interface provides an overview of your station's operation, including real-time statistics on detections of tags and nodes, as well as controls to change settings, update your SensorStation software, toggle the GSM modem, and reboot the station. It is always best practice to connect directly to your SensorStation prior to deployment. From here you can run a station update, ensure your antennas are tuned to the expected task (detecting Nodes or Tags) and see in real-time that your station is detecting either as expected.
 
 ## Connecting via Ethernet Cable
 
@@ -477,15 +495,12 @@ Once your station has connected to your wifi network, you can connect to your Se
   
 ***
 
-# The SensorStation Web Interface 
+# The SensorStation Interface Explained
 
-## Overview
-
-The SensorStation Web Interface provides an overview of your station's operation, including real-time statistics on detections of tags and nodes, as well as a user interface to change settings, update your SensorStation, toggle the GSM modem, and reboot the station.
 
 ## Nodes
 
-This is a list of Nodes the station has detected since connecting. For each Node it lists: 
+At the very top of the page you will see the header titled **Nodes**. This is a list of Nodes the station has detected since connecting. For each Node it lists: 
 
 `Node ID` 
 `Last Heard` - the time of the last health report
@@ -493,31 +508,36 @@ This is a list of Nodes the station has detected since connecting. For each Node
 `Battery Voltage` - the Node’s battery voltage, which can be used to estimate its remaining life. 4.2 V is very full. 3.5 Vis low. 3 V is nearly empty.
 `Node Firmware Version`
 
-## Tags
+## Live Tags
 
-This is a list of unique LifeTags that have been detected by your radios. For each tag it lists
+This is a list of unique tags (PowerTag, LifeTag or HybridTag) that have been detected by your radios since connecting to your computer. For each tag it lists:
 
-* `Tag ID`
+* `Tag ID` - unique 8-digit digital ID
 * `Count` - number of beeps since last page refresh
 * `Alias` - for convenience, a name can be given to a particular tag and saved in the browser by hitting the `Update` button. This information is saved in your browser only. Name it whatever you’d like. Great for keeping track of particular tags during a test.
 * `“Update” Button` - save the name of a particular tag to your browser
 * `“Remove” Button` - reset the saved name
 
+Below the Live Tag list is a histogram of tags detected since opening the interface. The bars indicate the number of beeps detected.
+
 ## Station
 
-Various information about your SensorStation is stored here.
+On the right-hand sidebar of the page you'll see the **Station** section, which includes various pieces of information about your SensorStation.
 
 * `ID` - the serial number of your SensorStation (the cell modem’s IMEI)
+* `Software Start` - a date/time field referring to the last reboot time
 * `Compute Module Serial` - the serial number of your Raspberry Pi Compute Module
 * `Module Hardware` - the compute module’s hardware version
 * `Module Revision` - the compute module’s hardware revision
 * `Boot Count` - the number of times the system has been booted
 * `Total Memory` - the amount of RAM currently being used by the system
 * `Last Boot` - Datetime of last boot
+* `Internet Gateway` - 
+
+## System Versioning Details
 
 * `Memory Usage` - A pie chart indicating the amount of system RAM currently being used.
 * `CPU Usage` - A pie chart indicating the amount of processing power currently being used.
-* `Tag Histogram` - A histogram of tags detected since opening the interface. The bars indicate the number of beeps detected.
 * `Time Sync Stats` - Detailed information of how the system time is being retrieved synced (e.g. from GPS or the internet)
 
 ## SensorStation Log
@@ -618,8 +638,8 @@ Reboots the system.
 
 # Known Bugs
 
-1. SensorStations without a modem installed will not check in to the CTT system.
-2. Download via USB does not include SensorGnome files, nor does it include any data previously uploaded remotely. To get these files manually, use the direct-connect method via USB->Ethernet and access via the web interface.
+1. Download via USB does not include SensorGnome files. To get these files manually, use the direct-connect method via USB->Ethernet and access via the web interface.
+2. Download via USB does not include any data previously uploaded remotely. To get these files manually, use the direct-connect method via USB->Ethernet and access via the web interface.
 
 ***
 # Final Thoughts
@@ -732,7 +752,22 @@ We are welcoming new collaborators and supporters each week! **For more informat
 
 ***
 
-# Appendix II: Qickstart Guide (SensorStation V1){#V1Quickstart}
+# Appendix II: Quickstart Guide (Sensorstation V2){V2Quickstart}
+
+## Prior to Powering Up
+* Ensure power switch is in the `OFF` position
+* Connect your power source to your SensorStation
+
+## Initial Boot-up of a SensorStation
+* Switch power switch into the `ON` position
+* Wait for full boot-up (the LCD screen is the last thing to boot up, so once the LCD menu is visible, you are fully booted)
+
+
+
+
+***
+
+# Appendix III: Qickstart Guide (SensorStation V1){#V1Quickstart}
 
 ***Courtesy of David Brinker***
 
@@ -814,7 +849,7 @@ This should be enough to get us started and allow us to leave sites with confide
 ***
 
 
-# Appendix III: Materials List
+# Appendix IV: Materials List
 
 |  **Item** | **Group** | **Description** | **Part Number** | **Connection Type(s)** | **Number Required** | **Supplier Link** |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
