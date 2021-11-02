@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.8.25)  22 SEP 2021 17:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.8.25)  29 SEP 2021 10:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -770,8 +770,14 @@ ernal(12).jpg>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
 mages/NodeCloseUpInternal(12).jpg  used on input line 408.
 (pdftex.def)             Requested size: 234.8637pt x 254.43567pt.
+[8 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUSBCover(5)
+.jpg>] [9 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUSBP
+ort(6).jpg> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUS
+BAdapterIn(8).jpg>] [10 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
+mages/NodeScrewOut(9).jpg> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentatio
+n/images/NodeOpen1(10).jpg>]
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/nodeClientFolderSe
-lect.png, id=184, 1262.7175pt x 599.23875pt>
+lect.png, id=204, 1262.7175pt x 599.23875pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/nodeClientFol
 derSelect.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/nodeClientFold
@@ -779,19 +785,14 @@ erSelect.png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
 mages/nodeClientFolderSelect.png  used on input line 448.
 (pdftex.def)             Requested size: 352.3061pt x 167.19136pt.
-[8 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUSBCover(5)
-.jpg>] [9 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUSBP
-ort(6).jpg> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUS
-BAdapterIn(8).jpg>] [10 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeScrewOut(9).jpg> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentatio
-n/images/NodeOpen1(10).jpg>]pdfTeX warning (ext4): destination with the same id
-entifier (name{id}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
+ already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.460 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/binSelect.png, id=
-207, 1251.67625pt x 600.2425pt>
+205, 1251.67625pt x 600.2425pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/binSelect.png
  Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/binSelect.png>
@@ -806,7 +807,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
 l.469 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/DebugSelect.png, i
-d=208, 1253.68375pt x 600.2425pt>
+d=206, 1253.68375pt x 600.2425pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/DebugSelect.p
 ng Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/DebugSelect.pn
@@ -821,7 +822,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
 l.481 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClientSelect.p
-ng, id=209, 1250.6725pt x 600.2425pt>
+ng, id=207, 1250.6725pt x 600.2425pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClientSel
 ect.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClientSele
@@ -836,7 +837,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
 l.493 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient1.png, i
-d=210, 1190.4475pt x 573.14125pt>
+d=208, 1190.4475pt x 573.14125pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient1.p
 ng Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient1.pn
@@ -844,14 +845,19 @@ g>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
 mages/NodeClient1.png  used on input line 493.
 (pdftex.def)             Requested size: 352.30518pt x 169.61742pt.
-pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
- already used, duplicate ignored
+[11 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeCloseUpInt
+ernal(12).jpg> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/nod
+eClientFolderSelect.png>] [12 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documenta
+tion/images/binSelect.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentatio
+n/images/DebugSelect.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation
+/images/NodeClientSelect.png>]pdfTeX warning (ext4): destination with the same 
+identifier (name{id}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.514 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient2.png, i
-d=211, 1189.44376pt x 573.14125pt>
+d=227, 1189.44376pt x 573.14125pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient2.p
 ng Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient2.pn
@@ -859,21 +865,14 @@ g>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
 mages/NodeClient2.png  used on input line 514.
 (pdftex.def)             Requested size: 352.31667pt x 169.76608pt.
-[11 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeCloseUpInt
-ernal(12).jpg> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/nod
-eClientFolderSelect.png>] [12 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documenta
-tion/images/binSelect.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentatio
-n/images/DebugSelect.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation
-/images/NodeClientSelect.png>] [13 </Users/davidlapuma/Dropbox/CTT_Git/ctt_docu
-mentation/images/NodeClient1.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_docum
-entation/images/NodeClient2.png>]pdfTeX warning (ext4): destination with the sa
-me identifier (name{id}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
+ already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.529 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient3.png, i
-d=237, 1183.42125pt x 569.12625pt>
+d=228, 1183.42125pt x 569.12625pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient3.p
 ng Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient3.pn
@@ -888,7 +887,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
 l.542 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient4.png, i
-d=238, 1185.42876pt x 570.13pt>
+d=229, 1185.42876pt x 570.13pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient4.p
 ng Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient4.pn
@@ -903,7 +902,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
 l.558 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient5.png, i
-d=239, 1186.4325pt x 571.13374pt>
+d=230, 1186.4325pt x 571.13374pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient5.p
 ng Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient5.pn
@@ -918,7 +917,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
 l.571 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient6.png, i
-d=240, 1185.42876pt x 597.23125pt>
+d=231, 1185.42876pt x 597.23125pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient6.p
 ng Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient6.pn
@@ -926,18 +925,19 @@ g>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
 mages/NodeClient6.png  used on input line 571.
 (pdftex.def)             Requested size: 352.32123pt x 177.50307pt.
-[14 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient3.pn
-g> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient4.png
->] [15 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient5
-.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient6.
-png>]pdfTeX warning (ext4): destination with the same identifier (name{id}) has
- been already used, duplicate ignored
+[13 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient1.pn
+g> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient2.png
+>] [14 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient3
+.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient4.
+png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient5.p
+ng>]pdfTeX warning (ext4): destination with the same identifier (name{id}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.631 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient7.png, i
-d=258, 1191.45125pt x 568.1225pt>
+d=252, 1191.45125pt x 568.1225pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient7.p
 ng Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient7.pn
@@ -952,7 +952,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
 l.670 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient8.png, i
-d=259, 1188.44pt x 569.12625pt>
+d=253, 1188.44pt x 569.12625pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient8.p
 ng Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient8.pn
@@ -960,15 +960,17 @@ g>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
 mages/NodeClient8.png  used on input line 670.
 (pdftex.def)             Requested size: 352.30951pt x 168.71577pt.
-[16 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient7.pn
-g>]pdfTeX warning (ext4): destination with the same identifier (name{id}) has b
-een already used, duplicate ignored
+[15 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient6.pn
+g>] [16 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient
+7.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient8
+.png>]pdfTeX warning (ext4): destination with the same identifier (name{id}) ha
+s been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.691 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient9.png, i
-d=268, 1188.44pt x 569.12625pt>
+d=270, 1188.44pt x 569.12625pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient9.p
 ng Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient9.pn
@@ -985,7 +987,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
 l.712 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient10.png, 
-id=270, 1190.4475pt x 573.14125pt>
+id=272, 1190.4475pt x 573.14125pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient10.
 png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient10.p
@@ -1000,7 +1002,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
 l.727 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient11.png, 
-id=271, 1191.45125pt x 570.13pt>
+id=273, 1191.45125pt x 570.13pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient11.
 png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient11.p
@@ -1015,7 +1017,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
 l.739 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient12.png, 
-id=272, 1190.4475pt x 564.1075pt>
+id=274, 1190.4475pt x 564.1075pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient12.
 png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient12.p
@@ -1023,13 +1025,12 @@ ng>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
 mages/NodeClient12.png  used on input line 739.
 (pdftex.def)             Requested size: 352.30518pt x 166.94392pt.
-[17 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient8.pn
-g> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient9.png
->] [18 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient1
-0.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient1
-1.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient1
-2.png>]pdfTeX warning (ext4): destination with the same identifier (name{id}) h
-as been already used, duplicate ignored
+[17 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient9.pn
+g> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient10.pn
+g>] [18 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient
+11.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient
+12.png>]pdfTeX warning (ext4): destination with the same identifier (name{id}) 
+has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.770 }
@@ -1054,7 +1055,7 @@ Package rerunfilecheck Info: File `CTT-Node-User-Guide.out' has not changed.
 Here is how much of TeX's memory you used:
  10765 strings out of 480502
  169843 string characters out of 5898668
- 465283 words of memory out of 5000000
+ 465284 words of memory out of 5000000
  28129 multiletter control sequences out of 15000+600000
  458570 words of font info for 71 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -1072,7 +1073,7 @@ b></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.p
 fb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.
 pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtti1
 0.pfb>
-Output written on CTT-Node-User-Guide.pdf (19 pages, 30968527 bytes).
+Output written on CTT-Node-User-Guide.pdf (19 pages, 30968440 bytes).
 PDF statistics:
  375 PDF objects out of 1000 (max. 8388607)
  281 compressed objects within 3 object streams

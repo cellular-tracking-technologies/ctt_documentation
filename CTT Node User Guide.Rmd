@@ -135,9 +135,9 @@ If you need to access the internal SD card, or troubleshoot a node, you can acce
 
 On the board you will notice several buttons. Pressing them has the corresponding effect:
 
-* `SW1` - Forces the node to restart.
-* `SW2` - Forces the node to send a health message (requires a SensorStation to determine success).
-* `SW3` - Forces the node to look for new firmware on the SD card, and if it finds it, to install it.
+* `SW1` - Long-press forces the node to restart.
+* `SW2` - Long-press forces the node to send a health message (requires a SensorStation to determine success).
+* `SW3` - Long-press forces the node to look for new firmware on the SD card, and if it finds it, to install it.
 
 The Micro USB port is also apparent in the lower right side of the board, and labled `USB`. You can use this port to connect your node directly to a computer.
 
