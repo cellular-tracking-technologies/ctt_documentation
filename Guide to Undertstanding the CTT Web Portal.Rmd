@@ -1,0 +1,75 @@
+---
+title: "Guide to Understanding the CTT Web Portal"
+author: "support@celltracktech.com"
+date: "11/2/2021"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Navigating the new ES-420 User Interface (UI) Website
+
+## Logging in
+
+The ES-420 line of transmitters has a new portal independent from the old CTT web portal. Upon shipping your ES-420 you will be emailed your credentials for this new login, as well as a list of your Device IDs. To log into your new account please visit the ES-420 web portal here:
+
+https://beta.internetofwildlife.com/
+
+## Main Page
+
+*This section is still under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.*
+
+![](/Users/davidlapuma/Desktop/420 UI Slide 1.png){#id .class width=100%}
+\newpage
+
+## Charts Tab
+
+*This section is still under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.*
+
+![](/Users/davidlapuma/Desktop/420 UI Slide 2 Charts.png){#id .class width=100%}
+
+![](/Users/davidlapuma/Desktop/420 UI Slide 2.1 Charts Zoom.png){#id .class width=100%}
+
+![](/Users/davidlapuma/Desktop/420 UI Slide 2.3 Battery Chart Zoom and Zoom Out Button.png){#id .class width=100%}
+
+\newpage
+
+## Data Grid Tab
+
+*This section is still under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.*
+
+![](/Users/davidlapuma/Desktop/420 UI Slide 3 Data Grid.png){#id .class width=100%}
+
+## Configuration Tab
+
+From the configuration tab you can see both the current configuration loaded on your unit, and the assignment history.
+
+## Current Assignment Sub-tab
+
+This panel shows the **latest configuration** running on the unit **since the last check-in**. <u>**This is important, because newly assigned configs will not update until the check-in following the one where the unit took the config.**</u> 
+
+*This section is still under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.*
+
+![](/Users/davidlapuma/Desktop/420 UI Slide 4 Config.png){#id .class width=100%}
+\newpage
+
+## Assignment History Sub-tab
+
+This section is under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.
+
+![](/Users/davidlapuma/Desktop/420 UI Slide 5 Config Assign Hist.png){#id .class width=100%}
+
+## Download Tab
+
+*This section is still under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.*
+
+![](/Users/davidlapuma/Desktop/420 UI Slide 6 Download Data.png){#id .class width=100%}
+
+
+# Further Support
+
+*If for any reason you need further support with your Cellular Tracking Technologies ES-420 device, please email support@celltracktech.com or call us during business hours, 9am - 5pm Monday to Friday at 609-889-0305.*
