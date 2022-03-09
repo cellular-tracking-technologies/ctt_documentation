@@ -3,8 +3,13 @@ title: "Guide to Understanding the CTT Web Portal"
 author: "support@celltracktech.com"
 date: "11/2/2021"
 output:
-  html_document: default
-  pdf_document: default
+  pdf_document:
+    toc: yes
+    fig_caption: true
+  html_document:
+    toc: yes
+    number_sections: yes
+    fig_caption: true
 ---
 
 ```{r setup, include=FALSE}
@@ -13,28 +18,27 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Navigating the new ES-420 User Interface (UI) Website
 
+Welcome to the new CTT Web Portal. Currently this portal is dedicated to display of data from the new Evolution Series 420 (ES-420) GPS/GSM transmitters. As this portal is currently in beta, it is very likely that you will be seeing changes happening rapidly over the coming months. Eventually this portal will provide access to all of your transmitters, and allow a unified user interface for everything from our radio products through GPS/GSM and including Satellite (Iridium and Argos). Until then, non-ES-420 devices are still only accessible from https://accounts.celltracktech.com. We apologize for any inconvenience that this may cause, but we are confident that your user experience will be better than ever once we complete the migration to our new server architecture. As always, if you have any questions please don't hesitate to reach out to us via support@celltracktech.com. Happy tracking!
+
 ## Logging in
 
-The ES-420 line of transmitters has a new portal independent from the old CTT web portal. Upon shipping your ES-420 you will be emailed your credentials for this new login, as well as a list of your Device IDs. To log into your new account please visit the ES-420 web portal here:
+Well, if you are reading this from the portal, you've already figured it out! Of course, if you haven't yet logged in, you should have received your login credentials in the shipping email sent when your units left our building. This attachment also includes your device IDs. For accessing your ES-420 devices please use the following URL: https://beta.internetofwildlife.com/
 
-https://beta.internetofwildlife.com/
+## Main Page: My CTT
 
-## Main Page
+On the new main page, titled `My CTT`, you'll see several windows, including the current weather at your location (you will need to allow **Location Services** for this to display), and a `Support` window for accessing documentation and other CTT portals including the `Legacy Site`, or https://accounts.celltracktech.com.
 
-*This section is still under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.*
-
-![](/Users/davidlapuma/Desktop/420 UI Slide 1.png){#id .class width=100%}
-\newpage
+![**My CTT** *dashboard*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/420 UI Slide 1.png){#id .class width=100%}    
 
 ## Charts Tab
 
 *This section is still under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.*
 
-![](/Users/davidlapuma/Desktop/420 UI Slide 2 Charts.png){#id .class width=100%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/420 UI Slide 2 Charts.png){#id .class width=100%}
 
-![](/Users/davidlapuma/Desktop/420 UI Slide 2.1 Charts Zoom.png){#id .class width=100%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/420 UI Slide 2.1 Charts Zoom.png){#id .class width=100%}
 
-![](/Users/davidlapuma/Desktop/420 UI Slide 2.3 Battery Chart Zoom and Zoom Out Button.png){#id .class width=100%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/420 UI Slide 2.3 Battery Chart Zoom and Zoom Out Button.png){#id .class width=100%}
 
 \newpage
 
@@ -42,7 +46,7 @@ https://beta.internetofwildlife.com/
 
 *This section is still under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.*
 
-![](/Users/davidlapuma/Desktop/420 UI Slide 3 Data Grid.png){#id .class width=100%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/420 UI Slide 3 Data Grid.png){#id .class width=100%}
 
 ## Configuration Tab
 
@@ -54,20 +58,20 @@ This panel shows the **latest configuration** running on the unit **since the la
 
 *This section is still under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.*
 
-![](/Users/davidlapuma/Desktop/420 UI Slide 4 Config.png){#id .class width=100%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/420 UI Slide 4 Config.png){#id .class width=100%}
 \newpage
 
 ## Assignment History Sub-tab
 
 This section is under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.
 
-![](/Users/davidlapuma/Desktop/420 UI Slide 5 Config Assign Hist.png){#id .class width=100%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/420 UI Slide 5 Config Assign Hist.png){#id .class width=100%}
 
 ## Download Tab
 
 *This section is still under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.*
 
-![](/Users/davidlapuma/Desktop/420 UI Slide 6 Download Data.png){#id .class width=100%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/420 UI Slide 6 Download Data.png){#id .class width=100%}
 
 
 # Further Support

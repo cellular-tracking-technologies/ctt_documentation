@@ -1,0 +1,82 @@
+---
+title: "CTT Radio Tag User Guide"
+author: "support@celltracktech.com"
+date: "9/22/2021"
+output:
+  html_document:
+    toc: yes
+    number_sections: yes
+  pdf_document:
+    toc: yes
+    fig_caption: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+What are CTT Radio Tags?
+
+LifeTag
+PowerTag
+HybridTag
+
+## Using This Guide
+
+Use the `Quick Start Guide` in the next section to get you up and running with your `Radio Tags`. For more detailed information you can proceed to the sections below the `Quick Start Guide`. Please provide any feedback via our `Customer Service Desk` portal [here](https://celltracktech.com/support-customer-service-desk/).
+
+# LifeTag QuickStart Guide
+
+What you will need:
+
+* Either a `CTT Locator` or an operational `SensorStation` and a way to connect to it, either via ethernet or wirelessly.
+
+1. Unpack your LifeTag. Note that your LifeTag ships with an 8-digit digital ID sticker. 
+
+2. Record the unique digital IDs for each of your tags.
+
+3. Place your `LifeTag`, solar panel facing up, in a location where it can get some direct light and within detection range of your `SensorStation` (*note: if not using antennas on your SensorStation, make sure nodes are within a meter of the station*) or `CTT Locator`.
+
+3. Connect your computer to your SensorStation so you can view the web interface (*for SensorStation operation consult the online install guide [here](https://cellular-tracking-technologies.github.io/ctt_documentation/v2-SensorStation-User-Guide.html#connecting-to-your-sensorstation-web-interface))*.
+
+4. Ensure your SensorStation has at least one radio tuned to detect `Tags` (*if this isn't clear, consult the SensorStation online install guide*).
+
+5. 
+
+
+6. 
+
+7. 
+
+8. 
+
+9. 
+
+10. 
+
+11. 
+
+# Initial Node Setup
+ 
+
+## Unboxing
+
+
+# Attaching Your Node
+
+
+## A note about solar recharging
+
+# SensorStation Pairing
+
+# Operation Tips
+
+## Connecting to the external USB port
+## Opening your Node
+
+
+# Final Thoughts
+
+This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/support-customer-service-desk/) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2021.

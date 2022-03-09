@@ -1,0 +1,139 @@
+\documentclass[12pt]{article}
+
+%Declare all packages used
+\usepackage{graphicx}
+\usepackage[affil-it]{authblk}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{ragged2e}
+\usepackage{rotating}
+\usepackage[section]{placeins}
+
+%Decalre bib style
+\bibliographystyle{unsrt}
+
+%formate the affiliation and author stuff
+\renewcommand\Authfont{\fontsize{12}{14.4}\selectfont}
+\renewcommand\Affilfont{\fontsize{10}{10.8}\itshape}
+
+%Make the title with the CTT logo above
+\title{
+%Use vspace to move title down the page a bit
+\vspace{2cm}
+\includegraphics[scale=0.70]{Figures/ctt_logo_300.png}~
+\\[1cm]
+\textbf{Technical Report Title}
+}
+
+%%%%		AUTHORS	   %%%%
+\author[1]{S.~Burcher}
+
+
+%%%%		AFFILIATIONS	   %%%%
+\affil[1]{Cellular Tracking Technologies, Rio Grande, NJ 08242}
+
+%Enter the report number here
+\newcommand{\reportNumber}{000000}
+
+%Fancy header/footer formatting for title page, disclaimer, ect.
+\fancypagestyle{fancyfront}{
+	\renewcommand{\footrulewidth}{0.4pt}% default is 0pt
+	\fancyhf{}
+	\rhead{TR-\reportNumber}
+	%\fancyhead[CE,CO]{OFFICIAL USE ONLY}
+	%\fancyfoot[CE,CO]{OFFICIAL USE ONLY}
+	\rfoot{\thepage}
+}
+
+%Fancy header/footer formatting for main document
+\fancypagestyle{fancymain}{
+	\renewcommand{\footrulewidth}{0.4pt}% default is 0pt
+	\fancyhf{}
+	\rhead{TR-\reportNumber}
+	%\fancyhead[CE,CO]{OFFICIAL USE ONLY}
+	%\fancyfoot[CE,CO]{OFFICIAL USE ONLY}
+	\rfoot{Page \thepage}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%		 BEGIN DOCUMENT		%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%		START OF  FRONT MATTER	  %%%%
+\begin{document}
+%Roman numeral page numbering for the front matter
+\pagenumbering{roman}
+
+\maketitle
+\thispagestyle{fancyfront}
+\vspace*{0.1cm}
+\centering
+
+
+
+\newpage
+%This is the disclaimer page
+\thispagestyle{fancyfront}
+%Use vpsace to move the disclaimer down the page a bit
+\vspace*{2cm}
+\centering
+\paragraph*{DISCLAIMER}
+\begin{center}
+\justify
+All information contained herein is, and remains the property of Cellular Tracking Technologies, LLC and its suppliers, if any.  The intellectual and technical concepts contained herein are proprietary to Cellular Tracking Technologies, LLC and its suppliers and are protected by trade secret or copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior written permission is obtained from Cellular Tracking Technologies, LLC.
+
+\end{center}
+
+
+\newpage
+%This is the table of contents page
+\raggedright
+\justify
+\thispagestyle{fancyfront}
+
+\tableofcontents
+
+%%%%	END OF FRONT MATTER	  %%%%
+
+\newpage
+%Start of main document
+\pagestyle{fancymain}
+%Arabic numeral page numbering for the front matter
+\pagenumbering{arabic}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Here is the introduction section.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Another Section}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Some text in the other section.  This is a citation \cite{ctt_website}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=1.0]{Figures/bird.jpg}
+	\caption{This is a bird.}
+\end{figure}
+
+
+\subsection{This is a subsection}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\bibliography{references}
+
+\end{document}
+
+
