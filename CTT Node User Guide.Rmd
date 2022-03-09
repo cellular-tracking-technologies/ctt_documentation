@@ -22,7 +22,7 @@ The CTT Node™ is a mini-base-station that allows you to localize LifeTags™, 
 
 The CTT Node uploads received tag detection data to the standard CTT SensorStation™, creating a dense, high resolution tracking network. Solar power recharges batteries in the CTT Nodes meaning no extra power cables or external solar systems are necessary.
 
-Each CTT Node has a detectable range of about 250-300 meters, and is able to relay data to a CTT Base Station as far away as several kilometers.
+Each CTT Node has a detectable range of about 250-300 meters, and is able to relay data to a CTT Base Station as far away as 1.5 kilometers.
 
 ## Using This Guide
 
@@ -257,6 +257,21 @@ These are typically `.csv` files with either `beep` data, or `gps` data. From he
 
 
 ![*Once you're done working with your node, return to the USB section and click `Close` under Step 4. Now it is safe to disconnect your Node.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient13.png){#id .class width=75%}
+
+# Frequently Asked Questions (FAQ)
+
+**Q1. Do the nodes send out radio frequency signals to the SensorStation?**
+
+**A1.** *The nodes send two types of data to the SensorStation: first is the health report, sent every five minutes; and second is the beep data sent either after the buffer is filled, or after a timer expires. All data is sent from the node to the SensorStation on the frequency 433.25MHz, which is just slightly different than the frequency of the tags (434MHz). This is why you must assign an antenna to either detect Nodes, or Tags via the SensorStation interface. Nodes* **do not** *send over unique frequencies, instead they transmit their unique node ID to the station. This is how the SensorStation recognizes individual nodes.*
+
+**Q2. Is there a limit to the number of nodes that a single SensorStation can receive?** 
+
+**A2.** *Technically, no, but the more nodes you deploy the more opportunity there is for radio congestion at the receiving end. There are many node grids deployed with greater than 60 nodes sending data to a single station with no apparent impact, but your mileage may vary depending on your setup.*
+
+
+
+
+
 
 # Final Thoughts
 
