@@ -3,12 +3,12 @@ title: "CTT Node User Guide"
 author: "support@celltracktech.com"
 date: "9/22/2021"
 output:
-  pdf_document:
-    toc: yes
-    fig_caption: true
   html_document:
     toc: yes
     number_sections: yes
+  pdf_document:
+    toc: yes
+    fig_caption: true
 ---
 
 ```{r setup, include=FALSE}
@@ -268,11 +268,6 @@ These are typically `.csv` files with either `beep` data, or `gps` data. From he
 
 **A2.** *Technically, no, but the more nodes you deploy the more opportunity there is for radio congestion at the receiving end. There are many node grids deployed with greater than 60 nodes sending data to a single station with no apparent impact, but your mileage may vary depending on your setup.*
 
-
-
-
-
-
 # Final Thoughts
 
-This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/support-customer-service-desk/) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2021.
+This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/support-customer-service-desk/) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2022.
