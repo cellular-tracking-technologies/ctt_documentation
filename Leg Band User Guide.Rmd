@@ -1,0 +1,68 @@
+---
+title: "Leg Band User Guide"
+author: "support@celltracktech.com"
+date: "3/15/2022"
+output:
+  pdf_document:
+    toc: yes
+    fig_caption: true
+  html_document:
+    toc: yes
+    number_sections: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Leg Band User Guide
+
+CTT has produced the first 434MHz deployable leg-band with our signature HybridTag, LifeTag or PowerTag, and internal antenna, embedded into the design. Leg bands come with internal dimensions consistent with USGS Bird Banding Lab approved band sizes (currently sizes 7a and greater).
+
+## Preparing for deployment
+
+How you prepare for deployment will depend on which tag model you have chosen.
+
+* LifeTag
+	* For the LifeTag version, since the device has no battery and is only powered by solar exposure, there is only one step prior to deployment: 
+		* Place the tag in direct sunlight and check that you are receiving the unique tag ID via a handheld `CTT Locator` or a nearby `SensorStation`. 
+			* Once confirmed, you're ready to deploy!
+
+* HybridTag
+	* Because the HybridTag has a small rechargeable battery, it is best to place your tags in the sun with the solar panel facing **up** for an hour or so. This will ensure the battery is fully charged before deployment. 
+	* Prior to deployment, check that you are receiving the unique tag ID via a handheld `CTT Locator` or a nearby `SensorStation`.
+		* Once confirmed, you're ready to deploy!
+
+* PowerTag
+	* Because the PowerTag is battery-only, it must be activated using a `CTT Activator` prior to deployment. Therefore complete the following steps:
+		* Activate the PowerTag leg band using the `CTT Activator`. 
+		* Test that you are picking up the unique tag ID using a `CTT Locator` or nearby `SensorStation`.
+			* Once confirmed, you're ready to deploy!
+
+## Attaching the band
+
+Each CTT leg band comes in two parts: the main housing that contains the tag and antenna, and the locking slider door to close the band. 
+
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/leg band user guide.002.png){#id .class width=50%}
+
+Prior to attachment make sure you know the direction the door slides into the transmitter housing. **THERE IS ONLY ONE WAY THE DOOR WILL SLIDE IN AND LOCK.** The transmitter housing has both a tab and a hole (notch), as does the transmitter door. These tabs and holes align to lock the door into place. The image below shows the correct orientation of the tag and door for when you are sliding the door from top to bottom. Depending on the species you are working with, you may find it easier to slide the door up from the bottom (foot end), or down from the top (knee end), so orient the tag accordingly, depending on which direction you prefer to approach. 
+
+**ONLY LATCH WHEN PUTTING ON A BIRD, IT IS VERY HARD TO TAKE APART ONCE LATCHED!** **Permanent damage to the locking mechanism may result in latching more than once.**
+
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/LegBand2.001.png){#id .class width=50%}
+
+To attach to a bird, with the tag side positioned on the outside of the leg, slide the locking slider door into place on the inside of the leg. ***It is especially important with both Life and Hybrid Tags that the solar panel is facing out from the bird's body; otherwise the shading from being underneath and pointing toward the midsection of the bird may render the tag inoperable.*** 
+
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/legband3.001.png){#id .class width=100%}
+
+Once locked into place the tag is secure and good to deploy. If you want an extra bit of confidence you can place a small dab of super glue between the upper and or lower locking tabs of the transmitter housing before closing.
+
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/leg band user guide.003.png){#id .class width=50%}
+
+## Removing the band
+
+The bands are not meant to be removed once deployed, but if you need to, the best way to do so is to cut the door section of the band. This will allow the two halves of the door to fall away and you can simply slide the leg out of the transmitter portion off of the band. This also will allow you to re-deploy the leg band by simply replacing the door section (contact us for extra door sections). 
+
+## Final Thoughts
+
+This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/support-customer-service-desk/) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2022.
