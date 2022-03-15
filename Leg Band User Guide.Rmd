@@ -3,12 +3,12 @@ title: "Leg Band User Guide"
 author: "support@celltracktech.com"
 date: "3/15/2022"
 output:
-  pdf_document:
-    toc: yes
-    fig_caption: true
   html_document:
     toc: yes
     number_sections: yes
+  pdf_document:
+    toc: yes
+    fig_caption: true
 ---
 
 ```{r setup, include=FALSE}
@@ -29,7 +29,7 @@ How you prepare for deployment will depend on which tag model you have chosen.
 			* Once confirmed, you're ready to deploy!
 
 * HybridTag
-	* Because the HybridTag has a small rechargeable battery, it is best to place your tags in the sun with the solar panel facing **up** for an hour or so. This will ensure the battery is fully charged before deployment. 
+	* Because the HybridTag has a small rechargeable battery, it is best to place your tags in the sun with the solar panel facing **up** for several hours (2-4). This will ensure the battery is fully charged before deployment. 
 	* Prior to deployment, check that you are receiving the unique tag ID via a handheld `CTT Locator` or a nearby `SensorStation`.
 		* Once confirmed, you're ready to deploy!
 
@@ -61,7 +61,7 @@ Once locked into place the tag is secure and good to deploy. If you want an extr
 
 ## Removing the band
 
-The bands are not meant to be removed once deployed, but if you need to, the best way to do so is to cut the door section of the band. This will allow the two halves of the door to fall away and you can simply slide the leg out of the transmitter portion off of the band. This also will allow you to re-deploy the leg band by simply replacing the door section (contact us for extra door sections). 
+The bands are not meant to be removed once deployed, but if you need to, the best way to do so is to cut the door section of the band. This will allow the two halves of the door to fall away and you can simply slide the leg out of the transmitter portion off of the band. If glue was used you may have to cut along both sides of the door to remove a section large enough to remove the tag from the leg.
 
 ## Final Thoughts
 
