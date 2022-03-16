@@ -3,18 +3,18 @@ title: "Leg Band User Guide"
 author: "support@celltracktech.com"
 date: "3/15/2022"
 output:
-  html_document:
-    toc: yes
-    number_sections: yes
   pdf_document:
     toc: yes
     fig_caption: true
+  html_document:
+    toc: yes
+    number_sections: yes
 ---
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
 
 # Leg Band User Guide
 
@@ -44,19 +44,21 @@ How you prepare for deployment will depend on which tag model you have chosen.
 
 Each CTT leg band comes in two parts: the main housing that contains the tag and antenna, and the locking slider door to close the band. 
 
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NewLegBand002.png){#id .class width=50%}
+###photo here
 
 Prior to attachment make sure you know the direction the door slides into the transmitter housing. **THERE IS ONLY ONE WAY THE DOOR WILL SLIDE IN AND LOCK.** 
 
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/newLegBandGuide.png){#id .class width=50%}
+###photohere
 
 The transmitter housing has a track to slide the door into and a tab at the bottom to lock the door into place. The transmitter door has a notch in the bottom and a tab at the top for locking into the housing. The image below shows the correct orientation of the tag and door for when you are sliding the door from top to bottom. Depending on the species you are working with, you may find it easier to slide the door up from the bottom (foot end), or down from the top (knee end), so orient the tag accordingly, depending on which direction you prefer to approach. 
 
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/legband3.001.png){#id .class width=100%}
+**ONLY LATCH WHEN PUTTING ON A BIRD, IT IS VERY HARD TO TAKE APART ONCE LATCHED!** **Permanent damage to the locking mechanism may result in latching more than once.**
+
+![](//Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/New transmitter guide 2.001.png){#id .class width=50%}
 
 To attach to a bird, with the tag side positioned on the outside of the leg, slide the locking slider door into place on the inside of the leg. ***It is especially important with both Life and Hybrid Tags that the solar panel is facing out from the bird's body; otherwise the shading from being underneath and pointing toward the midsection of the bird may render the tag inoperable.*** 
 
-**ONLY LATCH WHEN PUTTING ON A BIRD, IT IS VERY HARD TO TAKE APART ONCE LATCHED!** **Permanent damage to the locking mechanism may result in latching more than once.**
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/legband3.001.png){#id .class width=100%}
 
 Once locked into place the tag is secure and good to deploy. If you want an extra bit of confidence you can place a small dab of super glue between the upper and or lower locking tabs of the transmitter housing before closing.
 
