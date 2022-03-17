@@ -1,33 +1,33 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.10.19)  15 MAR 2022 11:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.3.15)  17 MAR 2022 12:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **CTT-Node-User-Guide.tex
 (./CTT-Node-User-Guide.tex
-LaTeX2e <2021-06-01> patch level 1
-L3 programming layer <2021-10-17> (/Users/davidlapuma/Library/TinyTeX/texmf-dis
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24> (/Users/davidlapuma/Library/TinyTeX/texmf-dis
 t/tex/latex/base/article.cls
-Document Class: article 2021/02/12 v1.4n Standard LaTeX document class
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count182
-\c@section=\count183
-\c@subsection=\count184
-\c@subsubsection=\count185
-\c@paragraph=\count186
-\c@subparagraph=\count187
-\c@figure=\count188
-\c@table=\count189
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2021/04/20 v2.17j AMS math features
+Package: amsmath 2021/10/15 v2.17l AMS math features
 \@mathmargin=\skip49
 For additional information on amsmath, use the `?' option.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2000/06/29 v2.01 AMS text
+Package: amstext 2021/08/26 v2.01 AMS text
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks16
@@ -36,15 +36,15 @@ File: amsgen.sty 1999/11/30 v2.0 generic functions
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen140
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 2016/03/08 v2.02 operator names
+Package: amsopn 2021/08/26 v2.02 operator names
 )
-\inf@bad=\count190
+\inf@bad=\count193
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count191
-\leftroot@=\count192
+\uproot@=\count194
+\leftroot@=\count195
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count193
-\DOTSCASE@=\count194
+\classnum@=\count196
+\DOTSCASE@=\count197
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -53,15 +53,15 @@ LaTeX Info: Redefining \cdots on input line 620.
 \big@size=\dimen141
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count195
-\c@MaxMatrixCols=\count196
+\macc@depth=\count198
+\c@MaxMatrixCols=\count199
 \dotsspace@=\muskip16
-\c@parentequation=\count197
-\dspbrk@lvl=\count198
+\c@parentequation=\count266
+\dspbrk@lvl=\count267
 \tag@help=\toks17
-\row@=\count199
-\column@=\count266
-\maxfields@=\count267
+\row@=\count268
+\column@=\count269
+\maxfields@=\count270
 \andhelp@=\toks18
 \eqnshift@=\dimen142
 \alignsep@=\dimen143
@@ -73,8 +73,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \multlinegap=\skip50
 \multlinetaggap=\skip51
 \mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2923.
-LaTeX Info: Redefining \] on input line 2924.
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty
@@ -121,7 +121,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
+Package: iftex 2022/02/03 v1.0f TeX engine tests
 )) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifluatex.st
 y
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
@@ -156,31 +156,31 @@ Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 )) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.s
 ty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count268
+\etb@tempcnta=\count271
 )) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Driver file: pdftex.def on input line 227.
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.de
 f
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 )
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
-Package xcolor Info: Model `RGB' extended on input line 1364.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.st
 y
-Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmd
 s.sty
@@ -212,17 +212,12 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen148
-\Hy@linkcounter=\count269
-\Hy@pagecounter=\count270
+\Hy@linkcounter=\count272
+\Hy@pagecounter=\count273
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2022-02-21 v7.00n Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-)
-(/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref-lang
-patches.def
-File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
-nguages
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.st
 y
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
@@ -231,26 +226,26 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 y
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count271
+\Hy@SavedSpaceFactor=\count274
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Option `unicode' set `true' on input line 4073.
-Package hyperref Info: Hyper figures OFF on input line 4192.
-Package hyperref Info: Link nesting OFF on input line 4197.
-Package hyperref Info: Hyper index ON on input line 4200.
-Package hyperref Info: Plain pages OFF on input line 4207.
-Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Option `unicode' set `true' on input line 4018.
+Package hyperref Info: Hyper figures OFF on input line 4137.
+Package hyperref Info: Link nesting OFF on input line 4142.
+Package hyperref Info: Hyper index ON on input line 4145.
+Package hyperref Info: Plain pages OFF on input line 4152.
+Package hyperref Info: Backreferencing OFF on input line 4157.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count272
+Package hyperref Info: Bookmarks ON on input line 4390.
+\c@Hy@tempcnt=\count275
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4804.
+LaTeX Info: Redefining \url on input line 4749.
 \XeTeXLinkMargin=\dimen149
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -260,37 +255,37 @@ c.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count273
+\Fld@menulength=\count276
 \Field@Width=\dimen150
 \Fld@charsize=\dimen151
-Package hyperref Info: Hyper figures OFF on input line 6076.
-Package hyperref Info: Link nesting OFF on input line 6081.
-Package hyperref Info: Hyper index ON on input line 6084.
-Package hyperref Info: backreferencing OFF on input line 6091.
-Package hyperref Info: Link coloring OFF on input line 6096.
-Package hyperref Info: Link coloring with OCG OFF on input line 6101.
-Package hyperref Info: PDF/A mode OFF on input line 6106.
-LaTeX Info: Redefining \ref on input line 6146.
-LaTeX Info: Redefining \pageref on input line 6150.
+Package hyperref Info: Hyper figures OFF on input line 6027.
+Package hyperref Info: Link nesting OFF on input line 6032.
+Package hyperref Info: Hyper index ON on input line 6035.
+Package hyperref Info: backreferencing OFF on input line 6042.
+Package hyperref Info: Link coloring OFF on input line 6047.
+Package hyperref Info: Link coloring with OCG OFF on input line 6052.
+Package hyperref Info: PDF/A mode OFF on input line 6057.
+LaTeX Info: Redefining \ref on input line 6097.
+LaTeX Info: Redefining \pageref on input line 6101.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count274
-\c@Item=\count275
-\c@Hfootnote=\count276
+\Hy@abspage=\count277
+\c@Item=\count278
+\c@Hfootnote=\count279
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
+File: hpdftex.def 2022-02-21 v7.00n Hyperref driver for pdfTeX
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.sty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
-e
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
 with kernel methods
 )
-\Fld@listcount=\count277
-\c@bookmark@seq@number=\count278
+\Fld@listcount=\count280
+\c@bookmark@seq@number=\count281
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfi
 lecheck.sty
@@ -310,9 +305,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count279
-\Gm@cntv=\count280
-\c@Gm@tempcnt=\count281
+\Gm@cnth=\count282
+\Gm@cntv=\count283
+\c@Gm@tempcnt=\count284
 \Gm@bindingoffset=\dimen152
 \Gm@wd@mp=\dimen153
 \Gm@odd@mp=\dimen154
@@ -324,11 +319,11 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@dimlist=\toks24
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.st
 y
-Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 )
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.
 cfg
@@ -341,8 +336,8 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 )
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pd
 ftex.def
-File: l3backend-pdftex.def 2021-10-17 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count282
+File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count285
 \l__pdf_internal_box=\box52
 ) (./CTT-Node-User-Guide.aux
 
@@ -432,24 +427,24 @@ LaTeX Warning: Label `id' multiply defined.
 )
 \openout1 = `CTT-Node-User-Guide.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-
 base.sty
@@ -462,7 +457,7 @@ ys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 70.
+Package hyperref Info: Link coloring OFF on input line 71.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
@@ -472,11 +467,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 tlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count283
+\c@section@level=\count286
 )
-LaTeX Info: Redefining \ref on input line 70.
-LaTeX Info: Redefining \pageref on input line 70.
-LaTeX Info: Redefining \nameref on input line 70.
+LaTeX Info: Redefining \ref on input line 71.
+LaTeX Info: Redefining \pageref on input line 71.
+LaTeX Info: Redefining \nameref on input line 71.
 (./CTT-Node-User-Guide.out) (./CTT-Node-User-Guide.out)
 \@outlinefile=\write3
 \openout3 = `CTT-Node-User-Guide.out'.
@@ -515,38 +510,46 @@ LaTeX Info: Redefining \nameref on input line 70.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+</Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png, id=8
+0, 301.125pt x 117.43875pt>
+File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png 
+Graphic file (type png)
+<use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png>
+Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
+mages/ctt_logo.png  used on input line 73.
+(pdftex.def)             Requested size: 216.81902pt x 84.5594pt.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 7
-2.
+3.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 7
-2.
+3.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-72.
+73.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-72.
+73.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 72.
+(Font)              <12> on input line 73.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 72.
+(Font)              <8> on input line 73.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 72.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 72.
+(Font)              <6> on input line 73.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 72.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -562,129 +565,129 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \openout4 = `CTT-Node-User-Guide.toc'.
 
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 8
-0.
+1.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 9
-9.
-(/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [1
 
 {/Users/davidlapuma/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.ma
-p}]
+p} </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png>]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+00.
+(/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodesOnSensorStati
-on.png, id=116, 955.57pt x 289.08pt>
+on.png, id=117, 955.57pt x 289.08pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodesOnSensor
 Station.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodesOnSensorS
 tation.png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodesOnSensorStation.png  used on input line 163.
+mages/NodesOnSensorStation.png  used on input line 164.
 (pdftex.def)             Requested size: 352.316pt x 106.58298pt.
+[2 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodesOnSensorSt
+ation.png>]pdfTeX warning (ext4): destination with the same identifier (name{id
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.192 }
+       
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeDataOnSensorSt
-ation.png, id=118, 701.62125pt x 654.445pt>
+ation.png, id=136, 701.62125pt x 654.445pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeDataOnSen
 sorStation.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeDataOnSens
 orStation.png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeDataOnSensorStation.png  used on input line 191.
+mages/NodeDataOnSensorStation.png  used on input line 192.
 (pdftex.def)             Requested size: 352.31927pt x 328.62973pt.
-[2 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodesOnSensorSt
-ation.png>] [3pdfTeX warning (ext4): destination with the same identifier (name
+[3 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeDataOnSenso
+rStation.png>]pdfTeX warning (ext4): destination with the same identifier (name
 {id}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.209   O
-         nce set up, return to your SensorStation and ensure that all nodes </U
-sers/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeDataOnSensorStati
-on.png>]pdfTeX warning (ext4): destination with the same identifier (name{id}) 
-has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.246 }
+l.247 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeWrapped(1).jpg
-, id=145, 2932.9575pt x 2932.9575pt>
+, id=150, 2932.9575pt x 2932.9575pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeWrapped(1
 ).jpg Graphic file (type jpg)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeWrapped(1)
 .jpg>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeWrapped(1).jpg  used on input line 246.
+mages/NodeWrapped(1).jpg  used on input line 247.
 (pdftex.def)             Requested size: 234.86516pt x 234.86516pt.
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.260 }
+l.261 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUnwrapped(2).j
-pg, id=146, 2466.21375pt x 2466.21375pt>
+pg, id=151, 2466.21375pt x 2466.21375pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUnwrapped
 (2).jpg Graphic file (type jpg)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUnwrapped(
 2).jpg>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeUnwrapped(2).jpg  used on input line 260.
+mages/NodeUnwrapped(2).jpg  used on input line 261.
 (pdftex.def)             Requested size: 234.85721pt x 234.85721pt.
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.277 }
+l.278 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeMagnet(3).jpg,
- id=147, 3032.32875pt x 3032.32875pt>
+ id=152, 3032.32875pt x 3032.32875pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeMagnet(3)
 .jpg Graphic file (type jpg)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeMagnet(3).
 jpg>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeMagnet(3).jpg  used on input line 277.
+mages/NodeMagnet(3).jpg  used on input line 278.
 (pdftex.def)             Requested size: 234.86424pt x 234.86424pt.
-[4 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeWrapped(1).
-jpg>] [5 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUnwra
-pped(2).jpg> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeM
-agnet(3).jpg>]pdfTeX warning (ext4): destination with the same identifier (name
-{id}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
+ already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.297 }
+l.298 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeBernheim.jpg, 
-id=166, 3035.34pt x 4047.12pt>
+id=153, 3035.34pt x 4047.12pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeBernheim.
 jpg Graphic file (type jpg)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeBernheim.j
 pg>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeBernheim.jpg  used on input line 297.
+mages/NodeBernheim.jpg  used on input line 298.
 (pdftex.def)             Requested size: 234.86589pt x 313.15453pt.
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.306 }
+l.307 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeMeadows.jpg, i
-d=167, 1378.14874pt x 2356.805pt>
+d=154, 1378.14874pt x 2356.805pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeMeadows.j
 pg Graphic file (type jpg)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeMeadows.jp
 g>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeMeadows.jpg  used on input line 306.
+mages/NodeMeadows.jpg  used on input line 307.
 (pdftex.def)             Requested size: 234.87099pt x 401.6585pt.
-[6 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeBernheim.jp
-g>] [7 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeMeadows
-.jpg>]pdfTeX warning (ext4): destination with the same identifier (name{id}) ha
-s been already used, duplicate ignored
+[4 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeWrapped(1).
+jpg>] [5 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUnwra
+pped(2).jpg> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeM
+agnet(3).jpg>] [6 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/
+NodeBernheim.jpg>] [7 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/ima
+ges/NodeMeadows.jpg>]pdfTeX warning (ext4): destination with the same identifie
+r (name{id}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.357 }
+l.358 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUSBCover(5).jp
 g, id=182, 3034.33624pt x 3034.33624pt>
@@ -693,13 +696,13 @@ File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUSBCover(
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUSBCover(5
 ).jpg>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeUSBCover(5).jpg  used on input line 357.
+mages/NodeUSBCover(5).jpg  used on input line 358.
 (pdftex.def)             Requested size: 234.83453pt x 234.83453pt.
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.365 }
+l.366 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUSBPort(6).jpg
 , id=183, 2963.07pt x 3028.31375pt>
@@ -708,13 +711,13 @@ File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUSBPort(6
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUSBPort(6)
 .jpg>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeUSBPort(6).jpg  used on input line 365.
+mages/NodeUSBPort(6).jpg  used on input line 366.
 (pdftex.def)             Requested size: 234.83502pt x 240.00584pt.
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.373 }
+l.374 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUSBAdapterIn(8
 ).jpg, id=184, 3034.33624pt x 3034.33624pt>
@@ -723,138 +726,136 @@ rIn(8).jpg Graphic file (type jpg)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUSBAdapter
 In(8).jpg>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeUSBAdapterIn(8).jpg  used on input line 373.
+mages/NodeUSBAdapterIn(8).jpg  used on input line 374.
 (pdftex.def)             Requested size: 234.83453pt x 234.83453pt.
-pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
- already used, duplicate ignored
+[8 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUSBCover(5)
+.jpg>] [9 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUSBP
+ort(6).jpg> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUS
+BAdapterIn(8).jpg>]pdfTeX warning (ext4): destination with the same identifier 
+(name{id}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.390 }
+l.391 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeScrewOut(9).jp
-g, id=185, 3034.33624pt x 3034.33624pt>
+g, id=200, 3034.33624pt x 3034.33624pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeScrewOut(
 9).jpg Graphic file (type jpg)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeScrewOut(9
 ).jpg>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeScrewOut(9).jpg  used on input line 390.
+mages/NodeScrewOut(9).jpg  used on input line 391.
 (pdftex.def)             Requested size: 234.83453pt x 234.83453pt.
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.399 }
+l.400 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeOpen1(10).jpg,
- id=186, 2205.23875pt x 2205.23875pt>
+ id=201, 2205.23875pt x 2205.23875pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeOpen1(10)
 .jpg Graphic file (type jpg)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeOpen1(10).
 jpg>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeOpen1(10).jpg  used on input line 399.
+mages/NodeOpen1(10).jpg  used on input line 400.
 (pdftex.def)             Requested size: 234.87135pt x 234.87135pt.
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.407 }
+l.408 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeCloseUpInterna
-l(12).jpg, id=187, 2770.35pt x 3001.2125pt>
+l(12).jpg, id=202, 2770.35pt x 3001.2125pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeCloseUpIn
 ternal(12).jpg Graphic file (type jpg)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeCloseUpInt
 ernal(12).jpg>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeCloseUpInternal(12).jpg  used on input line 407.
+mages/NodeCloseUpInternal(12).jpg  used on input line 408.
 (pdftex.def)             Requested size: 234.8637pt x 254.43567pt.
-[8 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUSBCover(5)
-.jpg>] [9 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUSBP
-ort(6).jpg> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUS
-BAdapterIn(8).jpg>] [10 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeScrewOut(9).jpg> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentatio
-n/images/NodeOpen1(10).jpg>]
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/nodeClientFolderSe
-lect.png, id=209, 1262.7175pt x 599.23875pt>
+lect.png, id=204, 1262.7175pt x 599.23875pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/nodeClientFol
 derSelect.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/nodeClientFold
 erSelect.png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/nodeClientFolderSelect.png  used on input line 447.
+mages/nodeClientFolderSelect.png  used on input line 448.
 (pdftex.def)             Requested size: 352.3061pt x 167.19136pt.
-pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
- already used, duplicate ignored
+[10 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeScrewOut(9
+).jpg>] [11 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeOp
+en1(10).jpg> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeC
+loseUpInternal(12).jpg>]pdfTeX warning (ext4): destination with the same identi
+fier (name{id}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.459 }
+l.460 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/binSelect.png, id=
-210, 1251.67625pt x 600.2425pt>
+219, 1251.67625pt x 600.2425pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/binSelect.png
  Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/binSelect.png>
 
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/binSelect.png  used on input line 459.
+mages/binSelect.png  used on input line 460.
 (pdftex.def)             Requested size: 352.31956pt x 168.95517pt.
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.468 }
+l.469 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/DebugSelect.png, i
-d=211, 1253.68375pt x 600.2425pt>
+d=220, 1253.68375pt x 600.2425pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/DebugSelect.p
 ng Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/DebugSelect.pn
 g>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/DebugSelect.png  used on input line 468.
+mages/DebugSelect.png  used on input line 469.
 (pdftex.def)             Requested size: 352.31075pt x 168.6804pt.
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.480 }
+l.481 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClientSelect.p
-ng, id=212, 1250.6725pt x 600.2425pt>
+ng, id=221, 1250.6725pt x 600.2425pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClientSel
 ect.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClientSele
 ct.png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeClientSelect.png  used on input line 480.
+mages/NodeClientSelect.png  used on input line 481.
 (pdftex.def)             Requested size: 352.3042pt x 169.08339pt.
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.492 }
+l.493 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient1.png, i
-d=213, 1190.4475pt x 573.14125pt>
+d=222, 1190.4475pt x 573.14125pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient1.p
 ng Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient1.pn
 g>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeClient1.png  used on input line 492.
+mages/NodeClient1.png  used on input line 493.
 (pdftex.def)             Requested size: 352.30518pt x 169.61742pt.
-[11 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeCloseUpInt
-ernal(12).jpg> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/nod
-eClientFolderSelect.png>] [12 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documenta
-tion/images/binSelect.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentatio
-n/images/DebugSelect.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation
-/images/NodeClientSelect.png>]pdfTeX warning (ext4): destination with the same 
-identifier (name{id}) has been already used, duplicate ignored
+[12 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/nodeClientFold
+erSelect.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/binS
+elect.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/DebugSe
+lect.png>]pdfTeX warning (ext4): destination with the same identifier (name{id}
+) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.513 }
+l.514 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient2.png, i
 d=232, 1189.44376pt x 573.14125pt>
@@ -863,13 +864,13 @@ ng Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient2.pn
 g>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeClient2.png  used on input line 513.
+mages/NodeClient2.png  used on input line 514.
 (pdftex.def)             Requested size: 352.31667pt x 169.76608pt.
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.528 }
+l.529 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient3.png, i
 d=233, 1183.42125pt x 569.12625pt>
@@ -878,13 +879,13 @@ ng Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient3.pn
 g>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeClient3.png  used on input line 528.
+mages/NodeClient3.png  used on input line 529.
 (pdftex.def)             Requested size: 352.30243pt x 169.42789pt.
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.541 }
+l.542 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient4.png, i
 d=234, 1185.42876pt x 570.13pt>
@@ -893,13 +894,13 @@ ng Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient4.pn
 g>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeClient4.png  used on input line 541.
+mages/NodeClient4.png  used on input line 542.
 (pdftex.def)             Requested size: 352.32123pt x 169.44832pt.
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.557 }
+l.558 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient5.png, i
 d=235, 1186.4325pt x 571.13374pt>
@@ -908,13 +909,13 @@ ng Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient5.pn
 g>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeClient5.png  used on input line 557.
+mages/NodeClient5.png  used on input line 558.
 (pdftex.def)             Requested size: 352.3118pt x 169.59848pt.
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.570 }
+l.571 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient6.png, i
 d=236, 1185.42876pt x 597.23125pt>
@@ -923,129 +924,130 @@ ng Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient6.pn
 g>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeClient6.png  used on input line 570.
+mages/NodeClient6.png  used on input line 571.
 (pdftex.def)             Requested size: 352.32123pt x 177.50307pt.
-[13 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient1.pn
-g> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient2.png
->] [14 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient3
-.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient4.
-png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient5.p
-ng>]pdfTeX warning (ext4): destination with the same identifier (name{id}) has 
-been already used, duplicate ignored
+[13 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClientSele
+ct.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient
+1.png>] [14 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeCl
+ient2.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeCli
+ent3.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClie
+nt4.png>] [15 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Node
+Client5.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeC
+lient6.png>]pdfTeX warning (ext4): destination with the same identifier (name{i
+d}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.630 }
+l.631 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient7.png, i
-d=257, 1191.45125pt x 568.1225pt>
+d=265, 1191.45125pt x 568.1225pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient7.p
 ng Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient7.pn
 g>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeClient7.png  used on input line 630.
+mages/NodeClient7.png  used on input line 631.
 (pdftex.def)             Requested size: 352.31136pt x 167.99344pt.
-pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
- already used, duplicate ignored
+[16 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient7.pn
+g>]pdfTeX warning (ext4): destination with the same identifier (name{id}) has b
+een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.669 }
+l.670 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient8.png, i
-d=258, 1188.44pt x 569.12625pt>
+d=273, 1188.44pt x 569.12625pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient8.p
 ng Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient8.pn
 g>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeClient8.png  used on input line 669.
+mages/NodeClient8.png  used on input line 670.
 (pdftex.def)             Requested size: 352.30951pt x 168.71577pt.
-[15 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient6.pn
-g>] [16 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient
-7.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient8
-.png>]pdfTeX warning (ext4): destination with the same identifier (name{id}) ha
-s been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
+ already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.690 }
+l.691 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient9.png, i
-d=275, 1188.44pt x 569.12625pt>
+d=274, 1188.44pt x 569.12625pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient9.p
 ng Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient9.pn
 g>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeClient9.png  used on input line 690.
+mages/NodeClient9.png  used on input line 691.
 (pdftex.def)             Requested size: 352.30951pt x 168.71577pt.
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 700.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 701.
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.711 }
+l.712 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient10.png, 
-id=277, 1190.4475pt x 573.14125pt>
+id=276, 1190.4475pt x 573.14125pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient10.
 png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient10.p
 ng>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeClient10.png  used on input line 711.
+mages/NodeClient10.png  used on input line 712.
 (pdftex.def)             Requested size: 352.30518pt x 169.61742pt.
-pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
- already used, duplicate ignored
+[17 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient8.pn
+g> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient9.png
+>]pdfTeX warning (ext4): destination with the same identifier (name{id}) has be
+en already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.726 }
+l.727 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient11.png, 
-id=278, 1191.45125pt x 570.13pt>
+id=287, 1191.45125pt x 570.13pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient11.
 png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient11.p
 ng>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeClient11.png  used on input line 726.
+mages/NodeClient11.png  used on input line 727.
 (pdftex.def)             Requested size: 352.31136pt x 168.58707pt.
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.738 }
+l.739 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient12.png, 
-id=279, 1190.4475pt x 564.1075pt>
+id=288, 1190.4475pt x 564.1075pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient12.
 png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient12.p
 ng>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeClient12.png  used on input line 738.
+mages/NodeClient12.png  used on input line 739.
 (pdftex.def)             Requested size: 352.30518pt x 166.94392pt.
-[17 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient9.pn
-g> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient10.pn
-g>] [18 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient
-11.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient
-12.png>]pdfTeX warning (ext4): destination with the same identifier (name{id}) 
-has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
+ already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.769 }
+l.770 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient13.png, 
-id=298, 1185.42876pt x 570.13pt>
+id=289, 1185.42876pt x 570.13pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient13.
 png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient13.p
 ng>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeClient13.png  used on input line 769.
+mages/NodeClient13.png  used on input line 770.
 (pdftex.def)             Requested size: 352.32123pt x 169.44832pt.
-[19 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient13.p
-ng>] (./CTT-Node-User-Guide.aux)
+[18 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient10.p
+ng> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient11.p
+ng>] [19 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClien
+t12.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClien
+t13.png>] [20] (./CTT-Node-User-Guide.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1053,13 +1055,13 @@ Package rerunfilecheck Info: File `CTT-Node-User-Guide.out' has not changed.
 (rerunfilecheck)             Checksum: E4F1EC79024398615458605E0AD7651F;3032.
  ) 
 Here is how much of TeX's memory you used:
- 10769 strings out of 480559
- 169871 string characters out of 5902114
- 465361 words of memory out of 5000000
- 28076 multiletter control sequences out of 15000+600000
- 458570 words of font info for 71 fonts, out of 8000000 for 9000
+ 11211 strings out of 480236
+ 187519 string characters out of 5894541
+ 463122 words of memory out of 5000000
+ 28845 multiletter control sequences out of 15000+600000
+ 524399 words of font info for 72 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,7n,66p,731b,408s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,7n,63p,731b,397s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{
 /Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</U
 sers/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></
@@ -1073,10 +1075,10 @@ b></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.p
 fb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.
 pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtti1
 0.pfb>
-Output written on CTT-Node-User-Guide.pdf (19 pages, 30972110 bytes).
+Output written on CTT-Node-User-Guide.pdf (20 pages, 30981952 bytes).
 PDF statistics:
- 381 PDF objects out of 1000 (max. 8388607)
- 287 compressed objects within 3 object streams
- 101 named destinations out of 1000 (max. 500000)
- 303 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 387 PDF objects out of 1000 (max. 8388607)
+ 290 compressed objects within 3 object streams
+ 102 named destinations out of 1000 (max. 500000)
+ 308 words of extra memory for PDF output out of 10000 (max. 10000000)
 

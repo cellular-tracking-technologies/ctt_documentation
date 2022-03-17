@@ -1,5 +1,8 @@
 ---
-title: "CTT Radio Tag User Guide"
+title: |
+  ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png){width=3in}  
+  <br />
+  CTT Radio Tag User Guide
 author: "support@celltracktech.com"
 date: "9/22/2021"
 output:

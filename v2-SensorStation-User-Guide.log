@@ -1,33 +1,33 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.8.25)  19 OCT 2021 16:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.3.15)  17 MAR 2022 12:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **v2-SensorStation-User-Guide.tex
 (./v2-SensorStation-User-Guide.tex
-LaTeX2e <2021-06-01> patch level 1
-L3 programming layer <2021-07-12> (/Users/davidlapuma/Library/TinyTeX/texmf-dis
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24> (/Users/davidlapuma/Library/TinyTeX/texmf-dis
 t/tex/latex/base/article.cls
-Document Class: article 2021/02/12 v1.4n Standard LaTeX document class
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count182
-\c@section=\count183
-\c@subsection=\count184
-\c@subsubsection=\count185
-\c@paragraph=\count186
-\c@subparagraph=\count187
-\c@figure=\count188
-\c@table=\count189
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2021/04/20 v2.17j AMS math features
+Package: amsmath 2021/10/15 v2.17l AMS math features
 \@mathmargin=\skip49
 For additional information on amsmath, use the `?' option.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2000/06/29 v2.01 AMS text
+Package: amstext 2021/08/26 v2.01 AMS text
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks16
@@ -36,15 +36,15 @@ File: amsgen.sty 1999/11/30 v2.0 generic functions
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen140
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 2016/03/08 v2.02 operator names
+Package: amsopn 2021/08/26 v2.02 operator names
 )
-\inf@bad=\count190
+\inf@bad=\count193
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count191
-\leftroot@=\count192
+\uproot@=\count194
+\leftroot@=\count195
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count193
-\DOTSCASE@=\count194
+\classnum@=\count196
+\DOTSCASE@=\count197
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -53,15 +53,15 @@ LaTeX Info: Redefining \cdots on input line 620.
 \big@size=\dimen141
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count195
-\c@MaxMatrixCols=\count196
+\macc@depth=\count198
+\c@MaxMatrixCols=\count199
 \dotsspace@=\muskip16
-\c@parentequation=\count197
-\dspbrk@lvl=\count198
+\c@parentequation=\count266
+\dspbrk@lvl=\count267
 \tag@help=\toks17
-\row@=\count199
-\column@=\count266
-\maxfields@=\count267
+\row@=\count268
+\column@=\count269
+\maxfields@=\count270
 \andhelp@=\toks18
 \eqnshift@=\dimen142
 \alignsep@=\dimen143
@@ -73,8 +73,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \multlinegap=\skip50
 \multlinetaggap=\skip51
 \mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2923.
-LaTeX Info: Redefining \] on input line 2924.
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty
@@ -121,7 +121,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
+Package: iftex 2022/02/03 v1.0f TeX engine tests
 )) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifluatex.st
 y
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
@@ -156,31 +156,31 @@ Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 )) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.s
 ty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count268
+\etb@tempcnta=\count271
 )) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Driver file: pdftex.def on input line 227.
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.de
 f
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 )
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
-Package xcolor Info: Model `RGB' extended on input line 1364.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.st
 y
-Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmd
 s.sty
@@ -212,17 +212,12 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen148
-\Hy@linkcounter=\count269
-\Hy@pagecounter=\count270
+\Hy@linkcounter=\count272
+\Hy@pagecounter=\count273
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2022-02-21 v7.00n Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-)
-(/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref-lang
-patches.def
-File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
-nguages
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.st
 y
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
@@ -231,26 +226,26 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 y
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count271
+\Hy@SavedSpaceFactor=\count274
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Option `unicode' set `true' on input line 4073.
-Package hyperref Info: Hyper figures OFF on input line 4192.
-Package hyperref Info: Link nesting OFF on input line 4197.
-Package hyperref Info: Hyper index ON on input line 4200.
-Package hyperref Info: Plain pages OFF on input line 4207.
-Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Option `unicode' set `true' on input line 4018.
+Package hyperref Info: Hyper figures OFF on input line 4137.
+Package hyperref Info: Link nesting OFF on input line 4142.
+Package hyperref Info: Hyper index ON on input line 4145.
+Package hyperref Info: Plain pages OFF on input line 4152.
+Package hyperref Info: Backreferencing OFF on input line 4157.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count272
+Package hyperref Info: Bookmarks ON on input line 4390.
+\c@Hy@tempcnt=\count275
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4804.
+LaTeX Info: Redefining \url on input line 4749.
 \XeTeXLinkMargin=\dimen149
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -260,37 +255,37 @@ c.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count273
+\Fld@menulength=\count276
 \Field@Width=\dimen150
 \Fld@charsize=\dimen151
-Package hyperref Info: Hyper figures OFF on input line 6076.
-Package hyperref Info: Link nesting OFF on input line 6081.
-Package hyperref Info: Hyper index ON on input line 6084.
-Package hyperref Info: backreferencing OFF on input line 6091.
-Package hyperref Info: Link coloring OFF on input line 6096.
-Package hyperref Info: Link coloring with OCG OFF on input line 6101.
-Package hyperref Info: PDF/A mode OFF on input line 6106.
-LaTeX Info: Redefining \ref on input line 6146.
-LaTeX Info: Redefining \pageref on input line 6150.
+Package hyperref Info: Hyper figures OFF on input line 6027.
+Package hyperref Info: Link nesting OFF on input line 6032.
+Package hyperref Info: Hyper index ON on input line 6035.
+Package hyperref Info: backreferencing OFF on input line 6042.
+Package hyperref Info: Link coloring OFF on input line 6047.
+Package hyperref Info: Link coloring with OCG OFF on input line 6052.
+Package hyperref Info: PDF/A mode OFF on input line 6057.
+LaTeX Info: Redefining \ref on input line 6097.
+LaTeX Info: Redefining \pageref on input line 6101.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count274
-\c@Item=\count275
-\c@Hfootnote=\count276
+\Hy@abspage=\count277
+\c@Item=\count278
+\c@Hfootnote=\count279
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
+File: hpdftex.def 2022-02-21 v7.00n Hyperref driver for pdfTeX
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.sty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
-e
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
 with kernel methods
 )
-\Fld@listcount=\count277
-\c@bookmark@seq@number=\count278
+\Fld@listcount=\count280
+\c@bookmark@seq@number=\count281
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfi
 lecheck.sty
@@ -310,9 +305,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count279
-\Gm@cntv=\count280
-\c@Gm@tempcnt=\count281
+\Gm@cnth=\count282
+\Gm@cntv=\count283
+\c@Gm@tempcnt=\count284
 \Gm@bindingoffset=\dimen152
 \Gm@wd@mp=\dimen153
 \Gm@odd@mp=\dimen154
@@ -323,22 +318,22 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutvoffset=\dimen159
 \Gm@dimlist=\toks24
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
-Package: longtable 2021-05-07 v4.16 Multi-page Table package (DPC)
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
 \LTleft=\skip53
 \LTright=\skip54
 \LTpre=\skip55
 \LTpost=\skip56
-\LTchunksize=\count282
+\LTchunksize=\count285
 \LTcapwidth=\dimen160
 \LT@head=\box52
 \LT@firsthead=\box53
 \LT@foot=\box54
 \LT@lastfoot=\box55
 \LT@gbox=\box56
-\LT@cols=\count283
-\LT@rows=\count284
-\c@LT@tables=\count285
-\c@LT@chunks=\count286
+\LT@cols=\count286
+\LT@rows=\count287
+\c@LT@tables=\count288
+\c@LT@chunks=\count289
 \LT@p@ftn=\toks25
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.st
 y
@@ -353,15 +348,15 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen168
 \cmidrulekern=\dimen169
 \defaultaddspace=\dimen170
-\@cmidla=\count287
-\@cmidlb=\count288
+\@cmidla=\count290
+\@cmidlb=\count291
 \@aboverulesep=\dimen171
 \@belowrulesep=\dimen172
-\@thisruleclass=\count289
-\@lastruleclass=\count290
+\@thisruleclass=\count292
+\@lastruleclass=\count293
 \@thisrulewidth=\dimen173
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/tools/array.sty
-Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \col@sep=\dimen174
 \ar@mcellbox=\box57
 \extrarowheight=\dimen175
@@ -371,15 +366,15 @@ Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
 \ar@cellbox=\box58
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count291
-\calc@Bcount=\count292
+\calc@Acount=\count294
+\calc@Bcount=\count295
 \calc@Adimen=\dimen176
 \calc@Bdimen=\dimen177
 \calc@Askip=\skip59
 \calc@Bskip=\skip60
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count293
+\calc@Ccount=\count296
 \calc@Cskip=\skip61
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/mdwtools/footnote.st
 y
@@ -388,11 +383,11 @@ Package: footnote 1997/01/28 1.13 Save footnotes around boxes
 \fn@width=\dimen178
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.st
 y
-Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 )
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.
 cfg
@@ -405,8 +400,8 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 )
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pd
 ftex.def
-File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count294
+File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count297
 \l__pdf_internal_box=\box60
 ) (./v2-SensorStation-User-Guide.aux
 
@@ -421,24 +416,24 @@ LaTeX Warning: Label `id' multiply defined.
 )
 \openout1 = `v2-SensorStation-User-Guide.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-
 base.sty
@@ -451,7 +446,7 @@ ys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 80.
+Package hyperref Info: Link coloring OFF on input line 81.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
@@ -461,11 +456,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 tlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count295
+\c@section@level=\count298
 )
-LaTeX Info: Redefining \ref on input line 80.
-LaTeX Info: Redefining \pageref on input line 80.
-LaTeX Info: Redefining \nameref on input line 80.
+LaTeX Info: Redefining \ref on input line 81.
+LaTeX Info: Redefining \pageref on input line 81.
+LaTeX Info: Redefining \nameref on input line 81.
 (./v2-SensorStation-User-Guide.out) (./v2-SensorStation-User-Guide.out)
 \@outlinefile=\write3
 \openout3 = `v2-SensorStation-User-Guide.out'.
@@ -504,38 +499,46 @@ LaTeX Info: Redefining \nameref on input line 80.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+</Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png, id=2
+77, 301.125pt x 117.43875pt>
+File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png 
+Graphic file (type png)
+<use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png>
+Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
+mages/ctt_logo.png  used on input line 83.
+(pdftex.def)             Requested size: 216.81902pt x 84.5594pt.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
-2.
+3.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
-2.
+3.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-82.
+83.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-82.
+83.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 82.
+(Font)              <12> on input line 83.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 82.
+(Font)              <8> on input line 83.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 82.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 82.
+(Font)              <6> on input line 83.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 83.
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 82.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 83.
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -549,300 +552,299 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 [1
 
 {/Users/davidlapuma/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.ma
-p}])
+p} </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png>])
 \tf@toc=\write4
 \openout4 = `v2-SensorStation-User-Guide.toc'.
 
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 9
-3.
+4.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [2]
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/attention.png, id=
-359, 803.0pt x 581.17125pt>
+374, 803.0pt x 581.17125pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/attention.png
  Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/attention.png>
 
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/attention.png  used on input line 169.
+mages/attention.png  used on input line 170.
 (pdftex.def)             Requested size: 117.43062pt x 84.9904pt.
-[3 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/attention.png>]
-[4]
+[3] [4 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/attention.p
+ng>]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-97.
+98.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-</Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/EMT.png, id=386, 3
+) [5]
+</Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/EMT.png, id=411, 3
 01.125pt x 301.125pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/EMT.png Graph
 ic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/EMT.png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/EMT.png  used on input line 373.
+mages/EMT.png  used on input line 374.
 (pdftex.def)             Requested size: 117.43826pt x 117.43826pt.
-[5]
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/SSinstall.png, id=
-397, 226.8475pt x 345.29pt>
+412, 226.8475pt x 345.29pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/SSinstall.png
  Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/SSinstall.png>
 
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/SSinstall.png  used on input line 390.
+mages/SSinstall.png  used on input line 391.
 (pdftex.def)             Requested size: 117.43869pt x 178.75624pt.
 [6 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/EMT.png> </User
 s/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/SSinstall.png>]
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/nodeClamp.jpg, id=
-406, 513.92pt x 334.24875pt>
+422, 513.92pt x 334.24875pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/nodeClamp.jpg
  Graphic file (type jpg)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/nodeClamp.jpg>
 
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/nodeClamp.jpg  used on input line 440.
+mages/nodeClamp.jpg  used on input line 441.
 (pdftex.def)             Requested size: 117.43845pt x 76.38086pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/nodeBernh.jpg, id=
-407, 385.44pt x 513.92pt>
+423, 385.44pt x 513.92pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/nodeBernh.jpg
  Graphic file (type jpg)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/nodeBernh.jpg>
 
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/nodeBernh.jpg  used on input line 451.
+mages/nodeBernh.jpg  used on input line 452.
 (pdftex.def)             Requested size: 117.43846pt x 156.58461pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeBernh2.jpg, id
-=408, 385.44pt x 513.92pt>
+=424, 385.44pt x 513.92pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeBernh2.jp
 g Graphic file (type jpg)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeBernh2.jpg
 >
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/NodeBernh2.jpg  used on input line 452.
+mages/NodeBernh2.jpg  used on input line 453.
 (pdftex.def)             Requested size: 117.43846pt x 156.58461pt.
 [7 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/nodeClamp.jpg> 
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/nodeBernh.jpg> </U
 sers/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeBernh2.jpg>]
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/SensorStationNodeS
-etup.png, id=419, 550.055pt x 513.92pt>
+etup.png, id=435, 550.055pt x 513.92pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/SensorStation
 NodeSetup.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/SensorStationN
 odeSetup.png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/SensorStationNodeSetup.png  used on input line 491.
+mages/SensorStationNodeSetup.png  used on input line 492.
 (pdftex.def)             Requested size: 117.43698pt x 109.72214pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/WetlandsStation_NJ
-.png, id=420, 320.8788pt x 240.4182pt>
+.png, id=436, 320.8788pt x 240.4182pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/WetlandsStati
 on_NJ.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/WetlandsStatio
 n_NJ.png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/WetlandsStation_NJ.png  used on input line 545.
+mages/WetlandsStation_NJ.png  used on input line 546.
 (pdftex.def)             Requested size: 117.43558pt x 87.98853pt.
 [8 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/SensorStationNo
 deSetup.png>]pdfTeX warning (ext4): destination with the same identifier (name{
 id}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.608 }
+l.609 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/BermudaDualMode.jp
-g, id=436, 447.6725pt x 642.4pt>
+g, id=453, 447.6725pt x 642.4pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/BermudaDualMo
 de.jpg Graphic file (type jpg)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/BermudaDualMod
 e.jpg>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/BermudaDualMode.jpg  used on input line 608.
+mages/BermudaDualMode.jpg  used on input line 609.
 (pdftex.def)             Requested size: 117.43723pt x 168.51979pt.
 [9pdfTeX warning (ext4): destination with the same identifier (name{id}) has be
 en already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.640 
+l.621 
        </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/WetlandsSta
 tion_NJ.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Bermu
 daDualMode.jpg>]pdfTeX warning (ext4): destination with the same identifier (na
 me{id}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.651 }
+l.652 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/MeadowsStation_NJ.
-png, id=447, 283.7802pt x 380.1402pt>
+png, id=464, 283.7802pt x 380.1402pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/MeadowsStatio
 n_NJ.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/MeadowsStation
 _NJ.png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/MeadowsStation_NJ.png  used on input line 651.
+mages/MeadowsStation_NJ.png  used on input line 652.
 (pdftex.def)             Requested size: 117.43748pt x 157.31439pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/diagram_drip-loop.
-jpg, id=448, 350.30875pt x 316.18124pt>
+jpg, id=465, 350.30875pt x 316.18124pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/diagram_drip-
 loop.jpg Graphic file (type jpg)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/diagram_drip-l
 oop.jpg>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/diagram_drip-loop.jpg  used on input line 656.
+mages/diagram_drip-loop.jpg  used on input line 657.
 (pdftex.def)             Requested size: 117.43567pt x 105.99493pt.
 [10 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/MeadowsStation
 _NJ.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/diagram_d
 rip-loop.jpg>]
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/power_out.png, id=
-461, 201.75375pt x 193.72375pt>
+478, 201.75375pt x 193.72375pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/power_out.png
  Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/power_out.png>
 
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/power_out.png  used on input line 689.
+mages/power_out.png  used on input line 690.
 (pdftex.def)             Requested size: 93.94997pt x 90.21066pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/power_in.png, id=4
-62, 206.7725pt x 197.73875pt>
+79, 206.7725pt x 197.73875pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/power_in.png 
 Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/power_in.png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/power_in.png  used on input line 690.
+mages/power_in.png  used on input line 691.
 (pdftex.def)             Requested size: 93.95227pt x 89.84756pt.
 [11 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/power_out.png>
  </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/power_in.png>] [1
 2] [13] [14] [15] [16] [17] [18] [19]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 1716.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 1717.
 [20]
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/motus-logo.png, id
-=623, 276.03125pt x 179.67125pt>
+=639, 276.03125pt x 179.67125pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/motus-logo.pn
 g Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/motus-logo.png
 >
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/motus-logo.png  used on input line 1786.
+mages/motus-logo.png  used on input line 1787.
 (pdftex.def)             Requested size: 46.97522pt x 30.5766pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/BirdsCanadaLogo.pn
-g, id=624, 132.3855pt x 80.811pt>
+g, id=640, 132.3855pt x 80.811pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/BirdsCanadaLo
 go.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/BirdsCanadaLog
 o.png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/BirdsCanadaLogo.png  used on input line 1787.
+mages/BirdsCanadaLogo.png  used on input line 1788.
 (pdftex.def)             Requested size: 46.97798pt x 28.67638pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo_300DPI.jp
-g, id=625, 1164.35pt x 454.69875pt>
+g, id=641, 1164.35pt x 454.69875pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo_300D
 PI.jpg Graphic file (type jpg)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo_300DP
 I.jpg>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/ctt_logo_300DPI.jpg  used on input line 1788.
+mages/ctt_logo_300DPI.jpg  used on input line 1789.
 (pdftex.def)             Requested size: 70.44427pt x 27.5097pt.
 [21 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/motus-logo.png
 > </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/BirdsCanadaLogo.
 png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo_300D
 PI.jpg>] [22] [23]
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/MODEM SERIAL2.jpg,
- id=675, 687.56876pt x 1361.085pt>
+ id=689, 687.56876pt x 1361.085pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/MODEM SERIAL2
 .jpg Graphic file (type jpg)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/MODEM SERIAL2.
 jpg>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/MODEM SERIAL2.jpg  used on input line 2101.
+mages/MODEM SERIAL2.jpg  used on input line 2132.
 (pdftex.def)             Requested size: 117.4307pt x 232.46135pt.
-</Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/U POWER.jpg, id=67
-6, 1188.44pt x 1159.33125pt>
+</Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/U POWER.jpg, id=69
+0, 1188.44pt x 1159.33125pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/U POWER.jpg G
 raphic file (type jpg)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/U POWER.jpg>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/U POWER.jpg  used on input line 2102.
+mages/U POWER.jpg  used on input line 2133.
 (pdftex.def)             Requested size: 117.4365pt x 114.56009pt.
-</Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Battery.png, id=67
-7, 993.7125pt x 1324.95pt>
+</Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Battery.png, id=69
+1, 993.7125pt x 1324.95pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Battery.png G
 raphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Battery.png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/Battery.png  used on input line 2121.
+mages/Battery.png  used on input line 2152.
 (pdftex.def)             Requested size: 187.89757pt x 250.53009pt.
 [24 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/MODEM SERIAL2.
 jpg> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/U POWER.jpg>]
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/PI-HAT EXPANSION.p
-ng, id=689, 827.09pt x 552.0625pt>
+ng, id=709, 827.09pt x 552.0625pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/PI-HAT EXPANS
 ION.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/PI-HAT EXPANSI
 ON.png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/PI-HAT EXPANSION.png  used on input line 2133.
+mages/PI-HAT EXPANSION.png  used on input line 2164.
 (pdftex.def)             Requested size: 234.87753pt x 156.77504pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/EXPANSION.png, id=
-690, 812.03375pt x 551.05875pt>
+710, 812.03375pt x 551.05875pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/EXPANSION.png
  Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/EXPANSION.png>
 
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/EXPANSION.png  used on input line 2146.
+mages/EXPANSION.png  used on input line 2177.
 (pdftex.def)             Requested size: 234.87662pt x 159.39091pt.
 [25 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Battery.png> <
 /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/PI-HAT EXPANSION.pn
 g>]
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ethernetConnected.
-png, id=701, 1606.0pt x 1204.5pt>
+png, id=721, 1606.0pt x 1204.5pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ethernetConne
 cted.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ethernetConnec
 ted.png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/ethernetConnected.png  used on input line 2163.
+mages/ethernetConnected.png  used on input line 2194.
 (pdftex.def)             Requested size: 234.86124pt x 176.14592pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/pimoroni.cominkyph
-at.jpg, id=702, 869.2475pt x 551.05875pt>
+at.jpg, id=722, 869.2475pt x 551.05875pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/pimoroni.comi
 nkyphat.jpg Graphic file (type jpg)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/pimoroni.comin
 kyphat.jpg>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/pimoroni.cominkyphat.jpg  used on input line 2177.
+mages/pimoroni.cominkyphat.jpg  used on input line 2208.
 (pdftex.def)             Requested size: 234.87239pt x 148.89716pt.
 [26 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/EXPANSION.png>
  </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ethernetConnected
 .png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/pimoroni.com
 inkyphat.jpg>]
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Data Management.pn
-g, id=713, 1410.26875pt x 613.29124pt>
+g, id=733, 1410.26875pt x 613.29124pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Data Manageme
 nt.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Data Managemen
 t.png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/Data Management.png  used on input line 2205.
+mages/Data Management.png  used on input line 2236.
 (pdftex.def)             Requested size: 352.30809pt x 153.21013pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/am your Sensor Gno
-me.png, id=714, 598.235pt x 254.9525pt>
+me.png, id=734, 598.235pt x 254.9525pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/am your Senso
 r Gnome.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/am your Sensor
  Gnome.png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/am your Sensor Gnome.png  used on input line 2227.
+mages/am your Sensor Gnome.png  used on input line 2258.
 (pdftex.def)             Requested size: 352.3166pt x 150.14833pt.
 [27 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Data Managemen
 t.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/am your Sen
 sor Gnome.png>]
-Overfull \hbox (2.21536pt too wide) in paragraph at lines 2264--2264
+Overfull \hbox (2.21536pt too wide) in paragraph at lines 2294--2294
 []|\T1/lmr/bx/n/10 Description|  
  []
 
 
-Overfull \hbox (1.33598pt too wide) in paragraph at lines 2265--2265
+Overfull \hbox (1.33598pt too wide) in paragraph at lines 2295--2295
 []|\T1/lmr/bx/n/10 Connection 
  []
 
@@ -852,16 +854,16 @@ LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `v2-SensorStation-User-Guide.out' has not cha
 nged.
-(rerunfilecheck)             Checksum: 59E20EDD22836F0A6B5F98526FA0482B;11866.
+(rerunfilecheck)             Checksum: E04858C3C226DF27A44E5634D307F922;12654.
  ) 
 Here is how much of TeX's memory you used:
- 11393 strings out of 480502
- 177772 string characters out of 5898668
- 489051 words of memory out of 5000000
- 28551 multiletter control sequences out of 15000+600000
- 465514 words of font info for 72 fonts, out of 8000000 for 9000
+ 11896 strings out of 480236
+ 197452 string characters out of 5894541
+ 486529 words of memory out of 5000000
+ 29321 multiletter control sequences out of 15000+600000
+ 531343 words of font info for 73 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,7n,66p,563b,489s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,7n,63p,563b,487s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{
 /Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</U
 sers/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></
@@ -875,10 +877,10 @@ Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><
 ></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pf
 b></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.p
 fb>
-Output written on v2-SensorStation-User-Guide.pdf (30 pages, 12721903 bytes).
+Output written on v2-SensorStation-User-Guide.pdf (30 pages, 12733144 bytes).
 PDF statistics:
- 865 PDF objects out of 1000 (max. 8388607)
- 764 compressed objects within 8 object streams
- 293 named destinations out of 1000 (max. 500000)
- 646 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 886 PDF objects out of 1000 (max. 8388607)
+ 783 compressed objects within 8 object streams
+ 299 named destinations out of 1000 (max. 500000)
+ 675 words of extra memory for PDF output out of 10000 (max. 10000000)
 

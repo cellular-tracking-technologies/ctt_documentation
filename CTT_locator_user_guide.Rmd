@@ -1,5 +1,8 @@
 ---
-title: "CTT Locator User Manual"
+title: |
+  ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png){width=3in}  
+  <br />
+  CTT Locator User Manual
 author: "support@celltracktech.com"
 date: "9/23/2021"
 output:
@@ -356,6 +359,82 @@ Before going out in the field, it helps to practice localizing a tag. Here are a
 |“Low Battery” sign appears or yellow light flashes|Battery is close to being dead, but you will still have some time left.|Charge battery|
 |Not detecting tags, some tags missing|Antenna cable not connected<br><br>Antenna cable damaged<br><br>Tags not transmitting|Connect Antenna<br><br>Replace antenna cable<br><br>Read instructions for LifeTag and PowerTag usage|
 |Can’t access internet|LifeTag base station’s hotspot overrides phone internet connection|Disconnect from WiFi<br><br>Android users should re-enable their mobile data service|
+|Expired Certificate Error| The certificate on the Locator must be updated|Follow the directions below|
+
+### Directions for updating an expired certificate **only if you are receiving an expired certificate warning when attempting to connect your phone or device to the Locator.**
+
+**Fix Date: March 11, 2022**
+
+**Windows**
+
+*Connect to your local internet*
+
+Open `PowerShell`
+
+* Go to:
+	`command -> Run`
+
+* and type in: 
+  `powershell`
+
+To download the update, type in:
+
+```wget http://ctt.works/update.txt -outfile update.txt```
+
+*Now connect to the Locator WiFi*
+
+To copy over the update, type in:
+
+```scp update.txt pi@10.1.1.1:/home/pi/locator.crt```
+
+When prompted for a password, type in:
+
+`celltracktech1`
+
+*(note that you will not see any text response when you type in a password)*
+
+Then, finally, send the locator the instructions to reboot and install the update:
+
+`ssh pi@10.1.1.1 “sudo reboot”`
+
+When prompted for the password, type in:
+
+`celltracktech1 `
+
+Your locator now has received the new certificate update to operate again normally. 
+
+
+**Mac OSX or Linux**
+
+*Connect to your local internet*
+
+Open `Terminal`
+ * On Mac OSX, click the search magnifying glass in the top right of the menu bar and type in `terminal`
+
+To download the update, type in:
+
+`curl http://ctt.works/update.txt >update.txt`
+
+To copy over the update, type in:
+
+`scp update.txt pi@10.1.1.1:/home/pi/locator.crt`
+
+When prompted for a password, type in:
+
+`celltracktech1`
+
+*(note that you will not see any text response when you type in a password)*
+
+Then, finally, send the locator the instructions to reboot and install the update:
+
+`ssh pi@10.1.1.1 “sudo reboot”`
+
+When prompted for the password, type in:
+
+`celltracktech1`
+
+*Your locator now has received the new certificate update to operate normally.*
+
 
 # Final Thoughts
 

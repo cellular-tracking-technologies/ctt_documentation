@@ -1,14 +1,17 @@
 ---
-title: "Guide to Understanding the CTT Web Portal"
+title: |
+  ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png){width=3in}  
+  <br />
+  Guide to Understanding the CTT Web Portal
 author: "support@celltracktech.com"
 date: "11/2/2021"
 output:
-  pdf_document:
-    toc: yes
-    fig_caption: true
   html_document:
     toc: yes
     number_sections: yes
+    fig_caption: true
+  pdf_document:
+    toc: yes
     fig_caption: true
 ---
 

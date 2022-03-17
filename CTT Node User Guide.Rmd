@@ -1,14 +1,17 @@
 ---
-title: "CTT Node User Guide"
+title: |
+  ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png){width=3in}  
+  <br />
+  CTT Node User Guide
 author: "support@celltracktech.com"
 date: "9/22/2021"
 output:
-  html_document:
-    toc: yes
-    number_sections: yes
   pdf_document:
     toc: yes
     fig_caption: true
+  html_document:
+    toc: yes
+    number_sections: yes
 ---
 
 ```{r setup, include=FALSE}

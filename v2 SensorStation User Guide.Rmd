@@ -1,5 +1,8 @@
 ---
-title: "Installation Guide for the CTT SensorStation and CTT Nodes"
+title: |
+  ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png){width=3in}  
+  <br />
+  Installation Guide for the CTT SensorStation and CTT Nodes
 author: "support@celltracktech.com"
 date: "9/23/2021"
 output:

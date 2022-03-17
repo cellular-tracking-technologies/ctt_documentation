@@ -1,37 +1,33 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.8.25)  23 SEP 2021 11:08
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.8.25)  23 SEP 2021 11:06
->>>>>>> 86c7d9f6f17e04d248ea5cc17a57ab359350e351
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.3.15)  17 MAR 2022 12:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **CTT_locator_user_guide.tex
 (./CTT_locator_user_guide.tex
-LaTeX2e <2021-06-01> patch level 1
-L3 programming layer <2021-07-12> (/Users/davidlapuma/Library/TinyTeX/texmf-dis
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24> (/Users/davidlapuma/Library/TinyTeX/texmf-dis
 t/tex/latex/base/article.cls
-Document Class: article 2021/02/12 v1.4n Standard LaTeX document class
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count182
-\c@section=\count183
-\c@subsection=\count184
-\c@subsubsection=\count185
-\c@paragraph=\count186
-\c@subparagraph=\count187
-\c@figure=\count188
-\c@table=\count189
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2021/04/20 v2.17j AMS math features
+Package: amsmath 2021/10/15 v2.17l AMS math features
 \@mathmargin=\skip49
 For additional information on amsmath, use the `?' option.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2000/06/29 v2.01 AMS text
+Package: amstext 2021/08/26 v2.01 AMS text
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks16
@@ -40,15 +36,15 @@ File: amsgen.sty 1999/11/30 v2.0 generic functions
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen140
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 2016/03/08 v2.02 operator names
+Package: amsopn 2021/08/26 v2.02 operator names
 )
-\inf@bad=\count190
+\inf@bad=\count193
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count191
-\leftroot@=\count192
+\uproot@=\count194
+\leftroot@=\count195
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count193
-\DOTSCASE@=\count194
+\classnum@=\count196
+\DOTSCASE@=\count197
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -57,15 +53,15 @@ LaTeX Info: Redefining \cdots on input line 620.
 \big@size=\dimen141
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count195
-\c@MaxMatrixCols=\count196
+\macc@depth=\count198
+\c@MaxMatrixCols=\count199
 \dotsspace@=\muskip16
-\c@parentequation=\count197
-\dspbrk@lvl=\count198
+\c@parentequation=\count266
+\dspbrk@lvl=\count267
 \tag@help=\toks17
-\row@=\count199
-\column@=\count266
-\maxfields@=\count267
+\row@=\count268
+\column@=\count269
+\maxfields@=\count270
 \andhelp@=\toks18
 \eqnshift@=\dimen142
 \alignsep@=\dimen143
@@ -77,8 +73,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \multlinegap=\skip50
 \multlinetaggap=\skip51
 \mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2923.
-LaTeX Info: Redefining \] on input line 2924.
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty
@@ -125,7 +121,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
+Package: iftex 2022/02/03 v1.0f TeX engine tests
 )) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifluatex.st
 y
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
@@ -160,31 +156,31 @@ Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 )) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.s
 ty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count268
+\etb@tempcnta=\count271
 )) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Driver file: pdftex.def on input line 227.
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.de
 f
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 )
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
-Package xcolor Info: Model `RGB' extended on input line 1364.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.st
 y
-Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmd
 s.sty
@@ -216,17 +212,12 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen148
-\Hy@linkcounter=\count269
-\Hy@pagecounter=\count270
+\Hy@linkcounter=\count272
+\Hy@pagecounter=\count273
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2022-02-21 v7.00n Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-)
-(/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref-lang
-patches.def
-File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
-nguages
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.st
 y
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
@@ -235,26 +226,26 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 y
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count271
+\Hy@SavedSpaceFactor=\count274
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Option `unicode' set `true' on input line 4073.
-Package hyperref Info: Hyper figures OFF on input line 4192.
-Package hyperref Info: Link nesting OFF on input line 4197.
-Package hyperref Info: Hyper index ON on input line 4200.
-Package hyperref Info: Plain pages OFF on input line 4207.
-Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Option `unicode' set `true' on input line 4018.
+Package hyperref Info: Hyper figures OFF on input line 4137.
+Package hyperref Info: Link nesting OFF on input line 4142.
+Package hyperref Info: Hyper index ON on input line 4145.
+Package hyperref Info: Plain pages OFF on input line 4152.
+Package hyperref Info: Backreferencing OFF on input line 4157.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count272
+Package hyperref Info: Bookmarks ON on input line 4390.
+\c@Hy@tempcnt=\count275
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4804.
+LaTeX Info: Redefining \url on input line 4749.
 \XeTeXLinkMargin=\dimen149
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -264,37 +255,37 @@ c.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count273
+\Fld@menulength=\count276
 \Field@Width=\dimen150
 \Fld@charsize=\dimen151
-Package hyperref Info: Hyper figures OFF on input line 6076.
-Package hyperref Info: Link nesting OFF on input line 6081.
-Package hyperref Info: Hyper index ON on input line 6084.
-Package hyperref Info: backreferencing OFF on input line 6091.
-Package hyperref Info: Link coloring OFF on input line 6096.
-Package hyperref Info: Link coloring with OCG OFF on input line 6101.
-Package hyperref Info: PDF/A mode OFF on input line 6106.
-LaTeX Info: Redefining \ref on input line 6146.
-LaTeX Info: Redefining \pageref on input line 6150.
+Package hyperref Info: Hyper figures OFF on input line 6027.
+Package hyperref Info: Link nesting OFF on input line 6032.
+Package hyperref Info: Hyper index ON on input line 6035.
+Package hyperref Info: backreferencing OFF on input line 6042.
+Package hyperref Info: Link coloring OFF on input line 6047.
+Package hyperref Info: Link coloring with OCG OFF on input line 6052.
+Package hyperref Info: PDF/A mode OFF on input line 6057.
+LaTeX Info: Redefining \ref on input line 6097.
+LaTeX Info: Redefining \pageref on input line 6101.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count274
-\c@Item=\count275
-\c@Hfootnote=\count276
+\Hy@abspage=\count277
+\c@Item=\count278
+\c@Hfootnote=\count279
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
+File: hpdftex.def 2022-02-21 v7.00n Hyperref driver for pdfTeX
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.sty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
-e
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
 with kernel methods
 )
-\Fld@listcount=\count277
-\c@bookmark@seq@number=\count278
+\Fld@listcount=\count280
+\c@bookmark@seq@number=\count281
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfi
 lecheck.sty
@@ -314,9 +305,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count279
-\Gm@cntv=\count280
-\c@Gm@tempcnt=\count281
+\Gm@cnth=\count282
+\Gm@cntv=\count283
+\c@Gm@tempcnt=\count284
 \Gm@bindingoffset=\dimen152
 \Gm@wd@mp=\dimen153
 \Gm@odd@mp=\dimen154
@@ -327,22 +318,22 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutvoffset=\dimen159
 \Gm@dimlist=\toks24
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
-Package: longtable 2021-05-07 v4.16 Multi-page Table package (DPC)
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
 \LTleft=\skip53
 \LTright=\skip54
 \LTpre=\skip55
 \LTpost=\skip56
-\LTchunksize=\count282
+\LTchunksize=\count285
 \LTcapwidth=\dimen160
 \LT@head=\box52
 \LT@firsthead=\box53
 \LT@foot=\box54
 \LT@lastfoot=\box55
 \LT@gbox=\box56
-\LT@cols=\count283
-\LT@rows=\count284
-\c@LT@tables=\count285
-\c@LT@chunks=\count286
+\LT@cols=\count286
+\LT@rows=\count287
+\c@LT@tables=\count288
+\c@LT@chunks=\count289
 \LT@p@ftn=\toks25
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.st
 y
@@ -357,15 +348,15 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen168
 \cmidrulekern=\dimen169
 \defaultaddspace=\dimen170
-\@cmidla=\count287
-\@cmidlb=\count288
+\@cmidla=\count290
+\@cmidlb=\count291
 \@aboverulesep=\dimen171
 \@belowrulesep=\dimen172
-\@thisruleclass=\count289
-\@lastruleclass=\count290
+\@thisruleclass=\count292
+\@lastruleclass=\count293
 \@thisrulewidth=\dimen173
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/tools/array.sty
-Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \col@sep=\dimen174
 \ar@mcellbox=\box57
 \extrarowheight=\dimen175
@@ -375,15 +366,15 @@ Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
 \ar@cellbox=\box58
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count291
-\calc@Bcount=\count292
+\calc@Acount=\count294
+\calc@Bcount=\count295
 \calc@Adimen=\dimen176
 \calc@Bdimen=\dimen177
 \calc@Askip=\skip59
 \calc@Bskip=\skip60
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count293
+\calc@Ccount=\count296
 \calc@Cskip=\skip61
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/mdwtools/footnote.st
 y
@@ -392,11 +383,11 @@ Package: footnote 1997/01/28 1.13 Save footnotes around boxes
 \fn@width=\dimen178
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.st
 y
-Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 )
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.
 cfg
@@ -409,8 +400,8 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 )
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pd
 ftex.def
-File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count294
+File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count297
 \l__pdf_internal_box=\box60
 ) (./CTT_locator_user_guide.aux
 
@@ -437,24 +428,24 @@ LaTeX Warning: Label `id' multiply defined.
 )
 \openout1 = `CTT_locator_user_guide.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-
 base.sty
@@ -467,7 +458,7 @@ ys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 80.
+Package hyperref Info: Link coloring OFF on input line 81.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
@@ -477,11 +468,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 tlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count295
+\c@section@level=\count298
 )
-LaTeX Info: Redefining \ref on input line 80.
-LaTeX Info: Redefining \pageref on input line 80.
-LaTeX Info: Redefining \nameref on input line 80.
+LaTeX Info: Redefining \ref on input line 81.
+LaTeX Info: Redefining \pageref on input line 81.
+LaTeX Info: Redefining \nameref on input line 81.
 (./CTT_locator_user_guide.out) (./CTT_locator_user_guide.out)
 \@outlinefile=\write3
 \openout3 = `CTT_locator_user_guide.out'.
@@ -520,38 +511,46 @@ LaTeX Info: Redefining \nameref on input line 80.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+</Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png, id=1
+12, 301.125pt x 117.43875pt>
+File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png 
+Graphic file (type png)
+<use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png>
+Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
+mages/ctt_logo.png  used on input line 83.
+(pdftex.def)             Requested size: 216.81902pt x 84.5594pt.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
-2.
+3.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
-2.
+3.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-82.
+83.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-82.
+83.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 82.
+(Font)              <12> on input line 83.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 82.
+(Font)              <8> on input line 83.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 82.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 82.
+(Font)              <6> on input line 83.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 83.
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 82.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 83.
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -565,84 +564,84 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 [1
 
 {/Users/davidlapuma/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.ma
-p}])
+p} </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png>])
 \tf@toc=\write4
 \openout4 = `CTT_locator_user_guide.toc'.
 
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-03.
+04.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [2]
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/antenna1.png, id=1
-64, 594.22pt x 418.56375pt>
+65, 594.22pt x 418.56375pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/antenna1.png 
 Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/antenna1.png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/antenna1.png  used on input line 174.
+mages/antenna1.png  used on input line 175.
 (pdftex.def)             Requested size: 469.77321pt x 330.90442pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/locatorsetup.png, 
-id=165, 654.445pt x 293.095pt>
+id=166, 654.445pt x 293.095pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/locatorsetup.
 png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/locatorsetup.p
 ng>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/locatorsetup.png  used on input line 187.
+mages/locatorsetup.png  used on input line 188.
 (pdftex.def)             Requested size: 469.75208pt x 210.37975pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/diagram.png, id=16
-6, 701.62125pt x 430.60875pt>
+7, 701.62125pt x 430.60875pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/diagram.png G
 raphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/diagram.png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/diagram.png  used on input line 208.
+mages/diagram.png  used on input line 209.
 (pdftex.def)             Requested size: 469.76262pt x 288.30923pt.
-[3 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/antenna1.png>] 
-[4 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/locatorsetup.pn
-g> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/diagram.png>]
+[3 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/antenna1.png>]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-37.
+38.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [5]
+) [4 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/locatorsetup.
+png>] [5 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/diagram.p
+ng>]
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/110702200-37837c80
--81c0-11eb-8b96-cd1b77ff5d68.png, id=193, 687.56876pt x 125.46875pt>
+-81c0-11eb-8b96-cd1b77ff5d68.png, id=195, 687.56876pt x 125.46875pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/110702200-378
 37c80-81c0-11eb-8b96-cd1b77ff5d68.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/110702200-3783
 7c80-81c0-11eb-8b96-cd1b77ff5d68.png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
 mages/110702200-37837c80-81c0-11eb-8b96-cd1b77ff5d68.png  used on input line 29
-4.
+5.
 (pdftex.def)             Requested size: 469.75426pt x 85.72156pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/110702544-a82a9900
--81c0-11eb-84f1-a844e8c9f164.png, id=194, 692.5875pt x 82.3075pt>
+-81c0-11eb-84f1-a844e8c9f164.png, id=196, 692.5875pt x 82.3075pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/110702544-a82
 a9900-81c0-11eb-84f1-a844e8c9f164.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/110702544-a82a
 9900-81c0-11eb-84f1-a844e8c9f164.png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
 mages/110702544-a82a9900-81c0-11eb-84f1-a844e8c9f164.png  used on input line 30
-5.
+6.
 (pdftex.def)             Requested size: 469.76964pt x 55.82768pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/HomeView.png, id=1
-95, 525.965pt x 643.40375pt>
+97, 525.965pt x 643.40375pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/HomeView.png 
 Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/HomeView.png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/HomeView.png  used on input line 358.
+mages/HomeView.png  used on input line 359.
 (pdftex.def)             Requested size: 234.8763pt x 287.32007pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/LocatorMainView.jp
-g, id=196, 1003.75pt x 250.9375pt>
+g, id=198, 1003.75pt x 250.9375pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/LocatorMainVi
 ew.jpg Graphic file (type jpg)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/LocatorMainVie
 w.jpg>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/LocatorMainView.jpg  used on input line 366.
+mages/LocatorMainView.jpg  used on input line 367.
 (pdftex.def)             Requested size: 352.31331pt x 88.07831pt.
 [6 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/110702200-37837
 c80-81c0-11eb-8b96-cd1b77ff5d68.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_do
@@ -651,82 +650,82 @@ X warning (ext4): destination with the same identifier (name{id}) has been alre
 ady used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.376 
+l.377 
        </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/HomeView.pn
 g> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/LocatorMainView
 .jpg>]pdfTeX warning (ext4): destination with the same identifier (name{id}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.382 }
+l.383 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/TagView.png, id=21
-1, 524.96124pt x 457.71pt>
+3, 524.96124pt x 457.71pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/TagView.png G
 raphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/TagView.png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/TagView.png  used on input line 382.
+mages/TagView.png  used on input line 383.
 (pdftex.def)             Requested size: 234.87663pt x 204.7873pt.
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.405 }
+l.406 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/identifyview.png, 
-id=212, 525.965pt x 643.40375pt>
+id=214, 525.965pt x 643.40375pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/identifyview.
 png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/identifyview.p
 ng>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/identifyview.png  used on input line 405.
+mages/identifyview.png  used on input line 406.
 (pdftex.def)             Requested size: 234.8763pt x 287.32007pt.
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.420 }
+l.421 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/favoritesView.png,
- id=213, 520.94624pt x 644.4075pt>
+ id=215, 520.94624pt x 644.4075pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/favoritesView
 .png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/favoritesView.
 png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/favoritesView.png  used on input line 420.
+mages/favoritesView.png  used on input line 421.
 (pdftex.def)             Requested size: 234.87674pt x 290.54117pt.
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.437 }
+l.438 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Search_View.png, i
-d=214, 524.45938pt x 277.035pt>
+d=216, 524.45938pt x 277.035pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Search_View.p
 ng Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Search_View.pn
 g>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/Search_View.png  used on input line 437.
+mages/Search_View.png  used on input line 438.
 (pdftex.def)             Requested size: 234.87617pt x 124.06856pt.
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.451 }
+l.452 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/downloadview.png, 
-id=215, 524.96124pt x 647.41875pt>
+id=217, 524.96124pt x 647.41875pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/downloadview.
 png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/downloadview.p
 ng>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/downloadview.png  used on input line 451.
+mages/downloadview.png  used on input line 452.
 (pdftex.def)             Requested size: 234.87663pt x 289.66621pt.
 [8 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/TagView.png>] [
 9 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/identifyview.png
@@ -737,49 +736,49 @@ w.png>]pdfTeX warning (ext4): destination with the same identifier (name{id}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.477 }
+l.478 }
        
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/settingsview1.png,
- id=239, 523.9575pt x 616.3025pt>
+ id=241, 523.9575pt x 616.3025pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/settingsview1
 .png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/settingsview1.
 png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/settingsview1.png  used on input line 477.
+mages/settingsview1.png  used on input line 478.
 (pdftex.def)             Requested size: 234.87526pt x 276.2709pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/settingsview2.png,
- id=240, 531.9875pt x 649.42625pt>
+ id=242, 531.9875pt x 649.42625pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/settingsview2
 .png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/settingsview2.
 png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/settingsview2.png  used on input line 489.
+mages/settingsview2.png  used on input line 490.
 (pdftex.def)             Requested size: 234.87073pt x 286.71956pt.
 [11 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/settingsview1.
 png>] [12 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/settings
 view2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 543--547
+Underfull \hbox (badness 10000) in paragraph at lines 544--548
 
  []
 
-[13] [14] [15] (./CTT_locator_user_guide.aux)
+[13] [14] [15] [16] (./CTT_locator_user_guide.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `CTT_locator_user_guide.out' has not changed.
 
-(rerunfilecheck)             Checksum: C77001B40F517F3DC18F146D7B4ED263;3823.
+(rerunfilecheck)             Checksum: 2FA5CC9AF712D896A6AB1D1F3C9DBBC7;3823.
  ) 
 Here is how much of TeX's memory you used:
- 11025 strings out of 480502
- 167303 string characters out of 5898668
- 470990 words of memory out of 5000000
- 28381 multiletter control sequences out of 15000+600000
- 453662 words of font info for 68 fonts, out of 8000000 for 9000
+ 11521 strings out of 480236
+ 187047 string characters out of 5894541
+ 469642 words of memory out of 5000000
+ 29147 multiletter control sequences out of 15000+600000
+ 519491 words of font info for 69 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,7n,66p,527b,419s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,7n,63p,783b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{
 /Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</U
 sers/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></
@@ -790,14 +789,10 @@ Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><
 /Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb>
 </Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb
 >
-<<<<<<< HEAD
-Output written on CTT_locator_user_guide.pdf (15 pages, 1227280 bytes).
-=======
-Output written on CTT_locator_user_guide.pdf (15 pages, 1227089 bytes).
->>>>>>> 86c7d9f6f17e04d248ea5cc17a57ab359350e351
+Output written on CTT_locator_user_guide.pdf (16 pages, 1243797 bytes).
 PDF statistics:
- 357 PDF objects out of 1000 (max. 8388607)
- 307 compressed objects within 4 object streams
- 109 named destinations out of 1000 (max. 500000)
- 287 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 365 PDF objects out of 1000 (max. 8388607)
+ 312 compressed objects within 4 object streams
+ 112 named destinations out of 1000 (max. 500000)
+ 292 words of extra memory for PDF output out of 10000 (max. 10000000)
 
