@@ -2,7 +2,10 @@
 title: "template_test"
 author: "support@celltracktech.com"
 date: "10/19/2021"
-output: pdf_document
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
 ---
 
 ```{r setup, include=FALSE}
