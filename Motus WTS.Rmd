@@ -1,22 +1,25 @@
 ---
-title: "Leveraging your CTT Infrastructure with Motus"
+title: |
+  ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png){width=3in}  
+  <br />
+  Leveraging your CTT Infrastructure with Motus
 author: "motus@birdscanada.org"
 date: "6/24/2020"
 output:
-  pdf_document:
-    toc: yes
   html_document:
     toc: yes
     number_sections: yes
+  pdf_document:
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-![](/Users/davidlapuma/Dropbox/MyR/RMarkdown/images/motus-logo.png){#id .class width=20%}
-![](/Users/davidlapuma/Dropbox/MyR/RMarkdown/images/BirdsCanadaLogo.png){#id .class width=20%}
-![](/Users/davidlapuma/Dropbox/MyR/RMarkdown/images/ctt_logo_300DPI.jpg){#id .class width=25%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/motus-logo.png){#id .class width=20%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/BirdsCanadaLogo.png){#id .class width=20%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo_300DPI.jpg){#id .class width=25%}
 
 # The Motus Wildlife Tracking System
 
