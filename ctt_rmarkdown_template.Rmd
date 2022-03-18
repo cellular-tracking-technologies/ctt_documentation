@@ -1,0 +1,20 @@
+---
+title: |
+  ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png){width=3in}  
+  <br />
+  Title Here
+author: "support@celltracktech.com"
+date: "date here"
+output:
+  html_document:
+    toc: yes
+    number_sections: yes
+    fig_caption: true
+  pdf_document:
+    toc: yes
+    fig_caption: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
