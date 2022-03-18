@@ -1,5 +1,8 @@
 ---
-title: "Trap Sensor by Cellular Tracking Technologies User Guide"
+title: |
+  ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png){width=3in}  
+  <br />
+  Trap Sensor User Guide
 author: "support@celltracktech.com"
 date: "4/1/2021"
 output:
@@ -15,7 +18,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-## Introduction
+# Introduction
 
 The Trap Sensor is an ultra low power, long range motion detector that signals the SensorStation whenever movement is detected, such as the force from an animal trap, cage door closure, or mist net. 
 
@@ -25,7 +28,7 @@ The Trap Sensor makes use of LoRa modulation on the 902-928MHz unlicensed band. 
 
 Under normal motion conditions, usage, and signal levels, the Trap Sensor battery will last about a year.
 
-## SensorStation Setup
+# SensorStation Setup
 
 If you are making use of anything other than 434MHz FSK, you will need to use a special receiver dongle. This dongle must be plugged into USB Port 4, otherwise the receiver will not be able to communicate with the installed software. If it has not been pre-installed, you will also need to install the Trap Sensor Receiver Software.
 
@@ -40,7 +43,7 @@ If you have a Trap Sensor Receiver and received one of our custom drilled cases,
 
 Make sure the coaxial connection is connected to your Trap Sensor Receiver, otherwise, the signal will not be received. Connect this Trap Sensor Receiver coaxial antenna to a quality 915MHz antenna (902-928MHz ISM antennas are fine), and place the antenna as high as practically possible. The higher the antenna, the greater the range, as the signal is near line of sight.
 
-## TrapSensor Setup
+# TrapSensor Setup
 
 ![*Trap Sensor*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/trapSensorImg.png){#id .class width=25%}
 
@@ -61,30 +64,30 @@ Make sure that the top is securely attached after installing batteries. While th
 
 It is also good to give the Trap Sensor a shake (similar to the conditions experienced in a real event) and verify it appears on the SensorStation.
 
-## Attaching Your Trap Sensor
+# Attaching Your Trap Sensor
 
 The Trap Sensor can be attached using a variety of methods:
 
 * Placing zip ties through the holes and around the structure of the wire cage
 * Using screws for wood, plastics, and some metals
 
-## SensorStation Pairing
+# SensorStation Pairing
 
 Trap Sensors do not need to be paired with the SensorStation. They are ready for use once deployed. Multiple overlapping receiving networks are possible.
 
-## Operation Tips
+# Operation Tips
 
 Excessive vibration, wind, and other movements can result in errant motion transmissions as well as additional power consumption. While some of these situations are unavoidable, it is important to keep an eye on battery levels until you baseline the power consumption. It is also advised to place batteries while in field to avoid any inadvertent transmissions before deployment. Constant movement, such as during transport, can reduce the battery life.
 
-## Test Transmit
+# Test Transmit
 
 If you wish to force the trap sensor to transmit while in normal operation mode, press the button and hold for a few seconds. The device will transmit as if it received a motion event.
 
-## Over the Air Configuration
+# Over the Air Configuration
 
 After each trap triggering, either by button or by motion, the trap sensor remains on the air for a short period of time waiting for configuration settings to be updated. If no signal is found, the device goes back to sleep and re-arms automatically.
 
-## Entering Coverage Area Testing Mode
+# Entering Coverage Area Testing Mode
 
 The trap sensor can enter a coverage area testing mode on startup. Simply press the button on the device, insert the batteries, and wait until a fading pattern appears. This means the device will enter test mode shortly.
 
@@ -94,7 +97,7 @@ NOTE: A device in Coverage Area Testing Mode will consume all bandwidth on the c
 
 To exit Coverage Area Testing Mode, remove the batteries, and replace them.
 
-## Technical Specifications
+# Technical Specifications
 
 * LoRa (Long Range) Chirp Spread Spectrum Transmitter
 * Can be programmable with user software using standard AVR Studio and Arduino development environments
@@ -111,7 +114,7 @@ To exit Coverage Area Testing Mode, remove the batteries, and replace them.
 * Test button
 * Coverage area testing mode
 
-## LED Pulse Patterns
+# LED Pulse Patterns
 
 | LED Pattern | Meaning|
 |-------------|--------|
@@ -124,7 +127,7 @@ To exit Coverage Area Testing Mode, remove the batteries, and replace them.
 |Slow flash (5x at 500ms) | Maximum transmission retries, SensorStation did not acknowledge |
 |2 flashes at 100ms | Message confirmed from SensorStation|
 
-## Coverage Area Testing Mode LED Patterns
+# Coverage Area Testing Mode LED Patterns
 
 | LED Pattern | Meaning|
 |-------------|--------|
@@ -132,3 +135,8 @@ Constant Solid LED | Device in coverage area
 No LED | Device outside coverage area
 
 Note that it will take a few seconds for the device to detect the presence or absence of the coverage area. It also does consume a bit of power, so be sure to use fresh batteries when you ultimately deploy the device.
+
+# Final Thoughts
+
+This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/support-customer-service-desk/) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2022.
+

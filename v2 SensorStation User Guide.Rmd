@@ -17,8 +17,6 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
-
 ***
 # Before you begin
 
