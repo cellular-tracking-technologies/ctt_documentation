@@ -6,12 +6,12 @@ title: |
 author: "support@celltracktech.com"
 date: "9/22/2021"
 output:
-  html_document:
-    toc: yes
-    number_sections: yes
   pdf_document:
     toc: yes
     fig_caption: true
+  html_document:
+    toc: yes
+    number_sections: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -21,9 +21,9 @@ knitr::opts_chunk$set(echo = TRUE)
 # Introduction
 Currently CTT offers digitally-coded radio tags in three distinct flavors:
 
-1. **LifeTag** - a solar-only tag, this tag is great for diurnally-active species that need the lightest weight available. LifeTags can be as light as 0.35g, and go up from there depending on your species and needs. The most bare-bones tag, plus a flexible tab for harnessing, light nitinol antenna, and enough epoxy coating to protect it from the elements will come in between 0.46 and 0.6g depending on the amount of epoxy. Becuase of their batteryless design, the LifeTag can last for many seasons and years with proper attachment. LifeTag is programmed with a standard 5-second beep rate.
+1. **LifeTag** - a solar-only tag, this tag is great for diurnally-active species that need the lightest weight available. LifeTags can be as light as 0.35g, and go up from there depending on your species and needs. The most bare-bones tag, plus a flexible tab for harnessing, light nitinol antenna, and enough epoxy coating to protect it from the elements will come in between 0.45 and 0.6g depending on the amount of epoxy. Because of their battery-less design, the LifeTag can last for many seasons and years with proper attachment. LifeTag is programmed with a standard 5-second beep rate.
 
-2. **PowerTag** - PowerTag is the *yang* to the LifeTag's *yin*; a battter-only radio tag with a customizable beep rate, this tag is great for the smallest species, those that are only active at night, or those that are not expected to get sun on their backs during the day.
+2. **PowerTag** - PowerTag is the *yang* to the LifeTag's *yin*; a battery-only radio tag with a user-defined beep rate, allowing the user to balance tag longevity and the desired tag weight. this tag is great for the smallest species, those that are only active at night, or those that spend most of their lives under dense cover.
 
 3. **HybridTag** - The Hybrid Tag is the best of both worlds, and the go-to tag for most species. Combining the breakthrough technology of the LifeTag with the benefits of a rechargeable battery results in a very light tag (0.65g with light epoxy coating, flexible attachment tab, and light antenna) that can beep 24-hours a day, last multiple seasons and years, and only requires several hours of sunlight over the course of three days to remain fully charged.
 
@@ -41,7 +41,7 @@ Because there is no battery, deploying a LifeTag is very simple.
 
 2. Record the unique digital IDs for each of your tags.
 
-3. Place your `LifeTag`, solar panel facing up, in a location where it can get some direct light and within detection range of your `SensorStation` (*note: if not using antennas on your SensorStation, make sure nodes are within a meter of the station*) or `CTT Locator`.
+3. Place your `LifeTag`, solar panel facing up, in a location where it can get some direct light and within detection range of your `SensorStation` (*note: if not using antennas on your SensorStation, make sure tags are within a meter of the station*) or `CTT Locator`.
 
 4. If using the locator, power-up and connect your Locator to a smart device following the directions in the Locator User Guide [here] (https://cellular-tracking-technologies.github.io/ctt_documentation/CTT_locator_user_guide.html). 
 
@@ -51,10 +51,28 @@ Because there is no battery, deploying a LifeTag is very simple.
 
 7. You should now see the digital ID of the tag showing up in either the Locator interface on your smart device, or on the radio channels (1 through 5) on the SensorStation Interface on your computer.
  
+# PowerTag QuickStart Guide
+
+PowerTags are a little different in that they operate solely on battery, and therefore need a more precise way to activate and deactivate them. The CTT Activator can be used to do both.
+
+1. Unpack your PowerTag. Note that your PowerTag ships with an 8-digit digital ID sticker. 
+
+2. Record the unique digital IDs for each of your tags.
+
+3. Follow the directions printed on the CTT Activator to activate your PowerTag. 
+
+4. Confirm activation on the Activator by seeing the red beep indicator light flashing at the expected beep rate (the beep rate you selected when placing your order). 
+
+5. If your tag fails to activate at first, try activating in different orientations. The transmitter board is on either side of the tag depending on build, so there are cases when the battery or a thick epoxy may preclude activation from a single orientation; flipping the tag and trying again will usually fix it. All tags are activated and de-activated at the office prior to shipping so there's definitely a correct orientation!
+
+***Note on the Activator***: *If you have issues with your activator, the most common problem is the internal activator battery is too low and need to be recharged. Two options are to either fully charge the battery by plugging in the Activator, or using the Activator while it is plugged into AC power.*
+
+6. It is always best practice to confirm tag detection on either a CTT Locator or a CTT SensorStation. See steps 4-7 under LifeTag QuickStart above.
+
 
 # HybridTag QuickStart Guide
 
-Like the LifeTag above, the HybridTag will beep when sun is hitting the panel, but will switch to battery power when there is no light. The HybridTag comes with a small magnet taped to the back of the tag. The magnet keeps the tag from using the battery to transmit its digital signal. By removing the magnet you will activate the battery and, assuming the battery is charged, you should experience immediate beeping.
+Like the LifeTag, the HybridTag will beep when sun is hitting the panel, but will switch to battery power when there is no light. The HybridTag comes with a small magnet taped to the back of the tag. The magnet keeps the tag from using the battery to transmit its digital signal. By removing the magnet you will activate the battery and, assuming the battery is charged, you should experience immediate beeping.
 
 1. Unpack your HybridTag. Note that your HybridTag ships with an 8-digit digital ID sticker. 
 
@@ -71,23 +89,6 @@ Like the LifeTag above, the HybridTag will beep when sun is hitting the panel, b
 7. You should now see the digital ID of the tag showing up in either the Locator interface on your smart device, or on the radio channels (1 through 5) on the SensorStation Interface on your computer.
 
 8. If the tag fails to beep, and is not in the sun, go ahead and place it in direct sun and see if it then starts to function. If this happens it means that the battery is flat and needs to recharge. Place the magnet back on the tag and place the tag in the sun for several hours to fully recharge. Then repeat the test again, covering the solar panel to ensure that your tag is beeping using battery power.
-
-
-# PowerTag QuickStart Guide
-
-PowerTags are a little different in that they operate solely on battery, and therefore need a more precice way to activate and deactivate them. The CTT Activator can be used to do both.
-
-1. Unpack your PowerTag. Note that your PowerTag ships with an 8-digit digital ID sticker. 
-
-2. Record the unique digital IDs for each of your tags.
-
-3. Follow the directions printed on the CTT Activator to activate your PowerTag. 
-
-4. Confirm activation on the Activator by seeing the red beep indicator light flashing at the expected beep rate (the beep rate you selected when placing your order). 
-
-5. If your tag fails to activate at first, try activating in different orientations. The transmitter board is on either side of the tag depending on build, so there are cases when the battery or a thick epoxy may preclude activation from a single orientation; flipping the tag and trying again will usually fix it. All tags are activated and de-activated at the office prior to shipping so there's definitely a correct orientation!
-
-6. It is always best practice to confirm tag detection on either a CTT Locator or a CTT SensorStation. See steps 4-7 under HybridTag QuickStart above.
 
 
 # Final Thoughts
