@@ -1,5 +1,8 @@
 ---
-title: "ES-420 User Guide: Device Care and Deployment"
+title: |
+  ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png){width=3in}  
+  <br />
+  ES-420 Goose Collar (ES-420 GC) User Guide: Device Care and Deployment
 author: "support@celltracktech.com"
 date: "6/10/2021"
 output:
@@ -111,18 +114,18 @@ https://beta.internetofwildlife.com/
 
 *This section is still under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.*
 
-![](/Users/davidlapuma/Desktop/420 UI Slide 1.png){#id .class width=100%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/420 UI Slide 1.png){#id .class width=100%}
 \newpage
 
 ## Charts Tab
 
 *This section is still under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.*
 
-![](/Users/davidlapuma/Desktop/420 UI Slide 2 Charts.png){#id .class width=100%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/420 UI Slide 2 Charts.png){#id .class width=100%}
 
-![](/Users/davidlapuma/Desktop/420 UI Slide 2.1 Charts Zoom.png){#id .class width=100%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/420 UI Slide 2.1 Charts Zoom.png){#id .class width=100%}
 
-![](/Users/davidlapuma/Desktop/420 UI Slide 2.3 Battery Chart Zoom and Zoom Out Button.png){#id .class width=100%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/420 UI Slide 2.3 Battery Chart Zoom and Zoom Out Button.png){#id .class width=100%}
 
 \newpage
 
@@ -130,7 +133,7 @@ https://beta.internetofwildlife.com/
 
 *This section is still under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.*
 
-![](/Users/davidlapuma/Desktop/420 UI Slide 3 Data Grid.png){#id .class width=100%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/420 UI Slide 3 Data Grid.png){#id .class width=100%}
 
 ## Configuration Tab
 
@@ -142,20 +145,20 @@ This panel shows the **latest configuration** running on the unit **since the la
 
 *This section is still under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.*
 
-![](/Users/davidlapuma/Desktop/420 UI Slide 4 Config.png){#id .class width=100%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/420 UI Slide 4 Config.png){#id .class width=100%}
 \newpage
 
 ## Assignment History Sub-tab
 
 This section is under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.
 
-![](/Users/davidlapuma/Desktop/420 UI Slide 5 Config Assign Hist.png){#id .class width=100%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/420 UI Slide 5 Config Assign Hist.png){#id .class width=100%}
 
 ## Download Tab
 
 *This section is still under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.*
 
-![](/Users/davidlapuma/Desktop/420 UI Slide 6 Download Data.png){#id .class width=100%}
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/420 UI Slide 6 Download Data.png){#id .class width=100%}
 
 
 # Further Support

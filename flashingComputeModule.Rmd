@@ -1,5 +1,8 @@
 ---
-title: "Flashing your SensorStation's Compute Module"
+title: |
+  ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png){width=3in}  
+  <br />
+  Flashing your SensorStation's Compute Module
 author: "support@celltracktech.com"
 date: "9/2/2021"
 output:

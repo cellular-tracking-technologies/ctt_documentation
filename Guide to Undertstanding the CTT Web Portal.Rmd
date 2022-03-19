@@ -2,16 +2,16 @@
 title: |
   ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png){width=3in}  
   <br />
-  Guide to Understanding the CTT Web Portal
+  Guide to the New CTT Web Portal
 author: "support@celltracktech.com"
-date: "11/2/2021"
+date: "03/19/2022"
 output:
+  pdf_document:
+    toc: yes
+    fig_caption: true
   html_document:
     toc: yes
     number_sections: yes
-    fig_caption: true
-  pdf_document:
-    toc: yes
     fig_caption: true
 ---
 
@@ -19,64 +19,150 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Navigating the new ES-420 User Interface (UI) Website
+# The New CTT User Interface (UI) Website
 
 Welcome to the new CTT Web Portal. Currently this portal is dedicated to display of data from the new Evolution Series 420 (ES-420) GPS/GSM transmitters. As this portal is currently in beta, it is very likely that you will be seeing changes happening rapidly over the coming months. Eventually this portal will provide access to all of your transmitters, and allow a unified user interface for everything from our radio products through GPS/GSM and including Satellite (Iridium and Argos). Until then, non-ES-420 devices are still only accessible from https://accounts.celltracktech.com. We apologize for any inconvenience that this may cause, but we are confident that your user experience will be better than ever once we complete the migration to our new server architecture. As always, if you have any questions please don't hesitate to reach out to us via support@celltracktech.com. Happy tracking!
 
-## Logging in
+# Logging in
 
-Well, if you are reading this from the portal, you've already figured it out! Of course, if you haven't yet logged in, you should have received your login credentials in the shipping email sent when your units left our building. This attachment also includes your device IDs. For accessing your ES-420 devices please use the following URL: https://beta.internetofwildlife.com/
-
-## Main Page: My CTT
-
-On the new main page, titled `My CTT`, you'll see several windows, including the current weather at your location (you will need to allow **Location Services** for this to display), and a `Support` window for accessing documentation and other CTT portals including the `Legacy Site`, or https://accounts.celltracktech.com.
-
-![**My CTT** *dashboard*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/420 UI Slide 1.png){#id .class width=100%}    
-
-## Charts Tab
-
-*This section is still under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.*
-
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/420 UI Slide 2 Charts.png){#id .class width=100%}
-
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/420 UI Slide 2.1 Charts Zoom.png){#id .class width=100%}
-
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/420 UI Slide 2.3 Battery Chart Zoom and Zoom Out Button.png){#id .class width=100%}
-
-\newpage
-
-## Data Grid Tab
-
-*This section is still under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.*
-
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/420 UI Slide 3 Data Grid.png){#id .class width=100%}
-
-## Configuration Tab
-
-From the configuration tab you can see both the current configuration loaded on your unit, and the assignment history.
-
-## Current Assignment Sub-tab
-
-This panel shows the **latest configuration** running on the unit **since the last check-in**. <u>**This is important, because newly assigned configs will not update until the check-in following the one where the unit took the config.**</u> 
-
-*This section is still under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.*
-
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/420 UI Slide 4 Config.png){#id .class width=100%}
-\newpage
-
-## Assignment History Sub-tab
-
-This section is under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.
-
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/420 UI Slide 5 Config Assign Hist.png){#id .class width=100%}
-
-## Download Tab
-
-*This section is still under construction and new data will be added imminently. Please check the online version for the most up-to-date user guide.*
-
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/420 UI Slide 6 Download Data.png){#id .class width=100%}
+Well, if you are reading this from the portal, you've already figured it out! Of course, if you haven't yet logged in, you should have received your login credentials in the shipping email sent when your units left our building. This attachment also includes your device IDs. For accessing your ES-420 devices please use the following URL: https://beta.internetofwildlife.com/. Once logged in you will be taken directly to the `Projects` section. There are two other sections also accessible from the main page: `My Devices` and `My CTT`.
 
 
-# Further Support
+# My Devices
 
-*If for any reason you need further support with your Cellular Tracking Technologies ES-420 device, please email support@celltracktech.com or call us during business hours, 9am - 5pm Monday to Friday at 609-889-0305.*
+The `My Devices` page lists all of your CTT transmitters, regardless of project. You can access the transmitter `device panel` from the button at the right end of each transmitter row. Use the page and scroll navigation buttons at the bottom right of the `My Devices` window. Note that if you have multiple projects, it will be easier to navigate through your transmitters using the `Projects` tab described below. For a full overview of the device panel see the `Projects` section below as well.
+
+![*My Devices*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Slide02_beta.png){#id .class width=100%}
+
+# My CTT
+
+The `My CTT` page is a dashboard where you can find local weather, news from CTT, and important links. 
+
+![*My CTT*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Slide03_beta.png){#id .class width=100%}
+
+# Projects
+
+Once logged in you will immediately see your projects. If more than one, you will have a dropdown menu to choose from. Below the project selector will be the units associated with the selected project. In the Project Dashboard view you can see all of your units fram a single project, all placed on a single map.
+
+![*Project Dashboard*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Slide1_Betasite.png){#id .class width=100%}    
+
+To access an individual unit's `device panel`, just click on the blue button under the unit ID number.
+
+![*Select an individual transmitter to view*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/slide2_beta.png){#id .class width=100%}    
+
+Once you click on an individual unit, a new window will appear with a series of tabs to choose from.
+
+![*device panel*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/slide3_beta.png){#id .class width=100%} 
+
+# Device Panel
+
+## Status
+
+The ***Status** tab gives you an overviw of the last connection, battery condition, and the current assigned config
+From the connection details you can see a few things, including the last GPS fix and the time of that fix, the signal strength of the cellular connection, the cellular carrier, and a summary of any data sent. The Battery Voltage is particularly helpful if you are trying to determine whether a unit was able to send data or not. For instance, most units have a battery cutoff value, below which the GPS will not turn on, and a lower cutoff for the cellular modem For exmaple, a typical unit will have a GPS cutoff at 3.7V, and a cellular cutoff at 3.6V. If a battery drops to 3.68V the GPS will not turn on, but the unit will still attempt to connect via cellular, producing a connection with zero GPS fixes. To protect the unit battery, the unit must recharge at least 0.15V above the cutoff (to 3.85V in this example) before the GPS will be activated again. The battery graph gives you the ability to see how your unit is performing at-a-glance, and explains and gaps in data you might be seeing. For greater detail, though, you'll want to click on the `Charts` tab.
+
+## Map
+
+The ***Map*** tab displays the last 1000 fixes.
+
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/slide4_beta.png){#id .class width=100%} 
+The map starts zoomed out, but you can zoom in by holding down `ctrl` and scrolling with your mouse or trackpad. Alternatively you can use the `+` and `-` buttons on the right side of the map. 
+
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/slide5_beta.png){#id .class width=100%} 
+As you zoom in you will see more details and the numerical clusters of points will begin to display as individuals connected by lines. 
+
+Clicking on an individual point will give you the metadata of that fix.
+
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/slide6_beta.png){#id .class width=100%} 
+
+## Charts
+
+The Charts Tab gives you access to three graphs:
+
+* Device Activity and Environmental Condition
+  * `Activity Index`: a **unitless** statistic calculated by summarizing triaxial ACC data.
+  * `Altitude`: measured in **meters** above ground level (AGL)
+  * `Temperature`: Temperature of the unit, measured in **Celsius**
+  
+* Battery Voltage
+  * `Battery Voltage`
+  * `Solar Voltage (energy coming into the solar panel)`
+  * `Solar Current (energy going into the battery)`
+  
+* GPS
+  * `Fix Time`: the time, in **seconds**, required to collect the fix.
+  * `Satellite Count`: the number of satellites used to calculate the fix.
+
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/slide7_beta.png){#id .class width=100%} 
+
+## Weather 
+
+The `Weather` tab gives you local weather forecast for the last known GPS location of the transmitter. This is a nice way to predict how much solar exposure your tags may receive over the next 48 hours to a week. This can be helpful if you're considering updating your config to conserve battery, or if blue skies are ahead, to increase data collection!
+
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/slide8_beta.png){#id .class width=100%} 
+
+## Data Grid
+
+The `Data Grid` is where you can view all of your data in a tabular format. The fields are as follows:
+
+* `Time of Fix` : The date/time stamp of the GPS fix
+* `Lat` : Latitude in decimal degrees (WGS84)
+* `Lng` : Longitude in decimal degrees (WGS84)
+* `Altitude` : Altitude in meters
+* `Speed` : Speed in knots
+* `COG` : Course over ground in degrees
+* `HDOP` : Horizontal dilution of precision (a measure of horizontal variance)
+* `VDOP` : Vertical dilution of precision (a measure of vertical variance)
+* `PDOP` : Position (3D) dilution of precision (for more information on Dilution of Precision, see [here](https://en.wikipedia.org/wiki/Dilution_of_precision_(navigation))
+* `Satellite Count` : The number of available satellites during the GPS fix
+* `Fix Time` : The time, in seconds, needed to get the GPS fix
+* `Error` : A coded value. (0) = No Error...
+* `Nav Type` : The quality of the GPS fix. (3) = 3D, (2) = 2D, and (1) = None
+* `Activity Index` : A unitless summary statistics of activity
+* `Battery` : The battery voltage in mV
+* `Charge` : The voltage being recorded from the solar panel, in mV. Generally, the charge must be > 5V to push current into the battery.
+* `Solar Current` : The current being pushed from the solar panel into the battery, in mA. Generally, the current must be > 10mA to be effectively charging the battery. Note that if a battery is already above the charge threshold, avaiable solar current will not corrospond to an increase in battery voltage.
+* `Temp` : Temperature in Celsius
+* `Cellular Connection` : The date/time stamp of the cellular connection. Note this may be the same for many GPS fixes as they are all transmitted over the single connection.
+* `id (imei)` : The unit ID #
+* `alias` : the user-assigned alias for the device. The default is the `id (imei)` value unless set by the user.
+
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/slide9_beta.png){#id .class width=100%} 
+
+## Alias
+
+Here the user can specify an alias name for the transmitter. This is particularly useful for entering unique information about the animal being tagged, and differentiating between deployed and undeployed units.
+
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/slide10_beta.png){#id .class width=100%} 
+
+## Configuration
+
+The `Configuration` tab provides you will information on the current assigned configuration, as well as a button for the configuration history. 
+
+### Current Assignment
+
+* `Modem Checkin UTC` : The time (24hr) when the unit is scheduled to send data over the cellular network, in UTC time.
+* `Modem Battery Threshold` : The battery voltage below which the unit will not connect over cellular.
+* `Modem Days Of Week` : The days of the week that the unit is scheduled to send data over cellular (in this case, daily).
+* `GPS Interval 1` : One of three user-defined GPS schedules, made up of the GPS interval (in this case every 120 minutes) and the battery cutoff (in this case, when above 3.70V)
+* `GPS Interval 2` : Two of three user-defined GPS schedules, made up of the GPS interval (in this case every 360 minutes) and the battery cutoff (in this case, when above 3.66V, but below 3.70V)
+* `GPS Interval 3` : Three of three user-defined GPS schedules, made up of the GPS interval (in this case every 720 minutes) and the battery cutoff (in this case, when above 3.60V, but below 3.66V)
+* `GPS Days Of Week` : The days of the week when GPS fixes are scheduled to be taken (in this case, daily).
+
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/slide11_beta.png){#id .class width=100%} 
+
+### Assignment History
+
+The `Assignment History` shows when configs were assigned, who they were assigned by, and when they were delivered to the unit. 
+
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/slide12_beta.png){#id .class width=100%} 
+
+## Download
+
+The `Download` tab allows you to download a date range of your data from a single transmitter, to a CSV file. **Be sure to enter both a valid start and end date** before pressing the `Download Data` button. 
+
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/slide13_beta.png){#id .class width=100%} 
+
+# Final Thoughts
+
+This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/support-customer-service-desk/) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2022.
