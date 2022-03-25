@@ -4,13 +4,13 @@ title: |
   <br />
   Installation Guide for the CTT SensorStation and CTT Nodes
 author: "support@celltracktech.com"
-date: "9/23/2021"
+date: "03/25/2022"
 output:
+  pdf_document:
+    toc: yes
   html_document:
     toc: yes
     number_sections: yes
-  pdf_document:
-    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -320,7 +320,7 @@ To manually download data via USB, do the following:
 3. Use the `BACK` button to go up to the `File Transfer` menu, and select `Download`. A successful download will be followed by a success message.
 4. Use the `Back` button to go up to the `File Transfer` menu and select `Unmount USB`. Once you receive the success message you may remove the USB drive from the SensorStation which will now contain a copy of all the files from the station.
 
-**Note: there are two known bugs in the USB manual download system. See the [Known Bugs](#known-bugs) section below. 
+**Note: until February 2022 there were two known bugs in the USB manual download system. These have been rectified but any stations sold prior to February 2022 and not updated since, will require an update to realize the full functionality of the USB downoad. See the [Known Bugs](#known-bugs) section below. 
 
 ## What's in the folder?
 
@@ -357,6 +357,27 @@ And two folders:
   * `SGData` - contains any 166MHz data collected by your station.
   * `uploaded` - contains any 434MHz data that has been previously uploaded to CTT servers.
   
+***
+# Downloading your data via the command line
+
+If you can connect directly to your station via USB->Ethernet or WiFi, you can run a single line command to securely copy all files in the `Data` folder on your SensorStation, to a local file on your computer. This includes all of the data files mentioned in the previous section.
+
+The syntax is made of the following parts:
+
+* `scp` : Secure Copy 
+* `-r` : the flag for recursive, so that it securely copies all of the files, and folders, within the designated folder
+* pi@xxx.xxx.xxx.xxx : this designates the Raspberry Pi on the SensorStation, at the specific IP address. The `x`'s represent the IP address of your specific SensorStation.
+* `:/data` : this states that you'd like to copy the `data` folder that's in the root directory of the Raspberry Pi on your SensorStation (this is the file that contains all of the data- both CTT and SensorGnome)
+* ` . ` : did you see that little period there? It has a space before it- make sure you include the space! The period just means that when you do this  `recursive` `secure copy` of all the files within the `data` folder on your SensorStation, you want to copy them **right where you are**. So whatever folder you are in when you started the command line, that's where it's going to go. That gives us this final command line code:
+
+`scp -r pi@xxx.xxx.xxx.xxx:/data .`
+
+if you'd rather designate a destination folder, simply replace the final ` .` with the path of your choice. For example:
+
+`scp -r pi@10.1.10.113:/data c:/Users/joeschmoscomputer/Downloads`
+
+This would download the `data` folder from the SensorStation, to the `Downloads` folder on the local computer.
+
 ***
 
 # Connecting to your SensorStation Web Interface
@@ -639,8 +660,8 @@ Reboots the system.
 
 # Known Bugs
 
-1. Download via USB does not include SensorGnome files. To get these files manually, use the direct-connect method via USB->Ethernet and access via the web interface.
-2. Download via USB does not include any data previously uploaded remotely. To get these files manually, use the direct-connect method via USB->Ethernet and access via the web interface.
+1. For stations not updated since February 2022, download via USB does not include SensorGnome files. To get these files manually, use the direct-connect method via USB->Ethernet and access via the web interface. If you can update your SensorStation you will gain the full functionality of the USB download system.
+2. Download via USB does not include any data previously uploaded remotely. To get these files manually, use the direct-connect method via USB->Ethernet and access via the web interface. If you can update your SensorStation you will gain the full functionality of the USB download system.
 
 ***
 # Final Thoughts
