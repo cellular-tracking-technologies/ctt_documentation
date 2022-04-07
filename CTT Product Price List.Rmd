@@ -6,11 +6,11 @@ title: |
 author: "sales@celltracktech.com"
 date: "4/7/2022"
 output:
-  pdf_document:
-    toc: no
   html_document:
     toc: no
     number_sections: no
+  pdf_document:
+    toc: no
 ---
 
 ```{r setup, include=FALSE}
