@@ -382,7 +382,7 @@ This would download the `data` folder from the SensorStation, to the `Downloads`
 
 # Connecting to your SensorStation Web Interface
 
-Your SensorStation has a web server running locally on the RaspberryPi, which means you can interact with your station by directly connecting via Ethernet or through a wireless connection. **Note that this is different than viewing your SensorStation via the CTT Web Portal**. The SensorStation Interface provides an overview of your station's operation, including real-time statistics on detections of tags and nodes, as well as controls to change settings, update your SensorStation software, toggle the GSM modem, and reboot the station. It is always best practice to connect directly to your SensorStation prior to deployment. From here you can run a station update, ensure your antennas are tuned to the expected task (detecting Nodes or Tags) and see in real-time that your station is detecting either as expected.
+Your SensorStation has a web server running locally on the Raspberry Pi, which means you can interact with your station by directly connecting via Ethernet or through a wireless connection. **Note that this is different than viewing your SensorStation via the CTT Web Portal**. The SensorStation Interface provides an overview of your station's operation, including real-time statistics on detections of tags and nodes, as well as controls to change settings, update your SensorStation software, toggle the GSM modem, and reboot the station. It is always best practice to connect directly to your SensorStation prior to deployment. From here you can run a station update, ensure your antennas are tuned to the expected task (detecting Nodes or Tags) and see in real-time that your station is detecting either as expected.
 
 ## Connecting via Ethernet Cable
 
@@ -431,7 +431,9 @@ This will give you a list of all of the connected devices.
 
 `ssh pi@xxx.xxx.xxx.xxx` (where the x’s represent your SensorStation IP address) 
 
-6. Answer `yes` to any dialogues, and when prompted for the password, the default password is `raspberry`.
+6. Answer `yes` to any dialogues, and when prompted for the password, enter the password for the Raspberry Pi 
+
+*The default is `raspberry` but all 2022 stations have been changed to `ctt-sensor`. Note if `raspberry` works for you, you can change your password via the `raspi-config` you will access in the next step. Just choose `change password` instead of `Network Options` below.*
 
 7. At this point you should be in the Secure Shell within your Raspberry Pi. From here issue the following command:
 
