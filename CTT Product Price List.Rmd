@@ -7,7 +7,7 @@ author: "sales@celltracktech.com"
 date: "4/7/2022"
 output:
   pdf_document:
-    toc: yes
+    toc: no
   html_document:
     toc: no
     number_sections: no
@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = TRUE)
 # GPS/Cellular & Argos Hybrid Transmitters
 
 |**CATEGORY** |**MODEL** |**1-9 Units** |**10-19 Units (10% Discount)** |**20+ Units (20% Discount)** |
-:----- |:-------- |:---: |:---: |:---: |
+:------- |:-------- |:---: |:---: |:---: |
 |Argos Doppler Solar|ES-100|$1000|$900|$800|
 |Argos + GPS + UHF Radio|ES-150|1$800|$1620|$1440|
 |Argos + GPS + UHF Radio|ES-150 Patagial with bolts (large)|$1900|$1710|$1520|
@@ -50,7 +50,6 @@ knitr::opts_chunk$set(echo = TRUE)
 Need a special case for your study species? Many studies can achieve their goal with one of our field-tested attachment styles, but we also work with many researchers who need custom solutions. Get in touch with us, and for a reasonable fee we can develop the custom solution you need.
 
 ***
-***
 
 ## GSM Data Plans
 
@@ -63,14 +62,15 @@ For over a decade, CTT has negotiated the best GSM rates for the data you need c
 |Unlimited|*Includes GPS duty cycles < 5-min frequency + custom ACC data collection* |$360/year|
 
 ***
-***
+
+\newpage
 
 # Digitally Coded Radio Products
 
 ## Tags
 
-|**Category** |**Model** |**< 20 UNITS** |**20+ Units (5% Discount)** |**30+ Units (10% Discount)** |
-|:---- |:--- |:---: |:---: |:---: |
+|**Category** |**Model** |**<20** |**20-29 (5% discount)** |**30+ (10% discount)** |
+|:----- |:--- |:---: |:---: |:---: |
 |Coded Digital Radio Tag|CTT LifeTag|$200.00|$190.00|$180.00|
 |Coded Digital Radio Tag|CTT PowerTag|	$200.00|$190.00|$180.00|
 |Coded Digital Radio Tag|CTT HybridTag|$250.00|$237.50|$225.00|
@@ -78,7 +78,7 @@ For over a decade, CTT has negotiated the best GSM rates for the data you need c
 ## Receivers
 
 |**Category** |**Model** |**Price**|
-|:---- |:--- |:---: |
+|:----- |:------- |:---: |
 |Coded Digital Radio Receiver|CTT SensorStation 16GB v.2.0|$889.00|
 |Coded Digital Radio Receiver|CTT SensorStation 16GB v.2.0 w/ LTE Modem Installed|$939.00|
 |Coded Digital Radio Receiver|CTT SensorStation 16GB v.2.0 w/ Iridium Satellite Modem Installed|$1,389.00|
@@ -103,7 +103,6 @@ A network isn't a network unless it's connected, so from the ground up, we’ve 
 *Please do not hesitate to reach out to us with any questions: sales@celltracktech.com*
 
 *** 
-***
 
 ### Validity and Price Guarantee
 
