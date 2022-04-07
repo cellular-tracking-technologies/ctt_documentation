@@ -6,11 +6,11 @@ title: |
 author: "sales@celltracktech.com"
 date: "4/7/2022"
 output:
-  pdf_document:
-    toc: no
   html_document:
     toc: no
     number_sections: no
+  pdf_document:
+    toc: no
 ---
 
 ```{r setup, include=FALSE}
@@ -24,10 +24,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 |**CATEGORY** |**MODEL** |**1-9 Units** |**10-19 Units (10% Discount)** |**20+ Units (20% Discount)** |
 :------- |:-------- |---: |---: |---: |
-|Argos Doppler Solar|ES-100|$1,000|$900|$800|
 |Argos + GPS + UHF Radio|ES-150|$1,800|$1,620|$1,440|
 |Argos + GPS + UHF Radio|ES-150 Patagial with bolts (large)|$1,900|$1,710|$1,520|
-|GPS + UHF Radio|ES-200|$500|$450|$400|
+|GPS + UHF Radio|ES-200|$1,000|$900|$800|
 |GPS/GSM|ES-420 Ultralight backpack (9-11.5g)|$1,600|$1,440|$1,280|
 |GPS/GSM|ES-420 backpack (12-15g)|$1,250|$1,125|$1,000|
 |GPS/GSM|ES-400 (standard backpack, starting at 20 grams)|$1,250|$1,125|$1,000|
