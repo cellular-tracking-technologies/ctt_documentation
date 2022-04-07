@@ -6,11 +6,11 @@ title: |
 author: "sales@celltracktech.com"
 date: "4/7/2022"
 output:
+  pdf_document:
+    toc: no
   html_document:
     toc: no
     number_sections: no
-  pdf_document:
-    toc: no
 ---
 
 ```{r setup, include=FALSE}
@@ -23,27 +23,27 @@ knitr::opts_chunk$set(echo = TRUE)
 # GPS/Cellular & Argos Hybrid Transmitters
 
 |**CATEGORY** |**MODEL** |**1-9 Units** |**10-19 Units (10% Discount)** |**20+ Units (20% Discount)** |
-:------- |:-------- |:---: |:---: |:---: |
-|Argos Doppler Solar|ES-100|$1000|$900|$800|
-|Argos + GPS + UHF Radio|ES-150|1$800|$1620|$1440|
-|Argos + GPS + UHF Radio|ES-150 Patagial with bolts (large)|$1900|$1710|$1520|
+:------- |:-------- |---: |---: |---: |
+|Argos Doppler Solar|ES-100|$1,000|$900|$800|
+|Argos + GPS + UHF Radio|ES-150|$1,800|$1,620|$1,440|
+|Argos + GPS + UHF Radio|ES-150 Patagial with bolts (large)|$1,900|$1,710|$1,520|
 |GPS + UHF Radio|ES-200|$500|$450|$400|
-|GPS/GSM|ES-420 Ultralight backpack (9-11.5g)|$1600|$1440|$1280|
-|GPS/GSM|ES-420 backpack (12-15g)|$1250|$1125|$1000|
-|GPS/GSM|ES-400 (standard backpack, starting at 20 grams)|$1250|$1125|$1000|
-|GPS/GSM|ES-400 Crane Leg Mount|$1350|$1215|$1080|
-|GPS/GSM|ES-400 Goose Neck Collar|$1300|$1170|$1040|
-|GPS/GSM|ES-400 Patagial without bolts (medium)|$1250|$1125|$1000|
-|GPS/GSM|ES-400 Patagial without bolts (large)|$1250|$1125|$1000|
-|GPS/GSM|ES-400 Patagial with bolts (medium)|$1350|$1215|$1080|
-|GPS/GSM|ES-400 Patagial with bolts (large)|$1350|$1215|$1080|
-|GPS/GSM + Argos Hybrid|ES-500 (standard backpack starting at 30 grams)|$2500|$2250|$2000|
-|GPS/GSM + Argos Hybrid|ES-500 Crane Leg Mount|$2600|$2340|$2080|
-|GPS/GSM + Argos Hybrid|ES-500 Goose Neck Collar|$2550|$2295|$2040|
-|GPS/GSM + Argos Hybrid|ES-500 Patagial without bolts (medium)|$2500|$2250|$2000|
-|GPS/GSM + Argos Hybrid|ES-500 Patagial without bolts (large)|$2500|$2250|$2000|
-|GPS/GSM + Argos Hybrid|ES-500 Patagial with bolts (medium)|$2600|$2340|$2080|
-|GPS/GSM + Argos Hybrid|ES-500 Patagial with bolts (large)|$2600|$2340|$2080|
+|GPS/GSM|ES-420 Ultralight backpack (9-11.5g)|$1,600|$1,440|$1,280|
+|GPS/GSM|ES-420 backpack (12-15g)|$1,250|$1,125|$1,000|
+|GPS/GSM|ES-400 (standard backpack, starting at 20 grams)|$1,250|$1,125|$1,000|
+|GPS/GSM|ES-400 Crane Leg Mount|$1,350|$1,215|$1,080|
+|GPS/GSM|ES-400 Goose Neck Collar|$1,300|$1,170|$1,040|
+|GPS/GSM|ES-400 Patagial without bolts (medium)|$1,250|$1,125|$1,000|
+|GPS/GSM|ES-400 Patagial without bolts (large)|$1,250|$1,125|$1,000|
+|GPS/GSM|ES-400 Patagial with bolts (medium)|$1,350|$1,215|$1,080|
+|GPS/GSM|ES-400 Patagial with bolts (large)|$1,350|$1,215|$1,080|
+|GPS/GSM + Argos Hybrid|ES-500 (standard backpack starting at 30 grams)|$2,500|$2,250|$2,000|
+|GPS/GSM + Argos Hybrid|ES-500 Crane Leg Mount|$2,600|$2,340|$2,080|
+|GPS/GSM + Argos Hybrid|ES-500 Goose Neck Collar|$2,550|$2,295|$2,040|
+|GPS/GSM + Argos Hybrid|ES-500 Patagial without bolts (medium)|$2,500|$2,250|$2,000|
+|GPS/GSM + Argos Hybrid|ES-500 Patagial without bolts (large)|$2,500|$2,250|$2,000|
+|GPS/GSM + Argos Hybrid|ES-500 Patagial with bolts (medium)|$2,600|$2,340|$2,080|
+|GPS/GSM + Argos Hybrid|ES-500 Patagial with bolts (large)|$2,600|$2,340|$2,080|
 
 ### Case Customization
 
@@ -70,7 +70,7 @@ For over a decade, CTT has negotiated the best GSM rates for the data you need c
 ## Tags
 
 |**Category** |**Model** |**<20** |**20-29 (5% discount)** |**30+ (10% discount)** |
-|:----- |:--- |:---: |:---: |:---: |
+|:----- |:--- |---: |---: |---: |
 |Coded Digital Radio Tag|CTT LifeTag|$200.00|$190.00|$180.00|
 |Coded Digital Radio Tag|CTT PowerTag|	$200.00|$190.00|$180.00|
 |Coded Digital Radio Tag|CTT HybridTag|$250.00|$237.50|$225.00|
@@ -78,7 +78,7 @@ For over a decade, CTT has negotiated the best GSM rates for the data you need c
 ## Receivers
 
 |**Category** |**Model** |**Price**|
-|:----- |:------- |:---: |
+|:----- |:------- |---: |
 |Coded Digital Radio Receiver|CTT SensorStation 16GB v.2.0|$889.00|
 |Coded Digital Radio Receiver|CTT SensorStation 16GB v.2.0 w/ LTE Modem Installed|$939.00|
 |Coded Digital Radio Receiver|CTT SensorStation 16GB v.2.0 w/ Iridium Satellite Modem Installed|$1,389.00|
