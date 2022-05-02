@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.3.18)  2 MAY 2022 13:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.3.18)  2 MAY 2022 13:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1060,12 +1060,12 @@ ng>] [20] (./CTT-Node-User-Guide.aux)
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `CTT-Node-User-Guide.out' has not changed.
-(rerunfilecheck)             Checksum: 8ED551876D3D2264E3B943018E4AE4F7;3882.
+(rerunfilecheck)             Checksum: D27B22A0C9E42E81D888346CDD3EC39B;3887.
  ) 
 Here is how much of TeX's memory you used:
  11233 strings out of 480236
- 187909 string characters out of 5894541
- 463326 words of memory out of 5000000
+ 187911 string characters out of 5894541
+ 463327 words of memory out of 5000000
  28851 multiletter control sequences out of 15000+600000
  524399 words of font info for 72 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191

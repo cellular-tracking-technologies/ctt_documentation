@@ -6,12 +6,12 @@ title: |
 author: "support@celltracktech.com"
 date: "5/2/2022"
 output:
-  html_document:
-    toc: yes
-    number_sections: yes
   pdf_document:
     toc: yes
     fig_caption: true
+  html_document:
+    toc: yes
+    number_sections: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -147,7 +147,7 @@ The Micro USB port is also apparent in the lower right side of the board, and la
 # Updating your Node Firmware
 If you want to, or need to, update your Node's firmware, you can do this in one of two ways.
 
-## Option #1 : Direct file transfer to SD Card
+## Option #1 : Direct File Transfer via SD Card
 
 With the node open:
 
