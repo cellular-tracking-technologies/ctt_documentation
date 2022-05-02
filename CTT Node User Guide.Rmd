@@ -144,6 +144,29 @@ On the board you will notice several buttons. Pressing them has the correspondin
 
 The Micro USB port is also apparent in the lower right side of the board, and labled `USB`. You can use this port to connect your node directly to a computer.
 
+# Updating your Node Firmware
+If you want to, or need to, update your Node's firmware, you can do this in one of two ways.
+
+## Option #1 : Direct file transfer to SD Card
+
+With the node open:
+
+1. Remove the SD card
+2. Put the SD card into a card reader connected to a computer
+3. Copy the latest firmware file (downloadable from the `#ctt_nodes` channel in `Slack`) titled `node3.firmware` to the SD card
+4. Re-insert the SD card into the Node
+5. Long-press the `SW3` button on the board to initiate firmware update
+6. Confirm firmware update either by:
+  * Connecting directly to the Node via Node Client (see section below on Node Client)
+  * Checking your SensorStation Node List at the top of the SensorStation Interface after ~6 minutes (Node Health files are sent every 5 minutes)
+  * Download `Current Data` from the SensorStation Interface after ~6 minutes (Node Health files are sent every 5 minutes) and look in the data table
+
+## Option #2: Push-button Firmware update using Node Client
+1. Download the latest firmware file (downloadable from the `#ctt_nodes` channel in `Slack`) titled `node3.firmware` to the SD card
+2. Follow the directions below to connect to your Node via Node Client and access the `Local Console`
+3. At the bottom of the `Local Console` is the `Firmware` button, which will allow you to upload the firmware file.
+4. Confirm the updated firmware following Step 6 in the instructions above.
+
 # Advanced Configuration via Node Client
 
 You can use a development program we've created called `Node Client` to troubleshoot your node and modify several parameters. The latest version of `Node Client` can be downloaded from our support Slack workspace under the `#ctt_nodes` channel. If you don't already have access, please email us at support@celltracktech.com. You can connect your node to a computer using either the provided 4-pin -> USB adapter and the port on the underside of the node, or the micro-usb port directly on the board (after opening the node).
