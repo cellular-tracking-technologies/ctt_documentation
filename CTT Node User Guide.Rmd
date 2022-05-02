@@ -4,14 +4,14 @@ title: |
   <br />
   CTT Node User Guide
 author: "support@celltracktech.com"
-date: "9/22/2021"
+date: "5/2/2022"
 output:
-  pdf_document:
-    toc: yes
-    fig_caption: true
   html_document:
     toc: yes
     number_sections: yes
+  pdf_document:
+    toc: yes
+    fig_caption: true
 ---
 
 ```{r setup, include=FALSE}

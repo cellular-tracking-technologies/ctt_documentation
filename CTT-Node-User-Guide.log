@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.3.18)  2 MAY 2022 13:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.3.18)  2 MAY 2022 13:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1065,7 +1065,7 @@ Package rerunfilecheck Info: File `CTT-Node-User-Guide.out' has not changed.
 Here is how much of TeX's memory you used:
  11233 strings out of 480236
  187909 string characters out of 5894541
- 463327 words of memory out of 5000000
+ 463326 words of memory out of 5000000
  28851 multiletter control sequences out of 15000+600000
  524399 words of font info for 72 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -1083,7 +1083,7 @@ b></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.p
 fb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.
 pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtti1
 0.pfb>
-Output written on CTT-Node-User-Guide.pdf (20 pages, 30985463 bytes).
+Output written on CTT-Node-User-Guide.pdf (20 pages, 30985439 bytes).
 PDF statistics:
  420 PDF objects out of 1000 (max. 8388607)
  322 compressed objects within 4 object streams
