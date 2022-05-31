@@ -668,7 +668,7 @@ Reboots the system.
 ***
 # Final Thoughts
 
-This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/support-customer-service-desk/) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2021.
+This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/support-customer-service-desk/) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2022.
 
 ***
 # Appendix I: Leveraging your CTT Infrastructure with Motus {#appendix_1}
