@@ -1,6 +1,6 @@
 ---
 title: |
-  ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png){width=3in}  
+  ![](images/ctt_logo.png){width=3in}  
   <br />
   Cell Locate 1.0 User Guide
 author: "support@celltracktech.com"
@@ -21,20 +21,41 @@ The CTT Cell-Locate transmitter is the first of its kind do use the global cell 
 
 # How it Works
 
-Some stuff about how the Cell-Locate algorithm calculates location
+The devices location is resolved by first polling physical properties of one or more cell towers in the communication range. This information is then immediately transmitted to our data servers using the LTE-M1 cellular network. Finally, our servers generate a location estimate from our extensive tower database. The accuracy of cellular localization is ultimately determined by the geometry of the antenna coverage areas. Some coverage areas will be much smaller, leading to improved accuracy. We provide an uncertainty value with each location, which approximates the size of the coverage area.
+
+Each cell tower can have multiple highly directional antennas that provide coverage for specific regions around the tower. The geometry of these regions is dependent on many factors such as antenna height relative to ground, antenna type, population density and obstructions (trees, mountains, buildings .. etc). At the time of antenna installation, a fixed location (representative of the antenna region) is paired with the antenna. Our device interrogates the tower for its unique identifier and antenna, then our servers look up the area location from the tower parameters.
+
+An example of the above description can be found in the following figure: The actual location of the device is represented as an American Robin. The cell tower can be found in the center of the yellow hexagon. Each of the three quadrilaterals within the yellow hexagon are hypothetical coverage areas of three antennas belonging to the same tower. If the robin falls within one of the areas, the fixed location will be reported as the device’s location. From the figure below, the robin fell in the “upper” area, so the location reported will correspond to the red marker. 
+
+
+ <!-- Insert companion graphic here -->
 
 # Technical Specs (based on 3.5g model)
 
-Some tech specs here 
+* Periodically uploads the following information to CTT data servers via the LTE network.
+  + Cell tower information necessary for location approximation.
+  + Device identifiers
+  + On-board sensor data
+* Firmware-Over-The-Air (FOTA) via CTT data server
+* Configuration Update via CTT data server
+  + Location & Connection Interval [sec]
+  + Low Battery Cutoff Threshold [mv]
+  + Network Registration Timeout [sec]
+* Device sleeps while magnet is within close proximity (Storage Mode)
+* User simply removes the magnet and the device becomes active.
+* Device weight starts at 3 grams (external wire antenna)
+* Rechargeable LiPo Battery (3.7V) 50 - 75 mAh
+* Approximately 2000 Cell-Locates on a single charge
+* 34 mW Solar cell
+* Can fully charge battery in ~4 hours
+* Global LTE coverage
 
 # Photos
-
-![*Cell Locate on American Robin*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/AMRO_CLT_Release-med.png){#id .class width=50%}
+![*Cell Locate on American Robin*](images/AMRO_CLT_Release-med.png){#id .class width=50%}
 
 ***
 
-
-![*3.5g Cell Locate*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/IMG_8824.JPG){#id .class width=50%}
+![*3.5g Cell Locate*](images/IMG_8824.JPG){#id .class width=50%}
 
 ***
 
