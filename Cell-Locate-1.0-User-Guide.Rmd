@@ -6,13 +6,15 @@ title: |
 author: "support@celltracktech.com"
 date: "5/31/2022"
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+![*3.5g Cell Locate*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/CLT.png){#id .class width=50%}
 
 # Overview 
 
@@ -25,10 +27,10 @@ The devices location is resolved by first polling physical properties of one or 
 
 Each cell tower can have multiple highly directional antennas that provide coverage for specific regions around the tower. The geometry of these regions is dependent on many factors such as antenna height relative to ground, antenna type, population density and obstructions (trees, mountains, buildings .. etc). At the time of antenna installation, a fixed location (representative of the antenna region) is paired with the antenna. Our device interrogates the tower for its unique identifier and antenna, then our servers look up the area location from the tower parameters.
 
-An example of the above description can be found in the following figure: The actual location of the device is represented as an American Robin. The cell tower can be found in the center of the yellow hexagon. Each of the three quadrilaterals within the yellow hexagon are hypothetical coverage areas of three antennas belonging to the same tower. If the robin falls within one of the areas, the fixed location will be reported as the device’s location. From the figure below, the robin fell in the “upper” area, so the location reported will correspond to the red marker. 
+An example of the above description can be found in the following figure: The actual location of the device is represented as an American Robin. The cell tower can be found in the center of the multi-colored hexagon. Each of the three quadrilaterals within the hexagon are hypothetical coverage areas of three antennas belonging to the same tower. If the robin falls within one of the areas, the fixed location will be reported as the device's location. From the figure below, the robin fell in the “upper” area (quadrilateral "B"), so the location reported will correspond to the red marker. 
 
 
- <!-- Insert companion graphic here -->
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Cell Locate Illustration.001.png){#id .class width=75%} 
 
 # Technical Specs (based on 3.5g model)
 
@@ -50,18 +52,13 @@ An example of the above description can be found in the following figure: The ac
 * Can fully charge battery in ~4 hours
 * Global LTE coverage
 
-# Photos
-![*Cell Locate on American Robin*](images/AMRO_CLT_Release-med.png){#id .class width=50%}
 
 ***
-
-![*3.5g Cell Locate*](images/IMG_8824.JPG){#id .class width=50%}
-
-***
-
 
 
 # Final Thoughts
 
 This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/support-customer-service-desk/) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2022.
+
+![*Cell Locate deployed on an American Robin*](images/AMRO_CLT_Release-med.png){#id .class width=75%}
 

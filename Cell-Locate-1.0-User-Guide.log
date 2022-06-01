@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.3.18)  1 JUN 2022 10:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.3.18)  1 JUN 2022 12:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -429,7 +429,7 @@ LaTeX Info: Redefining \nameref on input line 71.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<images/ctt_logo.png, id=24, 301.125pt x 117.43875pt>
+<images/ctt_logo.png, id=20, 301.125pt x 117.43875pt>
 File: images/ctt_logo.png Graphic file (type png)
 <use images/ctt_logo.png>
 Package pdftex.def Info: images/ctt_logo.png  used on input line 73.
@@ -470,52 +470,66 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-26.
-(/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [1
+</Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/CLT.png, id=22, 31
+22.66624pt x 2573.615pt>
+File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/CLT.png Graph
+ic file (type png)
+<use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/CLT.png>
+Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
+mages/CLT.png  used on input line 79.
+(pdftex.def)             Requested size: 234.85693pt x 193.56258pt.
+[1
 
 {/Users/davidlapuma/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.ma
-p} <./images/ctt_logo.png>]
-<images/AMRO_CLT_Release-med.png, id=41, 569.0058pt x 408.0846pt>
-File: images/AMRO_CLT_Release-med.png Graphic file (type png)
-<use images/AMRO_CLT_Release-med.png>
-Package pdftex.def Info: images/AMRO_CLT_Release-med.png  used on input line 17
-8.
-(pdftex.def)             Requested size: 234.87407pt x 168.44905pt.
-<images/IMG_8824.JPG, id=42, 3035.34pt x 2815.51875pt>
-File: images/IMG_8824.JPG Graphic file (type jpg)
-<use images/IMG_8824.JPG>
-Package pdftex.def Info: images/IMG_8824.JPG  used on input line 188.
-(pdftex.def)             Requested size: 234.86589pt x 217.85675pt.
+p} <./images/ctt_logo.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentatio
+n/images/CLT.png>]
+</Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Cell Locate Illust
+ration.001.png, id=38, 1027.84pt x 770.88pt>
+File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Cell Locate I
+llustration.001.png Graphic file (type png)
+<use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Cell Locate Il
+lustration.001.png>
+Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
+mages/Cell Locate Illustration.001.png  used on input line 127.
+(pdftex.def)             Requested size: 352.31538pt x 264.23654pt.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+36.
+(/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [2 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Cell Locate I
+llustration.001.png>]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-99.
+88.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [2 <./images/AMRO_CLT_Release-med.png (PNG copy)>] [3pdfTeX warning (ext4): d
-estination with the same identifier (name{id}) has been already used, duplicate
- ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.204 \end{document}
-                     <./images/IMG_8824.JPG>] (./Cell-Locate-1.0-User-Guide.aux
-)
+)pdfTeX warning (ext4): destination with the same identifier (name{id}) has bee
+n already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.198 }
+       
+<images/AMRO_CLT_Release-med.png, id=49, 569.0058pt x 408.0846pt>
+File: images/AMRO_CLT_Release-med.png Graphic file (type png)
+<use images/AMRO_CLT_Release-med.png>
+Package pdftex.def Info: images/AMRO_CLT_Release-med.png  used on input line 19
+8.
+(pdftex.def)             Requested size: 352.3111pt x 252.67357pt.
+[3 <./images/AMRO_CLT_Release-med.png>] (./Cell-Locate-1.0-User-Guide.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Cell-Locate-1.0-User-Guide.out' has not chan
 ged.
-(rerunfilecheck)             Checksum: 09E2C8B9854F71FD4123AD69E444F7F4;635.
+(rerunfilecheck)             Checksum: 5FDED8EB0A96BC0A2281284D7AB70D2F;561.
  ) 
 Here is how much of TeX's memory you used:
- 10859 strings out of 480236
- 170259 string characters out of 5894541
- 461351 words of memory out of 5000000
- 28622 multiletter control sequences out of 15000+600000
+ 10862 strings out of 480236
+ 171179 string characters out of 5894541
+ 457347 words of memory out of 5000000
+ 28626 multiletter control sequences out of 15000+600000
  504462 words of font info for 53 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,7n,63p,531b,428s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,7n,63p,531b,379s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{
 /Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</U
 sers/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></
@@ -526,10 +540,10 @@ Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><
 /Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb>
 </Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb
 >
-Output written on Cell-Locate-1.0-User-Guide.pdf (3 pages, 10084286 bytes).
+Output written on Cell-Locate-1.0-User-Guide.pdf (3 pages, 13387441 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 97 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 500000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
