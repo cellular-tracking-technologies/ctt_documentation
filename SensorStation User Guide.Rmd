@@ -6,11 +6,11 @@ title: |
 author: "support@celltracktech.com"
 date: "06/28/2022"
 output:
+  pdf_document:
+    toc: yes
   html_document:
     toc: yes
     number_sections: yes
-  pdf_document:
-    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -419,7 +419,7 @@ Your SensorStation has a web server running locally on the Raspberry Pi, which m
 
 ### Before you get started you will need...
 
-  * For V3 stations, you don't need an extra WiFi adapter since it's already included on every board
+  * **For V3 stations**, you don't need an extra WiFi adapter since it's already included on every board
   * For V1 or V2 stations, you'll need a WiFi adapter Like this one: https://store.celltracktech.com/products/wifi-usb-adapter-add-on-for-sensorstation-v2.
   * 2 USB to Ethernet adapters (we recommend: https://tinyurl.com/yc6llze4)
   * An Ethernet cable
@@ -436,11 +436,12 @@ Your SensorStation has a web server running locally on the Raspberry Pi, which m
 5. Type the following:
 
 *For V1 or V2 stations:* `ssh pi@xxx.xxx.xxx.xxx` (where the x’s represent your SensorStation IP address) 
-*For V3 Stations:* `ssh ctt@xxx.xxx.xxx.xxx` (where the x’s represent your SensorStation IP address) 
+
+**For V3 Stations:** `ssh ctt@xxx.xxx.xxx.xxx` (where the x’s represent your SensorStation IP address) 
 
 6. Answer `yes` to any dialogues, and when prompted for the password, enter the password for the Raspberry Pi 
 
-*For V3 Stations:* The password is `ctt-station`
+**For V3 Stations:** The password is `ctt-station`
 
 *For later V2 stations:* The password is `ctt-sensor`
 
@@ -470,7 +471,7 @@ Once your SensorStation reboots, it should automatically connect to the existing
 
 14. Open up a web browser and try and connect by typing the following Hostname into the address bar:
 
-*For V2 & V3 SensorStations:*
+**For V2 & V3 SensorStations:**
 `http://sensorstation.local`
 
 *For V1 SensorStations:*
