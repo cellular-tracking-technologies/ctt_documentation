@@ -6,11 +6,11 @@ title: |
 author: "support@celltracktech.com"
 date: "06/28/2022"
 output:
-  pdf_document:
-    toc: yes
   html_document:
     toc: yes
     number_sections: yes
+  pdf_document:
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
