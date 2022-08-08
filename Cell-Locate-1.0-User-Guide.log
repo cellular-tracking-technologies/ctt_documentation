@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.3.18)  6 JUN 2022 16:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.3.18)  8 AUG 2022 13:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -173,6 +173,40 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/geometry/geometry.st
+y
+Package: geometry 2020/01/02 v5.9 Page Geometry
+(/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count272
+\Gm@cntv=\count273
+\c@Gm@tempcnt=\count274
+\Gm@bindingoffset=\dimen148
+\Gm@wd@mp=\dimen149
+\Gm@odd@mp=\dimen150
+\Gm@even@mp=\dimen151
+\Gm@layoutwidth=\dimen152
+\Gm@layoutheight=\dimen153
+\Gm@layouthoffset=\dimen154
+\Gm@layoutvoffset=\dimen155
+\Gm@dimlist=\toks24
+) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.st
+y
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+(/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+(/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.
+cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+)
+\Gin@req@height=\dimen156
+\Gin@req@width=\dimen157
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.st
 y
 Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
@@ -206,9 +240,9 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 ) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-\@linkdim=\dimen148
-\Hy@linkcounter=\count272
-\Hy@pagecounter=\count273
+\@linkdim=\dimen158
+\Hy@linkcounter=\count275
+\Hy@pagecounter=\count276
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2022-02-21 v7.00n Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -221,7 +255,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 y
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count274
+\Hy@SavedSpaceFactor=\count277
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -235,13 +269,13 @@ Package hyperref Info: Plain pages OFF on input line 4152.
 Package hyperref Info: Backreferencing OFF on input line 4157.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4390.
-\c@Hy@tempcnt=\count275
+\c@Hy@tempcnt=\count278
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4749.
-\XeTeXLinkMargin=\dimen149
+\XeTeXLinkMargin=\dimen159
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
@@ -250,9 +284,9 @@ c.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count276
-\Field@Width=\dimen150
-\Fld@charsize=\dimen151
+\Fld@menulength=\count279
+\Field@Width=\dimen160
+\Fld@charsize=\dimen161
 Package hyperref Info: Hyper figures OFF on input line 6027.
 Package hyperref Info: Link nesting OFF on input line 6032.
 Package hyperref Info: Hyper index ON on input line 6035.
@@ -266,9 +300,9 @@ LaTeX Info: Redefining \pageref on input line 6101.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count277
-\c@Item=\count278
-\c@Hfootnote=\count279
+\Hy@abspage=\count280
+\c@Item=\count281
+\c@Hfootnote=\count282
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
@@ -279,8 +313,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count280
-\c@bookmark@seq@number=\count281
+\Fld@listcount=\count283
+\c@bookmark@seq@number=\count284
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfi
 lecheck.sty
@@ -294,40 +328,6 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
 \Hy@SectionHShift=\skip52
-) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/geometry/geometry.st
-y
-Package: geometry 2020/01/02 v5.9 Page Geometry
-(/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
-Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-)
-\Gm@cnth=\count282
-\Gm@cntv=\count283
-\c@Gm@tempcnt=\count284
-\Gm@bindingoffset=\dimen152
-\Gm@wd@mp=\dimen153
-\Gm@odd@mp=\dimen154
-\Gm@even@mp=\dimen155
-\Gm@layoutwidth=\dimen156
-\Gm@layoutheight=\dimen157
-\Gm@layouthoffset=\dimen158
-\Gm@layoutvoffset=\dimen159
-\Gm@dimlist=\toks24
-) (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.st
-y
-Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
-(/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
-(/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-)
-(/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.
-cfg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
-)
-Package graphics Info: Driver file: pdftex.def on input line 107.
-)
-\Gin@req@height=\dimen160
-\Gin@req@width=\dimen161
 )
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pd
 ftex.def
@@ -371,25 +371,6 @@ ys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 71.
-(/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
-(/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
-Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-)
-(/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/gettitlestring/getti
-tlestring.sty
-Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
-)
-\c@section@level=\count286
-)
-LaTeX Info: Redefining \ref on input line 71.
-LaTeX Info: Redefining \pageref on input line 71.
-LaTeX Info: Redefining \nameref on input line 71.
-(./Cell-Locate-1.0-User-Guide.out) (./Cell-Locate-1.0-User-Guide.out)
-\@outlinefile=\write3
-\openout3 = `Cell-Locate-1.0-User-Guide.out'.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -424,7 +405,26 @@ LaTeX Info: Redefining \nameref on input line 71.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<images/ctt_logo.png, id=20, 301.125pt x 117.43875pt>
+Package hyperref Info: Link coloring OFF on input line 71.
+(/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+(/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/generic/gettitlestring/getti
+tlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count286
+)
+LaTeX Info: Redefining \ref on input line 71.
+LaTeX Info: Redefining \pageref on input line 71.
+LaTeX Info: Redefining \nameref on input line 71.
+(./Cell-Locate-1.0-User-Guide.out) (./Cell-Locate-1.0-User-Guide.out)
+\@outlinefile=\write3
+\openout3 = `Cell-Locate-1.0-User-Guide.out'.
+
+<images/ctt_logo.png, id=24, 301.125pt x 117.43875pt>
 File: images/ctt_logo.png Graphic file (type png)
 <use images/ctt_logo.png>
 Package pdftex.def Info: images/ctt_logo.png  used on input line 73.
@@ -464,14 +464,17 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-</Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/CLT.png, id=22, 31
+) (./Cell-Locate-1.0-User-Guide.toc)
+\tf@toc=\write4
+\openout4 = `Cell-Locate-1.0-User-Guide.toc'.
+
+</Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/CLT.png, id=31, 31
 22.66624pt x 2573.615pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/CLT.png Graph
 ic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/CLT.png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/CLT.png  used on input line 79.
+mages/CLT.png  used on input line 83.
 (pdftex.def)             Requested size: 234.85693pt x 193.56258pt.
 [1
 
@@ -479,52 +482,52 @@ mages/CLT.png  used on input line 79.
 p} <./images/ctt_logo.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentatio
 n/images/CLT.png>]
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Cell Locate Illust
-ration.001.png, id=38, 1027.84pt x 770.88pt>
+ration.001.png, id=48, 1027.84pt x 770.88pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Cell Locate I
 llustration.001.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Cell Locate Il
 lustration.001.png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/Cell Locate Illustration.001.png  used on input line 127.
+mages/Cell Locate Illustration.001.png  used on input line 131.
 (pdftex.def)             Requested size: 352.31538pt x 264.23654pt.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-36.
+40.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [2 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Cell Locate I
 llustration.001.png>]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-88.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
+23.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )pdfTeX warning (ext4): destination with the same identifier (name{id}) has bee
 n already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.198 }
+l.233 }
        
-<images/AMRO_CLT_Release-med.png, id=49, 569.0058pt x 408.0846pt>
+<images/AMRO_CLT_Release-med.png, id=60, 569.0058pt x 408.0846pt>
 File: images/AMRO_CLT_Release-med.png Graphic file (type png)
 <use images/AMRO_CLT_Release-med.png>
-Package pdftex.def Info: images/AMRO_CLT_Release-med.png  used on input line 19
-8.
+Package pdftex.def Info: images/AMRO_CLT_Release-med.png  used on input line 23
+3.
 (pdftex.def)             Requested size: 352.3111pt x 252.67357pt.
-[3 <./images/AMRO_CLT_Release-med.png>] (./Cell-Locate-1.0-User-Guide.aux)
+[3] [4 <./images/AMRO_CLT_Release-med.png>] (./Cell-Locate-1.0-User-Guide.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Cell-Locate-1.0-User-Guide.out' has not chan
 ged.
-(rerunfilecheck)             Checksum: 5FDED8EB0A96BC0A2281284D7AB70D2F;561.
+(rerunfilecheck)             Checksum: 2B0EEF96CC434931A2059E8552F07D4C;777.
  ) 
 Here is how much of TeX's memory you used:
- 10821 strings out of 480236
- 169842 string characters out of 5894541
- 457177 words of memory out of 5000000
- 28590 multiletter control sequences out of 15000+600000
+ 10833 strings out of 480236
+ 170090 string characters out of 5894541
+ 460781 words of memory out of 5000000
+ 28595 multiletter control sequences out of 15000+600000
  504462 words of font info for 53 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,7n,63p,531b,379s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,7n,63p,531b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{
 /Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</U
 sers/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></
@@ -535,10 +538,10 @@ Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><
 /Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb>
 </Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb
 >
-Output written on Cell-Locate-1.0-User-Guide.pdf (3 pages, 13387224 bytes).
+Output written on Cell-Locate-1.0-User-Guide.pdf (4 pages, 13414783 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 115 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
+ 19 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
