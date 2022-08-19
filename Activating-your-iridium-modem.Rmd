@@ -1,0 +1,60 @@
+---
+title: |
+  ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png){width=3in}  
+  <br />
+author: "support@celltracktech.com"
+date: "8/17/2022"
+output:
+  pdf_document:
+    toc: yes
+    fig_caption: true
+  html_document:
+    toc: yes
+    number_sections: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Activating Your Optional Iridium Modem
+
+Your SensorStation has the option of being outfitted with an Iridium satellite modem, to facilitate transfer of summary beep data, and station health data, to you, no matter where your station is deployed. Since CTT does not resell Iridium data, you will need to purchase a data plan with a 3rd party vendor, and register your Iridium modems to that data plan. We can recommend http://www.satphonestore.com as one such vendor. ***Note that you will have to do this once per Iridium modem, so if you are deploying three stations, you will need to independently activate three modems using the methods below.***
+
+## What you will need
+
+Before you start you will need the IMEI (or IMEIs, if registering multiple stations) from CTT. Please email support@celltracktech.com to request the IMEI.
+
+## Which data plan?
+
+You are looking to purchase the Short Burst Data Plan "30", or `SBD-30`.
+
+* Here is the web link: https://www.satphonestore.com/tech-browsing/iot-m2m/iridium-iot/airtime.html
+
+* Here is where you would sign up for a plan: https://www.satphonestore.com/iridium-sbd-agreement
+
+## Configuring your activation
+
+* Here are the details you’ll need to fill in:
+
+  * **Date to begin service:** `Today’s date`
+  * **Will you be activating more than one account?** `No`
+  * **Choose the plan:** `SBD 30 Plan`
+  * **Select the option that best applies:** `I am activating or reactivating equipment I did not recently purchase from your company`
+  * **SIM Card / Serial Number:** `My device does not require a SIM card`
+  * **Please enter your IMEI below:** `<the IMEI provided to you from CTT>`
+  * **Intended use area:**`leave unchecked`
+
+*Then you’ll have to add several destinations...*
+
+**Destination:** `54.164.61.181:10800` **| Method:** `Direct IP`**| Include Geo Data?** `Yes` **| MO ACK** `Unchecked`
+
+**Destination:** `44.194.85.30:10799` **| Method:** `Direct IP` **| Include Geo Data?** `Yes` **| MO ACK** `Unchecked`
+
+**Leave everything else as default.**
+
+Once you have completed the activation, email support@celltracktech.com and let us know so we can complete final testing.
+
+# Final Thoughts
+
+This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/pages/customer-service-desk-csd/) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2022.
