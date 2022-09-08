@@ -215,7 +215,9 @@ Clicking delete logs clears out the system logs. While clicking delete tag and E
 
 The `clock` is the current seconds from 1970, also known as the epoch time. You will want to make sure these are about the same. If they differ, click "sync clocks". Due to the nature of how time is indicated from your phone, a difference of 1 second is normal, as the actual time is rounded.
 
-`About` will tell you information about your locator, such as version. Help is where future help and videos will be stored on the locator.
+`About` will tell you information about your locator, such as version. 
+
+`Help` is where future help and videos will be stored on the locator.
 
 `Software` update updates the locator to a new version of software. Note it is not advised to do this unless instructed by Cellular Tracking Technologies.
 
