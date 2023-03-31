@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Overview 
 
-The new Flicker series transmiters are the first of their kind to use the global cell network as a means of data transmission and for estimating the location of your tagged animal. In doing so we have reduced the weight of the fully-functional Cell-Locate-Only unit to nearly 3 grams and with a programming scheme that can allow over a year's worth of transmissions on a single charge of the battery. Since each device also has a solar panel, any amount of light will extend the life and performance of your Flicker device. The Flicker line also inculdes the Flicker GPS, which adds a dedicated GPS receiver to the already feather-light device, making it capable of storing up to 420 GPS fixes as its lightest weight (~5g), and transmitting these when in cell range.
+The new Flicker series transmitters are the first of their kind to use the global cell network as a means of data transmission and for estimating the location of your tagged animal. In doing so we have reduced the weight of the fully-functional Cell-Locate-Only unit to nearly 3 grams and with a programming scheme that can allow over a year's worth of transmissions on a single charge of the battery. Since each device also has a solar panel, any amount of light will extend the life and performance of your Flicker device. The Flicker line also inculdes the Flicker GPS, which adds a dedicated GPS receiver to the already feather-light device, making it capable of storing up to 420 GPS fixes as its lightest weight (~5g), and transmitting these when in cell range.
 
 
 # How Cell-Locate Works
