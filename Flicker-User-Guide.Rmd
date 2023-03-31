@@ -1,0 +1,114 @@
+---
+title: |
+  ![](images/ctt_logo.png){width=3in}  
+  <br />
+  Flicker Series (CL and GPS) User Guide
+author: "support@celltracktech.com"
+date: "3/31/2023"
+output:
+  pdf_document:
+    toc: yes
+    fig_caption: true
+  html_document:
+    toc: yes
+    number_sections: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+![*3.5g Flicker CL (Cell-Locate)*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/CLT.png){#id .class width=50%}
+
+# Overview 
+
+The new Flicker series transmiters are the first of their kind to use the global cell network as a means of data transmission and for estimating the location of your tagged animal. In doing so we have reduced the weight of the fully-functional Cell-Locate-Only unit to nearly 3 grams and with a programming scheme that can allow over a year's worth of transmissions on a single charge of the battery. Since each device also has a solar panel, any amount of light will extend the life and performance of your Flicker device. The Flicker line also inculdes the Flicker GPS, which adds a dedicated GPS receiver to the already feather-light device, making it capable of storing up to 420 GPS fixes as its lightest weight (~5g), and transmitting these when in cell range.
+
+
+# How Cell-Locate Works
+
+The device's location is determined by first collecting information about one or more cell towers in the communication range. This information is then immediately transmitted to our data servers using the LTE-M1 cellular network. Finally, our servers generate a location estimate from our extensive tower database. The accuracy of cellular localization is ultimately determined by the geometry of the antenna coverage areas. Some coverage areas will be much smaller, leading to improved accuracy. We provide an uncertainty value with each location, which approximates the size of the coverage area.
+
+Each cell tower can have multiple highly directional antennas that provide coverage for specific regions around the tower. The geometry of these regions is dependent on many factors such as antenna height relative to ground, antenna type, population density, and obstructions (trees, mountains, buildings .. etc). At the time of antenna installation, a fixed location (representative of the antenna region) is paired with the antenna. Our device interrogates the tower for its unique identifier and antenna, then our servers look up the area location from the tower parameters.
+
+An example of the above description can be found in the following figure: The actual location of the device is represented as an American Robin. The cell tower can be found in the center of the multi-colored hexagon. Each of the three quadrilaterals within the hexagon are hypothetical coverage areas of three antennas belonging to the same tower. If the robin falls within one of the areas, the fixed location will be reported as the device's location. From the figure below, the robin fell in the “upper” area (quadrilateral "B"), so the location reported will correspond to the red marker. 
+
+
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Cell Locate Illustration.001.png){#id .class width=75%} 
+
+# Technical Specs for Flicker CL (based on 3.5g model)
+
+* Periodically uploads the following information to CTT data servers via the LTE network.
+  + Cell tower information necessary for location approximation.
+  + Device identifiers
+  + On-board sensor data
+* Firmware-Over-The-Air (FOTA) via CTT data server
+* Configuration Update via CTT data server
+  + Location & Connection Interval [sec]
+  + Low Battery Cutoff Threshold [mv]
+  + Network Registration Timeout [sec]
+* Device sleeps while magnet is within close proximity (Storage Mode)
+* User simply removes the magnet and the device becomes active.
+* Device weight starts at 3.5 grams (external wire antenna) or 3.8g (internal antenna)
+* Rechargeable LiPo Battery (3.7V) 50 - 75 mAh
+* Approximately 500 Cell-Locate connections on a single charge
+* 34 mW solar cell
+* Can fully charge battery in ~4 hours
+* Global LTE coverage
+
+# Technical Specs for Flicker GPS (based on 4.5g solar-rechaegeable model)
+* All of the great features above, plus:
+  + Ability to collect and store up to 420 GPS locations at a time
+  + Configurable Cellular Connection and GPS data collection duty cycles:
+    + One fixed time per day
+    + Up to three battery-dependent Cellular Connection and GPS data schedules for "High, Medium and Low" battery levels* for a total of 19 possible configurations! 
+    
+\* *battery-dependent configs only available on solar-rechargeable models*
+
+***
+
+# Interacting with your Flicker Devices
+
+Interaction with your transmitter is done via the companion app. To download the app follow the links below:
+
+* [Google Play Store](https://play.google.com/store/apps/details?id=com.cttapps.clt_mobile)
+* [Apple App Store](https://apps.apple.com/app/id1610872429)
+
+From the app you can:
+
+* View all connection data
+* View and graph various parameters of the unit including battery voltage, solar volatage, connection time, Activity, and more
+* Make configuration changes and schedule them to upload to the transmitter at the next connection
+* Download last 1000 connections and fixes to a csv file
+* Schedule download of all data which will then be emailed to the user
+
+# Preparing Your Unit for Deployment
+
+*For non-solar rechargeable units, make sure to keep the magnet on the unit until you are ready for testing and/or deployment. Follow all of the below recommendations for testing configs, and simply ignore the information regarding solar recharging.*
+
+**For solar-rechargeable Flicker devices, we always recommended to fully charge and test your device before deployment.** Small devices should not be left out unattended as they can blow away, and potentially overheat.
+
+**DO NOT:**
+
+* **leave your unit outside unsecured.** Due to their weight and size, they may blow away in the wind, or even be carried off by curious corvids (this has happened!). Ensure any units placed outside are done so securely. One possible solution could be double-sided tape, but use your best judgement. A window sill with good solar exposure can be a great place to charge a units, especially if you have the luxury of a few days.
+
+* **leave your units on a metal surface, or directly on the ground, and expect them to check in.** It is best to elevate them at least a meter off of the ground, and place them on a wooden surface if possible.
+
+* **Leave your units in a hot car with the windows up.** Again, this can lead to overheating and cause permanent battery damage to the unit.
+
+**DO:**
+
+* **Ensure you can see your units in the Flicker App and in the web portal prior to deployment.**
+
+* **Submit a new config to your unit using the app and test that the unit takes the config and behaves as expected, prior to deployment.** 
+
+* **Start your unit with a more conservative config and work up to more aggressive configs as you see how the battery behaves and the unit recharges.**
+
+* **Send us photos of your animal wearing your Flicker device! We love to see how these are fitting on your study species!**
+
+# Final Thoughts
+
+This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/support-customer-service-desk/) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2023.
+
+![*Flicker CL deployed on an American Robin*](images/AMRO_CLT_Release-med.png){#id .class width=75%}
+
