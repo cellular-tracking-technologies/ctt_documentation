@@ -6,12 +6,12 @@ title: |
 author: "support@celltracktech.com"
 date: "4/7/2023"
 output:
-  html_document:
-    toc: yes
-    number_sections: yes
   pdf_document:
     toc: yes
     fig_caption: true
+  html_document:
+    toc: yes
+    number_sections: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -331,7 +331,7 @@ The External Battery can be attached to your Node using the CTT Battery Clip, a 
         
 **(Note that the battery pack is an independent piece of equipment that turns on and off, and displays power, regardless of whether it is powering the Node. Therefore it is imperative that you confirm the Node is reporting to the SensorStation and not simply relying on the LEDs on the battery pack)**.
 
-The External Battery Pack is not waterproof, but it is water-safe, meaning it includes circuit protection in case of exposure to water. Should the battery pack circuitry be exposed to water, the internal fuse will shut down the battery pack until it has sufficiently dried out, after which point the fuse will automatically reset and resume functionality. Therefore the user must monitor their Node system after significant rainfall as a Node with a low internal battery may require manual resetting if the external battery pack is shut down for too long.
+The External Battery Pack is not waterproof, but it is water-safe, meaning it includes circuit protection in case of exposure to water. Should the battery pack circuitry be exposed to water, the internal fuse will shut down the battery pack to protect it from damage. Once the circuitry is dry, the fuse will reset, and the user must simply press the power button to turn the battery pack back on. Therefore the user must monitor their Node system after significant rainfall as a Node with a low internal battery may require manual resetting if the external battery pack is shut down for too long.
 
 ### CTT Clip for External Node Battery
 

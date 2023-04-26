@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.7)  7 APR 2023 15:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.7)  26 APR 2023 13:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -864,26 +864,26 @@ Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/im
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1005 }
+l.1006 }
         
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Node battery clip.001.png, id=371, 323.2075pt x 760.8425pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Node battery clip.001.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Node battery clip.001.png>
-Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Node battery clip.001.png  used on input line 1005.
+Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Node battery clip.001.png  used on input line 1006.
 (pdftex.def)             Requested size: 276.31076pt x 650.44583pt.
 
-LaTeX Warning: Float too large for page by 23.96025pt on input line 1006.
+LaTeX Warning: Float too large for page by 23.96025pt on input line 1007.
 
 [21] [22 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Node battery clip.001.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1046 }
+l.1047 }
         
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/IMG_4929 2.jpg, id=392, 1744.5175pt x 1744.5175pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/IMG_4929 2.jpg Graphic file (type jpg)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/IMG_4929 2.jpg>
-Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/IMG_4929 2.jpg  used on input line 1046.
+Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/IMG_4929 2.jpg  used on input line 1047.
 (pdftex.def)             Requested size: 117.4171pt x 117.4171pt.
 [23 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/IMG_4929 2.jpg>] (./CTT-Node-User-Guide.aux)
 
@@ -901,7 +901,7 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  63i,7n,67p,731b,535s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on CTT-Node-User-Guide.pdf (23 pages, 32758953 bytes).
+Output written on CTT-Node-User-Guide.pdf (23 pages, 32758726 bytes).
 PDF statistics:
  483 PDF objects out of 1000 (max. 8388607)
  377 compressed objects within 4 object streams
