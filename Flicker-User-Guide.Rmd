@@ -71,7 +71,7 @@ An example of the above description can be found in the following figure: The ac
 
 Interaction with your transmitter is done via the companion app. To download the app follow the links below:
 
-* [Google Play Store](https://play.google.com/store/apps/details?id=com.cttapps.clt_mobile)
+* [Google Play Store](https://play.google.com/store/apps/details?id=com.celltracktech.ctt_mobile)
 * [Apple App Store](https://apps.apple.com/app/id1610872429)
 
 From the app you can:
