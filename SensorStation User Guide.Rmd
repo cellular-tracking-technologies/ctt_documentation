@@ -4,13 +4,13 @@ title: |
   <br />
   Installation Guide for the CTT SensorStation and CTT Nodes
 author: "support@celltracktech.com"
-date: "08/23/2022"
+date: "06/07/2023"
 output:
-  pdf_document:
-    toc: yes
   html_document:
     toc: yes
     number_sections: yes
+  pdf_document:
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -372,6 +372,8 @@ And two folders:
 If you can connect directly to your station via USB->Ethernet or WiFi, you can run a single line command to securely copy all files in the `Data` folder on your SensorStation, to a local file on your computer. This includes all of the data files mentioned in the previous section.
 
 **Once your station is connected to your computer, open `Terminal` `(mac)` or `PowerShell` or `Command Prompt` `(PC)`**
+
+**You will need the Raspberry Pi Password for this exercise, so if you don't already know it, find it in the [SSH into the Pi to update the connectivity settings] section.**
 
 The syntax is made of the following parts:
 
