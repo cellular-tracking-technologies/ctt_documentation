@@ -6,11 +6,11 @@ title: |
 author: "support@celltracktech.com"
 date: "06/07/2023"
 output:
+  pdf_document:
+    toc: yes
   html_document:
     toc: yes
     number_sections: yes
-  pdf_document:
-    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -379,15 +379,29 @@ The syntax is made of the following parts:
 
 * `scp` : Secure Copy 
 * `-r` : the flag for recursive, so that it securely copies all of the files, and folders, within the designated folder
+
+*V1 and V2 stations:*
 * pi@xxx.xxx.xxx.xxx : this designates the Raspberry Pi on the SensorStation, at the specific IP address. The `x`'s represent the IP address of your specific SensorStation.
+
+**V3 stations (or upgraded V2 stations):**
+* ctt@xxx.xxx.xxx.xxx : this designates the Raspberry Pi on the SensorStation, at the specific IP address. The `x`'s represent the IP address of your specific SensorStation.
+
 * `:/data` : this states that you'd like to copy the `data` folder that's in the root directory of the Raspberry Pi on your SensorStation (this is the file that contains all of the data- both CTT and SensorGnome)
 * ` . ` : did you see that little period there? It has a space before it- make sure you include the space! The period just means that when you do this  `recursive` `secure copy` of all the files within the `data` folder on your SensorStation, you want to copy them **right where you are**. So whatever folder you are in when you started the command line, that's where it's going to go. That gives us this final command line code:
 
+*V1 and V2 stations:*
 `scp -r pi@xxx.xxx.xxx.xxx:/data .`
+
+**V3 stations (or upgraded V2 stations):**
+`scp -r ctt@xxx.xxx.xxx.xxx:/data .`
 
 if you'd rather designate a destination folder, simply replace the final ` .` with the path of your choice. For example:
 
+*V1 and V2 stations:*
 `scp -r pi@10.1.10.113:/data c:/Users/joeschmoscomputer/Downloads`
+
+**V3 stations (or upgraded V2 stations):**
+`scp -r ctt@10.1.10.113:/data c:/Users/joeschmoscomputer/Downloads`
 
 This would download the `data` folder from the SensorStation, to the `Downloads` folder on the local computer.
 
