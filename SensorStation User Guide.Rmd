@@ -6,11 +6,11 @@ title: |
 author: "support@celltracktech.com"
 date: "06/07/2023"
 output:
-  pdf_document:
-    toc: yes
   html_document:
     toc: yes
     number_sections: yes
+  pdf_document:
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -367,7 +367,12 @@ And two folders:
   * `uploaded` - contains any 434MHz data that has been previously uploaded to CTT servers.
   
 ***
-# Downloading your data via the command line
+
+# Manually Managing your Data via the Command Line
+
+*If you're a visual learner, you can also check out a YouTube video [here](https://www.youtube.com/watch?v=2iG8ZG1UZGA&t=23s)*
+
+## Downloading your data via the command line
 
 If you can connect directly to your station via USB->Ethernet or WiFi, you can run a single line command to securely copy all files in the `Data` folder on your SensorStation, to a local file on your computer. This includes all of the data files mentioned in the previous section.
 
@@ -404,6 +409,29 @@ if you'd rather designate a destination folder, simply replace the final ` .` wi
 `scp -r ctt@10.1.10.113:/data c:/Users/joeschmoscomputer/Downloads`
 
 This would download the `data` folder from the SensorStation, to the `Downloads` folder on the local computer.
+
+***
+
+## Checking file sizes via the command line
+
+After copying and before deleting files, you should check the file size of the folders holding the data you plan to delete, to be sure that once the process is complete, the disk space has been reclaimed. You can do this via the command line using the `du` command, which stands for `d`isk `u`sage. 
+
+`ssh ctt@xxx.xxx.xxx.xx "du -sh /data/*"`
+
+This command will give you a list of all folders and files within the folder `data`, and their respective file sizes.
+You will want to run this command before and after manually deleting your files, to ensure the delete worked.
+
+***
+
+## Deleting data files via the command line
+
+Once you have manually copied your data files to a local drive, confirmed they are complete, and checked the file size of the files you are about to delete, using the commands above, you can move on to deleting the files via the command line.
+
+The following command will delete all files within the `uploaded`, `rotated`, and `SGdata` folders, as well as the `.csv` files within the `data` folder, which represent the most recent files being collected.
+
+`ssh ctt@169.254.237.56 "sudo rm -rf /data/uploaded/* && sudo rm -rf /data/rotated/* && sudo rm -rf /data/SGdata/* && sudo rm /data/*.csv"`
+
+Once you run this command, go back and re-check the file size of the files and folders within the `data` folder using the `du` command in the previous section. You should see that your file sizes have been reduced as you have deleted the data files and reclaimed your disk space.
 
 ***
 
