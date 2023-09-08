@@ -4,8 +4,8 @@
 \contentsline {subsection}{Long-term Storage}{2}{section*.5}%
 \contentsline {subsection}{Preparing to Deploy}{2}{section*.6}%
 \contentsline {subsection}{Fitting your Device on an Animal}{2}{section*.7}%
-\contentsline {subsection}{Helpful Hints}{2}{section*.8}%
-\contentsline {subsubsection}{Test Devices before Deployment}{2}{section*.9}%
+\contentsline {subsection}{Helpful Hints}{3}{section*.8}%
+\contentsline {subsubsection}{Test Devices before Deployment}{3}{section*.9}%
 \contentsline {subsubsection}{Handle with Care}{3}{section*.10}%
 \contentsline {section}{Feedback}{3}{section*.11}%
 \contentsline {section}{Programming Specifications}{3}{section*.12}%
