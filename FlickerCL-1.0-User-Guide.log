@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.3.18)  8 AUG 2022 14:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.3.18)  31 MAR 2023 13:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -424,7 +424,7 @@ LaTeX Info: Redefining \nameref on input line 71.
 \@outlinefile=\write3
 \openout3 = `FlickerCL-1.0-User-Guide.out'.
 
-<images/ctt_logo.png, id=24, 301.125pt x 117.43875pt>
+<images/ctt_logo.png, id=36, 301.125pt x 117.43875pt>
 File: images/ctt_logo.png Graphic file (type png)
 <use images/ctt_logo.png>
 Package pdftex.def Info: images/ctt_logo.png  used on input line 73.
@@ -464,11 +464,18 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
 
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./FlickerCL-1.0-User-Guide.toc)
+) (./FlickerCL-1.0-User-Guide.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 7.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 7.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 7.
+)
 \tf@toc=\write4
 \openout4 = `FlickerCL-1.0-User-Guide.toc'.
 
-</Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/CLT.png, id=31, 31
+</Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/CLT.png, id=46, 31
 22.66624pt x 2573.615pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/CLT.png Graph
 ic file (type png)
@@ -482,52 +489,53 @@ mages/CLT.png  used on input line 83.
 p} <./images/ctt_logo.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentatio
 n/images/CLT.png>]
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Cell Locate Illust
-ration.001.png, id=48, 1027.84pt x 770.88pt>
+ration.001.png, id=63, 1027.84pt x 770.88pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Cell Locate I
 llustration.001.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Cell Locate Il
 lustration.001.png>
 Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/i
-mages/Cell Locate Illustration.001.png  used on input line 131.
+mages/Cell Locate Illustration.001.png  used on input line 135.
 (pdftex.def)             Requested size: 352.31538pt x 264.23654pt.
+[2]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-40.
+44.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [2 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Cell Locate I
+) [3 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Cell Locate I
 llustration.001.png>]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-23.
+91.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )pdfTeX warning (ext4): destination with the same identifier (name{id}) has bee
 n already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.233 }
+l.301 }
        
-<images/AMRO_CLT_Release-med.png, id=60, 569.0058pt x 408.0846pt>
+<images/AMRO_CLT_Release-med.png, id=82, 569.0058pt x 408.0846pt>
 File: images/AMRO_CLT_Release-med.png Graphic file (type png)
 <use images/AMRO_CLT_Release-med.png>
-Package pdftex.def Info: images/AMRO_CLT_Release-med.png  used on input line 23
-3.
+Package pdftex.def Info: images/AMRO_CLT_Release-med.png  used on input line 30
+1.
 (pdftex.def)             Requested size: 352.3111pt x 252.67357pt.
-[3] [4 <./images/AMRO_CLT_Release-med.png>] (./FlickerCL-1.0-User-Guide.aux)
+[4] [5 <./images/AMRO_CLT_Release-med.png>] (./FlickerCL-1.0-User-Guide.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `FlickerCL-1.0-User-Guide.out' has not change
 d.
-(rerunfilecheck)             Checksum: 2B0EEF96CC434931A2059E8552F07D4C;777.
+(rerunfilecheck)             Checksum: 86F53F52154D15FC7B7FE265C7264DCB;1676.
  ) 
 Here is how much of TeX's memory you used:
- 10833 strings out of 480236
- 170048 string characters out of 5894541
- 460771 words of memory out of 5000000
- 28595 multiletter control sequences out of 15000+600000
- 504462 words of font info for 53 fonts, out of 8000000 for 9000
+ 10876 strings out of 480236
+ 170734 string characters out of 5894541
+ 459982 words of memory out of 5000000
+ 28621 multiletter control sequences out of 15000+600000
+ 519491 words of font info for 69 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,7n,63p,529b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,7n,63p,529b,371s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{
 /Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</U
 sers/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></
@@ -538,10 +546,10 @@ Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><
 /Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb>
 </Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb
 >
-Output written on FlickerCL-1.0-User-Guide.pdf (4 pages, 13414783 bytes).
+Output written on FlickerCL-1.0-User-Guide.pdf (5 pages, 13422707 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
- 19 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 139 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
+ 85 words of extra memory for PDF output out of 10000 (max. 10000000)
 

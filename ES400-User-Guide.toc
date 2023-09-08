@@ -1,0 +1,14 @@
+\contentsline {section}{Introduction}{1}{section*.2}%
+\contentsline {section}{General Specifications}{1}{section*.3}%
+\contentsline {section}{Unpacking Your Shipment, Caring for Your CTT® Devices, \& Getting Started}{2}{section*.4}%
+\contentsline {subsection}{Long-term Storage}{2}{section*.5}%
+\contentsline {subsection}{Preparing to Deploy}{2}{section*.6}%
+\contentsline {subsection}{Fitting your Device on an Animal}{2}{section*.7}%
+\contentsline {subsection}{Helpful Hints}{2}{section*.8}%
+\contentsline {subsubsection}{Test Devices before Deployment}{2}{section*.9}%
+\contentsline {subsubsection}{Handle with Care}{3}{section*.10}%
+\contentsline {section}{Feedback}{3}{section*.11}%
+\contentsline {section}{Programming Specifications}{3}{section*.12}%
+\contentsline {subsection}{Duty cycle}{3}{section*.13}%
+\contentsline {section}{Accessing your data, Username and Password, and Device IDs}{3}{section*.14}%
+\contentsline {section}{Final Thoughts}{3}{section*.15}%

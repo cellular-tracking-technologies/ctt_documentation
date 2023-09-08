@@ -64,6 +64,6 @@ Once locked into place the tag is secure and good to deploy. If you want an extr
 
 The bands are not meant to be removed once deployed, but if you need to, the best way to do so is to cut the door section of the band. This will allow the two halves of the door to fall away and you can simply slide the leg out of the transmitter portion off of the band. If glue was used you may have to cut along both sides of the door to remove a section large enough to remove the tag from the leg.
 
-## Final Thoughts
+# Final Thoughts
 
-This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/support-customer-service-desk/) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2022.
+This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/pages/customer-service-desk-csd) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2023.

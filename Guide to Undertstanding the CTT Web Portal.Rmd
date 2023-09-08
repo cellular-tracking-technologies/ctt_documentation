@@ -116,7 +116,7 @@ The `Data Grid` is where you can view all of your data in a tabular format. The 
 * `PDOP` : Position (3D) dilution of precision (for more information on Dilution of Precision, see [here](https://en.wikipedia.org/wiki/Dilution_of_precision_(navigation))
 * `Satellite Count` : The number of available satellites during the GPS fix
 * `Fix Time` : The time, in seconds, needed to get the GPS fix
-* `Error` : A coded value. (0) = No Error...
+* `Error` : A coded value. (0) = No Error, (1) = Timeout, (2) = Physical Hardware / IO Error, (3) = Low Battery, (4) = Poor Signal
 * `Nav Type` : The quality of the GPS fix. (3) = 3D, (2) = 2D, and (1) = None
 * `Activity Index` : A unitless summary statistics of activity
 * `Battery` : The battery voltage in mV

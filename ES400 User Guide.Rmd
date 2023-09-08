@@ -1,0 +1,79 @@
+---
+title: |
+  ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png){width=3in}  
+  <br />
+  ES-400 User Guide
+author: "support@celltracktech.com"
+date: "4/7/2023"
+output:
+  pdf_document:
+    toc: yes
+    fig_caption: true
+  html_document:
+    toc: yes
+    number_sections: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+You have received a CTT®-ES400W telemetry device by Cellular Tracking Technologies. This is our newest GPS-GSM wildlife tracking device featuring 2G fallback and a worldwide modem. This guide is intended to instruct you in the care of your wildlife tracking device. Please pay attention to these details, as several are different from any other devices on the market. This CTT® device is covered by US Patent No. 8,258,942.
+
+# General Specifications
+
+The CTT®-ES400W is a battery-powered GPS tracking device designed for mammals such as kit foxes. The transmitter is a collar device that weighs ~65g. The device is designed to operate over long periods of time and it can operate at different sampling rates depending on its reprogrammable duty cycle. Cellular technology allows the device to update frequent batches of telemetry data at much lower costs than satellite-transmission devices. If cellular coverage is unavailable, the device will store data until it returns to a cellular coverage area. 
+
+# Unpacking Your Shipment, Caring for Your CTT® Devices, & Getting Started
+
+When a CTT® device is shipped to you, it is running in a special low power mode to reduce battery consumption. This CTT® device should be setup with an unobstructed view of the sky to avoid GPS timeouts and loss of signal which could lead to reduced battery life. Do not place the device into metal containers or cabinets as this will obstruct the mobile phone signal.
+
+**NOTE: CTT® devices do not ship with the operational Duty Cycle for your project.**
+
+**Within ten days of receiving your devices, contact Cellular Tracking Technologies to let us know which devices will be deployed in the near future and which devices will remain in storage for more than three weeks.**
+
+## Long-term Storage
+
+If you would like to store your devices at any time, please contact support@celltracktech.com to assign a storage configuration to your device. Your device must connect, download, and apply the storage configuration for it to take effect. *Please monitor your device's behavior in the portal to ensure the storage config has been applied before physically storing your unit. Failure to do so could result in a dead battery and may require refurbishment or replacement for a fee, and is not covered under warranty.*
+
+## Preparing to Deploy
+
+**At least ten days prior to deployment**: Be sure that the duty cycle configuration has been updated on your devices prior to deployment. Contact Cellular Tracking Technologies to update your device to the correct configuration for deployment. Test each device by checking your account on the Cellular Tracking Technologies data access web page to verify that data have been recorded and transmitted properly. **Do not deploy the device on an animal until you are sure the device is functioning properly.**
+
+## Fitting your Device on an Animal
+
+This should be done only by someone who is experienced, licensed, and has appropriate permissions to attach telemetry devices to the specific wildlife species. Having prior experience fitting the particular style of attachment (i.e. backpack, goose collar, mammal collar, ear tag, implant) on these animals is important; if you need guidance in this regard please contact us. 
+						
+**IMPORTANT- A label has been put on the unit that instructs on the proper way to place the unit on the bird.  If the label is not on the unit when it is received, put the side of the unit with the “if found” label towards the tail of the bird.**
+
+## Helpful Hints
+
+There are some basic operating principles about this telemetry device of which you should be aware:
+
+### Test Devices before Deployment
+
+Check the GPS Data Collection & Cellular Data Connection for at least 24 hours in the area near where you will deploy them. This is always good policy. Check your account online to verify that each device transmitted appropriate data.
+
+### Handle with Care
+
+The devices are heat sensitive. They are designed to function well in outdoor environments; however, excessive heat (for example that which occurs on the dashboard of a car parked in direct sunlight) may permanently damage the waterproof seal or components in the device. Cellular Tracking Technologies does not warranty telemetry devices damaged by exposure to excessive heat.
+
+# Feedback
+
+While we are also researchers who use our own products, our research needs will undoubtedly differ from yours, and so we rely on the feedback of our customers to keep pushing our products forward. Please be sure to take extensive notes on the device, its performance, and improvements you would like to see. We are constantly working to develop our tracking devices’ hardware and operating systems and your feedback is priceless! We stand behind our products and continue our support for our customers and clients.
+
+# Programming Specifications
+
+## Duty cycle
+
+**All devices are shipped in a special low power mode (shipping configuration).** They connect to the Cellular Tracking Technologies server once daily.  To ensure that the correct duty cycle for your project is set to be downloaded by these devices, please email support@celltracktech.com. Otherwise, the duty cycle for these devices will remain unchanged.
+
+# Accessing your data, Username and Password, and Device IDs
+
+Accessing your devices is done via the CTT User Portal. Instructions for portal access, as well as your username, password, and device IDs, was sent to you in a shipping email. Please consult the shipping email for those details which are specific to your order and account. If you are unable to find them, please email support@celltracktech.com.
+
+# Final Thoughts
+
+This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/pages/customer-service-desk-csd) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2023.
