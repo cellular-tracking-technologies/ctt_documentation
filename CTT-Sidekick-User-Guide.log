@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.15)  15 SEP 2023 13:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.15)  15 SEP 2023 14:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -311,6 +311,15 @@ File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 
 LaTeX Warning: Label `id' multiply defined.
 
+
+LaTeX Warning: Label `id' multiply defined.
+
+
+LaTeX Warning: Label `id' multiply defined.
+
+
+LaTeX Warning: Label `id' multiply defined.
+
 )
 \openout1 = `CTT-Sidekick-User-Guide.aux'.
 
@@ -425,38 +434,75 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 [1
 
 {/Users/davidlapuma/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc} </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png>]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 92.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 96.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 129.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 133.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [2{/Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-</Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_1.jpg, id=136, 1174.3875pt x 2294.5725pt>
-File: /Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_1.jpg Graphic file (type jpg)
-<use /Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_1.jpg>
-Package pdftex.def Info: /Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_1.jpg  used on input line 221.
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_1.jpg, id=137, 1174.3875pt x 2294.5725pt>
+File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_1.jpg Graphic file (type jpg)
+<use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_1.jpg>
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_1.jpg  used on input line 225.
 (pdftex.def)             Requested size: 117.4277pt x 229.43567pt.
-</Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_2.jpg, id=137, 1174.3875pt x 2297.58376pt>
-File: /Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_2.jpg Graphic file (type jpg)
-<use /Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_2.jpg>
-Package pdftex.def Info: /Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_2.jpg  used on input line 237.
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_2.jpg, id=138, 1174.3875pt x 2297.58376pt>
+File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_2.jpg Graphic file (type jpg)
+<use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_2.jpg>
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_2.jpg  used on input line 241.
 (pdftex.def)             Requested size: 117.4277pt x 229.73677pt.
-[3 </Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_1.jpg>]
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 285.
-[4
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_3.jpg, id=139, 1174.3875pt x 2282.5275pt>
+File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_3.jpg Graphic file (type jpg)
+<use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_3.jpg>
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_3.jpg  used on input line 259.
+(pdftex.def)             Requested size: 117.4277pt x 228.2313pt.
+[3 </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_1.jpg>] [4
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.329 ...ce}\label{calibrating-rssi-vs.-distance}}
-                                                   </Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_2.jpg>]
-Underfull \hbox (badness 3623) in paragraph at lines 331--333
-\T1/lmr/m/n/10 Figure: cal-i-bra-tion_atten_diagram.png cap-tion: Ex-am-ple of tag cal-i-bra-tion at-ten-u-a-tion la-bel:
- []
+l.269 \end{enumerate}
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{id}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.269 \end{enumerate}
+                      </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_2.jpg> </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_3.jpg>]
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_4.jpg, id=159, 1174.3875pt x 2238.3625pt>
+File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_4.jpg Graphic file (type jpg)
+<use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_4.jpg>
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_4.jpg  used on input line 271.
+(pdftex.def)             Requested size: 117.4277pt x 223.8152pt.
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_5.jpg, id=160, 391.4625pt x 746.79pt>
+File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_5.jpg Graphic file (type jpg)
+<use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_5.jpg>
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_5.jpg  used on input line 272.
+(pdftex.def)             Requested size: 117.43367pt x 224.02733pt.
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 293.
 
-[5] (./CTT-Sidekick-User-Guide.aux)
+pdfTeX warning (ext4): destination with the same identifier (name{id}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.337 }
+       
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/localization_orientation.png, id=161, 538.01pt x 652.4375pt>
+File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/localization_orientation.png Graphic file (type png)
+<use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/localization_orientation.png>
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/localization_orientation.png  used on input line 337.
+(pdftex.def)             Requested size: 234.87802pt x 284.83342pt.
+[5 </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_4.jpg> </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_5.jpg>]
+pdfTeX warning (ext4): destination with the same identifier (name{id}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.349 }
+       
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/calibration_atten_diagram.png, id=172, 1044.90375pt x 606.265pt>
+File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/calibration_atten_diagram.png Graphic file (type png)
+<use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/calibration_atten_diagram.png>
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/calibration_atten_diagram.png  used on input line 349.
+(pdftex.def)             Requested size: 234.86998pt x 136.27422pt.
+[6 </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/localization_orientation.png> </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/calibration_atten_diagram.png>] [7] (./CTT-Sidekick-User-Guide.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -468,18 +514,18 @@ Package rerunfilecheck Info: File `CTT-Sidekick-User-Guide.out' has not changed.
 (rerunfilecheck)             Checksum: 0C2AD81A287AB1947606DE4EF9C46D5B;3054.
  ) 
 Here is how much of TeX's memory you used:
- 10879 strings out of 476894
- 168864 string characters out of 5807862
- 1931807 words of memory out of 5000000
- 31943 multiletter control sequences out of 15000+600000
- 608619 words of font info for 78 fonts, out of 8000000 for 9000
+ 10921 strings out of 476894
+ 172735 string characters out of 5807862
+ 1930807 words of memory out of 5000000
+ 31979 multiletter control sequences out of 15000+600000
+ 612890 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 63i,7n,67p,528b,478s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on CTT-Sidekick-User-Guide.pdf (5 pages, 2386241 bytes).
+ 63i,7n,67p,528b,514s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on CTT-Sidekick-User-Guide.pdf (7 pages, 4441994 bytes).
 PDF statistics:
- 227 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
- 56 named destinations out of 1000 (max. 500000)
- 184 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 255 PDF objects out of 1000 (max. 8388607)
+ 213 compressed objects within 3 object streams
+ 61 named destinations out of 1000 (max. 500000)
+ 209 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -4,21 +4,25 @@ title: |
   <br />
   CTT Sidekick User Guide
 author: "support@celltracktech.com"
-date: "9/8/2023"
+date: "9/15/2023"
 output:
-  pdf_document:
-    toc: yes
-    fig_caption: true
   html_document:
     toc: yes
     number_sections: yes
+  pdf_document:
+    toc: yes
+    fig_caption: true
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Every hero needs their trusty sidekick. The CTT Sidekick is your new go-to tracking accessory for the full line of CTT radio tags, including both 434MHz and 2.4GHz frequencies. The Sidekick can detect and track all CTT LifeTags, PowerTags, HybridTags, and BlūMorpho tags and displays real time RSSI statistics, all through the companion phone app. 
+\newpage
+
+***Every hero needs their trusty sidekick*** 
+
+The CTT Sidekick is your new go-to tracking accessory for the full line of CTT radio tags, including both 434MHz and 2.4GHz frequencies. The Sidekick can detect and track all CTT LifeTags, PowerTags, HybridTags, and BlūMorpho tags and displays real time RSSI statistics, all through the companion phone app. 
 
 # Package Contents
 
@@ -86,24 +90,21 @@ To begin using your CTT Sidekick, you'll need to pair your smartphone (or other 
 
  1. From the home screen of CTT Mobile, select the Connect Device launch tile.
 
-![CTT Mobile Home Screen](/Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_1.jpg){#id .class width=25%}
+![CTT Mobile Home Screen](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_1.jpg){#id .class width=25%}
 
  
  2. Tap the Start Scan button and a list of available devices will appear.
 
-![Start Scan Screen](/Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_2.jpg){#id .class width=25%}
+![Start Scan Screen](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_2.jpg){#id .class width=25%}
 
  
- 3. The CTT Sidekick will be listed as **{CTT Sidekick (XXXXXXXX)}** in the available devices list, where XXXXXXXX is the unique identifier of your CTT Sidekick. Find the your Sidekick in the list and tap Connect. 
+ 3. The CTT Sidekick will be listed as **CTT Sidekick (XXXXXXXX)** in the available devices list, where XXXXXXXX is the unique identifier of your CTT Sidekick. Find the your Sidekick in the list and tap Connect. 
 
-Fig: CTT Mobile_3.jpg
-Capt: fig:CTT Mobile 3
+![Device Screen](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_3.jpg){#id .class width=25%}
 
  4. Once pairing is complete, the mobile application will notify you. Tap ``Go'' to continue to the CTT Sidekick Main Hub screen.
 
-Fig: CTT Mobile_4.jpg
-
-Fig: CTT Mobile_5.jpg
+![Pairing Complete Confirmation](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_4.jpg){#id .class width=25%} ![CTT Sidekick Main Hub Screen](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_5.jpg){#id .class width=25%}
 
 
 # Sidekick Operation
@@ -134,16 +135,12 @@ Just below the row of buttons you'll find the a row with actions for sorting and
 
 ## Localization
 
-Figure: Figures/localization_orientation.png
-Caption: Example of optimal Sidekick orientation for using localization.
-Label: fig:localization_orientation
+![Example of optimal Sidekick orientation for using localization](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/localization_orientation.png){#id .class width=50%}
 
 
 ## Calibrating RSSI vs.  Distance
+![Example of tag calibration attenuation](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/calibration_atten_diagram.png){#id .class width=50%}
 
-Figure: calibration_atten_diagram.png
-caption: Example of tag calibration attenuation
-label: fig:calibration_atten_diagram
 
 ## Calibrate Compass
 

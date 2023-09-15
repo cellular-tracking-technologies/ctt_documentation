@@ -1,0 +1,21 @@
+\contentsline {section}{Package Contents}{2}{section*.2}%
+\contentsline {subsection}{Add-on options include:}{2}{section*.3}%
+\contentsline {section}{The Hardware}{2}{section*.4}%
+\contentsline {subsection}{LED Indicators}{2}{section*.5}%
+\contentsline {section}{Battery and Charging}{2}{section*.6}%
+\contentsline {section}{Antennas}{3}{section*.7}%
+\contentsline {section}{Mobile Application - CTT Mobile}{3}{section*.8}%
+\contentsline {subsection}{Installing CTT Mobile}{3}{section*.9}%
+\contentsline {subsection}{Pairing with CTT Sidekick}{3}{section*.10}%
+\contentsline {section}{Sidekick Operation}{5}{section*.11}%
+\contentsline {subsection}{Detect Tags}{5}{section*.12}%
+\contentsline {subsection}{Map View}{6}{section*.13}%
+\contentsline {subsection}{Localization}{6}{section*.14}%
+\contentsline {subsection}{Calibrating RSSI vs.\nobreakspace {}Distance}{6}{section*.15}%
+\contentsline {subsection}{Calibrate Compass}{7}{section*.16}%
+\contentsline {subsection}{RSSI vs.\nobreakspace {}Distance Fit Parameters}{7}{section*.17}%
+\contentsline {subsection}{Firmware Updates}{7}{section*.18}%
+\contentsline {section}{Conclusion}{7}{section*.19}%
+\contentsline {section}{Revision History}{7}{section*.20}%
+\contentsline {subsection}{Rev.\nobreakspace {}0.0.0 - (4/20/2022)}{7}{section*.21}%
+\contentsline {section}{Bibliography}{7}{section*.22}%
