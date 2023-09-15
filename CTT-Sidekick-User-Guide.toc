@@ -16,6 +16,6 @@
 \contentsline {subsection}{RSSI vs.\nobreakspace {}Distance Fit Parameters}{7}{section*.17}%
 \contentsline {subsection}{Firmware Updates}{7}{section*.18}%
 \contentsline {section}{Conclusion}{7}{section*.19}%
-\contentsline {section}{Revision History}{7}{section*.20}%
-\contentsline {subsection}{Rev.\nobreakspace {}0.0.0 - (4/20/2022)}{7}{section*.21}%
-\contentsline {section}{Bibliography}{7}{section*.22}%
+\contentsline {section}{Revision History}{8}{section*.20}%
+\contentsline {subsection}{Rev.\nobreakspace {}0.0.0 - (4/20/2022)}{8}{section*.21}%
+\contentsline {section}{Bibliography}{8}{section*.22}%

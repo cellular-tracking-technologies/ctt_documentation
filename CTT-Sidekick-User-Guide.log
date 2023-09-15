@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.15)  15 SEP 2023 14:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.15)  15 SEP 2023 14:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -502,7 +502,7 @@ File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/
 <use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/calibration_atten_diagram.png>
 Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/calibration_atten_diagram.png  used on input line 349.
 (pdftex.def)             Requested size: 234.86998pt x 136.27422pt.
-[6 </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/localization_orientation.png> </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/calibration_atten_diagram.png>] [7] (./CTT-Sidekick-User-Guide.aux)
+[6 </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/localization_orientation.png> </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/calibration_atten_diagram.png>] [7] [8] (./CTT-Sidekick-User-Guide.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -514,18 +514,18 @@ Package rerunfilecheck Info: File `CTT-Sidekick-User-Guide.out' has not changed.
 (rerunfilecheck)             Checksum: 0C2AD81A287AB1947606DE4EF9C46D5B;3054.
  ) 
 Here is how much of TeX's memory you used:
- 10921 strings out of 476894
- 172735 string characters out of 5807862
+ 10922 strings out of 476894
+ 172741 string characters out of 5807862
  1930807 words of memory out of 5000000
  31979 multiletter control sequences out of 15000+600000
  612890 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  63i,7n,67p,528b,514s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on CTT-Sidekick-User-Guide.pdf (7 pages, 4441994 bytes).
+Output written on CTT-Sidekick-User-Guide.pdf (8 pages, 4442540 bytes).
 PDF statistics:
- 255 PDF objects out of 1000 (max. 8388607)
- 213 compressed objects within 3 object streams
- 61 named destinations out of 1000 (max. 500000)
+ 259 PDF objects out of 1000 (max. 8388607)
+ 216 compressed objects within 3 object streams
+ 62 named destinations out of 1000 (max. 500000)
  209 words of extra memory for PDF output out of 10000 (max. 10000000)
 

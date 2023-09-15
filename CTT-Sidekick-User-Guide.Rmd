@@ -6,12 +6,12 @@ title: |
 author: "support@celltracktech.com"
 date: "9/15/2023"
 output:
-  html_document:
-    toc: yes
-    number_sections: yes
   pdf_document:
     toc: yes
     fig_caption: true
+  html_document:
+    toc: yes
+    number_sections: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -152,6 +152,7 @@ Just below the row of buttons you'll find the a row with actions for sorting and
 
 In conclusion the CTT Sidekick is freaking sweet!!!
 
+\newpage
 
 # Revision History
 
