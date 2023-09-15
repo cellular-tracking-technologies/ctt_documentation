@@ -1,0 +1,167 @@
+---
+title: |
+  ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png){width=3in}  
+  <br />
+author: "support@celltracktech.com"
+date: "9/8/2023"
+output:
+  html_document:
+    toc: yes
+    number_sections: yes
+  pdf_document:
+    toc: yes
+    fig_caption: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Every hero needs their trusty sidekick. The CTT Sidekick is your new go-to tracking accessory for the full line of CTT radio tags, including both 434MHz and 2.4GHz frequencies. The Sidekick can detect and track all CTT LifeTags, PowerTags, HybridTags, and BlūMorpho tags and displays real time RSSI statistics, all through the companion phone app. 
+
+# Package Contents
+
+Your purchase of a CTT Sidekick comes with the following items: 
+
+* CTT Sidekick 
+* 2.4GHz omni antenna
+* 434MHz omni antenna
+* USB charging cable
+* SMA port covers (2)
+
+## Add-on options include:
+
+* 5-element 434MHz yagi antenna (with handle and connecting cable)
+* 2.4GHz yagi antenna (with handle and connecting cable)
+
+<<Insert photo of contents with corresponding label for each item here.>>
+
+# The Hardware
+
+## LED Indicators
+
+To turn on your Sidekick, press and hold the Power Button. There are three LED indicators on your Sidekick:
+
+* The `Pairing Indicator` blinks when searching for Bluetooth-enabled devices and stays solid when connected to a device.
+* The `Tag Detection Indicator` blinks every time a tag is detected.
+* The `Battery Charge Indicator` is solid green when connected to a charging cable and off when unplugged.
+ 
+<<Insert labeled photo here.>>
+
+# Battery and Charging
+
+Each Sidekick contains a 1000 mA-hr LiPo rechargeable battery with integrated under/over voltage protection. Battery life is as follows:
+
+  * Listening for 434MHz: **50 hours**
+  * Listening for 2.4GHz: **72 hours**
+  * Listening for both 434MHz and 2.4GHz: **30 hours**
+ 
+You can check the status of your battery on the CTT Mobile app. Your Sidekick is fully charged at 4.2V. To charge your Sidekick, use the included USB charging cable. When plugged in, your Sidekick will automatically turn on if it's not already. The Pairing Indicator will blink as it searches for available devices (you can pair with your phone while charging). The Battery Charge Indicator will remain on (solid green) when the Sidekick is plugged in. The Battery Charge Indicator will *remain* on as long as the device is plugged in; it does not turn off once the Sidekick is fully charged. It's important to check the battery level through the CTT Mobile app. 
+
+<<Any idea how long it takes to charge?>>
+
+# Antennas
+
+Your Sidekick comes with two omnidirectional antennas, one for 434MHz and one for 2.4GHz. Depending on your application, you can use both antennas simultaneously, or you can opt to connect only one. Make sure to connect each antenna to it's corresponding port: the longer antenna is for 2.4GHz devices while the shorter antenna is for 434MHz. 
+
+You may have purchased our optional Yagi antenna(s). These can used in place of the standard omni antenna by connecting them to their corresponding antenna port and sliding the Sidekick into the custom handle. 
+
+<<Insert photo of different antenna types with their corresponding labels>>
+
+
+# Mobile Application - CTT Mobile
+
+To use the CTT Sidekick, you will need to install the CTT Mobile app on your Android or iOS device. CTT Mobile is your working interface with the CTT Sidekick.
+
+
+## Installing CTT Mobile
+
+CTT Mobile is available for download on the iOS AppStore and Google PlayStore.
+
+
+## Pairing with CTT Sidekick
+
+To begin using your CTT Sidekick, you'll need to pair your smartphone (or other smart device) to the Sidekick using the CTT Mobile app. Please follow the instructions below:
+
+ 1. From the home screen of CTT Mobile, select the Connect Device launch tile.
+
+![CTT Mobile Home Screen](/Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_1.jpg){#id .class width=25%}
+
+ 
+ 2. Tap the Start Scan button and a list of available devices will appear.
+
+![Start Scan Screen](/Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_2.jpg){#id .class width=25%}
+
+ 
+ 3. The CTT Sidekick will be listed as **{CTT Sidekick (XXXXXXXX)}** in the available devices list, where XXXXXXXX is the unique identifier of your CTT Sidekick. Find the your Sidekick in the list and tap Connect. 
+
+Fig: CTT Mobile_3.jpg
+Capt: fig:CTT Mobile 3
+
+ 4. Once pairing is complete, the mobile application will notify you. Tap ``Go'' to continue to the CTT Sidekick Main Hub screen.
+
+Fig: CTT Mobile_4.jpg
+
+Fig: CTT Mobile_5.jpg
+
+
+# Sidekick Operation
+
+After pairing is complete, you will see the CTT Sidekick Main Hub screen (see figure above). Please note, the Home button at the bottom right will exit the Sidekick Hub and return you to the homescreen for CTT Mobile. You will need to reconnect to your Sidekick from there. 
+Making sure the compass calibration is loaded.
+
+## Detect Tags
+
+The main feature of the CTT Sidekick is its ability to detect radio tags.  From the CTT Sidekick Main Hub screen select the ``Detect'' launch tile to navigate to the Tag List screen.  At the top of the Tag List screen there are three buttons:
+
+* **`2.4GHz`** - This button toggles the 2.4GHz radio receiver on and off.  When the radio is on the icon and text will be green when it is off the icon and text will be grey.
+
+* **`434MHz`** - This button toggles the 434MHz radio receiver on and off.  When the radio is on the icon and text will be green when it is off the icon and text will be grey.
+
+* **`Record/Stop`** - This button starts and stops the recording of tag detections.  When recording is in progress all tag detections will be written to a csv file along with the current location recorded from your mobile device's GPS receiver.
+
+Just below the row of buttons you'll find the a row with actions for sorting and filtering the tag list:
+
+* **`Tag List Sort Options`** - Tapping this button will display a list of options for sorting the tag list.
+
+* **`Tag ID Search`** - Use this text box to search the tag list by tag Id.  You can search by partial tag Id.  Search is not case-sensitive.
+
+* **`Tag Count`** - You will see two numbers ``X / Y''.  Where Y is total number of tags detected since starting the app and X is number currently being displayed due to list filtering such as searching for a tag Id.
+
+
+## Map View
+
+## Localization
+
+Figure: Figures/localization_orientation.png
+Caption: Example of optimal Sidekick orientation for using localization.
+Label: fig:localization_orientation
+
+
+## Calibrating RSSI vs.  Distance
+
+Figure: calibration_atten_diagram.png
+caption: Example of tag calibration attenuation
+label: fig:calibration_atten_diagram
+
+## Calibrate Compass
+
+## RSSI vs.  Distance Fit Parameters
+
+## Firmware Updates
+
+# Conclusion
+
+In conclusion the CTT Sidekick is freaking sweet!!!
+
+
+# Revision History
+
+## Rev.  0.0.0 - (4/20/2022)
+
+* Dude,  like some stuff totally changed man
+
+# Bibliography
+
+
+
