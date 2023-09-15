@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.15)  15 SEP 2023 13:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.15)  15 SEP 2023 13:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -314,24 +314,24 @@ LaTeX Warning: Label `id' multiply defined.
 )
 \openout1 = `CTT-Sidekick-User-Guide.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -372,7 +372,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 70.
+Package hyperref Info: Link coloring OFF on input line 71.
 (./CTT-Sidekick-User-Guide.out) (./CTT-Sidekick-User-Guide.out)
 \@outlinefile=\write3
 \openout3 = `CTT-Sidekick-User-Guide.out'.
@@ -380,35 +380,35 @@ Package hyperref Info: Link coloring OFF on input line 70.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png, id=88, 301.125pt x 117.43875pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png>
-Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png  used on input line 72.
+Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png  used on input line 73.
 (pdftex.def)             Requested size: 216.81902pt x 84.5594pt.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 72.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 73.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 72.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 73.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 72.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 73.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 72.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 73.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 72.
+(Font)              <12> on input line 73.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 72.
+(Font)              <8> on input line 73.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 72.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 72.
+(Font)              <6> on input line 73.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 72.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./CTT-Sidekick-User-Guide.toc
@@ -425,34 +425,34 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 [1
 
 {/Users/davidlapuma/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc} </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png>]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 91.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 92.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 128.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 129.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [2{/Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-</Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_1.jpg, id=135, 1174.3875pt x 2294.5725pt>
+</Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_1.jpg, id=136, 1174.3875pt x 2294.5725pt>
 File: /Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_1.jpg Graphic file (type jpg)
 <use /Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_1.jpg>
-Package pdftex.def Info: /Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_1.jpg  used on input line 220.
+Package pdftex.def Info: /Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_1.jpg  used on input line 221.
 (pdftex.def)             Requested size: 117.4277pt x 229.43567pt.
-</Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_2.jpg, id=136, 1174.3875pt x 2297.58376pt>
+</Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_2.jpg, id=137, 1174.3875pt x 2297.58376pt>
 File: /Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_2.jpg Graphic file (type jpg)
 <use /Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_2.jpg>
-Package pdftex.def Info: /Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_2.jpg  used on input line 236.
+Package pdftex.def Info: /Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_2.jpg  used on input line 237.
 (pdftex.def)             Requested size: 117.4277pt x 229.73677pt.
 [3 </Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_1.jpg>]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 284.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 285.
 [4
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.328 ...ce}\label{calibrating-rssi-vs.-distance}}
+l.329 ...ce}\label{calibrating-rssi-vs.-distance}}
                                                    </Users/davidlapuma/Downloads/ctt-sidekick-product-manual/Figures/app screenshots/CTT Mobile_2.jpg>]
-Underfull \hbox (badness 3623) in paragraph at lines 330--332
+Underfull \hbox (badness 3623) in paragraph at lines 331--333
 \T1/lmr/m/n/10 Figure: cal-i-bra-tion_atten_diagram.png cap-tion: Ex-am-ple of tag cal-i-bra-tion at-ten-u-a-tion la-bel:
  []
 
@@ -475,11 +475,11 @@ Here is how much of TeX's memory you used:
  608619 words of font info for 78 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  63i,7n,67p,528b,478s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on CTT-Sidekick-User-Guide.pdf (5 pages, 2362155 bytes).
+</Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on CTT-Sidekick-User-Guide.pdf (5 pages, 2386241 bytes).
 PDF statistics:
- 222 PDF objects out of 1000 (max. 8388607)
- 194 compressed objects within 2 object streams
+ 227 PDF objects out of 1000 (max. 8388607)
+ 197 compressed objects within 2 object streams
  56 named destinations out of 1000 (max. 500000)
  184 words of extra memory for PDF output out of 10000 (max. 10000000)
 
