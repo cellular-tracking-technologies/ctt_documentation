@@ -6,12 +6,12 @@ title: |
 author: "support@celltracktech.com"
 date: "9/15/2023"
 output:
-  pdf_document:
-    toc: yes
-    fig_caption: true
   html_document:
     toc: yes
     number_sections: yes
+  pdf_document:
+    toc: yes
+    fig_caption: true
 ---
 
 ```{r setup, include=FALSE}
@@ -72,6 +72,10 @@ Your Sidekick comes with two omnidirectional antennas, one for 434MHz and one fo
 You may have purchased our optional Yagi antenna(s). These can used in place of the standard omni antenna by connecting them to their corresponding antenna port and sliding the Sidekick into the custom handle. 
 
 <<Insert photo of different antenna types with their corresponding labels>>
+
+## Storing your Sidekick
+
+**(need something here about storing them without antennas attached)**
 
 
 # Mobile Application - CTT Mobile
