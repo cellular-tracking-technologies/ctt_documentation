@@ -4,7 +4,7 @@ title: |
   <br />
   Installation Guide for the CTT SensorStation and CTT Nodes
 author: "support@celltracktech.com"
-date: "08/15/2023"
+date: "09/20/2023"
 output:
   pdf_document:
     toc: yes
@@ -403,10 +403,10 @@ The syntax is made of the following parts:
 if you'd rather designate a destination folder, simply replace the final ` .` with the path of your choice. For example:
 
 *V1 and V2 stations:*
-`scp -r pi@10.1.10.113:/data c:/Users/joeschmoscomputer/Downloads`
+`scp -r pi@xxx.xxx.xxx.xxx:/data c:/Users/joeschmoscomputer/Downloads`
 
 **V3 stations (or upgraded V2 stations):**
-`scp -r ctt@10.1.10.113:/data c:/Users/joeschmoscomputer/Downloads`
+`scp -r ctt@xxx.xxx.xxx.xxx:/data c:/Users/joeschmoscomputer/Downloads`
 
 This would download the `data` folder from the SensorStation, to the `Downloads` folder on the local computer.
 
@@ -429,7 +429,12 @@ Once you have manually copied your data files to a local drive, confirmed they a
 
 The following command will delete all files within the `uploaded`, `rotated`, and `SGdata` folders, as well as the `.csv` files within the `data` folder, which represent the most recent files being collected.
 
-`ssh ctt@169.254.237.56 "sudo rm -rf /data/uploaded/* && sudo rm -rf /data/rotated/* && sudo rm -rf /data/SGdata/* && sudo rm /data/*.csv"`
+*For V2 Stations:*
+`ssh pi@xxx.xxx.xxx.xxx "sudo rm -rf /data/uploaded/* && sudo rm -rf /data/rotated/* && sudo rm -rf /data/SGdata/* && sudo rm /data/*.csv"`
+
+
+**For V3 (and updated V2) Stations:**
+`ssh ctt@xxx.xxx.xxx.xxx "sudo rm -rf /data/uploaded/* && sudo rm -rf /data/rotated/* && sudo rm -rf /data/SGdata/* && sudo rm /data/*.csv"`
 
 Once you run this command, go back and re-check the file size of the files and folders within the `data` folder using the `du` command in the previous section. You should see that your file sizes have been reduced as you have deleted the data files and reclaimed your disk space.
 
