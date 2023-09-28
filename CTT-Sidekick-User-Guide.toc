@@ -1,22 +1,23 @@
 \contentsline {section}{Package Contents}{2}{section*.2}%
 \contentsline {subsection}{Add-on options include:}{2}{section*.3}%
-\contentsline {section}{The Hardware}{2}{section*.4}%
-\contentsline {subsection}{LED Indicators}{2}{section*.5}%
-\contentsline {section}{Battery and Charging}{2}{section*.6}%
-\contentsline {section}{Antennas}{3}{section*.7}%
-\contentsline {subsection}{Storing your Sidekick}{3}{section*.8}%
-\contentsline {section}{Mobile Application - CTT Mobile}{3}{section*.9}%
-\contentsline {subsection}{Installing CTT Mobile}{3}{section*.10}%
-\contentsline {subsection}{Pairing with CTT Sidekick}{3}{section*.11}%
-\contentsline {section}{Sidekick Operation}{4}{section*.12}%
-\contentsline {subsection}{Detect Tags}{5}{section*.13}%
-\contentsline {subsection}{Map View}{7}{section*.14}%
-\contentsline {subsection}{Localization}{7}{section*.15}%
-\contentsline {subsection}{Calibrating RSSI vs.\nobreakspace {}Distance}{7}{section*.16}%
-\contentsline {subsection}{Calibrate Compass}{7}{section*.17}%
-\contentsline {subsection}{RSSI vs.\nobreakspace {}Distance Fit Parameters}{7}{section*.18}%
-\contentsline {subsection}{Firmware Updates}{7}{section*.19}%
-\contentsline {section}{Conclusion}{7}{section*.20}%
-\contentsline {section}{Revision History}{8}{section*.21}%
-\contentsline {subsection}{Rev.\nobreakspace {}0.0.0 - (4/20/2022)}{8}{section*.22}%
-\contentsline {section}{Bibliography}{8}{section*.23}%
+\contentsline {section}{Quick-Start Guide}{2}{section*.4}%
+\contentsline {section}{The Hardware}{2}{section*.5}%
+\contentsline {subsection}{LED Indicators}{2}{section*.6}%
+\contentsline {section}{Battery and Charging}{2}{section*.7}%
+\contentsline {section}{Antennas}{3}{section*.8}%
+\contentsline {subsection}{Storing your Sidekick}{3}{section*.9}%
+\contentsline {section}{Mobile Application - CTT Mobile}{3}{section*.10}%
+\contentsline {subsection}{Installing CTT Mobile}{3}{section*.11}%
+\contentsline {subsection}{Pairing with CTT Sidekick}{3}{section*.12}%
+\contentsline {section}{Sidekick Operation}{6}{section*.13}%
+\contentsline {subsection}{Calibrate Compass}{7}{section*.14}%
+\contentsline {subsection}{Detect Tags}{7}{section*.15}%
+\contentsline {subsection}{Map View}{9}{section*.16}%
+\contentsline {subsection}{Localization}{9}{section*.17}%
+\contentsline {subsection}{Calibrating RSSI vs.\nobreakspace {}Distance}{9}{section*.18}%
+\contentsline {subsection}{RSSI vs.\nobreakspace {}Distance Fit Parameters}{9}{section*.19}%
+\contentsline {subsection}{Firmware Updates}{9}{section*.20}%
+\contentsline {section}{Conclusion}{9}{section*.21}%
+\contentsline {section}{Revision History}{10}{section*.22}%
+\contentsline {subsection}{Rev.\nobreakspace {}0.0.0 - (4/20/2022)}{10}{section*.23}%
+\contentsline {section}{Bibliography}{10}{section*.24}%

@@ -6,12 +6,12 @@ title: |
 author: "support@celltracktech.com"
 date: "9/15/2023"
 output:
-  html_document:
-    toc: yes
-    number_sections: yes
   pdf_document:
     toc: yes
     fig_caption: true
+  html_document:
+    toc: yes
+    number_sections: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -39,7 +39,10 @@ Your purchase of a CTT Sidekick comes with the following items:
 * 5-element 434MHz yagi antenna (with handle and connecting cable)
 * 2.4GHz yagi antenna (with handle and connecting cable)
 
-<<Insert photo of contents with corresponding label for each item here.>>
+
+# Quick-Start Guide
+
+The new CTT Sidekick has many bells and whistles, but one of the core features is finding a tag in the field, whether on an active animal, or one which has fallen off or stopped moving. This quick-start guide will help you jump right into using the CTT Sidekick for these purposes. If you want to simply jump right in, proceed to the section on [Pairing with CTT Sidekick] with your CTT Sidekick. **Note that you must have installed the CTT Mobile App to proceed!**
 
 # The Hardware
 
@@ -47,11 +50,11 @@ Your purchase of a CTT Sidekick comes with the following items:
 
 To turn on your Sidekick, press and hold the Power Button. There are three LED indicators on your Sidekick:
 
-* The `Pairing Indicator` blinks when searching for Bluetooth-enabled devices and stays solid when connected to a device.
-* The `Tag Detection Indicator` blinks every time a tag is detected.
-* The `Battery Charge Indicator` is solid green when connected to a charging cable and off when unplugged.
+1. The `Pairing Indicator` blinks when searching for Bluetooth-enabled devices and stays solid when connected to a device.
+2. The `Tag Detection Indicator` blinks every time a tag is detected.
+3. The `Battery Charge Indicator` is solid green when connected to a charging cable and off when unplugged.
  
-<<Insert labeled photo here.>>
+![CTT Sidekick LEDs](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/Sidekick_LEDs.jpg){#id .class width=25%}
 
 # Battery and Charging
 
@@ -63,19 +66,21 @@ Each Sidekick contains a 1000 mA-hr LiPo rechargeable battery with integrated un
  
 You can check the status of your battery on the CTT Mobile app. Your Sidekick is fully charged at 4.2V. To charge your Sidekick, use the included USB charging cable. When plugged in, your Sidekick will automatically turn on if it's not already. The Pairing Indicator will blink as it searches for available devices (you can pair with your phone while charging). The Battery Charge Indicator will remain on (solid green) when the Sidekick is plugged in. The Battery Charge Indicator will *remain* on as long as the device is plugged in; it does not turn off once the Sidekick is fully charged. It's important to check the battery level through the CTT Mobile app. 
 
-<<Any idea how long it takes to charge?>>
+<!-- Any idea how long it takes to charge? -->
 
 # Antennas
 
-Your Sidekick comes with two omnidirectional antennas, one for 434MHz and one for 2.4GHz. Depending on your application, you can use both antennas simultaneously, or you can opt to connect only one. Make sure to connect each antenna to it's corresponding port: the longer antenna is for 2.4GHz devices while the shorter antenna is for 434MHz. 
+Your Sidekick comes with two omnidirectional antennas, one for 434MHz (10.5cm) and one for 2.4GHz (19.5cm). Depending on your application, you can use both antennas simultaneously, or you can opt to connect only one. Make sure to connect each antenna to it's corresponding port: **The longer antenna is for 2.4GHz devices while the shorter antenna is for 434MHz.** 
 
-You may have purchased our optional Yagi antenna(s). These can used in place of the standard omni antenna by connecting them to their corresponding antenna port and sliding the Sidekick into the custom handle. 
+You may have purchased our optional Yagi antenna(s) and handle(s). These can used in place of the standard omni antenna by connecting them to their corresponding antenna port and sliding the Sidekick into the custom handle. 
 
-<<Insert photo of different antenna types with their corresponding labels>>
+![Optional Yagi Antennas and Handles. 434MHz (left) and 2.4GHz (right)](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_yagiAntennas.JPG){#id .class width=50%}
+
+![Optional 434MHz Yagi and custom handle with Sidekick locked in. *Also note the 2.4GHz omni antenna still attached.*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_434MHzYagi.JPG){#id .class width=50%}
 
 ## Storing your Sidekick
 
-**(need something here about storing them without antennas attached)**
+While your CTT Sidekick is very robust and field-tested, we recommend storing your Sidekick with the antennas disconnected from the SMA ports to avoid any unintended and excessive pressure on the connectors. As well, you should also use the two dust covers to protect your SMA ports when not in use.
 
 
 # Mobile Application - CTT Mobile
@@ -114,7 +119,13 @@ To begin using your CTT Sidekick, you'll need to pair your smartphone (or other 
 # Sidekick Operation
 
 After pairing is complete, you will see the CTT Sidekick Main Hub screen (see figure above). Please note, the Home button at the bottom right will exit the Sidekick Hub and return you to the homescreen for CTT Mobile. You will need to reconnect to your Sidekick from there. 
-Making sure the compass calibration is loaded.
+
+## Calibrate Compass
+
+<!-- ![title](/path to file/){#id .class width=25%}  -->
+
+<!-- ![title](/path to file/){#id .class width=25%}  -->
+
 
 ## Detect Tags
 
@@ -145,8 +156,6 @@ Just below the row of buttons you'll find the a row with actions for sorting and
 ## Calibrating RSSI vs.  Distance
 ![Example of tag calibration attenuation](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/calibration_atten_diagram.png){#id .class width=50%}
 
-
-## Calibrate Compass
 
 ## RSSI vs.  Distance Fit Parameters
 

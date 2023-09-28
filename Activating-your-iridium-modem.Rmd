@@ -5,12 +5,12 @@ title: |
 author: "support@celltracktech.com"
 date: "8/17/2022"
 output:
-  pdf_document:
-    toc: yes
-    fig_caption: true
   html_document:
     toc: yes
     number_sections: yes
+  pdf_document:
+    toc: yes
+    fig_caption: true
 ---
 
 ```{r setup, include=FALSE}
