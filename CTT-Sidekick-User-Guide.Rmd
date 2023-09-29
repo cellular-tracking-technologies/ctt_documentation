@@ -10,6 +10,7 @@ output:
     toc: yes
     fig_caption: true
   html_document:
+    css: styles.css
     toc: yes
     number_sections: yes
 ---
@@ -20,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 \newpage
 
-***Every hero needs their trusty sidekick*** 
+<p class="pullquote">Every hero needs their trusty Sidekick</p>
 
 The CTT Sidekick is your new go-to tracking accessory for the full line of CTT radio tags, including both 434MHz and 2.4GHz frequencies. The Sidekick can detect and track all CTT LifeTags, PowerTags, HybridTags, and BlūMorpho tags and displays real time RSSI statistics, all through the companion phone app. 
 
@@ -122,9 +123,10 @@ After pairing is complete, you will see the CTT Sidekick Main Hub screen (see fi
 
 ## Calibrate Compass
 
-<!-- ![title](/path to file/){#id .class width=25%}  -->
+![Compass Calibration Screen](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_compassCalib1.PNG){#id .class width=25%} ![Compass Calibration Complete](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_compassCalib2.PNG){#id .class width=25%} ![Compass Calibration Saved](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_calibrationSaved.PNG){#id .class width=25%}
 
-<!-- ![title](/path to file/){#id .class width=25%}  -->
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_CompassNotCalib.PNG){#id .class width=25%} ![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_calibratedCompass.PNG){#id .class width=25%}
+
 
 
 ## Detect Tags
