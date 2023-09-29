@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Overview
 
-CTT has produced the first 434MHz deployable leg-band with our signature HybridTag, LifeTag or PowerTag, and internal antenna, embedded into the design. Leg bands come with internal dimensions consistent with USGS Bird Banding Lab approved band sizes (currently sizes 7a and greater).
+CTT has produced the first 434MHz deployable leg band with our signature HybridTag, LifeTag or PowerTag, and internal antenna, embedded into the design. Leg bands come with internal dimensions consistent with USGS Bird Banding Lab approved band sizes (currently sizes 7a and greater).
 
 ## Preparing for deployment
 
