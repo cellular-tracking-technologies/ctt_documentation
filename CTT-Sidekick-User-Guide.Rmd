@@ -6,13 +6,13 @@ title: |
 author: "support@celltracktech.com"
 date: "9/15/2023"
 output:
-  pdf_document:
-    toc: yes
-    fig_caption: true
   html_document:
     css: styles.css
     toc: yes
     number_sections: yes
+  pdf_document:
+    toc: yes
+    fig_caption: true
 ---
 
 ```{r setup, include=FALSE}
