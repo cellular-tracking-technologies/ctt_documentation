@@ -121,6 +121,7 @@ To begin using your CTT Sidekick, you'll need to pair your smartphone (or other 
 
 After pairing is complete, you will see the CTT Sidekick Main Hub screen (see figure above). Please note, the Home button at the bottom right will exit the Sidekick Hub and return you to the homescreen for CTT Mobile. You will need to reconnect to your Sidekick from there. 
 
+
 ## Calibrate Compass
 
 ![Compass Calibration Screen](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_compassCalib1.PNG){#id .class width=25%} ![Compass Calibration Complete](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_compassCalib2.PNG){#id .class width=25%} ![Compass Calibration Saved](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_calibrationSaved.PNG){#id .class width=25%}
@@ -131,7 +132,15 @@ After pairing is complete, you will see the CTT Sidekick Main Hub screen (see fi
 
 ## Detect Tags
 
-The main feature of the CTT Sidekick is its ability to detect radio tags.  From the CTT Sidekick Main Hub screen select the ``Detect'' launch tile to navigate to the Tag List screen.  At the top of the Tag List screen there are three buttons:
+The main feature of the CTT Sidekick is its ability to detect radio tags.  From the CTT Sidekick Main Hub screen select the ``Detect'' launch tile to navigate to the Tag List screen.  
+
+At the very top right of the Detect Tags screen, in the header, are two small buttons:
+
+* **`X`** - This button clears the Detection List. You may find this useful when you have scaanned an area where you had multiple detections, but then move to a new area, just to see only the tags currently within range of your Sidekick.
+
+* **`Location Icon`** - This button toggles whether you enable Location Services, which are required for localizing tags in map view, as well as for other features. You can turn this off to save battery life when you're not actively tracking tags.
+
+Also at the top of the Tag List screen there are three larger buttons:
 
 * **`2.4GHz`** - This button toggles the 2.4GHz radio receiver on and off.  When the radio is on the icon and text will be green when it is off the icon and text will be grey.
 
@@ -143,14 +152,45 @@ Just below the row of buttons you'll find the a row with actions for sorting and
 
 * **`Tag List Sort Options`** - Tapping this button will display a list of options for sorting the tag list.
 
+![Tag Sort Options](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/ sidekick_sort.PNG){#id .class width=25%}
+
+
 * **`Tag ID Search`** - Use this text box to search the tag list by tag Id.  You can search by partial tag Id.  Search is not case-sensitive.
+
+![Tag ID Search](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_searchTagID.PNG){#id .class width=25%}
 
 * **`Tag Count`** - You will see two numbers ``X / Y''.  Where Y is total number of tags detected since starting the app and X is number currently being displayed due to list filtering such as searching for a tag Id.
 
+Clicking on an individual tag opens up the chart for that tag, as well as several more options:
+
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_DetectTag.PNG){#id .class width=25%}
+
+**`Chart Type`**: Options include `RSSI vs. Time`, `RSSI Histogram`, `Solar Voltage`, `Temperature`
+
+**`Change Over Time`**: Options include `10s`, `30s`, `1min`, `2min`, `5min`
+
+**`Map`**: Opens the `Map` window
+
+**`Localization`**: Opens the `Localization` window
+
+**`Calibrate`**: Opens the `Calibration` window
 
 ## Map View
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_DetectTag.PNG){#id .class width=25%}
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_YagiAntTip.PNG){#id .class width=25%}
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_YagiAnt.PNG){#id .class width=25%}
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_ConnectOmniTip.PNG){#id .class width=25%}
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_OmniAnt.PNG){#id .class width=25%}
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_chooseAntenna.PNG){#id .class width=25%}
 
 ## Localization
+
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_LocalizationWarn.PNG){#id .class width=25%}
+
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_localization1.PNG){#id .class width=25%}
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_localizationFinal.PNG){#id .class width=25%}
+
+<!-- ![](){#id .class width=25%} -->
 
 ![Example of optimal Sidekick orientation for using localization](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/localization_orientation.png){#id .class width=50%}
 
@@ -158,8 +198,18 @@ Just below the row of buttons you'll find the a row with actions for sorting and
 ## Calibrating RSSI vs.  Distance
 ![Example of tag calibration attenuation](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/calibration_atten_diagram.png){#id .class width=50%}
 
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_calibrateTag.PNG){#id .class width=25%}
+
 
 ## RSSI vs.  Distance Fit Parameters
+
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_choose_alg.PNG){#id .class width=25%}
+
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_chooseParam.PNG){#id .class width=25%}
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_chooseModel.PNG){#id .class width=25%}
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_paramDesc.PNG){#id .class width=25%}
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_ParamSets.PNG){#id .class width=25%}
+
 
 ## Firmware Updates
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.19)  29 SEP 2023 10:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.19)  29 SEP 2023 11:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -330,6 +330,12 @@ LaTeX Warning: Label `id' multiply defined.
 
 LaTeX Warning: Label `id' multiply defined.
 
+
+LaTeX Warning: Label `id' multiply defined.
+
+
+LaTeX Warning: Label `id' multiply defined.
+
 )
 \openout1 = `CTT-Sidekick-User-Guide.aux'.
 
@@ -547,30 +553,145 @@ Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git
 (pdftex.def)             Requested size: 117.42393pt x 254.05273pt.
 [7 </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/CTT Mobile_3.jpg> </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_compassCalib1.PNG> </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_compassCalib2.PNG> </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_calibrationSaved.PNG>]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 344.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 346.
 
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.388 }
+l.390 }
        
-</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/localization_orientation.png, id=203, 538.01pt x 652.4375pt>
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/ sidekick_sort.PNG, id=203, 1288.815pt x 2788.4175pt>
+File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/ sidekick_sort.PNG Graphic file (type png)
+<use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/ sidekick_sort.PNG>
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/ sidekick_sort.PNG  used on input line 390.
+(pdftex.def)             Requested size: 117.42393pt x 254.05273pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{id}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.406 }
+       
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_searchTagID.PNG, id=204, 1288.815pt x 2788.4175pt>
+File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_searchTagID.PNG Graphic file (type png)
+<use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_searchTagID.PNG>
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_searchTagID.PNG  used on input line 406.
+(pdftex.def)             Requested size: 117.42393pt x 254.05273pt.
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_DetectTag.PNG, id=205, 1288.815pt x 2788.4175pt>
+File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_DetectTag.PNG Graphic file (type png)
+<use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_DetectTag.PNG>
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_DetectTag.PNG  used on input line 421.
+(pdftex.def)             Requested size: 117.42393pt x 254.05273pt.
+[8 </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_CompassNotCalib.PNG> </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_calibratedCompass.PNG>] [9 </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/ sidekick_sort.PNG> </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_searchTagID.PNG>]
+File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_DetectTag.PNG Graphic file (type png)
+<use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_DetectTag.PNG>
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_DetectTag.PNG  used on input line 438.
+(pdftex.def)             Requested size: 117.42393pt x 254.05273pt.
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_YagiAntTip.PNG, id=218, 1288.815pt x 2788.4175pt>
+File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_YagiAntTip.PNG Graphic file (type png)
+<use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_YagiAntTip.PNG>
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_YagiAntTip.PNG  used on input line 439.
+(pdftex.def)             Requested size: 117.42393pt x 254.05273pt.
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_YagiAnt.PNG, id=219, 1288.815pt x 2788.4175pt>
+File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_YagiAnt.PNG Graphic file (type png)
+<use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_YagiAnt.PNG>
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_YagiAnt.PNG  used on input line 440.
+(pdftex.def)             Requested size: 117.42393pt x 254.05273pt.
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_ConnectOmniTip.PNG, id=220, 1288.815pt x 2788.4175pt>
+File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_ConnectOmniTip.PNG Graphic file (type png)
+<use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_ConnectOmniTip.PNG>
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_ConnectOmniTip.PNG  used on input line 441.
+(pdftex.def)             Requested size: 117.42393pt x 254.05273pt.
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_OmniAnt.PNG, id=221, 1288.815pt x 2788.4175pt>
+File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_OmniAnt.PNG Graphic file (type png)
+<use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_OmniAnt.PNG>
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_OmniAnt.PNG  used on input line 442.
+(pdftex.def)             Requested size: 117.42393pt x 254.05273pt.
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_chooseAntenna.PNG, id=222, 1288.815pt x 2788.4175pt>
+File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_chooseAntenna.PNG Graphic file (type png)
+<use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_chooseAntenna.PNG>
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_chooseAntenna.PNG  used on input line 443.
+(pdftex.def)             Requested size: 117.42393pt x 254.05273pt.
+
+Overfull \hbox (6.60736pt too wide) in paragraph at lines 438--444
+[] [] [] []
+ []
+
+[10 </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_DetectTag.PNG>]
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_LocalizationWarn.PNG, id=228, 1288.815pt x 2788.4175pt>
+File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_LocalizationWarn.PNG Graphic file (type png)
+<use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_LocalizationWarn.PNG>
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_LocalizationWarn.PNG  used on input line 448.
+(pdftex.def)             Requested size: 117.42393pt x 254.05273pt.
+[11 </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_YagiAntTip.PNG> </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_YagiAnt.PNG> </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_ConnectOmniTip.PNG> </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_OmniAnt.PNG> </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekickMap_chooseAntenna.PNG>]
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_localization1.PNG, id=234, 1288.815pt x 2788.4175pt>
+File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_localization1.PNG Graphic file (type png)
+<use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_localization1.PNG>
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_localization1.PNG  used on input line 450.
+(pdftex.def)             Requested size: 117.42393pt x 254.05273pt.
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_localizationFinal.PNG, id=235, 1288.815pt x 2788.4175pt>
+File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_localizationFinal.PNG Graphic file (type png)
+<use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_localizationFinal.PNG>
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_localizationFinal.PNG  used on input line 451.
+(pdftex.def)             Requested size: 117.42393pt x 254.05273pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{id}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.459 }
+       
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/localization_orientation.png, id=236, 538.01pt x 652.4375pt>
 File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/localization_orientation.png Graphic file (type png)
 <use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/localization_orientation.png>
-Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/localization_orientation.png  used on input line 388.
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/localization_orientation.png  used on input line 459.
 (pdftex.def)             Requested size: 234.87802pt x 284.83342pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{id}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.400 }
+l.471 }
        
-</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/calibration_atten_diagram.png, id=205, 1044.90375pt x 606.265pt>
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/calibration_atten_diagram.png, id=238, 1044.90375pt x 606.265pt>
 File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/calibration_atten_diagram.png Graphic file (type png)
 <use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/calibration_atten_diagram.png>
-Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/calibration_atten_diagram.png  used on input line 400.
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/calibration_atten_diagram.png  used on input line 471.
 (pdftex.def)             Requested size: 234.86998pt x 136.27422pt.
-[8 </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_CompassNotCalib.PNG> </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_calibratedCompass.PNG>] [9 </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/localization_orientation.png> </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/calibration_atten_diagram.png>] [10] [11] (./CTT-Sidekick-User-Guide.aux)
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_calibrateTag.PNG, id=239, 1288.815pt x 2788.4175pt>
+File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_calibrateTag.PNG Graphic file (type png)
+<use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_calibrateTag.PNG>
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_calibrateTag.PNG  used on input line 474.
+(pdftex.def)             Requested size: 117.42393pt x 254.05273pt.
+[12 </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_LocalizationWarn.PNG> </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_localization1.PNG> </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_localizationFinal.PNG>] [13 </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/localization_orientation.png> </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/calibration_atten_diagram.png>]
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_choose_alg.PNG, id=254, 1288.815pt x 2788.4175pt>
+File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_choose_alg.PNG Graphic file (type png)
+<use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_choose_alg.PNG>
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_choose_alg.PNG  used on input line 480.
+(pdftex.def)             Requested size: 117.42393pt x 254.05273pt.
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_chooseParam.PNG, id=255, 1288.815pt x 2788.4175pt>
+File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_chooseParam.PNG Graphic file (type png)
+<use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_chooseParam.PNG>
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_chooseParam.PNG  used on input line 482.
+(pdftex.def)             Requested size: 117.42393pt x 254.05273pt.
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_chooseModel.PNG, id=256, 1288.815pt x 2788.4175pt>
+File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_chooseModel.PNG Graphic file (type png)
+<use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_chooseModel.PNG>
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_chooseModel.PNG  used on input line 483.
+(pdftex.def)             Requested size: 117.42393pt x 254.05273pt.
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_paramDesc.PNG, id=257, 1288.815pt x 2788.4175pt>
+File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_paramDesc.PNG Graphic file (type png)
+<use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_paramDesc.PNG>
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_paramDesc.PNG  used on input line 484.
+(pdftex.def)             Requested size: 117.42393pt x 254.05273pt.
+</Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_ParamSets.PNG, id=258, 1288.815pt x 2788.4175pt>
+File: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_ParamSets.PNG Graphic file (type png)
+<use /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_ParamSets.PNG>
+Package pdftex.def Info: /Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_ParamSets.PNG  used on input line 485.
+(pdftex.def)             Requested size: 117.42393pt x 254.05273pt.
+
+Overfull \hbox (6.60736pt too wide) in paragraph at lines 482--486
+[][] [] [] [] 
+ []
+
+[14 </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sidekick_calibrateTag.PNG> </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_choose_alg.PNG>] [15 </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_chooseParam.PNG> </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_chooseModel.PNG> </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_paramDesc.PNG> </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/sk_localization_ParamSets.PNG>] [16] (./CTT-Sidekick-User-Guide.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -582,21 +703,18 @@ Package rerunfilecheck Info: File `CTT-Sidekick-User-Guide.out' has not changed.
 (rerunfilecheck)             Checksum: 8AD86CEE2612F5BEA21E71733B0C8960;3357.
  ) 
 Here is how much of TeX's memory you used:
- 10995 strings out of 476894
- 179275 string characters out of 5807862
+ 11121 strings out of 476894
+ 192967 string characters out of 5807862
  1931791 words of memory out of 5000000
- 32039 multiletter control sequences out of 15000+600000
+ 32158 multiletter control sequences out of 15000+600000
  609382 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  63i,7n,67p,528b,520s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on CTT-Sidekick-User-Guide.pdf (11 pages, 14256263 bytes).
+Output written on CTT-Sidekick-User-Guide.pdf (16 pages, 45941673 bytes).
 PDF statistics:
- 296 PDF objects out of 1000 (max. 8388607)
- 244 compressed objects within 3 object streams
- 75 named destinations out of 1000 (max. 500000)
- 265 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 337 PDF objects out of 1000 (max. 8388607)
+ 263 compressed objects within 3 object streams
+ 82 named destinations out of 1000 (max. 500000)
+ 350 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-
-! fclose: Operation timed out
-! fclose: Operation timed out

@@ -12,12 +12,12 @@
 \contentsline {section}{Sidekick Operation}{6}{section*.13}%
 \contentsline {subsection}{Calibrate Compass}{7}{section*.14}%
 \contentsline {subsection}{Detect Tags}{8}{section*.15}%
-\contentsline {subsection}{Map View}{10}{section*.16}%
-\contentsline {subsection}{Localization}{10}{section*.17}%
-\contentsline {subsection}{Calibrating RSSI vs.\nobreakspace {}Distance}{10}{section*.18}%
-\contentsline {subsection}{RSSI vs.\nobreakspace {}Distance Fit Parameters}{10}{section*.19}%
-\contentsline {subsection}{Firmware Updates}{10}{section*.20}%
-\contentsline {section}{Conclusion}{10}{section*.21}%
-\contentsline {section}{Revision History}{11}{section*.22}%
-\contentsline {subsection}{Rev.\nobreakspace {}0.0.0 - (4/20/2022)}{11}{section*.23}%
-\contentsline {section}{Bibliography}{11}{section*.24}%
+\contentsline {subsection}{Map View}{11}{section*.16}%
+\contentsline {subsection}{Localization}{12}{section*.17}%
+\contentsline {subsection}{Calibrating RSSI vs.\nobreakspace {}Distance}{14}{section*.18}%
+\contentsline {subsection}{RSSI vs.\nobreakspace {}Distance Fit Parameters}{14}{section*.19}%
+\contentsline {subsection}{Firmware Updates}{15}{section*.20}%
+\contentsline {section}{Conclusion}{15}{section*.21}%
+\contentsline {section}{Revision History}{16}{section*.22}%
+\contentsline {subsection}{Rev.\nobreakspace {}0.0.0 - (4/20/2022)}{16}{section*.23}%
+\contentsline {section}{Bibliography}{16}{section*.24}%
