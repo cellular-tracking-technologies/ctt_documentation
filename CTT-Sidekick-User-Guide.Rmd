@@ -49,11 +49,13 @@ The new CTT Sidekick has many bells and whistles, but one of the core features i
 
 ## LED Indicators
 
-To turn on your Sidekick, press and hold the Power Button. There are three LED indicators on your Sidekick:
+To turn on your Sidekick, press and hold the Power Button. You will see LEDs 1 and 2 light up. There are three LED indicators:
 
 1. The `Pairing Indicator` blinks when searching for Bluetooth-enabled devices and stays solid when connected to a device.
 2. The `Tag Detection Indicator` blinks every time a tag is detected.
 3. The `Battery Charge Indicator` is solid green when connected to a charging cable and off when unplugged.
+
+To turn off your Sidekick, press and hold the Power Button for 3 seconds (the LEDs will turn off).
  
 ![CTT Sidekick LEDs](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/Sidekick_LEDs.jpg){#id .class width=25%}
 
@@ -213,9 +215,9 @@ Clicking on an individual tag opens up the chart for that tag, as well as severa
 
 ## Firmware Updates
 
-# Conclusion
+# Final Thoughts
 
-In conclusion the CTT Sidekick is freaking sweet!!!
+This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/pages/customer-service-desk-csd) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2023.
 
 \newpage
 
