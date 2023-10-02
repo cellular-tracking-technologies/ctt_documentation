@@ -187,10 +187,18 @@ Clicking on an individual tag opens up the chart for that tag, as well as severa
 
 ## Localization
 
+Please note the warning screen that opens when you click on the Localization button. While still a Beta feature, Localization provides you with a powerful tool for finding a stationary tag (great for relocating a tag that has fallen off of an animal, or on an animal you suspect has died). In order to use the Localization feature you must first collect a RSSI vs. Distance calibration dataset on your tag. **This is important, because you must do so before you ever deploy the tag, so doing so should be part of your pre-deployment checklist.**
+
+Also note that Localization only works with the Omni antenna.
+
 ![](./images/sidekick_LocalizationWarn.PNG){#id .class width=25%}
+
+The Localization screen consists of a Heatmap and an RSSI vs. Time graph. As more beeps are recorded, the heatmap begins to provide directionality of your tag. Walking a grid pattern, and keeping your Sidekick above your head, will allow the algorithm to more accurately arrive an a solution for your tag's location.
 
 ![](./images/sidekick_localization1.PNG){#id .class width=25%}
 ![](./images/sidekick_localizationFinal.PNG){#id .class width=25%}
+
+At the top of the Localization screen are four grid size options, `500m`, `300m`, `200m`, and `80m`. As you get closer to your tag you can increase the resolution of your grid by selecting a smaller grid size. For tags located farther than 500m away, consider using the Yagi antenna with the `Detect` screen until you are within the grid-size-range, and then switch to the Omni antenna and use the Localization screen.
 
 <!-- ![](){#id .class width=25%} -->
 
@@ -215,19 +223,21 @@ Clicking on an individual tag opens up the chart for that tag, as well as severa
 
 ## Firmware Updates
 
+**Coming Soon**
+
 # Final Thoughts
 
 This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/pages/customer-service-desk-csd) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2023.
 
 \newpage
 
-# Revision History
+<!-- # Revision History -->
 
-## Rev.  0.0.0 - (4/20/2022)
+<!-- ## Rev.  0.0.0 - (4/20/2022) -->
 
-* Dude,  like some stuff totally changed man
+<!-- * Dude,  like some stuff totally changed man -->
 
-# Bibliography
+<!-- # Bibliography -->
 
 
 
