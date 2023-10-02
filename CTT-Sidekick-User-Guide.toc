@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+\contentsline {section}{Package Contents}{2}{section*.2}%
+\contentsline {subsection}{Add-on options include:}{2}{section*.3}%
+\contentsline {section}{Quick-Start Guide}{2}{section*.4}%
+\contentsline {section}{The Hardware}{2}{section*.5}%
+\contentsline {subsection}{LED Indicators}{2}{section*.6}%
+\contentsline {section}{Battery and Charging}{2}{section*.7}%
+\contentsline {section}{Antennas}{3}{section*.8}%
+\contentsline {subsection}{Storing your Sidekick}{3}{section*.9}%
+\contentsline {section}{Mobile Application - CTT Mobile}{3}{section*.10}%
+\contentsline {subsection}{Installing CTT Mobile}{3}{section*.11}%
+\contentsline {subsection}{Pairing with CTT Sidekick}{6}{section*.12}%
+\contentsline {section}{Sidekick Operation}{8}{section*.13}%
+\contentsline {subsection}{Calibrate Compass}{8}{section*.14}%
+\contentsline {subsection}{Detect Tags}{9}{section*.15}%
+\contentsline {subsection}{Map View}{11}{section*.16}%
+\contentsline {subsection}{Localization}{11}{section*.17}%
+\contentsline {subsection}{Calibrating RSSI vs.\nobreakspace {}Distance}{13}{section*.18}%
+\contentsline {subsection}{RSSI vs.\nobreakspace {}Distance Fit Parameters}{14}{section*.19}%
+\contentsline {subsection}{Firmware Updates}{15}{section*.20}%
+\contentsline {section}{Final Thoughts}{15}{section*.21}%
+=======
 \contentsline {section}{Package Contents}{3}{section*.2}%
 \contentsline {subsection}{Add-on options include:}{3}{section*.3}%
 \contentsline {section}{Quick-Start Guide}{3}{section*.4}%
@@ -21,3 +43,4 @@
 \contentsline {section}{Revision History}{18}{section*.22}%
 \contentsline {subsection}{Rev.\nobreakspace {}0.0.0 - (4/20/2022)}{18}{section*.23}%
 \contentsline {section}{Bibliography}{18}{section*.24}%
+>>>>>>> master
