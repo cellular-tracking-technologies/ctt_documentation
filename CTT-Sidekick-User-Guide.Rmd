@@ -138,7 +138,7 @@ The main feature of the CTT Sidekick is its ability to detect radio tags.  From 
 
 At the very top right of the Detect Tags screen, in the header, are two small buttons:
 
-* **`X`** - This button clears the Detection List. You may find this useful when you have scaanned an area where you had multiple detections, but then move to a new area, just to see only the tags currently within range of your Sidekick.
+* **`X`** - This button clears the Detection List. You may find this useful when you have scanned an area where you had multiple detections, but then move to a new area, just to see only the tags currently within range of your Sidekick.
 
 * **`Location Icon`** - This button toggles whether you enable Location Services, which are required for localizing tags in map view, as well as for other features. You can turn this off to save battery life when you're not actively tracking tags.
 
