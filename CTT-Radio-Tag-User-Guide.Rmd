@@ -4,14 +4,14 @@ title: |
   <br />
   CTT Radio Tag User Guide
 author: "support@celltracktech.com"
-date: "9/22/2021"
+date: "11/15/2023"
 output:
-  pdf_document:
-    toc: yes
-    fig_caption: true
   html_document:
     toc: yes
     number_sections: yes
+  pdf_document:
+    toc: yes
+    fig_caption: true
 ---
 
 ```{r setup, include=FALSE}
