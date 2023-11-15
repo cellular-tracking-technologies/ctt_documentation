@@ -6,12 +6,12 @@ title: |
 author: "support@celltracktech.com"
 date: "11/15/2023"
 output:
-  html_document:
-    toc: yes
-    number_sections: yes
   pdf_document:
     toc: yes
     fig_caption: true
+  html_document:
+    toc: yes
+    number_sections: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -33,7 +33,7 @@ In the case of the 434MHz tags, these come in three distinct flavors:
 
 ## 2.4GHz Radio Tags
 
-In the case of 2.5GHz, CTT currently produces one variant (with more on the way), and this one is the BlūMorpho
+In the case of 2.5GHz, CTT currently produces one variant (with more on the way), and this one is the **BlūMorpho**.
 
 1. **BlūMorpho** - The BlūMorpho brings solar-powered tagging to the tiniest of animals, with a tag weighing about that of a grain of rice (0.06g) and measuring less than 4cm, with antenna included. This tag is appropriate for a number of species ranging from Monarch butterflies and bumble bees, to all hummingbirds, and many more. 
 
@@ -57,7 +57,7 @@ Because there is no battery, deploying a LifeTag is very simple.
 
 4. If using the locator, power-up and connect your Locator to a smart device following the directions in the Locator User Guide [here] (https://cellular-tracking-technologies.github.io/ctt_documentation/CTT_locator_user_guide.html). 
 
-5. Connect your computer to your SensorStation so you can view the web interface (*for SensorStation operation consult the online install guide [here](https://cellular-tracking-technologies.github.io/ctt_documentation/v2-SensorStation-User-Guide.html#connecting-to-your-sensorstation-web-interface))*.
+5. Connect your computer to your SensorStation so you can view the web interface (*for SensorStation operation consult the online install guide [here](https://cellular-tracking-technologies.github.io/ctt_documentation/v2-SensorStation-User-Guide.html#connecting-to-your-sensorstation-web-interface)*).
 
 6. Ensure your SensorStation has at least one radio tuned to detect `Tags` (*if this isn't clear, consult the SensorStation online install guide*).
 
@@ -94,7 +94,7 @@ Like the LifeTag, the HybridTag will beep when sun is hitting the panel, but wil
 
 4. If using the locator, power-up and connect your Locator to a smart device following the directions in the Locator User Guide [here] (https://cellular-tracking-technologies.github.io/ctt_documentation/CTT_locator_user_guide.html). 
 
-5. Connect your computer to your SensorStation so you can view the web interface (*for SensorStation operation consult the online install guide [here](https://cellular-tracking-technologies.github.io/ctt_documentation/v2-SensorStation-User-Guide.html#connecting-to-your-sensorstation-web-interface))*.
+5. Connect your computer to your SensorStation so you can view the web interface (*for SensorStation operation consult the online install guide [here](https://cellular-tracking-technologies.github.io/ctt_documentation/v2-SensorStation-User-Guide.html#connecting-to-your-sensorstation-web-interface)*).
 
 6. Ensure your SensorStation has at least one radio tuned to detect `Tags` (*if this isn't clear, consult the SensorStation online install guide*).
 
@@ -108,11 +108,9 @@ Like the LifeTag, the HybridTag will beep when sun is hitting the panel, but wil
 
 Congratulations on receiving your new BlūMorpho 2.4GHz Transmitters! Because these tags are so tiny and light, we had to do a few things to ensure their secure delivery to you, and hopefully help you manage them once in your possession. Please read below and familiarize yourself with the layout of your tag package prior to any cutting or deploying.
 
-
 Upon opening your Tri-fold envelope, you’ll see your tags suspended behind a retention strip (Fig 1). You will also find some useful information printed at the bottom of the envelope, including your order #, the reference number printed on the panel to which your tags are attached, and the Tag ID, which is the ID you will see when detecting your tag with a receiver.
 
-![*Fig 1. The tri-fold envelope holding your BlūMorpho tags. Note the retention strip holding the antennas down, and the small white sticker holding the panel strip to the envelope.*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/IMG_1557.JPG){#id .class width=50%}
-
+![*Fig 1. The tri-fold envelope holding your BlūMorpho tags. Note the retention strip holding the antennas down, and the small white sticker holding the panel strip to the envelope.*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/IMG_1557.png){#id .class width=50%}
 
 * **Note the tags are solar-panel up (also depicted in Fig 2) which is the way you will want to deploy them on an animal. **
 
@@ -124,6 +122,7 @@ Upon opening your Tri-fold envelope, you’ll see your tags suspended behind a r
 
 * In Fig 3 you’ll see the same tags, but from the component side (the underside of the tag). Here you can see the Panel ID numbers on the panel strip. These numbers are your reference to the full Tag Digital ID # that will show up on your receiver. Make sure you note these for your records, as the tag’s ID is NOT printed on the tag itself. 
 
+
 # Final Thoughts
 
-This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/support-customer-service-desk/) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2021.
+This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/pages/customer-service-desk-csd) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2023.
