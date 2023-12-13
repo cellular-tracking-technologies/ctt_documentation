@@ -6,13 +6,13 @@ title: |
 author: "support@celltracktech.com"
 date: "9/15/2023"
 output:
-  pdf_document:
-    toc: yes
-    fig_caption: true
   html_document:
     css: styles.css
     toc: yes
     number_sections: yes
+  pdf_document:
+    toc: yes
+    fig_caption: true
 ---
 
 ```{r setup, include=FALSE}
@@ -227,9 +227,9 @@ At the top of the Localization screen are four grid size options, `500m`, `300m`
 
 # Final Thoughts
 
-This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/pages/customer-service-desk-csd) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2023.
+This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/pages/customer-service-desk-csd) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2024.
 
-\newpage
+\newpag
 
 <!-- # Revision History -->
 
