@@ -4,13 +4,13 @@ title: |
   <br />
   Installation Guide for the CTT SensorStation and CTT Nodes
 author: "support@celltracktech.com"
-date: "09/20/2023"
+date: "1/10/2024"
 output:
-  pdf_document:
-    toc: yes
   html_document:
     toc: yes
     number_sections: yes
+  pdf_document:
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -465,7 +465,9 @@ Your SensorStation has a web server running locally on the Raspberry Pi, which m
   
 ***
 
-## Adding your WiFi Credentials to your SensorStation via the Command Line
+# Adding your WiFi Credentials to your SensorStation
+
+## Via the Command Line
 
 ### Before you get started you will need...
 
@@ -478,8 +480,9 @@ Your SensorStation has a web server running locally on the Raspberry Pi, which m
   
 1. Take note of the **Wifi name** and **password** for the network you want to link with your SensorStation.
 2. Connect to your SensorStation via the Ethernet cable (see above section for details)
-3. On V2 or V3 stations, record the IP address from the LDC screen (under Network > IP Address)
-3. On V1 stations record the IP address that appears on the eInk display.
+3. Open a Command Prompt window on your computer (for mac, use Terminal; for PC use PowerShell or CMD)
+4. On V2 or V3 stations, record the IP address from the LDC screen (under Network > IP Address)
+5. On V1 stations record the IP address that appears on the eInk display.
 
 ### SSH into the Pi to update the connectivity settings
 
@@ -529,7 +532,7 @@ Once your SensorStation reboots, it should automatically connect to the existing
 
 15. If that doesn’t work, check the LCD screen for the IP address, and enter `http://xxx.xxx.xxx.xxx' into your web browser address field, where the `x`'s are the IP address #s
 
-## Uploading your WiFi Credentials to your SensorStation via the USB Port
+## Via a USB drive
 
 On V2 and V3 SensorStations, instead of manually updating the WiFi credentials via SSH, you can use the `Get WiFi` function available via the LCD menu to upload a credentials file. Follow the steps below to learn how.
 
