@@ -6,11 +6,11 @@ title: |
 author: "support@celltracktech.com"
 date: "1/10/2024"
 output:
+  pdf_document:
+    toc: yes
   html_document:
     toc: yes
     number_sections: yes
-  pdf_document:
-    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -222,6 +222,32 @@ Antennas are attached to the EMT conduit with the clamps that come with the ante
 Make sure you have enough coax to form a drip loop for each connection.
 
 ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/diagram_drip-loop.jpg){#id .class width="25%"}
+
+### Adding an optional LTE extender
+
+If you are using our on-board LTE modem for sending data to the cloud and to Motus, and you are finding you have a weak signal at your station site, you can add an optional cellular antenna to increase the range of your station transmission to the cell network. CTT does not sell cell booster antennnas, but many are available on Amazon.com. Here is one example, but note that we have not tested this specific device; it's simply to provide some idea of what might work: https://www.amazon.com/Directional-Universal-Cellphone-Amplifier-Signalbooster/dp/B089VXJV14/ref=sr_1_3?crid=L0H9JNP4DRQF&dib=eyJ2IjoiMSJ9.DwK2pym6t2RcsY6MY5SFAx_HO7CFELHCiEedhErb9Ib08Fv5Z512JpCcNzW5TUtQoA8dZItS8yOJAajf3bikFw.te4gjK0B-7qty7WuY-_NLxslPGjxqqpMRtLonWDJQOI&dib_tag=se&keywords=LTE+yagi+booster&qid=1704994609&sprefix=lte+yagi+boos%2Caps%2C133&sr=8-3
+
+Typically, these cell booster antennas have an SMA male connector that needs to somehow attach to the SensorStation board to communicate with the modem. We have provided a SMA port on the board near the LTE modem, labeled `J7`. That port is not activated without first *jumping* the U.FL port on the modem labeled `main`, to the U.FL port labeled `J6` on the SensorStation board. In doing so, you will activate the `J7` SMA port on the board which will allow you to attach the SMA connector on the cell booster antenna to said port *(see fig below)*. 
+
+Alternatively, you could attach a `U.FL to SMA adapter` *(see fig below)* directly to the `Main` port on the modem, and connect the SMA connector on the booster cable directly to the adapter, bypassing the need to jump to the board and not using the SMA port on the board itself. This option might be preferred if you use a U.FL to SMA bulkhead, which you can mount to the side or bottom of your case, allowing you to create a weatherproof access point to connect an external antenna to the outside of your SensorStation case.
+
+![U.FL jumper cable](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/cellboost_uflJumper.png){#id .class width="50%"}
+
+![U.FL to SMA adapter cable](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/cellboost_uflToSmaAdapter.png){#id .class width="50%"}
+
+![LTE modem with ports identified. Note that in this image the standard patch antenna that ships with the SensorStation is currently connected to the `main` port on the modem.](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/cellboost_modemPortID.png){#id .class width="50%"}
+
+
+* `Pink circle`: `Main` `U.FL` port on LTE modem (currently occupied)
+* `Blue rectangle`: `J6` `U.FL` port on board
+* `Red square`: `J7` `SMA` port on board
+
+![To jump the `main` port on the LTE modem to the U.FL port at `J6` on the SensorStation board, first remove the antenna that comes with the SensorStation](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/cellboost_mainOpen.png){#id .class width="50%"}
+
+![Option 1: LTE modem with jumper cable attaching `main` on the modem to `J6` on the SensorStation board, therefore activating the SMA port at `J7`. Now the Cell Booster antenna can be attached to the SMA port at `J7`](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/cellboost_uflJumperConnected.png){#id .class width="50%"}
+
+![Option 2: LTE modem connected directly to U.FL to SMA adapter, which allows to connect directly to a Cell Booster antenna without using `J6` or `J7` on the board](/Users/davidlapuma/Downloads/cellboost_uflToSmaConnected.JPG){#id .class width="50%"}
+
 
 ### Siting your SensorStation
 The SensorStation can be placed inside a building, or fastened to the pole or building, etc. It should either be close to the ground for easy access, or have an ethernet cable run down to an accessible location. **If placing your station inside a building be aware that this may affect GPS and/or GSM reception, possibly requiring an external antenna wired to the outside of the building.**
