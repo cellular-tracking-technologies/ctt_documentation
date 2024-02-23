@@ -6,12 +6,12 @@ title: |
 author: "support@celltracktech.com"
 date: "2/23/2024"
 output:
-  html_document:
-    toc: yes
-    number_sections: yes
   pdf_document:
     toc: yes
     fig_caption: true
+  html_document:
+    toc: yes
+    number_sections: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -80,7 +80,7 @@ From the app and the portal you can:
 
 # Preparing Your Unit for Deployment
 
-*For non-solar rechargeable units, make sure to keep the magnet on the unit until you are ready for testing and/or deployment. Follow all of the below recommendations for testing configs, and simply ignore the information regarding solar recharging.*
+**Your Flicker unit will arrive with a magnet attached. We recommend keeping the magnet on the unit until you are ready for testing and/or deployment. For non-solar units, follow all of the below recommendations for testing configs, and simply ignore the information regarding solar recharging.**
 
 **For solar-rechargeable Flicker devices, we always recommended to fully charge and test your device before deployment.** Small devices should not be left out unattended as they can blow away, and potentially overheat.
 
