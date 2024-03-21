@@ -284,67 +284,67 @@ These are typically `.csv` files with either `beep` data, or `gps` data. From he
 
 ![*Once you're done working with your node, return to the USB section and click `Close` under Step 4. Now it is safe to disconnect your Node.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient13.png){#id .class width=75%}
 
-# Optional External Battery Pack
+<!-- # Optional External Battery Pack -->
 
-CTT produces a 17600mAh external battery pack that can be plugged into the port on the bottom of the Node. This battery pack can extend the life of the Node in environments where there is not enough solar exposure to recharge the internal battery. Under normal conditions this will extend the life of the Node for up to three weeks before needing to be recharged. 
+<!-- CTT produces a 17600mAh external battery pack that can be plugged into the port on the bottom of the Node. This battery pack can extend the life of the Node in environments where there is not enough solar exposure to recharge the internal battery. Under normal conditions this will extend the life of the Node for up to three weeks before needing to be recharged.  -->
 
-## External Battery Pack Overview
+<!-- ## External Battery Pack Overview -->
 
-![*The External Node Battery*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/BatteryTopo.png){#id .class width=75%}
+<!-- ![*The External Node Battery*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/BatteryTopo.png){#id .class width=75%} -->
 
-1. `Micro USB Port` - Connect to power source for recharging (USB charging cord not provided)
-2. `Power Level Button` - Hold to display 4-bar power level indicator
-3. `Power level indicator` - Note that anything above 3.8v will display all 4 bars, but a full charge is 4.2v
-4. `Interface Header` - This is the connection between your Node and the external battery pack.
-5. `Off Button` - Hold to turn off battery pack
-6. `ON Button` - Hold to turn on battery pack
-7. `Battery On Indicator` - When blinking, the battery is turned ON
+<!-- 1. `Micro USB Port` - Connect to power source for recharging (USB charging cord not provided) -->
+<!-- 2. `Power Level Button` - Hold to display 4-bar power level indicator -->
+<!-- 3. `Power level indicator` - Note that anything above 3.8v will display all 4 bars, but a full charge is 4.2v -->
+<!-- 4. `Interface Header` - This is the connection between your Node and the external battery pack. -->
+<!-- 5. `Off Button` - Hold to turn off battery pack -->
+<!-- 6. `ON Button` - Hold to turn on battery pack -->
+<!-- 7. `Battery On Indicator` - When blinking, the battery is turned ON -->
 
-## Using the External Battery Pack
+<!-- ## Using the External Battery Pack -->
 
-The External Battery can be attached to your Node using the CTT Battery Clip, a Zip Tie or other removable cable tie. **Be careful when attaching your battery to your Node not to damage the power level button.**
+<!-- The External Battery can be attached to your Node using the CTT Battery Clip, a Zip Tie or other removable cable tie. **Be careful when attaching your battery to your Node not to damage the power level button.** -->
 
-### Before Deployment
+<!-- ### Before Deployment -->
 
-* **You will need:**
-  * Either a CTT Clip, or some other way to secure your battery pack to the Node (such as a Zip Tie). One per Node.
-  * A pointed object such as a small screwdriver, a stylus, or a toothpick, for pressing the buttons (the buttons are designed to be recessed so they cannot be accidentally pressed during storage and transport. **Therefore, to use them you will need a device to push against the button platform).**
+<!-- * **You will need:** -->
+<!--   * Either a CTT Clip, or some other way to secure your battery pack to the Node (such as a Zip Tie). One per Node. -->
+<!--   * A pointed object such as a small screwdriver, a stylus, or a toothpick, for pressing the buttons (the buttons are designed to be recessed so they cannot be accidentally pressed during storage and transport. **Therefore, to use them you will need a device to push against the button platform).** -->
 
-* Be sure to fully charge your external battery pack using a Micro-USB cable plugged into a power source. Because these are large batteries, and USB only supports 5 volts, a drained battery can take a long time to recharge, even up to a full 24 hours, so be sure to plan accordingly.
+<!-- * Be sure to fully charge your external battery pack using a Micro-USB cable plugged into a power source. Because these are large batteries, and USB only supports 5 volts, a drained battery can take a long time to recharge, even up to a full 24 hours, so be sure to plan accordingly. -->
 
-### Deploying Your Battery Pack on a Node
+<!-- ### Deploying Your Battery Pack on a Node -->
 
-* It is always best to ensure your Nodes are functioning **before** attaching the external battery pack. If your Node is **not** sending data to your SensorStation prior to attaching the battery, it's possible that the internal Node battery is too low to function, or is damaged, and the Node has effectively turned off. If the internal battery is too low to function, **plugging in the external battery pack will not reboot your Node**. If you suspect this to be the case do the following:
+<!-- * It is always best to ensure your Nodes are functioning **before** attaching the external battery pack. If your Node is **not** sending data to your SensorStation prior to attaching the battery, it's possible that the internal Node battery is too low to function, or is damaged, and the Node has effectively turned off. If the internal battery is too low to function, **plugging in the external battery pack will not reboot your Node**. If you suspect this to be the case do the following: -->
 
-1. Connect the external battery pack to your Node
-2. Check your SensorStation interface for evidence that the Node is checking in (this may take up to five minutes)
+<!-- 1. Connect the external battery pack to your Node -->
+<!-- 2. Check your SensorStation interface for evidence that the Node is checking in (this may take up to five minutes) -->
 
-3. If the Node is checking in, you're fine
-4. If the Node does not check in, you will need to try one of a few things to get it to reboot:
+<!-- 3. If the Node is checking in, you're fine -->
+<!-- 4. If the Node does not check in, you will need to try one of a few things to get it to reboot: -->
 
-    * If your Node is mobile, you can put it out into the sun to recharge the internal battery until it checks in.
-    * If not, open the Node and:
-      * press the reset button, or
-      * replace the internal Node battery, or
-      * Unplug and then reconnect the internal Node battery *while* the external battery pack is connected.
-      * Once you complete this process, confirm that your Node is connecting to your SensorStation. 
-        
-**(Note that the battery pack is an independent piece of equipment that turns on and off, and displays power, regardless of whether it is powering the Node. Therefore it is imperative that you confirm the Node is reporting to the SensorStation and not simply relying on the LEDs on the battery pack)**.
+<!--     * If your Node is mobile, you can put it out into the sun to recharge the internal battery until it checks in. -->
+<!--     * If not, open the Node and: -->
+<!--       * press the reset button, or -->
+<!--       * replace the internal Node battery, or -->
+<!--       * Unplug and then reconnect the internal Node battery *while* the external battery pack is connected. -->
+<!--       * Once you complete this process, confirm that your Node is connecting to your SensorStation.  -->
 
-The External Battery Pack is not waterproof, but it is water-safe, meaning it includes circuit protection in case of exposure to water. Should the battery pack circuitry be exposed to water, the internal fuse will shut down the battery pack to protect it from damage. Once the circuitry is dry, the fuse will reset, and the user must simply press the power button to turn the battery pack back on. Therefore the user must monitor their Node system after significant rainfall as a Node with a low internal battery may require manual resetting if the external battery pack is shut down for too long.
+<!-- **(Note that the battery pack is an independent piece of equipment that turns on and off, and displays power, regardless of whether it is powering the Node. Therefore it is imperative that you confirm the Node is reporting to the SensorStation and not simply relying on the LEDs on the battery pack)**. -->
 
-### CTT Clip for External Node Battery
+<!-- The External Battery Pack is not waterproof, but it is water-safe, meaning it includes circuit protection in case of exposure to water. Should the battery pack circuitry be exposed to water, the internal fuse will shut down the battery pack to protect it from damage. Once the circuitry is dry, the fuse will reset, and the user must simply press the power button to turn the battery pack back on. Therefore the user must monitor their Node system after significant rainfall as a Node with a low internal battery may require manual resetting if the external battery pack is shut down for too long. -->
 
-![*Attachment of the CTT Clip*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Node battery clip.001.png){#id .class width=75%}
+<!-- ### CTT Clip for External Node Battery -->
 
-The CTT Clip is made of flexible nylon and wraps around the Node and External Node Battery to securely hold the battery on a deployed Node while not impeding solar recharging of the Node's internal battery (note the solar panel will NOT recharge the external battery pack, that must be done by the user. See the next section for info on recharging). Be careful when attaching the clip not to slide over or otherwise compress the Power Level Button which may cause damage to the button.
+<!-- ![*Attachment of the CTT Clip*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Node battery clip.001.png){#id .class width=75%} -->
 
-        
-### Recharging your Battery Pack
+<!-- The CTT Clip is made of flexible nylon and wraps around the Node and External Node Battery to securely hold the battery on a deployed Node while not impeding solar recharging of the Node's internal battery (note the solar panel will NOT recharge the external battery pack, that must be done by the user. See the next section for info on recharging). Be careful when attaching the clip not to slide over or otherwise compress the Power Level Button which may cause damage to the button. -->
 
-It is important to keep track of your battery voltage over time, especially for Nodes where solar recharge is low or non-existent. You can do this by ensuring your Nodes are within range of your SensorStation, and your SensorStation has some on-board connectivity that allows you to remotely monitor your Nodes. Nodes have an internal protection circuit that keeps them from running batteries to critically low levels, and therefore will shut off before that happens. To keep your grid uptime constant, ensure that you are replacing external battery packs before your Node voltage drops below 3.6v. This may mean having 2x the number of battery packs needed to power your grid, which also makes recharging them easier since it does take a long time to recharge these large batteries. Batteries can be recharged using a standard micro-usb cable and a wall wart for plugging into existing AC power (not provided).A good rule of thumb is to place each battery pack on a charger for a full 24 hours. **Depending on the battery level during recharge, it may take upwards of 17 hours to recharge from 3.7v to full capacity. If charging time is important to you, choose charging devices with at least 500mAh rating, however 1Amp or greater per USB port is recommended.**
 
-![*Example of a USB wall wart with optimal charge capacity*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/IMG_4929 2.jpg){#id .class width=25%}
+<!-- ### Recharging your Battery Pack -->
+
+<!-- It is important to keep track of your battery voltage over time, especially for Nodes where solar recharge is low or non-existent. You can do this by ensuring your Nodes are within range of your SensorStation, and your SensorStation has some on-board connectivity that allows you to remotely monitor your Nodes. Nodes have an internal protection circuit that keeps them from running batteries to critically low levels, and therefore will shut off before that happens. To keep your grid uptime constant, ensure that you are replacing external battery packs before your Node voltage drops below 3.6v. This may mean having 2x the number of battery packs needed to power your grid, which also makes recharging them easier since it does take a long time to recharge these large batteries. Batteries can be recharged using a standard micro-usb cable and a wall wart for plugging into existing AC power (not provided).A good rule of thumb is to place each battery pack on a charger for a full 24 hours. **Depending on the battery level during recharge, it may take upwards of 17 hours to recharge from 3.7v to full capacity. If charging time is important to you, choose charging devices with at least 500mAh rating, however 1Amp or greater per USB port is recommended.** -->
+
+<!-- ![*Example of a USB wall wart with optimal charge capacity*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/IMG_4929 2.jpg){#id .class width=25%} -->
 
 # Frequently Asked Questions (FAQ)
 
