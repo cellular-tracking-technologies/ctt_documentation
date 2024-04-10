@@ -4,14 +4,14 @@ title: |
   <br />
   CTT Radio Tag User Guide
 author: "support@celltracktech.com"
-date: "11/15/2023"
+date: "4/10/2024"
 output:
-  pdf_document:
-    toc: yes
-    fig_caption: true
   html_document:
     toc: yes
     number_sections: yes
+  pdf_document:
+    toc: yes
+    fig_caption: true
 ---
 
 ```{r setup, include=FALSE}
@@ -35,7 +35,19 @@ In the case of the 434MHz tags, these come in three distinct flavors:
 
 In the case of 2.5GHz, CTT currently produces one variant (with more on the way), and this one is the **BlūMorpho**.
 
-1. **BlūMorpho** - The BlūMorpho brings solar-powered tagging to the tiniest of animals, with a tag weighing about that of a grain of rice (0.06g) and measuring less than 4cm, with antenna included. This tag is appropriate for a number of species ranging from Monarch butterflies and bumble bees, to all hummingbirds, and many more. 
+1. **BlūMorpho** - The BlūMorpho brings solar-powered tagging to the tiniest of animals, with a tag weighing about that of a grain of rice (0.06g) and measuring less than 4cm, with antenna included. This tag is appropriate for a number of species ranging from Monarch butterflies and bumble bees, to all hummingbirds, and many more. The BlūMorpho comes pre-set with a 3-second beep interval. Because it's solar-only, the lifespan is as long as you can keep it attached to your animal.  
+
+2. **BlūBat** - The BlūBat takes PowerTag technology to the nano-scale, with the lightest battery-only transmitter on the market (as far as we know, at least!). At 3.5cm total length, including antenna, it's also a perfect form factor for smaller species. The base model BlūBat weighs 0.15g and boasts an impressive lifespan.
+
+
+| **SKU** |	**Beep Interval (seconds)** | 	**Estimated Lifespan (days)** |
+| :--- | :--- | :--- |
+| BlūBat_3 | 3 | 49 |
+| BlūBat_5 | 5 | 78 |
+| BlūBat_10 | 10 | 136 |
+| BlūBat_20 |	20 | 219 |
+| BlūBat_30 |	30 | 275 |
+| BlūBat_60 | 60 | 365 |
 
 ## Using This Guide
 
@@ -122,6 +134,24 @@ Upon opening your Tri-fold envelope, you’ll see your tags suspended behind a r
 
 * In Fig 3 you’ll see the same tags, but from the component side (the underside of the tag). Here you can see the Panel ID numbers on the panel strip. These numbers are your reference to the full Tag Digital ID # that will show up on your receiver. Make sure you note these for your records, as the tag’s ID is NOT printed on the tag itself. 
 
+## BlūBat Quick Start Guide
+
+Preamble
+
+![*Fig 4. Your BlūBat tags will arrive paneled, with the testing tab attached. *](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/BluBat_onPanel.png){#id .class width=50%}
+
+* Screen-printed numbers coorospond to the tag ID's printed on the packaging. To depanel, use a sharp scissor to cut on the white line at the tip of the antenna, and around the testing tab, which will keep the testing tab in-tact for continued testing prior to deployment (if deploying directly from the panel, you can cut on the white line with the cut arrow, that attaches the tag to the testing tab).
+
+
+![*Fig 5. With the tag separated from the panel, you can still test the tag by bridging the two gold pads on the testing tab.*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/BluBat_precut.png){#id .class width=50%}
+
+* Testing is easiest done with some metal tweezers, but any metal will do. When bridged, the tag will beep. When unbridged it will stop.
+* When you're ready to deploy, use a sharp scissor to cut on the white line between the tag and the testing tab. This will permanently activate the tag.
+
+
+![*Fig 6. Now that the test tab has been severed, the tag is permanently activated.*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/BluBat_postCut.png){#id .class width=50%}
+
+* Because severing the test tab does expose some copper, make sure to put a drop of super glue or epoxy over the cut point and let it set before deploying the tag. This will ensure your tag lasts the expected lifespan once deployed.
 
 # Final Thoughts
 
