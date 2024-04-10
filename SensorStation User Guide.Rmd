@@ -4,7 +4,7 @@ title: |
   <br />
   Installation Guide for the CTT SensorStation and CTT Nodes
 author: "support@celltracktech.com"
-date: "1/10/2024"
+date: "4/10/2024"
 output:
   pdf_document:
     toc: yes
@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 In order to connect directly to your SensorStation, you'll need 2 `USB->Ethernet Adapters` (we recommend: https://tinyurl.com/yc6llze4), and an Ethernet Cable, or a `Raspberry Pi compatible USB WiFi adapter` like this one https://store.celltracktech.com/products/wifi-usb-adapter-add-on-for-sensorstation-v2. **Make sure to have these on-hand prior to receiving your SensorStation so there is no delay in setup.**
 
-# Note on Version 3 SensorStation
+# Note on Version 3 (and 3.02) SensorStation
 
 As of June 2022 we have released the 3rd version of the SensorStation. V3 SensorStations differ from V2 stations in a few important ways.
 
@@ -50,7 +50,7 @@ If you are setting up your SensorStation to participate in the Motus Wildlife Tr
 
 
 # SensorStation Precautions
-Treat your SensorStation board like you would any other motherboard, Arduino or Raspberry Pi. All electronics, no matter how robust, can be static sensitive. Take care no metal objects touch the board while it is operating, such as antenna connectors or GSM antennas, as this could cause electrical shorts that will damage the board. It is advised to wear an anti-static bracelet when handling SensorStation.
+Treat your SensorStation board like you would any other motherboard, Arduino or Raspberry Pi. All electronics, no matter how robust, can be static sensitive. Take care no metal objects touch the board while it is operating, such as antenna connectors or cellular antennas, as this could cause electrical shorts that will damage the board. It is advised to wear an anti-static bracelet when handling SensorStation.
 
 ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/attention.png){#id .class width=25%}
 
@@ -76,7 +76,7 @@ The **ES-200** and **ES-150** are GPS logger tags that can also send data over t
 
 ## CTT SensorStation
 
-The **CTT SensorStation** collect data directly from tags and can collect data from a series of `Nodes` to more precisely locate tags within a study site. The `SensorStation` stores data and, with an optional GSM data plan, can also send those data directly to the CTT and Motus servers. 
+The **CTT SensorStation** collect data directly from tags and can collect data from a series of `Nodes` to more precisely locate tags within a study site. The `SensorStation` stores data and, with an optional cellular data plan, can also send those data directly to the CTT and Motus servers. 
 
 ## CTT Node
 
@@ -250,7 +250,7 @@ Alternatively, you could attach a `U.FL to SMA adapter` *(see fig below)* direct
 
 
 ### Siting your SensorStation
-The SensorStation can be placed inside a building, or fastened to the pole or building, etc. It should either be close to the ground for easy access, or have an ethernet cable run down to an accessible location. **If placing your station inside a building be aware that this may affect GPS and/or GSM reception, possibly requiring an external antenna wired to the outside of the building.**
+The SensorStation can be placed inside a building, or fastened to the pole or building, etc. It should either be close to the ground for easy access, or have an ethernet cable run down to an accessible location. **If placing your station inside a building be aware that this may affect GPS and/or cellular reception, possibly requiring an external antenna wired to the outside of the building.**
 
 # Powering your SensorStation
 
@@ -287,7 +287,7 @@ There are several LED lights on the SensorStation which may assist you in diagno
 | ON| Indicates that the SensorStation has established a point-to-point protocol (PPP) connection between the network and the on-board modem. | The SensorStation checks for the connection every second. The PPP connection is just the layer that allows the modem to communicate to the network **if it is on**, but doesn't always indicate that a connection is working (such as in the case of a weak signal)  |
 | OFF | Indicates that the SensorStation modem is not connected to the network.   | If there is no modem on the SensorStation this would be the typical state and behavior. If a modem exists but this behavior continues, it indicates that the modem is unable to secure a connection to the network. |
 
-## GSM Cellular LED (blue)
+## Cellular LED (blue)
 
 The blue LED by the cellular module, labeled D9, is called the Netlight. The Netlight blinks differently, depending on the modem state. You can use this blink rate to identify if your SensorStation is connected to the Internet or unable to connect.
 
@@ -318,18 +318,19 @@ The SensorStation features 4 navigation buttons labeled `UP`, `DN`, `BACK` and `
 	- `QAQC` - this is an internal function which will eventually be useful to the end-user but not as of this printing.
 	- `Time` - The three clocks on the SensorStation, refreshing every two seconds. `r`eal time clock, `g`ps clock and `s`ystem clock.
 	- `Restart` - Triggers a system restart.
+	- `Bash Update` - Causes the SensorStation to check the CTT Update Server for any updates that have been assigned to the station. This is NOT the same as running Update Station from the SensorStation web interface. Requires an active cell or other internet connection. 
 - `Network`
 	- `Cellular`
 		- `Ids` -  - Displays the SIM ID, the IMEI, and the name of the Modem
-		- `Carrier` - Displays the cellular carrier name and signal strength of the connection, refreshing every 2 seconds. This may be useful when troubleshooting problematic GSM connections, and aiming an external cellular antenna (not included).
+		- `Carrier` - Displays the cellular carrier name and signal strength of the connection, refreshing every 2 seconds. This may be useful when troubleshooting problematic cellular connections, and aiming an external cellular antenna (not included).
 	- `Ping` - This will ping a known web address to determine whether an internet connection is present. If present, it will return **connected**.
 	- `Hostname` - Typically this is `sensorstation.local` and can be used to reach your station when it is connected to WiFi, a local network via Ethernet, or directly to a computer via Ethernet. Once connected, simply navigate to http://sensorstation.local in your web browser to access the SensorStation interface.
 	- `IP Address` - Displays the port of connection and IP address assigned to the SensorStation. You can use the IP address to connect to your SensorStation using the same process outlined above under `Hostname`. For example, if the IP Address was 10.1.10.17, typing `http://10.1.10.17` into your web browser's URL field would bring up the SensorStation web interface.
-- `Server` - causes the SensorStation to force a check-in to the CTT hardware server. Requires that the SensorStation is connected to the internet via either GSM, WiFi or Ethernet. Note that this process may take a long time depending on connection speed and/or amount of data being sent/received.
+- `Server` - causes the SensorStation to force a check-in to the CTT hardware server. Requires that the SensorStation is connected to the internet via either cellular, WiFi or Ethernet. Note that this process may take a long time depending on connection speed and/or amount of data being sent/received.
 - `Power` - Provides voltages for `Battery` (which represents whatever power source is connected to your SensorStation), `RTC` or Real Time Clock, the coin cell battery on the board, and `Solar` if you have connected a solar monitoring cable from the charge controller to the SensorStation board.
-- `Temperature` - Provides the temperature of the SensorStation board. Note temperature will usually be higher than ambient when the board is powered.
+- `Temperature` - (Eliminated on V3.02) Provides the temperature of the SensorStation board. Note temperature will usually be higher than ambient when the board is powered. 
 - `Location` - provides the Lat/Long for the SensorStation from the on-board GPS.
-- `LED` - allows you to select various LED and toggle them `on`, `off` or `blink`. 
+- `LED` - (V1 and V2 only) allows you to select various LED and toggle them `on`, `off` or `blink`. 
   - `Diagnostic A` - this LED represents the connectivity to CTT servers.
     - `On` - Turns the LED `on`, if current state is `off`.
     - `Off` - Turns the LED `off`, if current state is `on`.
@@ -468,7 +469,7 @@ Once you run this command, go back and re-check the file size of the files and f
 
 # Connecting to your SensorStation Web Interface
 
-Your SensorStation has a web server running locally on the Raspberry Pi, which means you can interact with your station by directly connecting via Ethernet or through a wireless connection. **Note that this is different than viewing your SensorStation via the CTT Web Portal**. The SensorStation Interface provides an overview of your station's operation, including real-time statistics on detections of tags and nodes, as well as controls to change settings, update your SensorStation software, toggle the GSM modem, and reboot the station. It is always best practice to connect directly to your SensorStation prior to deployment. From here you can run a station update, ensure your antennas are tuned to the expected task (detecting Nodes or Tags) and see in real-time that your station is detecting either as expected.
+Your SensorStation has a web server running locally on the Raspberry Pi, which means you can interact with your station by directly connecting via Ethernet or through a wireless connection. **Note that this is different than viewing your SensorStation via the CTT Web Portal**. The SensorStation Interface provides an overview of your station's operation, including real-time statistics on detections of tags and nodes, as well as controls to change settings, update your SensorStation software, toggle the cellular modem, and reboot the station. It is always best practice to connect directly to your SensorStation prior to deployment. From here you can run a station update, ensure your antennas are tuned to the expected task (detecting Nodes or Tags) and see in real-time that your station is detecting either as expected.
 
 ## Connecting via Ethernet Cable
 
@@ -973,9 +974,9 @@ This should be enough to get us started and allow us to leave sites with confide
 |  E | Mounting Hardware | Tri-Pod | Various, Amazon |  | Depends on number of SensorStations | [Link](https://www.amazon.com/feet-Satellite-Tripod-Mount-2-Inch/dp/B0043OAI9M/ref=sr_1_3?keywords=antenna+tripod&qid=1555017820&s=electronics&sr=1-3) |
 |  F | Mounting Hardware | Mast (electrical conduit) | Lowes, Home Depot, Other Hardware Stores |  | See Setup Guide | [Link](https://www.lowes.com/search?searchTerm=emt+conduit) |
 |  G | AC Power | 110-250 A/C, 50Hz/60Hz, Universal power supply, USA adapter unless specified | Optional. If purchased separately its important to use 12V DC only |  |  |  |
-|  H | Solar Power | Panel 50 Watt | Various | 50-100 Watt Panel is a good range. If you have the space 100W works better under most conditions. | one panel per station | [Link](https://www.amazon.com/Newpowa-Polycrystalline-Efficiency-Module-Marine/dp/B0725RZ22H/ref=sr_1_9?keywords=100%2Bwatt%2Bsolar&qid=1552483408&s=lawn-garden&sr=1-9&th=1) |
-|  I | Solar Power | 12v Deep Cycle (Marine) Battery | Everstart, others |  |  | [Link](https://www.walmart.com/ip/Everstart-Battery-Marine-12-Volt/868580543) |
-|  J | Solar Power | Charge Controller | Various |  | One per station | [Link](https://www.amazon.com/gp/product/B072MMDY4F?pf_rd_p=183f5289-9dc0-416f-942e-e8f213ef368b&pf_rd_r=Z8QBVS0MGEQFA746ENSH) |
+|  H | Solar Power | Panel 100 Watt | Various | 100 Watt Panel is recommended. | one panel per station | [Link](https://www.amazon.com/s?k=100%2Bwatt%2Bsolar&i=lawngarden&rh=n%3A2972638011%2Cp_89%3ARenogy&dc&ds=v1%3AT%2BD2BnPV7bKfh93p3lElbagKUWZIoIAzfvcaH%2BrqyX8&crid=1BLLYP68V3JF2&qid=1712760954&rnid=2528832011&sprefix=100%2Bwatt%2Bsolar%2Clawngarden%2C95&ref=sr_nr_p_89_1) |
+|  I | Solar Power | 12v Deep Cycle (Marine) Battery | Renogy, others |  |  | [Link](https://www.walmart.com/ip/Renogy-12V-100AH-Deep-Cycle-Hybrid-Gel-Battery-Rechargeable-for-Solar-Wind-RV-Marine-Camping-UPS-Wheelchair-Trolling-Motor-Maintenance-Free/146311625) |
+|  J | Solar Power | Charge Controller | Various |  | One per station | [Link](https://www.amazon.com/Renogy-Charge-Controller-Compatible-batteries/dp/B07G1PL1B9/?th=1) |
 |  K | Solar Power | Pole-mount for Solar |  | Panel can be mounted on the ground but a tilt/pole mount makes it easier to mount. | 1 set | [Link](https://www.amazon.com/WindyNation-Side-Solar-Panel-Mount/dp/B01NAKQMKW/ref=sr_1_4?keywords=solar+panel+pole+mount&qid=1552483552&s=lawn-garden&sr=1-4) |
 |  L | Node | Mast | Many | The EMT for the SensorStation (2, 1.5, 1 1/4, 1 ) |  | [Link](https://www.lowes.com/pd/Common-3-4-in-Actual-75-In-Metallic-Emt-10-ft-Conduit/3129553) |
 |  M | Mounting Mast | Clamp |  | This should be the size of the bottom section of your mast- usually 1 ¼ to 2” |  | [Link](https://www.lowes.com/search?searchTerm=universal+strut+pipe+strap) |

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.13)  11 JAN 2024 19:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.13)  10 APR 2024 11:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -688,103 +688,103 @@ Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/im
 (pdftex.def)             Requested size: 93.95227pt x 89.84756pt.
 [12 </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/cellboost_uflJumper.png> </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/cellboost_uflToSmaAdapter.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/power_out.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/power_in.png>] [13 </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/cellboost_modemPortID.png>] [14 </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/cellboost_mainOpen.png>] [15 </Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/cellboost_uflJumperConnected.png>] [16 </Users/davidlapuma/Downloads/cellboost_uflToSmaConnected.JPG>] [17] [18] [19]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 1295.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 1301.
 [20]
-Overfull \hbox (85.45493pt too wide) in paragraph at lines 1353--1355
+Overfull \hbox (85.45493pt too wide) in paragraph at lines 1359--1361
 []\T1/lmr/bx/n/10 V3 sta-tions (or up-graded V2 sta-tions): \T1/lmtt/m/n/10 scp -r ctt@xxx.xxx.xxx.xxx:/data c:/Users/joeschmoscomputer/Downloads 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1394--1396
+Underfull \hbox (badness 10000) in paragraph at lines 1400--1402
 []\T1/lmr/m/it/10 For V2 Sta-tions: \T1/lmtt/m/n/10 ssh pi@xxx.xxx.xxx.xxx "sudo rm -rf /data/uploaded/* && sudo rm -rf
  []
 
 [21] [22]
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 1628.
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 1634.
 (/Users/davidlapuma/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [23] [24] [25] [26] [27]
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/motus-logo.png, id=734, 276.03125pt x 179.67125pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/motus-logo.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/motus-logo.png>
-Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/motus-logo.png  used on input line 2100.
+Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/motus-logo.png  used on input line 2106.
 (pdftex.def)             Requested size: 46.97522pt x 30.5766pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/BirdsCanadaLogo.png, id=735, 132.3855pt x 80.811pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/BirdsCanadaLogo.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/BirdsCanadaLogo.png>
-Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/BirdsCanadaLogo.png  used on input line 2101.
+Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/BirdsCanadaLogo.png  used on input line 2107.
 (pdftex.def)             Requested size: 46.97798pt x 28.67638pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo_300DPI.jpg, id=736, 1164.35pt x 454.69875pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo_300DPI.jpg Graphic file (type jpg)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo_300DPI.jpg>
-Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo_300DPI.jpg  used on input line 2102.
+Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo_300DPI.jpg  used on input line 2108.
 (pdftex.def)             Requested size: 70.44427pt x 27.5097pt.
 [28 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/motus-logo.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/BirdsCanadaLogo.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo_300DPI.jpg>] [29] [30]
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/MODEM SERIAL2.jpg, id=784, 687.56876pt x 1361.085pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/MODEM SERIAL2.jpg Graphic file (type jpg)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/MODEM SERIAL2.jpg>
-Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/MODEM SERIAL2.jpg  used on input line 2445.
+Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/MODEM SERIAL2.jpg  used on input line 2451.
 (pdftex.def)             Requested size: 117.4307pt x 232.46135pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/U POWER.jpg, id=785, 1188.44pt x 1159.33125pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/U POWER.jpg Graphic file (type jpg)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/U POWER.jpg>
-Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/U POWER.jpg  used on input line 2446.
+Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/U POWER.jpg  used on input line 2452.
 (pdftex.def)             Requested size: 117.4365pt x 114.56009pt.
 [31 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/MODEM SERIAL2.jpg> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/U POWER.jpg>]
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Battery.png, id=803, 993.7125pt x 1324.95pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Battery.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Battery.png>
-Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Battery.png  used on input line 2465.
+Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Battery.png  used on input line 2471.
 (pdftex.def)             Requested size: 187.89757pt x 250.53009pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/PI-HAT EXPANSION.png, id=804, 827.09pt x 552.0625pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/PI-HAT EXPANSION.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/PI-HAT EXPANSION.png>
-Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/PI-HAT EXPANSION.png  used on input line 2477.
+Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/PI-HAT EXPANSION.png  used on input line 2483.
 (pdftex.def)             Requested size: 234.87753pt x 156.77504pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/EXPANSION.png, id=805, 812.03375pt x 551.05875pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/EXPANSION.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/EXPANSION.png>
-Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/EXPANSION.png  used on input line 2490.
+Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/EXPANSION.png  used on input line 2496.
 (pdftex.def)             Requested size: 234.87662pt x 159.39091pt.
 [32 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Battery.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/PI-HAT EXPANSION.png>]
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ethernetConnected.png, id=816, 936.49875pt x 702.625pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ethernetConnected.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ethernetConnected.png>
-Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ethernetConnected.png  used on input line 2507.
+Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ethernetConnected.png  used on input line 2513.
 (pdftex.def)             Requested size: 234.86717pt x 176.21332pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/pimoroni.cominkyphat.jpg, id=817, 869.2475pt x 551.05875pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/pimoroni.cominkyphat.jpg Graphic file (type jpg)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/pimoroni.cominkyphat.jpg>
-Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/pimoroni.cominkyphat.jpg  used on input line 2521.
+Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/pimoroni.cominkyphat.jpg  used on input line 2527.
 (pdftex.def)             Requested size: 234.87239pt x 148.89716pt.
 [33 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/EXPANSION.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ethernetConnected.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/pimoroni.cominkyphat.jpg>]
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Data Management.png, id=828, 1410.26875pt x 613.29124pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Data Management.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Data Management.png>
-Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Data Management.png  used on input line 2549.
+Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Data Management.png  used on input line 2555.
 (pdftex.def)             Requested size: 352.30809pt x 153.21013pt.
 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/am your Sensor Gnome.png, id=829, 598.235pt x 254.9525pt>
 File: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/am your Sensor Gnome.png Graphic file (type png)
 <use /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/am your Sensor Gnome.png>
-Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/am your Sensor Gnome.png  used on input line 2571.
+Package pdftex.def Info: /Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/am your Sensor Gnome.png  used on input line 2577.
 (pdftex.def)             Requested size: 352.3166pt x 150.14833pt.
 [34 </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Data Management.png> </Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/am your Sensor Gnome.png>]
-Overfull \hbox (1.06221pt too wide) in paragraph at lines 2612--2613
+Overfull \hbox (1.06221pt too wide) in paragraph at lines 2618--2619
 []\T1/lmr/bx/n/10 Description  
  []
 
 
-Overfull \hbox (0.11523pt too wide) in alignment at lines 2605--2623
+Overfull \hbox (0.11523pt too wide) in alignment at lines 2611--2629
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (0.11523pt too wide) in alignment at lines 2623--2625
+Overfull \hbox (0.11523pt too wide) in alignment at lines 2629--2631
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (0.11523pt too wide) in alignment at lines 2625--2670
+Overfull \hbox (0.11523pt too wide) in alignment at lines 2631--2674
  [] [] [] [] [] [] [] 
  []
 
@@ -797,18 +797,18 @@ L3 programming layer <2023-12-11>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `SensorStation-User-Guide.out' has not changed.
-(rerunfilecheck)             Checksum: 50748394ECD463E00C8F4DCDE2249C92;13770.
+(rerunfilecheck)             Checksum: 347EA9E084B6EB8DA277822317F56FEA;13814.
  ) 
 Here is how much of TeX's memory you used:
  11937 strings out of 476141
- 201856 string characters out of 5793997
+ 201866 string characters out of 5793997
  1953457 words of memory out of 5000000
  33456 multiletter control sequences out of 15000+600000
  621221 words of font info for 83 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  63i,7n,67p,529b,564s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></Users/davidlapuma/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on SensorStation-User-Guide.pdf (36 pages, 15311359 bytes).
+Output written on SensorStation-User-Guide.pdf (36 pages, 15311687 bytes).
 PDF statistics:
  985 PDF objects out of 1000 (max. 8388607)
  868 compressed objects within 9 object streams
