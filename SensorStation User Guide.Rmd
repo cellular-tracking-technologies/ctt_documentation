@@ -6,11 +6,11 @@ title: |
 author: "support@celltracktech.com"
 date: "4/10/2024"
 output:
-  pdf_document:
-    toc: yes
   html_document:
     toc: yes
     number_sections: yes
+  pdf_document:
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -247,6 +247,20 @@ Alternatively, you could attach a `U.FL to SMA adapter` *(see fig below)* direct
 ![Option 1: LTE modem with jumper cable attaching `main` on the modem to `J6` on the SensorStation board, therefore activating the SMA port at `J7`. Now the Cell Booster antenna can be attached to the SMA port at `J7`](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/cellboost_uflJumperConnected.png){#id .class width="50%"}
 
 ![Option 2: LTE modem connected directly to U.FL to SMA adapter, which allows to connect directly to a Cell Booster antenna without using `J6` or `J7` on the board](/Users/davidlapuma/Downloads/cellboost_uflToSmaConnected.JPG){#id .class width="50%"}
+
+### Adding an Iridium Antenna for Iridium-enabled Stations
+
+Iridium satellite stations will require an external antenna. Typically, our customers will make use of a Taoglas IMA.01.105111. We can recommend Mouser.com, as they offer a good price with reasonable shipping costs.
+
+You will also need coaxial cable to connect the antenna to the SensorStation. Both are SMA female connectors, so an SMA to SMA male coax cable is required.
+
+The iridium antenna itself uses a marine antenna mount thread. You will need a Marine Antenna Base, which looks like [this](https://www.amazon.com/gp/product/B01HX01DQE/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1).
+
+We at CTT have used the one above for testing. There is a slot on the antenna that the coax comes out, which allows you to screw it down to the base securely. Please look for one that suits your antenna mast needs.
+
+The antenna itself does not need to be up high. It just needs a reasonably clear view of the sky and to be outdoors. If the SensorStation GPS works, Iridium will likely also work. It is quite resilient even in less than ideal conditions.
+
+Lastly, the coax will need to be connected to the SensorStation. There is a SMA connector next to the SensorStation's Iridium modem, and any stations shipped Iridium-ready will already include the jumper from the modem to the board to activate the SMA port.
 
 
 ### Siting your SensorStation
