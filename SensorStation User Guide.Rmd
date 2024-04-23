@@ -6,11 +6,11 @@ title: |
 author: "support@celltracktech.com"
 date: "4/10/2024"
 output:
+  pdf_document:
+    toc: yes
   html_document:
     toc: yes
     number_sections: yes
-  pdf_document:
-    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -426,27 +426,27 @@ The syntax is made of the following parts:
 * `scp` : Secure Copy 
 * `-r` : the flag for recursive, so that it securely copies all of the files, and folders, within the designated folder
 
-*V1 and V2 stations:*
+*V1 and original V2 stations:*
 * pi@xxx.xxx.xxx.xxx : this designates the Raspberry Pi on the SensorStation, at the specific IP address. The `x`'s represent the IP address of your specific SensorStation.
 
-**V3 stations (or upgraded V2 stations):**
+**V3 stations, later and upgraded V2 stations:**
 * ctt@xxx.xxx.xxx.xxx : this designates the Raspberry Pi on the SensorStation, at the specific IP address. The `x`'s represent the IP address of your specific SensorStation.
 
 * `:/data` : this states that you'd like to copy the `data` folder that's in the root directory of the Raspberry Pi on your SensorStation (this is the file that contains all of the data- both CTT and SensorGnome)
 * ` . ` : did you see that little period there? It has a space before it- make sure you include the space! The period just means that when you do this  `recursive` `secure copy` of all the files within the `data` folder on your SensorStation, you want to copy them **right where you are**. So whatever folder you are in when you started the command line, that's where it's going to go. That gives us this final command line code:
 
-*V1 and V2 stations:*
+*V1 and original V2 stations:*
 `scp -r pi@xxx.xxx.xxx.xxx:/data .`
 
-**V3 stations (or upgraded V2 stations):**
+**V3 stations, later and upgraded V2 stations:**
 `scp -r ctt@xxx.xxx.xxx.xxx:/data .`
 
 if you'd rather designate a destination folder, simply replace the final ` .` with the path of your choice. For example:
 
-*V1 and V2 stations:*
+*V1 and original V2 stations:*
 `scp -r pi@xxx.xxx.xxx.xxx:/data c:/Users/joeschmoscomputer/Downloads`
 
-**V3 stations (or upgraded V2 stations):**
+**V3 stations, later and upgraded V2 stations:**
 `scp -r ctt@xxx.xxx.xxx.xxx:/data c:/Users/joeschmoscomputer/Downloads`
 
 This would download the `data` folder from the SensorStation, to the `Downloads` folder on the local computer.
@@ -470,11 +470,11 @@ Once you have manually copied your data files to a local drive, confirmed they a
 
 The following command will delete all files within the `uploaded`, `rotated`, and `SGdata` folders, as well as the `.csv` files within the `data` folder, which represent the most recent files being collected.
 
-*For V2 Stations:*
+*For original V2 Stations:*
 `ssh pi@xxx.xxx.xxx.xxx "sudo rm -rf /data/uploaded/* && sudo rm -rf /data/rotated/* && sudo rm -rf /data/SGdata/* && sudo rm /data/*.csv"`
 
 
-**For V3 (and updated V2) Stations:**
+**V3 stations, later and upgraded V2 stations:**
 `ssh ctt@xxx.xxx.xxx.xxx "sudo rm -rf /data/uploaded/* && sudo rm -rf /data/rotated/* && sudo rm -rf /data/SGdata/* && sudo rm /data/*.csv"`
 
 Once you run this command, go back and re-check the file size of the files and folders within the `data` folder using the `du` command in the previous section. You should see that your file sizes have been reduced as you have deleted the data files and reclaimed your disk space.
@@ -529,15 +529,15 @@ Your SensorStation has a web server running locally on the Raspberry Pi, which m
 
 5. Type the following:
 
-*For V1 or V2 stations:* `ssh pi@xxx.xxx.xxx.xxx` (where the x’s represent your SensorStation IP address) 
+*For V1 or original V2 stations:* `ssh pi@xxx.xxx.xxx.xxx` (where the x’s represent your SensorStation IP address) 
 
-**For V3 Stations:** `ssh ctt@xxx.xxx.xxx.xxx` (where the x’s represent your SensorStation IP address) 
+**V3 stations, later and upgraded V2 stations:** `ssh ctt@xxx.xxx.xxx.xxx` (where the x’s represent your SensorStation IP address) 
 
 6. Answer `yes` to any dialogues, and when prompted for the password, enter the password for the Raspberry Pi 
 
-**For V3 Stations:** The password is `ctt-station`
+**V3 stations, later and upgraded V2 stations:** The password is `ctt-station`
 
-*For later V2 stations:* The password is `ctt-sensor`
+*For some mid-age V2 stations:* The password is `ctt-sensor`
 
 *For V1 stations and early V2 stations:* The password is `raspberry`. Note if `raspberry` is your password, *please change your password* via the `raspi-config` you will access in the next step. Just choose `change password` instead of `Network Options` below.
 
