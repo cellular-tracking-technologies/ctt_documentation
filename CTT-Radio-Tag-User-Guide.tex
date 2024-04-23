@@ -37,6 +37,16 @@
 \makeatother
 \usepackage{xcolor}
 \usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
 \usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -69,7 +79,7 @@
 \title{\includegraphics[width=3in,height=\textheight]{/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png}\\
 CTT Radio Tag User Guide}
 \author{\href{mailto:support@celltracktech.com}{\nolinkurl{support@celltracktech.com}}}
-\date{11/15/2023}
+\date{4/23/2024}
 
 \begin{document}
 \maketitle
@@ -126,14 +136,46 @@ the way), and this one is the \textbf{BlūMorpho}.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
   \textbf{BlūMorpho} - The BlūMorpho brings solar-powered tagging to the
   tiniest of animals, with a tag weighing about that of a grain of rice
   (0.06g) and measuring less than 4cm, with antenna included. This tag
   is appropriate for a number of species ranging from Monarch
-  butterflies and bumble bees, to all hummingbirds, and many more.
+  butterflies and bumble bees, to all hummingbirds, and many more. The
+  BlūMorpho comes pre-set with a 3-second beep interval. Because it's
+  solar-only, the lifespan is as long as you can keep it attached to
+  your animal.
+\item
+  \textbf{BlūBat} - The BlūBat takes PowerTag technology to the
+  nano-scale, with the lightest battery-only transmitter on the market
+  (as far as we know, at least!). At 3.5cm total length, including
+  antenna, it's also a perfect form factor for smaller species. The base
+  model BlūBat weighs 0.16g and boasts an impressive lifespan.
 \end{enumerate}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{SKU}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Beep Interval (seconds)}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Estimated Lifespan (days)}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+BlūBat\_3 & 3 & 49 \\
+BlūBat\_5 & 5 & 78 \\
+BlūBat\_10 & 10 & 136 \\
+BlūBat\_20 & 20 & 219 \\
+BlūBat\_30 & 30 & 275 \\
+BlūBat\_60 & 60 & 365 \\
+\end{longtable}
 
 \hypertarget{using-this-guide}{%
 \subsection{Using This Guide}\label{using-this-guide}}
@@ -360,6 +402,74 @@ reference ``Panel ID numbers'' along the top of the Panel}}\label{id}
   panel strip. These numbers are your reference to the full Tag Digital
   ID \# that will show up on your receiver. Make sure you note these for
   your records, as the tag's ID is NOT printed on the tag itself.
+\end{itemize}
+
+\hypertarget{blux16bbat-quick-start-guide}{%
+\subsection{BlūBat Quick Start
+Guide}\label{blux16bbat-quick-start-guide}}
+
+The BlūBat is the smallest-in-class battery-only digitally-coded
+transmitter for species that require transmission in the dark or at
+night. Great for bats, birds, rodents, and more. We've manufactured the
+BlūBat to be simple to test, activate, and deploy.
+
+\begin{figure}
+\hypertarget{id}{%
+\centering
+\includegraphics[width=0.5\textwidth,height=\textheight]{/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/BluBat_onPanel.png}
+\caption{\emph{Fig 4. Your BlūBat tags will arrive paneled, with the
+testing tab attached.}}\label{id}
+}
+\end{figure}
+
+\begin{itemize}
+\tightlist
+\item
+  Screen-printed numbers coorospond to the tag ID's printed on the
+  packaging. To depanel, use a sharp scissor to cut on the white line at
+  the tip of the antenna, and around the testing tab, which will keep
+  the testing tab in-tact for continued testing prior to deployment (if
+  deploying directly from the panel, you can cut on the white line with
+  the cut arrow, that attaches the tag to the testing tab).
+\end{itemize}
+
+\begin{figure}
+\hypertarget{id}{%
+\centering
+\includegraphics[width=0.5\textwidth,height=\textheight]{/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/BluBat_precut.png}
+\caption{\emph{Fig 5. With the tag separated from the panel, you can
+still test the tag by bridging the two gold pads on the testing
+tab.}}\label{id}
+}
+\end{figure}
+
+\begin{itemize}
+\tightlist
+\item
+  Testing is easiest done with some metal tweezers, but any metal will
+  do. When bridged, the tag will beep. When unbridged it will stop.
+\item
+  When you're ready to deploy, use a sharp scissor to cut on the white
+  line between the tag and the testing tab. This will permanently
+  activate the tag.
+\end{itemize}
+
+\begin{figure}
+\hypertarget{id}{%
+\centering
+\includegraphics[width=0.5\textwidth,height=\textheight]{/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/BluBat_postCut.png}
+\caption{\emph{Fig 6. Now that the test tab has been severed, the tag is
+permanently activate.}}\label{id}
+}
+\end{figure}
+
+\begin{itemize}
+\tightlist
+\item
+  Because severing the test tab does expose some copper, make sure to
+  put a drop of super glue or epoxy over the cut point and let it set
+  before deploying the tag. This will ensure your tag lasts the expected
+  lifespan once deployed.
 \end{itemize}
 
 \hypertarget{final-thoughts}{%
