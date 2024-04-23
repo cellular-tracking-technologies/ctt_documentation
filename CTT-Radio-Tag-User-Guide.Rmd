@@ -4,7 +4,7 @@ title: |
   <br />
   CTT Radio Tag User Guide
 author: "support@celltracktech.com"
-date: "4/10/2024"
+date: "4/23/2024"
 output:
   html_document:
     toc: yes
@@ -37,7 +37,7 @@ In the case of 2.5GHz, CTT currently produces one variant (with more on the way)
 
 1. **BlūMorpho** - The BlūMorpho brings solar-powered tagging to the tiniest of animals, with a tag weighing about that of a grain of rice (0.06g) and measuring less than 4cm, with antenna included. This tag is appropriate for a number of species ranging from Monarch butterflies and bumble bees, to all hummingbirds, and many more. The BlūMorpho comes pre-set with a 3-second beep interval. Because it's solar-only, the lifespan is as long as you can keep it attached to your animal.  
 
-2. **BlūBat** - The BlūBat takes PowerTag technology to the nano-scale, with the lightest battery-only transmitter on the market (as far as we know, at least!). At 3.5cm total length, including antenna, it's also a perfect form factor for smaller species. The base model BlūBat weighs 0.15g and boasts an impressive lifespan.
+2. **BlūBat** - The BlūBat takes PowerTag technology to the nano-scale, with the lightest battery-only transmitter on the market (as far as we know, at least!). At 3.5cm total length, including antenna, it's also a perfect form factor for smaller species. The base model BlūBat weighs 0.16g and boasts an impressive lifespan.
 
 
 | **SKU** |	**Beep Interval (seconds)** | 	**Estimated Lifespan (days)** |
@@ -136,9 +136,12 @@ Upon opening your Tri-fold envelope, you’ll see your tags suspended behind a r
 
 ## BlūBat Quick Start Guide
 
-Preamble
+The BlūBat is the smallest-in-class battery-only digitally-coded transmitter for species that require transmission in the dark or at night. Great for bats, birds, rodents, and more. We've manufactured the BlūBat to be simple to test, activate, and deploy.
 
-![*Fig 4. Your BlūBat tags will arrive paneled, with the testing tab attached. *](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/BluBat_onPanel.png){#id .class width=50%}
+![*Fig 4. Your BlūBat tags will arrive paneled, with the testing tab attached.*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/BluBat_onPanel.png){#id .class width=50%}
+
+
+
 
 * Screen-printed numbers coorospond to the tag ID's printed on the packaging. To depanel, use a sharp scissor to cut on the white line at the tip of the antenna, and around the testing tab, which will keep the testing tab in-tact for continued testing prior to deployment (if deploying directly from the panel, you can cut on the white line with the cut arrow, that attaches the tag to the testing tab).
 
@@ -149,7 +152,7 @@ Preamble
 * When you're ready to deploy, use a sharp scissor to cut on the white line between the tag and the testing tab. This will permanently activate the tag.
 
 
-![*Fig 6. Now that the test tab has been severed, the tag is permanently activated.*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/BluBat_postCut.png){#id .class width=50%}
+![*Fig 6. Now that the test tab has been severed, the tag is permanently activate.*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/BluBat_postCut.png){#id .class width=50%}
 
 * Because severing the test tab does expose some copper, make sure to put a drop of super glue or epoxy over the cut point and let it set before deploying the tag. This will ensure your tag lasts the expected lifespan once deployed.
 
