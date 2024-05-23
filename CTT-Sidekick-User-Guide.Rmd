@@ -150,7 +150,8 @@ Also at the top of the Tag List screen there are three larger buttons:
 
 * **`434MHz`** - This button toggles the 434MHz radio receiver on and off.  When the radio is on the icon and text will be green when it is off the icon and text will be grey.
 
-* **`Record/Stop`** - This button starts and stops the recording of tag detections.  When recording is in progress all tag detections will be written to a csv file along with the current location recorded from your mobile device's GPS receiver.
+* **`Record/Stop`** - This button starts and stops the recording of tag detections.  When recording is in progress all tag detections will be written to a `csv` file along with the current location recorded from your mobile device's GPS receiver. **Note:** Your data file is stored in different places depending on which phone you're using. For **iOS**, the CSV files can be located in `Files (APP) -> On My Phone -> CTT Mobile (folder)`
+For **Android** the files are stored in your Download folder, specifically, here: `storage/emulated/0/Download/`
 
 Just below the row of buttons you'll find the a row with actions for sorting and filtering the tag list:
 
@@ -224,6 +225,14 @@ At the top of the Localization screen are four grid size options, `500m`, `300m`
 
 
 ## Firmware Updates
+
+## Troubleshooting
+
+**Q:** *"Dude, where's my [data]?"* 
+
+**A:** If you've been using the `Record` function, your data are saved to a csv file that is stored in different places depending on which phone you're using. For **iOS**, the CSV files can be located in `Files (APP) -> On My Phone -> CTT Mobile (folder)`
+For **Android** the files are stored in your Download folder, specifically, here: `storage/emulated/0/Download/`
+
 
 **Coming Soon**
 
