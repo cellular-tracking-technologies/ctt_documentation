@@ -4,7 +4,7 @@ title: |
   <br />
   CTT Sidekick User Guide
 author: "support@celltracktech.com"
-date: "9/15/2023"
+date: "5/23/2024"
 output:
   html_document:
     css: styles.css

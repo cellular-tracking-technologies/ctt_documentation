@@ -1,0 +1,364 @@
+---
+title: |
+  ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png){width=3in}  
+  <br />
+  CTT Node V2 User Guide
+author: "support@celltracktech.com"
+date: "6/10/2024"
+output:
+  pdf_document:
+    toc: yes
+    fig_caption: true
+  html_document:
+    toc: yes
+    number_sections: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**NOTE: DO NOT USE THIS GUIDE FOR CTT NODE V3**
+
+**This user guide applies only to the CTT Node V2! For the CTT Node V3 please consult the appropriate user guide in the [CTT User Guide Directory](https://cellular-tracking-technologies.github.io/ctt_documentation/)**
+
+# Introduction
+
+The `CTT Node™ Version 2 (V2)` is a mini-base-station that allows you to localize LifeTags™, PowerTags™ and HybridTags™ with a high degree of accuracy. If deployed in a grid fashion, and employing post-hoc analysis, the CTT Nodes can operate as pseudo-reverse-GPS, providing near GPS accuracy in optimal conditions. With the addition of calibration data, Nodes can provide presence/absence and distance estimate of instantaneous detections from supported tags.
+
+The CTT Node uploads received tag detection data to the standard CTT SensorStation™, creating a dense, high resolution tracking network. Solar power recharges batteries in the CTT Nodes meaning no extra power cables or external solar systems are necessary.
+
+Each CTT Node has a detectable range of about 250-300 meters, and is able to relay data to a CTT Base Station as far away as 1.5 kilometers.
+
+## Using This Guide
+
+Use the `Quick Start Guide` in the next section to get you up and running with your `CTT Nodes`. For more detailed information you can proceed to the sections below the `Quick Start Guide`. Please provide any feedback via our `Customer Service Desk` portal [here](https://celltracktech.com/support-customer-service-desk/).
+
+# Node Quick Start Guide
+
+What you will need:
+
+* At least one `CTT Node`
+* An operational `SensorStation` and a way to connect to it, either via ethernet or wirelessly
+* *(optional)* A test tag (`LifeTag`, `PowerTag` or `HybridTag`)
+
+1. Unpack your Nodes.
+
+2. Place Nodes outside in a sunny location and allow to fully charge for several days (more important if you will be testing with the magnet off)
+
+2. Bring Nodes within range of an existing SensorStation (*note: if not using antennas on your SensorStation, make sure Nodes are within a meter of the station*).
+
+3. Connect your computer to your SensorStation so you can view the web interface (*for SensorStation operation consult the online install guide [here](https://cellular-tracking-technologies.github.io/ctt_documentation/v2-SensorStation-User-Guide.html#connecting-to-your-sensorstation-web-interface))*.
+
+4. Ensure your SensorStation has at least one radio tuned to detect Nodes (*if this isn't clear, consult the SensorStation online install guide*).
+
+5. With the magnets still on, a Node will transmit health information once every five minutes and can do so for over two years without recharging the battery. With the SensorStation web interface open, you should begin to see Nodes checking in and showing up in the Nodes list at the top of the SensorStation webpage like in the image below. A properly functioning Node will send accurate GPS location and GPS time. Note time is always in UTC. If GPS data is empty, or GPS time is incorrect, either the Node is in a place where it cannot get a GPS fix, or the GPS needs to be forced. See `Advanced Configuration via Node Client` below for how to force a GPS fix.
+
+![*Node display on SensorStation web interface.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodesOnSensorStation.png){#id .class width=75%}
+
+6. If you have a test tag, you can place it near the Nodes and remove the magnet on the Node case. Removing the magnet activates the Node radio to listen for tags. You should begin to see tag data flowing in on SensorStation web interface under the radio(s) you programmed to listen for Nodes.
+
+![*Here `Radio 1` is set to detect `Nodes`, while `Radio 2` is set to detect `Tags`. Looking at the data displayed you can see that `Radio 1` data includes a `Node ID` and the `RSSI` is the signal strength of the `Tag` hitting the `Node`, while `Radio 2` data is simply the tags being directely detected by the antenna on `Radio 2`, and therefore the `RSSI` refers to the signal strength of the `Tag` hitting the antenna on `Radio 2.`*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeDataOnSensorStation.png){#id .class width=75%}
+
+7. If you are deploying your `Nodes`, go ahead and remove the magnets and store them somewhere safe. You will want to reuse them if you ever want to shut down a Node for storage.
+
+8. Attach your Node to an appropriately sized support structure. We recommend 1/2" - 3/4" diameter EMT conduit, but there is no rule as to what can or can't be used. We also recommend placing your Nodes at least 2 meters off of the ground.
+
+9. Place your Nodes in the field within 1-1.5km of your SensorStation.
+
+10. Once set up, return to your SensorStation and ensure that all Nodes are checking in. Ultimately you want your Nodes to be received 100% of the time, so looking at your data after a few days will help diagnose any Nodes 'on the fringe'.
+
+11. For any Nodes not being detected consistently, you should consider one of the following possible solutions:
+* Move 'fringe' Nodes closer to the SensorStation
+* Boost the Node power by modifying the Node's settings using the `Node Client` tool (see below)
+* Add additional antennas pointed at the problem Node(s)
+* Add additional SensorStations to fill coverage gaps
+
+# Initial Node Setup
+ 
+Because of shipping laws, your Node arrives with a partially-charged Lithium battery and should be placed in the sun for several days prior to deployment to get its battery up to full charge.
+
+## Unboxing
+
+![*Node packaged for shipping*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeWrapped(1).jpg){#id .class width=50%}
+
+Remove the packing material that surrounds your Node. You can do this by removing the two nuts on the mounting bracket, which will then allow you to slide the bubble wrap off of the Node and save it for future use. 
+
+Notice that there is a piece of blue tape securing a magnet to the Node.
+
+![*Node with bubblewrap removed*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUnwrapped(2).jpg){#id .class width=50%}
+
+This magnet operates the switch that determines whether your Node is searching for tags. Note that even with the magnet on the Node, your Node will send health reports every five minutes. It can do this on a fully charged battery for over two years without charging, so is fine for storage. Once you remove the magnet, though, your Node will function for roughly one week without a charge. We recommend only removing the magnet when deploying your Nodes, or for temporary testing.
+
+![*Note the black dot on the Node indicates where the magnet must be aligned when not in use*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeMagnet(3).jpg){#id .class width=50%}
+
+
+Once you deploy your Nodes, be sure to save the magnets for future use.
+
+# Attaching Your Node
+
+Each Node comes with the necessary hardware for mounting it to various materials. We typically recommend 3/4" or 1/2" EMT conduit, but you can mount it to practically anything. We recommend mounting your Node either horizontally, with the solar panel facing the sky, or vertically, with the solar panel facing south, for optimal recharging performance. 
+
+![*Node mounted horizontally at Bernheim Forest, Kentucky*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeBernheim.jpg){#id .class width=50%}
+
+![*Node mounted upright and facing south, at The Nature Conservancy's South Cape May Meadows Preserve, Cape May, NJ*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeMeadows.jpg){#id .class width=50%}
+
+## A note about solar recharging
+
+Note that mounting your Node in shade, or canopy cover, will reduce recharge times and may require you to periodically move the Node to a sunny location for recharging, or subsidize the Node with an additional battery back (each Node comes with a USB port which can be used for attaching an additional power supply).
+
+# SensorStation Pairing
+
+There is no need to pair a Node to a SensorStation. Simply placing the Node within the range of a SensorStation antenna will cause the SensorStation to detect and process Node data. 
+
+# Operation Tips
+
+As a rule of thumb we recommend placing all Nodes within 1-1.5km of a SensorStation. It is possible to increase the distance depending on your choice of antennas, but this distance has proved effective for many installations. Topography, density of vegetation, and other factors may impact the detection distance. 
+
+Since each Node transmits health information every five minutes, one good benchmark when testing you Nodes is to ensure that your SensorStation is detecting each Node at least every five minutes. If not, you will likely be losing some data which will only be recoverable by opening the Node, removing and reading the internal SD card. Put another way, any data not received by the SensorStation will not be sent later, but resides only on the internal Node SD card. **Using a Node without a SensorStation is not recommended and outside of the manufacturer specs.**
+
+## Connecting to the external USB port
+
+Each shipment of Nodes comes with a 4-pin to USB-A adapter. This allows you to access the USB 
+
+![*Node with USB cover installed*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUSBCover(5).jpg){#id .class width=50%}
+
+![*Node with USB cover removed, exposing 4 pins*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUSBPort(6).jpg){#id .class width=50%}
+
+![*Node with 4-pin to USB-A adapter inserted* ](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeUSBAdapterIn(8).jpg){#id .class width=50%}
+
+
+## Opening your Node
+
+If you need to access the internal SD card, or troubleshoot a Node, you can access it by removing the single screw on the bottom of the case, and separating the top of the Node from the bottom with a little squeeze and pull procedure. 
+
+![*First remove the screw in the bottom of the Node*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeScrewOut(9).jpg){#id .class width=50%}
+
+![*Then apply equal pressure to the long sides of the case, and pull the top and bottom apart*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeOpen1(10).jpg){#id .class width=50%}
+
+![*Closeup of the Node board*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeCloseUpInternal(12).jpg){#id .class width=50%}
+
+
+On the board you will notice several buttons. Pressing them has the corresponding effect:
+
+* `SW1` - Long-press forces the Node to restart.
+* `SW2` - Long-press forces the Node to send a health message (requires a SensorStation to determine success).
+* `SW3` - Long-press forces the Node to look for new firmware on the SD card, and if it finds it, to install it.
+
+The Micro USB port is also apparent in the lower right side of the board, and labled `USB`. You can use this port to connect your Node directly to a computer.
+
+# Updating your Node Firmware
+If you want to, or need to, update your Node's firmware, you can do this in one of two ways.
+
+## Option #1 : Direct File Transfer via SD Card
+
+With the Node open:
+
+1. Remove the SD card
+2. Put the SD card into a card reader connected to a computer
+3. Copy the latest firmware file (downloadable from the `#ctt_Nodes` channel in `Slack`) titled `node3.firmware` to the SD card
+4. Re-insert the SD card into the Node
+5. Long-press the `SW3` button on the board to initiate firmware update
+6. Confirm firmware update either by:
+  * Connecting directly to the Node via Node Client (see section below on Node Client)
+  * Checking your SensorStation Node List at the top of the SensorStation Interface after ~6 minutes (Node Health files are sent every 5 minutes)
+  * Download `Current Data` from the SensorStation Interface after ~6 minutes (Node Health files are sent every 5 minutes) and look in the data table
+
+## Option #2: Push-button Firmware update using Node Client
+1. Download the latest firmware file (downloadable from the `#ctt_nodes` channel in `Slack`) titled `node3.firmware` to the SD card
+2. Follow the directions below to connect to your Node via Node Client and access the `Local Console`
+3. At the bottom of the `Local Console` is the `Firmware` button, which will allow you to upload the firmware file.
+4. Confirm the updated firmware following Step 6 in the instructions above.
+
+# Advanced Configuration via Node Client
+
+You can use a development program we've created called `Node Client` to troubleshoot your Node and modify several parameters. The latest version of `Node Client` can be downloaded from our support Slack workspace under the `#ctt_nodes` channel. If you don't already have access, please email us at support@celltracktech.com. You can connect your node to a computer using either the provided 4-pin -> USB adapter and the port on the underside of the Node, or the micro-usb port directly on the board (after opening the Node).
+
+## Opening Node Client
+
+![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/nodeClientFolderSelect.png){#id .class width=75%}
+
+After downloading the `node-client_0_2_0_0.zip` folder to your computer, expand it in your location of choice and open the now-uncompressed folder.
+
+
+![*Inside the `node-client` folder you'll find two folders, `Assets` and `bin`*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/binSelect.png){#id .class width=75%}
+
+![*Inside the `bin` folder you'll see a folder titled `Debug`*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/DebugSelect.png){#id .class width=75%}
+
+You will see two folders. Open the one labeled `bin`, and then the one labeled `Debug`.
+
+![*Contents of the `Debug` folder showing the `node-client` application*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClientSelect.png){#id .class width=75%}
+
+Within `Debug` you will find the application file `node-client`. Double-click `node-client` to run the program.
+
+![*Opening screen of `Node Client`*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient1.png){#id .class width=75%}
+
+Upon opening Node Client you will see the main screen with Steps 1 - 4 outlined. The window to the right is actually a screenshot of Device Manager - not Device Manager itself (hence "Figure 1"), but gives you an idea of what your Device Manager should look like if you have the proper drivers installed. If not, the blue link that says "Driver" can be clicked to take you to the `Silicon Labs` website. Click on the `DOWNLOADS` tab to access the appropriate driver for your operating system. **After installing the driver you must restart your computer. You must have the Silicon Labs driver installed to run Node Client.**
+
+![*Clicking on `Update Ports` should populate both steps 2 and 3 values. If not you may need to install the proper driver.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient2.png){#id .class width=75%}
+
+With the proper driver installed, you can click on `Update Ports` which will then populate Steps 2 and 3 with values for available `COM` ports and default `Baud Rate`. You may have multiple `COM` ports available, so ensure that the one selected refers to your Silicon Labs driver port.
+
+![*Clicking `Open` will open the USB connection between the Node and your computer.* ](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient3.png){#id .class width=75%}
+
+Once you have selected the appropriate port and baud rate, click the `Open` button in Step 4. 
+
+![*Once the port is open, the button under `Step 4` will show `Close`. Clicking on it again will then close the port and disconnect the node from the computer.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient4.png){#id .class width=75%}
+
+This opens the port; once the port is open, the button will change to `Close`. Clicking on `Close` will close your connection- so leave it open and click on the `Local Console` button on the left sidebar of the window (upper left corner, under the `USB` button).
+
+![*With the port now open, you can click on `Local Console` to interact with your node in real-time.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient5.png){#id .class width=75%}
+
+Once in the `Local Console` section you'll see three windows: `Device Info`, `Tag Detections` and `Settings Summary`. Each of these windows have associated menus and buttons. 
+
+![*Device info showing dropdown options*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient6.png){#id .class width=75%}
+
+
+## Device Info Window
+
+
+Device Info provides several pieces of information by default:
+
+* `BatteryVolts` - current battery voltage
+* `SolarCurrent` - instantaneous information on solar current being pushed into the battery
+* `SolarVolts` - instantaneous information on solar voltage being received via the solar panel
+* `TemperatureCelcius` - the instantaneous temperature of the node board
+
+At the bottom of the `Device Info` window there is a dropdown menu. Select any of the dropdown menu items and click the `Submit` button to issue a command to the node. Below are the menu items and their respective actions.
+
+* `Serial Number` - causes the  `Device Info` window to display the `DeviceID` and `Firmware` version.
+
+* `GPS Fix` - causes the Node to take a GPS fix, and display the `Latitude` and `Longitude` in the `Device Info` window.
+
+* `Health Report` - causes the Node to transmit a health report. If a SensorStation is within range, the SensorStation should detect the health report. Note that there is no acknowledgment of success within `Node Client`.
+
+* `Relay Beeps` - causes the Node to transmit whatever beep data is currently in the buffer. If a SensorStation is within range, the SensorStation should detect the beep records. Note that there is no acknowledgment of success within `Node Client`.
+
+* `Dynamics` - *this has no current application and is legacy option from a specific modified node that is not currently in production.*
+
+![*Here `GPS Fix` is selected from the dropdown, and the `Submit` button has been pressed, causing the Node to take a GPS fix and display the results in the `Device Info` window.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient7.png){#id .class width=75%}
+
+
+## Tag Detections Window
+If there are any tags within range of the node, you will see detection data populating in the `Tag Detections` window. These data include:
+
+* `Detection Time (Local)` - a date/time stamp in your local timezone.
+* `Tag Id` - the 8-digit tag ID from either a **LifeTag**, **PowerTag** or **HybridTag**
+* `Signal (dBm)` - the signal strength of the tag detection, measured in dBm, or *the power level measured in decibels relative to one milliwatt.*
+
+While the `Tag Detections` window is pretty self explanatory, it also contains the button for updating the node firmware. If you have downloaded a more recent firmware version, you can load that firmware onto your node by pressing the `Firmware` button which will then open your file explorer. Updating the firmware is covered more extensively in the `Updating Your Node Firmware` section.
+
+
+![*Pressing the `Refresh` button under the `Settings Summary` window causes the available settings to populate and gives you the opportunity to edit setting values.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient8.png){#id .class width=75%}
+
+
+## Settings Summary Window
+
+This window will initially be empty until you press the `Refresh` button. Once pressed, the available settings will populate the window, each with a gear button in the rightmost column.
+
+To modify a setting's parameter, click on the associated `gear icon` which will open a popup window specific to that setting. 
+
+![*Clicking on the gear icon in the rightmost cell of each setting row opens the parameterization window for that setting.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient9.png){#id .class width=75%}
+
+Here we have selected the `RadioTxPower` setting, which allows us to increase the power output of our onboard 434Mhz radio, thereby increasing the reach of our node to a nearby SensorStation. These parameters haven't been fully documented, so please consult with support@celltracktech.com before modifying settings unless otherwise specified in this guide. For instance, **`RadioTxPower` can be modified up to 10dBm, but should not be set greater than that.** To modify a value down below zero, use the negative value, for example, a value of **-10** for `RadioTxPower` would reduce the power output by -10dBm.
+
+
+![*Here you can modify the value, click `Send`, close the popup window, and then click `Save` and then `Refresh` at the bottom of the Settings Summary window.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient10.png){#id .class width=75%}
+
+To save these settings you first must click the `Send` button on the popup dialogue, and then click the `Save` button at the bottom of `Settings Summary`. To confirm that the settings have been set and saved, click the `Refresh` button at the bottom of the`Settings Summary` window.
+
+![*If done correctly, you should see the setting value updated in the `Settings Summary` table.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient11.png){#id .class width=75%}
+
+Above you can see that the `RadioTxPower` has been successfully updated to +10dBm.
+
+
+![*The `Directory` window in the `File Transfer` section.* ](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient12.png){#id .class width=75%}
+
+## File Transfer
+
+Moving back to the left sidebar you see another button under `Local Console`; this one for `File Transfer`. Clicking on this button brings you to the `Directory` window.
+
+Initially the window is empty, but clicking on `Update` in the upper right corner of the window will cause the console to list out all of the files on the SD card.
+
+These are typically `.csv` files with either `beep` data, or `gps` data. From here you can either download or delete these files via the console. 
+
+***Note:*** **Since the USB transfer rate is very slow, it is recommended that you don't use this console for downloading `beep` files, rather you can remove the SD card and use a 3rd party SD card reader to transfer these files to your computer, if desired.**
+
+
+![*Once you're done working with your node, return to the USB section and click `Close` under Step 4. Now it is safe to disconnect your Node.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeClient13.png){#id .class width=75%}
+
+<!-- # Optional External Battery Pack -->
+
+<!-- CTT produces a 17600mAh external battery pack that can be plugged into the port on the bottom of the Node. This battery pack can extend the life of the Node in environments where there is not enough solar exposure to recharge the internal battery. Under normal conditions this will extend the life of the Node for up to three weeks before needing to be recharged.  -->
+
+<!-- ## External Battery Pack Overview -->
+
+<!-- ![*The External Node Battery*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/BatteryTopo.png){#id .class width=75%} -->
+
+<!-- 1. `Micro USB Port` - Connect to power source for recharging (USB charging cord not provided) -->
+<!-- 2. `Power Level Button` - Hold to display 4-bar power level indicator -->
+<!-- 3. `Power level indicator` - Note that anything above 3.8v will display all 4 bars, but a full charge is 4.2v -->
+<!-- 4. `Interface Header` - This is the connection between your Node and the external battery pack. -->
+<!-- 5. `Off Button` - Hold to turn off battery pack -->
+<!-- 6. `ON Button` - Hold to turn on battery pack -->
+<!-- 7. `Battery On Indicator` - When blinking, the battery is turned ON -->
+
+<!-- ## Using the External Battery Pack -->
+
+<!-- The External Battery can be attached to your Node using the CTT Battery Clip, a Zip Tie or other removable cable tie. **Be careful when attaching your battery to your Node not to damage the power level button.** -->
+
+<!-- ### Before Deployment -->
+
+<!-- * **You will need:** -->
+<!--   * Either a CTT Clip, or some other way to secure your battery pack to the Node (such as a Zip Tie). One per Node. -->
+<!--   * A pointed object such as a small screwdriver, a stylus, or a toothpick, for pressing the buttons (the buttons are designed to be recessed so they cannot be accidentally pressed during storage and transport. **Therefore, to use them you will need a device to push against the button platform).** -->
+
+<!-- * Be sure to fully charge your external battery pack using a Micro-USB cable plugged into a power source. Because these are large batteries, and USB only supports 5 volts, a drained battery can take a long time to recharge, even up to a full 24 hours, so be sure to plan accordingly. -->
+
+<!-- ### Deploying Your Battery Pack on a Node -->
+
+<!-- * It is always best to ensure your Nodes are functioning **before** attaching the external battery pack. If your Node is **not** sending data to your SensorStation prior to attaching the battery, it's possible that the internal Node battery is too low to function, or is damaged, and the Node has effectively turned off. If the internal battery is too low to function, **plugging in the external battery pack will not reboot your Node**. If you suspect this to be the case do the following: -->
+
+<!-- 1. Connect the external battery pack to your Node -->
+<!-- 2. Check your SensorStation interface for evidence that the Node is checking in (this may take up to five minutes) -->
+
+<!-- 3. If the Node is checking in, you're fine -->
+<!-- 4. If the Node does not check in, you will need to try one of a few things to get it to reboot: -->
+
+<!--     * If your Node is mobile, you can put it out into the sun to recharge the internal battery until it checks in. -->
+<!--     * If not, open the Node and: -->
+<!--       * press the reset button, or -->
+<!--       * replace the internal Node battery, or -->
+<!--       * Unplug and then reconnect the internal Node battery *while* the external battery pack is connected. -->
+<!--       * Once you complete this process, confirm that your Node is connecting to your SensorStation.  -->
+
+<!-- **(Note that the battery pack is an independent piece of equipment that turns on and off, and displays power, regardless of whether it is powering the Node. Therefore it is imperative that you confirm the Node is reporting to the SensorStation and not simply relying on the LEDs on the battery pack)**. -->
+
+<!-- The External Battery Pack is not waterproof, but it is water-safe, meaning it includes circuit protection in case of exposure to water. Should the battery pack circuitry be exposed to water, the internal fuse will shut down the battery pack to protect it from damage. Once the circuitry is dry, the fuse will reset, and the user must simply press the power button to turn the battery pack back on. Therefore the user must monitor their Node system after significant rainfall as a Node with a low internal battery may require manual resetting if the external battery pack is shut down for too long. -->
+
+<!-- ### CTT Clip for External Node Battery -->
+
+<!-- ![*Attachment of the CTT Clip*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Node battery clip.001.png){#id .class width=75%} -->
+
+<!-- The CTT Clip is made of flexible nylon and wraps around the Node and External Node Battery to securely hold the battery on a deployed Node while not impeding solar recharging of the Node's internal battery (note the solar panel will NOT recharge the external battery pack, that must be done by the user. See the next section for info on recharging). Be careful when attaching the clip not to slide over or otherwise compress the Power Level Button which may cause damage to the button. -->
+
+
+<!-- ### Recharging your Battery Pack -->
+
+<!-- It is important to keep track of your battery voltage over time, especially for Nodes where solar recharge is low or non-existent. You can do this by ensuring your Nodes are within range of your SensorStation, and your SensorStation has some on-board connectivity that allows you to remotely monitor your Nodes. Nodes have an internal protection circuit that keeps them from running batteries to critically low levels, and therefore will shut off before that happens. To keep your grid uptime constant, ensure that you are replacing external battery packs before your Node voltage drops below 3.6v. This may mean having 2x the number of battery packs needed to power your grid, which also makes recharging them easier since it does take a long time to recharge these large batteries. Batteries can be recharged using a standard micro-usb cable and a wall wart for plugging into existing AC power (not provided).A good rule of thumb is to place each battery pack on a charger for a full 24 hours. **Depending on the battery level during recharge, it may take upwards of 17 hours to recharge from 3.7v to full capacity. If charging time is important to you, choose charging devices with at least 500mAh rating, however 1Amp or greater per USB port is recommended.** -->
+
+<!-- ![*Example of a USB wall wart with optimal charge capacity*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/IMG_4929 2.jpg){#id .class width=25%} -->
+
+# Frequently Asked Questions (FAQ)
+
+**Q1. Do the Nodes send out radio frequency signals to the SensorStation?**
+
+**A1.** *The Nodes send two types of data to the SensorStation: first is the health report, sent every five minutes; and second is the beep data sent either after the buffer is filled, or after a timer expires. All data is sent from the Node to the SensorStation on the frequency 433.25MHz, which is just slightly different than the frequency of the tags (434MHz). This is why you must assign an antenna to either detect Nodes, or Tags via the SensorStation interface. Nodes* **do not** *send over unique frequencies, instead they transmit their unique Node ID to the station. This is how the SensorStation recognizes individual Nodes.*
+
+**Q2. Is there a limit to the number of Nodes that a single SensorStation can receive?** 
+
+**A2.** *Technically, no, but the more Nodes you deploy the more opportunity there is for radio congestion at the receiving end. There are many Node grids deployed with greater than 60 Nodes sending data to a single station with no apparent impact, but your mileage may vary depending on your setup.*
+
+# Final Thoughts
+
+This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/pages/customer-service-desk-csd) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2023.
