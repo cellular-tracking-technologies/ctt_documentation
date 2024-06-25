@@ -4,7 +4,7 @@ title: |
   <br />
   CTT Sidekick User Guide
 author: "support@celltracktech.com"
-date: "5/23/2024"
+date: "6/25/2024"
 output:
   html_document:
     css: styles.css
@@ -233,8 +233,15 @@ At the top of the Localization screen are four grid size options, `500m`, `300m`
 **A:** If you've been using the `Record` function, your data are saved to a csv file that is stored in different places depending on which phone you're using. For **iOS**, the CSV files can be located in `Files (APP) -> On My Phone -> CTT Mobile (folder)`
 For **Android** the files are stored in your Download folder, specifically, here: `storage/emulated/0/Download/`
 
+**Q:** *"When I try and run the tag calibration the app crashes, or I get a weird graph with two black bars on the X axis instead of data."*
 
-**Coming Soon**
+**A:** This is usually related to Location Services...so try the following:
+
+1. Make sure you've allowed `Location Services` for the CTT Mobile App. This will be in your phone's preferences/settings. 
+2. In the **`Detect`** view (with the tag list), enable location services with the `GPS fix icon` in the upper right
+3. Clear the current tag list
+4. Try calibration again
+
 
 # Final Thoughts
 

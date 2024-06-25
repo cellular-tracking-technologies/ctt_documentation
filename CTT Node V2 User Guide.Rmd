@@ -46,13 +46,13 @@ What you will need:
 
 2. Place Nodes outside in a sunny location and allow to fully charge for several days (more important if you will be testing with the magnet off)
 
-2. Bring Nodes within range of an existing SensorStation (*note: if not using antennas on your SensorStation, make sure Nodes are within a meter of the station*).
+3. Bring Nodes within range of an existing SensorStation (*note: if not using antennas on your SensorStation, make sure Nodes are within a meter of the station*).
 
-3. Connect your computer to your SensorStation so you can view the web interface (*for SensorStation operation consult the online install guide [here](https://cellular-tracking-technologies.github.io/ctt_documentation/v2-SensorStation-User-Guide.html#connecting-to-your-sensorstation-web-interface))*.
+4. Connect your computer to your SensorStation so you can view the web interface (*for SensorStation operation consult the online install guide [here](https://cellular-tracking-technologies.github.io/ctt_documentation/v2-SensorStation-User-Guide.html#connecting-to-your-sensorstation-web-interface))*.
 
-4. Ensure your SensorStation has at least one radio tuned to detect Nodes (*if this isn't clear, consult the SensorStation online install guide*).
+5. Ensure your SensorStation has at least one radio tuned to detect Nodes (*if this isn't clear, consult the SensorStation online install guide*).
 
-5. With the magnets still on, a Node will transmit health information once every five minutes and can do so for over two years without recharging the battery. With the SensorStation web interface open, you should begin to see Nodes checking in and showing up in the Nodes list at the top of the SensorStation webpage like in the image below. A properly functioning Node will send accurate GPS location and GPS time. Note time is always in UTC. If GPS data is empty, or GPS time is incorrect, either the Node is in a place where it cannot get a GPS fix, or the GPS needs to be forced. See `Advanced Configuration via Node Client` below for how to force a GPS fix.
+6. With the magnets still on, a Node will transmit health information once every five minutes and can do so for over two years without recharging the battery. With the SensorStation web interface open, you should begin to see Nodes checking in and showing up in the Nodes list at the top of the SensorStation webpage like in the image below. A properly functioning Node will send accurate GPS location and GPS time. Note time is always in UTC. If GPS data is empty, or GPS time is incorrect, either the Node is in a place where it cannot get a GPS fix, or the GPS needs to be forced. See `Advanced Configuration via Node Client` below for how to force a GPS fix.
 
 ![*Node display on SensorStation web interface.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodesOnSensorStation.png){#id .class width=75%}
 
