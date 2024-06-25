@@ -1,0 +1,142 @@
+---
+title: |
+  ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png){width=3in}  
+  <br />
+  CTT Node V3 User Guide
+author: "support@celltracktech.com"
+date: "6/13/2024"
+output:
+  html_document:
+    toc: yes
+    number_sections: yes
+  pdf_document:
+    toc: yes
+    fig_caption: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**NOTE: THIS USER GUIDE ONLY APPLIES TO THE V3 NODE**
+
+**For the CTT Node V2 please consult the appropriate user guide in the [CTT User Guide Directory](https://cellular-tracking-technologies.github.io/ctt_documentation/)**
+
+# Introduction
+
+Congratulations on your purchase of the new CTT Node V3! The CTT Internet of Wildlife System, which the Node has been an integral part of since the beginning, has just gotten a whole lot more awesome with this new Node. We took your suggestions to heart in developing this new Node, which has a few very specific benefits and departures from the old model:
+
+1. Fully configurable through our robust CTT Mobile App
+2. Separate solar-rechargeable power supply to allow for flexible grid setup and ability to add alternate power sources in the future
+3. Fully accessible housing, for easy removal of the SD card and for inspection of the lEDs
+4. Dual-mode compatibility with both 434MHz and 2.4GHz tags
+
+
+# Node Quick Start Guide
+
+We have no doubt that you are excited to deploy your Nodes, so here's a quick start guide to get you going in a few minutes.
+
+## Connect your power source to your Node via the provided cable. 
+
+![*How to connect the Node V3 to power supply*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_howToConnect.png){#id .class width=50%}
+
+The power cable runs first through the `cap` of the `cable gland`, then the `rubber grommet` with the lip of the `grommet` facing toward the `Node` (see red arrow in the image below)
+
+![*note that the grommet goes toward the Node with the lip facing toward the node, and flat end (see next pic) away from the Node*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_grommet lip.png){#id .class width=50%}
+
+When you screw the `cable gland cap` onto the `cable gland`, it will compress the `grommet` and seal around the cable. Before tightening, make sure the power plug is pulled through the cable gland and into the case, and plugged into the `5v barrel jack` on the Node board. Ensure a little bit of slack on the cable inside the case and then tighten down the cable gland cap until there is no movement in the cable when tugged lightly. This process both seals the entry from water, and helps reduce the chance of unintentionally pulling on the powe cable and damaging the board.
+
+We recommend the final tightening of the cap with a crescent wrench. 
+
+![*Demonstrating how to tighten the Node V3 Bulkhead*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_TightenBulkhead.png){#id .class width=50%}
+
+Once the cap is tightened, you should see the grommet compressed around the cable.
+
+![*showing a tight bulkhead, with internal grommet compressed around cable*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_TightBulkhead.png){#id .class width=50%}
+
+
+## Mount your node for deployment
+
+Your Node comes with the hardware necessary to mount it to a piece of 3/4" conduit. Note other mounting hardware is absolutley possible so feel free to use whatever makes sense for your site. In your shipment you have:
+
+1. Node V3 mounted in a weatherproof case
+2. Two (2) omni antennas - one tuned to 434MHz and the other tuned to 2.4GHz
+3. Two (2) mounting shields, one for the top of the node, with three screw holes and no words printed on it, and one for the bottom of the node with the CTT logo printed on it. These mount to the node via the two corner holes on the shields and the four holes on the back of the node.
+
+![*photo showing the back of the Node as mounted on EMT conduit*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedBackLeft.png){#id .class width=50%}
+
+
+
+3.
+4.
+5.
+
+# Unboxing
+
+# Initial Node Setup
+
+![*Node V3 packaged for shipping*]()
+
+![*Node with bubblewrap removed*]()
+
+## Mounting Your Node
+
+![*Node mounted on 3/4" EMT conduit*]()
+
+## A note about solar recharging
+
+## Distance between Nodes and SensorStation
+
+We recommend that all Nodes are placed within 1km of a SensorStation to ensure that all data is effectively transferred from the Nodes to the SensorStation. This assumes good line-of-sight between the Nodes and the SensorStation, so every installation must consider topography, vegetation, or height of Nodes and/or SensorStation antennas when estimating detection distance. Some trial and error should be expected when setting up your Node grid. 
+
+## Distance between Nodes
+
+Nodes can be used for various reasons to answer a number of questions. This section assumes that Nodes are being used for localization, or estimating a location within a Node grid from multiple simultaneous Node detections. In this case it's important to understand the relationship between distance and signal strength between your tags and your grid of nodes. This can be accomplished using one of your tags and a CTT Sidekick. We will go over this is a separate section, but assuming you have a good handle on at what distance signal strength becomes uninformative, with regards to distance, you will want to ensure that your node spacing is less than this distance. In several empirical cases we have found that distance to be ~150m, so spacing nodes every 100m or less is good for a number of bird species. For species that spend their life on the ground (turtles, etc.) this distance may be closer to 50m, but ultimately will require some test data collection.
+
+## Opening your Node
+
+## Removing and replacing the SD Card
+
+# Understanding the LEDs on the Node V3 Board
+
+# Updating the Node V3 Firmware
+
+# Using the CTT Mobile App to interact with your Node V3
+
+# Final Thoughts
+
+This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/pages/customer-service-desk-csd) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2024.
+
+
+
+
+
+![*showing the mounting hardware holding the solar rechargable power supply above the Node V3*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedCloseSolarStem.png){#id .class width=50%}
+
+
+
+
+![*(flat) bottom of the grommet, which faces down into the bulkhead housing, and away from the Node*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_grommetBottom.png){#id .class width=50%}
+
+
+![*photo showing the back of the Node as mounted on EMT conduit*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedBackLeft.png){#id .class width=50%}
+
+
+![*photo showing the bottom bracket of the Node as mounted on EMT conduit*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedCloseBackBottom.png){#id .class width=50%}
+
+
+![*photo showing the back of the solar-recharging power supply and status lights*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedBackofSolarChargerLights.png){#id .class width=50%}
+
+
+![*Mounted Node V3 with door open*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedOpen2.png){#id .class width=50%}
+
+
+
+![*Mounted Node V3 with door open - closeup*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedOpenClose.png){#id .class width=50%}
+
+
+![*Mounted Node V3 with door closed*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedClosed.png){#id .class width=50%}
+
+
+
+

@@ -2,7 +2,7 @@
 title: |
   ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png){width=3in}  
   <br />
-  CTT Node User Guide
+  CTT Node V2 User Guide
 author: "support@celltracktech.com"
 date: "4/7/2023"
 output:
