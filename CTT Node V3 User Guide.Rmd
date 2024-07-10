@@ -4,7 +4,7 @@ title: |
   <br />
   CTT Node V3 User Guide
 author: "support@celltracktech.com"
-date: "6/13/2024"
+date: "7/10/2024"
 output:
   html_document:
     toc: yes
@@ -36,54 +36,82 @@ Congratulations on your purchase of the new CTT Node V3! The CTT Internet of Wil
 
 We have no doubt that you are excited to deploy your Nodes, so here's a quick start guide to get you going in a few minutes.
 
-## Connect your power source to your Node via the provided cable. 
-
-![*How to connect the Node V3 to power supply*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_howToConnect.png){#id .class width=50%}
-
-The power cable runs first through the `cap` of the `cable gland`, then the `rubber grommet` with the lip of the `grommet` facing toward the `Node` (see red arrow in the image below)
-
-![*note that the grommet goes toward the Node with the lip facing toward the node, and flat end (see next pic) away from the Node*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_grommet lip.png){#id .class width=50%}
-
-When you screw the `cable gland cap` onto the `cable gland`, it will compress the `grommet` and seal around the cable. Before tightening, make sure the power plug is pulled through the cable gland and into the case, and plugged into the `5v barrel jack` on the Node board. Ensure a little bit of slack on the cable inside the case and then tighten down the cable gland cap until there is no movement in the cable when tugged lightly. This process both seals the entry from water, and helps reduce the chance of unintentionally pulling on the powe cable and damaging the board.
-
-We recommend the final tightening of the cap with a crescent wrench. 
-
-![*Demonstrating how to tighten the Node V3 Bulkhead*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_TightenBulkhead.png){#id .class width=50%}
-
-Once the cap is tightened, you should see the grommet compressed around the cable.
-
-![*showing a tight bulkhead, with internal grommet compressed around cable*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_TightBulkhead.png){#id .class width=50%}
-
-
 ## Mount your node for deployment
 
-Your Node comes with the hardware necessary to mount it to a piece of 3/4" conduit. Note other mounting hardware is absolutley possible so feel free to use whatever makes sense for your site. In your shipment you have:
+Your Node comes with the hardware necessary to mount it to a piece of 3/4" conduit. Note other mounting hardware is absolutely possible so feel free to use whatever makes sense for your site. 
+
+**Included with your shipment are:**
 
 1. Node V3 mounted in a weatherproof case
 2. Two (2) omni antennas - one tuned to 434MHz and the other tuned to 2.4GHz
-3. Two (2) mounting shields, one for the top of the node, with three screw holes and no words printed on it, and one for the bottom of the node with the CTT logo printed on it. These mount to the node via the two corner holes on the shields and the four holes on the back of the node.
+3. Two (2) mounting shields, one for the top of the node and one for the bottom of the node. Each sheild is labeled. 
+4. Solar-rechargeable power supply with 2m cable.
+5. Mounting hardware
+    1. Four (4) Phillips-head screws, washers, and nuts for mounting shields to node case.
+    2. Three (3) bolts for mounting solar-rechargeable power supply to node shield. 
+
+**You will also need:**
+
+1. A phillips-head screwdriver
+2. A crescent wrench
+2. Two (2) appropriately sized hose clamps for attaching your Node V3 to a mast (3/4" EMT conduit works well)
+3. Zip ties for securing loose cables from Solar-rechargeable power supply
+
+## Attach the mounting hardware to your Node 
+
+Consult the photos below for a visual description of how the hardware is connected. In short, use the four screws to attach the mounting shields to the back of the Node V3. The top shield also has three holes in a triangle pattern which can be used for mounting the solar-rechargeable power supply. You can also decide to mount the power supply elsewhere if that's more convenient or better for recharging. 
+
+There are two rectangular cutouts on each of the mounting shields which can accommodate a hose clamp for wrapping and tightening around your mast material. Zip ties or other tools may be used as well. 
+
+## Connect your power source to your Node
+
+![*How to connect the Node V3 to the Solar-rechargeable power supply*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_howToConnect.png){#id .class width=50%}
+
+The power cable runs first through the `cap` of the `cable gland`, then the `rubber grommet` with the lip of the `grommet` facing toward the `Node` (see red arrow in the image below)
+
+![*note that the grommet goes toward the Node, and flat end (see next pic) away from the Node*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_grommet lip.png){#id .class width=50%}
+
+
+![*(flat) bottom of the grommet, which faces down into the bulkhead housing, and away from the Node*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_grommetBottom.png){#id .class width=50%}
+
+When you screw the `cable gland cap` onto the `cable gland`, it will compress the `grommet` and seal around the cable. Before tightening, make sure the power plug is pulled through the cable gland and into the case, and plugged into the `5v barrel jack` on the Node board. Ensure a little bit of slack on the cable inside the case and then tighten down the cable gland cap until there is no movement in the cable when tugged lightly. This process both seals the entry from water, and helps reduce the chance of unintentionally pulling on the power cable and damaging the board.
+
+**We recommend the final tightening of the cap with a crescent wrench.**
+
+![*Demonstrating how to tighten the Node V3 Bulkhead*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_TightenBulkhead.png){#id .class width=50%}
+
+
+Once the cap is tightened, you should see the grommet compressed around the cable.
+
+![*showing a tight bulkhead, with internal grommet compressed around cable.*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_TightBulkhead.png){#id .class width=50%}
+
 
 ![*photo showing the back of the Node as mounted on EMT conduit*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedBackLeft.png){#id .class width=50%}
 
+![*showing the mounting hardware holding the solar rechargable power supply above the Node V3*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedCloseSolarStem.png){#id .class width=50%}
+
+![*photo showing the bottom bracket of the Node as mounted on EMT conduit*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedCloseBackBottom.png){#id .class width=50%}
+
+![*Mounted Node V3 with door open*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedOpen2.png){#id .class width=50%}
+
+![*photo showing the back of the solar-recharging power supply and status lights*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedBackofSolarChargerLights.png){#id .class width=50%}
+
+## Solar Pack LED Status Lights (on back of solar rechargeable battery supply)
+
+* Top `Yellow LED`: Power Output
+  * `ON`: Output Voltage
+  * `OFF`: No Output Voltage
+* Middle `Green LED`: Charge Indicator
+  * `Blinking (1x per second)`: Charging (battery voltage between 2.8-4.0V)
+  * `Fast Blinking (2x per second)`: Not Charging
+  * `Slow Blink (1x every 2 seconds)`: Charging, but battery voltage below 2.8V
+  * `Solid ON`: Battery more than 90% charged
+* Bottom `Red LED`
+  * `ON`: Normal battery voltage (above 2V)
+  * `OFF`: Battery is below normal voltage or otherwise in an abnormal state
 
 
-3.
-4.
-5.
-
-# Unboxing
-
-# Initial Node Setup
-
-![*Node V3 packaged for shipping*]()
-
-![*Node with bubblewrap removed*]()
-
-## Mounting Your Node
-
-![*Node mounted on 3/4" EMT conduit*]()
-
-## A note about solar recharging
+![*Mounted Node V3 with door closed*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedClosed.png){#id .class width=50%}
 
 ## Distance between Nodes and SensorStation
 
@@ -91,52 +119,182 @@ We recommend that all Nodes are placed within 1km of a SensorStation to ensure t
 
 ## Distance between Nodes
 
-Nodes can be used for various reasons to answer a number of questions. This section assumes that Nodes are being used for localization, or estimating a location within a Node grid from multiple simultaneous Node detections. In this case it's important to understand the relationship between distance and signal strength between your tags and your grid of nodes. This can be accomplished using one of your tags and a CTT Sidekick. We will go over this is a separate section, but assuming you have a good handle on at what distance signal strength becomes uninformative, with regards to distance, you will want to ensure that your node spacing is less than this distance. In several empirical cases we have found that distance to be ~150m, so spacing nodes every 100m or less is good for a number of bird species. For species that spend their life on the ground (turtles, etc.) this distance may be closer to 50m, but ultimately will require some test data collection.
+Nodes can be used for various reasons to answer a number of questions. This section assumes that Nodes are being used for localization, or estimating a location within a Node grid from multiple simultaneous Node detections. In this case it's important to understand the relationship between distance and signal strength between your tags and your grid of nodes. This can be accomplished using one of your tags and a CTT Sidekick. This is covered in the Sidekick User Guide, but assuming you have a good handle on at what distance signal strength becomes uninformative, with regards to distance, you will want to ensure that your node spacing is less than this distance. In several empirical cases we have found that distance to be ~150m, so spacing nodes every 100m or less is good for a number of bird species. For species that spend their life on the ground (turtles, etc.) this distance may be closer to 50m, but ultimately will require some test data collection.
 
-## Opening your Node
+# Node V3 Data Collection and Transmission
 
-## Removing and replacing the SD Card
+Your Node V3 will collect and periodically send 434MHz and 2.4GHz tag detection and health data packets to a nearby SensorStation. 
 
-# Understanding the LEDs on the Node V3 Board
+* The standard configuration is to listen for tags 24-hours a day, and send detection packets once 50 detections have been accumulated, or a set timer has expired. 
+* Health packets, by default, send every 15 minutes (which is differnet from the old V2 Nodes which sent every 5 minutes). 
+* Tag listening time and frequency of health packet sending are both now configurable via the `CTT Mobile App` (see configuration section)
 
-# Updating the Node V3 Firmware
+## Node V3 SD Card Storage
+
+Your CTT Node V3 is not shipped with an SD card, but you can add one for backup storage as well as for manual data collection and management.
+
+**Hot swapping the card is not supported. It is encouraged to power down the device before inserting/removing the card.**
+
+**Prior to inserting a new SD card into a node, please ensure it has been formatted as `FAT32`**
+
+**We strongly recommend not exceeding 16GB SD cards**
+
+When properly set up, your Nodes will collect and send their data to a nearby SensorStation, not requiring you to access the SD card internal to each Node. That said, if you need to access the SD card, that process is much easier on the new Node.
+The Node comes with an SD card slot that can be used for logging detections and other system related processes. The following features are available through the SD card.
+
+* Detection Logging
+* Health Reporting
+* Error Logging
+
+### Formatting
+
+**Windows 10**
+
+1. Insert the microSD card into a card reader.
+2. Windows should auto-detect the presence of a card and bring up a file explorer.
+    1. If the explorer doesn’t automatically come up, you can access it by opening My Documents.
+3. Using the left-hand menu, navigate until you see a drive name. This will typically look something like USB Drive (D:).
+4. Right-Click the drive name and select Format.
+5. Under the File system drop down, select FAT32 (Default).
+6. Press the Start Button.
+
+### Storage
+
+#### Detections
+If the SD card is present in the Node, each detection will be logged. The type of detection will determine where it will be saved as well as what information will be accessible to the user. Files are capped at 25 MB to ensure most text editors can view these files without becoming sluggish (On most computers). 
+
+#### File Naming Convention
+Detections are stored as .csv format. In this protocol, the first row contains a list of comma-separated keys called headers. These headers are the names for each column. Each subsequent row contains the corresponding comma-separated data. 
+
+##### 434MHz 
+Detections from the 434MHz receiver will be saved in on the SD card with the following format:
+
+`434_mhz_beep_n.csv     (Where `n` is an integer that gets incremented every time the previous file exceeds 25 MB)`
+
+The following CTT products apply to the 434MHz category:
+
+* HybridTag
+* PowerTag
+* LifeTag
+
+| Headers | Units        | Example              | Description                                                                                                                                                                                                                                                                                                                                |
+|---------|--------------|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| time    | ISO 8601     | 2022-04-14T21:25:22Z | Time of detection [UTC]                                                                                                                                                                                                                                                                                                                    |
+| tag_id  | Alphanumeric | 3319332D             | Factory programmed identifier. Traditionally an 8-character id, however some ids contain an additional layer of verification which makes them 10 characters.                                                                                                                                                                               |
+| rssi    | dBm          | -79                  | RSSI is an indication of the power level being received by the receiving radio after the antenna and possible cable loss. Therefore, the greater the RSSI value, the stronger the signal. Thus, when an RSSI value is represented in a negative form (e.g. −100), the closer the value is to 0, the stronger the received signal has been. |
+
+**`Approximately 27 million records of type 434MHz can be saved per 1 Gigabyte of SD card storage.`**
+
+
+##### BlūSeries Tags (2.4GHz)
+Detections from the 2.4GHz receiver will be saved in on the SD card with the following format:
+
+`2p4_ghz_beep_n.csv     (Where `n` is an integer that gets incremented every time the previous file exceeds 25 MB)`
+
+The following CTT products apply to the 2.4GHz category:
+
+* BlūBat
+* BlūMorpho
+
+| Headers         | Units        | Example              | Description                                                                                                                                                                                                                                                                                                                                                                                               |
+|-----------------|--------------|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| time            | ISO 8601     | 2022-04-14T21:25:22Z | Time of detection [UTC]                                                                                                                                                                                                                                                                                                                                                                                   |
+| tag_id          | Alphanumeric | 49                   | Factory programmed identifier. The id will always be an 8-digits alphanumeric number with a code set size of 4 Billion.                                                                                                                                                                                                                                                                                   |
+| sync            | Alphanumeric | 4B1A                 | Pseudo-random number generated each time the tag transmits. This allows multiple receivers to differentiate detections with a method other than synchronized timestamps (useful when time drift in the receiver becomes non-negligible). Note: This sync word should only be used to compare detections within smaller time windows (a few minutes) as the chance of repeated values increases with time. |
+| family          | Number       | 0                    | BlūMorpho = 0                                                                                                                                                                                                                                                                                                                                                                                             |
+|                 |              |                      | BlūBat = 1                                                                                                                                                                                                                                                                                                                                                                                                |
+| payload_version | Number       | 0                    | Identifier for how to parse the tag payload (See next field).                                                                                                                                                                                                                                                                                                                                             |
+| payload         | Alphanumeric | 8C08D009             | The tag payload contains sensor measurements recorded at the time of transmission. These measurements are encoded as hexadecimal strings and are decoded based on the payload version.                                                                                                                                                                                                                    |
+| rssi            | dBm          | -79                  | RSSI is an indication of the power level being received by the receiving radio after the antenna and possible cable loss. Therefore, the greater the RSSI value, the stronger the signal. Thus, when an RSSI value is represented in a negative form (e.g. −100), the closer the value is to 0, the stronger the received signal has been.                                                                |
+
+**`Approximately 19 million records of type 2.4GHz can be saved per 1 Gigabyte of SD card storage.`**
+
+##### GPS Location
+
+***`gps_n.csv     (Where `n` is an integer that gets incremented every time the previous file exceeds 25 MB)`***
+
+| Headers   | Units                         | Example              | Description                                                        |
+|-----------|-------------------------------|----------------------|--------------------------------------------------------------------|
+| time      | ISO 8601                      | 2022-04-14T21:25:22Z | Time of location [UTC]                                             |
+| latitude  | Decimal Degrees               | 38.296078            | The north–south position of a location on the surface of the Earth |
+| longitude | Decimal Degrees               | -104.356331          | The east-west position of a location on the surface of the Earth   |
+| altitude  | Meters (Above Mean Sea Level) | 1428                 |                                                                    |
+| hdop      |                               | 0.68                 | Dilution of precision                                              |
+| vdop      |                               | 1.36                 | Dilution of precision                                              |
+| pdop      |                               | 1.31                 | Dilution of precision                                              |
+| on_time   | Seconds                       | 90                   | Time the receiver was in the on state.                             |
+
+##### Health
+
+**`health_n.csv     (Where `n` is an integer that gets incremented every time the previous file exceeds 25 MB)`**
+
+| Headers      | Units           | Example              | Description                                                                           |
+|--------------|-----------------|----------------------|---------------------------------------------------------------------------------------|
+| time         | ISO 8601        | 2022-04-14T21:25:22Z | Time of health snapshot [UTC]                                                         |
+| batt_mv      | milli-volts     |                      |                                                                                       |
+| charge_mv    | milli-volts     |                      | Average charger voltage since last health message. (Voltage sampled every 60 seconds) |
+| charge_ma    | milli-amps      |                      | Average charger current since last health message. (Voltage sampled every 60 seconds) |
+| temp_battery | celsius         |                      |                                                                                       |
+| temp_charger | celsius         |                      |                                                                                       |
+| temp_node    | celsius         |                      |                                                                                       |
+| energy_used  | milli-amp-hours |                      |                                                                                       |
+| sd_free      | %               |                      |                                                                                       |
+| sub_ghz_det  |                 |                      |                                                                                       |
+| ble_det      |                 |                      |                                                                                       |
+| errors       |                 |                      |                                                                                       |
+
+##### Syslog
+
+`log.nnnn     (Where `n` is an integer that gets incremented every time the previous file exceeds 25 MB)`
+
+The device writes system logs to the SD card for troubleshooting and diagnostics reasons.
+
+## Node Firmware
+
+The current Node Firmware as of this writing is `v0.6.0-beta`. 
 
 # Using the CTT Mobile App to interact with your Node V3
+
+If you are used to the Node V2, then you may have used Node Client to communicate with your Nodes. This is no longer needed with the Node V3 as the new Nodes can pair directly with the CTT Mobile App and changes to the Node are made directly through pairing with the app.
+
+## Download and install the CTT Mobile App
+
+You can find links to both the iOS and Android versions of the CTT Mobile App on our main user guide page [here](https://cellular-tracking-technologies.github.io/ctt_documentation/), or by searching for `CTT Mobile` in the respective App stores.
+
+## Pairing to your Node V3
+
+To pair with your node, open the CTT Mobile App on your mobile phone and click the **`Connect Device`** button. 
+This will open up the Available Device page. From here, click the **`Start Scan`** button.
+This will then display any and all Nodes within your phone's detection range.
+**`If you have more than one Node, a good way to determine which one is closest to you is to use the RSSI value.`**
+Choose the Node you wish to pair with by clicking the **`Connect`** button.
+You will get a **Pairing Complete!** message when you have successfully paired with the Node. From here, click the **`Go`** button.
+
+You now should be on the `Details` screen. At the bottom of the page is a menu with up to five buttons, the active page's button is in *blue*.
+
+* `Details` - provides an overview of `Node Status`, `Solar Charging Status` (only valid when attached to the Solar-rechargeable Power Supply), and `Current Config`
+
+* `Map` - Displays a map showing your location relative to all Nodes currently being detected, which have valid GPS fixes. Nodes without GPS fixes will not be displayed on the map.
+
+* `Listen` - This page is where you can toggle on and off viewing tag detections on both 2.4GHz and 434MHz frequencies, via the app. *Note that the Node is always listening (or is listening on a pre-determined schedule, if you have modified the configuration), so toggling on and off these buttons only toggles whether or not the App is displaying detections on your phone.* 
+
+* `Config` -  This page allows you to modify the Node config file and upload it to the Node you are paired to in real-time. Config parameters include:
+
+ * `Enable/Disable LEDs` : Default = **ON**
+ * `Adjust the Health Packet interval (min)`: Default = **15 min**
+ * `Uplink Tx Power (Low/Med/High)`: Default = **Low** *Note this is the power used for the Node to send data to the SensorStation and therefore only affects transmission from the Node to the SensorStation*
+ * `434MHz Scan Hours (0-24)`: Default is **ALL** 
+ * `2.4GHz Scan Hours (0-25)`: Default is **ALL**
+ 
+ Once you have set up the config as you like, click the `Submit` button to push it to the Node. Leaving the page by clicking one of the other page buttons, and then returning to the Config page, will allow you to confirm the config has been updated.
+ If you are working on a config and change something you don't want to change, simply click `Reset`. If 
+
+* `Dev` (this may not be available) - The `Dev`eloper page has three buttons at the top:
+
+* `Command` - allows the user to submit various commands to the Node, and provides feedback from the node via the output window.
+* `FW Update` - allows the user to upload a new Firmware file.
+* `Clear` - clears the output console
 
 # Final Thoughts
 
 This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/pages/customer-service-desk-csd) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2024.
-
-
-
-
-
-![*showing the mounting hardware holding the solar rechargable power supply above the Node V3*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedCloseSolarStem.png){#id .class width=50%}
-
-
-
-
-![*(flat) bottom of the grommet, which faces down into the bulkhead housing, and away from the Node*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_grommetBottom.png){#id .class width=50%}
-
-
-![*photo showing the back of the Node as mounted on EMT conduit*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedBackLeft.png){#id .class width=50%}
-
-
-![*photo showing the bottom bracket of the Node as mounted on EMT conduit*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedCloseBackBottom.png){#id .class width=50%}
-
-
-![*photo showing the back of the solar-recharging power supply and status lights*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedBackofSolarChargerLights.png){#id .class width=50%}
-
-
-![*Mounted Node V3 with door open*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedOpen2.png){#id .class width=50%}
-
-
-
-![*Mounted Node V3 with door open - closeup*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedOpenClose.png){#id .class width=50%}
-
-
-![*Mounted Node V3 with door closed*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedClosed.png){#id .class width=50%}
-
-
-
-
