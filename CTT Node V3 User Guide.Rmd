@@ -283,8 +283,10 @@ You now should be on the `Details` screen. At the bottom of the page is a menu w
  * `Enable/Disable LEDs` : Default = **ON**
  * `Adjust the Health Packet interval (min)`: Default = **15 min**
  * `Uplink Tx Power (Low/Med/High)`: Default = **Low** *Note this is the power used for the Node to send data to the SensorStation and therefore only affects transmission from the Node to the SensorStation*
- * `434MHz Scan Hours (0-24)`: Default is **ALL** 
- * `2.4GHz Scan Hours (0-25)`: Default is **ALL**
+ * `434MHz Scan Hours (0-24)`: Default is **ALL**. Note that all times are in UTC.
+ * `2.4GHz Scan Hours (0-25)`: Default is **ALL**. Note that all times are in UTC.
+ 
+ **!!ALERT!! If you shut off all 2.4GHz hours and then unpair with the Node, you will not be able to pair with it again, since you have told the Node to turn off the 2.4GHz radio indefinitely. Also, if you do set a schedule for 2.4GHz listening, you can only pair with your device during those hours when it is listening. For instance, if you are studying Monarch butterflies using the BlūMorpho tags, and only have the Nodes listening during the daylight hours, you will only be able to pair to your Nodes with the CTT Mobile App during those daylight hours.**
  
  Once you have set up the config as you like, click the `Submit` button to push it to the Node. Leaving the page by clicking one of the other page buttons, and then returning to the Config page, will allow you to confirm the config has been updated.
  If you are working on a config and change something you don't want to change, simply click `Reset`. If 
