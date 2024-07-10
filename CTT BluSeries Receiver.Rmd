@@ -1,0 +1,49 @@
+---
+title: |
+  ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png){width=3in}  
+  <br />
+  CTT BlūSeries Receiver
+author: "support@celltracktech.com"
+date: "7/10/2024"
+output:
+  html_document:
+    toc: yes
+    number_sections: yes
+  pdf_document:
+    toc: yes
+    fig_caption: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+# Quick Start Guide
+
+## What's in the Box
+
+## Assembly
+
+## Mounting
+
+## Deploying
+
+## Testing
+
+## Updating your SensorStation
+
+## Accessing your BlūSeries Data
+
+### Data Format
+
+### Directly from the SensorStation
+
+### Via the CTT Web Portal
+
+### Via API
+
+# Final Thoughts
+
+This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/pages/customer-service-desk-csd) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2024.
