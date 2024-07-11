@@ -44,11 +44,11 @@ Your Node comes with the hardware necessary to mount it to a piece of 3/4" condu
 
 1. Node V3 mounted in a weatherproof case
 2. Two (2) omni antennas - one tuned to 434MHz and the other tuned to 2.4GHz
-3. Two (2) mounting shields, one for the top of the node and one for the bottom of the node. Each sheild is labeled. 
+3. Two (2) mounting plates, one for the top of the node and one for the bottom of the node. Each plate is labeled. 
 4. Solar-rechargeable power supply with 2m cable.
 5. Mounting hardware
-    1. Four (4) Phillips-head screws, washers, and nuts for mounting shields to node case.
-    2. Three (3) bolts for mounting solar-rechargeable power supply to node shield. 
+    1. Four (4) Phillips-head screws, washers, and nuts for mounting plates to node case.
+    2. Three (3) bolts for mounting solar-rechargeable power supply to node plate. 
 
 **You will also need:**
 
@@ -59,9 +59,9 @@ Your Node comes with the hardware necessary to mount it to a piece of 3/4" condu
 
 ## Attach the mounting hardware to your Node 
 
-Consult the photos below for a visual description of how the hardware is connected. In short, use the four screws to attach the mounting shields to the back of the Node V3. The top shield also has three holes in a triangle pattern which can be used for mounting the solar-rechargeable power supply. You can also decide to mount the power supply elsewhere if that's more convenient or better for recharging. 
+Consult the photos below for a visual description of how the hardware is connected. In short, use the four screws to attach the mounting plates to the back of the Node V3. The top plate also has three holes in a triangle pattern which can be used for mounting the solar-rechargeable power supply. You can also decide to mount the power supply elsewhere if that's more convenient or better for recharging. 
 
-There are two rectangular cutouts on each of the mounting shields which can accommodate a hose clamp for wrapping and tightening around your mast material. Zip ties or other tools may be used as well. 
+There are two rectangular cutouts on each of the mounting plates which can accommodate a hose clamp for wrapping and tightening around your mast material. Zip ties or other tools may be used as well. 
 
 ## Connect your power source to your Node
 
@@ -131,22 +131,24 @@ Your Node V3 will collect and periodically send 434MHz and 2.4GHz tag detection 
 
 ## Node V3 SD Card Storage
 
-Your CTT Node V3 is not shipped with an SD card, but you can add one for backup storage as well as for manual data collection and management.
+Your CTT Node V3 has a 16GB SD card pre-installed for backup storage, as well as for manual data collection and management.
 
 **Hot swapping the card is not supported. It is encouraged to power down the device before inserting/removing the card.**
 
-**Prior to inserting a new SD card into a node, please ensure it has been formatted as `FAT32`**
+**If you replace the SD card with your own, prior to inserting a new SD card into a node, please ensure it has been formatted as `FAT32`**
 
 **We strongly recommend not exceeding 16GB SD cards**
 
 When properly set up, your Nodes will collect and send their data to a nearby SensorStation, not requiring you to access the SD card internal to each Node. That said, if you need to access the SD card, that process is much easier on the new Node.
-The Node comes with an SD card slot that can be used for logging detections and other system related processes. The following features are available through the SD card.
+The Node comes with an SD card that can be used for logging detections and other system related processes. The following features are available through the SD card.
 
 * Detection Logging
 * Health Reporting
 * Error Logging
 
 ### Formatting
+
+*Note that you DO NOT need to format the card that came with your Node, but if you replace the SD card, you should follow the directions below to format the new card (or reformat an old one).*
 
 **Windows 10**
 

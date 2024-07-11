@@ -19,30 +19,127 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 # Introduction
+Welcome to the Blū Revolution! Your CTT BlūSeries Receiver provides up to four (4) 2.4GHz radio channels for you to detect BlūSeries tags. These include the groundbreaking BlūMorpho tag (weighing as little as 0.06g and totally battery-less!) and the BlūBat tag, a new battery-based tag weighing as little as 0.16g and able to last 76 days beeping every 5 seconds! There are a few things you should know about your BlūSeries Receiver, and we've compiled them below.
+
+# Unboxing your BlūSeries Receiver
+
+## What's in the box
+
+* BlūSeries Receiver with Case
+* USB-to-Ethernet Adapter (to connect the receiver to your CTT SensorStation)
+* Hardware (4x Bracket Bolts, 4x Bracket Nuts, 1x Wire Holder, 1x Screw, and 1x Cable Gland)
+* Top and Bottom Mounting Plates
+
+![*Everything included with the purchase of a CTT V3 Node*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/Whats in the box.png){#id .class width=50%}
+
+
+## What you'll need
+
+* Ethernet Cable: CAT-5 up to CAT-8 will work. Any length under 100m. Choose a cable without a covering on the ends as this will make it difficult to impossible to fish through the cable glands and into the Receiver and SensorStation. 
+* Coaxial Cable(s) for antenna(s)
+* 2.4GHz Antenna(s)
+* Pipe clamps or similar for attaching the mounting plates to your mast
+
+## Tools
+
+This assumes you have a CTT SensorStation with a pre-existing cable gland for getting the Ethernet cable into the SensorStation. If not, you will also need a drill and circular bit for the dimension of whatever cable gland you choose. If you purchased a new CTT SensorStation with this receiver your case should provide a pre-existing knock-out for installing your cable gland. 
+
+* #1 and #2 Phillips-head Screwdrivers
+* Coax tape
+* 2x Crescent Wrenches
+
+# Assembly
+
+## Installing the Ethernet cable and Cable Gland into the CTT Node V3
+
+1. Unscrew the Node V3 case using a #2 Phillips screwdriver. Open the Node lid and place the lid and screws to the side.
+2. Unscrew/disassemble cable gland into its 3 plastic pieces
+
+![*Disassembled Gland. Note: The rubber grommet still inside of the main component (middle)*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/Disassembled cable gland.png){#id .class width=50%}
+<br />
+
+3. Push out the rubber grommet from the main gland component
+4. Put the split grommet around the Ethernet cord (with the tapered end of the grommet facing away from the working end of the cable).
+5. Insert the Ethernet cable into the gland's main housing (starting from the "toothed" end of the connector). Some force may be required, but take care not to break the Ethernet cable end.
+6. Fish the grommet into the connector and be sure the grommet is circular, uniform and not deformed.
+
+<br />
+
+![*Partially Assembled Gland on Ethernet Cable. Note: The end of the ethernet cable that will ultimately be plugged into the Node is displayed here.*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/partially assembled gland.png){#id .class width=50%}
+<br />
+
+7. Put the threaded cap onto the opposite end of the cable, bring it towards the end that you have already started connecting. Thread on the connector a couple of turns until the gland is on the wire snug but can still be slid up and down with some force.
+8. Insert the partial cable/gland assembly into the case with the recently “capped” part of the gland on the outside of the case.
+
+***Important: Make sure that the Ethernet cable stays under the 4 wires running from the printed circuit board (PCB) to the bottom of the case. Also, for best performance, be sure the Ethernet cable is not twisted or kinked from the gland to its connection onto the PCB.***
+
+9. Inside the case, thread the last piece of the gland onto the rest of the gland assembly. Tighten fully either by hand or with a couple of crescent wrenches.
+10. Feed the Ethernet to the back of the case, as shown above.
+
+### Installing the cable holder
+
+![*Completed Ethernet and Gland Installation*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/BR_NoMountingPlates.png){#id .class width=50%}
+
+1. Slide the cord holder around the Ethernet cord with the flat side of the holder facing down and to the left. You may want to pull the cable out, or push the cable into, the case.
+2. Connect the Ethernet cable. Be sure there is minimal kinking and twisting of the cord between the gland and the connection onto the PCB.
+3. Use the remaining screw (and washer, if provided) with a #1 Philips head screwdriver to screw the connector in place. See the photo above for the exact location of this step.
+
+### Installing the Mounting Plates
+
+![*BlūSeries Receiver with Mounting Plates installed](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/BR_cableAttached.png){#id .class width=50%}
+
+1. Insert two nuts in the channels on the top end of the node case (the channels are next to inward from the female screw holes in the corners of the node case).
+2. Line up the mounting plate labeled TOP with the top holes on the back of the Node.
+3. Using a #2 Philips screwdriver, thread the bolts into the recently placed nuts from the backside of the node, securing the bracket. 
+4. Repeat steps 1-3 with the bottom plate.
+
+![*Completed BlūSeries Receiver Assembly*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/BR_closedCase.png){#id .class width=50%}
+
+5. Place the Node lid back onto the case and screw down all 4 screws securely.
+
+***Note: This step may be tricky. It may help to utilize gravity and fasten the bolts with the backside of the node facing down. Using this method you can also watch the nuts to make sure they stay flat as well as catch the bolts.***
 
 # Quick Start Guide
 
-## What's in the Box
+Once you have assembled your BlūSeries Receiver you are ready to deploy it into the field. Unlike the SensorStation, you will want to mount the receiver up nearest to the 2.4GHz antennas. This has several advantages:
+1. Reduces the need for long coaxial cables, costing significantly less to deploy than VHF and UHF counterparts
+2. Reduces any signal loss due to long cable runs.
+3. Allows for mounting the antennas farther from the CTT SensorStation, as the signal is carried without loss across the Ethernet cable, which can be up to 100m long with zero impact on signal.
 
-## Assembly
+We recommend mounting the BlūSeries receiver within .3m from the antennas, allowing you to get away with coaxial cable runs of ~.5m or less. 
 
 ## Mounting
 
+Your BlūSeries Receiver comes with two mounting plates which each have two rectangular pass-through holes to accommodate hose clamps or other mounting hardware. Simply choose the your mounting hardware and attach your receiver to the antenna mast nearest where you'll be mounting your 2.4GHz antennas. Once the Receiver is mounted, mount your antennas (you can mount them above or below the receiver) as you wish and attach them to the Receiver with coaxial cables (coax). For the end going to the Receiver, you'll need SMA Male ends on your coax.
+
+![*BlūSeries Receiver deployed at Las Joyas Biological Station in Jalisco, Mexico*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/BluSeriesReceiverLasJoyas.jpeg){#id .class width=50%}
+
 ## Deploying
 
-## Testing
+Once mounted, simply run the other end of the Ethernet cable into your SensorStation (depending on your setup, you may need to install a cable gland on the SensorStation, if you don't already have one installed) and plug it into the USB dongle provided. Then plug the USB dongle into your SensorStation (which USB port does not matter). The BlūSeries receiver is plug-and-play, and should be immediately recognized by your station.
+
+**Deployment Checklist:**
+
+1. CTT BlūSeries Receiver is mounted and Ethernet cable is connected inside
+2. BlūReceiver Dongle has Ethernet connected, and is connected to CTT SensorStation via USB
+3. CTT SensorStation is running newest disk image (version xxxxx) or has been over-the-air (OTA) updated to decode BlūSeries data
+4. BlūSeries test tag is on-hand for generating test data
 
 ## Updating your SensorStation
 
+If your CTT SensorStation does not have the newest disk image it may not be able to detect the BlūSeries Receiver. You can update the station by following these directions: https://cellular-tracking-technologies.github.io/ctt_documentation/flashingComputeModule.html
+
+## Testing
+
+Unlike 434MHz tags, these new 2.4GHz BlūSeries tags do not give off noise, and therefore you will want a test tag to ensure your system is functioning.
+
+
 ## Accessing your BlūSeries Data
+
+Data received by the BlūSeries Receiver is sent to the CTT SensorStation and stored on the station, and depending on how the station is set up, is also transferred to CTT servers where additional payload information is decoded (such as temperature, for instance). Therefore, to download data follow the instructions in the [*CTT SensorStation User Guide*](https://cellular-tracking-technologies.github.io/ctt_documentation/SensorStation-User-Guide.html).
 
 ### Data Format
 
-### Directly from the SensorStation
-
-### Via the CTT Web Portal
-
-### Via API
 
 # Final Thoughts
 
