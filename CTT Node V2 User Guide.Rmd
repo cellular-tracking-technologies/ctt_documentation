@@ -4,7 +4,7 @@ title: |
   <br />
   CTT Node V2 User Guide
 author: "support@celltracktech.com"
-date: "6/10/2024"
+date: "7/24/2024"
 output:
   html_document:
     toc: yes
@@ -339,7 +339,7 @@ Below is a sequence of images showing how to best mount your external battery pa
 5. The USB adapter for connecting your external battery to the CTT Node V2. Note that the hook side of the Velcro is installed here.
 6. The bottom of your Node V2 showing the loop side of the velcro and the plug end of the USB adapter.
 7. Close-up of a properly mounted external battery with USB adapter properly inserted and attached via Velcro. 
-8. 
+8. See #7
 9. Underside of external battery pack showing LEDs and screw tops. 
 10. Alternate angle of properly mounted external battery pack under Node V2.
 11. External battery pack with charge/power port tucked into wrap while deployed. 
