@@ -4,7 +4,7 @@ title: |
   <br />
   CTT Node V3 User Guide
 author: "support@celltracktech.com"
-date: "7/10/2024"
+date: "7/24/2024"
 output:
   html_document:
     toc: yes
@@ -123,52 +123,39 @@ Nodes can be used for various reasons to answer a number of questions. This sect
 
 # Node V3 Data Collection and Transmission
 
-Your Node V3 will collect and periodically send 434MHz and 2.4GHz tag detection and health data packets to a nearby SensorStation. 
+The Node V3 is capable of simultaneously collecting 434 MHz and 2.4GHz tag detections, making it compatible with all radio tags manufactured by CTT. The device also collects supplemental information that can be used for monitoring its health and location. The theory of operation is to capture incoming tag beeps and health, save them to the on-board SD card, then relay them to any nearby SensorStations. Below is list of the tasks performed by the node under the standard configuration and adequate power levels:
 
-* The standard configuration is to listen for tags 24-hours a day, and send detection packets once 50 detections have been accumulated, or a set timer has expired. 
-* Health packets, by default, send every 15 minutes (which is differnet from the old V2 Nodes which sent every 5 minutes). 
-* Tag listening time and frequency of health packet sending are both now configurable via the `CTT Mobile App` (see configuration section)
+* On boot, the device begins acquiring the time and location using a GNSS receiver. Knowing the time is critical for logging tag detections and the location is a necessity for localization methods.
+* The device immediately becomes pairable with CTT Mobile.
+* Once the time as been determined, the node starts listening for 434 MHz and 2.4GHz tags.
+* A health snapshot is saved every 15 minutes to the SD card.
+* Every time 50 tag detections have been captured for a particular tag frequency, they are saved to the SD card and immediately transmitted out to the SensorStation. Detections are also saved and uplinked after 15 minutes in the event that the 50 detection watermark is not hit.
+* System logs are saved to a file on the SD card. These logs can be used by CTT to troubleshoot problems.
 
 ## Node V3 SD Card Storage
 
-Your CTT Node V3 has a 16GB SD card pre-installed for backup storage, as well as for manual data collection and management.
+Your CTT Node V3 has a 16GB SD card pre-installed for backup storage, as well as for manual data collection and management. As you saw from photos in Section 2, its now much easier to service the SD card on Node V3 compared to the previous version. **We do not recommend Hot swapping the card.** It is encouraged to power down the device before inserting/removing the card.
 
-**Hot swapping the card is not supported. It is encouraged to power down the device before inserting/removing the card.**
+**If you replace the SD card with your own, prior to inserting a new SD card into a node, please ensure it has been formatted as FAT32.** We strongly recommend the use of 16GB SD cards. While much larger cards are available, the underlying filesystem may be incompatible with them. Please try all new cards prior to using them in field-deployed nodes. Each time a card is inserted, we **HIGHLY RECOMMEND** that you pair to the node with CTT Mobile and verify the device is communicating with the SD card.
 
-**If you replace the SD card with your own, prior to inserting a new SD card into a node, please ensure it has been formatted as `FAT32`**
+When properly set up, your Nodes will collect and send their data to a nearby SensorStation, not requiring you to access the SD card internal to each Node. There are reasons why we recommends periodically servicing the nodes SD card:
 
-**We strongly recommend not exceeding 16GB SD cards**
+* At times with a lot of tags beeping, its possible for the SensorStation to be temporarily overwhelmed with detections being uplinked from nodes. As a result, some detections fail to be recorded by the SensorStation. Think of this as the following analogy: Multiple people are talking to you at once, and you are required to write down everything they say. This is doable when the number of people is small, but becomes increasingly difficult to not miss things as the number of people increase. All of the detections are backed up to the SD card so you can retrieve the ones not captured by the SensorStation.
+* There are some less-critical health fields present on the SD card that aren't sent to the SensorStation. In the event of a malfunctioning node, it may be useful to look at these logs.
+* BluSeries tags transmit sensor data in addition to their id with each beep. Unfortunately, the decision was made to not uplink this data directly to the SensorStation because the increased data volume can increase airway congestion between the Node and SensorStation.
 
-When properly set up, your Nodes will collect and send their data to a nearby SensorStation, not requiring you to access the SD card internal to each Node. That said, if you need to access the SD card, that process is much easier on the new Node.
-The Node comes with an SD card that can be used for logging detections and other system related processes. The following features are available through the SD card.
+The following features are available through the SD card.
 
+* Config Storage
 * Detection Logging
 * Health Reporting
-* Error Logging
+* Location Logging
+* Error & System Logging
 
-### Formatting
-
-*Note that you DO NOT need to format the card that came with your Node, but if you replace the SD card, you should follow the directions below to format the new card (or reformat an old one).*
-
-**Windows 10**
-
-1. Insert the microSD card into a card reader.
-2. Windows should auto-detect the presence of a card and bring up a file explorer.
-    1. If the explorer doesn’t automatically come up, you can access it by opening My Documents.
-3. Using the left-hand menu, navigate until you see a drive name. This will typically look something like USB Drive (D:).
-4. Right-Click the drive name and select Format.
-5. Under the File system drop down, select FAT32 (Default).
-6. Press the Start Button.
-
-### Storage
-
-#### Detections
-If the SD card is present in the Node, each detection will be logged. The type of detection will determine where it will be saved as well as what information will be accessible to the user. Files are capped at 25 MB to ensure most text editors can view these files without becoming sluggish (On most computers). 
-
-#### File Naming Convention
+### File Naming Convention
 Detections are stored as .csv format. In this protocol, the first row contains a list of comma-separated keys called headers. These headers are the names for each column. Each subsequent row contains the corresponding comma-separated data. 
 
-##### 434MHz 
+#### 434MHz 
 Detections from the 434MHz receiver will be saved in on the SD card with the following format:
 
 `434_mhz_beep_n.csv     (Where `n` is an integer that gets incremented every time the previous file exceeds 25 MB)`
@@ -188,7 +175,7 @@ The following CTT products apply to the 434MHz category:
 **`Approximately 27 million records of type 434MHz can be saved per 1 Gigabyte of SD card storage.`**
 
 
-##### BlūSeries Tags (2.4GHz)
+#### BlūSeries Tags (2.4GHz)
 Detections from the 2.4GHz receiver will be saved in on the SD card with the following format:
 
 `2p4_ghz_beep_n.csv     (Where `n` is an integer that gets incremented every time the previous file exceeds 25 MB)`
@@ -211,7 +198,7 @@ The following CTT products apply to the 2.4GHz category:
 
 **`Approximately 19 million records of type 2.4GHz can be saved per 1 Gigabyte of SD card storage.`**
 
-##### GPS Location
+#### GPS Location
 
 ***`gps_n.csv     (Where `n` is an integer that gets incremented every time the previous file exceeds 25 MB)`***
 
@@ -226,26 +213,26 @@ The following CTT products apply to the 2.4GHz category:
 | pdop      |                               | 1.31                 | Dilution of precision                                              |
 | on_time   | Seconds                       | 90                   | Time the receiver was in the on state.                             |
 
-##### Health
+#### Health
 
 **`health_n.csv     (Where `n` is an integer that gets incremented every time the previous file exceeds 25 MB)`**
 
-| Headers      | Units           | Example              | Description                                                                           |
-|--------------|-----------------|----------------------|---------------------------------------------------------------------------------------|
-| time         | ISO 8601        | 2022-04-14T21:25:22Z | Time of health snapshot [UTC]                                                         |
-| batt_mv      | milli-volts     |                      |                                                                                       |
-| charge_mv    | milli-volts     |                      | Average charger voltage since last health message. (Voltage sampled every 60 seconds) |
-| charge_ma    | milli-amps      |                      | Average charger current since last health message. (Voltage sampled every 60 seconds) |
-| temp_battery | celsius         |                      |                                                                                       |
-| temp_charger | celsius         |                      |                                                                                       |
-| temp_node    | celsius         |                      |                                                                                       |
-| energy_used  | milli-amp-hours |                      |                                                                                       |
-| sd_free      | %               |                      |                                                                                       |
-| sub_ghz_det  |                 |                      |                                                                                       |
-| ble_det      |                 |                      |                                                                                       |
-| errors       |                 |                      |                                                                                       |
+| Headers         | Units           | Example                          | Description                                                                                                                                      |
+|-----------------|-----------------|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| time            | ISO 8601        | 2022-04-14T21:25:22Z             | Time of health snapshot [UTC]                                                                                                                    |
+| up_time         | milli-seconds   |                                  | Time (ms) since the device booted/restarted.                                                                                                     |
+| power_ok        |                 | 1 (Power is Ok) 0 (Power Not Ok) | Indicator of the power supply’s status. When the power supply is not ok, the device’s internal scheduling system stops performing certain tasks. |
+| batt_mv         | milli-volts     |                                  | Voltage of the battery (or power supply).                                                                                                        |
+| temp_battery_c  | celsius         |                                  |                                                                                                                                                  |
+| charge_mv       | milli-volts     |                                  | Average charger voltage since last health message. (Voltage sampled every 60 seconds)                                                            |
+| charge_ma       | milli-amps      |                                  | Average charger current since last health message. (Voltage sampled every 60 seconds)                                                            |
+| charge_temp_c   | celsius         |                                  |                                                                                                                                                  |
+| node_temp_c     | celsius         |                                  |                                                                                                                                                  |
+| energy_used_mah | milli-amp-hours |                                  |                                                                                                                                                  |
+| sd_free         | %               |                                  |                                                                                                                                                  |
+| sub_ghz_det     |                 |                                  |                                                                                                                                                  |
 
-##### Syslog
+#### Syslog
 
 `log.nnnn     (Where `n` is an integer that gets incremented every time the previous file exceeds 25 MB)`
 
@@ -298,6 +285,66 @@ You now should be on the `Details` screen. At the bottom of the page is a menu w
 * `Command` - allows the user to submit various commands to the Node, and provides feedback from the node via the output window.
 * `FW Update` - allows the user to upload a new Firmware file.
 * `Clear` - clears the output console
+
+## Updating your Node firmware
+
+If you need to update your Node firmware, you can use the following steps.
+
+Ensure you have the current Node firmware file. If you don't, you can find it in our User Guide directory.
+
+1. **Download (or update to) the latest version of CTT Mobile from the iOS App Store or Google Play Store (links in our User Guide directory).** 
+    a. You will need version `4.3.3` or greater to perform this update.
+    b. You can verify your version by clicking on the info button in the upper right corner of the home screen.
+
+2. **Press the "Connect Device" Launch Tile**
+
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_firmwareUpdateImg1.png){#id .class width=50%}
+
+3. **Start scan for available devices**
+4. **look for CTT-NODE-XXXXXXXX (where XXXXXXXX is the Node ID #)**
+5. **Tap "Connect" next to the node you wish to pair with**
+6. **Tap "Go" when pairing is complete**
+
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_firmwareUpdateImg2.png){#id .class width=75%}
+
+7. **From the Node home screen use the bottom navigator bar to open the "DEV" view**
+8. **Tap the "FW Update" button at the top of the terminal**
+
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_firmwareUpdateImg3.png){#id .class width=75%}
+
+9. **Tap the "Upload Firmware File" button and navigate to the location on your phone where you saved the provided firmware file.** *The file will be named: `node3_5_1-beta.bin` or something similar.*
+
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_firmwareUpdateImg4.png){#id .class width=75%}
+
+10. **Wait for the upload to complete...**
+This should take about 60-90 seconds to complete
+
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_firmwareUpdateImg5.png){#id .class width=75%}
+
+11. **Once the upload is complete you'll see a Pending Firmware tile with a "Verify" button. Tap the "Verify" button.**
+
+12. **Once the file is verified you'll have the option to install it. Tap the "Install" button.**
+
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_firmwareUpdateImg6.png){#id .class width=75%}
+
+13. **After sending the install command, the Node will disconnect from the app while it installs the new firmware and reboots. You will be taken back to the Home Screen.**
+
+14. **Wait until you see the LED lights on your Node to come back on, indicating the installation is complete, and pair with the Node again.**
+
+This will take about 2 minutes.
+
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_firmwareUpdateImg7.png){#id .class width=75%}
+
+15. **Following the same steps as before to navigate to the Firmware Update screen.**
+
+16. **Your screen should look like the one below.**
+
+***Note the firmware version in the images shown may not reflect the most current firmware at the time of your deployment, so use the image firmwares simply as reference to show how to read the info, and use the latest firmware files available from our support site when updating your Nodes.***
+
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_firmwareUpdateImg8.png){#id .class width=75%}
+
+**Congratulations!!! Your Node V3 firmware has been updated! If you have any questions or issues during this process, please reach out to CTT Customer Support for assistance.**
+
 
 # Final Thoughts
 
