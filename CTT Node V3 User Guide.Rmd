@@ -46,7 +46,7 @@ Inside your Node shipment you'll find two main components (Figs. A & B), a box w
 3. CTT Node V3 mounted in a weatherproof latching case.
 4. Antennas. Left (longer) = 2.4GHz; right (shorter) = 434MHz
 5. Mounting hardware for attaching solar-rechargeable battery pack mount to top mounting plate.
-    1. 3 hex bolts
+    1. 3 Hex bolts (size 3)
     2. 3 lock washers
     2. 3 flat washers
     4. 3 nuts
@@ -65,7 +65,7 @@ Your Node comes with the hardware necessary to mount it to a piece of 3/4" condu
 **You will also need:**
 
 1. A philips-head screwdriver
-2. A hex bit or hex driver
+2. A size 3 Hex driver
 2. A crescent wrench
 2. Two (2) appropriately sized hose clamps for attaching your Node V3 to a mast (3/4" EMT conduit works well)
 3. Zip ties for securing loose cables from Solar-rechargeable power supply
