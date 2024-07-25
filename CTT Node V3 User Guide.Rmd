@@ -4,7 +4,7 @@ title: |
   <br />
   CTT Node V3 User Guide
 author: "support@celltracktech.com"
-date: "7/24/2024"
+date: "7/25/2024"
 output:
   html_document:
     toc: yes
@@ -43,9 +43,9 @@ Inside your Node shipment you'll find two main components (Figs. A & B), a box w
 
 1. Barrel plug for connecting solar rechargeable power to barrel jack on Node V3 board.
 2. Solar-rechargeable battery pack with 2 meter long cable.
-3. CTT Node V3 mounted in a wetherproof latching case.
+3. CTT Node V3 mounted in a weatherproof latching case.
 4. Antennas. Left (longer) = 2.4GHz; right (shorter) = 434MHz
-5. Mounting hardware for attaching solar pack mount to top mounting plate.
+5. Mounting hardware for attaching solar-rechargeable battery pack mount to top mounting plate.
     1. 3 hex bolts
     2. 3 lock washers
     2. 3 flat washers
