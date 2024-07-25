@@ -32,7 +32,29 @@ Congratulations on your purchase of the new CTT Node V3! The CTT Internet of Wil
 4. Dual-mode compatibility with both 434MHz and 2.4GHz tags
 
 
-# Node Quick Start Guide
+# Unboxing your CTT Node V3
+
+Inside your Node shipment you'll find two main components (Figs. A & B), a box with the solar rechargeable battery pack, antennas, and mounting hardware, and the Node itself, in a latched case. Figure C shows the contents of one Node, laid out for identification.
+
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/Node V3 Unboxing.jpg){#id .class width=50%}
+
+
+**Key for Figure C**
+
+1. Barrel plug for connecting solar rechargeable power to barrel jack on Node V3 board.
+2. Solar-rechargeable battery pack with 2 meter long cable.
+3. CTT Node V3 mounted in a wetherproof latching case.
+4. Antennas. Left (longer) = 2.4GHz; right (shorter) = 434MHz
+5. Mounting hardware for attaching solar pack mount to top mounting plate.
+    1. 3 hex bolts
+    2. 3 lock washers
+    2. 3 flat washers
+    4. 3 nuts
+6. Cable gland bulkhead including internal grommet
+7. Bottom mounting plate
+8. Four screws for attaching mounting plates to back of Node case
+9. Top mounting plate
+10. Mount for solar-rechargeable battery pack 
 
 We have no doubt that you are excited to deploy your Nodes, so here's a quick start guide to get you going in a few minutes.
 
@@ -40,19 +62,10 @@ We have no doubt that you are excited to deploy your Nodes, so here's a quick st
 
 Your Node comes with the hardware necessary to mount it to a piece of 3/4" conduit. Note other mounting hardware is absolutely possible so feel free to use whatever makes sense for your site. 
 
-**Included with your shipment are:**
-
-1. Node V3 mounted in a weatherproof case
-2. Two (2) omni antennas - one tuned to 434MHz and the other tuned to 2.4GHz
-3. Two (2) mounting plates, one for the top of the node and one for the bottom of the node. Each plate is labeled. 
-4. Solar-rechargeable power supply with 2m cable.
-5. Mounting hardware
-    1. Four (4) Phillips-head screws, washers, and nuts for mounting plates to node case.
-    2. Three (3) bolts for mounting solar-rechargeable power supply to node plate. 
-
 **You will also need:**
 
-1. A phillips-head screwdriver
+1. A philips-head screwdriver
+2. A hex bit or hex driver
 2. A crescent wrench
 2. Two (2) appropriately sized hose clamps for attaching your Node V3 to a mast (3/4" EMT conduit works well)
 3. Zip ties for securing loose cables from Solar-rechargeable power supply
@@ -238,10 +251,6 @@ The following CTT products apply to the 2.4GHz category:
 
 The device writes system logs to the SD card for troubleshooting and diagnostics reasons.
 
-## Node Firmware
-
-The current Node Firmware as of this writing is `v0.6.0-beta`. 
-
 # Using the CTT Mobile App to interact with your Node V3
 
 If you are used to the Node V2, then you may have used Node Client to communicate with your Nodes. This is no longer needed with the Node V3 as the new Nodes can pair directly with the CTT Mobile App and changes to the Node are made directly through pairing with the app.
@@ -263,11 +272,21 @@ You now should be on the `Details` screen. At the bottom of the page is a menu w
 
 * `Details` - provides an overview of `Node Status`, `Solar Charging Status` (only valid when attached to the Solar-rechargeable Power Supply), and `Current Config`
 
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3Details.png){#id .class width=50%}
+
 * `Map` - Displays a map showing your location relative to all Nodes currently being detected, which have valid GPS fixes. Nodes without GPS fixes will not be displayed on the map.
+
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3Map.png){#id .class width=50%}
 
 * `Listen` - This page is where you can toggle on and off viewing tag detections on both 2.4GHz and 434MHz frequencies, via the app. *Note that the Node is always listening (or is listening on a pre-determined schedule, if you have modified the configuration), so toggling on and off these buttons only toggles whether or not the App is displaying detections on your phone.* 
 
-* `Config` -  This page allows you to modify the Node config file and upload it to the Node you are paired to in real-time. Config parameters include:
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3Listen.png){#id .class width=50%}
+
+* `Config` -  This page allows you to modify the Node config file and upload it to the Node you are paired to in real-time.
+
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3Config.png){#id .class width=50%}
+
+Config parameters include:
 
  * `Enable/Disable LEDs` : Default = **ON**
  * `Adjust the Health Packet interval (min)`: Default = **15 min**
@@ -284,7 +303,17 @@ You now should be on the `Details` screen. At the bottom of the page is a menu w
 
 * `Command` - allows the user to submit various commands to the Node, and provides feedback from the node via the output window.
 * `FW Update` - allows the user to upload a new Firmware file.
-* `Clear` - clears the output console
+* `Clear` - clears the output console.
+
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3Dev.png){#id .class width=50%}
+
+Clicking on the `Command` button will bring up a list of commands you can issue to the Node
+
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3DevCmds.png){#id .class width=50%}
+
+## Node Firmware
+
+The current Node Firmware as of this writing is `v0.6.0-beta`. 
 
 ## Updating your Node firmware
 
