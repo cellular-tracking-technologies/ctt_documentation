@@ -6,8 +6,6 @@ title: |
 author: "support@celltracktech.com"
 date: "4/10/2024"
 output:
-  pdf_document:
-    toc: yes
   html_document:
     toc: yes
     number_sections: yes
@@ -984,7 +982,7 @@ This should be enough to get us started and allow us to leave sites with confide
 |  A | Comm. | HO-432 Loop -- for receiving LifeTags omnidirectionally | M2 HO-432 | Type N Female | Depends on number of antennas | [Link](https://www.hamradio.com/detail.cfm?pid=H0-000720) |
 |  B | Comm. | A430S10 10 element yagi -- directional antenna for receiving distant nodes and LifeTags | Diamond Antenna A430S10 | SO-238 Female | Depends on number of antennas | [Link](https://www.hamradio.com/detail.cfm?pid=H0-005816) |
 |  C | Comm. | 433MHz 5dBi omni directional antenna -- for receiving nodes from any direction, up to 700 meters away in some conditions | Data Alliance A433O5 | Type N Male | Depends on number of antennas | [Link](https://www.data-alliance.net/antenna-433mhz-5dbi-omnidirectional-fiberglass-w-n-male-vhf-uhf-marine/) |
-|  D | Comm. | Cable from Antenna to SensorStation | USA Coax | Depends on antenna and SensorStation type | Depends on number of antennas | [Link](https://usacoax.com/cables.html) |
+|  D | Comm. | Cable from Antenna to SensorStation | MPD Digital | Depends on antenna and SensorStation type | Depends on number of antennas | [Link](https://mpddigital.us/cable-builder/) |
 |  E | Mounting Hardware | Tri-Pod | Various, Amazon |  | Depends on number of SensorStations | [Link](https://www.amazon.com/feet-Satellite-Tripod-Mount-2-Inch/dp/B0043OAI9M/ref=sr_1_3?keywords=antenna+tripod&qid=1555017820&s=electronics&sr=1-3) |
 |  F | Mounting Hardware | Mast (electrical conduit) | Lowes, Home Depot, Other Hardware Stores |  | See Setup Guide | [Link](https://www.lowes.com/search?searchTerm=emt+conduit) |
 |  G | AC Power | 110-250 A/C, 50Hz/60Hz, Universal power supply, USA adapter unless specified | Optional. If purchased separately its important to use 12V DC only |  |  |  |
