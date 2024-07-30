@@ -4,7 +4,7 @@ title: |
   <br />
   CTT BlūSeries Receiver
 author: "support@celltracktech.com"
-date: "7/10/2024"
+date: "7/30/2024"
 output:
   html_document:
     toc: yes
