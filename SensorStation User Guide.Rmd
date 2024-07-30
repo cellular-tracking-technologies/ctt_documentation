@@ -168,7 +168,7 @@ Setting up the CTT Nodes is typically done in a grid in your study site. It is n
 
 ## SensorStation Placement
 
-If you are using Nodes, your SensorStation may be placed anywhere within range of the farthest node, which is typically 1-1.5km (although higher placement of SensorStation antennas, and clear line-of-sight between stations and nodes, can achieve longer detection distances). See the next section on SensorStation Configuration and Antenna Detail for more details on this. It is recommended to place the SensorStation antennas at least 10 meters above the ground level. The higher the antennas, the better range you will get.
+If you are using Nodes, your SensorStation may be placed anywhere within range of the farthest node, which is typically 1km. See the next section on SensorStation Configuration and Antenna Detail for more details on this. It is recommended to place the SensorStation antennas at least 10 meters above the ground level. The higher the antennas, the better range you will get.
 
 ![*Theoretical setup with SensorStation (diamond) in the middle of two node grids (colored circle markers). All nodes are within 1.5km of the SensorStation (black circle)*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/SensorStationNodeSetup.png){#id .class width=25%}
 

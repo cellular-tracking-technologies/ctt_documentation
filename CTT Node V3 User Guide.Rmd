@@ -89,9 +89,9 @@ The power cable runs first through the `cap` of the `cable gland`, then the `rub
 
 When you screw the `cable gland cap` onto the `cable gland`, it will compress the `grommet` and seal around the cable. Before tightening, make sure the power plug is pulled through the cable gland and into the case, and plugged into the `5v barrel jack` on the Node board. Ensure a little bit of slack on the cable inside the case and then tighten down the cable gland cap until there is no movement in the cable when tugged lightly. This process both seals the entry from water, and helps reduce the chance of unintentionally pulling on the power cable and damaging the board.
 
-**We recommend the final tightening of the cap with a crescent wrench.**
+**We recommend the final tightening of the cap with a crescent wrench, but be careful not to overtighten and crush the cable!**
 
-![*Demonstrating how to tighten the Node V3 Bulkhead*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_TightenBulkhead.png){#id .class width=50%}
+![*Demonstrating how to tighten the Node V3 Bulkhead.*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_TightenBulkhead.png){#id .class width=50%}
 
 
 Once the cap is tightened, you should see the grommet compressed around the cable.
@@ -144,6 +144,33 @@ The Node V3 is capable of simultaneously collecting 434 MHz and 2.4GHz tag detec
 * A health snapshot is saved every 15 minutes to the SD card.
 * Every time 50 tag detections have been captured for a particular tag frequency, they are saved to the SD card and immediately transmitted out to the SensorStation. Detections are also saved and uplinked after 15 minutes in the event that the 50 detection watermark is not hit.
 * System logs are saved to a file on the SD card. These logs can be used by CTT to troubleshoot problems.
+
+## Detecting your Node with your SensorStation
+
+### Pre-requisites
+
+* CTT SensorStation V2 or V3
+* Latest Disk Image: `(2024-07-16)`
+* Radios running firmware version `4.0.0` or later
+
+#### Check your Disk Image Version
+
+If you received your SensorStation after August 1, 2024, you most likely have the latest disk image and are fully compatible with the new CTT Node V3. To confirm this, connect a computer to your SensorStation via WiFi or Ethernet [see directions here](https://cellular-tracking-technologies.github.io/ctt_documentation/SensorStation-User-Guide.html#connecting-to-your-sensorstation-web-interface) and navigate to the SensorStation Overview.  
+
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/SensorStationImageVersion.png){#id .class width=50%}
+
+If your station indicates you are running the Disk Image from July 2024, then you have the correct one. **If not, you'll need to flash your Raspberry Pi with the newest Disk Image per the instructions** [here](https://cellular-tracking-technologies.github.io/ctt_documentation/flashingComputeModule.html).
+
+### Check your Radio Version and Updating if Necessary
+
+The Radio version is displayed over each radio in the SensorStation Overview. **You need to be running `v4.0.0` or later to detect CTT Node V3.**
+
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/SensorStationRadioFW.png){#id .class width=50%}
+
+If you are running the correct Disk Image, but not the correct Radio Firmware, you can update it from the LCD menu on your SensorStation, or from the `Update Radio Firmware` button on the SensorStation Overview page (image below).
+
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/RadioFirmwareOverview.png){#id .class width=50%}
+
 
 ## Node V3 SD Card Storage
 

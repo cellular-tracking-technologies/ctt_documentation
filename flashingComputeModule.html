@@ -298,23 +298,17 @@ overflow-y: auto;
 border: 1px solid #ddd;
 border-radius: 4px;
 }
-.tabset-dropdown > .nav-tabs > li.active:before {
-content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+content: "\e259";
 font-family: 'Glyphicons Halflings';
 display: inline-block;
 padding: 10px;
 border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-content: "";
-border: none;
-}
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-content: "";
+content: "\e258";
 font-family: 'Glyphicons Halflings';
-display: inline-block;
-padding: 10px;
-border-right: 1px solid #ddd;
+border: none;
 }
 .tabset-dropdown > .nav-tabs > li.active {
 display: block;
@@ -423,8 +417,20 @@ Station Image</a></p>
 3 SensorStations</h3>
 <p><strong>V2 &amp; V3 SensorStation Current Stable Image</strong>
 <em>Records Tag, GPS, SensorGnome, and Telemetry data. Monthly reboot on
-the 3rd of the month.</em> <a href="https://d25eksygu9dzud.cloudfront.net/sensor-station/images/sensor-station.latest.zip">Download
-Station Image</a></p>
+the 3rd of the month.</em> <strong>Default radio firmware is v3.0.1 and
+is not compatible with CTT Node V3</strong></p>
+<p><a href="https://d25eksygu9dzud.cloudfront.net/sensor-station/images/sensor-station.latest.zip">Download
+Current Stable Disk Image</a> (<strong>Version ID: 2023-05-01 Updated:
+2024-07-30</strong>)</p>
+<p><strong>V2 &amp; V3 SensorStation BETA Disk Image</strong> <em>This
+version is required if you are using the V3 version of the CTT Nodes, or
+the CTT BlūSeries Receiver.</em> <strong>Note that you will also need to
+update your radio firmware to v4.0.0.</strong> This is the default
+firmware for this disk image release. The radio firmware can now be
+updated directly from the LCD screen or the SensorStation Interface.</p>
+<p><a href="https://d25eksygu9dzud.cloudfront.net/sensor-station/images/sensor-station.beta.xz">Download
+BETA Disk Image</a> (<strong>Version ID: 2024-07-16 Updated
+2024-07-30</strong>)</p>
 <hr />
 </div>
 </div>
