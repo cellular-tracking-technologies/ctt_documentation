@@ -122,12 +122,17 @@ Once mounted, simply run the other end of the Ethernet cable into your SensorSta
 
 1. CTT BlūSeries Receiver is mounted and Ethernet cable is connected inside
 2. BlūReceiver Dongle has Ethernet connected, and is connected to CTT SensorStation via USB
-3. CTT SensorStation is running newest disk image (version xxxxx) or has been over-the-air (OTA) updated to decode BlūSeries data
+3. CTT SensorStation is running newest disk image (`2024-07-16` or later)
 4. BlūSeries test tag is on-hand for generating test data
 
-## Updating your SensorStation
+## Check your Disk Image Version
 
-If your CTT SensorStation does not have the newest disk image it may not be able to detect the BlūSeries Receiver. You can update the station by following these directions: https://cellular-tracking-technologies.github.io/ctt_documentation/flashingComputeModule.html
+If you received your SensorStation after August 1, 2024, you most likely have the latest disk image and are fully compatible with the new CTT Node V3. To confirm this, connect a computer to your SensorStation via WiFi or Ethernet [see directions here](https://cellular-tracking-technologies.github.io/ctt_documentation/SensorStation-User-Guide.html#connecting-to-your-sensorstation-web-interface) and navigate to the SensorStation Overview.  
+
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/SensorStationImageVersion.png){#id .class width=50%}
+
+If your station indicates you are running the Disk Image from July 2024, then you have the correct one. **If not, you'll need to flash your Raspberry Pi with the newest Disk Image per the instructions** [here](https://cellular-tracking-technologies.github.io/ctt_documentation/flashingComputeModule.html).
+
 
 ## Testing
 
