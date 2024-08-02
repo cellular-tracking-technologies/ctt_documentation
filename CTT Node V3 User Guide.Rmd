@@ -176,6 +176,10 @@ If you are running the correct Disk Image, but not the correct Radio Firmware, y
 
 Your CTT Node V3 has a 16GB SD card pre-installed for backup storage, as well as for manual data collection and management. As you saw from photos in Section 2, its now much easier to service the SD card on Node V3 compared to the previous version. **We do not recommend Hot swapping the card.** It is encouraged to power down the device before inserting/removing the card.
 
+### Removing the SD card
+
+The SD card holder is spring-locked, so to remove the card first push down on the card and you should feel it disengage when released. Now the card can be safely removed. To re-install the card make sure the push down to engage the spring lock, and when you release it you should feel it locked into place. **DO NOT FORCE THE CARD OUT OF OR INTO THE SLOT**, doing so will void the warranty.
+
 **If you replace the SD card with your own, prior to inserting a new SD card into a node, please ensure it has been formatted as FAT32.** We strongly recommend the use of 16GB SD cards. While much larger cards are available, the underlying filesystem may be incompatible with them. Please try all new cards prior to using them in field-deployed nodes. Each time a card is inserted, we **HIGHLY RECOMMEND** that you pair to the node with CTT Mobile and verify the device is communicating with the SD card.
 
 When properly set up, your Nodes will collect and send their data to a nearby SensorStation, not requiring you to access the SD card internal to each Node. There are reasons why we recommends periodically servicing the nodes SD card:
