@@ -30,23 +30,60 @@ While CTT offers many over-the-air updates to your `CTT SensorStation` sometimes
 
 ## SensorStation Image Downloads
 
-### For Version 1 SensorStations
-
-**V1 SensorStation Current Stable Image**
+### **V1 SensorStation Current Stable Image**
 *OTA Update enabled. Station health reports. RTL-SDR support. Pickup new Nodes / Tags with updated protocol.* 
 [Download Station Image](https://d25eksygu9dzud.cloudfront.net/sensor-station/d7522108-017e-11ea-86b6-784f43a7974d/sensor-station.2020-03-23.zip)
 
-### For Version 2 & 3 SensorStations
-
-**V2 & V3 SensorStation Current Stable Image**
+### **V2 & V3 SensorStation Current Stable Image**
 *Records Tag, GPS, SensorGnome, and Telemetry data. Monthly reboot on the 3rd of the month.* **Default radio firmware is v3.0.1 and is not compatible with CTT Node V3**
 
 [Download Current Stable Disk Image](https://d25eksygu9dzud.cloudfront.net/sensor-station/images/sensor-station.latest.zip) (**Version ID: 2023-05-01 Updated: 2024-07-30**)
 
-**V2 & V3 SensorStation BETA Disk Image**
-*This version is required if you are using the V3 version of the CTT Nodes, or the CTT BlūSeries Receiver.* **Note that you will also need to update your radio firmware to v4.0.0.** This is the default firmware for this disk image release. The radio firmware can now be updated directly from the LCD screen or the SensorStation Interface.
+### **V2 & V3 SensorStation BETA Disk Image**
+*This version is required if you are using the V3 version of the CTT Nodes, or the CTT BlūSeries Receiver.* **Note that you will also need to update your radio firmware to v4.0.0.** This is the default firmware for this disk image release. The radio firmware can now be updated directly from the LCD screen or the SensorStation Interface. See below for the `Changelog` and especially the `Unreleased` section for any known issues.
 
-[Download BETA Disk Image](https://d25eksygu9dzud.cloudfront.net/sensor-station/images/sensor-station.beta.xz) (**Version ID: 2024-07-16 Updated 2024-07-30**)
+[Download BETA Disk Image](https://d25eksygu9dzud.cloudfront.net/sensor-station/images/sensor-station.beta.xz) (**Version ID: 2024-07-16 Updated 2024-08-02**)
+
+### Changelog for BETA Disk Image ID: `2024-07-16 Updated 2024-08-02`
+
+#### Added
+- BlūSeries code base
+- detect 2.4 GHz Blū tags
+- control individual Blū receivers and Blū radios
+- Station stats menu
+- Spanish LCD menu translation
+- French LCD menu translation
+- Portuguese LCD menu translation
+- Dutch LCD menu translation
+- Enable/disable options for WiFi on LCD interface
+- Enable/disable options for cellular modem on LCD interface
+- Option to program 434 radios to latest firmware (v4.0.0)
+- Wifi and cellular modem signal strength on web interface
+- Enable/disable options for WiFi and cellular modem on web interface
+- Hide/display 434 radios, dongle radios, and Blū receivers
+- Filter tag IDs across 434 and Blū radios
+
+#### Changed
+- Updated Node to v20.14.0
+- Updated Linux kernel to v6.1.21-v7+
+- Switched modem protocol from PPP to QMI
+- Using ModemManager to manage and connect to cellular networks and to provide stats on connection
+- Using NetworkManager rather than dhcpcd to connect and manage to WiFi/ethernet connections. 
+- Add wifi credentials through USB with nmcli commands instead of modifying wpa_supplicant.conf
+- Organized BlūSeries and Atmega32 directories within hardware/ctt directory
+- Compatible with Node v3
+- 434 and Blū tags detected by a Node appear in 434 tables configured for detecting Nodes
+- 434 MHz radios upgraded to v4.0.0 firmware (previously v3.0.1)
+- Dynamically add/remove USB radios
+
+#### Removed
+- Bookworm OS, currently using Bullseye v11
+
+#### Fixed
+- Station Update button on Web Interface
+
+#### Unreleased
+- **Point-to-Point connection**: Currently does not properly assign an IP address, making it impossible to connect a SensorStation directly to a computer via Ethernet. Connecting a SensorStation to a WiFi hotspot using the WiFi credentials, or connecting a SensorStation to an existing network device, such as a WiFi Router via Etherned does work.
 
 ***
 
