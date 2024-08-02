@@ -485,6 +485,8 @@ Your SensorStation has a web server running locally on the Raspberry Pi, which m
 
 ## Connecting via Ethernet Cable
 
+**Note, if you are running the new Beta Disk Image to detect BlūSeries tags and use BlūSeries Receivers and/or V3 Nodes, there is a current bug that does not allow for connecting directly between a computer and a SensorStation via Ethernet. Two workarounds are 1. connect directly to a wireless router via ethernet, and then connect your computer wirelessly to that network to access the station or 2. provide the WiFi credentials of an existing WiFi network or hotspot (even your phone) to the SensorStation via the USB Drive method, and you can connect to the station wirelessly. This issue is currently being worked out and we will update when we have a fix.**
+
 ### Before you get started you will need...
 
   * 2 USB to Ethernet adapters (we recommend: https://tinyurl.com/yc6llze4)
