@@ -4,7 +4,7 @@ title: |
   <br />
   Flashing your SensorStation's Compute Module
 author: "support@celltracktech.com"
-date: "8/13/2024"
+date: "8/15/2024"
 output:
   html_document:
     toc: yes
@@ -42,13 +42,15 @@ While CTT offers many over-the-air updates to your `CTT SensorStation` sometimes
 ### **V2 & V3 SensorStation BETA Disk Image**
 *This version is required if you are using the V3 version of the CTT Nodes, or the CTT BlūSeries Receiver.* **Note that you will also need to update your radio firmware to v4.0.0.** This is the default firmware for this disk image release. The radio firmware can now be updated directly from the LCD screen or the SensorStation Interface. See below for the `Changelog` and especially the `Unreleased` section for any known issues.
 
-[Download BETA Disk Image](https://d25eksygu9dzud.cloudfront.net/sensor-station/images/sensor-station.beta.xz) (**Version ID: 2024-08-13 Updated 2024-08-13**)
+[Download BETA Disk Image](https://s3.amazonaws.com/media.celltracktech.com/sensor-station/images/sensor-station.beta.xz) (**Version ID: 2024-08-15 Updated 2024-08-15**)
 
 **Note that once you update to the BETA Disk Image, in order to pick up V3 Nodes or BlūSeries tags, you will also need to update the radios on the SensorStation to V4.0.0 (the previous version was 3.0.1). You can do this via a push-button on the SensorStation interface, or via the LCD menu. Once you've done it, refresh your webpage and confirm that the five 434MHz radios are now reporting FW V4.0.0.**
 
 
-### Changelog for BETA Disk Image ID: `2024-08-13 Updated 2024-08-13`
-Coming Soon
+### Changelog for BETA Disk Image ID: `2024-08-15 Updated 2024-08-15`
+
+#### Added
+- Point-to-Point connection is now "smart" and automatically searches for Ethernet with shared internet first, then Point-to-Point connection, and assigns IP accordingly
 
 ### Changelog for BETA Disk Image ID: `2024-07-16 Updated 2024-08-02`
 
