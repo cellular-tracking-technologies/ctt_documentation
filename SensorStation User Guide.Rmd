@@ -4,7 +4,7 @@ title: |
   <br />
   Installation Guide for the CTT SensorStation and CTT Nodes
 author: "support@celltracktech.com"
-date: "4/10/2024"
+date: "8/16/2024"
 output:
   html_document:
     toc: yes
@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ***
 # Before you begin
 
-In order to connect directly to your SensorStation, you'll need 2 `USB->Ethernet Adapters` (we recommend: https://tinyurl.com/yc6llze4), and an Ethernet Cable, or a `Raspberry Pi compatible USB WiFi adapter` like this one https://store.celltracktech.com/products/wifi-usb-adapter-add-on-for-sensorstation-v2. **Make sure to have these on-hand prior to receiving your SensorStation so there is no delay in setup.**
+In order to connect directly to your SensorStation, you'll need 2 `USB->Ethernet Adapters` (we recommend: https://tinyurl.com/yc6llze4), and an Ethernet Cable. If you have a V2 station, you'll need a `Raspberry Pi compatible USB WiFi adapter` like this one https://store.celltracktech.com/products/wifi-usb-adapter-add-on-for-sensorstation-v2 if you want to connect via WiFi. If you have a V3 station or later, the WiFi is pre-installed on the board. **Make sure to have these on-hand prior to receiving your SensorStation so there is no delay in setup.**
 
 # Note on Version 3 (and 3.02) SensorStation
 
@@ -54,23 +54,16 @@ Treat your SensorStation board like you would any other motherboard, Arduino or 
 
 # Setting up your CTT IoW System
 
-CTT’s Internet of Wildlife System (IoW) is a complete radio telemetry system that consists of transmitters (radio tags), and receivers. Currently CTT produces five radio transmitters: the LifeTag^TM^, PowerTag^TM^, HybridTag^TM^, ES-200 and ES-150. 
+CTT’s Internet of Wildlife System (IoW) is a complete radio telemetry system that consists of transmitters (radio tags), and receivers. Currently CTT produces radio transmitters that communicate on two frequencies:
 
-## LifeTag
-
-The **CTT LifeTag** is 100% solar powered, and therefore has no battery. This allows the tag to persist for many years, beeping out its unique digital ID whenever it has sunlight. For species active during the day, and for small animals for which multi-season or multi-year data are required, LifeTags are the obvious choice. The `LifeTag` coding includes a CRC value that validates detections on all `V2 SensorStations`, reducing the chance of any false detections by over 99%. 
-
-## PowerTag
-
-The **CTT PowerTag** is battery powered which means it can beep out its digitally coded ID 24-hours a day. The life span of a `PowerTag` is defined by the beep rate (# of beeps per minute) and battery size. For nocturnal species, `PowerTags` are the perfect fit.
-
-## HybridTag
-
-The **CTT HybridTag** takes the best features of our `LifeTag` and `PowerTag` and combines them into the smallest fully rechargeable radio transmitter in the world. With as little as 30-minutes of solar exposure over three days, the HybridTag will maintain its battery charge indefinitely. The `HybridTag` can be turned off and on using a small magent place on the underside of the tag. In the absence of any solar exposure, the `HybridTag` battery can power the tag for anywhere from 36 hours to over two weeks (depending on battery size). The `HybridTag` employes the same CRC validation as the `LifeTag` meaning that your detections are over 99% certain.
-
-## ES-200 and ES-150
-
-The **ES-200** and **ES-150** are GPS logger tags that can also send data over the 434MHz frequency, and therefore can send archived telemetry data to the `SensorStation`. Since they communicate on the same frequency as the smaller radio tags, no special radio configuration is needed. The difference between the two is that the `ES-150` also has an `Argos` radio to send data via the `Argos` satellite network.
+* 434MHz
+  * LifeTag^TM^
+  * PowerTag^TM^
+  * HybridTag^TM^
+* 2.4GHz
+  * BlūMorpho^TM^
+  * BlūBat^TM^
+  
 
 ## CTT SensorStation
 
@@ -78,13 +71,13 @@ The **CTT SensorStation** collect data directly from tags and can collect data f
 
 ## CTT Node
 
-**CTT Nodes** are essentially *mini-base stations*: devices with integrated solar panels, a lithium battery, and an antenna to collect data from **PowerTags**, **LifeTags** and **HybridTags**, and send those data to the **SensorStation**. These data can then be post-processed to localize tags within a grid of nodes over user-defined time steps.
+**CTT Nodes** are essentially *mini-base stations*: devices with integrated solar panels, a lithium battery, and an antenna to collect data from 434MHz tags (V2 Nodes) or either 434MHz or 2.4GHz tags (V3 Nodes), and send those data to the **SensorStation**. These data can then be post-processed to localize tags within a grid of nodes over user-defined time steps.
 
 ## Understanding Detection Distances
 
 The detection distance **from Node to Tag** varies for various reasons, including terrain, vegetation, and the behavior of the tagged animals. For instance, a bird flying overhead may be picked up over a kilometer away by a node, but one foraging in dense vegetation may only be detected from a few hundred meters. When using nodes for localization it's important to note that the accuracy of locations of animals wearing tags can be as little as 30m, but can range widely depending on the density of Nodes. For localizing tag positions, the spacing and placement of nodes must allow for tags to be detected simultaneously by three or more nodes.
 
-The detection distance from **SensorStation to Node** is also affected by terrain and vegetation, but also antenna height and type (omni-directional vs. directional). **Therefore, while there is no hard and fast rule, a good starting point is to keep your farthest node within 1-1.5km of the SensorStation.** The number of SensorStations needed for each system depends on the size of the study area. For instance, in a 2 KM^2^ plot, a SensorStation placed at the center of the plot could detect nodes across the entire study area, in most cases with only an omni-directional antenna. Because `Nodes` are dependent on the SensorStation to receive their data and aggregate it for analysis, it is critical to ensure each node is within the detection radius of at least one `SensorStation` at all times. 
+The detection distance from **SensorStation to Node** is also affected by terrain and vegetation, but also antenna height and type (omni-directional vs. directional). **Therefore, while there is no hard and fast rule, a good starting point is to keep your farthest node within 1km of the SensorStation.** The number of SensorStations needed for each system depends on the size of the study area. For instance, in a 2 KM^2^ plot, a SensorStation placed at the center of the plot could detect nodes across the entire study area, in most cases with only an omni-directional antenna. Because `Nodes` are dependent on the SensorStation to receive their data and aggregate it for analysis, it is critical to ensure each node is within the detection radius of at least one `SensorStation` at all times. 
 
 The detection distance from **SensorStation to Tag** is affected by the same factors as SensorStation to Node, but because many tags are on birds, bats and insects, the relationship between the two objects can change drastically over very short time steps. With line-of-sight, a tag on a bird has been shown to be detectable for **dozens of kilometers** by a SensorStation. On the other hand, birds foraging in dense vegetation may only be detectable by a station within a few kilometers. Therefore, careful consideration of station position with relation to the biological questions being asked is critical for a successful deployment.
 
@@ -92,7 +85,7 @@ The detection distance from **SensorStation to Tag** is affected by the same fac
 
 ### Materials
 
-* **LifeTag/PowerTag or ES-200**
+* **Compatible Test Tag**
 * **Nodes (each)**
   * 1 x Node box
   * 1 x Antenna
@@ -164,7 +157,7 @@ A 7/16” socket is used to tighten the clamp bolts. The EMT is typically driven
 
 ## Node Placement
 
-Setting up the CTT Nodes is typically done in a grid in your study site. It is not imperative that they are exactly in a grid, but the closer you can set them up in a grid, the more accurate positioning you will get from the tags. In sites where this is not practical, you can simply set them up where you can, 100-300m apart, and record GPS of the Node locations. Even in a grid setup, it is best practice to take GPS coordinates whether or not they differ from the layout. Nodes should be placed above surrounding vegetation (to ensure solar recharging of the internal battery) or at least 2.5 meters above the ground.
+Setting up the CTT Nodes is typically done in a grid in your study site. It is not imperative that they are exactly in a grid, but the closer you can set them up in a grid, the more accurate positioning you will get from the tags. In sites where this is not practical, you can simply set them up where you can, 50-200m apart, and record GPS of the Node locations. Even in a grid setup, it is best practice to take GPS coordinates whether or not they differ from the layout. Nodes should be placed above surrounding vegetation (to ensure solar recharging of the internal battery) or at least 2.5 meters above the ground.
 
 ## SensorStation Placement
 
@@ -223,7 +216,7 @@ Make sure you have enough coax to form a drip loop for each connection.
 
 ### Adding an optional LTE extender
 
-If you are using our on-board LTE modem for sending data to the cloud and to Motus, and you are finding you have a weak signal at your station site, you can add an optional cellular antenna to increase the range of your station transmission to the cell network. CTT does not sell cell booster antennnas, but many are available on Amazon.com. Here is one example, but note that we have not tested this specific device; it's simply to provide some idea of what might work: https://www.amazon.com/Directional-Universal-Cellphone-Amplifier-Signalbooster/dp/B089VXJV14/ref=sr_1_3?crid=L0H9JNP4DRQF&dib=eyJ2IjoiMSJ9.DwK2pym6t2RcsY6MY5SFAx_HO7CFELHCiEedhErb9Ib08Fv5Z512JpCcNzW5TUtQoA8dZItS8yOJAajf3bikFw.te4gjK0B-7qty7WuY-_NLxslPGjxqqpMRtLonWDJQOI&dib_tag=se&keywords=LTE+yagi+booster&qid=1704994609&sprefix=lte+yagi+boos%2Caps%2C133&sr=8-3
+If you are using our on-board LTE modem for sending data to the cloud and to Motus, and you are finding you have a weak signal at your station site, you can add an optional cellular antenna to increase the range of your station transmission to the cell network. CTT does not sell cell booster antennas, but many are available on Amazon.com. Here is one example, but note that we have not tested this specific device; it's simply to provide some idea of what might work: https://www.amazon.com/Directional-Universal-Cellphone-Amplifier-Signalbooster/dp/B089VXJV14/ref=sr_1_3?crid=L0H9JNP4DRQF&dib=eyJ2IjoiMSJ9.DwK2pym6t2RcsY6MY5SFAx_HO7CFELHCiEedhErb9Ib08Fv5Z512JpCcNzW5TUtQoA8dZItS8yOJAajf3bikFw.te4gjK0B-7qty7WuY-_NLxslPGjxqqpMRtLonWDJQOI&dib_tag=se&keywords=LTE+yagi+booster&qid=1704994609&sprefix=lte+yagi+boos%2Caps%2C133&sr=8-3
 
 Typically, these cell booster antennas have an SMA male connector that needs to somehow attach to the SensorStation board to communicate with the modem. We have provided a SMA port on the board near the LTE modem, labeled `J7`. That port is not activated without first *jumping* the U.FL port on the modem labeled `main`, to the U.FL port labeled `J6` on the SensorStation board. In doing so, you will activate the `J7` SMA port on the board which will allow you to attach the SMA connector on the cell booster antenna to said port *(see fig below)*. 
 
@@ -266,10 +259,10 @@ The SensorStation can be placed inside a building, or fastened to the pole or bu
 
 # Powering your SensorStation
 
-The SensorStation can be connected directly to a 12V DC power source, via a charge controller, or to an AC to DC power supply which can then be plugged directly into your standard AC power source. In many cases, though, SensorStations are deployed remotely and are in need of a remote power supply such as a solar charged deep-cycle marine battery. A typical setup would be a 50-100W solar panel connected to a charge controller. The charge controller typically has 3 ports. The 3 ports are 1.) Solar panel 2.) 12V battery 3.) Accessory/Device/consumer, which, in this case, is your SensorStation. That line goes into the green *Power In* terminal on the SensorStation board. The positive and negative wire ports are labeled on the board, and to insert the wire simply loosen the set screws on the top, and slide the wire leads in to the holes just under the set screws (see the pictures below; note for V1 stations see the [QuickStart Guide in Appendix II](#V1Quickstart)). 
+The SensorStation can be connected directly to a 12V DC power source, via a charge controller, or to an AC to DC power supply which can then be plugged directly into your standard AC power source. In many cases, though, SensorStations are deployed remotely and are in need of a remote power supply such as a solar charged deep-cycle marine battery. A typical setup would be a 100W solar panel connected to a charge controller. The charge controller typically has 3 ports. The 3 ports are 1.) Solar panel 2.) 12V battery 3.) Accessory/Device/consumer, which, in this case, is your SensorStation. That line goes into the green *Power In* terminal on the SensorStation board. The positive and negative wire ports are labeled on the board, and to insert the wire simply loosen the set screws on the top, and slide the wire leads in to the holes just under the set screws (see the pictures below; note for V1 stations see the [QuickStart Guide in Appendix II](#V1Quickstart)). 
 
-![Power not connected](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/power_out.png){#id .class width="20%"}
-![Power connected](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/power_in.png){#id .class width="20%"}
+![Power not connected](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/V3NoPower.jpeg){#id .class width="20%"}
+![Power connected](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/V3PowerIn.jpeg){#id .class width="20%"}
 
 The ends of the wires that are attached should be tinned with solder for best results. If you do not have access to a soldering gun, twisting the ends of the cables tightly will help them slide in cleanly to the power block. 
 
@@ -296,8 +289,8 @@ There are several LED lights on the SensorStation which may assist you in diagno
 
 | LED Behavior  | Meaning | Troubleshooting Steps |
 | :------------------ | :---------------------- | :----------------------- |
-| ON| Indicates that the SensorStation has established a point-to-point protocol (PPP) connection between the network and the on-board modem. | The SensorStation checks for the connection every second. The PPP connection is just the layer that allows the modem to communicate to the network **if it is on**, but doesn't always indicate that a connection is working (such as in the case of a weak signal)  |
-| OFF | Indicates that the SensorStation modem is not connected to the network.   | If there is no modem on the SensorStation this would be the typical state and behavior. If a modem exists but this behavior continues, it indicates that the modem is unable to secure a connection to the network. |
+| ON| Indicates that the SensorStation has established a point-to-point protocol (PPP) connection between the network and the on-board cellular modem. | The SensorStation checks for the connection every second. The PPP connection is just the layer that allows the modem to communicate to the cellular network **if it is on**, but doesn't always indicate that a connection is working (such as in the case of a weak signal)  |
+| OFF | Indicates that the SensorStation modem is not connected to the cellular network.   | If there is no modem on the SensorStation this would be the typical state and behavior. If a modem exists but this behavior continues, it indicates that the cellular modem is unable to secure a connection to the network. |
 
 ## Cellular LED (blue)
 
@@ -316,33 +309,50 @@ The SensorStation features 4 navigation buttons labeled `UP`, `DN`, `BACK` and `
 
 # SensorStation LCD Menu
 
+*Note that this menu may differ from the one on your current station, as there many new features were added to the BETA disk image. Most items should be described here, but the order may be different than you see on your station. In a few cases menu items are no longer informative on newer stations and we've attempted to denote that where necessary.*
+
+- `Station Stats` - This image provides a quick glimpse of the station health, including whether WiFi is on, the Cellular Modem is on, the Battery/Power level, Solar Charging (if a solar monitor is connected), and Temperature.
+
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/LCD_StationStats.JPG){#id .class width="20%"}
+
 - `File Transfer`
 	- `Mount USB` - mounts a properly formatted (FAT-32 or MS-DOS) USB drive to the SensorStation.
 	- `Unmount USB` - un-mounts a properly formatted (FAT-32 or MS-DOS) USB drive from the SensorStation. This should be used before removing a USB drive from your SensorStation.
 	- `Download` - downloads all data on the SensorStation to the mounted USB drive.
-	- `Get WiFi` - loads WiFi credentials from JSON document located in `wifi` folder on mounted USB drive (see **Connecting your SensorStation to a local wireless network** below).
-- `System`
-	- `About`
-		- `Image` - provides the image creation date, and the date of last update.
-		- `Ids` - displays the `System Ids` which include the `SensorStation serial number` `SIM number` `Broadcom chip id` and `Raspberry Pi serial number`
-		- `Memory` - displays the amount of used memory and the total disk size.
-		- `Uptime` - Displays the total up time since the station was last rebooted.
-	- `QAQC` - this is an internal function which will eventually be useful to the end-user but not as of this printing.
-	- `Time` - The three clocks on the SensorStation, refreshing every two seconds. `r`eal time clock, `g`ps clock and `s`ystem clock.
-	- `Restart` - Triggers a system restart.
-	- `Bash Update` - Causes the SensorStation to check the CTT Update Server for any updates that have been assigned to the station. This is NOT the same as running Update Station from the SensorStation web interface. Requires an active cell or other internet connection. 
 - `Network`
-	- `Cellular`
-		- `Ids` -  - Displays the SIM ID, the IMEI, and the name of the Modem
-		- `Carrier` - Displays the cellular carrier name and signal strength of the connection, refreshing every 2 seconds. This may be useful when troubleshooting problematic cellular connections, and aiming an external cellular antenna (not included).
-	- `Ping` - This will ping a known web address to determine whether an internet connection is present. If present, it will return **connected**.
-	- `Hostname` - Typically this is `sensorstation.local` and can be used to reach your station when it is connected to WiFi, a local network via Ethernet, or directly to a computer via Ethernet. Once connected, simply navigate to http://sensorstation.local in your web browser to access the SensorStation interface.
-	- `IP Address` - Displays the port of connection and IP address assigned to the SensorStation. You can use the IP address to connect to your SensorStation using the same process outlined above under `Hostname`. For example, if the IP Address was 10.1.10.17, typing `http://10.1.10.17` into your web browser's URL field would bring up the SensorStation web interface.
+  - `IP Address` - Displays the port of connection and IP address assigned to the SensorStation. You can use the IP address to connect to your SensorStation using the same process outlined above under `Hostname`. For example, if the IP Address was 10.1.10.17, typing `http://10.1.10.17` into your web browser's URL field would bring up the SensorStation web interface.
+  - `WiFi`
+    - `Enable WiFi` - Enables the WiFi adapter
+    - `Disable WiFi` - Disables the WiFi adapter. *If you are using a Cellular modem and running 4 or more FunCube dongles, you may benefit from disabling the WiFi to reduce USB traffic.* 
+    - `Mount USB` - mounts a properly formatted (FAT-32 or MS-DOS) USB drive to the SensorStation.
+    - `Get WiFi` - Loads the WiFi credentials from a USB Drive plugged into one of the USB ports. Note that the credentials must be properly formatted per the directions provided in this document.
+  - `Cellular`
+	  - `Enable Modem` - Enable the attached Quectel cellular modem.
+	  - `Disable Modem` - Disable the attached Quectel cellular modem.*If you are using the WiFi module to send your data, and running 4 or more FunCube dongles, you may benefit from disabling the cellular modem to reduce USB traffic.*
+	  - `Ids` -  - Displays the SIM ID, the IMEI, and the name of the Modem
+	  - `Carrier` - Displays the cellular carrier name and signal strength of the connection, refreshing every 2 seconds. This may be useful when troubleshooting problematic cellular connections, and aiming an external cellular antenna (not included).
+  - `Ping` - This will ping a known web address to determine whether an internet connection is present. If present, it will return **connected**.
+  - `Hostname` - Typically this is `sensorstation.local` and can be used to reach your station when it is connected to WiFi, a local network via Ethernet, or directly to a computer via Ethernet. Once connected, simply navigate to http://sensorstation.local in your web browser to access the SensorStation interface.
+- `System`
+  - `Program Radios` - this command will program the five 434MHz radios to the latest firmware residing on the disk image.
+  - `About`
+    - `Image` - provides the image creation date, and the date of last update.
+    - `Ids` - displays the `System Ids` which include the `SensorStation serial number` `SIM number` `Broadcom chip id` and `Raspberry Pi serial number`
+    - `Memory` - displays the amount of used memory and the total disk size.
+    - `Uptime` - Displays the total up time since the station was last rebooted.
+  - `QAQC` - this is an internal function which will eventually be useful to the end-user but not as of this printing.
+  - `Time` - The three clocks on the SensorStation, refreshing every two seconds. `r`eal time clock, `g`ps clock and `s`ystem clock.
+  - `Restart` - Triggers a system restart.
+  - `Bash Update` - Causes the SensorStation to check the CTT Update Server for any updates that have been assigned to the station. This is NOT the same as running Update Station from the SensorStation web interface. Requires an active cell or other internet connection. 
 - `Server` - causes the SensorStation to force a check-in to the CTT hardware server. Requires that the SensorStation is connected to the internet via either cellular, WiFi or Ethernet. Note that this process may take a long time depending on connection speed and/or amount of data being sent/received.
 - `Power` - Provides voltages for `Battery` (which represents whatever power source is connected to your SensorStation), `RTC` or Real Time Clock, the coin cell battery on the board, and `Solar` if you have connected a solar monitoring cable from the charge controller to the SensorStation board.
 - `Temperature` - (Eliminated on V3.02) Provides the temperature of the SensorStation board. Note temperature will usually be higher than ambient when the board is powered. 
 - `Location` - provides the Lat/Long for the SensorStation from the on-board GPS.
-- `LED` - (V1 and V2 only) allows you to select various LED and toggle them `on`, `off` or `blink`. 
+- `Languages` - toggle between Spanish, French, Portuguese, and Dutch
+
+**Depreciated after Early V2**
+
+  - `LED` - (V1 and V2 only) allows you to select various LED and toggle them `on`, `off` or `blink`. 
   - `Diagnostic A` - this LED represents the connectivity to CTT servers.
     - `On` - Turns the LED `on`, if current state is `off`.
     - `Off` - Turns the LED `off`, if current state is `on`.
@@ -484,8 +494,6 @@ Once you run this command, go back and re-check the file size of the files and f
 Your SensorStation has a web server running locally on the Raspberry Pi, which means you can interact with your station by directly connecting via Ethernet or through a wireless connection. **Note that this is different than viewing your SensorStation via the CTT Web Portal**. The SensorStation Interface provides an overview of your station's operation, including real-time statistics on detections of tags and nodes, as well as controls to change settings, update your SensorStation software, toggle the cellular modem, and reboot the station. It is always best practice to connect directly to your SensorStation prior to deployment. From here you can run a station update, ensure your antennas are tuned to the expected task (detecting Nodes or Tags) and see in real-time that your station is detecting either as expected.
 
 ## Connecting via Ethernet Cable
-
-**Note, if you are running the new Beta Disk Image to detect BlūSeries tags and use BlūSeries Receivers and/or V3 Nodes, there is a current bug that does not allow for connecting directly between a computer and a SensorStation via Ethernet. Two workarounds are 1. connect directly to a wireless router via ethernet, and then connect your computer wirelessly to that network to access the station or 2. provide the WiFi credentials of an existing WiFi network or hotspot (even your phone) to the SensorStation via the USB Drive method, and you can connect to the station wirelessly. This issue is currently being worked out and we will update when we have a fix.**
 
 ### Before you get started you will need...
 
@@ -880,104 +888,99 @@ We are welcoming new collaborators and supporters each week! **For more informat
 
 ***
 
-# Appendix II: Quickstart Guide (Sensorstation V2){V2Quickstart}
+<!-- # Appendix II: Quickstart Guide (Sensorstation V2){V2Quickstart} -->
 
-## Prior to Powering Up
-* Ensure power switch is in the `OFF` position
-* Connect your power source to your SensorStation
+<!-- ## Prior to Powering Up -->
+<!-- * Ensure power switch is in the `OFF` position -->
+<!-- * Connect your power source to your SensorStation -->
 
-## Initial Boot-up of a SensorStation
-* Switch power switch into the `ON` position
-* Wait for full boot-up (the LCD screen is the last thing to boot up, so once the LCD menu is visible, you are fully booted)
-
-
-
-
-***
-
-# Appendix III: Qickstart Guide (SensorStation V1){#V1Quickstart}
-
-***Courtesy of David Brinker***
-
-## Powering Up
-
-1. Plug in the e-ink screen (if you have one).
-    a. Your screen fits snugly onto the Pi-Hat expansion port provided, and will sit right on top of your Pi Compute Module. *Note: Make sure the unit is off when swapping any components, and be careful when removing the screen not to bend the pins, it should lift straight up.*
-2. Plug in power wires.
-    a. Make sure the **ON/OFF** switch is in the `OFF` position.
-    b. Locate the **Green power block** about an inch below the on ON/OFF switch. IT is marked with `POWER` on the left and `12VDC` on the right of the block.
-    c. Make sure that the power source is properly connected to a solar charge controller or a 12VDC Power adapter and the wires are labeled or color coded to positive and negative.
-    d. We recommend leaving the power disconnected while connecting the wires to the SensorStation. It also works better to install wires that are tinned with solder with about ¼” showing.
-    e. Depress each orange tab with a small straight screwdriver on the green power block to insert each wire. The positive is on the left and negative is on the right and marked with a +/- below the block. See images to right.
-    f. Make sure the wires are not swapped!
-    
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/MODEM SERIAL2.jpg){#id .class width=25%}
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/U POWER.jpg){#id .class width=25%}
-
-
-## Initial Boot-up of a SensorStation
-
-1. This is a simple set of instructions for the initial boot up of a SensorStation.
-Turn on the SensorStation using the slide switch on the left center of the SensorStation board.
-2. The SensorStation board will show two constantly illuminated LEDs, an orange one and a green one on the left side of the board.  There will also be green and blue flashing LEDs.
-
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Battery.png){#id .class width=40%}
-
-3. A normally operating SensorStation will present all four LEDs.
-4. The Inkyphat display will show the CTT SensorStation welcome.
-
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/PI-HAT EXPANSION.png){#id .class width=50%}
-
-5. The display normally updates every 90 seconds.  During initial boot-up the display update usually takes longer than 90 seconds.  Wait for the SensorStation to complete boot-up.  Once the display updates it will change to the default operating screen display.
-
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/EXPANSION.png){#id .class width=50%}
-
-6. This display shows that the SensorStation is operating, the battery voltage and the number of CTT transmitter detections (Beeps).  Note that in the top bar the display shows “No Cable”.  This indicates that no Ethernet connection is available between the SensorStation board and a laptop computer.
-7. Insert a USB to Ethernet connector into one of the open USB ports on the SensorStation.
-
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ethernetConnected.png){#id .class width=50%}
-
-8. Connect your laptop to the SensorStation with an Ethernet cable.  Wait for the Inkyphat display to update.  Once the display updates you will see the IP address assigned to the combination of your laptop and SensorStation in the top bar of the display.  In this example the assigned IP address is 169.254.54.185.
-
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/pimoroni.cominkyphat.jpg){#id .class width=50%}
-
-9. Now you are ready to view the operating status of the SensorStation on two different, and necessary, web interfaces.  There are separate web interfaces for the CTT and Motus (Sensorgnome) systems.  Open your web browser and enter the IP address into the address bar to open a new web page.  The CTT web interface will open.
-
-
-10. If you have CTT LifeTags with you as test tags, they will show up as hits in the “Tags” window.  The Station summary on the right includes information similar to the header of the familiar Sensorgnome display.  The most important item is the “ID” number as that is needed to register the station with Motus.  It also includes the time of the last boot and a boot counter.  For more information on status scroll down through the display.  The additional information includes windows for each of the five CTT antenna ports.
-
-
-11. There is a section for data management that we can skip when setting up a station, 
-that section may be more useful to us in the future.  Just below data management there is a blue button “Sensorgnome Interface”.  Clicking on this button will open the familiar Sensorgnome web interface in a new window. 
-
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Data Management.png){#id .class width=75%}
+<!-- ## Initial Boot-up of a SensorStation -->
+<!-- * Switch power switch into the `ON` position -->
+<!-- * Wait for full boot-up (the LCD screen is the last thing to boot up, so once the LCD menu is visible, you are fully booted) -->
 
 
 
-12. FYI - you can edit the “deployment.txt” file in the provided box.  At the bottom of the box there is a red “Save Changes” button.  If you edit the deployment.txt file, do not forget to save your changes!  The “Reboot” button also works as expected and pressing it will reboot the SensorStation.
+
+<!-- *** -->
+
+<!-- # Appendix III: Qickstart Guide (SensorStation V1){#V1Quickstart} -->
+
+<!-- ***Courtesy of David Brinker*** -->
+
+<!-- ## Powering Up -->
+
+<!-- 1. Plug in power wires. -->
+<!--     a. Make sure the **ON/OFF** switch is in the `OFF` position. -->
+<!--     b. Locate the **Green power block** about an inch below the on ON/OFF switch. IT is marked with `POWER` on the left and `12VDC` on the right of the block. -->
+<!--     c. Make sure that the power source is properly connected to a solar charge controller or a 12VDC Power adapter and the wires are labeled or color coded to positive and negative. -->
+<!--     d. We recommend leaving the power disconnected while connecting the wires to the SensorStation. It also works better to install wires that are tinned with solder with about ¼” showing. -->
+<!--     f. Make sure the wires are not swapped! -->
+
+<!-- ![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/V3PowerIn.jpeg){#id .class width=25%} -->
+
+<!-- ## Initial Boot-up of a SensorStation -->
+
+<!-- 1. This is a simple set of instructions for the initial boot up of a SensorStation. -->
+<!-- Turn on the SensorStation using the slide switch on the left side of the SensorStation board. -->
+<!-- 2. The SensorStation board will show two constantly illuminated LEDs, an orange one and a green one on the left side of the board.  There will also be green and blue flashing LEDs. -->
+
+<!-- ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Battery.png){#id .class width=40%} -->
+
+<!-- 3. A normally operating SensorStation will present all four LEDs. -->
+<!-- 4. The Inkyphat display will show the CTT SensorStation welcome. -->
+
+<!-- ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/PI-HAT EXPANSION.png){#id .class width=50%} -->
+
+<!-- 5. The display normally updates every 90 seconds.  During initial boot-up the display update usually takes longer than 90 seconds.  Wait for the SensorStation to complete boot-up.  Once the display updates it will change to the default operating screen display. -->
+
+<!-- ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/EXPANSION.png){#id .class width=50%} -->
+
+<!-- 6. This display shows that the SensorStation is operating, the battery voltage and the number of CTT transmitter detections (Beeps).  Note that in the top bar the display shows “No Cable”.  This indicates that no Ethernet connection is available between the SensorStation board and a laptop computer. -->
+<!-- 7. Insert a USB to Ethernet connector into one of the open USB ports on the SensorStation. -->
+
+<!-- ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ethernetConnected.png){#id .class width=50%} -->
+
+<!-- 8. Connect your laptop to the SensorStation with an Ethernet cable.  Wait for the Inkyphat display to update.  Once the display updates you will see the IP address assigned to the combination of your laptop and SensorStation in the top bar of the display.  In this example the assigned IP address is 169.254.54.185. -->
+
+<!-- ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/pimoroni.cominkyphat.jpg){#id .class width=50%} -->
+
+<!-- 9. Now you are ready to view the operating status of the SensorStation on two different, and necessary, web interfaces.  There are separate web interfaces for the CTT and Motus (Sensorgnome) systems.  Open your web browser and enter the IP address into the address bar to open a new web page.  The CTT web interface will open. -->
 
 
-13. You can leave both the CTT web interface and the Sensorgnome web interface open at the same time in your web browser and switch back and forth as necessary.  The Sensorgnome web interface pretty much operates as expected.  Please note that SensorStations do not use the GPS’s clock to manage time and that you will always get the ***PPS missing*** warning on the Sensorgnome interface.
-
-***
-
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/am your Sensor Gnome.png){#id .class width=75%}
-
-***
-
-Clicking on “Sensor Station Interface” will open a new SensorStation page and move you to it.  It is generally easier to switch back and forth between pages rather than clicking on the words to keep opening new windows.
+<!-- 10. If you have CTT LifeTags with you as test tags, they will show up as hits in the “Tags” window.  The Station summary on the right includes information similar to the header of the familiar Sensorgnome display.  The most important item is the “ID” number as that is needed to register the station with Motus.  It also includes the time of the last boot and a boot counter.  For more information on status scroll down through the display.  The additional information includes windows for each of the five CTT antenna ports. -->
 
 
-14. You can set Funcube frequencies directly in the “Devices” window and most other functions should operate as expected.  Currently there is no way to upload a tag database to the SensorStation.
+<!-- 11. There is a section for data management that we can skip when setting up a station,  -->
+<!-- that section may be more useful to us in the future.  Just below data management there is a blue button “Sensorgnome Interface”.  Clicking on this button will open the familiar Sensorgnome web interface in a new window.  -->
+
+<!-- ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Data Management.png){#id .class width=75%} -->
 
 
-This should be enough to get us started and allow us to leave sites with confidence that the SensorStations are operating correctly.
+
+<!-- 12. FYI - you can edit the “deployment.txt” file in the provided box.  At the bottom of the box there is a red “Save Changes” button.  If you edit the deployment.txt file, do not forget to save your changes!  The “Reboot” button also works as expected and pressing it will reboot the SensorStation. -->
 
 
-***
+<!-- 13. You can leave both the CTT web interface and the Sensorgnome web interface open at the same time in your web browser and switch back and forth as necessary.  The Sensorgnome web interface pretty much operates as expected.  Please note that SensorStations do not use the GPS’s clock to manage time and that you will always get the ***PPS missing*** warning on the Sensorgnome interface. -->
+
+<!-- *** -->
+
+<!-- ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/am your Sensor Gnome.png){#id .class width=75%} -->
+
+<!-- *** -->
+
+<!-- Clicking on “Sensor Station Interface” will open a new SensorStation page and move you to it.  It is generally easier to switch back and forth between pages rather than clicking on the words to keep opening new windows. -->
 
 
-# Appendix IV: Materials List
+<!-- 14. You can set Funcube frequencies directly in the “Devices” window and most other functions should operate as expected.  Currently there is no way to upload a tag database to the SensorStation. -->
+
+
+<!-- This should be enough to get us started and allow us to leave sites with confidence that the SensorStations are operating correctly. -->
+
+
+<!-- *** -->
+
+
+# Appendix II: Materials List
 
 |  **Item** | **Group** | **Description** | **Part Number** | **Connection Type(s)** | **Number Required** | **Supplier Link** |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
