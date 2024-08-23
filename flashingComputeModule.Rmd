@@ -39,7 +39,7 @@ While CTT offers many over-the-air updates to your `CTT SensorStation` sometimes
 
 [Download Current Stable Disk Image](https://d25eksygu9dzud.cloudfront.net/sensor-station/images/sensor-station.latest.xz) (**Version ID: 1.2.2 Updated: 2024-08-23**)
 
-*This version is required if you are using the V3 version of the CTT Nodes, or the CTT BlūSeries Receiver.* **Note that you will also need to update your radio firmware to v4.0.0.** This is the default firmware for this disk image release. The radio firmware can now be updated directly from the LCD screen or the SensorStation Interface. **The Changelog can now be found here:** [changelog.json](https://github.com/cellular-tracking-technologies/sensor-station-software/blob/lts_24-06.iso/changelog.json)
+*This version is required if you are using the V3 version of the CTT Nodes, or the CTT BlūSeries Receiver.* **Note that you will also need to update your radio firmware to v4.0.0.** This is the default firmware for this disk image release. The radio firmware can now be updated directly from the LCD screen or the SensorStation Interface. **The Changelog can now be found here:** [changelog.json](https://raw.githubusercontent.com/cellular-tracking-technologies/sensor-station-software/lts_24-06.iso/changelog.json)
 
 
 *Note that once you update to the BETA Disk Image, in order to pick up V3 Nodes or BlūSeries tags, you will also need to update the radios on the SensorStation to V4.0.0 (the previous version was 3.0.1). You can do this via a push-button on the SensorStation interface, or via the LCD menu. Once you've done it, refresh your webpage and confirm that the five 434MHz radios are now reporting FW V4.0.0.*
