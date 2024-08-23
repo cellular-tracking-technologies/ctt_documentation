@@ -42,10 +42,13 @@ While CTT offers many over-the-air updates to your `CTT SensorStation` sometimes
 ### **V2 & V3 SensorStation BETA Disk Image**
 *This version is required if you are using the V3 version of the CTT Nodes, or the CTT BlūSeries Receiver.* **Note that you will also need to update your radio firmware to v4.0.0.** This is the default firmware for this disk image release. The radio firmware can now be updated directly from the LCD screen or the SensorStation Interface. See below for the `Changelog` and especially the `Unreleased` section for any known issues.
 
-[Download BETA Disk Image](https://s3.amazonaws.com/media.celltracktech.com/sensor-station/images/sensor-station.beta.xz) (**Version ID: 2024-08-15 Updated 2024-08-15**)
+[Download BETA Disk Image](https://s3.amazonaws.com/media.celltracktech.com/sensor-station/images/sensor-station.beta.xz) (**Version ID: 2024-08-21 Updated 2024-08-21**)
 
 **Note that once you update to the BETA Disk Image, in order to pick up V3 Nodes or BlūSeries tags, you will also need to update the radios on the SensorStation to V4.0.0 (the previous version was 3.0.1). You can do this via a push-button on the SensorStation interface, or via the LCD menu. Once you've done it, refresh your webpage and confirm that the five 434MHz radios are now reporting FW V4.0.0.**
 
+### Changelong for BETA Disk Image ID: `2024-08-21 Updated 2024-08-21`
+
+#### Added
 
 ### Changelog for BETA Disk Image ID: `2024-08-15 Updated 2024-08-15`
 
