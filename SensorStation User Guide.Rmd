@@ -73,35 +73,37 @@ CTT’s Internet of Wildlife System (IoW) is a complete radio telemetry system t
 
 The **CTT SensorStation** collect data directly from tags and can collect data from a series of `Nodes` to more precisely locate tags within a study site. The `SensorStation` stores data and, with an optional cellular data plan, can also send those data directly to the CTT and Motus servers. 
 
-<details>
-<summary>Click here to see the changelog.</summary>
+<!-- <details> -->
+<!-- <summary>Click here to see the changelog.</summary> -->
 
-```{r unordered_list, echo=FALSE, results='asis'}
+```{r, echo=FALSE, results='asis'}
 library("jsonlite")
 library("plotly")
 # library("yaml")
 
 # json_data = plotly_json(fromJSON("changelog.json"), jsonedit = TRUE)
 json_data = fromJSON("changelog.json")
-latest_version = json_data[1,4]
+
 for (version in c(1:nrow(json_data[1]))){
   for (feature in json_data[version, 4]) {
     for(bug in json_data[version,5]){
       
-    cat('-', json_data[version,1], '\n', 
-        paste('  - Date:', json_data[version,2], '\n'),
-        paste('  - Notes: ', json_data[version, 3], '\n'), 
-        paste('  - Features', '\n'),
-          paste('    -', feature, '\n'), '\n', 
-        paste('  - Bugs', '\n'),
-          paste('    -', bug, '\n'))
+    cat('##', 'Version: ', paste0(json_data[version,1], ','), format(as.Date(json_data[version,2]), '%B %d, %Y'), '\n')
+        # paste('  - Date:', json_data[version,2], '\n'),
+      cat('\n')
+        cat('### Patch Notes: ', json_data[version, 3], '\n')
+        cat('\n')
+        cat('### Features', '\n', paste('-', feature, '\n'))
+        cat('\n')
+        cat('### Bug Fixes', '\n', paste('-', bug, '\n'))
+        cat('\n')
     }
   }
 }
 
 # ![](changelog.json){#id .class width=100%}
 ```
-</details>
+<!-- </details> -->
 ## CTT Node
 
 **CTT Nodes** are essentially *mini-base stations*: devices with integrated solar panels, a lithium battery, and an antenna to collect data from 434MHz tags (V2 Nodes) or either 434MHz or 2.4GHz tags (V3 Nodes), and send those data to the **SensorStation**. These data can then be post-processed to localize tags within a grid of nodes over user-defined time steps.
