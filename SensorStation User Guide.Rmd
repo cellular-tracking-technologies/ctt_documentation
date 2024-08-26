@@ -1010,7 +1010,6 @@ library("jsonlite")
 library("plotly")
 library('RCurl')
 
-# json_data = fromJSON("changelog.json")
 json_file = getURL('https://raw.githubusercontent.com/cellular-tracking-technologies/sensor-station-software/lts_24-06.iso/changelog.json')
 
 json_data = fromJSON(json_file)
@@ -1031,5 +1030,4 @@ for (version in c(1:nrow(json_data))){ # only show first three updates
   }
 }
 
-# ![](changelog.json){#id .class width=100%}
 ```
