@@ -1008,9 +1008,12 @@ We are welcoming new collaborators and supporters each week! **For more informat
 ```{r, echo=FALSE, results='asis'}
 library("jsonlite")
 library("plotly")
-# library("yaml")
+library('RCurl')
 
-json_data = fromJSON("changelog.json")
+# json_data = fromJSON("changelog.json")
+json_file = getURL('https://raw.githubusercontent.com/cellular-tracking-technologies/sensor-station-software/lts_24-06.iso/changelog.json')
+
+json_data = fromJSON(json_file)
 
 for (version in c(1:nrow(json_data))){ # only show first three updates
   for (feature in json_data[version, 4]) {
