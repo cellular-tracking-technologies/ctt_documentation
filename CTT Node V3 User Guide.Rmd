@@ -70,6 +70,10 @@ Your Node comes with the hardware necessary to mount it to a piece of 3/4" condu
 2. Two (2) appropriately sized hose clamps for attaching your Node V3 to a mast (3/4" EMT conduit works well)
 3. Zip ties for securing loose cables from Solar-rechargeable power supply
 
+## Attach the antennas to the SMA ports on your Node
+
+**IT IS VERY IMPORTANT THAT, BEFORE** powering up your Nodes, you first attach antennas to the appropriate ports on the outside of the Node case. The 2.4GHz port is on the left, and the 434MHz port is on the right. If you are using the antennas shipped with your nodes, the longer one is the 2.4GHz antenna, and the shorter one is the 434MHz antenna.
+
 ## Attach the mounting hardware to your Node 
 
 Consult the photos below for a visual description of how the hardware is connected. In short, use the four screws to attach the mounting plates to the back of the Node V3. The top plate also has three holes in a triangle pattern which can be used for mounting the solar-rechargeable power supply. You can also decide to mount the power supply elsewhere if that's more convenient or better for recharging. 
@@ -77,6 +81,8 @@ Consult the photos below for a visual description of how the hardware is connect
 There are two rectangular cutouts on each of the mounting plates which can accommodate a hose clamp for wrapping and tightening around your mast material. Zip ties or other tools may be used as well. 
 
 ## Connect your power source to your Node
+
+**STOP!! Have you attached the antennas to the Node first? If not- DO SO before connecting power. Otherwise you may damage the 2.4GHz radio!**
 
 ![*How to connect the Node V3 to the Solar-rechargeable power supply*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_howToConnect.png){#id .class width=50%}
 
