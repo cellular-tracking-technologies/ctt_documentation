@@ -47,11 +47,15 @@ Your purchase of a CTT Sidekick comes with the following items:
 
 The new CTT Sidekick has many bells and whistles, but one of the core features is finding a tag in the field, whether on an active animal, or one which has fallen off or stopped moving. This quick-start guide will help you jump right into using the CTT Sidekick for these purposes. If you want to simply jump right in, proceed to the section on [Pairing with CTT Sidekick] with your CTT Sidekick. **Note that you must have installed the CTT Mobile App to proceed!**
 
-# The Hardware
+# Antennas
 
-## LED Indicators
+Your Sidekick comes with two omnidirectional antennas, one for 434MHz (10.5cm) and one for 2.4GHz (19.5cm). Depending on your application, you can use both antennas simultaneously, or you can opt to connect only one. Make sure to connect each antenna to it's corresponding port: **The longer antenna is for 2.4GHz devices while the shorter antenna is for 434MHz.** 
 
-To turn on your Sidekick, press and hold the Power Button. You will see LEDs 1 and 2 light up. There are three LED indicators:
+**BEFORE powering on your Sidekick, make sure to attach your antennas to the SMA ports on the top of the sidekick housing. Failure to do so may damage the internal radios and decrease functionality**. 
+
+# LED Indicators
+
+To turn on your Sidekick, **first ensure that your antennas are connected to the SMA ports**, then press and hold the Power Button. You will see LEDs 1 and 2 light up. There are three LED indicators:
 
 1. The `Pairing Indicator` blinks when searching for Bluetooth-enabled devices and stays solid when connected to a device.
 2. The `Tag Detection Indicator` blinks every time a tag is detected.
@@ -72,10 +76,6 @@ Each Sidekick contains a 1000 mA-hr LiPo rechargeable battery with integrated un
 You can check the status of your battery on the CTT Mobile app. Your Sidekick is fully charged at 4.2V. To charge your Sidekick, use the included USB charging cable. When plugged in, your Sidekick will automatically turn on if it's not already. The Pairing Indicator will blink as it searches for available devices (you can pair with your phone while charging). The Battery Charge Indicator will remain on (solid green) when the Sidekick is plugged in. The Battery Charge Indicator will *remain* on as long as the device is plugged in; it does not turn off once the Sidekick is fully charged. It's important to check the battery level through the CTT Mobile app. 
 
 <!-- Any idea how long it takes to charge? -->
-
-# Antennas
-
-Your Sidekick comes with two omnidirectional antennas, one for 434MHz (10.5cm) and one for 2.4GHz (19.5cm). Depending on your application, you can use both antennas simultaneously, or you can opt to connect only one. Make sure to connect each antenna to it's corresponding port: **The longer antenna is for 2.4GHz devices while the shorter antenna is for 434MHz.** 
 
 You may have purchased our optional Yagi antenna(s) and handle(s). These can used in place of the standard omni antenna by connecting them to their corresponding antenna port and sliding the Sidekick into the custom handle. 
 

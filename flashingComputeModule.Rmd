@@ -4,7 +4,7 @@ title: |
   <br />
   Flashing your SensorStation's Compute Module
 author: "support@celltracktech.com"
-date: "8/24/2024"
+date: "9/12/2024"
 output:
   html_document:
     toc: yes
@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Updating your SensorStation's Disk Image
 
-You can use your `CTT SensorStation` to burn a new operating system onto the compute module using a micro USB cable attached to your computer. Here is an article on raspbian's website with general instructions: [Flashing the Compute Module eMMC](https://www.raspberrypi.org/documentation/hardware/computemodule/cm-emmc-flashing.md). This page will summarize the steps needed to burn a New CTT SensorStation image to your compute module using the SensorStation hardware.
+You can use your `CTT SensorStation` to burn a new operating system onto the compute module using a micro USB cable attached to your computer. Here is an article on Raspbian's website with general instructions: [Flashing the Compute Module eMMC](https://www.raspberrypi.org/documentation/hardware/computemodule/cm-emmc-flashing.md). This page will summarize the steps needed to burn a New CTT SensorStation image to your compute module using the SensorStation hardware.
 
 ## Why flash my compute module? 
 
@@ -30,20 +30,24 @@ While CTT offers many over-the-air updates to your `CTT SensorStation` sometimes
 
 ## SensorStation Image Downloads
 
-### **V1 SensorStation Current Stable Image**
-*OTA Update enabled. Station health reports. RTL-SDR support. Pickup new Nodes / Tags with updated protocol.* 
-[Download Station Image](https://d25eksygu9dzud.cloudfront.net/sensor-station/d7522108-017e-11ea-86b6-784f43a7974d/sensor-station.2020-03-23.zip)
+**If you are running a V2 or V3 SensorStation, you will want the Long Term Stable image right below this text.**
 
 ### **V2 & V3 SensorStation Long Term Stable (LTS) Image**
 *Records Tag, GPS, SensorGnome, and Telemetry data. Compatible with BlūSeries Receiver and all BlūSeries infrastructure including V3 Nodes (with V4.0.0 or later Radio Firmware)*
 
-[Download Current LTS Disk Image](https://s3.amazonaws.com/media.celltracktech.com/sensor-station/images/sensor-station.latest.xz) (**Version ID: 1.2.2 Updated: 2024-08-23**)
+[Download Current LTS Disk Image](https://s3.amazonaws.com/media.celltracktech.com/sensor-station/images/sensor-station.latest.xz) (**Version ID: 1.3.0 Updated: 2024-09-10**)
 
 *This version is required if you are using the V3 version of the CTT Nodes, or the CTT BlūSeries Receiver.* **Note that you will also need to update your radio firmware to v4.0.0.** This is the default firmware for this disk image release. The radio firmware can now be updated directly from the LCD screen or the SensorStation Interface. **The Changelog can now be found here:** [changelog.json](https://raw.githubusercontent.com/cellular-tracking-technologies/sensor-station-software/lts_24-06.iso/changelog.json)
 
 
-### **Previous V2 & V3 Disk Images**
-[**05-01-2023 Disk Image**](https://s3.amazonaws.com/media.celltracktech.com/sensor-station/images/sensor-station.2023-05-01.zip) *Replaced by `Version 1.2.2 08-23-2024` linked above* **Default radio firmware for this older LTS image is v3.0.1 and is not compatible with CTT Node V3**.
+### **Old and Depreciated Disk Images**
+
+#### **V1 SensorStation Disk Image**
+*OTA Update enabled. Station health reports. RTL-SDR support. Pickup new Nodes / Tags with updated protocol.* 
+[Download Station Image](https://d25eksygu9dzud.cloudfront.net/sensor-station/d7522108-017e-11ea-86b6-784f43a7974d/sensor-station.2020-03-23.zip)
+
+#### **V2 and V3 SensorStation Disk Image**
+[*05-01-2023 Disk Image*](https://s3.amazonaws.com/media.celltracktech.com/sensor-station/images/sensor-station.2023-05-01.zip) **Replaced by `Version 1.2.2 08-23-2024` linked above** **Default radio firmware for this older LTS image is v3.0.1 and is not compatible with CTT Node V3**.
 
 
 ***
@@ -142,13 +146,16 @@ This indicates that the USB port has been opened, and your computer is waiting t
 7. The dialog box from `rpiboot` should disappear after displaying some messages and the module will be available as a new hard drive. (**Do not auto-fix as windows may suggest!**)
 8. Run `Raspberry Pi Imager`
 
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/rpiimager.PNG){#id .class width=50%}
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/rpi imager main.png){#id .class width=50%}
 
-9. Click the button under `Operating System` and navigate to the SensorStation image file you saved (it's a `.zip` file), and select it.
-10. Click the button under `SD Card` and select your Raspberry Pi compute module as the target. `example: RPi-MSGD- 0001 - 7.8 GB`
-11. Click the `WRITE` button to flash the disk image.
+9.  for `Raspberry Pi Device` you can just leave it as-is.
+10. Click the button under `Operating System` and scroll down to the very bottom to `Use Custom`. Click on it and choose to the SensorStation image file you saved (it's a `.zip` or `.xz` file), and select it.
+11. Click the button under `Storage` and select your Raspberry Pi compute module as the target. `example: RPi-MSGD- 0001 - 7.8 GB`
+12. Click the `NEXT` button.
+13. If asked about applying OS customization settings, choose `NO`; if asked whether it's okay to erase the disk, choose `YES`. At this point the flashing should start.
   *   This will take a while, but once the image is written you will get a success message and the process is complete. 
-12. Move the **USB Boot Jumper Pin** to the `DISABLED` position (to the `right` 1 pin, for horizontally placed pins, or `up` 1 pin for vertically placed pins). 
-13. Restart your SensorStation and you're good to go!
+13. Move the **USB Boot Jumper Pin** to the `DISABLED` position (to the `right` 1 pin, for horizontally placed pins, or `up` 1 pin for vertically placed pins). 
+14. Restart your SensorStation, connect to the station via ethernet, and open the SensorStation Interface. 
+15. If needed, update the radio firmware to the latest version, either via the web GUI or through the LCD menu. Once updated, confirm all five 434MHz radio have taken the radio update from the SensorStation Interface.
 
 *_Of course, as always, if you have any issue please don't hesitate to email us at support@celltracktech.com._*
