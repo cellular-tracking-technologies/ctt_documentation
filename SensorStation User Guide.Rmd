@@ -1,6 +1,6 @@
 ---
 title: |
-  ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png){width=3in}  
+  ![](images/ctt_logo.png){width=3in}  
   <br />
   Installation Guide for the CTT SensorStation and CTT Nodes
 author: "support@celltracktech.com"
@@ -12,6 +12,10 @@ output:
 ---
 
 ```{r setup, include=FALSE}
+library("jsonlite")
+library("plotly")
+
+# json_data = plotly_json(fromJSON("changelog.json"), jsonedit = TRUE)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -50,7 +54,7 @@ If you are setting up your SensorStation to participate in the Motus Wildlife Tr
 # SensorStation Precautions
 Treat your SensorStation board like you would any other motherboard, Arduino or Raspberry Pi. All electronics, no matter how robust, can be static sensitive. Take care no metal objects touch the board while it is operating, such as antenna connectors or cellular antennas, as this could cause electrical shorts that will damage the board. It is advised to wear an anti-static bracelet when handling SensorStation.
 
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/attention.png){#id .class width=25%}
+![](images/attention.png){#id .class width=25%}
 
 # Setting up your CTT IoW System
 
@@ -118,7 +122,7 @@ The detection distance from **SensorStation to Tag** is affected by the same fac
 
 For both the SensorStation and Nodes we recommend attaching to **EMT conduit**.  We recommend this because it is rigid and easy to set up. This is *not* what’s commonly referred to as *Black Pipe* used for water and gas lines, but the **galvanized steel pipe** used for running electrical wiring inside. 
 
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/EMT.png){#id .class width=25%}
+![](images/EMT.png){#id .class width=25%}
 
 ### Building a mast for your SensorStation
 
@@ -126,7 +130,7 @@ For both the SensorStation and Nodes we recommend attaching to **EMT conduit**. 
 
 The conduit can be attached to a tripod, mounted directly into the ground, or onto a building or other structure. The Nodes and SensorStations are then attached to the conduit. The diameter of the conduit is typically 1” for the top mast section of the SensorStation (the section to which the antennas are attached; light green in the picture below).
 
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/SSinstall.png){#id .class width=25%}
+![](images/SSinstall.png){#id .class width=25%}
 
 For every 7 feet of height the base section will increase in diameter by ¼”. For example, in the picture above, a 15 foot mast will have a 1” section (light green) inserted into a 1 ¼” (orange) and then into a 1 ½” (blue). If the conduit is inserted into the ground, the 1 ½” conduit should be inserted into a 4’ section of 2” pipe (dark green). The pipe in the ground is cut in half, the bottom flattened slightly with sledge hammer to keep soil from entering when it is driven into the ground. A block of wood can be used to pound the pipe into the ground to prevent bending the pipe.  If the antenna mast is shorter,  the next size up gets driven into the ground (1/ ¼”). Note that standard EMT conduit does eventually rust, however it will remain very strong for 6-10 years. 
 
@@ -145,12 +149,12 @@ If desired, stainless conduit can be purchased, however it is much more expensiv
 
 Nodes are typically attached to the top of a ¾” piece of EMT. The clamps shown below come standard with the nodes and accept ¾ or 1” conduit. 
 
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/nodeClamp.jpg){#id .class width=25%}
+![](images/nodeClamp.jpg){#id .class width=25%}
 
 A 7/16” socket is used to tighten the clamp bolts. The EMT is typically driven into the ground approximately 2 feet. The height of the nodes can be changed depending on the project, but for best results should be consistent within a study site. We recommend 8’ for most setups, see below for pictures of the node setup in the field. If you choose an alternate mounting method, care should be taken that they are secure. If they are mounted on anything that sways greatly with the wind, the readings won’t be consistent. 
 
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/nodeBernh.jpg){#id .class width=25%}
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/NodeBernh2.jpg){#id .class width=25%}
+![](images/nodeBernh.jpg){#id .class width=25%}
+![](images/NodeBernh2.jpg){#id .class width=25%}
 
 **Note:** ***Nodes purchased in 2020 and beyond have a built-in GPS. Prior to 2020 you must take accurate GPS readings and record that data with the Node ID in order to run post-hoc localization analyses.***
 
@@ -163,7 +167,7 @@ Setting up the CTT Nodes is typically done in a grid in your study site. It is n
 
 If you are using Nodes, your SensorStation may be placed anywhere within range of the farthest node, which is typically 1km. See the next section on SensorStation Configuration and Antenna Detail for more details on this. It is recommended to place the SensorStation antennas at least 10 meters above the ground level. The higher the antennas, the better range you will get.
 
-![*Theoretical setup with SensorStation (diamond) in the middle of two node grids (colored circle markers). All nodes are within 1.5km of the SensorStation (black circle)*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/SensorStationNodeSetup.png){#id .class width=25%}
+![*Theoretical setup with SensorStation (diamond) in the middle of two node grids (colored circle markers). All nodes are within 1.5km of the SensorStation (black circle)*](images/SensorStationNodeSetup.png){#id .class width=25%}
 
 ## SensorStation Configuration and Antenna Detail
 
@@ -175,7 +179,7 @@ Two types of antennas are commonly used with the SensorStation: *Omnidirectional
 
 *Yagis are directional antennas* used to detect tags and nodes in a specific direction from the SensorStation. They *typically have a 30-60 degree detection range that extends away from the SensorStation*. For that reason typically 2-4 antennas are used, one pointed in each cardinal direction, or two pointed in opposite directions and used to make a “fence”. Yagis can also be used to pick up Nodes that are farther away from the SensorStation.
 
-![*This is another 434MHz-only station with four Yagi antennas for picking up tags and a single verticle omni to pick up the 50 nodes on site. The large white rectangular antenna is a 900MHz antenna used to retrieve data from a custom ES-200 GPS logger tag.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/WetlandsStation_NJ.png){#id .class width=25%}
+![*This is another 434MHz-only station with four Yagi antennas for picking up tags and a single verticle omni to pick up the 50 nodes on site. The large white rectangular antenna is a 900MHz antenna used to retrieve data from a custom ES-200 GPS logger tag.*](images/WetlandsStation_NJ.png){#id .class width=25%}
 
 While there are many antennas to choose from, these are a few that we can recommend from experience:
 
@@ -194,7 +198,7 @@ While there are many antennas to choose from, these are a few that we can recomm
     
 *__Whatever you choose, make sure you get the proper coaxial end to connect your antenna to your SensorStation!__*
 
-![*Here is a dual-mode station in Bermuda, where four 434MHz Yagis are in the top plane, and five 166MHz Yagis are in the bottom plane. Mounting antennas in plane this way means you don't need to worry about stacking distances. This station is not listening for nodes, so all antennas are set to detect tags.*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/BermudaDualMode.jpg){#id .class width=25%}
+![*Here is a dual-mode station in Bermuda, where four 434MHz Yagis are in the top plane, and five 166MHz Yagis are in the bottom plane. Mounting antennas in plane this way means you don't need to worry about stacking distances. This station is not listening for nodes, so all antennas are set to detect tags.*](images/BermudaDualMode.jpg){#id .class width=25%}
 
 ### Connecting antennas to your SensorStation
 
@@ -208,11 +212,11 @@ If connecting an antenna for a different frequency, such as 166MHz, you will nee
 
 Antennas are attached to the EMT conduit with the clamps that come with the antennas. If you have a setup that uses 4 yagis, than you will attach the yagis to a 4 or 5-way mounting “hat” you can purchase via online retailers.  Once the antennas are on EMT, attach the coax and wrap the connection with coax tape. Run down the poles to where it will attach to the SensorStation. You can use zip ties to secure the coax to poles where needed. 
 
-![*Example of a 434MHz-only station, with four directional Yagi antennas (programmed to pick up tags), one small "horseshoe omni" (programmed to pick up the 21 nodes on site) barely visible at the very top of the antenna mast, and a little weather station broken out to the side from the top of the mast. Note the drip loop under the station box!*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/MeadowsStation_NJ.png){#id .class width=25%}
+![*Example of a 434MHz-only station, with four directional Yagi antennas (programmed to pick up tags), one small "horseshoe omni" (programmed to pick up the 21 nodes on site) barely visible at the very top of the antenna mast, and a little weather station broken out to the side from the top of the mast. Note the drip loop under the station box!*](images/MeadowsStation_NJ.png){#id .class width=25%}
 
 Make sure you have enough coax to form a drip loop for each connection.
 
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/diagram_drip-loop.jpg){#id .class width="25%"}
+![](images/diagram_drip-loop.jpg){#id .class width="25%"}
 
 ### Adding an optional LTE extender
 
@@ -222,22 +226,22 @@ Typically, these cell booster antennas have an SMA male connector that needs to 
 
 Alternatively, you could attach a `U.FL to SMA adapter` *(see fig below)* directly to the `Main` port on the modem, and connect the SMA connector on the booster cable directly to the adapter, bypassing the need to jump to the board and not using the SMA port on the board itself. This option might be preferred if you use a U.FL to SMA bulkhead, which you can mount to the side or bottom of your case, allowing you to create a weatherproof access point to connect an external antenna to the outside of your SensorStation case.
 
-![U.FL jumper cable](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/cellboost_uflJumper.png){#id .class width="50%"}
+![U.FL jumper cable](images/cellboost_uflJumper.png){#id .class width="50%"}
 
-![U.FL to SMA adapter cable](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/cellboost_uflToSmaAdapter.png){#id .class width="50%"}
+![U.FL to SMA adapter cable](images/cellboost_uflToSmaAdapter.png){#id .class width="50%"}
 
-![LTE modem with ports identified. Note that in this image the standard patch antenna that ships with the SensorStation is currently connected to the `main` port on the modem.](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/cellboost_modemPortID.png){#id .class width="50%"}
+![LTE modem with ports identified. Note that in this image the standard patch antenna that ships with the SensorStation is currently connected to the `main` port on the modem.](images/cellboost_modemPortID.png){#id .class width="50%"}
 
 
 * `Pink circle`: `Main` `U.FL` port on LTE modem (currently occupied)
 * `Blue rectangle`: `J6` `U.FL` port on board
 * `Red square`: `J7` `SMA` port on board
 
-![To jump the `main` port on the LTE modem to the U.FL port at `J6` on the SensorStation board, first remove the antenna that comes with the SensorStation](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/cellboost_mainOpen.png){#id .class width="50%"}
+![To jump the `main` port on the LTE modem to the U.FL port at `J6` on the SensorStation board, first remove the antenna that comes with the SensorStation](images/cellboost_mainOpen.png){#id .class width="50%"}
 
-![Option 1: LTE modem with jumper cable attaching `main` on the modem to `J6` on the SensorStation board, therefore activating the SMA port at `J7`. Now the Cell Booster antenna can be attached to the SMA port at `J7`](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/cellboost_uflJumperConnected.png){#id .class width="50%"}
+![Option 1: LTE modem with jumper cable attaching `main` on the modem to `J6` on the SensorStation board, therefore activating the SMA port at `J7`. Now the Cell Booster antenna can be attached to the SMA port at `J7`](images/cellboost_uflJumperConnected.png){#id .class width="50%"}
 
-![Option 2: LTE modem connected directly to U.FL to SMA adapter, which allows to connect directly to a Cell Booster antenna without using `J6` or `J7` on the board](/Users/davidlapuma/Downloads/cellboost_uflToSmaConnected.JPG){#id .class width="50%"}
+![Option 2: LTE modem connected directly to U.FL to SMA adapter, which allows to connect directly to a Cell Booster antenna without using `J6` or `J7` on the board](Downloads/cellboost_uflToSmaConnected.JPG){#id .class width="50%"}
 
 ### Adding an Iridium Antenna for Iridium-enabled Stations
 
@@ -261,8 +265,8 @@ The SensorStation can be placed inside a building, or fastened to the pole or bu
 
 The SensorStation can be connected directly to a 12V DC power source, via a charge controller, or to an AC to DC power supply which can then be plugged directly into your standard AC power source. In many cases, though, SensorStations are deployed remotely and are in need of a remote power supply such as a solar charged deep-cycle marine battery. A typical setup would be a 100W solar panel connected to a charge controller. The charge controller typically has 3 ports. The 3 ports are 1.) Solar panel 2.) 12V battery 3.) Accessory/Device/consumer, which, in this case, is your SensorStation. That line goes into the green *Power In* terminal on the SensorStation board. The positive and negative wire ports are labeled on the board, and to insert the wire simply loosen the set screws on the top, and slide the wire leads in to the holes just under the set screws (see the pictures below; note for V1 stations see the [QuickStart Guide in Appendix II](#V1Quickstart)). 
 
-![Power not connected](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/V3NoPower.jpeg){#id .class width="20%"}
-![Power connected](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/V3PowerIn.jpeg){#id .class width="20%"}
+![Power not connected](images/V3NoPower.jpeg){#id .class width="20%"}
+![Power connected](images/V3PowerIn.jpeg){#id .class width="20%"}
 
 The ends of the wires that are attached should be tinned with solder for best results. If you do not have access to a soldering gun, twisting the ends of the cables tightly will help them slide in cleanly to the power block. 
 
@@ -313,7 +317,7 @@ The SensorStation features 4 navigation buttons labeled `UP`, `DN`, `BACK` and `
 
 - `Station Stats` - This image provides a quick glimpse of the station health, including whether WiFi is on, the Cellular Modem is on, the Battery/Power level, Solar Charging (if a solar monitor is connected), and Temperature.
 
-![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/LCD_StationStats.JPG){#id .class width="20%"}
+![](images/LCD_StationStats.JPG){#id .class width="20%"}
 
 - `File Transfer`
 	- `Mount USB` - mounts a properly formatted (FAT-32 or MS-DOS) USB drive to the SensorStation.
@@ -785,9 +789,9 @@ This User Guide is a living document. Your experiences and input are greatly app
 ***
 # Appendix I: Leveraging your CTT Infrastructure with Motus {#appendix_1}
 
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/motus-logo.png){#id .class width=10%}
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/BirdsCanadaLogo.png){#id .class width=10%}
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo_300DPI.jpg){#id .class width=15%}
+![](images/motus-logo.png){#id .class width=10%}
+![](images/BirdsCanadaLogo.png){#id .class width=10%}
+![](images/ctt_logo_300DPI.jpg){#id .class width=15%}
 
 ## The Motus Wildlife Tracking System
 
@@ -916,7 +920,7 @@ We are welcoming new collaborators and supporters each week! **For more informat
 <!--     d. We recommend leaving the power disconnected while connecting the wires to the SensorStation. It also works better to install wires that are tinned with solder with about ¼” showing. -->
 <!--     f. Make sure the wires are not swapped! -->
 
-<!-- ![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/V3PowerIn.jpeg){#id .class width=25%} -->
+<!-- ![](images/V3PowerIn.jpeg){#id .class width=25%} -->
 
 <!-- ## Initial Boot-up of a SensorStation -->
 
@@ -924,25 +928,25 @@ We are welcoming new collaborators and supporters each week! **For more informat
 <!-- Turn on the SensorStation using the slide switch on the left side of the SensorStation board. -->
 <!-- 2. The SensorStation board will show two constantly illuminated LEDs, an orange one and a green one on the left side of the board.  There will also be green and blue flashing LEDs. -->
 
-<!-- ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Battery.png){#id .class width=40%} -->
+<!-- ![](images/Battery.png){#id .class width=40%} -->
 
 <!-- 3. A normally operating SensorStation will present all four LEDs. -->
 <!-- 4. The Inkyphat display will show the CTT SensorStation welcome. -->
 
-<!-- ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/PI-HAT EXPANSION.png){#id .class width=50%} -->
+<!-- ![](images/PI-HAT EXPANSION.png){#id .class width=50%} -->
 
 <!-- 5. The display normally updates every 90 seconds.  During initial boot-up the display update usually takes longer than 90 seconds.  Wait for the SensorStation to complete boot-up.  Once the display updates it will change to the default operating screen display. -->
 
-<!-- ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/EXPANSION.png){#id .class width=50%} -->
+<!-- ![](images/EXPANSION.png){#id .class width=50%} -->
 
 <!-- 6. This display shows that the SensorStation is operating, the battery voltage and the number of CTT transmitter detections (Beeps).  Note that in the top bar the display shows “No Cable”.  This indicates that no Ethernet connection is available between the SensorStation board and a laptop computer. -->
 <!-- 7. Insert a USB to Ethernet connector into one of the open USB ports on the SensorStation. -->
 
-<!-- ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ethernetConnected.png){#id .class width=50%} -->
+<!-- ![](images/ethernetConnected.png){#id .class width=50%} -->
 
 <!-- 8. Connect your laptop to the SensorStation with an Ethernet cable.  Wait for the Inkyphat display to update.  Once the display updates you will see the IP address assigned to the combination of your laptop and SensorStation in the top bar of the display.  In this example the assigned IP address is 169.254.54.185. -->
 
-<!-- ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/pimoroni.cominkyphat.jpg){#id .class width=50%} -->
+<!-- ![](images/pimoroni.cominkyphat.jpg){#id .class width=50%} -->
 
 <!-- 9. Now you are ready to view the operating status of the SensorStation on two different, and necessary, web interfaces.  There are separate web interfaces for the CTT and Motus (Sensorgnome) systems.  Open your web browser and enter the IP address into the address bar to open a new web page.  The CTT web interface will open. -->
 
@@ -953,7 +957,7 @@ We are welcoming new collaborators and supporters each week! **For more informat
 <!-- 11. There is a section for data management that we can skip when setting up a station,  -->
 <!-- that section may be more useful to us in the future.  Just below data management there is a blue button “Sensorgnome Interface”.  Clicking on this button will open the familiar Sensorgnome web interface in a new window.  -->
 
-<!-- ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/Data Management.png){#id .class width=75%} -->
+<!-- ![](images/Data Management.png){#id .class width=75%} -->
 
 
 
@@ -964,7 +968,7 @@ We are welcoming new collaborators and supporters each week! **For more informat
 
 <!-- *** -->
 
-<!-- ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/am your Sensor Gnome.png){#id .class width=75%} -->
+<!-- ![](images/am your Sensor Gnome.png){#id .class width=75%} -->
 
 <!-- *** -->
 
@@ -998,3 +1002,34 @@ We are welcoming new collaborators and supporters each week! **For more informat
 |  L | Node | Mast | Many | The EMT for the SensorStation (2, 1.5, 1 1/4, 1 ) |  | [Link](https://www.lowes.com/pd/Common-3-4-in-Actual-75-In-Metallic-Emt-10-ft-Conduit/3129553) |
 |  M | Mounting Mast | Clamp |  | This should be the size of the bottom section of your mast- usually 1 ¼ to 2” |  | [Link](https://www.lowes.com/search?searchTerm=universal+strut+pipe+strap) |
 |  N | Mounting Mast | Mounting Rail | Can be useful for mounting EMT mas on building or | Two 2-3’ sections |  | [Link](https://www.lowes.com/search?searchTerm=superstrut+gold-galvanized+half+slot+channel+strut) |
+
+# Appendix III: Latest Sensor Station Updates
+
+```{r, echo=FALSE, results='asis'}
+library("jsonlite")
+library("plotly")
+library('RCurl')
+
+json_file = getURL('https://raw.githubusercontent.com/cellular-tracking-technologies/sensor-station-software/lts_24-06.iso/changelog.json')
+
+json_data = fromJSON(json_file)
+
+for (version in c(1:2)){ # only show first three updates
+  for (feature in json_data[version, 4]) {
+    for(bug in json_data[version,5]){
+      
+    cat('##', paste0('`', 'v', json_data[version,1], '`', ','), format(as.Date(json_data[version,2]), '%B %d, %Y'), '{-}', '\n')
+      cat('\n')
+        cat('### Patch Notes: ', '{-}', '\n', paste('-', json_data[version, 3], '\n'))
+        cat('\n')
+        cat('### Features', '{-}', '\n', paste('-', feature, '\n'))
+        cat('\n')
+        cat('### Bug Fixes', '{-}', '\n', paste('-', bug, '\n'))
+        cat('\n')
+    }
+  }
+}
+
+```
+
+## Full update changelog can be found [here.](CTT-Sensor-Station-Changelog.html)
