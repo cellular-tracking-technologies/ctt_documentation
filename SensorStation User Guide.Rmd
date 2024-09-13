@@ -1032,4 +1032,5 @@ for (version in c(1:2)){ # only show first three updates
 
 ```
 
-## Full update changelog can be found [here.](CTT-Sensor-Station-Changelog.html)
+## Full update changelog can be found [here](CTT-Sensor-Station-Changelog.html). {-}
+

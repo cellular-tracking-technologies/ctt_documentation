@@ -1,10 +1,15 @@
 ---
-title: "CTT Sensor Station Changelog"
-author: "Meelyn M. Pandit"
-date: "`r Sys.Date()`"
-output: html_document
+title: |
+  ![](images/ctt_logo.png){width=3in}  
+  <br />
+  Sensor Station Software Changelog
+author: "support@celltracktech.com"
+date: "9/13/2024"
+output:
+  html_document:
+    toc: yes
+    number_sections: yes
 ---
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library("jsonlite")
@@ -13,17 +18,13 @@ library('RCurl')
 
 ```
 
-## Sensor Station Changelog
-
-Full Sensor Station changelog
-
 ```{r, echo=FALSE, results='asis'}
 
 json_file = getURL('https://raw.githubusercontent.com/cellular-tracking-technologies/sensor-station-software/lts_24-06.iso/changelog.json')
 
 json_data = fromJSON(json_file)
 
-for (version in c(1:nrow(json_data))){ # only show first three updates
+for (version in c(1:nrow(json_data))){
   for (feature in json_data[version, 4]) {
     for(bug in json_data[version,5]){
       
