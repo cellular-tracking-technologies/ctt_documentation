@@ -127,7 +127,7 @@ This indicates that the USB port has been opened, and your computer is waiting t
 ## Steps to Burn a New Image
 
 1. Ensure the SensorStation power is turned `OFF`
-2. Move the **USB Boot Jumper Pin** to the `ENABLED` position (to the `left` 1 pin, for horizontally placed pins, or `down` 1 pin for vertically placed pins). 
+2. Ensure the **USB Boot Jumper Pin** is in the `ENABLED` position (to the `left` 1 pin, for horizontally placed pins, or `down` 1 pin for vertically placed pins). We ship most stations with the pin in the `ENABLED` position, but if it's not, then go ahead and move it.
 
 * *Note: The location of your USB Boot Jumper may vary, and is typically vertically placed near the lower left corner of the Raspberry Pi module on V1 boards, or horizontally placed just above the power switch on V2 boards.*
 
