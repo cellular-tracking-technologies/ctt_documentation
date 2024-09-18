@@ -1,0 +1,29 @@
+---
+title: "SensorStation Terminal Commands"
+author: "Meelyn M. Pandit"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Terminal commands
+
+If you are able to SSH into your Sensor Station (either over the internet or through a point-to-point connection), you can run these commands in your Mac or Linux terminal (or in GitBash, WSL in Windows).
+
+## IP Address
+
+Find your station's IP (internet protocol) address
+
+```ifconfig```
+
+If you are connected to the internet through WiFi, your IP address will be under the wlan0 field.
+
+ ```wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+ inet 10.1.11.53  netmask 255.255.254.0  broadcast 10.1.11.255```
+
+If you are connected through ethernet, you IP address will be under the eth0 field.
+
+
