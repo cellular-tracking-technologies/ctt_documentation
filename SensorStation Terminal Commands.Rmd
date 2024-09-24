@@ -1,8 +1,14 @@
 ---
-title: "SensorStation Terminal Commands"
-author: "Meelyn M. Pandit"
-date: "`r Sys.Date()`"
-output: html_document
+title: |
+  ![](images/ctt_logo.png){width=3in}  
+  <br />
+  Sensor Station Terminal Commands
+author: "support@celltracktech.com"
+date: "9/24/2024"
+output:
+  html_document:
+    toc: yes
+    number_sections: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -13,8 +19,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 If you are able to SSH into your Sensor Station (either over the internet or through a point-to-point connection), you can run these commands in your Mac or Linux terminal (or in GitBash, WSL in Windows).
 
-## IP Address
-
 Find your station's IP (internet protocol) address
 
 ```ifconfig | grep -a 'wlan0' -A 1 | grep -a 'inet'```
@@ -24,8 +28,6 @@ If you are connected to the internet through WiFi, your IP address will be next 
 ```ifconfig | grep -a 'eth0' -A 1 | grep -a 'inet'```
 
 If you are connected through ethernet, you IP address will be under the eth0 field, next to the phrase "inet".
-
-## Cellular Ids
 
 ```mmcli -m 0 | grep -a "model"```
 
