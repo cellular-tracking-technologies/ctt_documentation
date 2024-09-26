@@ -228,10 +228,10 @@ Using the CTT Sidekick and the CTT Mobile App we can measure the RSSI values at 
     * Once complete, the Fit Parameter can be saved and reloaded for future localizations.
     
     
-![](/Users/davidlapuma/Downloads/CalibrateRSSIvsDistance.png){#id .class width=25%}
+![](./images/CalibrateRSSIvsDistance.png){#id .class width=25%}
 
 
-![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation_old/images/distVsRssi_collection1.png){#id .class width=25%}
+![](./images/distVsRssi_collection1.png){#id .class width=25%}
 
 
 ## RSSI vs.  Distance Fit Parameters
