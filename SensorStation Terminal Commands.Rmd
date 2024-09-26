@@ -1,0 +1,157 @@
+---
+title: |
+  ![](images/ctt_logo.png){width=3in}  
+  <br />
+  Sensor Station Terminal Commands
+author: "support@celltracktech.com"
+date: "9/24/2024"
+output:
+  html_document:
+    toc: yes
+    number_sections: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Terminal commands
+
+If you are able to SSH into your Sensor Station (either over the internet or through a point-to-point connection), you can run these commands in your Mac or Linux terminal (or in GitBash, WSL in Windows).
+
+Find your station's IP (internet protocol) address
+
+```ifconfig | grep -a 'wlan0' -A 1 | grep -a 'inet'```
+
+If you are connected to the internet through WiFi, your IP address will be next to the phrase "inet".
+
+```ifconfig | grep -a 'eth0' -A 1 | grep -a 'inet'```
+
+If you are connected through ethernet, you IP address will be under the eth0 field, next to the phrase "inet".
+
+```mmcli -m 0 | grep -a "model"```
+
+Provides Modem model name.
+
+```mmcli -m 0 | grep -a "imei"```
+
+Provides Modem International Mobile Equipment Identity (IMEI).
+
+```mmcli -m 0 | grep -a "operator name"```
+
+Provides Cell Modem Carrier Info.
+
+Enable WiFi:
+```/bin/bash /lib/ctt/sensor-station-software/system/scripts/enable-wifi.sh```
+
+Disable WiFi:
+
+```/bin/bash /lib/ctt/sensor-station-software/system/scripts/disable-wifi.sh```
+
+Update 434 MHz Radios to current firmware:
+
+```sudo program-radios /lib/ctt/sensor-station-software/system/radios/fw/ss_v4.0.0.hex```
+
+Cell Modem Signal Quality (%)
+
+```mmcli -m 0 | grep -a 'signal quality'```
+
+Enable Cell Modem:
+
+```/bin/bash /lib/ctt/sensor-station-software/system/scripts/enable-modem.sh```
+
+Disable Cell Modem:
+
+```/bin/bash /lib/ctt/sensor-station-software/system/scripts/disable-modem.sh```
+
+Station ID:
+
+``` cat /etc/ctt/station-id```
+
+Station Image:
+
+```cat /etc/ctt/station-image```
+
+Hardware - Real Time Clock (RTC) Time
+
+```sudo hwclock -r```
+
+Restart:
+
+```sudo reboot```
+
+Bash Update Station:
+
+```bash bash-update-station```
+
+Obtain Hostname
+
+```hostname```
+
+Display Total, Used, and Free Memory (RAM):
+
+```free -h```
+
+Display Disk Space Usage:
+
+```df -h```
+
+Display Uptime
+
+```uptime```
+
+Ping:
+
+```ping 8.8.8.8``` #Need to clarify this!!!
+
+Run these bash commands to access additional LCD options:
+
+```
+{
+    "reboot_schedule_info": "curl -s 'http://localhost:3000/control/reboot-schedule'",
+    "update_reboot_schedule": "curl -s 'http://localhost:3000/control/update-reboot-schedule'",
+    "gps": "curl -s 'http://localhost:3000/gps'",
+    "station_id": "curl -s 'http://localhost:3000/id'",
+    "station_revision": "curl -s 'http://localhost:3000/revision'",
+    "about": "curl -s 'http://localhost:3000/about'",
+    "node_version": "curl -s 'http://localhost:3000/node/version'",
+    "gateway": "curl -s 'http://localhost:3000/internet/gateway'",
+    "status": "curl -s 'http://localhost:3000/internet/status'",
+    "enable_wifi": "curl -s 'http://localhost:3000/internet/enable-wifi'",
+    "disable_wifi": "curl -s 'http://localhost:3000/internet/disable-wifi'",
+    "pending_upload": "curl -s 'http://localhost:3000/internet/pending-upload'",
+    "wifi-networks": "curl -s 'http://localhost:3000/internet/wifi-networks'",
+    "modem_info": "curl -s 'http://localhost:3000/modem'",
+    "get_ppp": "curl -s 'http://localhost:3000/modem/ppp'",
+    "peripherals": "curl -s 'http://localhost:3000/peripherals'",
+    "program_radios": "curl -s 'http://localhost:3000/program-radios'",
+    "qaqc": "curl -s 'http://localhost:3000/radio/qaqc'",
+    "config": "curl -s 'http://localhost:3000/radio/config'",
+    "checkin": "curl -s 'http://localhost:3000/radio/checkin'",
+    "temperature": "curl -s 'http://localhost:3000/sensor/temperature'",
+    "voltage": "curl -s 'http://localhost:3000/sensor/voltages'",
+    "details": "curl -s 'http://localhost:3000/sensor/details'",
+    "usb_drive": "curl -s 'http://localhost:3000/usb'",
+    "usb_mount": "curl -s 'http://localhost:3000/usb/mount'",
+    "unmount_usb": "curl -s 'http://localhost:3000/usb/unmount'",
+    "download_data": "curl -s 'http://localhost:3000/usb/data'",
+    "upload_wifi": "curl -s 'http://localhost:3000/usb/wifi'"
+}
+```
+
+To acceses these curl commands, in your Sensor Station terminal window copy and paste the following script followed by the the command you want.
+
+```bash /lib/ctt/sensor-station-software/system/scripts/lcd-options/run-lcd-options.sh *command*```
+
+For example, if you want to get the battery and solar voltages from your Sensor Station, run:
+
+```bash /lib/ctt/sensor-station-software/system/scripts/lcd-options/run-lcd-options.sh voltage```
+
+and you will get a JSON object with the respective voltages:
+
+```{
+   "battery" : "11.61",
+   "rtc" : -1,
+   "solar" : "0.10"
+}
+```
