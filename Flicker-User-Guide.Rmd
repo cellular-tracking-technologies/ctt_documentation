@@ -4,14 +4,14 @@ title: |
   <br />
   Flicker GPS User Guide
 author: "support@celltracktech.com"
-date: "2/23/2024"
+date: "9/25/2024"
 output:
-  pdf_document:
-    toc: yes
-    fig_caption: true
   html_document:
     toc: yes
     number_sections: yes
+  pdf_document:
+    toc: yes
+    fig_caption: true
 ---
 
 ```{r setup, include=FALSE}
@@ -77,6 +77,10 @@ From the app and the portal you can:
 * View and graph various parameters of the unit including battery voltage, solar volatage, connection time, Activity, and more
 * Make configuration changes and schedule them to upload to the transmitter at the next connection
 * Download to a csv file
+
+![Flicker GPS Config Builder: Daily Scheduler. One connection and GPS fix can be assigned to a specific time of each day.](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation_old/images/CTTMobile_FlickerGPS_DailyConfig.jpg){#id .class width=75%} 
+![Flicker GPS Config Builder: Cell Connection Scheduler. Multiple schedules can be created here based on battery level and day/night or both.](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation_old/images/CTTMobile_FlickerGPS_ConnectionConfig.jpg){#id .class width=75%} 
+![Flicker GPS Config Builder: GPS Scheduler. Multiple schedules can be created here based on battery level and day/night or both.](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation_old/images/CTTMobile_FlickerGPS_GPSConfig.jpg){#id .class width=75%} 
 
 # Preparing Your Unit for Deployment
 
