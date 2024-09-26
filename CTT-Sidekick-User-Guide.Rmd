@@ -208,20 +208,40 @@ At the top of the Localization screen are four grid size options, `500m`, `300m`
 ![Example of optimal Sidekick orientation for using localization](./images/localization_orientation.png){#id .class width=50%}
 
 
-## Calibrating RSSI vs.  Distance
+## Calibrating RSSI vs. Distance
 ![Example of tag calibration attenuation](./images/calibration_atten_diagram.png){#id .class width=50%}
 
 ![](./images/sidekick_calibrateTag.PNG){#id .class width=25%}
 
+### Characterizing the RSSI vs. Distance Relationship for a Given Tag
+
+Using the CTT Sidekick and the CTT Mobile App we can measure the RSSI values at various distances from a stationary tag. In doing so we can derive a fit parameter that can be used again later for re-finding that tag using the `Localization` function.
+
+***NOTE: It is REQUIRED to keep the CTT Mobile App running in the foreground during the entire data collection period, otherwise the recording will stop and no data will be recorded.***
+
+* Utilizing the `Calibrate RSSI vs. Distance` feature
+    * Place the tag in a fixed location and click the `Set Tag Location` button at the bottom of the `Calibrate RSSI vs. Distance` screen
+    * Walk multiple tracks towards and away from the tag in different directions to acquire the data (see figure below)
+    * App will record all beeps and calculate current distance from tag
+    * Data are shown on plot below the map and written to CSV for further analysis
+    * Locations of beep detections are indicated by points on the map which are colored based on the RSSI at that location
+    * Once complete, the Fit Parameter can be saved and reloaded for future localizations.
+    
+    
+![](/Users/davidlapuma/Downloads/CalibrateRSSIvsDistance.png){#id .class width=25%}
+
+
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation_old/images/distVsRssi_collection1.png){#id .class width=25%}
+
 
 ## RSSI vs.  Distance Fit Parameters
 
-![](./images/sk_localization_choose_alg.PNG){#id .class width=25%}
+![](./images/sk_localization_choose_alg.png){#id .class width=25%}
 
-![](./images/sk_localization_chooseParam.PNG){#id .class width=25%}
-![](./images/sk_localization_chooseModel.PNG){#id .class width=25%}
-![](./images/sk_localization_paramDesc.PNG){#id .class width=25%}
-![](./images/sk_localization_ParamSets.PNG){#id .class width=25%}
+![](./images/sk_localization_chooseParam.png){#id .class width=25%}
+![](./images/sk_localization_chooseModel.png){#id .class width=25%}
+![](./images/sk_localization_paramDesc.png){#id .class width=25%}
+![](./images/sk_localization_ParamSets.png){#id .class width=25%}
 
 
 ## Firmware Updates
