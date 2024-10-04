@@ -1,6 +1,6 @@
 ---
 title: |
-  ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png){width=3in}  
+  ![](images/ctt_logo.png){width=3in}  
   <br />
   Flashing your SensorStation's Compute Module
 author: "support@celltracktech.com"
@@ -131,22 +131,24 @@ This indicates that the USB port has been opened, and your computer is waiting t
 
 * *Note: The location of your USB Boot Jumper may vary, and is typically vertically placed near the lower left corner of the Raspberry Pi module on V1 boards, or horizontally placed just above the power switch on V2 boards.*
 
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/boot_enabled2.png){#id .class width=25%}
+![](images/boot_enabled2.png){#id .class width=25%}
 
 3. Run `rpiboot.exe` which was installed from the previous step. From windows, you can search `rpiboot` to find it.
 
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/search_rpiboot.png){#id .class width=50%}
+![](images/search_rpiboot.png){#id .class width=50%}
 
 4. Running `rpiboot` will pop up a console showing a wait message waiting for the module to be detected: 
 
-![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/run-rpiboot.png){#id .class width=50%}
+![](images/run-rpiboot.png){#id .class width=50%}
+
+**WARNING: Your Windows machine may give you warnings stating to format the RPi Module. YOU DO NOT NEED TO DO THIS! Ignore these messages and continue onto step 5.**
 
 5. Plug the micro-USB cable into the SensorStation, and into your computer.
 6. Power on the SensorStation.
 7. The dialog box from `rpiboot` should disappear after displaying some messages and the module will be available as a new hard drive. (**Do not auto-fix as windows may suggest!**)
 8. Run `Raspberry Pi Imager`
 
-![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/rpi imager main.png){#id .class width=50%}
+![](images/rpi imager main.png){#id .class width=50%}
 
 9.  for `Raspberry Pi Device` you can just leave it as-is.
 10. Click the button under `Operating System` and scroll down to the very bottom to `Use Custom`. Click on it and choose to the SensorStation image file you saved (it's a `.zip` or `.xz` file), and select it.
