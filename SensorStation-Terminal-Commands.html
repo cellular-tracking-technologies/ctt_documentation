@@ -358,101 +358,333 @@ display: none;
 
 <div id="TOC">
 <ul>
-<li><a href="#terminal-commands" id="toc-terminal-commands"><span class="toc-section-number">1</span> Terminal commands</a></li>
+<li><a href="#terminal-commands" id="toc-terminal-commands"><span class="toc-section-number">1</span> Terminal commands</a>
+<ul>
+<li><a href="#internet" id="toc-internet"><span class="toc-section-number">1.1</span> Internet</a>
+<ul>
+<li><a href="#ip-address" id="toc-ip-address"><span class="toc-section-number">1.1.1</span> IP Address</a></li>
+<li><a href="#enabledisable-wifi" id="toc-enabledisable-wifi"><span class="toc-section-number">1.1.2</span> Enable/Disable WiFi</a></li>
+</ul></li>
+<li><a href="#cellular-modem" id="toc-cellular-modem"><span class="toc-section-number">1.2</span> Cellular Modem</a>
+<ul>
+<li><a href="#modem-model" id="toc-modem-model"><span class="toc-section-number">1.2.1</span> Modem Model</a></li>
+<li><a href="#modem-model-name" id="toc-modem-model-name"><span class="toc-section-number">1.2.2</span> Modem model name</a></li>
+<li><a href="#modem-carrier-information" id="toc-modem-carrier-information"><span class="toc-section-number">1.2.3</span> Modem Carrier
+Information</a></li>
+<li><a href="#modem-signal-quality" id="toc-modem-signal-quality"><span class="toc-section-number">1.2.4</span> Modem Signal Quality
+(%)</a></li>
+<li><a href="#enable-cell-modem" id="toc-enable-cell-modem"><span class="toc-section-number">1.2.5</span> Enable Cell Modem:</a></li>
+<li><a href="#disable-cell-modem" id="toc-disable-cell-modem"><span class="toc-section-number">1.2.6</span> Disable Cell Modem:</a></li>
+</ul></li>
+<li><a href="#system" id="toc-system"><span class="toc-section-number">1.3</span> System</a>
+<ul>
+<li><a href="#update-434-mhz-radios-to-current-firmware" id="toc-update-434-mhz-radios-to-current-firmware"><span class="toc-section-number">1.3.1</span> Update 434 MHz Radios to current
+firmware</a></li>
+<li><a href="#station-id" id="toc-station-id"><span class="toc-section-number">1.3.2</span> Station ID</a></li>
+<li><a href="#station-image" id="toc-station-image"><span class="toc-section-number">1.3.3</span> Station Image</a></li>
+<li><a href="#real-time-clock-rtc-time" id="toc-real-time-clock-rtc-time"><span class="toc-section-number">1.3.4</span> Real Time Clock (RTC)
+Time</a></li>
+<li><a href="#restart" id="toc-restart"><span class="toc-section-number">1.3.5</span> Restart</a></li>
+<li><a href="#bash-update-station" id="toc-bash-update-station"><span class="toc-section-number">1.3.6</span> Bash Update Station</a></li>
+<li><a href="#hostname" id="toc-hostname"><span class="toc-section-number">1.3.7</span> Hostname</a></li>
+<li><a href="#memory-ram" id="toc-memory-ram"><span class="toc-section-number">1.3.8</span> Memory (RAM)</a></li>
+<li><a href="#disk-space" id="toc-disk-space"><span class="toc-section-number">1.3.9</span> Disk Space</a></li>
+<li><a href="#uptime" id="toc-uptime"><span class="toc-section-number">1.3.10</span> Uptime</a></li>
+<li><a href="#ping" id="toc-ping"><span class="toc-section-number">1.3.11</span> Ping</a></li>
+</ul></li>
+<li><a href="#run-the-lcd-commands-from-the-terminal" id="toc-run-the-lcd-commands-from-the-terminal"><span class="toc-section-number">1.4</span> Run the LCD commands from the
+Terminal</a></li>
+</ul></li>
 </ul>
 </div>
 
 <div id="terminal-commands" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Terminal commands</h1>
 <p>If you are able to SSH into your Sensor Station (either over the
-internet or through a point-to-point connection), you can run these
-commands in your Mac or Linux terminal (or in GitBash, WSL in
-Windows).</p>
-<p>Find your station’s IP (internet protocol) address</p>
-<p><code>ifconfig | grep -a &#39;wlan0&#39; -A 1 | grep -a &#39;inet&#39;</code></p>
-<p>If you are connected to the internet through WiFi, your IP address
-will be next to the phrase “inet”.</p>
-<p><code>ifconfig | grep -a &#39;eth0&#39; -A 1 | grep -a &#39;inet&#39;</code></p>
-<p>If you are connected through ethernet, you IP address will be under
-the eth0 field, next to the phrase “inet”.</p>
-<p><code>mmcli -m 0 | grep -a &quot;model&quot;</code></p>
-<p>Provides Modem model name.</p>
-<p><code>mmcli -m 0 | grep -a &quot;imei&quot;</code></p>
-<p>Provides Modem International Mobile Equipment Identity (IMEI).</p>
-<p><code>mmcli -m 0 | grep -a &quot;operator name&quot;</code></p>
-<p>Provides Cell Modem Carrier Info.</p>
-<p>Enable WiFi:
-<code>/bin/bash /lib/ctt/sensor-station-software/system/scripts/enable-wifi.sh</code></p>
-<p>Disable WiFi:</p>
-<p><code>/bin/bash /lib/ctt/sensor-station-software/system/scripts/disable-wifi.sh</code></p>
-<p>Update 434 MHz Radios to current firmware:</p>
-<p><code>sudo program-radios /lib/ctt/sensor-station-software/system/radios/fw/ss_v4.0.0.hex</code></p>
-<p>Cell Modem Signal Quality (%)</p>
-<p><code>mmcli -m 0 | grep -a &#39;signal quality&#39;</code></p>
-<p>Enable Cell Modem:</p>
-<p><code>/bin/bash /lib/ctt/sensor-station-software/system/scripts/enable-modem.sh</code></p>
-<p>Disable Cell Modem:</p>
-<p><code>/bin/bash /lib/ctt/sensor-station-software/system/scripts/disable-modem.sh</code></p>
-<p>Station ID:</p>
-<p><code>cat /etc/ctt/station-id</code></p>
-<p>Station Image:</p>
-<p><code>cat /etc/ctt/station-image</code></p>
-<p>Hardware - Real Time Clock (RTC) Time</p>
-<p><code>sudo hwclock -r</code></p>
-<p>Restart:</p>
-<p><code>sudo reboot</code></p>
-<p>Bash Update Station:</p>
-<p><code>bash bash-update-station</code></p>
-<p>Obtain Hostname</p>
-<p><code>hostname</code></p>
-<p>Display Total, Used, and Free Memory (RAM):</p>
-<p><code>free -h</code></p>
-<p>Display Disk Space Usage:</p>
-<p><code>df -h</code></p>
-<p>Display Uptime</p>
-<p><code>uptime</code></p>
-<p>Ping:</p>
-<p><code>ping 8.8.8.8</code> #Need to clarify this!!!</p>
-<p>Run these bash commands to access additional LCD options:</p>
-<pre><code>{
-    &quot;reboot_schedule_info&quot;: &quot;curl -s &#39;http://localhost:3000/control/reboot-schedule&#39;&quot;,
-    &quot;update_reboot_schedule&quot;: &quot;curl -s &#39;http://localhost:3000/control/update-reboot-schedule&#39;&quot;,
-    &quot;gps&quot;: &quot;curl -s &#39;http://localhost:3000/gps&#39;&quot;,
-    &quot;station_id&quot;: &quot;curl -s &#39;http://localhost:3000/id&#39;&quot;,
-    &quot;station_revision&quot;: &quot;curl -s &#39;http://localhost:3000/revision&#39;&quot;,
-    &quot;about&quot;: &quot;curl -s &#39;http://localhost:3000/about&#39;&quot;,
-    &quot;node_version&quot;: &quot;curl -s &#39;http://localhost:3000/node/version&#39;&quot;,
-    &quot;gateway&quot;: &quot;curl -s &#39;http://localhost:3000/internet/gateway&#39;&quot;,
-    &quot;status&quot;: &quot;curl -s &#39;http://localhost:3000/internet/status&#39;&quot;,
-    &quot;enable_wifi&quot;: &quot;curl -s &#39;http://localhost:3000/internet/enable-wifi&#39;&quot;,
-    &quot;disable_wifi&quot;: &quot;curl -s &#39;http://localhost:3000/internet/disable-wifi&#39;&quot;,
-    &quot;pending_upload&quot;: &quot;curl -s &#39;http://localhost:3000/internet/pending-upload&#39;&quot;,
-    &quot;wifi-networks&quot;: &quot;curl -s &#39;http://localhost:3000/internet/wifi-networks&#39;&quot;,
-    &quot;modem_info&quot;: &quot;curl -s &#39;http://localhost:3000/modem&#39;&quot;,
-    &quot;get_ppp&quot;: &quot;curl -s &#39;http://localhost:3000/modem/ppp&#39;&quot;,
-    &quot;peripherals&quot;: &quot;curl -s &#39;http://localhost:3000/peripherals&#39;&quot;,
-    &quot;program_radios&quot;: &quot;curl -s &#39;http://localhost:3000/program-radios&#39;&quot;,
-    &quot;qaqc&quot;: &quot;curl -s &#39;http://localhost:3000/radio/qaqc&#39;&quot;,
-    &quot;config&quot;: &quot;curl -s &#39;http://localhost:3000/radio/config&#39;&quot;,
-    &quot;checkin&quot;: &quot;curl -s &#39;http://localhost:3000/radio/checkin&#39;&quot;,
-    &quot;temperature&quot;: &quot;curl -s &#39;http://localhost:3000/sensor/temperature&#39;&quot;,
-    &quot;voltage&quot;: &quot;curl -s &#39;http://localhost:3000/sensor/voltages&#39;&quot;,
-    &quot;details&quot;: &quot;curl -s &#39;http://localhost:3000/sensor/details&#39;&quot;,
-    &quot;usb_drive&quot;: &quot;curl -s &#39;http://localhost:3000/usb&#39;&quot;,
-    &quot;usb_mount&quot;: &quot;curl -s &#39;http://localhost:3000/usb/mount&#39;&quot;,
-    &quot;unmount_usb&quot;: &quot;curl -s &#39;http://localhost:3000/usb/unmount&#39;&quot;,
-    &quot;download_data&quot;: &quot;curl -s &#39;http://localhost:3000/usb/data&#39;&quot;,
-    &quot;upload_wifi&quot;: &quot;curl -s &#39;http://localhost:3000/usb/wifi&#39;&quot;
-}</code></pre>
-<p>To acceses these curl commands, in your Sensor Station terminal
-window copy and paste the following script followed by the the command
-you want.</p>
-<p><code>bash /lib/ctt/sensor-station-software/system/scripts/lcd-options/run-lcd-options.sh *command*</code></p>
+internet or through a point-to-point connection), you can type or
+copy/paste these commands in your Mac or Linux terminal (or in GitBash,
+WSL in Windows).</p>
+<div id="internet" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Internet</h2>
+<div id="ip-address" class="section level3" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> IP Address</h3>
+<dl>
+<dt>To find your IP station’s Internet Protocol (IP) address:</dt>
+<dd>
+<code>ifconfig</code>
+</dd>
+</dl>
+<div id="wifi" class="section level4" number="1.1.1.1">
+<h4><span class="header-section-number">1.1.1.1</span> WiFi</h4>
+<dl>
+<dt>To obtain the IP address of your WiFi connection run the command
+below; your IP address will be next to the phrase “inet”:</dt>
+<dd>
+<code>ifconfig | grep -a &#39;wlan0&#39; -A 1 | grep -a &#39;inet&#39;</code>
+</dd>
+</dl>
+</div>
+<div id="ethernet" class="section level4" number="1.1.1.2">
+<h4><span class="header-section-number">1.1.1.2</span> Ethernet</h4>
+<dl>
+<dt>To obtain the IP address of your ethernet connection, run the
+command below; your IP address will be next to the phrase “inet”:</dt>
+<dd>
+<code>ifconfig | grep -a &#39;eth0&#39; -A 1 | grep -a &#39;inet&#39;</code>
+</dd>
+</dl>
+</div>
+</div>
+<div id="enabledisable-wifi" class="section level3" number="1.1.2">
+<h3><span class="header-section-number">1.1.2</span> Enable/Disable
+WiFi</h3>
+<p>For stations running FunCubes or other 166MHz radios, you may need to
+disable the WiFi module for the radios to work properly.</p>
+<div id="enable-wifi" class="section level4" number="1.1.2.1">
+<h4><span class="header-section-number">1.1.2.1</span> Enable WiFi</h4>
+<dl>
+<dt>To enable the WiFi module:</dt>
+<dd>
+<code>/bin/bash /lib/ctt/sensor-station-software/system/scripts/enable-wifi.sh</code>
+</dd>
+</dl>
+</div>
+<div id="disable-wifi" class="section level4" number="1.1.2.2">
+<h4><span class="header-section-number">1.1.2.2</span> Disable WiFi</h4>
+<dl>
+<dt>To disable the WiFi module:</dt>
+<dd>
+<code>/bin/bash /lib/ctt/sensor-station-software/system/scripts/disable-wifi.sh</code>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div id="cellular-modem" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Cellular Modem</h2>
+<div id="modem-model" class="section level3" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> Modem Model</h3>
+<dl>
+<dt>To obtain the cellular modem model name:</dt>
+<dd>
+<code>mmcli -m 0 | grep -a &quot;model&quot;</code>
+</dd>
+</dl>
+</div>
+<div id="modem-model-name" class="section level3" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> Modem model
+name</h3>
+<dl>
+<dt>To obtain the Modem International Mobile Equipment Identity
+(IMEI):</dt>
+<dd>
+<code>mmcli -m 0 | grep -a &quot;imei&quot;</code>
+</dd>
+</dl>
+</div>
+<div id="modem-carrier-information" class="section level3" number="1.2.3">
+<h3><span class="header-section-number">1.2.3</span> Modem Carrier
+Information</h3>
+<dl>
+<dt>To obtain the modem carrier information:</dt>
+<dd>
+<code>mmcli -m 0 | grep -a &quot;operator name&quot;</code>
+</dd>
+</dl>
+</div>
+<div id="modem-signal-quality" class="section level3" number="1.2.4">
+<h3><span class="header-section-number">1.2.4</span> Modem Signal
+Quality (%)</h3>
+<dl>
+<dt>To obtain the modem signal quality:</dt>
+<dd>
+<code>mmcli -m 0 | grep -a &#39;signal quality&#39;</code>
+</dd>
+</dl>
+</div>
+<div id="enable-cell-modem" class="section level3" number="1.2.5">
+<h3><span class="header-section-number">1.2.5</span> Enable Cell
+Modem:</h3>
+<p>For stations running FunCubes or other 166MHz radios, you may need to
+disable the modem module for the radios to work properly.</p>
+<dl>
+<dt>To enable the cell modem:</dt>
+<dd>
+<code>/bin/bash /lib/ctt/sensor-station-software/system/scripts/enable-modem.sh</code>
+</dd>
+</dl>
+</div>
+<div id="disable-cell-modem" class="section level3" number="1.2.6">
+<h3><span class="header-section-number">1.2.6</span> Disable Cell
+Modem:</h3>
+<dl>
+<dt>To disable the cell modem:</dt>
+<dd>
+<code>/bin/bash /lib/ctt/sensor-station-software/system/scripts/disable-modem.sh</code>
+</dd>
+</dl>
+</div>
+</div>
+<div id="system" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> System</h2>
+<div id="update-434-mhz-radios-to-current-firmware" class="section level3" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> Update 434 MHz
+Radios to current firmware</h3>
+<dl>
+<dt>To update the 434 MHz radios:</dt>
+<dd>
+<code>sudo program-radios /lib/ctt/sensor-station-software/system/radios/fw/ss_v4.0.0.hex</code>
+</dd>
+</dl>
+</div>
+<div id="station-id" class="section level3" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> Station ID</h3>
+<dl>
+<dt>To obtain the station ID:</dt>
+<dd>
+<code>cat /etc/ctt/station-id</code>
+</dd>
+</dl>
+</div>
+<div id="station-image" class="section level3" number="1.3.3">
+<h3><span class="header-section-number">1.3.3</span> Station Image</h3>
+<dl>
+<dt>To obtain the station image version:</dt>
+<dd>
+<code>cat /etc/ctt/station-image</code>
+</dd>
+</dl>
+</div>
+<div id="real-time-clock-rtc-time" class="section level3" number="1.3.4">
+<h3><span class="header-section-number">1.3.4</span> Real Time Clock
+(RTC) Time</h3>
+<dl>
+<dt>To obtain the station time based on the RTC:</dt>
+<dd>
+<code>sudo hwclock -r</code>
+</dd>
+</dl>
+</div>
+<div id="restart" class="section level3" number="1.3.5">
+<h3><span class="header-section-number">1.3.5</span> Restart</h3>
+<dl>
+<dt>To restart the station:</dt>
+<dd>
+<code>sudo reboot</code>
+</dd>
+</dl>
+</div>
+<div id="bash-update-station" class="section level3" number="1.3.6">
+<h3><span class="header-section-number">1.3.6</span> Bash Update
+Station</h3>
+<dl>
+<dt>To update the station with a bash script:</dt>
+<dd>
+<code>bash bash-update-station</code>
+</dd>
+</dl>
+</div>
+<div id="hostname" class="section level3" number="1.3.7">
+<h3><span class="header-section-number">1.3.7</span> Hostname</h3>
+<dl>
+<dt>To obtain the station hostname</dt>
+<dd>
+<code>hostname</code>
+</dd>
+</dl>
+</div>
+<div id="memory-ram" class="section level3" number="1.3.8">
+<h3><span class="header-section-number">1.3.8</span> Memory (RAM)</h3>
+<dl>
+<dt>To display the total, used, and free memory:</dt>
+<dd>
+<code>free -h</code>
+</dd>
+</dl>
+</div>
+<div id="disk-space" class="section level3" number="1.3.9">
+<h3><span class="header-section-number">1.3.9</span> Disk Space</h3>
+<dl>
+<dt>To display the disk space usage:</dt>
+<dd>
+<code>df -h</code>
+</dd>
+</dl>
+</div>
+<div id="uptime" class="section level3" number="1.3.10">
+<h3><span class="header-section-number">1.3.10</span> Uptime</h3>
+<dl>
+<dt>To display how long the station has been running:</dt>
+<dd>
+<code>uptime</code>
+</dd>
+</dl>
+</div>
+<div id="ping" class="section level3" number="1.3.11">
+<h3><span class="header-section-number">1.3.11</span> Ping</h3>
+<dl>
+<dt>To ping the station server:</dt>
+<dd>
+<code>ping 8.8.8.8</code>
+</dd>
+</dl>
+</div>
+</div>
+<div id="run-the-lcd-commands-from-the-terminal" class="section level2" number="1.4">
+<h2><span class="header-section-number">1.4</span> Run the LCD commands
+from the Terminal</h2>
+<p>If your LCD screen is not working properly, you can still access most
+of the information displayed by the LCD screen by running the following
+script:</p>
+<dl>
+<dt>Run these bash commands to access additional LCD options:</dt>
+<dd>
+<code>bash /lib/ctt/sensor-station-software/system/scripts/lcd-options/run-lcd-options.sh *command*</code>
+</dd>
+</dl>
 <p>For example, if you want to get the battery and solar voltages from
 your Sensor Station, run:</p>
 <p><code>bash /lib/ctt/sensor-station-software/system/scripts/lcd-options/run-lcd-options.sh voltage</code></p>
 <p>and you will get a JSON object with the respective voltages:</p>
-<p><code>{    &quot;battery&quot; : &quot;11.61&quot;,    &quot;rtc&quot; : -1,    &quot;solar&quot; : &quot;0.10&quot; }</code></p>
+<pre class="json"><code>{
+   &quot;battery&quot; : &quot;11.61&quot;,
+   &quot;rtc&quot; : -1,
+   &quot;solar&quot; : &quot;0.10&quot;
+}</code></pre>
+<dl>
+<dt>Commands:</dt>
+<dd>
+<ul>
+<li>reboot_schedule_info</li>
+<li>gps</li>
+<li>station_id</li>
+<li>about</li>
+<li>node_version</li>
+<li>gateway</li>
+<li>status</li>
+<li>enable_wifi</li>
+<li>disable_wifi</li>
+<li>pending_upload</li>
+<li>wifi-networks</li>
+<li>modem_info</li>
+<li>get_ppp</li>
+<li>peripherals</li>
+<li>program_radios</li>
+<li>qaqc</li>
+<li>config</li>
+<li>checkin</li>
+<li>temperature</li>
+<li>voltage</li>
+<li>details</li>
+<li>usb_drive</li>
+<li>usb_mount</li>
+<li>unmount_usb</li>
+<li>download_data</li>
+<li>upload_wifi</li>
+</ul>
+</dd>
+</dl>
+</div>
 </div>
 
 

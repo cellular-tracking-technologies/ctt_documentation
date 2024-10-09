@@ -17,141 +17,151 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Terminal commands
 
-If you are able to SSH into your Sensor Station (either over the internet or through a point-to-point connection), you can run these commands in your Mac or Linux terminal (or in GitBash, WSL in Windows).
+If you are able to SSH into your Sensor Station (either over the internet or through a point-to-point connection), you can type or copy/paste these commands in your Mac or Linux terminal window (if you are using Windows, you will need to download GitBash or WSL).
 
-Find your station's IP (internet protocol) address
+## Internet
 
-```ifconfig | grep -a 'wlan0' -A 1 | grep -a 'inet'```
+### IP Address
+To find your IP station's Internet Protocol (IP) address:
+: ```ifconfig```
 
-If you are connected to the internet through WiFi, your IP address will be next to the phrase "inet".
+#### WiFi
+To obtain the IP address of your WiFi connection run the command below; your IP address will be next to the phrase "inet": 
+: ```ifconfig | grep -a 'wlan0' -A 1 | grep -a 'inet'```
 
-```ifconfig | grep -a 'eth0' -A 1 | grep -a 'inet'```
+#### Ethernet
+To obtain the IP address of your ethernet connection, run the command below; your IP address will be next to the phrase "inet":
+: ```ifconfig | grep -a 'eth0' -A 1 | grep -a 'inet'```
 
-If you are connected through ethernet, you IP address will be under the eth0 field, next to the phrase "inet".
+### Enable/Disable WiFi
+For stations running FunCubes or other 166MHz radios, you may need to disable the WiFi module for the radios to work properly.
 
-```mmcli -m 0 | grep -a "model"```
+#### Enable WiFi
+To enable the WiFi module:
+: ```/bin/bash /lib/ctt/sensor-station-software/system/scripts/enable-wifi.sh```
 
-Provides Modem model name.
+#### Disable WiFi
+To disable the WiFi module:
+: ```/bin/bash /lib/ctt/sensor-station-software/system/scripts/disable-wifi.sh```
 
-```mmcli -m 0 | grep -a "imei"```
+## Cellular Modem
 
-Provides Modem International Mobile Equipment Identity (IMEI).
+### Modem Model
+To obtain the cellular modem model name:
+: ```mmcli -m 0 | grep -a "model"```
 
-```mmcli -m 0 | grep -a "operator name"```
+### Modem model name
+To obtain the Modem International Mobile Equipment Identity (IMEI):
+: ```mmcli -m 0 | grep -a "imei"```
 
-Provides Cell Modem Carrier Info.
+### Modem Carrier Information
+To obtain the modem carrier information:
+: ```mmcli -m 0 | grep -a "operator name"```
 
-Enable WiFi:
-```/bin/bash /lib/ctt/sensor-station-software/system/scripts/enable-wifi.sh```
+### Modem Signal Quality (%)
+To obtain the modem signal quality:
+: ```mmcli -m 0 | grep -a 'signal quality'```
 
-Disable WiFi:
+### Enable Cell Modem:
+For stations running FunCubes or other 166MHz radios, you may need to disable the modem module for the radios to work properly.
 
-```/bin/bash /lib/ctt/sensor-station-software/system/scripts/disable-wifi.sh```
+To enable the cell modem:
+: ```/bin/bash /lib/ctt/sensor-station-software/system/scripts/enable-modem.sh```
 
-Update 434 MHz Radios to current firmware:
+### Disable Cell Modem:
+To disable the cell modem:
+: ```/bin/bash /lib/ctt/sensor-station-software/system/scripts/disable-modem.sh```
 
-```sudo program-radios /lib/ctt/sensor-station-software/system/radios/fw/ss_v4.0.0.hex```
+## System
+### Update 434 MHz Radios to current firmware
+To update the 434 MHz radios:
+: ```sudo program-radios /lib/ctt/sensor-station-software/system/radios/fw/ss_v4.0.0.hex```
 
-Cell Modem Signal Quality (%)
+### Station ID
+To obtain the station ID:
+: ``` cat /etc/ctt/station-id```
 
-```mmcli -m 0 | grep -a 'signal quality'```
+### Station Image
+To obtain the station image version:
+: ```cat /etc/ctt/station-image```
 
-Enable Cell Modem:
+### Real Time Clock (RTC) Time
+To obtain the station time based on the RTC:
+: ```sudo hwclock -r```
 
-```/bin/bash /lib/ctt/sensor-station-software/system/scripts/enable-modem.sh```
+### Restart
+To restart the station:
+: ```sudo reboot```
 
-Disable Cell Modem:
+### Bash Update Station
+To update the station with a bash script:
+: ```bash bash-update-station```
 
-```/bin/bash /lib/ctt/sensor-station-software/system/scripts/disable-modem.sh```
+### Hostname
+To obtain the station hostname
+: ```hostname```
 
-Station ID:
+### Memory (RAM)
+To display the total, used, and free memory: 
+: ```free -h```
 
-``` cat /etc/ctt/station-id```
+### Disk Space
+To display the disk space usage:
+: ```df -h```
 
-Station Image:
+### Uptime
+To display how long the station has been running:
+: ```uptime```
 
-```cat /etc/ctt/station-image```
+### Ping
+To ping the station server:
+: ```ping 8.8.8.8```
 
-Hardware - Real Time Clock (RTC) Time
+## Run the LCD commands from the Terminal
 
-```sudo hwclock -r```
+If your LCD screen is not working properly, you can still access most of the information displayed by the LCD screen by accessing the station hardware server from the terminal window. First, change the working director to:
+: ```cd /lib/ctt/sensor-station-software```
 
-Restart:
+Then, run the following line of code:
+: ```npm run lcd-option command```
 
-```sudo reboot```
+Replace the word command with one of the words from the list below. For example, if you want to get the battery and solar voltages from your Sensor Station, run:
 
-Bash Update Station:
-
-```bash bash-update-station```
-
-Obtain Hostname
-
-```hostname```
-
-Display Total, Used, and Free Memory (RAM):
-
-```free -h```
-
-Display Disk Space Usage:
-
-```df -h```
-
-Display Uptime
-
-```uptime```
-
-Ping:
-
-```ping 8.8.8.8``` #Need to clarify this!!!
-
-Run these bash commands to access additional LCD options:
-
-```
-{
-    "reboot_schedule_info": "curl -s 'http://localhost:3000/control/reboot-schedule'",
-    "update_reboot_schedule": "curl -s 'http://localhost:3000/control/update-reboot-schedule'",
-    "gps": "curl -s 'http://localhost:3000/gps'",
-    "station_id": "curl -s 'http://localhost:3000/id'",
-    "station_revision": "curl -s 'http://localhost:3000/revision'",
-    "about": "curl -s 'http://localhost:3000/about'",
-    "node_version": "curl -s 'http://localhost:3000/node/version'",
-    "gateway": "curl -s 'http://localhost:3000/internet/gateway'",
-    "status": "curl -s 'http://localhost:3000/internet/status'",
-    "enable_wifi": "curl -s 'http://localhost:3000/internet/enable-wifi'",
-    "disable_wifi": "curl -s 'http://localhost:3000/internet/disable-wifi'",
-    "pending_upload": "curl -s 'http://localhost:3000/internet/pending-upload'",
-    "wifi-networks": "curl -s 'http://localhost:3000/internet/wifi-networks'",
-    "modem_info": "curl -s 'http://localhost:3000/modem'",
-    "get_ppp": "curl -s 'http://localhost:3000/modem/ppp'",
-    "peripherals": "curl -s 'http://localhost:3000/peripherals'",
-    "program_radios": "curl -s 'http://localhost:3000/program-radios'",
-    "qaqc": "curl -s 'http://localhost:3000/radio/qaqc'",
-    "config": "curl -s 'http://localhost:3000/radio/config'",
-    "checkin": "curl -s 'http://localhost:3000/radio/checkin'",
-    "temperature": "curl -s 'http://localhost:3000/sensor/temperature'",
-    "voltage": "curl -s 'http://localhost:3000/sensor/voltages'",
-    "details": "curl -s 'http://localhost:3000/sensor/details'",
-    "usb_drive": "curl -s 'http://localhost:3000/usb'",
-    "usb_mount": "curl -s 'http://localhost:3000/usb/mount'",
-    "unmount_usb": "curl -s 'http://localhost:3000/usb/unmount'",
-    "download_data": "curl -s 'http://localhost:3000/usb/data'",
-    "upload_wifi": "curl -s 'http://localhost:3000/usb/wifi'"
-}
-```
-
-To acceses these curl commands, in your Sensor Station terminal window copy and paste the following script followed by the the command you want.
-
-```bash /lib/ctt/sensor-station-software/system/scripts/lcd-options/run-lcd-options.sh *command*```
-
-For example, if you want to get the battery and solar voltages from your Sensor Station, run:
-
-```bash /lib/ctt/sensor-station-software/system/scripts/lcd-options/run-lcd-options.sh voltage```
+```npm run lcd-option voltage```
 
 and you will get a JSON object with the respective voltages:
 
-```{
+```json
+{
    "battery" : "11.61",
    "rtc" : -1,
    "solar" : "0.10"
 }
 ```
+Commands:
+: * reboot_schedule_info
+* gps
+* station_id
+* about
+* node_version
+* gateway
+* status
+* enable_wifi
+* disable_wifi
+* pending_upload
+* wifi-networks
+* modem_info
+* get_ppp
+* peripherals
+* program_radios
+* qaqc
+* config
+* checkin
+* temperature
+* voltage
+* details
+* usb_drive
+* usb_mount
+* unmount_usb
+* download_data
+* upload_wifi
