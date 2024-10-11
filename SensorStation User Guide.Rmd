@@ -4,7 +4,7 @@ title: |
   <br />
   Installation Guide for the CTT SensorStation and CTT Nodes
 author: "support@celltracktech.com"
-date: "8/23/2024"
+date: "10/11/2024"
 output:
   html_document:
     toc: yes
@@ -243,7 +243,16 @@ Alternatively, you could attach a `U.FL to SMA adapter` *(see fig below)* direct
 
 ![Option 2: LTE modem connected directly to U.FL to SMA adapter, which allows to connect directly to a Cell Booster antenna without using `J6` or `J7` on the board](Downloads/cellboost_uflToSmaConnected.JPG){#id .class width="50%"}
 
-### Adding an Iridium Antenna for Iridium-enabled Stations
+### Siting your SensorStation
+The SensorStation can be placed inside a building, or fastened to the pole or building, etc. It should either be close to the ground for easy access, or have an ethernet cable run down to an accessible location.
+
+#### GPS Reception 
+**If placing your station inside a building be aware that this may affect GPS and/or cellular reception, possibly requiring an external antenna wired to the outside of the building.** There are many possible external antennas, and searching Amazon for "external GPS antenna with SMA connector" will yield a number of options.
+
+##### Activating an external GPS antenna
+Your SensorStation ships with the onboard GPS chip-antenna activated. There is a small jumper near the GPS that must be moved into the disabled position to deactivate the chip antenna and activate the SMA port on the board. After moving the jumper, you can attach your external antenna to the SMA port and it will work. Be sure to confirm operation by witnessing a good GPS fix on the LDC, or via the web interface, before leaving your SensorStation. 
+
+#### Adding an Iridium Antenna for Iridium-enabled Stations
 
 Iridium satellite stations will require an external antenna. Typically, our customers will make use of a Taoglas IMA.01.105111. We can recommend Mouser.com, as they offer a good price with reasonable shipping costs.
 
@@ -256,10 +265,6 @@ We at CTT have used the one above for testing. There is a slot on the antenna th
 The antenna itself does not need to be up high. It just needs a reasonably clear view of the sky and to be outdoors. If the SensorStation GPS works, Iridium will likely also work. It is quite resilient even in less than ideal conditions.
 
 Lastly, the coax will need to be connected to the SensorStation. There is a SMA connector next to the SensorStation's Iridium modem, and any stations shipped Iridium-ready will already include the jumper from the modem to the board to activate the SMA port.
-
-
-### Siting your SensorStation
-The SensorStation can be placed inside a building, or fastened to the pole or building, etc. It should either be close to the ground for easy access, or have an ethernet cable run down to an accessible location. **If placing your station inside a building be aware that this may affect GPS and/or cellular reception, possibly requiring an external antenna wired to the outside of the building.**
 
 # Powering your SensorStation
 
