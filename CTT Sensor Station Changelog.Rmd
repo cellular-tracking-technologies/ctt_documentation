@@ -1,0 +1,43 @@
+---
+title: |
+  ![](images/ctt_logo.png){width=3in}  
+  <br />
+  Sensor Station Software Changelog
+author: "support@celltracktech.com"
+date: "9/13/2024"
+output:
+  html_document:
+    toc: yes
+    number_sections: yes
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library("jsonlite")
+library("plotly")
+library('RCurl')
+
+```
+
+```{r, echo=FALSE, results='asis'}
+
+json_file = getURL('https://raw.githubusercontent.com/cellular-tracking-technologies/sensor-station-software/lts_24-06.iso/changelog.json')
+
+json_data = fromJSON(json_file)
+
+for (version in c(1:nrow(json_data))){
+  for (feature in json_data[version, 4]) {
+    for(bug in json_data[version,5]){
+      
+    cat('##', paste0('`', 'v', json_data[version,1], '`', ','), format(as.Date(json_data[version,2]), '%B %d, %Y'), '{-}', '\n')
+      cat('\n')
+        cat('### Patch Notes: ', '{-}', '\n', paste('-', json_data[version, 3], '\n'))
+        cat('\n')
+        cat('### Features', '{-}', '\n', paste('-', feature, '\n'))
+        cat('\n')
+        cat('### Bug Fixes', '{-}', '\n', paste('-', bug, '\n'))
+        cat('\n')
+    }
+  }
+}
+
+```
