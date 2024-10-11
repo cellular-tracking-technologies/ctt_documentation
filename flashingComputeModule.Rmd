@@ -4,7 +4,7 @@ title: |
   <br />
   Flashing your SensorStation's Compute Module
 author: "support@celltracktech.com"
-date: "9/12/2024"
+date: "10/11/2024"
 output:
   html_document:
     toc: yes
@@ -35,7 +35,7 @@ While CTT offers many over-the-air updates to your `CTT SensorStation` sometimes
 ### **V2 & V3 SensorStation Long Term Stable (LTS) Image**
 *Records Tag, GPS, SensorGnome, and Telemetry data. Compatible with BlūSeries Receiver and all BlūSeries infrastructure including V3 Nodes (with V4.0.0 or later Radio Firmware)*
 
-[Download Current LTS Disk Image](https://s3.amazonaws.com/media.celltracktech.com/sensor-station/images/sensor-station.latest.xz) (**Version ID: 1.3.0 Updated: 2024-09-10**)
+[Download Current LTS Disk Image](https://s3.amazonaws.com/media.celltracktech.com/sensor-station/images/sensor-station.latest.xz) (**Version ID: 1.4.0 Updated: 2024-10-09**)
 
 *This version is required if you are using the V3 version of the CTT Nodes, or the CTT BlūSeries Receiver.* **Note that you will also need to update your radio firmware to v4.0.0.** This is the default firmware for this disk image release. The radio firmware can now be updated directly from the LCD screen or the SensorStation Interface. **The Changelog can now be found here:** [changelog.json](https://raw.githubusercontent.com/cellular-tracking-technologies/sensor-station-software/lts_24-06.iso/changelog.json)
 
