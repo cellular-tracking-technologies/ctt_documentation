@@ -4,7 +4,7 @@ title: |
   <br />
   Flashing your SensorStation's Compute Module
 author: "support@celltracktech.com"
-date: "10/11/2024"
+date: "10/14/2024"
 output:
   html_document:
     toc: yes
@@ -78,11 +78,16 @@ For **Mac**, follow these directions:
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-
 Then install the libusb libraries:
 
 ```
 brew install libusb
+```
+
+Then install pkgconfig
+
+```
+brew install pkg-config
 ```
 
 2. From within Terminal, navigate to your preferred directory. 
