@@ -40,7 +40,7 @@ This User Guide has been redesigned around the new (ca.2020) Version 2 SensorSta
 # Join us in our **Slack** User Community
 
 We now have a `Slack` workspace dedicated to CTT users. Topics range from station logistics to study design, and from data management to current development of novel analytic tool. Come be a part of the discussion and engage with other users as we push the boundaries of remotely sensed telemetry data! 
-[Click here](https://celltracktech.com/support-ctt-slack/) to request access to our free and vibrant Slack workspace.
+[Click here](https://celltracktech.com/pages/csd-request-to-join-our-support-slack-community) to request access to our free and vibrant Slack workspace.
 
 # Congratulations
 
