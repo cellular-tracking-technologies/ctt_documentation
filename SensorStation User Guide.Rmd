@@ -4,7 +4,7 @@ title: |
   <br />
   Installation Guide for the CTT SensorStation and CTT Nodes
 author: "support@celltracktech.com"
-date: "10/11/2024"
+date: "04/29/2025"
 output:
   html_document:
     toc: yes
@@ -617,6 +617,16 @@ On V2 and V3 SensorStations, instead of manually updating the WiFi credentials v
   3. Save the file and name it `credentials.json`.
   4. Create an empty folder on your USB thumb drive called `wifi`.
   5. Copy `credentials.json` file to the `wifi` folder.
+  
+#### WiFi networks with no password
+
+If your WiFi network does not need a password, create a JSON file like above but only include the ssid:
+
+```
+  {
+    "ssid":"my_ssid"
+  }
+```
 
 ### Loading the JSON file onto your SensorStation
 
