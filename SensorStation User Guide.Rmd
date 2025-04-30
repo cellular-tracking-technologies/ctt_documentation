@@ -320,9 +320,9 @@ The SensorStation features 4 navigation buttons labeled `UP`, `DN`, `BACK` and `
 
 *Note that this menu may differ from the one on your current station, as there many new features were added to the BETA disk image. Most items should be described here, but the order may be different than you see on your station. In a few cases menu items are no longer informative on newer stations and we've attempted to denote that where necessary.*
 
-- `Station Stats` - This image provides a quick glimpse of the station health, including whether WiFi is on, the Cellular Modem is on, the Battery/Power level, Solar Charging (if a solar monitor is connected), and Temperature.
+- `Station Stats` - This image provides a quick glimpse of the station health, including whether WiFi (`r knitr::asis_output("\U1F6DC")`) is on, the Cellular Modem is on (`r knitr::asis_output("\U1F4F6")`), the Battery/Power level (`r knitr::asis_output("\U23FB")`), Solar Charging (if a solar monitor is connected) (`r knitr::asis_output("\U2600")`), and Temperature (`r knitr::asis_output("\U00B0")`C and `r knitr::asis_output("\U00B0")`F).
 
-![](images/LCD_StationStats.JPG){#id .class width="20%"}
+![](images/station_stats_20250430.jpg){#id .class width="20%"}
 
 - `File Transfer`
 	- `Mount USB` - mounts a properly formatted (FAT-32 or MS-DOS) USB drive to the SensorStation.
@@ -332,7 +332,9 @@ The SensorStation features 4 navigation buttons labeled `UP`, `DN`, `BACK` and `
   - `IP Address` - Displays the port of connection and IP address assigned to the SensorStation. You can use the IP address to connect to your SensorStation using the same process outlined above under `Hostname`. For example, if the IP Address was 10.1.10.17, typing `http://10.1.10.17` into your web browser's URL field would bring up the SensorStation web interface.
   - `WiFi`
     - `Enable WiFi` - Enables the WiFi adapter
-    - `Disable WiFi` - Disables the WiFi adapter. *If you are using a Cellular modem and running 4 or more FunCube dongles, you may benefit from disabling the WiFi to reduce USB traffic.* 
+    - `Disable WiFi` - Disables the WiFi adapter. *If you are using a Cellular modem and running 4 or more FunCube dongles, you may benefit from disabling the WiFi to reduce USB traffic.*
+      - **WARNING** If the wifi is disabled and you click this option again, it will produce an error message. To determine if the wifi is actually disabled, navigate to the `Station Stats` menu; there should be a `!` next to the wifi symbol.
+      - ![](images/station_stats_disabled_20250430.jpg){#id .class width="20%"}
     - `Mount USB` - mounts a properly formatted (FAT-32 or MS-DOS) USB drive to the SensorStation.
     - `Get WiFi` - Loads the WiFi credentials from a USB Drive plugged into one of the USB ports. Note that the credentials must be properly formatted per the directions provided in this document.
   - `Cellular`
