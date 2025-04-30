@@ -333,13 +333,15 @@ The SensorStation features 4 navigation buttons labeled `UP`, `DN`, `BACK` and `
   - `WiFi`
     - `Enable WiFi` - Enables the WiFi adapter
     - `Disable WiFi` - Disables the WiFi adapter. *If you are using a Cellular modem and running 4 or more FunCube dongles, you may benefit from disabling the WiFi to reduce USB traffic.*
-      - **WARNING** If the wifi is disabled and you click this option again, it will produce an error message. To determine if the wifi is actually disabled, navigate to the `Station Stats` menu; there should be a `!` next to the wifi symbol.
-      - ![](images/station_stats_disabled_20250430.jpg){#id .class width="20%"}
+      - **WARNING** If the wifi is disabled and you click this option again, it will produce an error message. To determine if the wifi is actually disabled, navigate to the `Station Stats` menu; there should be a `!` next to the wifi symbol (`r knitr::asis_output("\U1F6DC")`).
+      - ![](images/station_stats_wifi_cell_disabled_20250430.jpg){#id .class width="20%"}
     - `Mount USB` - mounts a properly formatted (FAT-32 or MS-DOS) USB drive to the SensorStation.
     - `Get WiFi` - Loads the WiFi credentials from a USB Drive plugged into one of the USB ports. Note that the credentials must be properly formatted per the directions provided in this document.
   - `Cellular`
 	  - `Enable Modem` - Enable the attached Quectel cellular modem.
 	  - `Disable Modem` - Disable the attached Quectel cellular modem.*If you are using the WiFi module to send your data, and running 4 or more FunCube dongles, you may benefit from disabling the cellular modem to reduce USB traffic.*
+  	  - **WARNING** If the cell modem is disabled and you click this option again, it will produce an error message. To determine if the cell modem is actually disabled, navigate to the `Station Stats` menu; there should be a `!` next to the cell modem symbol (`r knitr::asis_output("\U1F4F6")`).
+        - ![](images/station_stats_wifi_cell_disabled_20250430.jpg){#id .class width="20%"}
 	  - `Ids` -  - Displays the SIM ID, the IMEI, and the name of the Modem
 	  - `Carrier` - Displays the cellular carrier name and signal strength of the connection, refreshing every 2 seconds. This may be useful when troubleshooting problematic cellular connections, and aiming an external cellular antenna (not included).
   - `Ping` - This will ping a known web address to determine whether an internet connection is present. If present, it will return **connected**.
