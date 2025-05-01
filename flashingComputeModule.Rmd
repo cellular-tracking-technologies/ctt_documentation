@@ -21,6 +21,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 You can use your `CTT SensorStation` to burn a new operating system onto the compute module using a micro USB cable attached to your computer. Here is an article on Raspbian's website with general instructions: [Flashing the Compute Module eMMC](https://www.raspberrypi.org/documentation/hardware/computemodule/cm-emmc-flashing.md). This page will summarize the steps needed to burn a New CTT SensorStation image to your compute module using the SensorStation hardware.
 
+**You need a micro USB cable with data connections!** Charging cables will not work because they cannot communicate with the Raspberry Pi. Purchase a data cable [here](https://www.amazon.com/FEMORO-Transfer-Charging-Smartphone-Bluetooth/dp/B0D2KZQR8T?crid=VBE764CMI7MU&dib=eyJ2IjoiMSJ9.2ODqAvSnCFLkB1v4odzbS5w_0NArx8iYC599yGv1AMDnBu3bYFPM8AP8qmyQxucC4bxwfdlsPDxcDEFR8783UM6zD0-ihOXn-XCGbhn5owI17wBClF6iE0oANiHWfIX1eNszpcDanUzE2ibHnmFm0eClZE2EK0e05HXutcPawXp6zjXc1dgjlZiX68VKMxbcfDeBHcSDGbUGIbX8yqVFCSO9RyvtrblcQEDLGyjCH0M.8E38J94K6nyovwCnCjNJ_0jS-LpT_YwFYQtUn_qTPas&dib_tag=se&keywords=microusb+usb+cable+data&qid=1746105306&sprefix=microusb+usb+cable+data%2Caps%2C168&sr=8-3).
+
 ## Why flash my compute module? 
 
 While CTT offers many over-the-air updates to your `CTT SensorStation` sometimes you just need a fresh start, or maybe you haven't been incrementally updating the source code and want to do so after a full stable release. You've found the right place to learn how!
