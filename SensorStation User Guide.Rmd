@@ -578,6 +578,7 @@ Your SensorStation has a web server running locally on the Raspberry Pi, which m
 ### Gather important information
   
 1. Take note of the **Wifi name** and **password** for the network you want to link with your SensorStation.
+2. Enable the WiFi module through the LCD screen by selecting Network > WiFi > Enable WiFi
 2. Connect to your SensorStation via the Ethernet cable (see above section for details)
 3. Open a Command Prompt window on your computer (for mac, use Terminal; for PC use PowerShell or CMD)
 4. On V2 or V3 stations, record the IP address from the LDC screen (under Network > IP Address)
