@@ -31,7 +31,7 @@ Congratulations on your purchase of the new CTT Node V3! The CTT Internet of Wil
 3. Fully accessible housing for easy removal of the SD card and inspection of the LEDs
 4. Dual-mode compatibility with both 434MHz and 2.4GHz tags
 
-# Unboxing your CTT Node V3 (4V Solar Panel Model)
+# Unboxing your CTT Node V3 (This example shows the 4V Solar Panel Model)
 
 Inside your Node shipment, you'll find two main components (Figs. A & B): a box containing the solar-rechargeable battery pack, antennas, and mounting hardware, and the Node itself in a latched case. Figure C shows the contents of one Node laid out for identification.
 
@@ -58,7 +58,7 @@ Inside your Node shipment, you'll find two main components (Figs. A & B): a box 
 
 In 2025, we discontinued the original 4V solar-rechargeable power supply in favor of a slightly larger one that provides 5V of power and a new gimbal attachment for easier and more secure positioning. In addition to the extra voltage, this supply features a USB-C port that can be used for manually recharging the batteries in the absence of solar exposure, and a new heavy-duty water-tight connector. 
 
-# Unboxing your CTT Node V3 Solar-Rechargeable Power Supply
+# Unboxing your CTT Node V3 5V Solar-Rechargeable Power Supply
 
 ![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/Node3_Unboxing_5V_Panel_V2.png){#id .class width=50%}
 
