@@ -157,18 +157,41 @@ To check the battery status once powered up, press the power button to turn the 
 
 ## New 5V Solar Pack LED Status Lights
 
-With the new 5V Solar Pack, the indicator lights on the back have changed. 
+With the new 5V Solar Pack, there are 5 indicator lights on the back of the unit next to the power button: 1 square light and 4 round lights. Their behavior depends on whether the unit is powered on, off, or in startup mode.
 
-There is a `square light that indicates charging`. Charging can occur whether or not the unit is powered. 
+### When Unit is Powered ON
 
-There are `four circle lights`. The `rightmost light is the power indicator` (when the unit is on).
-Together, the four circle lights are the `charge indicators` (when in charge indicator mode).
+| Light Position | Light Type | Status | Description |
+|----------------|------------|--------|-------------|
+| **Leftmost** | **Square** | Green ON/OFF | Charging indicator - lit when there is light on the solar panel |
+| **1st Circle** | **Round** | Blinking Green | Power indicator - shows unit is powered on |
+| **2nd Circle** | **Round** | OFF | Not used when running |
+| **3rd Circle** | **Round** | OFF | Not used when running |
+| **4th Circle** | **Round** | OFF | Not used when running |
 
-* 0 lights = < 3.4v
-* 1 light = 3.4 - 3.55v
-* 2 lights = 3.55 - 3.7v
-* 3 lights = 3.7 - 3.87v
-* 4 lights = 3.87 - 4.2v
+### When Unit is Powered OFF
+
+| Light Position | Light Type | Status | Description |
+|----------------|------------|--------|-------------|
+| **Leftmost** | **Square** | Green ON/OFF | Charging indicator - lit when there is light on the solar panel |
+| **All 4 Circles** | **Round** | OFF | Unit is powered off |
+
+### During STARTUP Mode (First 8 Seconds After Power On)
+
+| Light Position | Light Type | Status | Description |
+|----------------|------------|--------|-------------|
+| **Leftmost** | **Square** | Green ON/OFF | Charging indicator - lit when there is light on the solar panel |
+| **All 4 Circles** | **Round** | Variable | Battery charge indicators (see table below) |
+
+#### Battery Charge Display During Startup
+
+| Number of Circle Lights ON | Battery Voltage Range |
+|----------------------------|-----------------------|
+| 0 lights | < 3.4v |
+| 1 light | 3.4 - 3.55v |
+| 2 lights | 3.55 - 3.7v |
+| 3 lights | 3.7 - 3.87v |
+| 4 lights | 3.87 - 4.2v |
 
 ![*Mounted Node V3 with door closed*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3Closed.jpg){#id .class width=50%}
 
