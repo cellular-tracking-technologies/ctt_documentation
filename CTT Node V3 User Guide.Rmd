@@ -4,7 +4,7 @@ title: |
   <br />
   CTT Node V3 User Guide
 author: "support@celltracktech.com"
-date: "7/30/2024"
+date: "6/19/2025"
 output:
   html_document:
     toc: yes
@@ -20,35 +20,33 @@ knitr::opts_chunk$set(echo = TRUE)
 
 **NOTE: THIS USER GUIDE ONLY APPLIES TO THE V3 NODE**
 
-**For the CTT Node V2 please consult the appropriate user guide in the [CTT User Guide Directory](https://cellular-tracking-technologies.github.io/ctt_documentation/)**
+**For the CTT Node V2, please consult the appropriate user guide in the [CTT User Guide Directory](https://cellular-tracking-technologies.github.io/ctt_documentation/)**
 
 # Introduction
 
-Congratulations on your purchase of the new CTT Node V3! The CTT Internet of Wildlife System, which the Node has been an integral part of since the beginning, has just gotten a whole lot more awesome with this new Node. We took your suggestions to heart in developing this new Node, which has a few very specific benefits and departures from the old model:
+Congratulations on your purchase of the new CTT Node V3! The CTT Internet of Wildlife System, of which the Node has been an integral part since the beginning, has just become significantly more powerful with this new Node. We incorporated your suggestions in developing this new Node, which offers several specific benefits and improvements over the old model:
 
 1. Fully configurable through our robust CTT Mobile App
-2. Separate solar-rechargeable power supply to allow for flexible grid setup and ability to add alternate power sources in the future
-3. Fully accessible housing, for easy removal of the SD card and for inspection of the lEDs
+2. Separate solar-rechargeable power supply to allow for flexible grid setup and the ability to add alternate power sources in the future. **This was updated in May 2025 from a 4V model to a 5V model. Both models are described below.**
+3. Fully accessible housing for easy removal of the SD card and inspection of the LEDs
 4. Dual-mode compatibility with both 434MHz and 2.4GHz tags
 
+# Unboxing your CTT Node V3 (4V Solar Panel Model)
 
-# Unboxing your CTT Node V3
-
-Inside your Node shipment you'll find two main components (Figs. A & B), a box with the solar rechargeable battery pack, antennas, and mounting hardware, and the Node itself, in a latched case. Figure C shows the contents of one Node, laid out for identification.
+Inside your Node shipment, you'll find two main components (Figs. A & B): a box containing the solar-rechargeable battery pack, antennas, and mounting hardware, and the Node itself in a latched case. Figure C shows the contents of one Node laid out for identification.
 
 ![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/Node V3 Unboxing.jpg){#id .class width=50%}
 
-
 **Key for Figure C**
 
-1. Barrel plug for connecting solar rechargeable power to barrel jack on Node V3 board.
-2. Solar-rechargeable battery pack with 2 meter long cable.
-3. CTT Node V3 mounted in a weatherproof latching case.
+1. Barrel plug for connecting solar-rechargeable power to barrel jack on Node V3 board
+2. Solar-rechargeable battery pack with 2-meter cable
+3. CTT Node V3 mounted in a weatherproof latching case
 4. Antennas. Left (longer) = 2.4GHz; right (shorter) = 434MHz
-5. Mounting hardware for attaching solar-rechargeable battery pack mount to top mounting plate.
-    1. 3 Hex bolts (size 3)
+5. Mounting hardware for attaching solar-rechargeable battery pack mount to top mounting plate:
+    1. 3 hex bolts (size 3)
     2. 3 lock washers
-    2. 3 flat washers
+    3. 3 flat washers
     4. 3 nuts
 6. Cable gland bulkhead including internal grommet
 7. Bottom mounting plate
@@ -56,81 +54,123 @@ Inside your Node shipment you'll find two main components (Figs. A & B), a box w
 9. Top mounting plate
 10. Mount for solar-rechargeable battery pack 
 
-We have no doubt that you are excited to deploy your Nodes, so here's a quick start guide to get you going in a few minutes.
+# New Mid-2025 - 5V Solar-Rechargeable Power Supply
 
-## Mount your node for deployment
+In 2025, we discontinued the original 4V solar-rechargeable power supply in favor of a slightly larger one that provides 5V of power and a new gimbal attachment for easier and more secure positioning. In addition to the extra voltage, this supply features a USB-C port that can be used for manually recharging the batteries in the absence of solar exposure, and a new heavy-duty water-tight connector. 
 
-Your Node comes with the hardware necessary to mount it to a piece of 3/4" conduit. Note other mounting hardware is absolutely possible so feel free to use whatever makes sense for your site. 
+# Unboxing your CTT Node V3 Solar-Rechargeable Power Supply
+
+![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/Node3_Unboxing_5V_Panel_V2.png){#id .class width=50%}
+
+**Figure D:** New 5V solar panel as packaged for shipping. Face down with accessory parts in plastic enclosure.
+
+**Figure E:** Upon removing the 5V solar/battery pack, you'll find the hardware for mounting your V3 Node and 5V Solar Panel underneath.
+
+**Key for Figure F:**
+
+1. 5V Solar-rechargeable Panel (contains 6 sealed lithium rechargeable cells for a total of 18,000 mAh)
+2. New Gimbal Head for attaching and positioning Solar-rechargeable Panel
+3. Single mounting plate for both CTT Node V3 and new 5V solar-rechargeable panel
+4. Hardware:
+    * Nylon nut for Bulkhead (for inside the Node case)
+    * 4 screws for mounting the V3 Node to the backing plate
+    * 3 screws for mounting the gimbal head and solar panel to backing plate
+5. Power cable for connecting the 5V Solar-rechargeable panel to the V3 Node
+
+*We have no doubt that you are excited to deploy your Nodes, so here's a quick start guide to get you going in a few minutes.*
+
+## Mount your Node for deployment
+
+Your Node comes with the hardware necessary to mount it to a piece of 3/4" conduit. Note that other mounting hardware is absolutely possible, so feel free to use whatever makes sense for your site. 
 
 **You will also need:**
 
-1. A philips-head screwdriver
-2. A size 3 Hex driver
-2. A crescent wrench
-2. Two (2) appropriately sized hose clamps for attaching your Node V3 to a mast (3/4" EMT conduit works well)
-3. Zip ties for securing loose cables from Solar-rechargeable power supply
+1. A Phillips-head screwdriver
+2. A size 3 hex driver
+3. A crescent wrench
+4. Two (2) appropriately sized hose clamps for attaching your Node V3 to a mast (3/4" EMT conduit works well)
+5. Zip ties for securing loose cables from solar-rechargeable power supply
 
 ## Attach the antennas to the SMA ports on your Node
 
-**IT IS VERY IMPORTANT THAT, BEFORE** powering up your Nodes, you first attach antennas to the appropriate ports on the outside of the Node case. The 2.4GHz port is on the left, and the 434MHz port is on the right. If you are using the antennas shipped with your nodes, the longer one is the 2.4GHz antenna, and the shorter one is the 434MHz antenna.
+**IT IS VERY IMPORTANT** that before powering up your Nodes, you first attach antennas to the appropriate ports on the outside of the Node case. The antennas mount on the top of the Node case and point upward. The **2.4GHz port is on the RIGHT**, and the **434MHz port is on the LEFT** when viewing the Node from the front. You can double-check this by matching the proper SMA port to the proper radio—on the CTT Node, the 434MHz radio is the size of a postage stamp, while the 2.4GHz radio is tiny. If you are using the antennas shipped with your Nodes, the longer one is the 2.4GHz antenna, and the shorter one is the 434MHz antenna.
 
 ## Attach the mounting hardware to your Node 
 
-Consult the photos below for a visual description of how the hardware is connected. In short, use the four screws to attach the mounting plates to the back of the Node V3. The top plate also has three holes in a triangle pattern which can be used for mounting the solar-rechargeable power supply. You can also decide to mount the power supply elsewhere if that's more convenient or better for recharging. 
+Consult the photos below for a visual description of how the hardware is connected. In short, use the four screws to attach the mounting plates to the back of the Node V3. The top plate also has three holes in a triangle pattern that can be used for mounting the solar-rechargeable power supply. You can also decide to mount the power supply elsewhere if that's more convenient or better for recharging. 
 
-There are two rectangular cutouts on each of the mounting plates which can accommodate a hose clamp for wrapping and tightening around your mast material. Zip ties or other tools may be used as well. 
+There are two rectangular cutouts on each of the mounting plates that can accommodate a hose clamp for wrapping and tightening around your mast material. Zip ties or other tools may be used as well. 
 
 ## Connect your power source to your Node
 
-**STOP!! Have you attached the antennas to the Node first? If not- DO SO before connecting power. Otherwise you may damage the 2.4GHz radio!**
+**STOP!** Have you attached the antennas to the Node first? If not, DO SO before connecting power. Otherwise, you may damage the 2.4GHz radio!
 
-![*How to connect the Node V3 to the Solar-rechargeable power supply*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_howToConnect.png){#id .class width=50%}
+![*How to connect the Node V3 to the Solar-rechargeable power supply*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_AttachingBulkhead.jpg){#id .class width=50%}
 
-The power cable runs first through the `cap` of the `cable gland`, then the `rubber grommet` with the lip of the `grommet` facing toward the `Node` (see red arrow in the image below)
+The power cable runs first through the `cap` of the `cable gland`, then the `rubber grommet` with the lip of the `grommet` facing toward the `Node` (see red arrow in the image below).
 
-![*note that the grommet goes toward the Node, and flat end (see next pic) away from the Node*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_grommet lip.png){#id .class width=50%}
+![*Note that the grommet goes toward the Node, and the flat end (see next pic) faces away from the Node*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_grommet lip.png){#id .class width=50%}
 
+![*(Flat) bottom of the grommet, which faces down into the bulkhead housing and away from the Node*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_grommetBottom.png){#id .class width=50%}
 
-![*(flat) bottom of the grommet, which faces down into the bulkhead housing, and away from the Node*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_grommetBottom.png){#id .class width=50%}
+When you screw the `cable gland cap` onto the `cable gland`, it will compress the `grommet` and seal around the cable. Before tightening, make sure the power plug is pulled through the cable gland and into the case, and plugged into the `5V barrel jack` on the Node board. Ensure a little bit of slack on the cable inside the case, then tighten down the cable gland cap until there is no movement in the cable when tugged lightly. This process both seals the entry from water and helps reduce the chance of unintentionally pulling on the power cable and damaging the board.
 
-When you screw the `cable gland cap` onto the `cable gland`, it will compress the `grommet` and seal around the cable. Before tightening, make sure the power plug is pulled through the cable gland and into the case, and plugged into the `5v barrel jack` on the Node board. Ensure a little bit of slack on the cable inside the case and then tighten down the cable gland cap until there is no movement in the cable when tugged lightly. This process both seals the entry from water, and helps reduce the chance of unintentionally pulling on the power cable and damaging the board.
+**We recommend final tightening of the cap with a crescent wrench, but be careful not to overtighten and crush the cable!**
 
-**We recommend the final tightening of the cap with a crescent wrench, but be careful not to overtighten and crush the cable!**
-
-![*Demonstrating how to tighten the Node V3 Bulkhead.*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_TightenBulkhead.png){#id .class width=50%}
-
+![*Demonstrating how to tighten the Node V3 Bulkhead*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_TightenBulkhead.png){#id .class width=50%}
 
 Once the cap is tightened, you should see the grommet compressed around the cable.
 
-![*showing a tight bulkhead, with internal grommet compressed around cable.*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_TightBulkhead.png){#id .class width=50%}
+![*Showing a tight bulkhead with internal grommet compressed around cable*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_tightOnPower.jpg){#id .class width=50%}
 
+![*Photo showing the back of the Node as mounted on EMT conduit*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/Node3_Solar2_BackOnPole.jpg){#id .class width=50%}
 
-![*photo showing the back of the Node as mounted on EMT conduit*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedBackLeft.png){#id .class width=50%}
+![*Showing the mounting hardware holding the solar-rechargeable power supply opposite the Node V3*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/Node3_Solar2_FrontOnPole.JPG){#id .class width=50%}
 
-![*showing the mounting hardware holding the solar rechargable power supply above the Node V3*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedCloseSolarStem.png){#id .class width=50%}
+![*Mounted Node V3 with door open*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/Node3_Solar2_NodeOpen.jpg){#id .class width=50%}
 
-![*photo showing the bottom bracket of the Node as mounted on EMT conduit*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedCloseBackBottom.png){#id .class width=50%}
+![*Photo showing the back of the solar-rechargeable power supply and status lights*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/Solar2_CheckingBattery.JPG){#id .class width=50%}
 
-![*Mounted Node V3 with door open*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedOpen2.png){#id .class width=50%}
+## Original 4V Solar Pack LED Status Lights (on back of solar-rechargeable battery supply)
 
-![*photo showing the back of the solar-recharging power supply and status lights*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedBackofSolarChargerLights.png){#id .class width=50%}
-
-## Solar Pack LED Status Lights (on back of solar rechargeable battery supply)
-
-* Top `Yellow LED`: Power Output
+* **Top Yellow LED: Power Output**
   * `ON`: Output Voltage
   * `OFF`: No Output Voltage
-* Middle `Green LED`: Charge Indicator
+* **Middle Green LED: Charge Indicator**
   * `Blinking (1x per second)`: Charging (battery voltage between 2.8-4.0V)
   * `Fast Blinking (2x per second)`: Not Charging
   * `Slow Blink (1x every 2 seconds)`: Charging, but battery voltage below 2.8V
   * `Solid ON`: Battery more than 90% charged
-* Bottom `Red LED`
+* **Bottom Red LED**
   * `ON`: Normal battery voltage (above 2V)
   * `OFF`: Battery is below normal voltage or otherwise in an abnormal state
 
+![*Photo showing the back of the solar-rechargeable power supply and checking the status lights*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/Solar2_CheckingBattery.JPG){#id .class width=50%}
 
-![*Mounted Node V3 with door closed*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_MountedClosed.png){#id .class width=50%}
+## Powering up the 5V Solar Pack
+
+To turn on the 5V Solar Pack, press the Power button on the back of the unit. On initial start, you'll see the battery level indicated for 8 seconds. To turn off, simply press the Power button.
+
+## Checking the battery status on the 5V Solar Pack
+
+To check the battery status once powered up, press the power button to turn the unit off, wait 3 seconds, then press the power button again to turn the power back on and display the charge for 8 seconds. **Note: if you press the power button during the 8 seconds of charge display, you will turn the unit off.**
+
+## New 5V Solar Pack LED Status Lights
+
+With the new 5V Solar Pack, the indicator lights on the back have changed. 
+
+There is a `square light that indicates charging`. Charging can occur whether or not the unit is powered. 
+
+There are `four circle lights`. The `rightmost light is the power indicator` (when the unit is on).
+Together, the four circle lights are the `charge indicators` (when in charge indicator mode).
+
+* 0 lights = < 3.4v
+* 1 light = 3.4 - 3.55v
+* 2 lights = 3.55 - 3.7v
+* 3 lights = 3.7 - 3.87v
+* 4 lights = 3.87 - 4.2v
+
+![*Mounted Node V3 with door closed*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3Closed.jpg){#id .class width=50%}
 
 ## Distance between Nodes and SensorStation
 
@@ -138,63 +178,62 @@ We recommend that all Nodes are placed within 1km of a SensorStation to ensure t
 
 ## Distance between Nodes
 
-Nodes can be used for various reasons to answer a number of questions. This section assumes that Nodes are being used for localization, or estimating a location within a Node grid from multiple simultaneous Node detections. In this case it's important to understand the relationship between distance and signal strength between your tags and your grid of nodes. This can be accomplished using one of your tags and a CTT Sidekick. This is covered in the Sidekick User Guide, but assuming you have a good handle on at what distance signal strength becomes uninformative, with regards to distance, you will want to ensure that your node spacing is less than this distance. In several empirical cases we have found that distance to be ~150m, so spacing nodes every 100m or less is good for a number of bird species. For species that spend their life on the ground (turtles, etc.) this distance may be closer to 50m, but ultimately will require some test data collection.
+Nodes can be used for various reasons to answer a number of questions. This section assumes that Nodes are being used for localization, or estimating a location within a Node grid from multiple simultaneous Node detections. In this case, it's important to understand the relationship between distance and signal strength between your tags and your grid of Nodes. This can be accomplished using one of your tags and a CTT Sidekick. This is covered in the Sidekick User Guide, but assuming you have a good handle on the distance at which signal strength becomes uninformative with regard to distance, you will want to ensure that your Node spacing is less than this distance. In several empirical cases, we have found that distance to be ~150m, so spacing Nodes every 100m or less is good for a number of bird species. For species that spend their life on the ground (turtles, etc.), this distance may be closer to 50m, but will ultimately require some test data collection.
 
 # Node V3 Data Collection and Transmission
 
-The Node V3 is capable of simultaneously collecting 434 MHz and 2.4GHz tag detections, making it compatible with all radio tags manufactured by CTT. The device also collects supplemental information that can be used for monitoring its health and location. The theory of operation is to capture incoming tag beeps and health, save them to the on-board SD card, then relay them to any nearby SensorStations. Below is list of the tasks performed by the node under the standard configuration and adequate power levels:
+The Node V3 is capable of simultaneously collecting 434MHz and 2.4GHz tag detections, making it compatible with all radio tags manufactured by CTT. The device also collects supplemental information that can be used for monitoring its health and location. The theory of operation is to capture incoming tag beeps and health data, save them to the on-board SD card, then relay them to any nearby SensorStations. Below is a list of the tasks performed by the Node under the standard configuration and adequate power levels:
 
-* On boot, the device begins acquiring the time and location using a GNSS receiver. Knowing the time is critical for logging tag detections and the location is a necessity for localization methods.
+* On boot, the device begins acquiring the time and location using a GNSS receiver. Knowing the time is critical for logging tag detections, and the location is a necessity for localization methods.
 * The device immediately becomes pairable with CTT Mobile.
-* Once the time as been determined, the node starts listening for 434 MHz and 2.4GHz tags.
+* Once the time has been determined, the Node starts listening for 434MHz and 2.4GHz tags.
 * A health snapshot is saved every 15 minutes to the SD card.
-* Every time 50 tag detections have been captured for a particular tag frequency, they are saved to the SD card and immediately transmitted out to the SensorStation. Detections are also saved and uplinked after 15 minutes in the event that the 50 detection watermark is not hit.
+* Every time 50 tag detections have been captured for a particular tag frequency, they are saved to the SD card and immediately transmitted to the SensorStation. Detections are also saved and uplinked after 15 minutes in the event that the 50-detection watermark is not reached.
 * System logs are saved to a file on the SD card. These logs can be used by CTT to troubleshoot problems.
 
 ## Detecting your Node with your SensorStation
 
-### Pre-requisites
+### Prerequisites
 
 * CTT SensorStation V2 or V3
-* Latest Disk Image: `(2024-07-16)`
+* Latest Disk Image: `(09-10-2024)` or later
 * Radios running firmware version `4.0.0` or later
 
 #### Check your Disk Image Version
 
-If you received your SensorStation after August 1, 2024, you most likely have the latest disk image and are fully compatible with the new CTT Node V3. To confirm this, connect a computer to your SensorStation via WiFi or Ethernet [see directions here](https://cellular-tracking-technologies.github.io/ctt_documentation/SensorStation-User-Guide.html#connecting-to-your-sensorstation-web-interface) and navigate to the SensorStation Overview.  
+If you received your SensorStation after September 10, 2024, you most likely have the latest disk image and are fully compatible with the new CTT Node V3. To confirm this, connect a computer to your SensorStation via WiFi or Ethernet [see directions here](https://cellular-tracking-technologies.github.io/ctt_documentation/SensorStation-User-Guide.html#connecting-to-your-sensorstation-web-interface) and navigate to the SensorStation Overview.  
 
 ![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/SensorStationImageVersion.png){#id .class width=50%}
 
-If your station indicates you are running the Disk Image from July 2024, then you have the correct one. **If not, you'll need to flash your Raspberry Pi with the newest Disk Image per the instructions** [here](https://cellular-tracking-technologies.github.io/ctt_documentation/flashingComputeModule.html).
+If your station indicates you are running the Disk Image from September 2024 or later, then you have the correct one. **If not, you'll need to flash your Raspberry Pi with the newest Disk Image per the instructions** [here](https://cellular-tracking-technologies.github.io/ctt_documentation/flashingComputeModule.html).
 
-### Check your Radio Version and Updating if Necessary
+### Check your Radio Version and Update if Necessary
 
 The Radio version is displayed over each radio in the SensorStation Overview. **You need to be running `v4.0.0` or later to detect CTT Node V3.**
 
 ![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/SensorStationRadioFW.png){#id .class width=50%}
 
-If you are running the correct Disk Image, but not the correct Radio Firmware, you can update it from the LCD menu on your SensorStation, or from the `Update Radio Firmware` button on the SensorStation Overview page (image below).
+If you are running the correct Disk Image but not the correct Radio Firmware, you can update it from the LCD menu on your SensorStation or from the `Update Radio Firmware` button on the SensorStation Overview page (image below).
 
 ![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/RadioFirmwareOverview.png){#id .class width=50%}
 
-
 ## Node V3 SD Card Storage
 
-Your CTT Node V3 has a 16GB SD card pre-installed for backup storage, as well as for manual data collection and management. As you saw from photos in Section 2, its now much easier to service the SD card on Node V3 compared to the previous version. **We do not recommend Hot swapping the card.** It is encouraged to power down the device before inserting/removing the card.
+Your CTT Node V3 has a 16GB SD card pre-installed for backup storage, as well as for manual data collection and management. As you saw from photos in Section 2, it's now much easier to service the SD card on Node V3 compared to the previous version. **We do not recommend hot-swapping the card.** It is encouraged to power down the device before inserting/removing the card.
 
 ### Removing the SD card
 
-The SD card holder is spring-locked, so to remove the card first push down on the card and you should feel it disengage when released. Now the card can be safely removed. To re-install the card make sure the push down to engage the spring lock, and when you release it you should feel it locked into place. **DO NOT FORCE THE CARD OUT OF OR INTO THE SLOT**, doing so will void the warranty.
+The SD card holder is spring-locked, so to remove the card, first push down on the card and you should feel it disengage when released. Now the card can be safely removed. To reinstall the card, make sure to push down to engage the spring lock, and when you release it, you should feel it lock into place. **DO NOT FORCE THE CARD OUT OF OR INTO THE SLOT**—doing so will void the warranty.
 
-**If you replace the SD card with your own, prior to inserting a new SD card into a node, please ensure it has been formatted as FAT32.** We strongly recommend the use of 16GB SD cards. While much larger cards are available, the underlying filesystem may be incompatible with them. Please try all new cards prior to using them in field-deployed nodes. Each time a card is inserted, we **HIGHLY RECOMMEND** that you pair to the node with CTT Mobile and verify the device is communicating with the SD card.
+**If you replace the SD card with your own, prior to inserting a new SD card into a Node, please ensure it has been formatted as FAT32.** We strongly recommend the use of 16GB SD cards. While much larger cards are available, the underlying filesystem may be incompatible with them. Please test all new cards prior to using them in field-deployed Nodes. Each time a card is inserted, we **HIGHLY RECOMMEND** that you pair to the Node with CTT Mobile and verify the device is communicating with the SD card.
 
-When properly set up, your Nodes will collect and send their data to a nearby SensorStation, not requiring you to access the SD card internal to each Node. There are reasons why we recommends periodically servicing the nodes SD card:
+When properly set up, your Nodes will collect and send their data to a nearby SensorStation, not requiring you to access the SD card internal to each Node. There are reasons why we recommend periodically servicing the Node's SD card:
 
-* At times with a lot of tags beeping, its possible for the SensorStation to be temporarily overwhelmed with detections being uplinked from nodes. As a result, some detections fail to be recorded by the SensorStation. Think of this as the following analogy: Multiple people are talking to you at once, and you are required to write down everything they say. This is doable when the number of people is small, but becomes increasingly difficult to not miss things as the number of people increase. All of the detections are backed up to the SD card so you can retrieve the ones not captured by the SensorStation.
-* There are some less-critical health fields present on the SD card that aren't sent to the SensorStation. In the event of a malfunctioning node, it may be useful to look at these logs.
-* BluSeries tags transmit sensor data in addition to their id with each beep. Unfortunately, the decision was made to not uplink this data directly to the SensorStation because the increased data volume can increase airway congestion between the Node and SensorStation.
+* At times with a lot of tags beeping, it's possible for the SensorStation to be temporarily overwhelmed with detections being uplinked from Nodes. As a result, some detections fail to be recorded by the SensorStation. Think of this as the following analogy: Multiple people are talking to you at once, and you are required to write down everything they say. This is doable when the number of people is small but becomes increasingly difficult to not miss things as the number of people increases. All of the detections are backed up to the SD card, so you can retrieve the ones not captured by the SensorStation.
+* There are some less-critical health fields present on the SD card that aren't sent to the SensorStation. In the event of a malfunctioning Node, it may be useful to look at these logs.
+* BluSeries tags transmit sensor data in addition to their ID with each beep. Unfortunately, the decision was made to not uplink this data directly to the SensorStation because the increased data volume can increase airway congestion between the Node and SensorStation.
 
-The following features are available through the SD card.
+The following features are available through the SD card:
 
 * Config Storage
 * Detection Logging
@@ -203,12 +242,14 @@ The following features are available through the SD card.
 * Error & System Logging
 
 ### File Naming Convention
-Detections are stored as .csv format. In this protocol, the first row contains a list of comma-separated keys called headers. These headers are the names for each column. Each subsequent row contains the corresponding comma-separated data. 
+
+Detections are stored in .csv format. In this protocol, the first row contains a list of comma-separated keys called headers. These headers are the names for each column. Each subsequent row contains the corresponding comma-separated data. 
 
 #### 434MHz 
-Detections from the 434MHz receiver will be saved in on the SD card with the following format:
 
-`434_mhz_beep_n.csv     (Where `n` is an integer that gets incremented every time the previous file exceeds 25 MB)`
+Detections from the 434MHz receiver will be saved on the SD card with the following format:
+
+`434_mhz_beep_n.csv` (Where `n` is an integer that gets incremented every time the previous file exceeds 25 MB)
 
 The following CTT products apply to the 434MHz category:
 
@@ -219,38 +260,37 @@ The following CTT products apply to the 434MHz category:
 | Headers | Units        | Example              | Description                                                                                                                                                                                                                                                                                                                                |
 |---------|--------------|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | time    | ISO 8601     | 2022-04-14T21:25:22Z | Time of detection [UTC]                                                                                                                                                                                                                                                                                                                    |
-| tag_id  | Alphanumeric | 3319332D             | Factory programmed identifier. Traditionally an 8-character id, however some ids contain an additional layer of verification which makes them 10 characters.                                                                                                                                                                               |
-| rssi    | dBm          | -79                  | RSSI is an indication of the power level being received by the receiving radio after the antenna and possible cable loss. Therefore, the greater the RSSI value, the stronger the signal. Thus, when an RSSI value is represented in a negative form (e.g. −100), the closer the value is to 0, the stronger the received signal has been. |
+| tag_id  | Alphanumeric | 3319332D             | Factory programmed identifier. Traditionally an 8-character ID, however some IDs contain an additional layer of verification which makes them 10 characters.                                                                                                                                                                               |
+| rssi    | dBm          | -79                  | RSSI is an indication of the power level being received by the receiving radio after the antenna and possible cable loss. Therefore, the greater the RSSI value, the stronger the signal. Thus, when an RSSI value is represented in negative form (e.g., −100), the closer the value is to 0, the stronger the received signal has been. |
 
-**`Approximately 27 million records of type 434MHz can be saved per 1 Gigabyte of SD card storage.`**
+**Approximately 27 million records of type 434MHz can be saved per 1 gigabyte of SD card storage.**
 
+#### BluSeries Tags (2.4GHz)
 
-#### BlūSeries Tags (2.4GHz)
-Detections from the 2.4GHz receiver will be saved in on the SD card with the following format:
+Detections from the 2.4GHz receiver will be saved on the SD card with the following format:
 
-`2p4_ghz_beep_n.csv     (Where `n` is an integer that gets incremented every time the previous file exceeds 25 MB)`
+`2p4_ghz_beep_n.csv` (Where `n` is an integer that gets incremented every time the previous file exceeds 25 MB)
 
 The following CTT products apply to the 2.4GHz category:
 
-* BlūBat
-* BlūMorpho
+* BluBat
+* BluMorpho
 
 | Headers         | Units        | Example              | Description                                                                                                                                                                                                                                                                                                                                                                                               |
 |-----------------|--------------|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | time            | ISO 8601     | 2022-04-14T21:25:22Z | Time of detection [UTC]                                                                                                                                                                                                                                                                                                                                                                                   |
-| tag_id          | Alphanumeric | 49                   | Factory programmed identifier. The id will always be an 8-digits alphanumeric number with a code set size of 4 Billion.                                                                                                                                                                                                                                                                                   |
+| tag_id          | Alphanumeric | 49                   | Factory programmed identifier. The ID will always be an 8-digit alphanumeric number with a code set size of 4 billion.                                                                                                                                                                                                                                                                                   |
 | sync            | Alphanumeric | 4B1A                 | Pseudo-random number generated each time the tag transmits. This allows multiple receivers to differentiate detections with a method other than synchronized timestamps (useful when time drift in the receiver becomes non-negligible). Note: This sync word should only be used to compare detections within smaller time windows (a few minutes) as the chance of repeated values increases with time. |
-| family          | Number       | 0                    | BlūMorpho = 0                                                                                                                                                                                                                                                                                                                                                                                             |
-|                 |              |                      | BlūBat = 1                                                                                                                                                                                                                                                                                                                                                                                                |
+| family          | Number       | 0                    | BluMorpho = 0, BluBat = 1                                                                                                                                                                                                                                                                                                                                                                             |
 | payload_version | Number       | 0                    | Identifier for how to parse the tag payload (See next field).                                                                                                                                                                                                                                                                                                                                             |
 | payload         | Alphanumeric | 8C08D009             | The tag payload contains sensor measurements recorded at the time of transmission. These measurements are encoded as hexadecimal strings and are decoded based on the payload version.                                                                                                                                                                                                                    |
-| rssi            | dBm          | -79                  | RSSI is an indication of the power level being received by the receiving radio after the antenna and possible cable loss. Therefore, the greater the RSSI value, the stronger the signal. Thus, when an RSSI value is represented in a negative form (e.g. −100), the closer the value is to 0, the stronger the received signal has been.                                                                |
+| rssi            | dBm          | -79                  | RSSI is an indication of the power level being received by the receiving radio after the antenna and possible cable loss. Therefore, the greater the RSSI value, the stronger the signal. Thus, when an RSSI value is represented in negative form (e.g., −100), the closer the value is to 0, the stronger the received signal has been.                                                                |
 
-**`Approximately 19 million records of type 2.4GHz can be saved per 1 Gigabyte of SD card storage.`**
+**Approximately 19 million records of type 2.4GHz can be saved per 1 gigabyte of SD card storage.**
 
 #### GPS Location
 
-***`gps_n.csv     (Where `n` is an integer that gets incremented every time the previous file exceeds 25 MB)`***
+`gps_n.csv` (Where `n` is an integer that gets incremented every time the previous file exceeds 25 MB)
 
 | Headers   | Units                         | Example              | Description                                                        |
 |-----------|-------------------------------|----------------------|--------------------------------------------------------------------|
@@ -265,96 +305,90 @@ The following CTT products apply to the 2.4GHz category:
 
 #### Health
 
-**`health_n.csv     (Where `n` is an integer that gets incremented every time the previous file exceeds 25 MB)`**
+`health_n.csv` (Where `n` is an integer that gets incremented every time the previous file exceeds 25 MB)
 
 | Headers         | Units           | Example                          | Description                                                                                                                                      |
 |-----------------|-----------------|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | time            | ISO 8601        | 2022-04-14T21:25:22Z             | Time of health snapshot [UTC]                                                                                                                    |
-| up_time         | milli-seconds   |                                  | Time (ms) since the device booted/restarted.                                                                                                     |
-| power_ok        |                 | 1 (Power is Ok) 0 (Power Not Ok) | Indicator of the power supply’s status. When the power supply is not ok, the device’s internal scheduling system stops performing certain tasks. |
-| batt_mv         | milli-volts     |                                  | Voltage of the battery (or power supply).                                                                                                        |
+| up_time         | milliseconds   |                                  | Time (ms) since the device booted/restarted.                                                                                                     |
+| power_ok        |                 | 1 (Power is Ok) 0 (Power Not Ok) | Indicator of the power supply's status. When the power supply is not ok, the device's internal scheduling system stops performing certain tasks. |
+| batt_mv         | millivolts     |                                  | Voltage of the battery (or power supply).                                                                                                        |
 | temp_battery_c  | celsius         |                                  |                                                                                                                                                  |
-| charge_mv       | milli-volts     |                                  | Average charger voltage since last health message. (Voltage sampled every 60 seconds)                                                            |
-| charge_ma       | milli-amps      |                                  | Average charger current since last health message. (Voltage sampled every 60 seconds)                                                            |
+| charge_mv       | millivolts     |                                  | Average charger voltage since last health message. (Voltage sampled every 60 seconds)                                                            |
+| charge_ma       | milliamps      |                                  | Average charger current since last health message. (Voltage sampled every 60 seconds)                                                            |
 | charge_temp_c   | celsius         |                                  |                                                                                                                                                  |
 | node_temp_c     | celsius         |                                  |                                                                                                                                                  |
-| energy_used_mah | milli-amp-hours |                                  |                                                                                                                                                  |
+| energy_used_mah | milliamp-hours |                                  |                                                                                                                                                  |
 | sd_free         | %               |                                  |                                                                                                                                                  |
 | sub_ghz_det     |                 |                                  |                                                                                                                                                  |
 
 #### Syslog
 
-`log.nnnn     (Where `n` is an integer that gets incremented every time the previous file exceeds 25 MB)`
+`log.nnnn` (Where `n` is an integer that gets incremented every time the previous file exceeds 25 MB)
 
-The device writes system logs to the SD card for troubleshooting and diagnostics reasons.
+The device writes system logs to the SD card for troubleshooting and diagnostic reasons.
 
-# Using the CTT Mobile App to interact with your Node V3
+# Using the CTT Mobile App to Interact with your Node V3
 
-If you are used to the Node V2, then you may have used Node Client to communicate with your Nodes. This is no longer needed with the Node V3 as the new Nodes can pair directly with the CTT Mobile App and changes to the Node are made directly through pairing with the app.
+If you are used to the Node V2, then you may have used Node Client to communicate with your Nodes. This is no longer needed with the Node V3, as the new Nodes can pair directly with the CTT Mobile App and changes to the Node are made directly through pairing with the app.
 
 ## Download and install the CTT Mobile App
 
-You can find links to both the iOS and Android versions of the CTT Mobile App on our main user guide page [here](https://cellular-tracking-technologies.github.io/ctt_documentation/), or by searching for `CTT Mobile` in the respective App stores.
+You can find links to both the iOS and Android versions of the CTT Mobile App on our main user guide page [here](https://cellular-tracking-technologies.github.io/ctt_documentation/), or by searching for `CTT Mobile` in the respective app stores.
 
 ## Pairing to your Node V3
 
-To pair with your node, open the CTT Mobile App on your mobile phone and click the **`Connect Device`** button. 
-This will open up the Available Device page. From here, click the **`Start Scan`** button.
-This will then display any and all Nodes within your phone's detection range.
-**`If you have more than one Node, a good way to determine which one is closest to you is to use the RSSI value.`**
-Choose the Node you wish to pair with by clicking the **`Connect`** button.
-You will get a **Pairing Complete!** message when you have successfully paired with the Node. From here, click the **`Go`** button.
+To pair with your Node, open the CTT Mobile App on your mobile phone and click the **`Connect Device`** button. This will open the Available Device page. From here, click the **`Start Scan`** button. This will then display any and all Nodes within your phone's detection range. **If you have more than one Node, a good way to determine which one is closest to you is to use the RSSI value.** Choose the Node you wish to pair with by clicking the **`Connect`** button. You will get a **Pairing Complete!** message when you have successfully paired with the Node. From here, click the **`Go`** button.
 
-You now should be on the `Details` screen. At the bottom of the page is a menu with up to five buttons, the active page's button is in *blue*.
+You should now be on the `Details` screen. At the bottom of the page is a menu with up to five buttons; the active page's button is highlighted in *blue*.
 
-* `Details` - provides an overview of `Node Status`, `Solar Charging Status` (only valid when attached to the Solar-rechargeable Power Supply), and `Current Config`
+* **`Details`** - provides an overview of `Node Status`, `Solar Charging Status` (only valid when attached to the Solar-rechargeable Power Supply), and `Current Config`
 
 ![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3Details.png){#id .class width=50%}
 
-* `Map` - Displays a map showing your location relative to all Nodes currently being detected, which have valid GPS fixes. Nodes without GPS fixes will not be displayed on the map.
+* **`Map`** - Displays a map showing your location relative to all Nodes currently being detected that have valid GPS fixes. Nodes without GPS fixes will not be displayed on the map.
 
 ![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3Map.png){#id .class width=50%}
 
-* `Listen` - This page is where you can toggle on and off viewing tag detections on both 2.4GHz and 434MHz frequencies, via the app. *Note that the Node is always listening (or is listening on a pre-determined schedule, if you have modified the configuration), so toggling on and off these buttons only toggles whether or not the App is displaying detections on your phone.* 
+* **`Listen`** - This page is where you can toggle on and off viewing tag detections on both 2.4GHz and 434MHz frequencies via the app. *Note that the Node is always listening (or is listening on a predetermined schedule if you have modified the configuration), so toggling these buttons on and off only toggles whether or not the app is displaying detections on your phone.* 
 
 ![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3Listen.png){#id .class width=50%}
 
-* `Config` -  This page allows you to modify the Node config file and upload it to the Node you are paired to in real-time.
+* **`Config`** - This page allows you to modify the Node config file and upload it to the Node you are paired with in real-time.
 
 ![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3Config.png){#id .class width=50%}
 
-Config parameters include:
+**Config parameters include:**
 
- * `Enable/Disable LEDs` : Default = **ON**
+ * `Enable/Disable LEDs`: Default = **ON**
  * `Adjust the Health Packet interval (min)`: Default = **15 min**
- * `Uplink Tx Power (Low/Med/High)`: Default = **Low** *Note this is the power used for the Node to send data to the SensorStation and therefore only affects transmission from the Node to the SensorStation*
+ * `Uplink Tx Power (Low/Med/High)`: Default = **Low**. *Note: this is the power used for the Node to send data to the SensorStation and therefore only affects transmission from the Node to the SensorStation*
  * `434MHz Scan Hours (0-24)`: Default is **ALL**. Note that all times are in UTC.
  * `2.4GHz Scan Hours (0-25)`: Default is **ALL**. Note that all times are in UTC.
  
- **!!ALERT!! If you shut off all 2.4GHz hours and then unpair with the Node, you will not be able to pair with it again, since you have told the Node to turn off the 2.4GHz radio indefinitely. Also, if you do set a schedule for 2.4GHz listening, you can only pair with your device during those hours when it is listening. For instance, if you are studying Monarch butterflies using the BlūMorpho tags, and only have the Nodes listening during the daylight hours, you will only be able to pair to your Nodes with the CTT Mobile App during those daylight hours.**
+ **⚠️ ALERT!** If you shut off all 2.4GHz hours and then unpair with the Node, you will not be able to pair with it again, since you have told the Node to turn off the 2.4GHz radio indefinitely. Also, if you do set a schedule for 2.4GHz listening, you can only pair with your device during those hours when it is listening. For instance, if you are studying Monarch butterflies using the BluMorpho tags and only have the Nodes listening during the daylight hours, you will only be able to pair to your Nodes with the CTT Mobile App during those daylight hours.
  
- Once you have set up the config as you like, click the `Submit` button to push it to the Node. Leaving the page by clicking one of the other page buttons, and then returning to the Config page, will allow you to confirm the config has been updated.
- If you are working on a config and change something you don't want to change, simply click `Reset`. If 
+ Once you have set up the config as you like, click the `Submit` button to push it to the Node. Leaving the page by clicking one of the other page buttons and then returning to the Config page will allow you to confirm the config has been updated. If you are working on a config and change something you don't want to change, simply click `Reset`.
 
-* `Dev` (this may not be available) - The `Dev`eloper page has three buttons at the top:
+* **`Dev`** (this may not be available) - The Developer page has three buttons at the top:
 
-* `Command` - allows the user to submit various commands to the Node, and provides feedback from the node via the output window.
-* `FW Update` - allows the user to upload a new Firmware file.
+* `Command` - allows the user to submit various commands to the Node and provides feedback from the Node via the output window.
+* `FW Update` - allows the user to upload a new firmware file.
 * `Clear` - clears the output console.
 
 ![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3Dev.png){#id .class width=50%}
 
-Clicking on the `Command` button will bring up a list of commands you can issue to the Node
+Clicking on the `Command` button will bring up a list of commands you can issue to the Node.
 
 ![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3DevCmds.png){#id .class width=50%}
 
 ## Node Firmware
 
-The current Node Firmware as of this writing is `v0.6.0-beta`. 
+The current Node firmware as of this writing is `v0.6.0-beta`. 
 
 ## Updating your Node firmware
 
-If you need to update your Node firmware, you can use the following steps.
+If you need to update your Node firmware, you can use the following steps:
 
 Ensure you have the current Node firmware file. If you don't, you can find it in our User Guide directory.
 
@@ -367,13 +401,13 @@ Ensure you have the current Node firmware file. If you don't, you can find it in
 ![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_firmwareUpdateImg1.png){#id .class width=50%}
 
 3. **Start scan for available devices**
-4. **look for CTT-NODE-XXXXXXXX (where XXXXXXXX is the Node ID #)**
-5. **Tap "Connect" next to the node you wish to pair with**
+4. **Look for CTT-NODE-XXXXXXXX (where XXXXXXXX is the Node ID #)**
+5. **Tap "Connect" next to the Node you wish to pair with**
 6. **Tap "Go" when pairing is complete**
 
 ![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_firmwareUpdateImg2.png){#id .class width=75%}
 
-7. **From the Node home screen use the bottom navigator bar to open the "DEV" view**
+7. **From the Node home screen, use the bottom navigator bar to open the "DEV" view**
 8. **Tap the "FW Update" button at the top of the terminal**
 
 ![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_firmwareUpdateImg3.png){#id .class width=75%}
@@ -382,36 +416,37 @@ Ensure you have the current Node firmware file. If you don't, you can find it in
 
 ![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_firmwareUpdateImg4.png){#id .class width=75%}
 
-10. **Wait for the upload to complete...**
-This should take about 60-90 seconds to complete
+10. **Wait for the upload to complete.**
+This should take about 60-90 seconds to complete.
 
 ![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_firmwareUpdateImg5.png){#id .class width=75%}
 
-11. **Once the upload is complete you'll see a Pending Firmware tile with a "Verify" button. Tap the "Verify" button.**
+11. **Once the upload is complete, you'll see a Pending Firmware tile with a "Verify" button. Tap the "Verify" button.**
 
-12. **Once the file is verified you'll have the option to install it. Tap the "Install" button.**
+12. **Once the file is verified, you'll have the option to install it. Tap the "Install" button.**
 
 ![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_firmwareUpdateImg6.png){#id .class width=75%}
 
 13. **After sending the install command, the Node will disconnect from the app while it installs the new firmware and reboots. You will be taken back to the Home Screen.**
 
-14. **Wait until you see the LED lights on your Node to come back on, indicating the installation is complete, and pair with the Node again.**
+14. **Wait until you see the LED lights on your Node come back on, indicating the installation is complete, and pair with the Node again.**
 
 This will take about 2 minutes.
 
 ![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_firmwareUpdateImg7.png){#id .class width=75%}
 
-15. **Following the same steps as before to navigate to the Firmware Update screen.**
+15. **Following the same steps as before, navigate to the Firmware Update screen.**
 
 16. **Your screen should look like the one below.**
 
-***Note the firmware version in the images shown may not reflect the most current firmware at the time of your deployment, so use the image firmwares simply as reference to show how to read the info, and use the latest firmware files available from our support site when updating your Nodes.***
+***Note: The firmware version in the images shown may not reflect the most current firmware at the time of your deployment, so use the image firmwares simply as reference to show how to read the info, and use the latest firmware files available from our support site when updating your Nodes.***
 
 ![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_firmwareUpdateImg8.png){#id .class width=75%}
 
-**Congratulations!!! Your Node V3 firmware has been updated! If you have any questions or issues during this process, please reach out to CTT Customer Support for assistance.**
-
+**Congratulations!** Your Node V3 firmware has been updated! If you have any questions or issues during this process, please reach out to CTT Customer Support for assistance.
 
 # Final Thoughts
 
-This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/pages/customer-service-desk-csd) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2024.
+This User Guide is a living document. Your experiences and input are greatly appreciated, so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our Customer Service Desk [here](https://celltracktech.com/pages/customer-service-desk-csd), and we will work to incorporate them in future revisions. 
+
+All material © Cellular Tracking Technologies, 2025.
