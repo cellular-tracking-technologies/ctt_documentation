@@ -117,8 +117,6 @@ When you screw the `cable gland cap` onto the `cable gland`, it will compress th
 
 **We recommend final tightening of the cap with a crescent wrench, but be careful not to overtighten and crush the cable!**
 
-![*Demonstrating how to tighten the Node V3 Bulkhead*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_TightenBulkhead.png){#id .class width=50%}
-
 Once the cap is tightened, you should see the grommet compressed around the cable.
 
 ![*Showing a tight bulkhead with internal grommet compressed around cable*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_tightOnPower.jpg){#id .class width=50%}
@@ -129,7 +127,6 @@ Once the cap is tightened, you should see the grommet compressed around the cabl
 
 ![*Mounted Node V3 with door open*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/Node3_Solar2_NodeOpen.jpg){#id .class width=50%}
 
-![*Photo showing the back of the solar-rechargeable power supply and status lights*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/Solar2_CheckingBattery.JPG){#id .class width=50%}
 
 ## Original 4 Watt Solar Pack LED Status Lights (on back of solar-rechargeable battery supply)
 
