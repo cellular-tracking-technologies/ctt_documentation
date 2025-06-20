@@ -27,11 +27,11 @@ knitr::opts_chunk$set(echo = TRUE)
 Congratulations on your purchase of the new CTT Node V3! The CTT Internet of Wildlife System, of which the Node has been an integral part since the beginning, has just become significantly more powerful with this new Node. We incorporated your suggestions in developing this new Node, which offers several specific benefits and improvements over the old model:
 
 1. Fully configurable through our robust CTT Mobile App
-2. Separate solar-rechargeable power supply to allow for flexible grid setup and the ability to add alternate power sources in the future. **This was updated in May 2025 from a 4V model to a 5V model. Both models are described below.**
+2. Separate solar-rechargeable power supply to allow for flexible grid setup and the ability to add alternate power sources in the future. **This was updated in May 2025 from a 4 Watt model to a 5 Watt model. Both models are described below.**
 3. Fully accessible housing for easy removal of the SD card and inspection of the LEDs
 4. Dual-mode compatibility with both 434MHz and 2.4GHz tags
 
-# Unboxing your CTT Node V3 (This example shows the 4V Solar Panel Model)
+# Unboxing your CTT Node V3 (4 Watt Solar Panel Model)
 
 Inside your Node shipment, you'll find two main components (Figs. A & B): a box containing the solar-rechargeable battery pack, antennas, and mounting hardware, and the Node itself in a latched case. Figure C shows the contents of one Node laid out for identification.
 
@@ -54,28 +54,28 @@ Inside your Node shipment, you'll find two main components (Figs. A & B): a box 
 9. Top mounting plate
 10. Mount for solar-rechargeable battery pack 
 
-# New Mid-2025 - 5V Solar-Rechargeable Power Supply
+# New Mid-2025 - 5 Watt Solar-Rechargeable Power Supply
 
-In 2025, we discontinued the original 4V solar-rechargeable power supply in favor of a slightly larger one that provides 5V of power and a new gimbal attachment for easier and more secure positioning. In addition to the extra voltage, this supply features a USB-C port that can be used for manually recharging the batteries in the absence of solar exposure, and a new heavy-duty water-tight connector. 
+In 2025, we discontinued the original 4 Watt solar-rechargeable power supply in favor of a slightly larger one that provides 5 Watts of power and a new gimbal attachment for easier and more secure positioning. In addition to the extra wattage, this supply features a USB-C port that can be used for manually recharging the batteries in the absence of solar exposure, and a new heavy-duty water-tight connector. 
 
-# Unboxing your CTT Node V3 5V Solar-Rechargeable Power Supply
+# Unboxing your CTT Node V3 Solar-Rechargeable Power Supply
 
 ![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/Node3_Unboxing_5V_Panel_V2.png){#id .class width=50%}
 
 **Figure D:** New 5V solar panel as packaged for shipping. Face down with accessory parts in plastic enclosure.
 
-**Figure E:** Upon removing the 5V solar/battery pack, you'll find the hardware for mounting your V3 Node and 5V Solar Panel underneath.
+**Figure E:** Upon removing the 5 Watt solar/battery pack, you'll find the hardware for mounting your V3 Node and 5 Watt Solar Panel underneath.
 
 **Key for Figure F:**
 
-1. 5V Solar-rechargeable Panel (contains 6 sealed lithium rechargeable cells for a total of 18,000 mAh)
+1. 5 Watt Solar-rechargeable Panel (contains 6 sealed lithium rechargeable cells for a total of 18,000 mAh)
 2. New Gimbal Head for attaching and positioning Solar-rechargeable Panel
-3. Single mounting plate for both CTT Node V3 and new 5V solar-rechargeable panel
+3. Single mounting plate for both CTT Node V3 and new 5 Watt solar-rechargeable panel
 4. Hardware:
     * Nylon nut for Bulkhead (for inside the Node case)
     * 4 screws for mounting the V3 Node to the backing plate
     * 3 screws for mounting the gimbal head and solar panel to backing plate
-5. Power cable for connecting the 5V Solar-rechargeable panel to the V3 Node
+5. Power cable for connecting the 5 Watt Solar-rechargeable panel to the V3 Node
 
 *We have no doubt that you are excited to deploy your Nodes, so here's a quick start guide to get you going in a few minutes.*
 
@@ -117,8 +117,6 @@ When you screw the `cable gland cap` onto the `cable gland`, it will compress th
 
 **We recommend final tightening of the cap with a crescent wrench, but be careful not to overtighten and crush the cable!**
 
-![*Demonstrating how to tighten the Node V3 Bulkhead*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_TightenBulkhead.png){#id .class width=50%}
-
 Once the cap is tightened, you should see the grommet compressed around the cable.
 
 ![*Showing a tight bulkhead with internal grommet compressed around cable*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/NodeV3_tightOnPower.jpg){#id .class width=50%}
@@ -129,9 +127,8 @@ Once the cap is tightened, you should see the grommet compressed around the cabl
 
 ![*Mounted Node V3 with door open*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/Node3_Solar2_NodeOpen.jpg){#id .class width=50%}
 
-![*Photo showing the back of the solar-rechargeable power supply and status lights*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/Solar2_CheckingBattery.JPG){#id .class width=50%}
 
-## Original 4V Solar Pack LED Status Lights (on back of solar-rechargeable battery supply)
+## Original 4 Watt Solar Pack LED Status Lights (on back of solar-rechargeable battery supply)
 
 * **Top Yellow LED: Power Output**
   * `ON`: Output Voltage
@@ -147,17 +144,17 @@ Once the cap is tightened, you should see the grommet compressed around the cabl
 
 ![*Photo showing the back of the solar-rechargeable power supply and checking the status lights*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/Solar2_CheckingBattery.JPG){#id .class width=50%}
 
-## Powering up the 5V Solar Pack
+## Powering up the 5 Watt Solar Pack
 
-To turn on the 5V Solar Pack, press the Power button on the back of the unit. On initial start, you'll see the battery level indicated for 8 seconds. To turn off, simply press the Power button.
+To turn on the 5 Watt Solar Pack, press the Power button on the back of the unit. On initial start, you'll see the battery level indicated for 8 seconds. To turn off, simply press the Power button.
 
-## Checking the battery status on the 5V Solar Pack
+## Checking the battery status on the 5 Watt Solar Pack
 
 To check the battery status once powered up, press the power button to turn the unit off, wait 3 seconds, then press the power button again to turn the power back on and display the charge for 8 seconds. **Note: if you press the power button during the 8 seconds of charge display, you will turn the unit off.**
 
-## New 5V Solar Pack LED Status Lights
+## New 5 Watt Solar Pack LED Status Lights
 
-With the new 5V Solar Pack, there are 5 indicator lights on the back of the unit next to the power button: 1 square light and 4 round lights. Their behavior depends on whether the unit is powered on, off, or in startup mode.
+With the new 5 Watt Solar Pack, there are 5 indicator lights on the back of the unit next to the power button: 1 square light and 4 round lights. Their behavior depends on whether the unit is powered on, off, or in startup mode.
 
 ### When Unit is Powered ON
 
@@ -219,16 +216,18 @@ The Node V3 is capable of simultaneously collecting 434MHz and 2.4GHz tag detect
 ### Prerequisites
 
 * CTT SensorStation V2 or V3
-* Latest Disk Image: `(09-10-2024)` or later
+* Disk Image: `(2024-07-16)` or later (Latest: `09-10-2024`)
 * Radios running firmware version `4.0.0` or later
 
 #### Check your Disk Image Version
 
-If you received your SensorStation after September 10, 2024, you most likely have the latest disk image and are fully compatible with the new CTT Node V3. To confirm this, connect a computer to your SensorStation via WiFi or Ethernet [see directions here](https://cellular-tracking-technologies.github.io/ctt_documentation/SensorStation-User-Guide.html#connecting-to-your-sensorstation-web-interface) and navigate to the SensorStation Overview.  
+If you received your SensorStation after July 16, 2024, you most likely have a compatible disk image for the new CTT Node V3. To confirm this, connect a computer to your SensorStation via WiFi or Ethernet [see directions here](https://cellular-tracking-technologies.github.io/ctt_documentation/SensorStation-User-Guide.html#connecting-to-your-sensorstation-web-interface) and navigate to the SensorStation Overview.  
 
 ![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/SensorStationImageVersion.png){#id .class width=50%}
 
-If your station indicates you are running the Disk Image from September 2024 or later, then you have the correct one. **If not, you'll need to flash your Raspberry Pi with the newest Disk Image per the instructions** [here](https://cellular-tracking-technologies.github.io/ctt_documentation/flashingComputeModule.html).
+If your station indicates you are running the Disk Image from July 2024 or later, then you have a compatible version. **For optimal performance, we recommend upgrading to the latest Disk Image (09-10-2024) when possible.** To upgrade, flash your Raspberry Pi with the newest Disk Image per the instructions [here](https://cellular-tracking-technologies.github.io/ctt_documentation/flashingComputeModule.html).
+
+**If you are running a Disk Image older than July 2024, you must upgrade to use CTT Node V3.**
 
 ### Check your Radio Version and Update if Necessary
 
