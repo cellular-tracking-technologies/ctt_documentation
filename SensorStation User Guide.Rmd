@@ -250,7 +250,7 @@ The SensorStation can be placed inside a building, or fastened to the pole or bu
 **If placing your station inside a building be aware that this may affect GPS and/or cellular reception, possibly requiring an external antenna wired to the outside of the building.** There are many possible external antennas, and searching Amazon for "external GPS antenna with SMA connector" will yield a number of options.
 
 ##### Activating an external GPS antenna
-Your SensorStation ships with the onboard GPS chip-antenna activated. There is a small jumper near the GPS that must be moved into the disabled position to deactivate the chip antenna and activate the SMA port on the board. After moving the jumper, you can attach your external antenna to the SMA port and it will work. Be sure to confirm operation by witnessing a good GPS fix on the LDC, or via the web interface, before leaving your SensorStation. 
+Your SensorStation ships with the onboard GPS chip-antenna activated. There is a small jumper near the GPS that must be moved into the disabled position to deactivate the chip antenna and activate the SMA port on the board. After moving the jumper, you can attach your external antenna to the SMA port and it will work. Be sure to confirm operation by witnessing a good GPS fix on the LCD, or via the web interface, before leaving your SensorStation. 
 
 #### Adding an Iridium Antenna for Iridium-enabled Stations
 
@@ -544,7 +544,7 @@ Your SensorStation has a web server running locally on the Raspberry Pi, which m
 2. Enable the WiFi module through the LCD screen by selecting Network > WiFi > Enable WiFi
 2. Connect to your SensorStation via the Ethernet cable (see above section for details)
 3. Open a Command Prompt window on your computer (for mac, use Terminal; for PC use PowerShell or CMD)
-4. On V2 or V3 stations, record the IP address from the LDC screen (under Network > IP Address)
+4. On V2 or V3 stations, record the IP address from the LCD screen (under Network > IP Address)
 5. On V1 stations record the IP address that appears on the eInk display.
 
 ### SSH into the Pi to update the connectivity settings
