@@ -4,7 +4,7 @@ title: |
   <br />
   Flashing your SensorStation's Compute Module
 author: "support@celltracktech.com"
-date: "10/14/2024"
+date: "07/01/2025"
 output:
   html_document:
     toc: yes
@@ -136,7 +136,11 @@ This indicates that the USB port has been opened, and your computer is waiting t
 
 * *Note: The location of your USB Boot Jumper may vary, and is typically vertically placed near the lower left corner of the Raspberry Pi module on V1 boards, or horizontally placed just above the power switch on V2 boards.*
 
-![](images/boot_enabled2.png){#id .class width=25%}
+![*Older V2 jumper location*](images/boot_enabled2.png){#id .class width=25%}
+
+![*Newer V3 jumper location (see red box)*](images/SS_USBhostJumper.jpg){#id .class width=25%}
+<br /><br />
+
 
 3. Run `rpiboot.exe` which was installed from the previous step. From windows, you can search `rpiboot` to find it.
 
@@ -149,6 +153,10 @@ This indicates that the USB port has been opened, and your computer is waiting t
 **WARNING: Your Windows machine may give you warnings stating to format the RPi Module. YOU DO NOT NEED TO DO THIS! Ignore these messages and continue onto step 5.**
 
 5. Plug the micro-USB cable into the SensorStation, and into your computer.
+
+![*Note that there is only one micro-USB port on the SensorStation, and on V3 that port is located just below the LCD screen (red box)*](images/SS_USBHostPort.jpg){#id .class width=25%}
+<br /><br />
+
 6. Power on the SensorStation.
 7. The dialog box from `rpiboot` should disappear after displaying some messages and the module will be available as a new hard drive. (**Do not auto-fix as windows may suggest!**)
 8. Run `Raspberry Pi Imager`
