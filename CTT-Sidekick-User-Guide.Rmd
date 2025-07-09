@@ -4,7 +4,7 @@ title: |
   <br />
   CTT Sidekick User Guide
 author: "support@celltracktech.com"
-date: "9/25/2024"
+date: "7/9/2025"
 output:
   html_document:
     css: styles.css
@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 \newpage
 
-<p class="pullquote">Every hero needs their trusty Sidekick</p>
+<p class="pullquote">Every hero needs a trusty Sidekick</p>
 
 **Disclaimer: This user guide is very much a DRAFT version and still being written. Please feel free to use it, but we do not recommend printing it out as it is under heavy development. Please send any feedback to support@celltracktech.com, and thank you in advance for your input!**
 
@@ -142,7 +142,7 @@ At the very top right of the Detect Tags screen, in the header, are two small bu
 
 * **`X`** - This button clears the Detection List. You may find this useful when you have scanned an area where you had multiple detections, but then move to a new area, just to see only the tags currently within range of your Sidekick.
 
-* **`Location Icon`** - This button toggles whether you enable Location Services, which are required for localizing tags in map view, as well as for other features. You can turn this off to save battery life when you're not actively tracking tags.
+* **`Location Icon`** - This button toggles whether you enable Location Services, which are required for localizing tags in map view, as well as for other features. You can turn this off to save battery life when you're not actively tracking tags. In addition to granting the app location permissions from your device, you must manually enable location services in the detect view to record tag detection data with locations. When location services are disabled, the icon will be grayed out with a slash through it. When location services are enabled the icon will be blue. **Location services are off by default.**
 
 Also at the top of the Tag List screen there are three larger buttons:
 
