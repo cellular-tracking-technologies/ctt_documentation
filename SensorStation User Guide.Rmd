@@ -268,6 +268,43 @@ Lastly, the coax will need to be connected to the SensorStation. There is a SMA 
 
 # Powering your SensorStation
 
+## Power Filter
+
+CTT's new power filter dramatically improves radio tag detection by eliminating electrical noise interference.
+With thousands of Sensor Stations deployed across diverse environments, we've observed that some sites suffer from significantly more electrical noise than others. This noise can come from power lines, solar panels, or other electronic equipment, and it interferes with your station's ability to detect radio tags.
+
+The Problem: Long power cables (especially from solar panels) act like antennas, picking up electrical noise and feeding it directly into your sensor station. This noise drowns out the weak signals from radio tags, reducing detection range and reliability.
+
+The Solution: Our power filter combines an RF choke and EMI filter to block this unwanted noise while allowing clean power to reach your station. Think of it as a noise barrier that stops interference at the source.
+
+What You'll Experience:
+
+* Detect weaker tags that were previously lost in the noise
+
+* More consistent performance regardless of your site's electrical environment
+
+* Better range and reliability in both noisy and clean locations
+
+* Instant improvement - benefits are immediate upon installation
+
+* Easy Installation: Simply plug the filter between your power source (solar, battery, or AC adapter) and your sensor station. No special tools required, no configuration needed - just plug in and experience cleaner reception immediately.
+
+Whether your site currently has noise issues or not, every station benefits from improved signal-to-noise ratios that lead to better tag detection performance.
+
+To receive your CTT Power Filter, fill out the form here:
+https://airtable.com/app20NXPv7qjXDfBN/pagrBcK1muqejz5os/form
+The form is password protected to keep out spammers. The password is celltracktech2025.
+
+### Power Filter Attachment
+
+The power filter is attached in-line between the power source and SensorStation power block.
+
+1. Disconnect your power from the station board.
+
+2. Plug in the power filter wires into the appropriate polarity on the station board (red to positive, black to negative).
+
+3. Plug your power source wires into the power filter terminal, again ensuring that you're matching the polarity (positive with positive, negative with negative).
+
 The SensorStation can be connected directly to a 12V DC power source, via a charge controller, or to an AC to DC power supply which can then be plugged directly into your standard AC power source. In many cases, though, SensorStations are deployed remotely and are in need of a remote power supply such as a solar charged deep-cycle marine battery. A typical setup would be a 100W solar panel connected to a charge controller. The charge controller typically has 3 ports. The 3 ports are 1.) Solar panel 2.) 12V battery 3.) Accessory/Device/consumer, which, in this case, is your SensorStation. That line goes into the green *Power In* terminal on the SensorStation board. The positive and negative wire ports are labeled on the board, and to insert the wire simply loosen the set screws on the top, and slide the wire leads in to the holes just under the set screws (see the pictures below; note for V1 stations see the [QuickStart Guide in Appendix II](#V1Quickstart)). 
 
 ![Power not connected](images/V3NoPower.jpeg){#id .class width="20%"}
