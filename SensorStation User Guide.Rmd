@@ -270,6 +270,8 @@ Lastly, the coax will need to be connected to the SensorStation. There is a SMA 
 
 ## Power Filter
 
+![Power filter](images/power_filter.png){#id .class width="20%"}
+
 CTT's new power filter dramatically improves radio tag detection by eliminating electrical noise interference.
 With thousands of Sensor Stations deployed across diverse environments, we've observed that some sites suffer from significantly more electrical noise than others. This noise can come from power lines, solar panels, or other electronic equipment, and it interferes with your station's ability to detect radio tags.
 
@@ -303,7 +305,12 @@ The power filter is attached in-line between the power source and SensorStation 
 
 2. Plug in the power filter wires into the appropriate polarity on the station board (red to positive, black to negative).
 
-3. Plug your power source wires into the power filter terminal, again ensuring that you're matching the polarity (positive with positive, negative with negative).
+3. Plug your power source wires into the power filter terminal, again ensuring that you're matching the polarity (brown with positive, blue with negative).
+
+![Power filter attached](images/power_filter_attached.png){#id .class width="20%"}
+
+If you have a V3.3 SensorStation, then the power filter is built directly into the board and you can proceed below.
+
 
 The SensorStation can be connected directly to a 12V DC power source, via a charge controller, or to an AC to DC power supply which can then be plugged directly into your standard AC power source. In many cases, though, SensorStations are deployed remotely and are in need of a remote power supply such as a solar charged deep-cycle marine battery. A typical setup would be a 100W solar panel connected to a charge controller. The charge controller typically has 3 ports. The 3 ports are 1.) Solar panel 2.) 12V battery 3.) Accessory/Device/consumer, which, in this case, is your SensorStation. That line goes into the green *Power In* terminal on the SensorStation board. The positive and negative wire ports are labeled on the board, and to insert the wire simply loosen the set screws on the top, and slide the wire leads in to the holes just under the set screws (see the pictures below; note for V1 stations see the [QuickStart Guide in Appendix II](#V1Quickstart)). 
 
