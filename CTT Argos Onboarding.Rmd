@@ -1,0 +1,119 @@
+---
+title: |
+  ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png){width=3in}  
+  <br />
+author: "support@celltracktech.com"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: yes
+    number_sections: yes
+  pdf_document:
+    toc: yes
+    fig_caption: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# **Argos-enabled Device Registration and Data Fees**
+
+## **Overview**
+
+Unlike our cellular-based devices, Argos-enabled devices (e.g., ES-150, ES-500) require **direct coordination with CLS (Collecte Localisation Satellites)** to activate Argos data service. You’ll need to establish an Argos Program and obtain unique Argos IDs from CLS before your device can be built or configured.
+
+**Important**: CLS requires up to **30 days** for program approval, so begin this process early.
+
+---
+
+## **Step 1: Register with CLS**
+
+To begin, visit:
+[http://www.argos-system.org/become-a-user/](http://www.argos-system.org/become-a-user/)
+
+During the registration process, you will need to provide information about your Argos transmitter:
+
+* **Manufacturer**: Cellular Tracking Technologies
+* **Model**: SATX-1 PCB
+
+There is **no cost** to establish an Argos Program until you begin transmitting data.
+
+---
+
+## **Step 2: Share Your Argos Info with Us**
+
+Once you’ve received your Argos Program and Argos IDs:
+
+* Share the **Program Name** and **Argos ID(s)** with us.
+* These IDs must be copied to our account to:
+
+  * Complete device setup and programming
+  * Ensure data are interpretable and accessible via our web portal
+
+**Note**: We cannot complete your device build without a valid Argos ID.
+
+---
+
+## **Argos Data Fees (via CLS)**
+
+These fees are **billed directly by CLS**, not through Cellular Tracking Technologies.
+
+### **Minimum Monthly Fee**
+
+CLS only charges once data is transmitted.
+However, the typical minimum monthly cost is:
+
+* \$15/month base fee
+* Plus \$4/day (JTA) or \$6/day (Private)
+
+**Estimated minimum total: \$19–\$21 per tag, per month**
+
+---
+
+### **Maximum Monthly Fee (Capped)**
+
+CLS applies a monthly cap after 12 days of transmission:
+
+| User Type | Daily Fee | Max Monthly Fee          |
+| --------- | --------- | ------------------------ |
+| JTA       | \$4/day   | \$15 + (\$4 × 12) = \$63 |
+| Private   | \$6/day   | \$15 + (\$6 × 12) = \$87 |
+
+Regardless of how many days the tag transmits, you will not be charged more than this capped amount.
+
+---
+
+### **Can Devices Be “Paused” to Save Costs?**
+
+Yes. CLS can remove your Argos ID and recycle it, effectively pausing billing.
+
+However:
+
+* No data will be collected while the ID is inactive.
+* Any data transmitted during this time will be lost and unrecoverable.
+
+---
+
+## **JTA vs. Private Rates**
+
+Your classification is determined by the **space agency**, not CLS.
+
+Here’s a general guideline:
+
+| Organization Type                    | Likely Classification |
+| ------------------------------------ | --------------------- |
+| University / Non-profit / Government | JTA                   |
+| Commercial (e.g., film crews, media) | Private               |
+
+If you’re unsure, you can register your System Use Agreement in advance. Once approved, your user type will be confirmed. There is no cost to open an account with CLS.
+
+---
+
+## **GSM Data Fees (CTT Devices Only)**
+
+If your device also uses GSM (cellular) connectivity, GSM data fees are billed **by Cellular Tracking Technologies**, not CLS. These fees are outlined on our webstore:
+[https://celltracktech.com/collections/data-plans/products/cellular-data-plan-for-gps-gsm-units](https://celltracktech.com/collections/data-plans/products/cellular-data-plan-for-gps-gsm-units)
+
+For any further questions please don't hesitate to reach out to support@celltracktech.com
+

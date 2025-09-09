@@ -4,7 +4,7 @@ title: |
   <br />
   CTT Node V3 User Guide
 author: "support@celltracktech.com"
-date: "6/19/2025"
+date: "7/17/2025"
 output:
   html_document:
     toc: yes
@@ -241,7 +241,7 @@ If you are running the correct Disk Image but not the correct Radio Firmware, yo
 
 ## Node V3 SD Card Storage
 
-Your CTT Node V3 has a 16GB SD card pre-installed for backup storage, as well as for manual data collection and management. As you saw from photos in Section 2, it's now much easier to service the SD card on Node V3 compared to the previous version. **We do not recommend hot-swapping the card.** It is encouraged to power down the device before inserting/removing the card.
+Your CTT Node V3 has a 16GB SD card pre-installed for backup storage, as well as for manual data collection and management. As you saw from photos in Section 2, it's now much easier to service the SD card on Node V3 compared to the previous version. **DO NOT EVER HOT SWAP THE SD CARD. You mush power down the device before inserting/removing the card, otherwise the Node can behave as if it's writing to the SD card, and not.**
 
 ### Removing the SD card
 
