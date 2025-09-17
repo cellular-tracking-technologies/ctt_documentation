@@ -4,7 +4,11 @@ title: |
   <br />
   Installation Guide for the CTT SensorStation and CTT Nodes
 author: "support@celltracktech.com"
+<<<<<<< HEAD
+date: "09/17/2025"
+=======
 date: "04/29/2025"
+>>>>>>> master
 output:
   html_document:
     toc: yes
@@ -24,7 +28,32 @@ knitr::opts_chunk$set(echo = TRUE)
 
 In order to connect directly to your SensorStation, you'll need 2 `USB->Ethernet Adapters` (we recommend: https://tinyurl.com/yc6llze4), and an Ethernet Cable. If you have a V2 station, you'll need a `Raspberry Pi compatible USB WiFi adapter` like this one https://store.celltracktech.com/products/wifi-usb-adapter-add-on-for-sensorstation-v2 if you want to connect via WiFi. If you have a V3 station or later, the WiFi is pre-installed on the board. **Make sure to have these on-hand prior to receiving your SensorStation so there is no delay in setup.**
 
-# Note on Version 3 (and 3.02) SensorStation
+# CTT SensorStation Recommended Maintenance
+## Last updated September 17, 2025
+
+## **IMPORTANT NOTE:** Recommendations maintenance for existing V2 and V3.0 - 3.2 SensorStation Owners (excludes V3.3)
+1. **Update your SensorStation to the latest disk image.** [details here](https://cellular-tracking-technologies.github.io/ctt_documentation/flashingComputeModule.html)
+2. **Run the over-the-air update** on your SensorStation to pull down and install the latest updates since the disk image was created.
+3. **Request and install the new FREE PowerFilter** for reducing environmental noise [here](https://airtable.com/app20NXPv7qjXDfBN/pagrBcK1muqejz5os/form) pwd: `celltracktech2025`.
+4. *Optional:* **set the reboot cycle to weekly**. This will ensure your station reboots more frequently which can reconnect any FCD that may have been kicked off due to overrunning the USB bus.
+
+### V3.0 - 3.2 Owners:
+
+**Problem:** In addition to the above, because of a new USB Bus on the V3x stations, running 3 or more FunCube Dongles (FCDs) while also running both the Cellular Modem and Wifi module (or having a permanent Ethernet -> USB connection for a wired internet connection) **may (heavy emphasis on “may” as this issue is not consistent across installs)** cause excessive heat and power drops that may result in rebooting or “kicking off” of FunCube Dongles.
+
+**Solution #1: If you must run 3 or more FCDs**, be sure to **DISABLE whatever you are not using.** If the station is using the cellular modem, disable the Wifi. If it’s using the Wifi, disable the cellular modem. If it’s using hard-wired Ethernet, disable BOTH the cellular modem and wifi. This will keep the power draw on the USB bus to a minimum, so that the FCDs will not experience lower power (they are very power hungry AND they are not all built the same, so there is considerable variation in power usage).
+
+**Solution #2: Use up to 2 FCD.** We have demonstrated normal performance with 2 or fewer FCDs even with both cell and wifi running. That said, disabling whatever you’re not using just makes sense so please do that too.
+
+**V3.3 Owners (shipping now):**
+The newest board run includes all elements of the PowerFilter, as well as heat dissipation mechanisms and a new USB Bus that avoids the aforementioned issues. **Therefore, any new V3.3 boards that ship will have the latest disk image and not require any of the additional fixes noted above.** The only recommendation for any new station is:
+Check the SensorStation User Guide and connect the station to the internet and run the over the air updater so that you have the latest patch fixes before deploying your station. 
+
+**SensorStation updates are posted to the Motus forum (community.motus.org) and the CTT Support Slack group.**
+
+
+
+# Note on Version 3.0 and 3.2 SensorStation
 
 As of June 2022 we have released the 3rd version of the SensorStation. V3 SensorStations differ from V2 stations in a few important ways.
 
