@@ -4,7 +4,7 @@ title: |
   <br />
   Flashing your SensorStation's Compute Module
 author: "support@celltracktech.com"
-date: "07/01/2025"
+date: "11/10/2025"
 output:
   html_document:
     toc: yes
