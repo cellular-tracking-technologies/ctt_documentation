@@ -29,9 +29,10 @@ In order to connect directly to your SensorStation, you'll need 2 `USB->Ethernet
 
 ## **IMPORTANT NOTE:** Recommendations maintenance for existing V2 and V3.0 - 3.2 SensorStation Owners (excludes V3.3)
 1. **Update your SensorStation to the latest disk image.** [details here](https://cellular-tracking-technologies.github.io/ctt_documentation/flashingComputeModule.html)
-2. **Run the over-the-air update** on your SensorStation to pull down and install the latest updates since the disk image was created.
-3. **Request and install the new FREE PowerFilter** for reducing environmental noise [here](https://airtable.com/app20NXPv7qjXDfBN/pagrBcK1muqejz5os/form) pwd: `celltracktech2025`.
-4. *Optional:* **set the reboot cycle to weekly**. This will ensure your station reboots more frequently which can reconnect any FCD that may have been kicked off due to overrunning the USB bus.
+2. **Run the over-the-air update** on your SensorStation to pull down and install the latest updates since the disk image was created.\
+3. **Enable the Cellular Modem (if you plan to use it)**. By default, the Cellular modem is disabled once it leaves CTT. You will need to manually enable it by using the Sensor Station LCD screen, and selecting Network --> Cellular --> Enable Modem.
+4. **Request and install the new FREE PowerFilter** for reducing environmental noise [here](https://airtable.com/app20NXPv7qjXDfBN/pagrBcK1muqejz5os/form) pwd: `celltracktech2025`.
+5. *Optional:* **set the reboot cycle to weekly**. This will ensure your station reboots more frequently which can reconnect any FCD that may have been kicked off due to overrunning the USB bus.
 
 ### V3.0 - 3.2 Owners:
 
