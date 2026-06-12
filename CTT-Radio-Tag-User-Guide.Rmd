@@ -534,7 +534,7 @@ Make sure each item below is checked before deployment.
 
 ## BlūBird Quick Start Guide
 
-![*BlūBird tag with 4-corner 5mm raised platform*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/BlūBirdMagnetOff.jpg){#id .class width=50%}
+![*BlūBird tag with 4-corner 5mm raised platform*](images/BlūBirdMagnetOff.jpg){#id .class width=50%}
 
 ### Best For
 
@@ -546,51 +546,64 @@ BlūBird is a solar-assisted BlūSeries tag designed for deployments where 24-ho
 
 Each BlūBird tag will arrive with a magnet attached. The magnet keeps the tag in a low-power state during shipping and storage.
 
-![*BlūBird with 4-corner hole platform as shipped with magnet attached*](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/BlūBirdMagnetOn.jpg){#id .class width=50%}
+![*BlūBird with 4-corner hole platform as shipped with magnet attached*](images/BlūBirdMagnetOn.jpg){#id .class width=50%}
 
 
 ### What You'll Need
 
 - A Sidekick receiver to verify operation and monitor battery voltage before deployment.
 - Outdoor direct sunlight for charging.
+- A way to record each tag ID, baseline voltage, and post-charge voltage.
 
 ### Before Deployment
 
-BlūBird tags are shipped in a low-power state and may not arrive fully charged. Before deployment, all tags should be checked and charged to ensure proper operation in the field.
+BlūBird tags are shipped in a low-power state and are not shipped with fully charged batteries. Before deployment, all tags should be checked with a Sidekick, charged in direct sunlight, and checked again to confirm that the batteries are charging properly.
+
+Because of the small size and tight manufacturing tolerances of these devices, some units may fail after manufacturing even though they were pre-tested. Always confirm function and battery charging before deploying BlūBird tags on live animals.
 
 ### Activate or Test the Tag
 
-Using your Sidekick receiver:
+Start by collecting baseline data with your Sidekick before charging the tags:
 
-1. Remove the magnet from one BlūBird tag.
-2. Watch the Sidekick display for the tag to appear.
-3. Confirm that the tag is transmitting and reporting battery voltage.
-4. Repeat for each tag in the shipment.
+1. Remove the BlūBird tags from the packaging.
+2. Discard any plastic that was holding the magnets in place.
+3. Remove the magnets from the tags you are checking.
+4. Use the Sidekick to confirm that the tags are transmitting and reporting battery voltage.
+5. Record the tag IDs and baseline battery voltages.
+6. Reattach the magnets after collecting the baseline data.
+
+You do not need to check tags individually. You can place all BlūBird tags out at once, collect detections with the Sidekick, and review the Sidekick CSV file afterward to retrieve the baseline voltage for each tag. You can also work with a smaller group of tags and monitor each one in the Sidekick using the real-time graph of time versus voltage. Both methods are effective.
+
+After baseline data are recorded:
+
+1. Remove the magnets and place the tags outdoors in direct sunlight for a couple of days.
+2. Reattach the magnets at night to prevent the tags from discharging overnight.
+3. After a couple of days of charging, cover the solar panels and collect post-charge voltage samples with the Sidekick.
+4. Review the Sidekick data to confirm post-charge voltage for each tag in the shipment.
 
 ### Confirm Detection
 
 Confirm that each tag appears on the Sidekick display, is transmitting normally, and is reporting battery voltage.
 
-<!-- Confirm whether the guide should also include SensorStation / BlūSeries Receiver / Motus / Blū+ portal detection steps for BlūBird, or keep this section limited to pre-deployment Sidekick verification. -->
-
 ### Charging / Battery Notes
 
-As each tag appears on the Sidekick display, note the reported battery voltage.
+As each tag appears on the Sidekick display, note the reported battery voltage. Record a baseline voltage before charging, then record a second voltage after the tags have been exposed to direct sunlight for a couple of days.
 
 Recommended voltage before deployment:
 
 * **3.0 V or higher:** ready for deployment.
 * **Below approximately 2.9 V:** additional charging is recommended before deployment.
 
-Because BlūBird tags are not shipped fully charged, it is normal for some tags to require charging before use. We highly recommend charging all tags prior to deployment.
+The ending voltage after a couple of days in direct sunlight should be close to or just above 3.0 V, regardless of the starting voltage. For example, if a tag starts at 2.0 V and only reaches 2.1 V after two days in direct sunlight, the battery may not be charging effectively. If the voltage decreases after sun exposure, this also indicates a charging issue.
 
 Recommended charging procedure:
 
 1. Place the tags outdoors in direct sunlight whenever possible.
-2. Allow the tags to charge for at least 6-12 hours.
-3. For best results, charge the tags for 1-2 full days before deployment.
+2. Leave the tags in direct sunlight for a couple of days.
+3. Reattach the magnets at night to prevent discharge.
+4. Cover the solar panels before taking the post-charge voltage sample.
 
-The magnets may remain attached during charging if desired, although this is not required for charging to occur.
+The magnets may remain attached during charging if desired, although this is not required for charging to occur. If you remove the magnets for charging, remember to reattach them at night.
 
 Until deployment, keep the tags in a well-lit location where they can continue to charge. Units will typically not charge through windows. Do **NOT** charge under the windshield of a car; extremely high temperatures will damage transmitters.
 
@@ -603,7 +616,7 @@ If a tag does not begin transmitting immediately:
 3. Remove the magnet again to reset the tag.
 4. Check the Sidekick display for activity.
 
-If the tag still does not appear, charge the tag and then check it again.
+If the tag still does not appear, charge the tag in direct sunlight and then check it again.
 
 After charging:
 
@@ -611,6 +624,8 @@ After charging:
 2. Verify that the tag appears on the Sidekick display.
 3. Confirm that the tag is transmitting normally.
 4. Confirm that battery voltage has increased.
+
+If a tag does not charge close to 3.0 V after a couple of days in direct sunlight, if the voltage only increases slightly from a low starting voltage, or if the voltage decreases after charging, contact Cellular Tracking Technologies for replacements. Do not deploy tags with non-charging batteries on live animals.
 
 If the tag still does not transmit after charging and resetting, contact Cellular Tracking Technologies for support.
 
@@ -620,11 +635,14 @@ Make sure each item below is checked before deployment.
 
 - ☐ Magnet removed and tag detected by Sidekick.
 - ☐ Tag transmitting normally.
-- ☐ Battery voltage checked.
-- ☐ Battery voltage approximately 3.0 V or higher.
-- ☐ Tag charged in sunlight for at least 6-12 hours; 1-2 days recommended.
-- ☐ Final operation verified before attachment to bird.
+- ☐ Baseline battery voltage recorded before charging.
+- ☐ Tag charged in direct sunlight for a couple of days.
+- ☐ Magnets reattached at night during charging.
+- ☐ Solar panel covered and post-charge voltage recorded.
+- ☐ Battery voltage close to or above 3.0 V after charging.
+- ☐ Non-charging tags set aside and reported to CTT.
+- ☐ Final operation verified before attachment to a live animal.
 
 # Final Thoughts
 
-This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/pages/customer-service-desk-csd) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2023.
+This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/pages/customer-service-desk-csd) and we will work to incorporate them in future revisions. All material © Cellular Tracking Technologies, 2026.
