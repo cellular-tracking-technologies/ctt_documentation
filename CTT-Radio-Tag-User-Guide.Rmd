@@ -129,20 +129,24 @@ If you run into any complications, please contact CTT through the `Customer Serv
 
 ## Tag Family Quick Reference
 
-| Tag | Family | Power Type | Activation / Test Method | Detection Mentioned in Current Guide |
+| Tag | Family | Power Type | Activation / Test Method | Detection Options |
 | :--- | :--- | :--- | :--- | :--- |
-| LifeTag | 434MHz | Solar-only | Expose solar panel to direct light | CTT Sidekick or SensorStation |
-| PowerTag | 434MHz | Battery-only | CTT Activator | CTT Sidekick or SensorStation |
-| HybridTag | 434MHz | Solar-assisted rechargeable | Remove magnet; use sunlight if battery is flat | CTT Sidekick or SensorStation |
-| BlūMorpho | BlūSeries 2.4GHz | Solar-only | Cut from panel at indicated cut line | Compatible receiver |
-| BlūBat | BlūSeries 2.4GHz | Battery-only | Bridge test pads; sever test tab for permanent activation | Compatible receiver |
-| BlūBird | BlūSeries 2.4GHz | Solar-assisted rechargeable | Remove magnet and verify with Sidekick | Sidekick |
+| LifeTag | 434MHz | Solar-only | Expose solar panel to direct sunlight | CTT Sidekick; SensorStation; V2 Node; V3 Node |
+| PowerTag | 434MHz | Battery-only | CTT Activator | CTT Sidekick; SensorStation; V2 Node; V3 Node |
+| HybridTag | 434MHz | Solar-rechargeable battery | Remove magnet; use direct sunlight if battery is flat | CTT Sidekick; SensorStation; V2 Node; V3 Node |
+| BlūMorpho | 2.4GHz | Solar-only | Cut from panel and expose solar panel to direct sunlight; activate Blū+ in the portal if applicable | CTT Sidekick; V3 Node; SensorStation with BlūSeries Receiver; Expanded Blū+: compatible mobile/iOS apps, Terra Listens/Terra Network, Blū-enabled CTT infrastructure including V3 Nodes, Motus if registered |
+| BlūBat | 2.4GHz | Battery-only | Bridge test pads; sever test tab for permanent activation; activate Blū+ in the portal if applicable | CTT Sidekick; V3 Node; SensorStation with BlūSeries Receiver; Expanded Blū+: compatible mobile/iOS apps, Terra Listens/Terra Network, Blū-enabled CTT infrastructure including V3 Nodes, Motus if registered |
+| BlūBird | 2.4GHz | Solar-rechargeable battery | Remove magnet; use direct sunlight if battery is flat; activate Blū+ in the portal if applicable | CTT Sidekick; V3 Node; SensorStation with BlūSeries Receiver; Expanded Blū+: compatible mobile/iOS apps, Terra Listens/Terra Network, Blū-enabled CTT infrastructure including V3 Nodes, Motus if registered |
 
 ## Before You Begin
 
 <div class="guide-note">
 
-For preparing to deploy any of these tag types, you will need a way to detect the tag. The current guide recommends either a `CTT Sidekick`, or an operational `SensorStation` and a way to connect to it, either via ethernet or WiFi adapter.
+For preparing to deploy any of these tag types, you will need a way to detect the tag.
+
+For 434MHz tags, use a `CTT Sidekick`, operational `SensorStation`, V2 Node, or V3 Node. If using a SensorStation directly, connect to the SensorStation web interface by ethernet or WiFi adapter.
+
+For 2.4GHz Blū tags, use a `CTT Sidekick`, V3 Node, or a SensorStation equipped with a `BlūSeries Receiver`. V2 Nodes do not detect 2.4GHz Blū tags, and a standard SensorStation without a BlūSeries Receiver will not detect 2.4GHz Blū tags. Expanded Blū+ tags also require activation in the BlūSeries Portal and an active data plan before they can be searched for through Blū+ workflows such as compatible mobile/iOS apps, Terra Listens/Terra Network coverage, Blū-enabled CTT infrastructure including V3 Nodes, and Motus if registered.
 
 </div>
 
@@ -167,22 +171,22 @@ Each LifeTag ships with an 8-digit digital ID sticker.
 ### What You'll Need
 
 - The unique digital IDs for each of your tags.
-- A location where the LifeTag solar panel can receive direct light.
-- A CTT Sidekick or operational SensorStation for confirming tag detection.
-- If using a SensorStation, a computer connected to the SensorStation web interface.
+- A location where the LifeTag solar panel can receive direct sunlight.
+- A CTT Sidekick, operational SensorStation, V2 Node, or V3 Node for confirming tag detection.
+- If using a SensorStation or Node workflow, a way to view the resulting detections.
 
 ### Before Deployment
 
 1. Unpack your LifeTags.
 2. Record the unique digital IDs for each tag.
-3. Place each LifeTag with the solar panel facing up in a location where it can get direct light.
-4. Keep the tags within detection range of your SensorStation or CTT Sidekick.
+3. Place each LifeTag with the solar panel facing up in a location where it can get direct sunlight.
+4. Keep the tags within detection range of your CTT Sidekick, SensorStation, or Node.
 
 If you are not using antennas on your SensorStation, make sure tags are within a meter of the station.
 
 ### Activate or Test the Tag
 
-LifeTags do not have a battery to activate. The tag should transmit when the solar panel receives enough light.
+LifeTags do not have a battery to activate. The tag should transmit when the solar panel receives enough direct sunlight.
 
 ### Confirm Detection
 
@@ -195,6 +199,8 @@ If using a SensorStation:
 3. Ensure your SensorStation has at least one radio tuned to detect `Tags`.
 4. Confirm the digital ID appears in either the Sidekick interface or on radio channels 1 through 5 in the SensorStation interface.
 
+If using a V2 Node or V3 Node, follow the [CTT Node V2 User Guide](https://cellular-tracking-technologies.github.io/ctt_documentation/CTT-Node-V2-User-Guide.html) or [CTT Node V3 User Guide](https://cellular-tracking-technologies.github.io/ctt_documentation/CTT-Node-V3-User-Guide.html) as appropriate, and confirm the digital ID appears in the Node or SensorStation detection workflow.
+
 ### Charging / Battery Notes
 
 LifeTag is solar-only and does not have a battery.
@@ -203,9 +209,10 @@ LifeTag is solar-only and does not have a battery.
 
 If you do not see the expected digital ID:
 
-1. Confirm the solar panel is facing up and receiving direct light.
-2. Confirm the tag is within detection range of the Sidekick or SensorStation.
+1. Confirm the solar panel is facing up and receiving direct sunlight.
+2. Confirm the tag is within detection range of the Sidekick, SensorStation, or Node.
 3. If using a SensorStation, confirm at least one radio is tuned to detect `Tags`.
+4. If using a Node, confirm the Node is powered, listening, and close enough to detect the tag.
 
 ### Final Deployment Checklist
 
@@ -213,9 +220,10 @@ Make sure each item below is checked before deployment.
 
 - ☐ Tag IDs recorded.
 - ☐ Solar panel facing up.
-- ☐ Tag exposed to direct light.
+- ☐ Tag exposed to direct sunlight.
 - ☐ SensorStation radio tuned to detect `Tags`, if using SensorStation.
-- ☐ Tag detected by Sidekick or SensorStation.
+- ☐ Node powered and listening, if using a Node.
+- ☐ Tag detected by Sidekick, SensorStation, or Node.
 
 ## PowerTag Quick Start Guide
 
@@ -231,7 +239,7 @@ Each PowerTag ships with an 8-digit digital ID sticker.
 
 - The unique digital IDs for each of your tags.
 - A CTT Activator to activate and deactivate the tag.
-- A CTT Sidekick or SensorStation to confirm tag detection.
+- A CTT Sidekick, SensorStation, V2 Node, or V3 Node to confirm tag detection.
 
 ### Before Deployment
 
@@ -250,7 +258,7 @@ All tags are activated and deactivated at CTT prior to shipping, so there is a c
 
 ### Confirm Detection
 
-It is best practice to confirm tag detection on either a CTT Sidekick or a CTT SensorStation. Follow the detection steps listed in the LifeTag section above.
+It is best practice to confirm tag detection on a CTT Sidekick, CTT SensorStation, V2 Node, or V3 Node. Follow the detection steps listed in the LifeTag section above.
 
 ### Charging / Battery Notes
 
@@ -265,7 +273,7 @@ If the tag does not activate:
 1. Try the Activator in different tag orientations.
 2. Confirm the Activator battery is charged.
 3. Try using the Activator while it is plugged into AC power.
-4. Confirm tag detection with a Sidekick or SensorStation after activation.
+4. Confirm tag detection with a Sidekick, SensorStation, or Node after activation.
 
 ### Final Deployment Checklist
 
@@ -275,15 +283,15 @@ Make sure each item below is checked before deployment.
 - ☐ Expected beep rate confirmed from order.
 - ☐ Tag activated with CTT Activator.
 - ☐ Red beep indicator confirmed on Activator.
-- ☐ Tag detected by Sidekick or SensorStation.
+- ☐ Tag detected by Sidekick, SensorStation, or Node.
 
 ## HybridTag Quick Start Guide
 
 ### Best For
 
-HybridTag is a solar-assisted rechargeable tag that combines LifeTag solar technology with a rechargeable battery. It can beep 24 hours a day, last multiple seasons and years, and only requires several hours of sunlight over the course of three days to remain fully charged.
+HybridTag is a solar-rechargeable battery tag that combines LifeTag solar technology with a rechargeable battery. It can beep 24 hours a day, last multiple seasons and years, and only requires several hours of sunlight over the course of three days to remain fully charged.
 
-The current guide describes a HybridTag as approximately 0.65g with light epoxy coating, flexible attachment tab, and light antenna.
+HybridTag is approximately 0.65g with light epoxy coating, flexible attachment tab, and light antenna.
 
 ### What You'll Find in the Package
 
@@ -297,7 +305,7 @@ The magnet keeps the tag from using the battery to transmit its digital signal.
 ### What You'll Need
 
 - The unique digital IDs for each tag.
-- A CTT Sidekick or SensorStation to confirm tag detection.
+- A CTT Sidekick, SensorStation, V2 Node, or V3 Node to confirm tag detection.
 - Direct sunlight if the tag battery needs to recharge.
 
 ### Before Deployment
@@ -323,6 +331,8 @@ If using a SensorStation:
 3. Ensure your SensorStation has at least one radio tuned to detect `Tags`.
 4. Confirm the digital ID appears in either the Sidekick interface or on radio channels 1 through 5 in the SensorStation interface.
 
+If using a V2 Node or V3 Node, follow the [CTT Node V2 User Guide](https://cellular-tracking-technologies.github.io/ctt_documentation/CTT-Node-V2-User-Guide.html) or [CTT Node V3 User Guide](https://cellular-tracking-technologies.github.io/ctt_documentation/CTT-Node-V3-User-Guide.html) as appropriate, and confirm the digital ID appears in the Node or SensorStation detection workflow.
+
 ### Charging / Battery Notes
 
 If the tag fails to beep and is not in the sun, place it in direct sun and see if it starts to function. If this happens, the battery is flat and needs to recharge.
@@ -342,7 +352,7 @@ If the tag does not beep:
 2. Place the tag in direct sun.
 3. Recharge the tag with the magnet back on the tag.
 4. Test again after charging.
-5. Confirm detection with a Sidekick or SensorStation.
+5. Confirm detection with a Sidekick, SensorStation, or Node.
 
 ### Final Deployment Checklist
 
@@ -352,14 +362,12 @@ Make sure each item below is checked before deployment.
 - ☐ Magnet removed for testing/deployment.
 - ☐ Magnet saved for later deactivation/testing.
 - ☐ Tag beeping on battery power.
-- ☐ Tag detected by Sidekick or SensorStation.
+- ☐ Tag detected by Sidekick, SensorStation, or Node.
 - ☐ Tag recharged if battery was flat.
 
 # BlūSeries 2.4GHz Radio Tags
 
-CTT's BlūSeries 2.4GHz tags include solar-only, battery-only, and solar-assisted rechargeable options.
-
-<!-- Confirm final preferred public wording for BlūSeries detection pathways, Blū+ variants, and Motus/portal visibility before publication. -->
+CTT's BlūSeries 2.4GHz tags include solar-only, battery-only, and solar-rechargeable battery options.
 
 ## Standard and Expanded BlūSeries Tags
 
@@ -368,15 +376,17 @@ BlūSeries tags are available in two variants:
 - **Standard** BlūSeries tags.
 - **Expanded** BlūSeries tags with Blū+.
 
-Testing remains the same for both variants. If you are using Blū+, you should also activate your tag's data plan on the BlūSeries Portal, then allow the tag to beep in an urban or suburban environment so you can confirm that detections are displayed on the BlūSeries Portal.
+Testing with a CTT receiver remains the same for both variants. Use a CTT Sidekick, V3 Node, or SensorStation equipped with a BlūSeries Receiver to confirm local 2.4GHz detections. A standard SensorStation without a BlūSeries Receiver will not detect BlūSeries tags.
+
+If you are using Expanded BlūSeries tags with Blū+, activate the tag in the BlūSeries Portal, assign an active data plan, and confirm that the tag is toggled on for Blū+ detection. Once active, Blū+ tags can be searched for through compatible mobile/iOS apps, Terra Listens/Terra Network coverage, Blū-enabled CTT SensorStations and V3 Nodes, partnered cellular IoT infrastructure, and Motus if registered.
 
 ## BlūMorpho Quick Start Guide
 
 ### Best For
 
-BlūMorpho is a solar-powered 2.4GHz tag for very small animals. The current guide describes the tag as weighing about the same as a grain of rice, approximately 0.06g, and measuring less than 4cm with antenna included.
+BlūMorpho is a solar-powered 2.4GHz tag for very small animals. The tag weighs about the same as a grain of rice, approximately 0.06g, and measures less than 4cm with antenna included.
 
-The current guide describes BlūMorpho as appropriate for species ranging from Monarch butterflies and bumble bees to hummingbirds and many more. BlūMorpho comes pre-set with a 3-second beep interval. Because it is solar-only, the lifespan is as long as the tag remains attached to the animal.
+BlūMorpho is appropriate for species ranging from Monarch butterflies and bumble bees to hummingbirds and many more. BlūMorpho comes pre-set with a 3-second beep interval. Because it is solar-only, the lifespan is as long as the tag remains attached to the animal and receives enough sunlight.
 
 ### What You'll Find in the Package
 
@@ -396,9 +406,8 @@ The tag ID is not printed on the tag itself. The panel ID numbers are your refer
 
 - The order, panel, and tag ID information printed on the envelope.
 - A sharp cutting tool for cutting at the indicated cut line.
-- A compatible receiver for confirming tag detection.
-
-<!-- Confirm preferred receiver language for BlūMorpho: Sidekick, BlūSeries Receiver, SensorStation with BlūSeries Receiver, CTT Node, or other. -->
+- A compatible 2.4GHz receiver for confirming tag detection, such as a CTT Sidekick, V3 Node, or SensorStation equipped with a BlūSeries Receiver.
+- BlūSeries Portal access and an active data plan if using Expanded Blū+ detection.
 
 ### Before Deployment
 
@@ -417,11 +426,19 @@ BlūMorpho is solar-only. As such, only solar exposure is required to trigger th
 
 To remove the tag from the panel strip, cut only at the small white cut line at the top of the antenna where it meets the panel strip. This is the only place where you should cut your tag to remove it from the panel strip and deploy it on an animal.
 
+If this is an Expanded Blū+ tag, activate the tag in the BlūSeries Portal, assign an active data plan, and confirm that the tag is toggled on before relying on Blū+ detection workflows.
+
 ### Confirm Detection
 
-Confirm that the tag ID appears on your compatible receiver.
+Confirm that the tag ID appears on your compatible 2.4GHz receiver.
 
-<!-- Add specific BlūMorpho detection steps once receiver language is confirmed. -->
+For local receiver testing:
+
+1. Place the tag solar-panel up in direct sunlight.
+2. Keep the tag within detection range of the Sidekick, V3 Node, or SensorStation with BlūSeries Receiver.
+3. Confirm that the expected tag ID appears in the receiver workflow.
+
+For Expanded Blū+ testing, confirm that the tag is active in the BlūSeries Portal and that detections appear after the tag has transmitted in compatible coverage.
 
 ### Charging / Battery Notes
 
@@ -434,7 +451,8 @@ If the tag ID does not appear on your receiver:
 1. Confirm the panel ID/reference information was recorded correctly.
 2. Confirm the tag was cut only at the indicated cut line.
 3. Confirm the solar panel is facing up.
-4. Confirm you are using a compatible receiver.
+4. Confirm you are using a compatible 2.4GHz receiver.
+5. If using Expanded Blū+, confirm the tag is active in the BlūSeries Portal, has an active data plan, and is transmitting in compatible coverage.
 
 ### Final Deployment Checklist
 
@@ -443,15 +461,16 @@ Make sure each item below is checked before deployment.
 - ☐ Order, panel, and tag ID information recorded.
 - ☐ Tag solar panel facing up.
 - ☐ Tag cut only at the indicated cut line.
-- ☐ Tag ID confirmed on compatible receiver.
+- ☐ Tag ID confirmed on compatible 2.4GHz receiver.
+- ☐ Expanded Blū+ tag activated in the BlūSeries Portal, if applicable.
 
 ## BlūBat Quick Start Guide
 
 ### Best For
 
-BlūBat is a battery-only 2.4GHz digitally-coded transmitter for species that require transmission in the dark or at night. The current guide describes it as appropriate for bats, birds, rodents, and more.
+BlūBat is a battery-only 2.4GHz digitally-coded transmitter for species that require transmission in the dark or at night. It is appropriate for bats, birds, rodents, and more.
 
-The current guide describes the base model BlūBat as weighing 0.16g and measuring 3.5cm total length including antenna.
+The base model BlūBat weighs 0.16g and measures 3.5cm total length including antenna.
 
 ### What You'll Find in the Package
 
@@ -467,9 +486,8 @@ Screen-printed numbers correspond to the tag IDs printed on the packaging.
 - Sharp scissors for depaneling and final activation.
 - Metal tweezers or another metal object to bridge the test pads.
 - Super glue or epoxy to seal the cut point after final activation.
-- A compatible receiver to confirm tag detection.
-
-<!-- Confirm preferred receiver language for BlūBat: Sidekick, BlūSeries Receiver, SensorStation with BlūSeries Receiver, CTT Node, or other. -->
+- A compatible 2.4GHz receiver to confirm tag detection, such as a CTT Sidekick, V3 Node, or SensorStation equipped with a BlūSeries Receiver.
+- BlūSeries Portal access and an active data plan if using Expanded Blū+ detection.
 
 ### Before Deployment
 
@@ -493,6 +511,8 @@ The gold-pad bridging method is for instantaneous testing only. Do not leave the
 
 When you are ready to deploy, use sharp scissors to cut on the white line between the tag and the testing tab. This permanently activates the tag.
 
+If this is an Expanded Blū+ tag, activate the tag in the BlūSeries Portal, assign an active data plan, and confirm that the tag is toggled on before relying on Blū+ detection workflows.
+
 ![*Fig 6. Now that the test tab has been severed, the tag is permanently activated.*](images/BluBat_postCut.png){#id .class width=50%}
 
 <div class="critical-note">
@@ -503,9 +523,16 @@ When you are ready to deploy, use sharp scissors to cut on the white line betwee
 
 ### Confirm Detection
 
-Confirm that the tag ID appears on your compatible receiver.
+Confirm that the tag ID appears on your compatible 2.4GHz receiver.
 
-<!-- Add specific BlūBat detection steps once receiver language is confirmed. -->
+For local receiver testing:
+
+1. Briefly bridge the two gold pads on the testing tab so the tag begins transmitting.
+2. Keep the tag within detection range of the Sidekick, V3 Node, or SensorStation with BlūSeries Receiver.
+3. Confirm that the expected tag ID appears in the receiver workflow.
+4. When testing is complete, remove the bridge from the gold pads to stop the test transmission.
+
+For Expanded Blū+ testing, confirm that the tag is active in the BlūSeries Portal and that detections appear after the tag has transmitted in compatible coverage.
 
 ### Charging / Battery Notes
 
@@ -530,7 +557,8 @@ Make sure each item below is checked before deployment.
 - ☐ Tag tested by briefly bridging the gold pads.
 - ☐ Test tab severed only when ready for permanent activation.
 - ☐ Cut point sealed with super glue or epoxy before deployment.
-- ☐ Tag ID confirmed on compatible receiver.
+- ☐ Tag ID confirmed on compatible 2.4GHz receiver.
+- ☐ Expanded Blū+ tag activated in the BlūSeries Portal, if applicable.
 
 ## BlūBird Quick Start Guide
 
@@ -538,9 +566,7 @@ Make sure each item below is checked before deployment.
 
 ### Best For
 
-BlūBird is a solar-assisted BlūSeries tag designed for deployments where 24-hour operation is required, such as recording nocturnal migration of a diurnally active species like many migratory birds.
-
-<!-- Confirm final public positioning, weight range, beep interval options, and standard BlūBird configurations before publication. -->
+BlūBird is a solar-rechargeable battery 2.4GHz tag designed for deployments where 24-hour operation is required, such as recording nocturnal migration of a diurnally active species like many migratory birds.
 
 ### What You'll Find in the Package
 
@@ -552,6 +578,8 @@ Each BlūBird tag will arrive with a magnet attached. The magnet keeps the tag i
 ### What You'll Need
 
 - A Sidekick receiver to verify operation and monitor battery voltage before deployment.
+- A compatible 2.4GHz receiver for study detection after deployment, such as a V3 Node or SensorStation equipped with a BlūSeries Receiver.
+- BlūSeries Portal access and an active data plan if using Expanded Blū+ detection.
 - Outdoor direct sunlight for charging.
 - A way to record each tag ID, baseline voltage, and post-charge voltage.
 
@@ -574,6 +602,8 @@ Start by collecting baseline data with your Sidekick before charging the tags:
 
 You do not need to check tags individually. You can place all BlūBird tags out at once, collect detections with the Sidekick, and review the Sidekick CSV file afterward to retrieve the baseline voltage for each tag. You can also work with a smaller group of tags and monitor each one in the Sidekick using the real-time graph of time versus voltage. Both methods are effective.
 
+If these are Expanded Blū+ tags, activate each tag in the BlūSeries Portal, assign an active data plan, and confirm that the tags are toggled on before relying on Blū+ detection workflows.
+
 After baseline data are recorded:
 
 1. Remove the magnets and place the tags outdoors in direct sunlight for a couple of days.
@@ -584,6 +614,8 @@ After baseline data are recorded:
 ### Confirm Detection
 
 Confirm that each tag appears on the Sidekick display, is transmitting normally, and is reporting battery voltage.
+
+For study detection, confirm that the expected tag IDs appear in the planned receiver workflow before deployment. This may be a V3 Node, a SensorStation equipped with a BlūSeries Receiver, or the BlūSeries Portal for Expanded Blū+ tags with an active data plan.
 
 ### Charging / Battery Notes
 
@@ -640,6 +672,7 @@ Make sure each item below is checked before deployment.
 - ☐ Magnets reattached at night during charging.
 - ☐ Solar panel covered and post-charge voltage recorded.
 - ☐ Battery voltage close to or above 3.0 V after charging.
+- ☐ Expanded Blū+ tag activated in the BlūSeries Portal, if applicable.
 - ☐ Non-charging tags set aside and reported to CTT.
 - ☐ Final operation verified before attachment to a live animal.
 
