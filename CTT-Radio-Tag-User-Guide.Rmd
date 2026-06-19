@@ -4,7 +4,7 @@ title: |
   <br />
   CTT Radio Tag User Guide
 author: "support@celltracktech.com"
-date: "Draft updated 6/10/2026"
+date: "Draft updated 6/19/2026"
 output:
   html_document:
     toc: yes
@@ -390,7 +390,7 @@ BlūMorpho is appropriate for species ranging from Monarch butterflies and bumbl
 
 ### What You'll Find in the Package
 
-BlūMorpho tags arrive in a tri-fold envelope, suspended behind a retention strip.
+BlūMorpho tags arrive attached to a panel strip inside a labeled tri-fold envelope. Current shipments do not include a retention strip.
 
 The envelope includes:
 
@@ -400,7 +400,7 @@ The envelope includes:
 
 The tag ID is not printed on the tag itself. The panel ID numbers are your reference to the full tag digital ID number that will show up on your receiver.
 
-![*Fig 1. The tri-fold envelope holding your BlūMorpho tags. Note the retention strip holding the antennas down, and the small white sticker holding the panel strip to the envelope.*](images/IMG_1557.png){#id .class width=50%}
+![*Fig 1. The tri-fold envelope holding your BlūMorpho tags, with the panel strip and envelope labels shown.*](images/BluMorphoTrifoldExplain.png){#id .class width=50%}
 
 ### What You'll Need
 
