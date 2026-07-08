@@ -1,0 +1,113 @@
+# Managing your Data {#data}
+
+## Downloading your Data via a USB Thumb Drive
+
+To manually download data via USB, do the following:
+
+1. Insert a properly formatted (currently only MS DOS or Fat32 formatting is supported) USB thumb drive in one of the seven USB ports.
+2. Navigate to `File Transfer > Mount USB` and press the `SELECT` button. You should see a confirmation message saying `USB Mount:success`.
+3. Use the `BACK` button to go up to the `File Transfer` menu, and select `Download`. A successful download will be followed by a success message.
+4. Use the `Back` button to go up to the `File Transfer` menu and select `Unmount USB`. Once you receive the success message you may remove the USB drive from the SensorStation which will now contain a copy of all the files from the station.
+
+**Note: until February 2022 there were two known bugs in the USB manual download system. These have been rectified but any stations sold prior to February 2022 and not updated since, will require an update to realize the full functionality of the USB downoad. See the [Known Bugs](#known-bugs) section below.
+
+## What's in the Folder?
+
+On your USB drive you will find several files...
+
+  * **gps** files - these contain the GPS coordinates of the SensorStation's location
+	  * `recorded at` - time/date stamp for the time the row was written to the file (UTC)
+	  * `gps at` - time/date stamp for the instantaneous time of the last GPS fix (UTC)
+	  * `latitude` - in decimal degrees
+	  * `longitude` - in decimal degrees
+	  * `altitude` - in meters
+	  * `quality`
+		  * `1` - No fix.
+		  * `2` - 2D fix. Medium quality.
+		  * `3` - 3D fix. Highest quality.
+	  * `mean lat` - in decimal degrees, based on n fixes.
+	  * `mean lng` - in decimal degrees, based on n fixes.
+	  * `n fixes` - number of fixes used to calculate mean lat and lng.
+
+* **log** files
+	* `msg at` - The date/time stamp of the message.
+	* `msg` - The text string of the message at that time.
+
+* **raw-data** files
+	* `Time` - Date/time stamp of the data point in `YYYY-MM-DD HH:MM:SS`.
+	* `RadioID` - The ID of the radio from which the data point was collected. These correspond to the Radios L1 - L5 on your SensorStation (standard 434MHz radios).
+	* `TagID` - The 8-digit ID of the tag that was detected. Note that for tags with 10-digit IDs (e.g. V2 LifeTag), this will be represented by the first 8 digits in that ID.
+	* `TagRSSI` - The signal strength of the transmission, measured in Decibels (DB). Values. closer to zero represent stronger signals. Values below -110 DB are typically not useful for estimating distance.
+	* `NodeId` - The unique ID of the node from which the transmission was received.
+	* `Validated` - Binary value that indicates whether the CRC value corroborated the unique tag ID. 0 = invalidated; 1 = validated. Note that only V2 LifeTags and above, and HybridTags, have a CRC value that can be read by SensorStations. If the CRC value corroborates the preceding 8 digit digital ID, then a "1" is shown in the `Validated` field. **This confirms, with a 99% accuracy, that that tag ID being detected is valid!**. *Note that PowerTags do not have a CRC value and therefore will never show a "1" in this field. PowerTags do not have variable power (like LifeTag and HybridTag) and therefore do not require the validation of a CRC value.*
+
+And two folders:
+
+  * `SGData` - contains any 166MHz data collected by your station.
+  * `uploaded` - contains any 434MHz data that has been previously uploaded to CTT servers.
+
+## Manually Managing your Data via the Command Line
+
+*If you're a visual learner, you can also check out a YouTube video [here](https://www.youtube.com/watch?v=2iG8ZG1UZGA&t=23s)*
+
+### Downloading your Data via the Command Line
+
+If you can connect directly to your station via USB->Ethernet or WiFi, you can run a single line command to securely copy all files in the `Data` folder on your SensorStation, to a local file on your computer. This includes all of the data files mentioned in the previous section.
+
+**Once your station is connected to your computer, open `Terminal` `(mac)` or `PowerShell` or `Command Prompt` `(PC)`**
+
+**You will need the Raspberry Pi Password for this exercise, so if you don't already know it, find it in the [SSH into the Pi to update the connectivity settings](#ssh-into-pi) section.**
+
+The syntax is made of the following parts:
+
+* `scp` : Secure Copy
+* `-r` : the flag for recursive, so that it securely copies all of the files, and folders, within the designated folder
+
+*V1 and original V2 stations:*
+* pi@xxx.xxx.xxx.xxx : this designates the Raspberry Pi on the SensorStation, at the specific IP address. The `x`'s represent the IP address of your specific SensorStation.
+
+**V3 stations, later and upgraded V2 stations:**
+* ctt@xxx.xxx.xxx.xxx : this designates the Raspberry Pi on the SensorStation, at the specific IP address. The `x`'s represent the IP address of your specific SensorStation.
+
+* `:/data` : this states that you'd like to copy the `data` folder that's in the root directory of the Raspberry Pi on your SensorStation (this is the file that contains all of the data- both CTT and SensorGnome)
+* ` . ` : did you see that little period there? It has a space before it- make sure you include the space! The period just means that when you do this  `recursive` `secure copy` of all the files within the `data` folder on your SensorStation, you want to copy them **right where you are**. So whatever folder you are in when you started the command line, that's where it's going to go. That gives us this final command line code:
+
+*V1 and original V2 stations:*
+`scp -r pi@xxx.xxx.xxx.xxx:/data .`
+
+**V3 stations, later and upgraded V2 stations:**
+`scp -r ctt@xxx.xxx.xxx.xxx:/data .`
+
+if you'd rather designate a destination folder, simply replace the final ` .` with the path of your choice. For example:
+
+*V1 and original V2 stations:*
+`scp -r pi@xxx.xxx.xxx.xxx:/data c:/Users/joeschmoscomputer/Downloads`
+
+**V3 stations, later and upgraded V2 stations:**
+`scp -r ctt@xxx.xxx.xxx.xxx:/data c:/Users/joeschmoscomputer/Downloads`
+
+This would download the `data` folder from the SensorStation, to the `Downloads` folder on the local computer.
+
+### Checking File Sizes via the Command Line
+
+After copying and before deleting files, you should check the file size of the folders holding the data you plan to delete, to be sure that once the process is complete, the disk space has been reclaimed. You can do this via the command line using the `du` command, which stands for `d`isk `u`sage.
+
+`ssh ctt@xxx.xxx.xxx.xx "du -sh /data/*"`
+
+This command will give you a list of all folders and files within the folder `data`, and their respective file sizes.
+You will want to run this command before and after manually deleting your files, to ensure the delete worked.
+
+### Deleting Data Files via the Command Line
+
+Once you have manually copied your data files to a local drive, confirmed they are complete, and checked the file size of the files you are about to delete, using the commands above, you can move on to deleting the files via the command line.
+
+The following command will delete all files within the `uploaded`, `rotated`, and `SGdata` folders, as well as the `.csv` files within the `data` folder, which represent the most recent files being collected.
+
+*For original V2 Stations:*
+`ssh pi@xxx.xxx.xxx.xxx "sudo rm -rf /data/uploaded/* && sudo rm -rf /data/rotated/* && sudo rm -rf /data/SGdata/* && sudo rm /data/*.csv"`
+
+
+**V3 stations, later and upgraded V2 stations:**
+`ssh ctt@xxx.xxx.xxx.xxx "sudo rm -rf /data/uploaded/* && sudo rm -rf /data/rotated/* && sudo rm -rf /data/SGdata/* && sudo rm /data/*.csv"`
+
+Once you run this command, go back and re-check the file size of the files and folders within the `data` folder using the `du` command in the previous section. You should see that your file sizes have been reduced as you have deleted the data files and reclaimed your disk space.

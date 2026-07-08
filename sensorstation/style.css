@@ -1,0 +1,73 @@
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+
+/* --- Version filter styling --- */
+#version-filter select:focus {
+  outline: 2px solid #3b82f6;
+  border-color: #3b82f6;
+}
+#filter-reset:hover {
+  background: #f0f4f8;
+}
+
+/* Version-specific content labels */
+.board-v2::before,
+.board-v30::before,
+.board-v32::before,
+.board-v33::before,
+.board-v3x::before,
+.image-old::before,
+.image-1-3::before,
+.image-new::before {
+  display: inline-block;
+  font-size: 0.75em;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  color: #fff;
+}
+.board-v2::before {
+  content: "V2";
+  background: #6366f1;
+}
+.board-v30::before {
+  content: "V3.0";
+  background: #0891b2;
+}
+.board-v32::before {
+  content: "V3.2";
+  background: #0d9488;
+}
+.board-v33::before {
+  content: "V3.3";
+  background: #059669;
+}
+.board-v3x::before {
+  content: "V3.0 – V3.2";
+  background: #0891b2;
+}
+.image-old::before {
+  content: "Image < 1.3.0";
+  background: #d97706;
+}
+.image-1-3::before {
+  content: "Image 1.3.0";
+  background: #2563eb;
+}
+.image-new::before {
+  content: "Image > 1.4.0";
+  background: #7c3aed;
+}

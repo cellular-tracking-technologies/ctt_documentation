@@ -1,0 +1,26 @@
+# Troubleshooting {#troubleshooting}
+
+**I get an error when I attempt to mount my USB drive**
+
+*Your USB drive may not be formatted properly*
+
+**I have successfully mounted my USB drive but when I go to `Add Wifi` I get an error**
+
+*Either your USB drive is not formatted properly (some formats will allow you to mount, but not to read the file, such as X-Fat on Mac)* **or** *your JSON file is not properly formatted.*
+
+  * Verify the following:
+    * Your file is named `credentials.json`
+    * Your file is in a folder called `wifi`
+    * There is only one folder called `wifi` on your USB thumb drive
+    * Your JSON file was created with the End of Line Sequence set to **LF**
+    * Your JSON file was properly formatted (see **#2** under **Creating the JSON file** above)
+    * Note you can always check your code validity by pasting it into this website: https://jsonlint.com and clicking `Validate JSON`
+
+## Known Bugs {#known-bugs}
+
+1. For stations not updated since February 2022, download via USB does not include SensorGnome files. To get these files manually, use the direct-connect method via USB->Ethernet and access via the web interface. If you can update your SensorStation you will gain the full functionality of the USB download system.
+2. Download via USB does not include any data previously uploaded remotely. To get these files manually, use the direct-connect method via USB->Ethernet and access via the web interface. If you can update your SensorStation you will gain the full functionality of the USB download system.
+
+## Final Thoughts
+
+This User Guide is a living document. Your experiences and input are greatly appreciated so please don't hesitate to reach out to us regarding what you'd like to see included here. You can submit your suggestions and any errors to our `Customer Service Desk` [here](https://celltracktech.com/pages/customer-service-desk-csd) and we will work to incorporate them in future revisions. All material (c) Cellular Tracking Technologies, 2023.

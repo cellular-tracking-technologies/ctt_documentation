@@ -1,0 +1,164 @@
+# Connecting to your SensorStation {#connectivity}
+
+Your SensorStation has a web server running locally on the Raspberry Pi, which means you can interact with your station by directly connecting via Ethernet or through a wireless connection. **Note that this is different than viewing your SensorStation via the CTT Web Portal**. The SensorStation Interface provides an overview of your station's operation, including real-time statistics on detections of tags and nodes, as well as controls to change settings, update your SensorStation software, toggle the cellular modem, and reboot the station. It is always best practice to connect directly to your SensorStation prior to deployment. From here you can run a station update, ensure your antennas are tuned to the expected task (detecting Nodes or Tags) and see in real-time that your station is detecting either as expected.
+
+## Connecting via Ethernet Cable
+
+### Before you get started you will need...
+
+  * 2 USB to Ethernet adapters (we recommend: https://tinyurl.com/yc6llze4)
+  * An Ethernet cable
+
+### Making the Connection
+
+  1. Connect each end of the Ethernet cable to the two USB->Ethernet adapters.
+  2. Plug one USB end of an adapter into any of the USB ports on your SensorStation.
+  3. Plug the USB end of the second adapter into your computer and wait up to two minutes to allow the SensorStation to acquire the IP address from your computer.
+  4. You can test this connection through several diagnostics in the LCD menu.
+    * `Network > Ping` will indicate a connection.
+    * `Network > IP Address` will display a valid IP address.
+  5. Open a web browser on your computer, and put the IP address from Step 5 into the URL window of the browser. The web interface should appear.
+
+  *If for some reason you are unable to connect after Step 3, try restarting both the SensorStation and your computer and continue to Step 4.*
+
+## Adding your WiFi Credentials to your SensorStation
+
+### Via the Command Line {#wifi-cli}
+
+#### Before you get started you will need...
+
+  * <span class="board-v3x"></span> <span class="board-v33"></span> **For V3 stations**, you don't need an extra WiFi adapter since it's already included on every board
+  * <span class="board-v2"></span> For V1 or V2 stations, you'll need a WiFi adapter Like this one: https://store.celltracktech.com/products/wifi-usb-adapter-add-on-for-sensorstation-v2.
+  * 2 USB to Ethernet adapters (we recommend: https://tinyurl.com/yc6llze4)
+  * An Ethernet cable
+
+#### Gather Important Information
+
+1. Take note of the **Wifi name** and **password** for the network you want to link with your SensorStation.
+2. Enable the WiFi module through the LCD screen by selecting Network > WiFi > Enable WiFi
+2. Connect to your SensorStation via the Ethernet cable (see above section for details)
+3. Open a Command Prompt window on your computer (for mac, use Terminal; for PC use PowerShell or CMD)
+4. On V2 or V3 stations, record the IP address from the LCD screen (under Network > IP Address)
+5. On V1 stations record the IP address that appears on the eInk display.
+
+#### SSH into the Pi to update the connectivity settings {#ssh-into-pi}
+
+5. Type the following:
+
+<div class="board-v2">
+
+*For V1 or original V2 stations:* `ssh pi@xxx.xxx.xxx.xxx` (where the x's represent your SensorStation IP address)
+
+</div>
+
+<div class="board-v3x">
+
+**V3 stations, later and upgraded V2 stations:** `ssh ctt@xxx.xxx.xxx.xxx` (where the x's represent your SensorStation IP address)
+
+</div>
+
+6. Answer `yes` to any dialogues, and when prompted for the password, enter the password for the Raspberry Pi
+
+<div class="board-v3x">
+
+**V3 stations, later and upgraded V2 stations:** The password is `ctt-station`
+
+</div>
+
+<div class="board-v2">
+
+*For some mid-age V2 stations:* The password is `ctt-sensor`
+
+*For V1 stations and early V2 stations:* The password is `raspberry`. Note if `raspberry` is your password, *please change your password* via the `raspi-config` you will access in the next step. Just choose `change password` instead of `Network Options` below.
+
+</div>
+
+7. At this point you should be in the Secure Shell within your Raspberry Pi. From here issue the following command:
+
+`sudo raspi-config`
+
+**Depending on the version of Raspberry Pi firmware running, you may see several different menus. If you see #2 is 'Network Options', then select it and move onto step 8. Otherwise select the first option, and the next menu should show `Network Options`.**
+
+8. From the config dialogue use the DOWN ARROW to select `Network Options`
+
+9. Then choose `N2 Wireless LAN - Enter SSID and PASSPHRASE`
+
+10. From there enter your `wireless network ID (SSID)` and the `password/phrase` for your WiFi network.
+
+11. `Save` and `exit`.
+
+12. Close the terminal.
+
+13. Restart your SensorStation.
+
+#### Wirelessly Connect to your SensorStation
+
+Once your SensorStation reboots, it should automatically connect to the existing wireless network, and you will be able to reach the station via any device on the same wireless network. Note that the IP address for your station will have changed- but in most cases you can use the `Hostname` to connect, or you can run `arp -a` from the command-line to search for your station's new IP address.
+
+14. Open up a web browser and try and connect by typing the following Hostname into the address bar:
+
+**For V2 & V3 SensorStations:**
+`http://sensorstation.local`
+
+*For V1 SensorStations:*
+`http://raspberrypi.local`
+
+15. If that doesn't work, check the LCD screen for the IP address, and enter `http://xxx.xxx.xxx.xxx' into your web browser address field, where the `x`'s are the IP address #s
+
+### Via a USB Drive {#wifi-usb}
+
+On V2 and V3 SensorStations, instead of manually updating the WiFi credentials via SSH, you can use the `Get WiFi` function available via the LCD menu to upload a credentials file. Follow the steps below to learn how.
+
+#### Before you get started you will need...
+
+  * WiFi adapter Like this one: https://store.celltracktech.com/products/wifi-usb-adapter-add-on-for-sensorstation-v2.
+  * Properly formatted USB thumb drive (Fat-32 or MS-DOS formatting currently supported).
+  * A code editor where you can control the programming language and line encoding. We recommend the free Visual Studio Code (https://code.visualstudio.com).
+
+#### Creating the JSON File
+
+  1. In your code editor, create a new file and set the **Language Mode** to `JSON` and the **End of Line Sequence** to **LF** (for Line Feed).
+  2. Type the following into the file:
+  ```
+    {
+      "ssid":"my_ssid",
+      "psk":"my_password"
+    }
+  ````
+
+  **Make sure you change "my_ssid" to the name of your wifi network and "my_password" to the password for your wifi network!**
+
+
+  3. Save the file and name it `credentials.json`.
+  4. Create an empty folder on your USB thumb drive called `wifi`.
+  5. Copy `credentials.json` file to the `wifi` folder.
+
+##### WiFi Networks with No Password
+
+If your WiFi network does not need a password, create a JSON file like above but only include the ssid:
+
+```
+  {
+    "ssid":"my_ssid"
+  }
+```
+
+#### Loading the JSON File onto your SensorStation
+
+  1. Make sure your SensorStation is powered on and the menu is visible on the LCD screen
+  2. Insert your USB thumb drive into any of the USB ports on your SensorStation.
+  3. Using the four buttons right of the LCD screen, navigate to `File Transfer > Mount USB` and click the `Select` button.
+  4. You should receive a `success` message.
+  5. Now navigate to `File Transfer > Get WiFi` and click the `Select` button.
+  6. You should receive a `success` message.
+  7. Restart your SensorStation.
+  8. After restart, your SensorStation should be connected to your local wifi network. You can test this connection through several diagnostics in the LCD menu.
+  * `Network > Ping` will indicate a connection.
+  * `Network > IP Address` will display a valid IP address.
+
+#### Connecting to your WiFi-enabled SensorStation
+
+Once your station has connected to your wifi network, you can connect to your SensorStation wirelessly via any device on the **same wifi network** as the station.
+
+  * Connect your computer, tablet or smartphone to the same wifi network as your SensorStation.
+  * open a web browser on your computer, tablet or smartphone and navigate to the IP address found via the `Network > IP Address` on your SensorStation's LCD screen. Alternatively you can use the name found in `Network > Hostname`, which is typically `sensorstation.local`.

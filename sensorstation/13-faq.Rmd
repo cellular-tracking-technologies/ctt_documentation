@@ -1,0 +1,226 @@
+# Frequently Asked Questions {#faq}
+
+This FAQ is compiled from common questions received by CTT Customer Support. If your question is not answered here, please contact us at support@celltracktech.com or submit a request at our [Customer Service Desk](https://airtable.com/app20NXPv7qjXDfBN/pagrBcK1muqejz5os/form).
+
+## Connectivity {-}
+
+### My SensorStation lost its WiFi connection and won't reconnect. What should I do? {-}
+
+This is one of the most common issues. Try the following steps:
+
+1. Connect to the SensorStation via Ethernet and access the web interface.
+2. Navigate to the WiFi settings and re-enter your WiFi network credentials.
+3. Use the LCD menu to go to **Network > Ping** to test connectivity.
+4. If the station still won't connect, try rebooting the station.
+5. If your WiFi network credentials changed (e.g., router reset or IT change), you will need to reconfigure the WiFi settings via Ethernet or USB.
+
+**Note:** Rural WiFi can be unreliable. If your station frequently drops WiFi, consider using the cellular modem for more reliable connectivity, or setting up a weekly reboot cycle to automatically reconnect.
+
+### How do I connect my SensorStation to cellular? {-}
+
+1. Your SIM must first be activated by CTT. Submit a [Customer Service Desk request](https://airtable.com/app20NXPv7qjXDfBN/pagrBcK1muqejz5os/form) to activate your SIM.
+2. Once the SIM is activated, use the LCD menu to navigate to **Network > Cellular > Enable Modem**.
+3. The station may require a reboot after enabling the modem.
+4. After reboot, check **Network > Carrier** on the LCD to verify it shows a carrier name and signal percentage.
+
+If the modem shows a signal percentage but no carrier, try disabling and re-enabling the modem. If you are in a remote area, you may also request that CTT configure your SIM for a specific carrier (e.g., Verizon) if that is the only available network.
+
+### My SensorStation is connected to the internet (pings successfully) but won't upload data. What's wrong? {-}
+
+This can happen for several reasons:
+
+- **Station ID mismatch:** A known issue where the station's internal ID changes, causing files to be named incorrectly and rejected by the server. Contact CTT support to resolve.
+- **File naming issue:** If your station alias contains special characters (e.g., apostrophes), the uploader may fail. Contact CTT support to rename the station.
+- **Full disk:** If the station's memory is full (check free memory on the web interface), it may not be able to rotate and upload files. You may need to connect via Ethernet and clear old data.
+- **Software version:** Ensure your station is running the latest software. An over-the-air update may resolve upload issues.
+
+### Can I assign a static IP to my SensorStation? {-}
+
+Yes, you can set a static IP address via SSH using `nmcli` commands. This requires disk image version 2024-08-01 or later. See the full step-by-step instructions in the [Static IP Address appendix](#static-ip).
+
+### My SensorStation modem shows a signal but the carrier says "Error." How do I fix it? {-}
+
+Try the following:
+
+1. Navigate to **Network > Cellular > Disable Modem** on the LCD, wait 10 seconds, then re-enable it.
+2. Reboot the station.
+3. If the issue persists, your SIM may not be activated. Submit a support request to CTT to verify SIM activation status.
+4. In some cases, the station may need a newer disk image to support the cellular modem properly. Check the [Updates appendix](#updates) for the latest disk image.
+
+## Data & Uploads {-}
+
+### My station is checking in but there are no new data files on the portal. Why? {-}
+
+This is a common issue with multiple possible causes:
+
+1. **Check the web interface:** Connect via Ethernet and look at the data files section. If files exist locally but are not uploading, the issue is with the upload process, not data collection.
+2. **Station ID change:** If the station's ID has changed (a known issue that can occur after reboots), files may be named with the wrong ID and rejected by the server. Contact CTT support.
+3. **FunCube Dongles:** If your FunCube dongles have been "kicked off" the USB bus, the station will check in but not produce new radio data files. Check the web interface to see if radios are active. A reboot often resolves this.
+4. **Disk full:** If the station disk is full, no new files can be written. Check free memory on the web interface.
+
+### How do I download data from my SensorStation? {-}
+
+There are several methods:
+
+1. **Automatic upload:** If your station is connected to the internet (WiFi or cellular), data files are automatically uploaded to the CTT Data Portal.
+2. **USB drive:** Insert a FAT32-formatted USB drive into the station. Use the LCD menu to navigate to the data download option. Files will be copied to the USB drive.
+3. **Direct Ethernet connection:** Connect to the station via Ethernet, access the web interface, and download files from the data section.
+4. **R package:** Use the `celltracktech` R package with your API key to programmatically download data.
+
+### What is an API key and how do I get one? {-}
+
+An API key allows you to programmatically access your SensorStation data using the `celltracktech` R package or direct API calls. To request an API key, submit a [Customer Service Desk request](https://airtable.com/app20NXPv7qjXDfBN/pagrBcK1muqejz5os/form) and select "Request API Key." You will receive your key via email. Your CTT username and API token are required for using the R package.
+
+### I'm getting duplicate key errors when using the R package's `update_db()` function. What's going on? {-}
+
+This occurs when the same data files are processed more than once. The database's primary key constraint prevents duplicate entries. This typically means the data has already been incorporated into your database. You can safely ignore these errors. If the issue persists with new files, contact CTT support.
+
+## Hardware {-}
+
+### My SensorStation LCD screen shows black boxes or is completely blank. What should I do? {-}
+
+This is a known hardware issue that can affect V2 and V3 stations:
+
+- **Black boxes (two rows):** This usually indicates the LCD controller has lost communication with the Raspberry Pi. Try rebooting the station by toggling the power switch. If it persists, the LCD or its ribbon cable may need replacement.
+- **Screen lights up but shows nothing:** The Raspberry Pi compute module may have failed or the SD card/eMMC may be corrupted. Try reflashing the compute module with the latest disk image. See the [Updates appendix](#updates) for instructions.
+- **Screen doesn't light up at all:** Check your power connection and ensure the power supply is providing adequate voltage (12V recommended).
+
+If you've tried these steps and the LCD still doesn't work, contact CTT support. You may need to send the station in for repair.
+
+### My SensorStation won't turn on. What should I check? {-}
+
+1. Verify your power source is providing adequate voltage. The SensorStation requires 12V DC.
+2. Check diagnostic lights on the board: Light A should flash green to indicate the Pi is running. Light B should be solid red to indicate power.
+3. If no lights are on, check the power cable connection and any inline fuses.
+4. If the station was exposed to water, moisture, or a power surge, internal components may be damaged. Contact CTT support.
+
+### How do I replace the Raspberry Pi Compute Module? {-}
+
+If the compute module has failed, you will need a replacement module and the latest disk image. Contact CTT support for a replacement module pre-flashed with the correct image, or follow the [disk image flashing guide](https://cellular-tracking-technologies.github.io/ctt_documentation/flashingComputeModule.html) to flash your own. **Important:** Be careful when removing and seating the compute module, as the connectors are delicate.
+
+### Can I power my SensorStation with Power over Ethernet (PoE)? {-}
+
+The SensorStation does not natively support Power over Ethernet. The recommended power source is a 12V DC power supply connected via the barrel jack. For remote deployments, solar panel setups with a 12V battery are common. Contact CTT support for solar power recommendations specific to your deployment scenario.
+
+## Software Updates {-}
+
+### My SensorStation stopped working after a software update. How do I recover it? {-}
+
+A failed or interrupted software update can leave the station in a non-functional state where the LCD shows "Error" for all menu options. To recover:
+
+1. **Reflash the disk image:** Download the latest LTS disk image and reflash the compute module. See the [disk image flashing guide](https://cellular-tracking-technologies.github.io/ctt_documentation/flashingComputeModule.html).
+2. After reflashing, run the over-the-air updater to get the latest patches.
+3. Re-enable your cellular modem if applicable.
+
+**Prevention:** Before updating, ensure your station has a stable internet connection (preferably Ethernet). Do not power off the station during an update.
+
+### How do I update my SensorStation software? {-}
+
+There are two update methods:
+
+1. **Over-the-air (OTA):** Connect the station to the internet. Use the LCD menu or web interface to initiate the update. This pulls the latest patches.
+2. **Disk image reflash:** For major version upgrades, download the latest disk image from CTT and reflash the compute module. This is the recommended method for stations that are significantly out of date. See the [Updates appendix](#updates).
+
+**Important:** After a disk image reflash, always run the OTA updater as well, to get the latest patches released since the disk image was created.
+
+## Radios & Antennas {-}
+
+### What type of coaxial connectors does the SensorStation use? {-}
+
+The SensorStation uses **Type N Female** connectors on its antenna ports. Therefore, your antenna cables need a **Type N Male** connector on the end that plugs into the station. When purchasing antennas, choose versions with a Type N Male connector, or use an appropriate adapter.
+
+### My FunCube Dongles keep getting "kicked off" or the frame rate drops. What's happening? {-}
+
+This is a known issue, particularly on V3.0–3.2 SensorStations when running 3 or more FunCube Dongles (FCDs) along with the WiFi module and/or cellular modem. The USB bus can become overloaded, causing FCDs to disconnect. Solutions:
+
+1. **Disable unused network interfaces:** If using cellular, disable WiFi. If using WiFi, disable cellular. If using wired Ethernet, disable both.
+2. **Limit FCDs:** Use 2 or fewer FCDs if you must run both WiFi and cellular.
+3. **Install the PowerFilter:** Request the free PowerFilter from CTT, which reduces environmental noise and power draw. See the [Maintenance chapter](#maintenance).
+4. **V3.3 stations** have resolved this issue with improved USB bus design and built-in heat dissipation.
+
+### How do I set up both 166 MHz (Lotek/SensorGnome) and 434 MHz (CTT) antennas? {-}
+
+The SensorStation supports dual-frequency operation:
+
+- **166 MHz antennas** connect via FunCube Pro Plus dongles plugged into the USB ports.
+- **434 MHz antennas** connect directly to the L-ports (coaxial Type N connectors) on the SensorStation board.
+- **BluSeries 2.4 GHz receiver** connects via USB.
+
+You can run all three frequencies simultaneously. Just be mindful of the USB port limits and the recommendations for FunCube Dongles above. Also, the FunCube Dongles are needed only for 166 MHz; the 434 MHz radios are built into the SensorStation.
+
+### PowerTags show as "invalidated" on the web interface. Is my data bad? {-}
+
+No, this is expected behavior. PowerTags do not have a CRC (cyclic redundancy check) in their transmission, unlike solar-powered CTT tags. Since the CRC can't be verified, PowerTag detections always display as "not validated." This does **not** mean the detections are false. Your data is likely accurate, especially if the RSSI values and detection patterns are consistent.
+
+## Nodes {-}
+
+### My node is reporting its ID as "0." How do I fix this? {-}
+
+This can happen if the node's firmware lost its ID assignment. Use the CTT Mobile App to connect to the node via Bluetooth and check its configuration. If the ID shows as 0, contact CTT support with the node's serial number (printed on the physical unit) so they can help you reconfigure it.
+
+### My nodes suddenly all stopped sending data at the same time. What happened? {-}
+
+If multiple nodes fail simultaneously, this is typically a SensorStation-side issue, not a node issue:
+
+- The station's 434 MHz radios may have crashed. Reboot the station.
+- A software update or disk issue may have disrupted the radio service.
+- Check the web interface to see if the 434 MHz radios are listed and active.
+
+If nodes individually stop reporting, it could be battery depletion (check node health voltage), or the node may have moved out of range.
+
+### Does the node clock automatically adjust when connected to the SensorStation? {-}
+
+Nodes synchronize their time from the SensorStation's GPS. If you notice the node clock is off when using the CTT Mobile App independently, it will correct itself once the node communicates with a SensorStation that has a GPS fix. The time displayed in the app may appear offset because it may be showing UTC time rather than local time.
+
+## Account & Portal {-}
+
+### How do I transfer a SensorStation to another project? {-}
+
+Submit a [Customer Service Desk request](https://airtable.com/app20NXPv7qjXDfBN/pagrBcK1muqejz5os/form) with the SensorStation ID and the project number you want it transferred to. CTT will handle the transfer on the backend.
+
+**Note:** After a station is moved to a new project, the previous project owner retains access to historical data collected while the station was on their project.
+
+### How do I share my SensorStation portal access with a collaborator? {-}
+
+Contact CTT support with the collaborator's CTT username and the SensorStation IDs you wish to share. CTT can add collaborators to your project so they can view station data on the portal.
+
+### How do I update the alias (name) for my SensorStation? {-}
+
+Contact CTT support with the SensorStation ID and the desired alias name. Alias management is currently handled by CTT on the backend.
+
+### My station is not showing on the portal map. Why? {-}
+
+The portal map relies on GPS data from the station. If the station does not have a GPS fix (e.g., the GPS antenna is obstructed or the station is indoors), it may not appear on the map. You can still find the station by searching for its serial number on the portal. If the station has GPS data but still doesn't appear on the map, contact CTT support.
+
+## SIM Cards & Billing {-}
+
+### How do I activate or deactivate a SensorStation SIM? {-}
+
+Submit a [Customer Service Desk request](https://airtable.com/app20NXPv7qjXDfBN/pagrBcK1muqejz5os/form) with your SensorStation ID. Select either "Activate SensorStation SIM" or "DEACTIVATE SensorStation SIM" as the request type. CTT will process the request and confirm.
+
+### How can I tell if my SIM is active? {-}
+
+On the SensorStation LCD, navigate to **Network > Cellular > Carrier**. If the SIM is active and the modem is enabled, you should see a carrier name (e.g., "AT&T") and a signal percentage. If it shows "Error" or no carrier, the SIM may not be activated. Contact CTT support to verify.
+
+### Can I choose which cellular carrier my station uses? {-}
+
+Yes. By default, the station will connect to the strongest available carrier. If you need a specific carrier (e.g., Verizon is the only network in your deployment area), contact CTT support and they can configure the SIM to prefer that carrier.
+
+## Motus Integration {-}
+
+### My SensorStation is uploading data to CTT but nothing appears on Motus. What's wrong? {-}
+
+Data flows from the SensorStation to CTT's servers, and then to Motus. If data appears on the CTT portal but not on Motus:
+
+1. Verify your station is registered on the [Motus website](https://motus.org) with the correct receiver deployment.
+2. Check that the deployment dates on Motus do not overlap with another receiver's deployment for the same station ID.
+3. There can be delays in Motus processing. Wait 24–48 hours.
+4. If the issue persists, contact both CTT support and Motus support (motus@birdscanada.org).
+
+### I'm getting an "Overlapping Receiver Deployment" error on Motus. What does this mean? {-}
+
+This error means the station ID is already associated with an active deployment on Motus. This commonly happens when a station is redeployed at a new location without ending the previous deployment on Motus. End the previous deployment on the Motus website before registering the new one. If you cannot modify the deployment, contact Motus support.
+
+### How do I register my BluSeries Receiver on Motus? {-}
+
+The BluSeries Receiver connects to your SensorStation via USB. Once connected, it should appear on the SensorStation web interface. To register it on Motus, you need the receiver's serial number. Enter this on the [Motus website](https://motus.org) under your project's receiver deployments. If you're unsure what to enter, contact CTT support for guidance.

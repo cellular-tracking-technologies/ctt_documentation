@@ -1,0 +1,24 @@
+book_filename: "SensorStation-User-Guide"
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Chapter "
+rmd_files: [
+  "index.Rmd",
+  "01-maintenance.Rmd",
+  "02-versions.Rmd",
+  "03-getting-started.Rmd",
+  "04-system-setup.Rmd",
+  "05-powering-on.Rmd",
+  "06-data.Rmd",
+  "07-connectivity.Rmd",
+  "08-interface-explained.Rmd",
+  "09-troubleshooting.Rmd",
+  "10-connecting-to-station.Rmd",
+  "10-appendix-motus.Rmd",
+  "11-appendix-materials.Rmd",
+  "12-appendix-updates.Rmd",
+  "13-faq.Rmd",
+  "14-appendix-static-ip.Rmd"
+]
+output_dir: "_book"

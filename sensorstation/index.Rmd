@@ -1,0 +1,37 @@
+---
+title: "Installation Guide for the CTT SensorStation and CTT Nodes"
+author: "support@celltracktech.com"
+date: "10/17/2025"
+site: bookdown::bookdown_site
+documentclass: book
+output:
+  bookdown::gitbook:
+    css: style.css
+    config:
+      toc:
+        before: |
+          <li><a href="./">CTT SensorStation Guide</a></li>
+        after: |
+          <li><a href="https://celltracktech.com" target="blank">Cellular Tracking Technologies</a></li>
+      download: ["pdf", "epub"]
+  bookdown::pdf_book:
+    includes:
+      in_header: preamble.tex
+    latex_engine: xelatex
+    citation_package: natbib
+    keep_tex: yes
+  bookdown::epub_book: default
+---
+
+```{r setup, include=FALSE}
+library("jsonlite")
+library("plotly")
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Before you begin {-}
+
+![](images/ctt_logo.png){width=3in}
+
+In order to connect directly to your SensorStation, you'll need 2 `USB->Ethernet Adapters` (we recommend: https://tinyurl.com/yc6llze4), and an Ethernet Cable. If you have a V2 station, you'll need a `Raspberry Pi compatible USB WiFi adapter` like this one https://store.celltracktech.com/products/wifi-usb-adapter-add-on-for-sensorstation-v2 if you want to connect via WiFi. If you have a V3 station or later, the WiFi is pre-installed on the board. **Make sure to have these on-hand prior to receiving your SensorStation so there is no delay in setup.**

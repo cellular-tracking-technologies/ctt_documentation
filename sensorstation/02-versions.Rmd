@@ -1,0 +1,22 @@
+# SensorStation Version Notes {#versions}
+
+<div class="board-v3x">
+
+## Note on Version 3.0 and 3.2 SensorStation {-}
+
+As of June 2022 we have released the 3rd version of the SensorStation. V3 SensorStations differ from V2 stations in a few important ways.
+
+1. All come pre-equipped with a WiFi module built into the board. This means no more worrying about WiFi dongle compatibility; now it just works!
+2. There are 6 instead of 7 USB ports (one port slot was used to mount the WiFi chip mentioned above)
+3. The GPS is BACK to being surface mounted to the board- so no extra GPS board like we had for the later issued V2 boards.
+4. Enhanced security with new SSH login credentials. *This is super important if you are SSH'ing into your SensorStation!*
+
+</div>
+
+<div class="board-v2">
+
+## Note on Version 1 SensorStations vs. Version 2 SensorStations {-}
+
+This User Guide has been redesigned around the new (ca.2020) Version 2 SensorStation (V2) which includes an LCD display. Otherwise, Version 1 stations (ca.2019) are nearly identical to V2 stations. In cases where they differ, we have made note in the manual. If you are setting up a V1 station you may want to begin at the QuickStart Guide in the Appendix. If you find inconsistencies in this manual please email us at support@celltracktech.com as we will be updating the manual regularly.
+
+</div>

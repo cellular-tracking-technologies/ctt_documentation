@@ -1,0 +1,115 @@
+# Appendix: Setting a Static IP Address {#static-ip}
+
+<div class="image-new">
+
+*Applies to Sensor Station Image 2024-08-01 and beyond (disk image > 1.4.0).*
+
+## Step 1: SSH into your SensorStation {-}
+
+Open a Terminal window (Mac/Linux) or Command Prompt (Windows) and SSH into your SensorStation using the station's IP address or `sensorstation.local`:
+
+```bash
+ssh ctt@sensorstation.local
+```
+
+- Your username may be `pi` if you have a V2 SensorStation on an old disk image (< 1.2.0). For all other disk images, the username is `ctt`.
+- You will be prompted to enter the password. **The password will not appear on the screen but it is being entered.**
+- The password for old disk images is `ctt-sensor`. The password for newer disk images is `ctt-station`.
+
+## Step 2: Obtain your internet gateway address {-}
+
+While SSH'd into your SensorStation, run the following command:
+
+```bash
+ip route | grep default
+```
+
+The result should look like:
+
+```
+default via xx.x.xx.x dev eth0 proto dhcp metric 600
+```
+
+Your gateway address may have more or fewer digits depending on your router. If you have multiple default gateway addresses, use the one that corresponds to the interface you want to set the static IP for:
+
+- `eth0` for Ethernet
+- `wlan0` for WiFi
+
+## Step 3: Find the name of your connections {-}
+
+Run the following command to see your active network connections:
+
+```bash
+nmcli device status
+```
+
+Your output will look something like this:
+
+```
+DEVICE   TYPE      STATE       CONNECTION
+eth0     ethernet  connected   wired-con
+wlan0    wifi      connected   CellTrackTech
+lo       loopback  unmanaged   --
+```
+
+The `CONNECTION` column shows the name of your internet connection. You will need this name in the next step.
+
+## Step 4: Set the Static IP Address {-}
+
+### For Ethernet: {-}
+
+Paste the following command in your terminal, replacing the `x`'s with your desired static IP address, your gateway address, and your DNS address. You can use the gateway address as the DNS address:
+
+```bash
+sudo nmcli connection modify 'wired-con' connection.autoconnect yes \
+  ipv4.method manual ipv4.address xxx.xxx.x.xxx/24 \
+  ipv4.gateway xx.x.xx.x ipv4.dns xx.x.xx.x
+```
+
+**Example** with a static IP of `192.168.2.199`:
+
+```bash
+sudo nmcli connection modify 'wired-con' connection.autoconnect yes \
+  ipv4.method manual ipv4.address 192.168.2.199/24 \
+  ipv4.gateway 192.168.2.1 ipv4.dns 192.168.2.1
+```
+
+**Note:** Ethernet connections will show up as "Wired connection 1" or similar. Use the connection name from the `nmcli device status` output.
+
+### For WiFi: {-}
+
+If you want to add a static IP address for your WiFi connection, you will first need to connect to your WiFi network:
+
+**If your WiFi network has a password:**
+
+```bash
+sudo nmcli dev wifi connect "WiFi Network Name" password "password"
+sudo nmcli c mod "WiFi Network Name" ipv4.method auto
+```
+
+**If your WiFi network does not have a password:**
+
+```bash
+sudo nmcli dev wifi connect "WiFi Network Name"
+sudo nmcli c mod "WiFi Network Name" ipv4.method auto
+```
+
+Then set the static IP address, replacing `WiFi Network Name` with your actual network SSID:
+
+```bash
+sudo nmcli connection modify 'WiFi Network Name' connection.autoconnect yes \
+  ipv4.method manual ipv4.address 192.168.2.199/24 \
+  ipv4.gateway 192.168.2.1 ipv4.dns 192.168.2.1
+```
+
+The static IP address in this example is `192.168.2.199`. The `199` is the value you would change. **Choose a high number** so it does not conflict with other devices' IP addresses on the same network.
+
+## Step 5: Reboot the SensorStation {-}
+
+```bash
+sudo reboot
+```
+
+After the reboot, obtain your static IP address through the LCD screen and type that IP address into a web browser to access the SensorStation web interface.
+
+</div>
