@@ -27,8 +27,12 @@ Your SensorStation has a web server running locally on the Raspberry Pi, which m
 
 #### Before you get started you will need...
 
-  * <span class="board-v3x"></span> <span class="board-v33"></span> **For V3 stations**, you don't need an extra WiFi adapter since it's already included on every board
-  * <span class="board-v2"></span> For V1 or V2 stations, you'll need a WiFi adapter Like this one: https://store.celltracktech.com/products/wifi-usb-adapter-add-on-for-sensorstation-v2.
+::: {.version-v33 .version-v32 .version-v30}
+  * The WiFi adapter is already built into your V3 board -- no extra adapter needed.
+:::
+::: {.version-v2}
+  * A WiFi adapter like this one: https://store.celltracktech.com/products/wifi-usb-adapter-add-on-for-sensorstation-v2.
+:::
   * 2 USB to Ethernet adapters (we recommend: https://tinyurl.com/yc6llze4)
   * An Ethernet cable
 
@@ -45,33 +49,25 @@ Your SensorStation has a web server running locally on the Raspberry Pi, which m
 
 5. Type the following:
 
-<div class="board-v2">
+::: {.version-v2}
+`ssh pi@xxx.xxx.xxx.xxx` (where the x's represent your SensorStation IP address)
+:::
 
-*For V1 or original V2 stations:* `ssh pi@xxx.xxx.xxx.xxx` (where the x's represent your SensorStation IP address)
-
-</div>
-
-<div class="board-v3x">
-
-**V3 stations, later and upgraded V2 stations:** `ssh ctt@xxx.xxx.xxx.xxx` (where the x's represent your SensorStation IP address)
-
-</div>
+::: {.version-v33 .version-v32 .version-v30}
+`ssh ctt@xxx.xxx.xxx.xxx` (where the x's represent your SensorStation IP address)
+:::
 
 6. Answer `yes` to any dialogues, and when prompted for the password, enter the password for the Raspberry Pi
 
-<div class="board-v3x">
+::: {.version-v33 .version-v32 .version-v30}
+The password is `ctt-station`
+:::
 
-**V3 stations, later and upgraded V2 stations:** The password is `ctt-station`
-
-</div>
-
-<div class="board-v2">
-
+::: {.version-v2}
 *For some mid-age V2 stations:* The password is `ctt-sensor`
 
 *For V1 stations and early V2 stations:* The password is `raspberry`. Note if `raspberry` is your password, *please change your password* via the `raspi-config` you will access in the next step. Just choose `change password` instead of `Network Options` below.
-
-</div>
+:::
 
 7. At this point you should be in the Secure Shell within your Raspberry Pi. From here issue the following command:
 
@@ -97,11 +93,15 @@ Once your SensorStation reboots, it should automatically connect to the existing
 
 14. Open up a web browser and try and connect by typing the following Hostname into the address bar:
 
-**For V2 & V3 SensorStations:**
+::: {.version-v33 .version-v32 .version-v30}
 `http://sensorstation.local`
+:::
 
-*For V1 SensorStations:*
-`http://raspberrypi.local`
+::: {.version-v2}
+**For V2 SensorStations:** `http://sensorstation.local`
+
+*For V1 SensorStations:* `http://raspberrypi.local`
+:::
 
 15. If that doesn't work, check the LCD screen for the IP address, and enter `http://xxx.xxx.xxx.xxx' into your web browser address field, where the `x`'s are the IP address #s
 
@@ -111,7 +111,9 @@ On V2 and V3 SensorStations, instead of manually updating the WiFi credentials v
 
 #### Before you get started you will need...
 
+::: {.version-v2}
   * WiFi adapter Like this one: https://store.celltracktech.com/products/wifi-usb-adapter-add-on-for-sensorstation-v2.
+:::
   * Properly formatted USB thumb drive (Fat-32 or MS-DOS formatting currently supported).
   * A code editor where you can control the programming language and line encoding. We recommend the free Visual Studio Code (https://code.visualstudio.com).
 

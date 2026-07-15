@@ -1,5 +1,7 @@
 bookdown::gitbook:
   css: style.css
+  includes:
+    after_body: station-filter.html
   config:
     toc:
       before: |

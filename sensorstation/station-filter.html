@@ -1,0 +1,106 @@
+<script>
+// Version filter for SensorStation User Guide
+// Persists selection in localStorage so it carries across pages
+// Uses MutationObserver to survive gitbook's AJAX page navigation
+(function() {
+  var STORAGE_KEY = 'ctt-station-version';
+  var VERSIONS = [
+    { id: 'all', label: 'All Versions' },
+    { id: 'v33', label: 'V3.3' },
+    { id: 'v32', label: 'V3.2' },
+    { id: 'v30', label: 'V3.0' },
+    { id: 'v2',  label: 'V2' }
+  ];
+
+  function getSaved() {
+    return localStorage.getItem(STORAGE_KEY) || 'all';
+  }
+
+  function applyFilter(version) {
+    // Remove all filter classes from body
+    document.body.classList.remove('filter-active');
+    VERSIONS.forEach(function(v) {
+      document.body.classList.remove('filter-' + v.id);
+    });
+
+    // Apply new filter
+    if (version !== 'all') {
+      document.body.classList.add('filter-active', 'filter-' + version);
+    }
+
+    // Save selection
+    localStorage.setItem(STORAGE_KEY, version);
+
+    // Update button states
+    var buttons = document.querySelectorAll('.version-filter-btn');
+    buttons.forEach(function(btn) {
+      btn.classList.toggle('active', btn.dataset.version === version);
+    });
+  }
+
+  function createFilterBar() {
+    // Don't create if it already exists
+    if (document.querySelector('.version-filter-bar')) return;
+
+    var saved = getSaved();
+
+    var bar = document.createElement('div');
+    bar.className = 'version-filter-bar';
+    bar.innerHTML = '<span class="version-filter-label">Board Version:</span>';
+
+    VERSIONS.forEach(function(v) {
+      var btn = document.createElement('button');
+      btn.className = 'version-filter-btn';
+      btn.dataset.version = v.id;
+      btn.textContent = v.label;
+      if (v.id === saved) btn.classList.add('active');
+      btn.addEventListener('click', function() {
+        applyFilter(v.id);
+      });
+      bar.appendChild(btn);
+    });
+
+    // Insert into .book-header which persists across gitbook AJAX navigation
+    var header = document.querySelector('.book-header');
+    if (header) {
+      header.appendChild(bar);
+    } else {
+      // Fallback: insert before the book body content
+      var bookBody = document.querySelector('.book-body');
+      if (bookBody) {
+        bookBody.insertBefore(bar, bookBody.firstChild);
+      }
+    }
+  }
+
+  function init() {
+    // Restore filter state on body immediately
+    var saved = getSaved();
+    if (saved !== 'all') {
+      document.body.classList.add('filter-active', 'filter-' + saved);
+    }
+
+    createFilterBar();
+
+    // Watch for gitbook AJAX page swaps: when .page-inner content changes,
+    // re-apply body classes (the bar in .book-header survives, but body
+    // classes might need refreshing)
+    var pageInner = document.querySelector('.page-inner');
+    if (pageInner) {
+      var observer = new MutationObserver(function() {
+        var current = getSaved();
+        if (current !== 'all') {
+          document.body.classList.add('filter-active', 'filter-' + current);
+        }
+      });
+      observer.observe(pageInner, { childList: true, subtree: true });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>

@@ -2,11 +2,16 @@
 
 ## Accessing the Web Interface
 
-1. Connect your Sensor Station to the internet through Wifi or through an Ethernet connection.
+1. Connect your SensorStation to the internet through Wifi or through an Ethernet connection.
+  a. You can also connect to your SensorStation using a point-to-point connection (connecting to the SensorStation to your computer with an ethernet cable and a USB-ethernet adapter).
+  
 2. In any web browser (i.e. Google Chrome, Mozilla Firefox), type in your Sensor Station's IP address (which you can find on the LCD screen) or `sensorstation.local` into the URL bar.
+
+![sensorstation.local address](./images/web-interface/sensorstation-url-sensorstationlocal.png)
 
 ## Nodes
 
+![Nodes table](./images/web-interface/nodes_table.png)
 At the very top of the page you will see the header titled **Nodes**. This is a list of Nodes the station has detected since connecting. For each Node it lists:
 
 `Node ID`
@@ -16,6 +21,8 @@ At the very top of the page you will see the header titled **Nodes**. This is a 
 `Node Firmware Version`
 
 ## Live Tags
+
+![Live tags table](./images/web-interface/live-tags.png)
 
 This is a list of unique tags (PowerTag, LifeTag or HybridTag) that have been detected by your radios since connecting to your computer. For each tag it lists:
 
@@ -27,7 +34,11 @@ This is a list of unique tags (PowerTag, LifeTag or HybridTag) that have been de
 
 Below the Live Tag list is a histogram of tags detected since opening the interface. The bars indicate the number of beeps detected.
 
+![Tag histogram](./images/web-interface/tag-histogram.png)
+
 ## Station
+
+![Station Info section](./images/web-interface/station-section.png)
 
 On the right-hand sidebar of the page you'll see the **Station** section, which includes various pieces of information about your SensorStation.
 
@@ -39,13 +50,36 @@ On the right-hand sidebar of the page you'll see the **Station** section, which 
 * `Boot Count` - the number of times the system has been booted
 * `Total Memory` - the amount of RAM currently being used by the system
 * `Last Boot` - Datetime of last boot
-* `Internet Gateway` -
+* `Internet Gateway` - the IP address of the networking device or virtual component that bridges your local network (like a home or business) to the global internet
+* `Wifi Signal Strength` - the strength of the WiFi signal. Here the WiFi is disabled on the SensorStation
+* `Cellular Modem Signal Strength` - the strength of the cell network connection. Here, the cell modem is enabled and has a moderately strong connection to the cell network.
 
 ## System Versioning Details
 
+![System Version Details](./images/web-interface/system-versioning-details.png)
+* `Station Image` - The disk image release date
+* `Update Radio Firmware` - Update the built-in and dongle 434 MHz radios (current version is 4.0.0)
+* `System` - The disk image version number.
+
+![Memory and CPU Usage](./images/web-interface/memory-cpu-usage.png)
+
 * `Memory Usage` - A pie chart indicating the amount of system RAM currently being used.
 * `CPU Usage` - A pie chart indicating the amount of processing power currently being used.
+
+Hover over the pie slices to see exact usage values:
+
+![Memory being used](./images/web-interface/memory-usage-used.png)
+![Free memory](./images/web-interface/memory-usage-free.png)
+
+Same with the CPU pie chart, hover over the slices to see the exact usage values:
+
+![CPU being used](./images/web-interface/cpu-usage-used.png)
+![Free CPU](./images/web-interface/cpu-usage-free.png)
+
+
 * `Time Sync Stats` - Detailed information of how the system time is being retrieved synced (e.g. from GPS or the internet)
+
+![Time Sync Stats](./images/web-interface/time-sync-stats.png)
 
 ## SensorStation Log
 
@@ -66,7 +100,17 @@ There is a display box for each Radio port. The boxes will display all new data 
 
 ### Radio Configuration
 
-Each of the five 434MHz radios can be individually configured to receive `Nodes`, `Tags (FSK)`, or `OOK (legacy tags)` by clicking the corresponding button. On V1 SensorStations this configuration will only persist until the next webpage refresh unless you press the "Save Radio Configuration" button below, which will save the configuration permanently to memory. For V2 SensorStations the setting is automatically saved as soon as you acknowledge the confirmation popup after clicking the `Node`, `Tag` or `OOK` buttons for a particular radio. Configurations can be changed at any time. **Note that once you have changed the radio settings, the change is immediately saved and the data will flow from whichever you changed it to; node or tag, but in order to see the text description change on the web interface, you will need to refresh the webpage.**
+Each of the five 434MHz radios can be individually configured to receive `Nodes`, `Tags (FSK)`, or `OOK (legacy tags)` by clicking the corresponding button.
+
+::: {.version-v2}
+On V1 SensorStations this configuration will only persist until the next webpage refresh unless you press the "Save Radio Configuration" button below, which will save the configuration permanently to memory. For V2 SensorStations the setting is automatically saved as soon as you acknowledge the confirmation popup after clicking the `Node`, `Tag` or `OOK` buttons for a particular radio.
+:::
+
+::: {.version-v33 .version-v32 .version-v30}
+The setting is automatically saved as soon as you acknowledge the confirmation popup after clicking the `Node`, `Tag` or `OOK` buttons for a particular radio.
+:::
+
+Configurations can be changed at any time. **Note that once you have changed the radio settings, the change is immediately saved and the data will flow from whichever you changed it to; node or tag, but in order to see the text description change on the web interface, you will need to refresh the webpage.**
 
 `Node` = CTT Nodes Only
 `Tag` = CTT LifeTags, PowerTags, ES-200 and ES-150 GPS tags
@@ -102,6 +146,8 @@ Allows you to **download** (`Download Log File`) and **PERMANENTLY DELETE** (`Cl
 The tag data is divided into `Current Data`, `Data Not Uploaded`, and `Data Already Uploaded`. Current Data is data from the last 30 minutes. After 30 minutes, data is rotated into Data Not Uploaded, which is data beyond the last 30 minutes which has not yet been uploaded to CTT servers. If there is an internet connection via cell or ethernet, an upload attempt occurs every 2 hours. After data is uploaded, it is rotated into `Data Already Uploaded` and will stay there until you explicitly delete it. The red Delete buttons will **PERMANENTLY DELETE** the corresponding data from the SensorStation. An *are you sure* dialogue will make sure you do not accidentally delete data.
 
 ## Nanotag Data
+
+![Nanotag (166 MHz) Data Section](./images/nanotag-section.png)
 
 Nanotag Data uses the same scheme as CTT Tag Data, except that currently data from the last 30 minutes is unavailable from this screen. The Sensorgnome interface is separately accessible as described below.
 

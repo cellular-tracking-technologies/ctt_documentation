@@ -1,20 +1,29 @@
 # Appendix: Setting a Static IP Address {#static-ip}
 
-<div class="image-new">
-
 *Applies to Sensor Station Image 2024-08-01 and beyond (disk image > 1.4.0).*
 
 ## Step 1: SSH into your SensorStation {-}
 
 Open a Terminal window (Mac/Linux) or Command Prompt (Windows) and SSH into your SensorStation using the station's IP address or `sensorstation.local`:
 
+::: {.version-v33 .version-v32 .version-v30}
+```bash
+ssh ctt@sensorstation.local
+```
+
+- The password is `ctt-station`.
+:::
+
+::: {.version-v2}
 ```bash
 ssh ctt@sensorstation.local
 ```
 
 - Your username may be `pi` if you have a V2 SensorStation on an old disk image (< 1.2.0). For all other disk images, the username is `ctt`.
-- You will be prompted to enter the password. **The password will not appear on the screen but it is being entered.**
 - The password for old disk images is `ctt-sensor`. The password for newer disk images is `ctt-station`.
+:::
+
+- You will be prompted to enter the password. **The password will not appear on the screen but it is being entered.**
 
 ## Step 2: Obtain your internet gateway address {-}
 
@@ -111,5 +120,3 @@ sudo reboot
 ```
 
 After the reboot, obtain your static IP address through the LCD screen and type that IP address into a web browser to access the SensorStation web interface.
-
-</div>

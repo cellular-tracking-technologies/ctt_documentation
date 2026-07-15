@@ -13,7 +13,7 @@ CTT's Internet of Wildlife System (IoW) is a complete radio telemetry system tha
 
 ## CTT SensorStation
 
-The **CTT SensorStation** collect data directly from tags and can collect data from a series of `Nodes` to more precisely locate tags within a study site. The `SensorStation` stores data and, with an optional cellular data plan, can also send those data directly to the CTT and Motus servers.
+The **CTT SensorStation** collects data directly from tags and can collect data from a series of `Nodes` to more precisely locate tags within a study site. The `SensorStation` stores data and, with an optional cellular data plan, can also send those data directly to the CTT and Motus servers.
 
 ## CTT Node
 

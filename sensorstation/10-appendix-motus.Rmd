@@ -79,18 +79,18 @@ The collaborative nature of Motus relies on a certain level of transparency with
 ## Motus is advancing
 
 * **Multi-disciplinary Science**
-	* Movement, migration, and population ecology
-	* Animal behavior and physiology
-	* Environmental management
+  * Movement, migration, and population ecology
+  * Animal behavior and physiology
+  * Environmental management
 * **Conservation**
-	* Populations, survival, and species dynamics
-	* Stopover, site-based, and full life-cycle knowledge
-	* Informing use of flyways and landscapes
+  * Populations, survival, and species dynamics
+  * Stopover, site-based, and full life-cycle knowledge
+  * Informing use of flyways and landscapes
 * **Education**
-	* Undergraduate through postgraduate studies
-	* Open framework for development, code, and analysis sharing
-	* Grade X-12 STEM curricula (science, technology, engineering, math)
+  * Undergraduate through postgraduate studies
+  * Open framework for development, code, and analysis sharing
+  * Grade X-12 STEM curricula (science, technology, engineering, math)
 * **Public engagement and storytelling**
-	* Visit https://motus.org/education
+  * Visit https://motus.org/education
 
 We are welcoming new collaborators and supporters each week! **For more information or discuss how you or your organization can support Motus, contact [motus@birdscanada.org](motus@birdscanada.org)**

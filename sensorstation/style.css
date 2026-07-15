@@ -1,3 +1,98 @@
+/* ── Version Filter Bar ── */
+.version-filter-bar {
+  background: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.version-filter-label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #495057;
+  margin-right: 4px;
+}
+
+.version-filter-btn {
+  border: 1px solid #adb5bd;
+  background: #fff;
+  color: #495057;
+  padding: 4px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.version-filter-btn:hover {
+  background: #e9ecef;
+}
+
+.version-filter-btn.active {
+  background: #0d6efd;
+  color: #fff;
+  border-color: #0d6efd;
+}
+
+/* ── Version-specific content visibility ── */
+
+/* When V3.3 is selected: hide content tagged for other versions unless also tagged V3.3 */
+body.filter-active.filter-v33 .version-v32:not(.version-v33),
+body.filter-active.filter-v33 .version-v30:not(.version-v33),
+body.filter-active.filter-v33 .version-v2:not(.version-v33) {
+  display: none !important;
+}
+
+/* When V3.2 is selected: hide content tagged for other versions unless also tagged V3.2 */
+body.filter-active.filter-v32 .version-v33:not(.version-v32),
+body.filter-active.filter-v32 .version-v30:not(.version-v32),
+body.filter-active.filter-v32 .version-v2:not(.version-v32) {
+  display: none !important;
+}
+
+/* When V3.0 is selected: hide content tagged for other versions unless also tagged V3.0 */
+body.filter-active.filter-v30 .version-v33:not(.version-v30),
+body.filter-active.filter-v30 .version-v32:not(.version-v30),
+body.filter-active.filter-v30 .version-v2:not(.version-v30) {
+  display: none !important;
+}
+
+/* When V2 is selected: hide content tagged for other versions unless also tagged V2 */
+body.filter-active.filter-v2 .version-v33:not(.version-v2),
+body.filter-active.filter-v2 .version-v32:not(.version-v2),
+body.filter-active.filter-v2 .version-v30:not(.version-v2) {
+  display: none !important;
+}
+
+/* Version badge styling */
+.version-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 3px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.version-badge-v33 {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.version-badge-v32 {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.version-badge-v2 {
+  background: #f8d7da;
+  color: #721c24;
+}
+
 p.caption {
   color: #777;
   margin-top: 10px;
@@ -11,63 +106,4 @@ pre {
 }
 pre code {
   white-space: inherit;
-}
-
-/* --- Version filter styling --- */
-#version-filter select:focus {
-  outline: 2px solid #3b82f6;
-  border-color: #3b82f6;
-}
-#filter-reset:hover {
-  background: #f0f4f8;
-}
-
-/* Version-specific content labels */
-.board-v2::before,
-.board-v30::before,
-.board-v32::before,
-.board-v33::before,
-.board-v3x::before,
-.image-old::before,
-.image-1-3::before,
-.image-new::before {
-  display: inline-block;
-  font-size: 0.75em;
-  font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 4px;
-  margin-bottom: 6px;
-  color: #fff;
-}
-.board-v2::before {
-  content: "V2";
-  background: #6366f1;
-}
-.board-v30::before {
-  content: "V3.0";
-  background: #0891b2;
-}
-.board-v32::before {
-  content: "V3.2";
-  background: #0d9488;
-}
-.board-v33::before {
-  content: "V3.3";
-  background: #059669;
-}
-.board-v3x::before {
-  content: "V3.0 – V3.2";
-  background: #0891b2;
-}
-.image-old::before {
-  content: "Image < 1.3.0";
-  background: #d97706;
-}
-.image-1-3::before {
-  content: "Image 1.3.0";
-  background: #2563eb;
-}
-.image-new::before {
-  content: "Image > 1.4.0";
-  background: #7c3aed;
 }

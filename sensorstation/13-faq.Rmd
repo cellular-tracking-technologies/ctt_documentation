@@ -131,12 +131,25 @@ The SensorStation uses **Type N Female** connectors on its antenna ports. Theref
 
 ### My FunCube Dongles keep getting "kicked off" or the frame rate drops. What's happening? {-}
 
+::: {.version-v2}
+This is a known issue when running 3 or more FunCube Dongles (FCDs) along with the WiFi module and/or cellular modem. The USB bus can become overloaded, causing FCDs to disconnect. Solutions:
+
+1. **Disable unused network interfaces:** If using cellular, disable WiFi. If using WiFi, disable cellular. If using wired Ethernet, disable both.
+2. **Limit FCDs:** Use 2 or fewer FCDs if you must run both WiFi and cellular.
+3. **Install the PowerFilter:** Request the free PowerFilter from CTT, which reduces environmental noise and power draw. See the [Maintenance chapter](#maintenance).
+:::
+
+::: {.version-v32 .version-v30}
 This is a known issue, particularly on V3.0–3.2 SensorStations when running 3 or more FunCube Dongles (FCDs) along with the WiFi module and/or cellular modem. The USB bus can become overloaded, causing FCDs to disconnect. Solutions:
 
 1. **Disable unused network interfaces:** If using cellular, disable WiFi. If using WiFi, disable cellular. If using wired Ethernet, disable both.
 2. **Limit FCDs:** Use 2 or fewer FCDs if you must run both WiFi and cellular.
 3. **Install the PowerFilter:** Request the free PowerFilter from CTT, which reduces environmental noise and power draw. See the [Maintenance chapter](#maintenance).
-4. **V3.3 stations** have resolved this issue with improved USB bus design and built-in heat dissipation.
+:::
+
+::: {.version-v33}
+This issue has been resolved on V3.3 stations with improved USB bus design and built-in heat dissipation. If you still experience FCD disconnects, try rebooting the station.
+:::
 
 ### How do I set up both 166 MHz (Lotek/SensorGnome) and 434 MHz (CTT) antennas? {-}
 

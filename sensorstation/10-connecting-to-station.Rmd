@@ -19,10 +19,9 @@ Your SSH username and password depend on your board version and disk image:
 | Board Version | Disk Image | Username | Password |
 | :------------ | :--------- | :------- | :------- |
 | V2 | Early (< 1.2.0) | `pi` | `raspberry` |
-| V2 | Mid-age | `pi` | `ctt-sensor` |
+| V2 | Mid-age | `ctt` | `ctt-sensor` |
 | V2 | Updated (>= 1.2.0) | `ctt` | `ctt-station` |
-| V3.0 / V3.2 | All images | `ctt` | `ctt-station` |
-| V3.3 | All images | `ctt` | `ctt-station` |
+| V3.0 / V3.2 / V3.3 | All images | `ctt` | `ctt-station` |
 
 **Important:** If your password is still `raspberry`, change it immediately after logging in by running `passwd`.
 
@@ -32,11 +31,11 @@ A point-to-point connection lets you connect your computer directly to the Senso
 
 ### Setting Up the Connection {-}
 
-1. Connect one USB-to-Ethernet adapter to each end of an Ethernet cable.
-2. Plug one adapter into any USB port on your SensorStation.
-3. Plug the other adapter into your computer.
-4. Wait up to **two minutes** for the SensorStation to acquire a link-local IP address.
-5. Find the station's IP address using one of these methods:
+1. Plug one adapter into any USB port on your SensorStation.
+2. Plug the other adapter into a USB port on your computer, and plug in the ethernet cable into the adapter.
+  a. Alternatively, if your computer has an ethernet port, plug the ethernet cable directly into the ethernet port.
+3. Wait up to **two minutes** for the SensorStation to acquire a link-local IP address.
+4. Find the station's IP address using one of these methods:
     * Check the LCD screen: **Network > IP Address**
     * Try the hostname: `sensorstation.local`
 
@@ -59,49 +58,31 @@ SSH gives you command-line access to the SensorStation's Raspberry Pi, allowing 
 
 After establishing a point-to-point connection (see above), open a terminal and run:
 
-<div class="board-v2">
-
+::: {.version-v2}
 ```bash
 ssh pi@sensorstation.local
 ```
+:::
+
+::: {.version-v33 .version-v32 .version-v30}
+```bash
+ssh ctt@sensorstation.local
+```
+:::
 
 Or using the IP address from the LCD screen:
 
+::: {.version-v2}
 ```bash
 ssh pi@169.254.x.x
 ```
+:::
 
-*Replace `pi` with `ctt` if your station has been updated to disk image >= 1.2.0.*
-
-</div>
-
-<div class="board-v3x">
-
-```bash
-ssh ctt@sensorstation.local
-```
-
-Or using the IP address from the LCD screen:
-
+::: {.version-v33 .version-v32 .version-v30}
 ```bash
 ssh ctt@169.254.x.x
 ```
-
-</div>
-
-<div class="board-v33">
-
-```bash
-ssh ctt@sensorstation.local
-```
-
-Or using the IP address from the LCD screen:
-
-```bash
-ssh ctt@169.254.x.x
-```
-
-</div>
+:::
 
 ### Connecting over WiFi {-}
 
@@ -155,6 +136,8 @@ Once connected, you are in a Linux shell on the Raspberry Pi. Here are some usef
 
 SCP (Secure Copy Protocol) lets you transfer files between your computer and the SensorStation over the same connection used for SSH. This is useful for retrieving data files, downloading logs, or uploading configuration files without using a USB drive.
 
+SCP is run on your computer through Terminal/Command Prompt, NOT on the SensorStation.
+
 ### SCP Basics {-}
 
 SCP uses the same credentials as SSH. The general syntax is:
@@ -175,80 +158,36 @@ scp <local-path> <username>@<station-address>:<remote-path>
 
 Radio tag detection files are stored on the station under `/data/`. To download all current radio data files to a folder on your computer:
 
-<div class="board-v2">
+1. Open Terminal/Command Prompt
+
+2. Create the folder `station-data` using:
 
 ```bash
-scp -r pi@sensorstation.local:/data/radio/ ./station-data/
+mkdir station-data
 ```
 
-</div>
+3. Run the following commands:
 
-<div class="board-v3x">
-
+::: {.version-v2}
 ```bash
-scp -r ctt@sensorstation.local:/data/radio/ ./station-data/
+scp -r pi@sensorstation.local:/data/ ./station-data/.
 ```
+:::
 
-</div>
-
-<div class="board-v33">
-
+::: {.version-v33 .version-v32 .version-v30}
 ```bash
-scp -r ctt@sensorstation.local:/data/radio/ ./station-data/
+scp -r ctt@sensorstation.local:/data/ ./station-data/.
 ```
-
-</div>
+:::
 
 The `-r` flag copies directories recursively, so all files and subfolders are included.
-
-### Downloading Specific File Types {-}
-
-To download only rotated (compressed) data files that are ready for upload:
-
-```bash
-scp ctt@sensorstation.local:/data/radio/rotated/*.csv.gz ./station-data/
-```
-
-To download node health files:
-
-```bash
-scp -r ctt@sensorstation.local:/data/node-health/ ./station-data/node-health/
-```
-
-To download GPS data:
-
-```bash
-scp -r ctt@sensorstation.local:/data/gps/ ./station-data/gps/
-```
-
-To download the station log:
-
-```bash
-scp ctt@sensorstation.local:/data/log/*.log ./station-data/
-```
-
-### Downloading SensorGnome (166 MHz) Data {-}
-
-If your station has FunCube Dongles for 166 MHz Lotek tag detection, that data is stored under the SensorGnome data directory:
-
-```bash
-scp -r ctt@sensorstation.local:/data/SGdata/ ./station-data/SGdata/
-```
-
-### Uploading a File to the Station {-}
-
-To upload a configuration file or WiFi credentials to the station:
-
-```bash
-scp credentials.json ctt@sensorstation.local:/tmp/
-```
 
 ### Using an IP Address Instead of Hostname {-}
 
 If `sensorstation.local` does not resolve, use the IP address from the LCD screen:
 
 ```bash
-scp -r ctt@169.254.12.34:/data/radio/ ./station-data/
+scp -r ctt@169.254.12.34:/data/ ./station-data/
 ```
 
 ### SCP Tips {-}
@@ -264,5 +203,5 @@ scp -r ctt@169.254.12.34:/data/radio/ ./station-data/
 * **Preserving timestamps:** Add the `-p` flag to preserve file modification times:
 
     ```bash
-    scp -rp ctt@sensorstation.local:/data/radio/ ./station-data/
+    scp -rp ctt@sensorstation.local:/data/ ./station-data/
     ```
