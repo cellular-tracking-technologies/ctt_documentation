@@ -83,40 +83,132 @@ Same with the CPU pie chart, hover over the slices to see the exact usage values
 
 ## SensorStation Log
 
+![Station Log, messages about station activity](./images/web-interface/station-info.png)
 A log of SensorStation activity. Includes things such as screen updates and data retrieval flushes.
 
 ## GPS
 
-Information retrieved over GPS: Time, Satellites, Latitude, Longitude, Altitude. If there is currently no valid fix, these fields will be blank.
+![GPS info](./images/web-interface/gps.png)
+Information retrieved over GPS: 
+* `Time` - local time calculated by the GPS
+* `Number of Satellites` - number of satellites used to calculate GPS fix
+* `Latitude` - latitude in decimal notation
+* `Longitude` - longitude in decimal notation
+* `Altitude` -  calculated altitude of the station
+
+If there is currently no valid fix, these fields will be blank.
+
+## Server Utilities
+
+![Functions to connect to CTT servers](./images/web-interface/server-utilities.png)
+
+* `Checkin` - Sends the health check-in object to the CTT servers
+* `Upload Data` - Uploads all data on the SensorStation to the CTT servers
+* `Station Software Update` - takes you to the Station Update webpage where you can obtain the latest updates on the Sensor Station Software
+
+## Network Control
+
+If you are running multiple FUNcubes, you should disable either the modem or WiFi for optimal performance. The buttons here allow you to do that.
+
+![Network Control buttons](./images/web-interface/network-controls.png)
+
+* `Enable Modem` - all SensorStations have the modem `disabled` when shipped to avoid unnecessary data usage costs. Clicking this button will enable the modem (depending on the modem type, you may need to reboot the station for the modem to become fully enabled).
+
+* `Disable Modem` - disable the cell modem
+
+* `Enable WiFi` - WiFi is also disabled when SensorStations leave the CTT Office. You will need to add your WiFi credentials to the SensorStation through the USB method to connect to a WiFi network after enabling the WiFi.
+
+## Radio Software Control
+
+![Restart the Radio Software](./images/web-interface/radio-software-control.png)
+If you want to restart the 434 MHz radios, you can click the Restart Radio Software button.
+
+## Display Control
+
+![Tag detection display control](./images/web-interface/display-control.png)
+If you want to limit how many live tags you see in the radio tables below, change the Max Row Count value and click Update.
+
+If you want to the clear all the tags on the radio tables below, click the Clear button. **Note** this only clears the detected tags on the web interface; the detections are still saved to a .csv file on the SensorStation.
+
+## Reboot Control
+
+![Change the reboot schedule](./images/web-interface/reboot-control.png)
+
+The SensorStation is currently set to reboot on the 3rd of each month at 6:43 UTC. Use this interface here to change the reboot cycle.
+
+To change it to a Weekly reboot schedule, click the Weekly dropdown menu and select a day. The reboot will occur on that day each week.
+
+**Note** Avoid choosing dates 29, 30, or 31 if you use the monthly reboot cycle since not all months have these dates.
 
 ## Radios (1-5)
 
-There is a display box for each Radio port. The boxes will display all new data from each Radio port as they are detected, informing you of the following:
+![Live data from the built-in 434 MHz Radios](./images/web-interface/radio-434-tables.png)
+There is a display box for each Radio. The boxes will display all new data from each Radio as they are detected, informing you of the following:
 
-* `Time`
-* `Tag ID`
-* `RSSI`
-* `Node`from which it came (if applicable).
+* `Time` - tag detection time
+* `Tag ID` - tag ID
+* `RSSI` - tag received signal strength indicator (RSSI). Values closer to 0 means a stronger signal
+* `Node` - the Node ID if the tag was detected by a Node
+
+### Tag Filter
+
+![Tag detections filtered for 614C1E55 based on a partial ID](./images/web-interface/tag-filter.png)
+
+If you enter a tag ID or a partial tag ID you can filter the live tag detections for just that specific tag.
 
 ### Radio Configuration
 
-Each of the five 434MHz radios can be individually configured to receive `Nodes`, `Tags (FSK)`, or `OOK (legacy tags)` by clicking the corresponding button.
+Each of the five 434MHz radios can be individually configured to receive `Nodes` or `Tags (FSK)`, by clicking the corresponding button.
+
+![Configuring the radio to detect Nodes](./images/web-interface/radio-table-set-node.png)
+
+![Configuring the radio to detect Tags](./images/web-interface/radio-table-set-tag.png)
+`Node` = CTT Nodes Only
+`Tag` = CTT LifeTags, PowerTags, ES-200 and ES-150 GPS tags
+`OOK` = Legacy-style LifeTag only for limited specialized project, on <= 1.3.0 disk images only
 
 ::: {.version-v2}
 On V1 SensorStations this configuration will only persist until the next webpage refresh unless you press the "Save Radio Configuration" button below, which will save the configuration permanently to memory. For V2 SensorStations the setting is automatically saved as soon as you acknowledge the confirmation popup after clicking the `Node`, `Tag` or `OOK` buttons for a particular radio.
 :::
 
 ::: {.version-v33 .version-v32 .version-v30}
-The setting is automatically saved as soon as you acknowledge the confirmation popup after clicking the `Node`, `Tag` or `OOK` buttons for a particular radio.
+The setting is automatically saved as soon as you acknowledge the confirmation popup after clicking the `Node` or `Tag` buttons for a particular radio.
 :::
 
 Configurations can be changed at any time. **Note that once you have changed the radio settings, the change is immediately saved and the data will flow from whichever you changed it to; node or tag, but in order to see the text description change on the web interface, you will need to refresh the webpage.**
 
-`Node` = CTT Nodes Only
-`Tag` = CTT LifeTags, PowerTags, ES-200 and ES-150 GPS tags
-`OOK` = Legacy-style LifeTag only for limited specialized project
-
 `Clear Session Data` simply clears the scrolling log of tags displayed for each radio port. It does not delete any data from system memory.
+
+## Dongle Radios
+
+![Dongle Radio detection table](./images/web-interface/dongle-radio.png)
+
+You can plug in extra 434 MHz radios (i.e. CTT Motus Adapters) into any of the SensorStation USB ports, and it will create a new Radio table on the web interface.
+
+These radios can be programmed to detect Nodes or Tags.
+
+## Blu Receiver
+
+![Blu Receiver on USB Port 5](./images/web-interface/blu-receiver.png)
+
+For stations running the >=1.4.0 disk image, you can plug in a CTT BluSeries Receiver into any USB port on the SensorStation and detect BluSeries tags.
+
+Each Blu receiver has 4 2.4 GHz radios. Each of those radios are displayed in their own individual radio tables. 
+
+### BluSeries Summary Data
+
+* `version` - blu radio firmware version
+* `Beeps` - number of detections on this specific radio
+* `Dropped Detections` - due to how the blu radios detect data (i.e. a ring buffer), if there is a large volume of tag detections, some of those detections will be dropped. This will most likely not be the case in field settings.
+* `Poll Interval` - time duration between the radio polling for tags. 
+
+### Blu Radio Table
+
+* `Time` - time of tag detection
+* `Tag ID` - 4 byte long ID of the tag
+* `RSSI` - Received Signal Strength Indicator (RSSI) of the tag. Values closer to 0 are stronger signals.
+* `Voltage (V)` - solar/battery voltage in Volts
+* `Temp (C)` - ambient temperature in degrees Celsius
 
 ## Data Management
 
