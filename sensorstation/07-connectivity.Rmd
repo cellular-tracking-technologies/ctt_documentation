@@ -2,7 +2,85 @@
 
 Your SensorStation has a web server running locally on the Raspberry Pi, which means you can interact with your station by directly connecting via Ethernet or through a wireless connection. **Note that this is different than viewing your SensorStation via the CTT Web Portal**. The SensorStation Interface provides an overview of your station's operation, including real-time statistics on detections of tags and nodes, as well as controls to change settings, update your SensorStation software, toggle the cellular modem, and reboot the station. It is always best practice to connect directly to your SensorStation prior to deployment. From here you can run a station update, ensure your antennas are tuned to the expected task (detecting Nodes or Tags) and see in real-time that your station is detecting either as expected.
 
-## Connecting via Ethernet Cable
+## Point-to-Point (P2P) Connection
+
+A point-to-point connection lets you connect your computer directly to the SensorStation without needing a network, router, or internet access. This is the most reliable way to access your station in the field.
+
+### Setting Up the Connection {-}
+
+1. Plug one adapter into any USB port on your SensorStation.
+2. Plug the other adapter into a USB port on your computer, and plug in the ethernet cable into the adapter.
+  a. Alternatively, if your computer has an ethernet port, plug the ethernet cable directly into the ethernet port.
+3. Wait up to **two minutes** for the SensorStation to acquire a link-local IP address.
+4. Find the station's IP address using one of these methods:
+    * Check the LCD screen: **Network > IP Address**
+    * Try the hostname: `sensorstation.local`
+
+The station will typically receive a link-local address in the `169.254.x.x` range. This address may change between connections.
+
+### Troubleshooting the Connection {-}
+
+If you cannot connect:
+
+* Restart both your computer and the SensorStation, then try again.
+* On some computers, you may need to disable WiFi temporarily so traffic routes over Ethernet.
+* On the LCD, navigate to **Network > Ping** to verify whether the station sees any network connection.
+* If using Windows, ensure the Ethernet adapter is recognized in **Network Connections**.
+
+## SSH over a P2P connection
+
+SSH, or Secure Shell, gives you command-line access to the SensorStation's Raspberry Pi, allowing you to configure network settings, troubleshoot issues, run updates, and transfer files.
+
+After establishing a point-to-point connection (see above), open a Terminal (in Mac/Linux) or Command Prompt (in Windows) and run:
+
+::: {.version-v33 .version-v32 .version-v30}
+```bash
+ssh ctt@sensorstation.local
+```
+:::
+
+::: {.version-v2}
+```bash
+ssh pi@sensorstation.local
+```
+:::
+
+Or using the IP address from the LCD screen:
+
+::: {.version-v33 .version-v32 .version-v30}
+```bash
+ssh ctt@169.254.x.x
+```
+:::
+
+::: {.version-v2}
+```bash
+ssh pi@169.254.x.x
+```
+:::
+
+### First-Time Connection {-}
+
+The first time you connect to a station, you will see a message like:
+
+```
+The authenticity of host 'sensorstation.local' can't be established.
+ECDSA key fingerprint is SHA256:xxxxxxxxxxxxxxxxxxxx.
+Are you sure you want to continue connecting (yes/no)?
+```
+
+Type `yes` and press Enter. This saves the station's identity to your computer so you won't be asked again.
+
+### Entering Your Password {-}
+
+After accepting the host key, you will be prompted for a password. **The password will not appear on screen as you type** — this is normal. Type the password and press Enter. See the [SSH Credentials](#connecting-to-station) table above for your password.
+
+## Ethernet Connection
+
+If you have an ethernet cable plugged into your network router, you can connect to the SensorStation as long as you are on the same network as the SensorStation.
+
+
+##############################################################################
 
 ### Before you get started you will need...
 
@@ -30,6 +108,7 @@ Your SensorStation has a web server running locally on the Raspberry Pi, which m
 ::: {.version-v33 .version-v32 .version-v30}
   * The WiFi adapter is already built into your V3 board -- no extra adapter needed.
 :::
+
 ::: {.version-v2}
   * A WiFi adapter like this one: https://store.celltracktech.com/products/wifi-usb-adapter-add-on-for-sensorstation-v2.
 :::
@@ -49,12 +128,12 @@ Your SensorStation has a web server running locally on the Raspberry Pi, which m
 
 5. Type the following:
 
-::: {.version-v2}
-`ssh pi@xxx.xxx.xxx.xxx` (where the x's represent your SensorStation IP address)
-:::
-
 ::: {.version-v33 .version-v32 .version-v30}
 `ssh ctt@xxx.xxx.xxx.xxx` (where the x's represent your SensorStation IP address)
+:::
+
+::: {.version-v2}
+`ssh pi@xxx.xxx.xxx.xxx` (where the x's represent your SensorStation IP address)
 :::
 
 6. Answer `yes` to any dialogues, and when prompted for the password, enter the password for the Raspberry Pi
