@@ -4,14 +4,19 @@
 
 1. Connect your SensorStation to the internet through Wifi or through an Ethernet connection.
   a. You can also connect to your SensorStation using a point-to-point connection (connecting to the SensorStation to your computer with an ethernet cable and a USB-ethernet adapter).
-  
+
 2. In any web browser (i.e. Google Chrome, Mozilla Firefox), type in your Sensor Station's IP address (which you can find on the LCD screen) or `sensorstation.local` into the URL bar.
 
-![Fig. 1 sensorstation.local address in the URL bar](./images/web-interface/sensorstation-url-sensorstationlocal.png)
+```{r sensorstation-url, echo=FALSE, fig.cap="sensorstation.local address in the URL bar"}
+knitr::include_graphics("./images/web-interface/sensorstation-url-sensorstationlocal.png")
+```
 
 ## Nodes
 
-![Fig. 2 Nodes Table](./images/web-interface/nodes_table.png)
+```{r nodes-table, echo=FALSE, fig.cap="Nodes Table"}
+knitr::include_graphics("./images/web-interface/nodes_table.png")
+```
+
 At the very top of the page you will see the header titled **Nodes**. This is a list of Nodes the station has detected since connecting. For each Node it lists:
 
 `Node ID` - ID of the Node that is connected to the SensorStation
@@ -22,7 +27,9 @@ At the very top of the page you will see the header titled **Nodes**. This is a 
 
 ## Live Tags
 
-![Fig. 3 Live tags table](./images/web-interface/live-tags.png)
+```{r live-tags, echo=FALSE, fig.cap="Live tags table"}
+knitr::include_graphics("./images/web-interface/live-tags.png")
+```
 
 This is a list of unique tags (PowerTag, LifeTag or HybridTag) that have been detected by your radios since connecting to your computer. For each tag it lists:
 
@@ -34,11 +41,15 @@ This is a list of unique tags (PowerTag, LifeTag or HybridTag) that have been de
 
 Below the Live Tag list is a histogram of tags detected since opening the interface. The bars indicate the number of beeps detected.
 
-![Fig. 4 Tag histogram](./images/web-interface/tag-histogram.png)
+```{r tag-histogram, echo=FALSE, fig.cap="Tag histogram"}
+knitr::include_graphics("./images/web-interface/tag-histogram.png")
+```
 
 ## Station
 
-![Fig. 5 Station Info section](./images/web-interface/station-section.png)
+```{r station-section, echo=FALSE, fig.cap="Station Info section"}
+knitr::include_graphics("./images/web-interface/station-section.png")
+```
 
 On the right-hand sidebar of the page you'll see the **Station** section, which includes various pieces of information about your SensorStation.
 
@@ -56,43 +67,63 @@ On the right-hand sidebar of the page you'll see the **Station** section, which 
 
 ## System Versioning Details
 
-![Fig. 6 System Version Details](./images/web-interface/system-versioning-details.png)
+```{r system-versioning, echo=FALSE, fig.cap="System Version Details"}
+knitr::include_graphics("./images/web-interface/system-versioning-details.png")
+```
+
 * `Station Image` - The disk image release date
 * `Update Radio Firmware` - Update the built-in and dongle 434 MHz radios (current version is 4.0.0)
 * `System` - The disk image version number. The current version is 1.8.0
 
-![Fig. 7 Memory and CPU Usage](./images/web-interface/memory-cpu-usage.png)
+```{r memory-cpu-usage, echo=FALSE, fig.cap="Memory and CPU Usage"}
+knitr::include_graphics("./images/web-interface/memory-cpu-usage.png")
+```
 
 * `Memory Usage` - A pie chart indicating the amount of system RAM currently being used.
 * `CPU Usage` - A pie chart indicating the amount of processing power currently being used.
 
 Hover over the pie slices to see exact usage values:
 
-![Fig. 8a Memory being used](./images/web-interface/memory-usage-used.png)
+```{r memory-used, echo=FALSE, fig.cap="Memory being used"}
+knitr::include_graphics("./images/web-interface/memory-usage-used.png")
+```
 
-![Fig. 8b Free memory](./images/web-interface/memory-usage-free.png)
+```{r memory-free, echo=FALSE, fig.cap="Free memory"}
+knitr::include_graphics("./images/web-interface/memory-usage-free.png")
+```
 
 Same with the CPU pie chart, hover over the slices to see the exact usage values:
 
-![Fig. 9a CPU being used](./images/web-interface/cpu-usage-used.png)
+```{r cpu-used, echo=FALSE, fig.cap="CPU being used"}
+knitr::include_graphics("./images/web-interface/cpu-usage-used.png")
+```
 
-![Fig. 9b Free CPU](./images/web-interface/cpu-usage-free.png)
+```{r cpu-free, echo=FALSE, fig.cap="Free CPU"}
+knitr::include_graphics("./images/web-interface/cpu-usage-free.png")
+```
 
 
 * `Time Sync Stats` - Detailed information of how the system time is being retrieved synced (e.g. from GPS or the internet)
 
-![Fig. 10 Time Sync Stats](./images/web-interface/time-sync-stats.png)
+```{r time-sync, echo=FALSE, fig.cap="Time Sync Stats"}
+knitr::include_graphics("./images/web-interface/time-sync-stats.png")
+```
 
 ## SensorStation Log
 
-![Fig. 11 Station Log, messages about station activity](./images/web-interface/station-info.png)
+```{r station-log, echo=FALSE, fig.cap="Station Log, messages about station activity"}
+knitr::include_graphics("./images/web-interface/station-info.png")
+```
 
 A log of SensorStation activity. Includes things such as screen updates and data retrieval flushes.
 
 ## GPS
 
-![Fig. 12 GPS info](./images/web-interface/gps.png)
-Information retrieved over GPS: 
+```{r gps-info, echo=FALSE, fig.cap="GPS info"}
+knitr::include_graphics("./images/web-interface/gps.png")
+```
+
+Information retrieved over GPS:
 * `Time` - local time calculated by the GPS
 * `Number of Satellites` - number of satellites used to calculate GPS fix
 * `Latitude` - latitude in decimal notation
@@ -103,13 +134,22 @@ If there is currently no valid fix, these fields will be blank.
 
 ## Server Utilities
 
-![Fig. 13 Functions to connect to CTT servers](./images/web-interface/server-utilities.png)
+```{r server-utilities, echo=FALSE, fig.cap="Functions to connect to CTT servers"}
+knitr::include_graphics("./images/web-interface/server-utilities.png")
+```
 
 From the Server Utilities section on the web interface, you can now `Update Your SensorStation` to the latest deployment build, as well as force `Check In` and force `Upload Data` to the CTT servers.
 
 **Requirement:**
 
   * Because these buttons require connecting to servers via the internet, your SensorStation must be connected to the internet, either via the *on-board LTE module*, hardwired via *Ethernet* (this includes being connected to a computer via Ethernet which is connected to the internet), or wirelessly via the built-in *WiFi module* (or *WiFi adapter* for v2 stations).
+
+### Updating your SensorStation
+
+  1. With the CTT Sensor Station Overview page open in your browser, scroll down to `Server Utilities` on the right sidebar.
+  2. Click the button labeled `Station Update`, which will open the `Sensor Station Software Updater` console
+  3. Scroll down below the console window and click on the `Update Station` button. This will begin the update process. Be aware that the station will be pulling code from five different code bases, which may take up to several minutes depending on your connection speed.
+  4. When the process is complete, you will receive a `Station connection disconnected` dialogue. **This indicates that the update is complete** and that the system has restarted. You may now click the dialogue to clear it, and then click the button at the bottom of the screen to go `Back to Main Interface`.
 
 
 * `Checkin` - Sends the health check-in object to the CTT servers, letting us know that your station is still functioning properly
@@ -120,7 +160,9 @@ From the Server Utilities section on the web interface, you can now `Update Your
 
 If you are running multiple FUNcubes, you should disable either the modem or WiFi for optimal performance. The buttons here allow you to do that.
 
-![Fig. 14 Network Control buttons](./images/web-interface/network-controls.png)
+```{r network-controls, echo=FALSE, fig.cap="Network Control buttons"}
+knitr::include_graphics("./images/web-interface/network-controls.png")
+```
 
 * `Enable Modem` - all SensorStations have the modem `disabled` when shipped to avoid unnecessary data usage costs. Clicking this button will enable the modem (depending on the modem type, you may need to reboot the station for the modem to become fully enabled).
 
@@ -130,19 +172,27 @@ If you are running multiple FUNcubes, you should disable either the modem or WiF
 
 ## Radio Software Control
 
-![Fig. 15 Restart the Radio Software](./images/web-interface/radio-software-control.png)
+```{r radio-software-control, echo=FALSE, fig.cap="Restart the Radio Software"}
+knitr::include_graphics("./images/web-interface/radio-software-control.png")
+```
+
 If you want to restart the 434 MHz radios, you can click the Restart Radio Software button.
 
 ## Display Control
 
-![Fig. 16 Tag detection display control](./images/web-interface/display-control.png)
+```{r display-control, echo=FALSE, fig.cap="Tag detection display control"}
+knitr::include_graphics("./images/web-interface/display-control.png")
+```
+
 If you want to limit how many live tags you see in the radio tables below, change the Max Row Count value and click Update.
 
 If you want to the clear all the tags on the radio tables below, click the Clear button. **Note** this only clears the detected tags on the web interface; the detections are still saved to a .csv file on the SensorStation.
 
 ## Reboot Control
 
-![Fig. 17 Change the reboot schedule](./images/web-interface/reboot-control.png)
+```{r reboot-control, echo=FALSE, fig.cap="Change the reboot schedule"}
+knitr::include_graphics("./images/web-interface/reboot-control.png")
+```
 
 The SensorStation is currently set to reboot on the 3rd of each month at 6:43 UTC. Use this interface here to change the reboot cycle.
 
@@ -152,7 +202,10 @@ To change it to a Weekly reboot schedule, click the Weekly dropdown menu and sel
 
 ## Radios (1-5)
 
-![Fig. 18 Live data from the built-in 434 MHz Radios](./images/web-interface/radio-434-tables.png)
+```{r radio-434-tables, echo=FALSE, fig.cap="Live data from the built-in 434 MHz Radios"}
+knitr::include_graphics("./images/web-interface/radio-434-tables.png")
+```
+
 There is a display box for each Radio. The boxes will display all new data from each Radio as they are detected, informing you of the following:
 
 * `Time` - tag detection time
@@ -162,7 +215,9 @@ There is a display box for each Radio. The boxes will display all new data from 
 
 ### Tag Filter
 
-![Fig. 19 Tag detections filtered for 614C1E55 based on a partial ID](./images/web-interface/tag-filter.png)
+```{r tag-filter, echo=FALSE, fig.cap="Tag detections filtered for 614C1E55 based on a partial ID"}
+knitr::include_graphics("./images/web-interface/tag-filter.png")
+```
 
 If you enter a tag ID or a partial tag ID you can filter the live tag detections for just that specific tag.
 
@@ -170,9 +225,14 @@ If you enter a tag ID or a partial tag ID you can filter the live tag detections
 
 Each of the five 434MHz radios can be individually configured to receive `Nodes` or `Tags (FSK)`, by clicking the corresponding button.
 
-![Fig. 20 Configuring the radio to detect Nodes](./images/web-interface/radio-table-set-node.png)
+```{r radio-set-node, echo=FALSE, fig.cap="Configuring the radio to detect Nodes"}
+knitr::include_graphics("./images/web-interface/radio-table-select-node.png")
+```
 
-![Fig. 21 Configuring the radio to detect Tags](./images/web-interface/radio-table-set-tag.png)
+```{r radio-set-tag, echo=FALSE, fig.cap="Configuring the radio to detect Tags"}
+knitr::include_graphics("./images/web-interface/radio-table-set-tag.png")
+```
+
 `Node` = CTT Nodes Only
 `Tag` = CTT LifeTags, PowerTags, ES-200 and ES-150 GPS tags
 `OOK` = Legacy-style LifeTag only for limited specialized project, on <= 1.3.0 disk images only
@@ -191,7 +251,9 @@ Configurations can be changed at any time. **Note that once you have changed the
 
 ## Dongle Radios
 
-![Fig. 22 Dongle Radio detection table](./images/web-interface/dongle-radio.png)
+```{r dongle-radio, echo=FALSE, fig.cap="Dongle Radio detection table"}
+knitr::include_graphics("./images/web-interface/dongle-radio.png")
+```
 
 You can plug in extra 434 MHz radios (i.e. CTT Motus Adapters) into any of the SensorStation USB ports, and it will create a new Radio table on the web interface.
 
@@ -199,15 +261,19 @@ These radios can be programmed to detect Nodes or Tags.
 
 ## Blu Receiver
 
-![Fig. 23 Blu Receiver on USB Port 5](./images/web-interface/blu-receiver.png)
+```{r blu-receiver, echo=FALSE, fig.cap="Blu Receiver on USB Port 5"}
+knitr::include_graphics("./images/web-interface/blu-receiver.png")
+```
 
 For stations running the >=1.4.0 disk image, you can plug in a CTT BluSeries Receiver into any USB port on the SensorStation and detect BluSeries tags.
 
-Each Blu receiver has four 2.4 GHz radios. Each of those radios are displayed in their own individual radio tables. 
+Each Blu receiver has four 2.4 GHz radios. Each of those radios are displayed in their own individual radio tables.
 
 ### Blu Radio Table
 
-![Fig. 24 Blu Radio](./images/web-interface/blu-radio.png)
+```{r blu-radio, echo=FALSE, fig.cap="Blu Radio"}
+knitr::include_graphics("./images/web-interface/blu-radio.png")
+```
 
 * `Time` - time of tag detection
 * `Tag ID` - 4 byte long ID of the tag
@@ -217,24 +283,24 @@ Each Blu receiver has four 2.4 GHz radios. Each of those radios are displayed in
 
 ### Blu Radio Summary Data
 
-![Fig. 25 Blu Radio Summary Data](./images/web-interface/blu-radio-summary-data.png)
+```{r blu-radio-summary, echo=FALSE, fig.cap="Blu Radio Summary Data"}
+knitr::include_graphics("./images/web-interface/blu-radio-summary-data.png")
+```
+
 * `version` - blu radio firmware version
 * `Beeps` - number of detections on this specific radio
 * `Dropped Detections` - due to how the blu radios detect data (i.e. a ring buffer), if there is a large volume of tag detections, some of those detections will be dropped. This will most likely not be the case in field settings.
-* `Poll Interval` - time duration between the radio polling for tags. 
+* `Poll Interval` - time duration between the radio polling for tags.
 
 ## Data Management
 
-![Fig. 26 Data Management buttons](./images/web-interface/data-management.png)
+```{r data-management, echo=FALSE, fig.cap="Data Management buttons"}
+knitr::include_graphics("./images/web-interface/data-management.png")
+```
 
 Here you can download and/or delete the Station logs, CTT data (434 MHz and BluSeries data), and Nanotag Data (FUNcube/RTL-SDR data).
 
-### Updating your SensorStation
 
-  1. With the CTT Sensor Station Overview page open in your browser, scroll down to `Server Utilities` on the right sidebar.
-  2. Click the button labeled `Station Update`, which will open the `Sensor Station Software Updater` console
-  3. Scroll down below the console window and click on the `Update Station` button. This will begin the update process. Be aware that the station will be pulling code from five different code bases, which may take up to several minutes depending on your connection speed.
-  4. When the process is complete, you will receive a `Station connection disconnected` dialogue. **This indicates that the update is complete** and that the system has restarted. You may now click the dialogue to clear it, and then click the button at the bottom of the screen to go `Back to Main Interface`.
 
 ## Station Log
 
@@ -250,7 +316,7 @@ Nanotag Data uses the same scheme as CTT Tag Data, except that currently data fr
 
 ### Nanotag Data / SensorGnome Interface
 
-![Nanotag (166 MHz) Data Section](./images/nanotag-section.png)
+![](./images/web-interface/nanotag-section.png)
 
 The CTT SensorStation uses the v1 SensorGnome web interface. Motus has detailed instructions [here](https://docs.motus.org/sensorgnome/v1/webinterface).
 
@@ -260,33 +326,47 @@ Click the "SensorGnome Interface" button to go to the SensorGnome interface.
 
 ## SensorGnome Deployment File
 
-![SensorGnome Deployment File](./images/web-interface/sensorgnome-deployment-file.png)
+```{r sensorgnome-deployment, echo=FALSE, fig.cap="SensorGnome Deployment File"}
+knitr::include_graphics("./images/web-interface/sensorgnome-deployment-file.png")
+```
 
-The SensorGnome Deployment file is used to modify the FUNcube/RTL-SDR radio frequencies. You can scroll within the deployment file window to find your specific Motus radio. Once you find your radio, replace the default frequency value with your desired value (you can click and type in the deployment file window). 
+The SensorGnome Deployment file is used to modify the FUNcube/RTL-SDR radio frequencies. You can scroll within the deployment file window to find your specific Motus radio. Once you find your radio, replace the default frequency value with your desired value (you can click and type in the deployment file window).
 
 For example, here is the frequency value for the funcubePro:
 
-![funcubePro default value](./images/web-interface/sensorgnome-deployment-default-freq.png)
+```{r sensorgnome-default-freq, echo=FALSE, fig.cap="funcubePro default value"}
+knitr::include_graphics("./images/web-interface/sensorgnome-deployment-default-freq.png")
+```
 
 Here, we changed the frequency value to 150.096, the radio frequencies used in Europe and the UK.
 
-![funcubePro default value](./images/web-interface/sensorgnome-deployment-modified-freq.png)
+```{r sensorgnome-modified-freq, echo=FALSE, fig.cap="funcubePro modified value"}
+knitr::include_graphics("./images/web-interface/sensorgnome-deployment-modified-freq.png")
+```
+
 Any changes to the SensorGnome Deployment file will not be saved until you click the `Save Changes`.
 
-More information about the deployment file can be found [here](https://docs.motus.org/sensorgnome/v1/appendix/configuring-the-sensorgnome-frequency#on-a-sensorgnome). 
+More information about the deployment file can be found [here](https://docs.motus.org/sensorgnome/v1/appendix/configuring-the-sensorgnome-frequency#on-a-sensorgnome).
 
 ## Reboot Button
 
-![Reboot button](./images/web-interface/reboot-button.png)
+```{r reboot-button, echo=FALSE, fig.cap="Reboot button"}
+knitr::include_graphics("./images/web-interface/reboot-button.png")
+```
+
 This button performs a soft reboot (power is still connected to the SensorStation). You will need to refresh the webpage after your station has booted up again.
 
 ## Register User
 
-![Reboot button](./images/web-interface/register-user-button.png)
+```{r register-user-button, echo=FALSE, fig.cap="Register User button"}
+knitr::include_graphics("./images/web-interface/register-user-button.png")
+```
 
 If your SensorStation is connected to a public internet network and you want to protect the Web Interface from unauthorized visitors, click the `Register User` button.
 
-![Register email web page](./images/web-interface/register-email-web-interface.png)
+```{r register-email, echo=FALSE, fig.cap="Register email web page"}
+knitr::include_graphics("./images/web-interface/register-email-web-interface.png")
+```
 
 It will take you to the above web page. Enter your email address and a password that is at least 8 characters long.
 
@@ -294,11 +374,16 @@ It will take you to the above web page. Enter your email address and a password 
 
 Once you register a user, if you type in the SensorStation IP address or `sensorstation.local` in the URL bar, you will see this page instead:
 
-![Login page](./images/web-interface/login-email-web-interface.png)
+```{r login-page, echo=FALSE, fig.cap="Login page"}
+knitr::include_graphics("./images/web-interface/login-email-web-interface.png")
+```
 
 Enter in your credentials to get back to the main Web Interface web page.
 
 ## Logout User
 
-![Logout User](./images/web-interface/logout-user-button.png)
-The last button on the Web Interface is the Logout User button. Click this button to log out your current signed-in user.
+```{r logout-user, echo=FALSE, fig.cap="Logout User"}
+knitr::include_graphics("./images/web-interface/logout-user-button.png")
+```
+
+The last button on the Web Interface is the Logout User button. Click this button to log out your current signed-in user. Users will be logged out automatically after 10 min of inactivity.
