@@ -93,6 +93,18 @@ body.filter-active.filter-v2 .version-v30:not(.version-v2) {
   color: #721c24;
 }
 
+/* ── Glossary auto-links ── */
+a.glossary-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted #6c757d;
+}
+
+a.glossary-link:hover {
+  color: #0d6efd;
+  border-bottom-color: #0d6efd;
+}
+
 p.caption {
   color: #777;
   margin-top: 10px;

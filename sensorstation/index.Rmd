@@ -39,10 +39,12 @@ In order to connect directly to your SensorStation, you'll need 2 `USB->Ethernet
 ::: {.version-v2 .version-v30 .version-v32}
 **For V3.0, V3.2, and V2 boards**
 If you are going to update the disk image, use a micro-USB to USB-A cable with data wires (we recommend: https://tinyurl.com/3hjp6brf). **Charging cables will not work!**
+:::
 
 ::: {.version-v33}
 **For V3.3 boards**
 If you are going to update the disk image, use a micro-USB to USB-A cable with data wires (we recommend: https://tinyurl.com/5h8cs99t). **Charging cables will not work!**
+:::
 
 ::: {.version-v2}
 You'll also need a `Raspberry Pi compatible USB WiFi adapter` like this one https://store.celltracktech.com/products/wifi-usb-adapter-add-on-for-sensorstation-v2 if you want to connect via WiFi.

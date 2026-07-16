@@ -103,4 +103,168 @@
     init();
   }
 })();
+
+// ── Glossary auto-linker ──
+// Links the first occurrence of each glossary term per page to its definition.
+(function() {
+  // Each entry: [display term(s) to match, glossary anchor ID]
+  // Longer terms listed first so they match before shorter substrings
+  var TERMS = [
+    // Multi-word / long terms first
+    ['BluSeries Receiver', 'glossary-bluseries-receiver'],
+    ['CTT Data Portal', 'glossary-ctt-data-portal'],
+    ['Compute Module', 'glossary-compute-module'],
+    ['Diagnostic LED A', 'glossary-diagnostic-led-a'],
+    ['Diagnostic LED B', 'glossary-diagnostic-led-b'],
+    ['Disk Image', 'glossary-disk-image'],
+    ['disk image', 'glossary-disk-image'],
+    ['Drip Loop', 'glossary-drip-loop'],
+    ['drip loop', 'glossary-drip-loop'],
+    ['FunCube Dongle', 'glossary-fcd'],
+    ['FunCube Dongles', 'glossary-fcd'],
+    ['Internet of Wildlife', 'glossary-iow'],
+    ['Link-local', 'glossary-link-local'],
+    ['link-local', 'glossary-link-local'],
+    ['Power Filter', 'glossary-power-filter'],
+    ['PowerFilter', 'glossary-power-filter'],
+    ['Point-to-Point', 'glossary-point-to-point'],
+    ['point-to-point', 'glossary-point-to-point'],
+    ['Bash Update', 'glossary-bash-update'],
+    ['Boot Count', 'glossary-boot-count'],
+    ['SMA Connector', 'glossary-sma'],
+    ['Type N Connector', 'glossary-type-n'],
+    ['Type N', 'glossary-type-n'],
+    ['U.FL Connector', 'glossary-ufl'],
+    ['U.FL', 'glossary-ufl'],
+    ['SMA Female', 'glossary-sma'],
+    ['SMA Male', 'glossary-sma'],
+    ['NEMA Case', 'glossary-nema-case'],
+    ['API Key', 'glossary-api-key'],
+    ['API Token', 'glossary-api-key'],
+    ['Check-in', 'glossary-check-in'],
+    ['check-in', 'glossary-check-in'],
+    // Product names
+    ['HybridTag', 'glossary-hybridtag'],
+    ['LifeTag', 'glossary-lifetag'],
+    ['PowerTag', 'glossary-powertag'],
+    ['BlūMorpho', 'glossary-blumorpho'],
+    ['BluMorpho', 'glossary-blumorpho'],
+    ['BlūBat', 'glossary-blubat'],
+    ['BluBat', 'glossary-blubat'],
+    ['SensorGnome', 'glossary-sensorgnome'],
+    ['Nanotag', 'glossary-nanotag'],
+    ['Iridium', 'glossary-iridium'],
+    ['Netlight', 'glossary-netlight'],
+    ['LMR-400', 'glossary-lmr-400'],
+    // Acronyms (word-boundary matched)
+    ['RSSI', 'glossary-rssi'],
+    ['CRC', 'glossary-crc'],
+    ['PPP', 'glossary-ppp'],
+    ['IMEI', 'glossary-imei'],
+    ['FSK', 'glossary-fsk'],
+    ['OOK', 'glossary-ook'],
+    ['FCD', 'glossary-fcd'],
+    ['FCDs', 'glossary-fcd'],
+    ['SDR', 'glossary-sdr'],
+    ['RTL-SDR', 'glossary-rtl-sdr'],
+    ['RTC', 'glossary-rtc'],
+    ['EMT', 'glossary-emt'],
+    ['OTA', 'glossary-ota'],
+    ['IoW', 'glossary-iow'],
+    ['Motus', 'glossary-motus'],
+    ['Node', 'glossary-node'],
+    ['Nodes', 'glossary-node']
+  ];
+
+  // Tags/selectors to skip: don't link inside these elements
+  var SKIP_TAGS = ['A', 'PRE', 'CODE', 'SCRIPT', 'STYLE', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'BUTTON', 'INPUT', 'TEXTAREA'];
+
+  function isOnGlossaryPage() {
+    return window.location.href.indexOf('glossary') !== -1;
+  }
+
+  function shouldSkip(node) {
+    while (node) {
+      if (node.nodeType === 1) {
+        if (SKIP_TAGS.indexOf(node.tagName) !== -1) return true;
+        if (node.classList && node.classList.contains('glossary-link')) return true;
+      }
+      node = node.parentNode;
+    }
+    return false;
+  }
+
+  function linkTermsInPage() {
+    // Don't auto-link on the glossary page itself
+    if (isOnGlossaryPage()) return;
+
+    var content = document.querySelector('.page-inner section');
+    if (!content) return;
+
+    // Track which glossary anchors we've already linked (one link per term per page)
+    var linked = {};
+
+    TERMS.forEach(function(entry) {
+      var term = entry[0];
+      var anchor = entry[1];
+
+      // Only link the first occurrence per anchor ID
+      if (linked[anchor]) return;
+
+      // Build a regex that matches the term as a whole word
+      var escaped = term.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+      var regex = new RegExp('\\b' + escaped + '\\b');
+
+      var walker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT, null, false);
+      var node;
+
+      while (node = walker.nextNode()) {
+        if (shouldSkip(node)) continue;
+
+        var match = regex.exec(node.nodeValue);
+        if (!match) continue;
+
+        // Split the text node and wrap the match in a link
+        var before = node.nodeValue.substring(0, match.index);
+        var after = node.nodeValue.substring(match.index + match[0].length);
+
+        var link = document.createElement('a');
+        link.href = 'glossary.html#' + anchor;
+        link.className = 'glossary-link';
+        link.title = 'See glossary definition';
+        link.textContent = match[0];
+
+        var parent = node.parentNode;
+        if (before) parent.insertBefore(document.createTextNode(before), node);
+        parent.insertBefore(link, node);
+        if (after) parent.insertBefore(document.createTextNode(after), node);
+        parent.removeChild(node);
+
+        linked[anchor] = true;
+        break; // only first occurrence
+      }
+    });
+  }
+
+  function initGlossary() {
+    linkTermsInPage();
+
+    // Re-run after gitbook AJAX page navigation
+    var pageInner = document.querySelector('.page-inner');
+    if (pageInner) {
+      var debounce = null;
+      var observer = new MutationObserver(function() {
+        clearTimeout(debounce);
+        debounce = setTimeout(linkTermsInPage, 100);
+      });
+      observer.observe(pageInner, { childList: true });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initGlossary);
+  } else {
+    initGlossary();
+  }
+})();
 </script>

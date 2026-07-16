@@ -1,0 +1,178 @@
+# Glossary {#glossary}
+
+## A {-}
+
+[**API Key / API Token**]{#glossary-api-key}
+: Credentials for programmatic access to SensorStation data via the `celltracktech` R package or direct API calls. Requested through CTT support.
+
+## B {-}
+
+[**Bash Update**]{#glossary-bash-update}
+: An LCD menu command that causes the SensorStation to check the CTT Update Server for assigned software updates. Requires an active internet connection.
+
+[**Beep**]{#glossary-beep}
+: A single tag detection or transmission received by a radio. Used as a unit of detection activity (e.g., "beep count").
+
+[**BluSeries Receiver**]{#glossary-bluseries-receiver}
+: A CTT 2.4 GHz receiver module with four radios that connects to the SensorStation via USB to detect BluSeries tags (BluMorpho, BluBat).
+
+[**BluBat**]{#glossary-blubat}
+: A CTT radio tag transmitter operating at 2.4 GHz, designed for bat tracking.
+
+[**BluMorpho**]{#glossary-blumorpho}
+: A CTT radio tag transmitter operating at 2.4 GHz.
+
+[**Boot Count**]{#glossary-boot-count}
+: The number of times a SensorStation has restarted. Useful for diagnosing stability issues such as power drops or USB bus overload.
+
+## C {-}
+
+[**Check-in**]{#glossary-check-in}
+: A health report automatically sent from the SensorStation to CTT servers, indicating the station is functioning. Contains status, GPS, battery, and detection summary data.
+
+[**Compute Module**]{#glossary-compute-module}
+: The Raspberry Pi Compute Module that serves as the processing unit inside every SensorStation. Different board versions use different compute module revisions.
+
+[**CRC (Cyclic Redundancy Check)**]{#glossary-crc}
+: An error-checking code embedded in tag transmissions. Present on LifeTags (V2+) and HybridTags. When validated, it confirms with 99% accuracy that the detected tag ID is correct. PowerTags do not have CRC.
+
+[**CTT Data Portal**]{#glossary-ctt-data-portal}
+: The web-based interface at [account.celltracktech.com](https://account.celltracktech.com) for monitoring your SensorStation fleet, viewing station health, and downloading data files.
+
+## D {-}
+
+[**Diagnostic LED A (Green)**]{#glossary-diagnostic-led-a}
+: LED indicating whether the SensorStation software is actively reading data from the radios. Blinking = operating normally; solid or off = software has stopped.
+
+[**Diagnostic LED B (Red)**]{#glossary-diagnostic-led-b}
+: LED indicating whether the SensorStation has established a PPP connection to the cellular network. On = connected; off = not connected.
+
+[**Disk Image**]{#glossary-disk-image}
+: A complete software snapshot flashed onto the Raspberry Pi Compute Module. Contains all system files, radio firmware, and applications. Identified by creation date and version number (e.g., v1.8.0).
+
+[**Drip Loop**]{#glossary-drip-loop}
+: A downward loop formed in coaxial cable near an antenna connection point that prevents water from running along the cable into the connector.
+
+## E {-}
+
+[**EMT (Electrical Metallic Tubing)**]{#glossary-emt}
+: Galvanized steel conduit used for mounting SensorStations and Nodes. Available in standard sizes (3/4", 1", 1-1/4", 1-1/2", 2"). Not the same as black pipe used for plumbing.
+
+## F {-}
+
+[**FCD (FunCube Dongle)**]{#glossary-fcd}
+: A Software Defined Radio (SDR) device connected via USB to receive 166 MHz signals for Lotek/SensorGnome/Motus compatibility. Running 3 or more simultaneously on V3.0--3.2 stations can cause USB bus power issues without the disabling the cellular modem and/or the WiFi.
+
+[**FSK (Frequency Shift Keying)**]{#glossary-fsk}
+: The modulation method used in standard 434 MHz CTT tag transmissions. This is the default radio configuration for detecting LifeTags, PowerTags, and HybridTags.
+
+## H {-}
+
+[**Hostname**]{#glossary-hostname}
+: The network name used to access the SensorStation. Typically `sensorstation.local` for V2 and V3 stations, or `raspberrypi.local` for V1 stations.
+
+[**HybridTag**]{#glossary-hybridtag}
+: A CTT radio tag transmitter operating at 434 MHz with CRC validation capability.
+
+## I {-}
+
+[**IMEI (International Mobile Equipment Identity)**]{#glossary-imei}
+: A unique identifier for the cellular modem. Also serves as the SensorStation's serial number/ID on the CTT Data Portal.
+
+[**Internet of Wildlife (IoW)**]{#glossary-iow}
+: CTT's complete radio telemetry ecosystem combining transmitters (tags), receivers (SensorStations), and relay devices (Nodes).
+
+[**Iridium**]{#glossary-iridium}
+: A satellite communication system available as an optional add-on for SensorStations in locations without cellular coverage. Requires an external antenna.
+
+## L {-}
+
+[**LifeTag**]{#glossary-lifetag}
+: A CTT radio tag transmitter operating at 434 MHz with variable power output and CRC validation.
+
+[**Link-local Address**]{#glossary-link-local}
+: A self-assigned IP address in the `169.254.x.x` range, used when connecting a computer directly to a SensorStation via point-to-point Ethernet.
+
+[**LMR-400**]{#glossary-lmr-400}
+: A grade of low-loss coaxial cable recommended for antenna connections to the SensorStation.
+
+## M {-}
+
+[**Motus**]{#glossary-motus}
+: The Motus Wildlife Tracking System --- an international collaborative network of researchers using automated radio telemetry to track birds, bats, and insects. CTT SensorStations can participate in the Motus network. See [motus.org](https://motus.org).
+
+## N {-}
+
+[**Nanotag**]{#glossary-nanotag}
+: A Lotek-compatible tag operating at 166 MHz, detected via FunCube Dongles or RTL-SDR devices. Data is processed through the SensorGnome interface.
+
+[**NEMA Case**]{#glossary-nema-case}
+: A weatherproof enclosure for the SensorStation board, with Type N connectors for antenna connections.
+
+[**Netlight**]{#glossary-netlight}
+: The blue LED on the cellular modem module (labeled D9) that indicates modem state by its blink rate: off = not powered; fast blink = searching; slow blink = connected idle; very fast blink = transferring data.
+
+[**Node**]{#glossary-node}
+: A CTT mini-base station with an integrated solar panel, lithium battery, and antenna. Nodes detect tags and relay detection data to the SensorStation. V2 Nodes detect 434 MHz tags; V3 Nodes detect both 434 MHz and 2.4 GHz tags.
+
+## O {-}
+
+[**OOK (On-Off Keying)**]{#glossary-ook}
+: A legacy modulation method for specialized LifeTag projects. Only available on disk images version 1.3.0 and earlier.
+
+[**OTA (Over-the-Air) Update**]{#glossary-ota}
+: A software update pulled from CTT servers over an active internet connection, without needing to reflash the disk image.
+
+## P {-}
+
+[**Point-to-Point Connection**]{#glossary-point-to-point}
+: A direct Ethernet connection between a computer and the SensorStation using USB-to-Ethernet adapters, without requiring a router or network infrastructure.
+
+[**Power Filter**]{#glossary-power-filter}
+: A device combining an RF choke and EMI filter that eliminates electrical noise interference from power cables, improving tag detection. Built into V3.3 boards; available as a free external add-on for V2 and V3.0--3.2 stations.
+
+[**PowerTag**]{#glossary-powertag}
+: A CTT radio tag transmitter operating at 434 MHz. Does not have variable power or CRC validation, so detections always show as "not validated."
+
+[**PPP (Point-to-Point Protocol)**]{#glossary-ppp}
+: The networking layer that enables the cellular modem to communicate with the cellular network. Indicated by the red Diagnostic B LED.
+
+## R {-}
+
+[**RSSI (Received Signal Strength Indicator)**]{#glossary-rssi}
+: A measurement of detected signal strength in decibels (dB). Values closer to 0 indicate stronger signals. Values below -110 dB are generally not useful for estimating distance.
+
+[**RTC (Real Time Clock)**]{#glossary-rtc}
+: A battery-backed clock on the SensorStation board that maintains the system time when the station is powered off. Uses a coin cell battery.
+
+[**RTL-SDR**]{#glossary-rtl-sdr}
+: An alternative Software Defined Radio receiver to the FunCube Dongle, used for receiving 166 MHz signals via USB.
+
+## S {-}
+
+[**SDR (Software Defined Radio)**]{#glossary-sdr}
+: A radio receiver implemented in software, connected via USB. Used to receive frequencies not covered by the built-in 434 MHz radios (e.g., 166 MHz for Motus/SensorGnome). Examples include FunCube Dongles and RTL-SDRs.
+
+[**SensorGnome**]{#glossary-sensorgnome}
+: An open-source automated radio telemetry receiver platform. The CTT SensorStation integrates SensorGnome functionality for 166 MHz Lotek tag detection. Data from this subsystem appears in the SensorGnome section of the web interface.
+
+[**SMA Connector**]{#glossary-sma}
+: A small coaxial connector type. The SensorStation's 434 MHz radio ports use SMA Female connectors; cables require SMA Male ends.
+
+## T {-}
+
+[**Type N Connector**]{#glossary-type-n}
+: A threaded coaxial connector used on the SensorStation's NEMA case antenna ports. The station uses Type N Female; antenna cables require Type N Male.
+
+## U {-}
+
+[**U.FL Connector**]{#glossary-ufl}
+: A miniature radio frequency connector found on the cellular modem and board jumper points. Used for connecting internal antenna jumpers or U.FL-to-SMA adapters for external cellular antennas.
+
+[**Uptime**]{#glossary-uptime}
+: The elapsed time since the SensorStation was last rebooted. Displayed on the LCD menu and web interface.
+
+## V {-}
+
+[**Validated**]{#glossary-validated}
+: A field in raw detection data indicating whether a tag's CRC was successfully verified (1 = validated, 0 = not validated). Only LifeTags (V2+) and HybridTags can be validated. PowerTags always show 0.

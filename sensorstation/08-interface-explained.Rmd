@@ -5,12 +5,13 @@
 1. Connect your SensorStation to the internet through Wifi or through an Ethernet connection.
   a. You can also connect to your SensorStation using a point-to-point connection (connecting to the SensorStation to your computer with an ethernet cable and a USB-ethernet adapter).
 
-2. In any web browser (i.e. Google Chrome, Mozilla Firefox), type in your Sensor Station's IP address (which you can find on the LCD screen) or `sensorstation.local` into the URL bar.
+2. In any web browser (i.e. Google Chrome, Mozilla Firefox), type in your Sensor Station's IP address (which you can find on the LCD screen) or entering the `sensorstation.local` hostname into the URL bar.
 
 ```{r sensorstation-url, echo=FALSE, fig.cap="sensorstation.local address in the URL bar"}
 knitr::include_graphics("./images/web-interface/sensorstation-url-sensorstationlocal.png")
 ```
 
+**Note:** If you have multiple SensorStations on one WiFi/ethernet network, the sensorstation.local hostname **will not work!** You will need to use the station's IP address in order to display the Web Interface.
 ## Nodes
 
 ```{r nodes-table, echo=FALSE, fig.cap="Nodes Table"}
@@ -19,11 +20,14 @@ knitr::include_graphics("./images/web-interface/nodes_table.png")
 
 At the very top of the page you will see the header titled **Nodes**. This is a list of Nodes the station has detected since connecting. For each Node it lists:
 
-`Node ID` - ID of the Node that is connected to the SensorStation
-`Last Heard` - the time of the last health report
-`Node RSSI` - the RSSI of the Node signal in decibels
-`Battery Voltage` - the Node's battery voltage, which can be used to estimate its remaining life. 4.2 V is very full. 3.5 Vis low. 3 V is nearly empty.
-`Node Firmware Version` - firmware version of the Node. Only available on the v2 Nodes.
+* `Node ID` - ID of the Node that is connected to the SensorStation.
+* `Last Heard` - the time of the last health report.
+* `Node RSSI` - the RSSI of the Node signal in decibels.
+* `Battery Voltage` - the Node's battery voltage, which can be used to estimate its remaining life. 
+  * 4.2 V is very full. 
+  * 3.5 V is low.
+  * 3.0 V is nearly empty.
+* `Node Firmware Version` - firmware version of the Node. Only available on the v2 Nodes.
 
 ## Live Tags
 
@@ -33,11 +37,11 @@ knitr::include_graphics("./images/web-interface/live-tags.png")
 
 This is a list of unique tags (PowerTag, LifeTag or HybridTag) that have been detected by your radios since connecting to your computer. For each tag it lists:
 
-* `Tag ID` - unique 8-digit digital ID
-* `Count` - number of beeps since last page refresh
+* `Tag ID` - unique 8-character (4 bytes) digital ID.
+* `Count` - number of beeps since last page refresh.
 * `Alias` - for convenience, a name can be given to a particular tag and saved in the browser by hitting the `Update` button. This information is saved in your browser only. Name it whatever you'd like. Great for keeping track of particular tags during a test.
-* `"Update" Button` - save the name of a particular tag to your browser
-* `"Remove" Button` - reset the saved name
+* `"Update" Button` - save the name of a particular tag to your browser.
+* `"Remove" Button` - reset the saved name.
 
 Below the Live Tag list is a histogram of tags detected since opening the interface. The bars indicate the number of beeps detected.
 
@@ -53,16 +57,18 @@ knitr::include_graphics("./images/web-interface/station-section.png")
 
 On the right-hand sidebar of the page you'll see the **Station** section, which includes various pieces of information about your SensorStation.
 
-* `ID` - the serial number of your SensorStation (the cell modem's IMEI)
-* `Software Start` - a date/time field referring to the last reboot time
-* `Compute Module Serial` - the serial number of your Raspberry Pi Compute Module
-* `Module Hardware` - the compute module's hardware version
-* `Module Revision` - the compute module's hardware revision
-* `Boot Count` - the number of times the system has been booted
-* `Total Memory` - the amount of RAM currently being used by the system
-* `Last Boot` - Datetime of last boot
-* `Internet Gateway` - the IP address of the networking device or virtual component that bridges your local network (like a home or business) to the global internet
-* `Wifi Signal Strength` - the strength of the WiFi signal. Here the WiFi is disabled on the SensorStation
+* `ID` - the serial number of your SensorStation (the cell modem's IMEI).
+* `Software Start` - a date/time field referring to the last reboot time.
+* `Compute Module Serial` - the serial number of your Raspberry Pi Compute Module.
+* `Module Hardware` - the processor on the compute module.
+* `Module Revision` - the compute module's hardware revision.
+* `Boot Count` - the number of times the system has been booted up/turned on.
+* `Total Memory` - the amount of RAM currently being used by the system.
+* `Last Boot` - Datetime of last boot in local time.
+* `Internet Gateway` - the IP address of the networking device or virtual component that bridges your local network (like a home or business) to the global internet.
+* `Wifi Signal Strength` - the strength of the WiFi signal. 
+  * Here the WiFi is disabled on the SensorStation.
+  * Enabled WiFi signals will vary in the number of bars and color.
 * `Cellular Modem Signal Strength` - the strength of the cell network connection. Here, the cell modem is enabled and has a moderately strong connection to the cell network.
 
 ## System Versioning Details
@@ -71,9 +77,9 @@ On the right-hand sidebar of the page you'll see the **Station** section, which 
 knitr::include_graphics("./images/web-interface/system-versioning-details.png")
 ```
 
-* `Station Image` - The disk image release date
-* `Update Radio Firmware` - Update the built-in and dongle 434 MHz radios (current version is 4.0.0)
-* `System` - The disk image version number. The current version is 1.8.0
+* `Station Image` - The disk image release date.
+* `Update Radio Firmware` - Update the built-in and dongle 434 MHz radios (current version is 4.0.0).
+* `System` - The disk image version number. The current version is 1.8.0.
 
 ```{r memory-cpu-usage, echo=FALSE, fig.cap="Memory and CPU Usage"}
 knitr::include_graphics("./images/web-interface/memory-cpu-usage.png")
@@ -102,8 +108,7 @@ knitr::include_graphics("./images/web-interface/cpu-usage-used.png")
 knitr::include_graphics("./images/web-interface/cpu-usage-free.png")
 ```
 
-
-* `Time Sync Stats` - Detailed information of how the system time is being retrieved synced (e.g. from GPS or the internet)
+* `Time Sync Stats` - Detailed information of how the system time is being retrieved/synced (e.g. from GPS or the internet)
 
 ```{r time-sync, echo=FALSE, fig.cap="Time Sync Stats"}
 knitr::include_graphics("./images/web-interface/time-sync-stats.png")
@@ -112,10 +117,10 @@ knitr::include_graphics("./images/web-interface/time-sync-stats.png")
 ## SensorStation Log
 
 ```{r station-log, echo=FALSE, fig.cap="Station Log, messages about station activity"}
-knitr::include_graphics("./images/web-interface/station-info.png")
+knitr::include_graphics("./images/web-interface/sensor-station-log.png")
 ```
 
-A log of SensorStation activity. Includes things such as screen updates and data retrieval flushes.
+A log of SensorStation activity. Includes things such as screen updates and data retrieval flushes. In the picture above the log printed out the messages from a successful Data Upload process.
 
 ## GPS
 
@@ -124,11 +129,12 @@ knitr::include_graphics("./images/web-interface/gps.png")
 ```
 
 Information retrieved over GPS:
-* `Time` - local time calculated by the GPS
-* `Number of Satellites` - number of satellites used to calculate GPS fix
-* `Latitude` - latitude in decimal notation
-* `Longitude` - longitude in decimal notation
-* `Altitude` -  calculated altitude of the station
+
+* `Time` - local time calculated by the GPS.
+* `Number of Satellites` - number of satellites used to calculate GPS fix.
+* `Latitude` - latitude in decimal notation.
+* `Longitude` - longitude in decimal notation.
+* `Altitude` -  calculated altitude of the station.
 
 If there is currently no valid fix, these fields will be blank.
 
@@ -138,7 +144,9 @@ If there is currently no valid fix, these fields will be blank.
 knitr::include_graphics("./images/web-interface/server-utilities.png")
 ```
 
-From the Server Utilities section on the web interface, you can now `Update Your SensorStation` to the latest deployment build, as well as force `Check In` and force `Upload Data` to the CTT servers.
+* `Checkin` - Sends the health check-in object to the CTT servers, letting us know that your station is still functioning properly.
+* `Upload Data` - Uploads all data on the SensorStation to the CTT servers.
+* `Station Software Update` - takes you to the Station Update webpage where you can obtain the latest updates on the Sensor Station Software.
 
 **Requirement:**
 
@@ -148,13 +156,11 @@ From the Server Utilities section on the web interface, you can now `Update Your
 
   1. With the CTT Sensor Station Overview page open in your browser, scroll down to `Server Utilities` on the right sidebar.
   2. Click the button labeled `Station Update`, which will open the `Sensor Station Software Updater` console
+```{r station-update, echo=FALSE, fig.cap="Station Update Page"}
+knitr::include_graphics("./images/web-interface/station-update-page.png")
+```
   3. Scroll down below the console window and click on the `Update Station` button. This will begin the update process. Be aware that the station will be pulling code from five different code bases, which may take up to several minutes depending on your connection speed.
   4. When the process is complete, you will receive a `Station connection disconnected` dialogue. **This indicates that the update is complete** and that the system has restarted. You may now click the dialogue to clear it, and then click the button at the bottom of the screen to go `Back to Main Interface`.
-
-
-* `Checkin` - Sends the health check-in object to the CTT servers, letting us know that your station is still functioning properly
-* `Upload Data` - Uploads all data on the SensorStation to the CTT servers
-* `Station Software Update` - takes you to the Station Update webpage where you can obtain the latest updates on the Sensor Station Software
 
 ## Network Control
 
@@ -166,9 +172,11 @@ knitr::include_graphics("./images/web-interface/network-controls.png")
 
 * `Enable Modem` - all SensorStations have the modem `disabled` when shipped to avoid unnecessary data usage costs. Clicking this button will enable the modem (depending on the modem type, you may need to reboot the station for the modem to become fully enabled).
 
-* `Disable Modem` - disable the cell modem
+* `Disable Modem` - disable the cell modem. If you are not connecting the station to the cell network, disable the modem to free up the USB bus (especially if you use the FCDs).
 
 * `Enable WiFi` - WiFi is also disabled when SensorStations leave the CTT Office. You will need to add your WiFi credentials to the SensorStation through the USB method to connect to a WiFi network after enabling the WiFi.
+
+* `Disable WiFi` - disable the WiFi module. If you are not connecting the station to a WiFi network, disable the WiFi to free up the USB bus (especially if you use the FCDs).
 
 ## Radio Software Control
 
@@ -186,7 +194,7 @@ knitr::include_graphics("./images/web-interface/display-control.png")
 
 If you want to limit how many live tags you see in the radio tables below, change the Max Row Count value and click Update.
 
-If you want to the clear all the tags on the radio tables below, click the Clear button. **Note** this only clears the detected tags on the web interface; the detections are still saved to a .csv file on the SensorStation.
+If you want to the clear all the tags on the radio tables below, click the Clear button. **Note:** this only clears the detected tags on the web interface; the detections are still saved to a .csv file on the SensorStation.
 
 ## Reboot Control
 
@@ -233,9 +241,9 @@ knitr::include_graphics("./images/web-interface/radio-table-select-node.png")
 knitr::include_graphics("./images/web-interface/radio-table-set-tag.png")
 ```
 
-`Node` = CTT Nodes Only
-`Tag` = CTT LifeTags, PowerTags, ES-200 and ES-150 GPS tags
-`OOK` = Legacy-style LifeTag only for limited specialized project, on <= 1.3.0 disk images only
+* `Node` = CTT Nodes Only
+* `Tag` = CTT LifeTags, PowerTags, ES-200 and ES-150 GPS tags
+* `OOK` = Legacy-style LifeTag only for limited specialized project, on <= 1.3.0 disk images only
 
 ::: {.version-v2}
 On V1 SensorStations this configuration will only persist until the next webpage refresh unless you press the "Save Radio Configuration" button below, which will save the configuration permanently to memory. For V2 SensorStations the setting is automatically saved as soon as you acknowledge the confirmation popup after clicking the `Node`, `Tag` or `OOK` buttons for a particular radio.
@@ -245,7 +253,7 @@ On V1 SensorStations this configuration will only persist until the next webpage
 The setting is automatically saved as soon as you acknowledge the confirmation popup after clicking the `Node` or `Tag` buttons for a particular radio.
 :::
 
-Configurations can be changed at any time. **Note that once you have changed the radio settings, the change is immediately saved and the data will flow from whichever you changed it to; node or tag, but in order to see the text description change on the web interface, you will need to refresh the webpage.**
+Configurations can be changed at any time. **Note: Once you have changed the radio settings, the change is immediately saved and the data will flow from whichever you changed it to; node or tag, but in order to see the text description change on the web interface, you will need to refresh the webpage.**
 
 `Clear Session Data` simply clears the scrolling log of tags displayed for each radio port. It does not delete any data from system memory.
 
@@ -258,6 +266,10 @@ knitr::include_graphics("./images/web-interface/dongle-radio.png")
 You can plug in extra 434 MHz radios (i.e. CTT Motus Adapters) into any of the SensorStation USB ports, and it will create a new Radio table on the web interface.
 
 These radios can be programmed to detect Nodes or Tags.
+
+## Tag Validation
+
+In the above pictures, you will see some detections highlighted in green and some highlighted in red. This is due to the cyclic redundancy check (CRC), which is an error-checking code embedded in tag transmissions. The CRC is present on LifeTags (V2+) and HybridTags, but not PowerTags. If the CRC is valid, then the detection is highlighted in green. If not, it is highlighted in red. Since PowerTags do not have a CRC, they will **always** be highlighted in red.
 
 ## Blu Receiver
 
@@ -300,31 +312,31 @@ knitr::include_graphics("./images/web-interface/data-management.png")
 
 Here you can download and/or delete the Station logs, CTT data (434 MHz and BluSeries data), and Nanotag Data (FUNcube/RTL-SDR data).
 
-
-
-## Station Log
+### Station Log
 
 Allows you to **download** (`Download Log File`) and **PERMANENTLY DELETE** (`Clear Log File`) the system log file. Used for informational and debugging purposes.
 
-## CTT Tag Data
+### CTT Tag Data
 
 The tag data is divided into `Current Data`, `Data Not Uploaded`, and `Data Already Uploaded`. Current Data is data from the last 30 minutes. After 30 minutes, data is rotated into Data Not Uploaded, which is data beyond the last 30 minutes which has not yet been uploaded to CTT servers. If there is an internet connection via cell or ethernet, an upload attempt occurs every 2 hours. After data is uploaded, it is rotated into `Data Already Uploaded` and will stay there until you explicitly delete it. The red Delete buttons will **PERMANENTLY DELETE** the corresponding data from the SensorStation. An *are you sure* dialogue will make sure you do not accidentally delete data.
 
-## Nanotag Data
+### Nanotag Data
 
 Nanotag Data uses the same scheme as CTT Tag Data, except that currently data from the last 30 minutes is unavailable from this screen. The Sensorgnome interface is separately accessible as described below.
 
-### Nanotag Data / SensorGnome Interface
+## Nanotag Data / SensorGnome Interface
 
-![](./images/web-interface/nanotag-section.png)
+```{r nanotag-data, echo=FALSE, fig.cap="Nanotag data section"}
+knitr::include_graphics("./images/web-interface/nanotag-section.png")
+```
 
-The CTT SensorStation uses the v1 SensorGnome web interface. Motus has detailed instructions [here](https://docs.motus.org/sensorgnome/v1/webinterface).
-
-## SensorGnome Interface
+### SensorGnome Interface
 
 Click the "SensorGnome Interface" button to go to the SensorGnome interface.
 
-## SensorGnome Deployment File
+The CTT SensorStation uses the v1 SensorGnome web interface. Motus has detailed instructions [here](https://docs.motus.org/sensorgnome/v1/webinterface).
+
+### SensorGnome Deployment File
 
 ```{r sensorgnome-deployment, echo=FALSE, fig.cap="SensorGnome Deployment File"}
 knitr::include_graphics("./images/web-interface/sensorgnome-deployment-file.png")
@@ -354,7 +366,7 @@ More information about the deployment file can be found [here](https://docs.motu
 knitr::include_graphics("./images/web-interface/reboot-button.png")
 ```
 
-This button performs a soft reboot (power is still connected to the SensorStation). You will need to refresh the webpage after your station has booted up again.
+This button performs a soft reboot (power is still connected to the SensorStation). You will need to refresh the web page after your station has booted up again.
 
 ## Register User
 
@@ -363,6 +375,8 @@ knitr::include_graphics("./images/web-interface/register-user-button.png")
 ```
 
 If your SensorStation is connected to a public internet network and you want to protect the Web Interface from unauthorized visitors, click the `Register User` button.
+
+**Note** This does not protect against someone accessing your station through ssh. If they have the station IP address and station username/password, they are able to access your station.
 
 ```{r register-email, echo=FALSE, fig.cap="Register email web page"}
 knitr::include_graphics("./images/web-interface/register-email-web-interface.png")

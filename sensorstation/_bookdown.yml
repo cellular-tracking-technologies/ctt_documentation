@@ -20,6 +20,7 @@ rmd_files: [
   "11-appendix-materials.Rmd",
   "12-appendix-updates.Rmd",
   "13-faq.Rmd",
-  "14-appendix-static-ip.Rmd"
+  "14-appendix-static-ip.Rmd",
+  "15-glossary.Rmd"
 ]
 output_dir: "_book"
