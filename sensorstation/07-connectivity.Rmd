@@ -151,16 +151,34 @@ After accepting the host key, you will be prompted for a password. **The passwor
 
 ## Common Commands to Run over SSH.
 
+### Adding WiFi credentials
+
+This is for SensorStations running disk images 1.4.0 and above. These disk images use NetworkManager to control the WiFi connection.
+
+Look up available WiFi Networks
+```bash
+nmcli dev wifi list
+```
+Once you find your WiFi network name (aka the SSID) run:
+```bash
+sudo nmcli dev wifi connect "NetworkName" password "password"
+```
+
+Replace NetworkName with the WiFi network name (leave the quotes) and replace password with the password of the WiFi network (again, leave the quotes in the command).
+
+Then, run:
+```bash
+sudo nmcli c mod CellTrackTech ipv4.method auto
+```
+
+This command edits the network connection profile so whenever the station boots up, it automatically tries to connect to your desired network. 
 
 
 
 
 
 
-
-
-
-#### Adding WiFi Credentials Via a USB Drive {#wifi-usb}
+### Adding WiFi Credentials Via a USB Drive {#wifi-usb}
 
 On V2 and V3 SensorStations, instead of manually updating the WiFi credentials via SSH, you can use the `Get WiFi` function available via the LCD menu to upload a credentials file. Follow the steps below to learn how.
 
