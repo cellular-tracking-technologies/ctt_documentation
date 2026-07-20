@@ -16,7 +16,7 @@ A point-to-point connection lets you connect your computer directly to the Senso
     * Check the LCD screen: **Network > IP Address**
     * Try the hostname: `sensorstation.local`
 
-The station will typically receive a link-local address in the `169.254.x.x` range. This address may change between connections.
+The station will typically receive a link-local address in the `169.254.x.x` range. This address may change between connections. Once you have your IP address you can follow the SSH instructions below.
 
 ### Troubleshooting the Connection {-}
 
@@ -27,11 +27,85 @@ If you cannot connect:
 * On the LCD, navigate to **Network > Ping** to verify whether the station sees any network connection.
 * If using Windows, ensure the Ethernet adapter is recognized in **Network Connections**.
 
-## SSH over a P2P connection
+## Ethernet Connection
+
+If you have an ethernet cable plugged into your network router, you can connect to the SensorStation as long as you are on the same network as the SensorStation.
+
+### Before you get started you will need...
+
+  * 2 USB to Ethernet adapters (we recommend: https://tinyurl.com/yc6llze4)
+  * An Ethernet cable
+
+### Making the Connection
+
+  1. Connect each end of the Ethernet cable to the two USB->Ethernet adapters.
+  2. Plug one USB end of an adapter into any of the USB ports on your SensorStation.
+  3. Plug the USB end of the second adapter into your computer and wait up to two minutes to allow the SensorStation to acquire the IP address from your computer.
+  4. You can test this connection through several diagnostics in the LCD menu.
+    * `Network > Ping` will indicate a connection.
+    * `Network > IP Address` will display a valid IP address.
+  5. Open a web browser on your computer, and put the IP address from Step 5 into the URL window of the browser. The web interface should appear.
+
+  *If for some reason you are unable to connect after Step 3, try restarting both the SensorStation and your computer and continue to Step 4.*
+
+## WiFi Connection
+
+**Note:** 
+::: {.version-v33 .version-v32 .version-v30}
+  * The WiFi adapter is already built into your V3 board -- no extra adapter needed.
+:::
+
+::: {.version-v2}
+  * V2 stations need a WiFi adapter like this one: https://store.celltracktech.com/products/wifi-usb-adapter-add-on-for-sensorstation-v2.
+:::
+
+You can also connect wirelessly to the station. Before you can do that, you need to connect the station to your WiFi network.
+
+### Adding your WiFi Credentials to your SensorStation
+
+#### Creating the JSON File
+
+  1. In your code editor (i.e VSCode, TextEditor, etc.), create a new file and set the **Language Mode** to `JSON` and the **End of Line Sequence** to **LF** (for Line Feed).
+  2. Type the following into the file:
+  ```
+    {
+      "ssid":"my_ssid",
+      "psk":"my_password"
+    }
+  ````
+
+  **Make sure you change "my_ssid" to the name of your wifi network and "my_password" to the password for your wifi network!**
+
+
+  3. Save the file and name it `credentials.json`.
+  4. Create an empty folder on your USB thumb drive called `wifi`.
+  5. Copy `credentials.json` file to the `wifi` folder.
+
+##### WiFi Networks with No Password
+
+If your WiFi network does not need a password, create a JSON file like above but only include the ssid:
+
+```
+  {
+    "ssid":"my_ssid"
+  }
+```
+
+1. Take note of the **Wifi name** and **password** for the network you want to link with your SensorStation.
+2. Enable the WiFi module through the LCD screen by selecting Network > WiFi > Enable WiFi.
+3. Plug the formatted USB drive into any of the SensorStation USB ports.
+4. On the LCD screen, navigate to Network > WiFi > Mount USB. This will mount the USB drive onto the SensorStation. You should see a message saying "Mount: success"
+  a. If you don't see that message, wait a few seconds and try again.
+5. Hit the Back button, and then select "Get WiFi" from the same menu screen.
+  a. If you are running an older disk image, you can Mount the USB drive through File Transfer > Mount USB, and then on the same screen select "Get WiFi".
+  
+## SSH into your SensorStation
+
+Now that you are connected to your station through P2P, ethernet, or WiFi, we can access the station terminal through SSH.
 
 SSH, or Secure Shell, gives you command-line access to the SensorStation's Raspberry Pi, allowing you to configure network settings, troubleshoot issues, run updates, and transfer files.
 
-After establishing a point-to-point connection (see above), open a Terminal (in Mac/Linux) or Command Prompt (in Windows) and run:
+Open a Terminal (in Mac/Linux) or Command Prompt (in Windows) and run:
 
 ::: {.version-v33 .version-v32 .version-v30}
 ```bash
@@ -75,45 +149,20 @@ Type `yes` and press Enter. This saves the station's identity to your computer s
 
 After accepting the host key, you will be prompted for a password. **The password will not appear on screen as you type** — this is normal. Type the password and press Enter. See the [SSH Credentials](#connecting-to-station) table above for your password.
 
-## Ethernet Connection
-
-If you have an ethernet cable plugged into your network router, you can connect to the SensorStation as long as you are on the same network as the SensorStation.
+## Common Commands to Run over SSH.
 
 
-##############################################################################
 
-### Before you get started you will need...
 
-  * 2 USB to Ethernet adapters (we recommend: https://tinyurl.com/yc6llze4)
-  * An Ethernet cable
 
-### Making the Connection
 
-  1. Connect each end of the Ethernet cable to the two USB->Ethernet adapters.
-  2. Plug one USB end of an adapter into any of the USB ports on your SensorStation.
-  3. Plug the USB end of the second adapter into your computer and wait up to two minutes to allow the SensorStation to acquire the IP address from your computer.
-  4. You can test this connection through several diagnostics in the LCD menu.
-    * `Network > Ping` will indicate a connection.
-    * `Network > IP Address` will display a valid IP address.
-  5. Open a web browser on your computer, and put the IP address from Step 5 into the URL window of the browser. The web interface should appear.
 
-  *If for some reason you are unable to connect after Step 3, try restarting both the SensorStation and your computer and continue to Step 4.*
 
-## Adding your WiFi Credentials to your SensorStation
 
-### Via the Command Line {#wifi-cli}
 
-#### Before you get started you will need...
+#### Adding WiFi Credentials Via a USB Drive {#wifi-usb}
 
-::: {.version-v33 .version-v32 .version-v30}
-  * The WiFi adapter is already built into your V3 board -- no extra adapter needed.
-:::
-
-::: {.version-v2}
-  * A WiFi adapter like this one: https://store.celltracktech.com/products/wifi-usb-adapter-add-on-for-sensorstation-v2.
-:::
-  * 2 USB to Ethernet adapters (we recommend: https://tinyurl.com/yc6llze4)
-  * An Ethernet cable
+On V2 and V3 SensorStations, instead of manually updating the WiFi credentials via SSH, you can use the `Get WiFi` function available via the LCD menu to upload a credentials file. Follow the steps below to learn how.
 
 #### Gather Important Information
 
@@ -123,6 +172,46 @@ If you have an ethernet cable plugged into your network router, you can connect 
 3. Open a Command Prompt window on your computer (for mac, use Terminal; for PC use PowerShell or CMD)
 4. On V2 or V3 stations, record the IP address from the LCD screen (under Network > IP Address)
 5. On V1 stations record the IP address that appears on the eInk display.
+
+### Via a USB Drive {#wifi-usb}
+
+On V2 and V3 SensorStations, instead of manually updating the WiFi credentials via SSH, you can use the `Get WiFi` function available via the LCD menu to upload a credentials file. Follow the steps below to learn how.
+
+#### Before you get started you will need...
+
+::: {.version-v2}
+  * WiFi adapter Like this one: https://store.celltracktech.com/products/wifi-usb-adapter-add-on-for-sensorstation-v2.
+:::
+  * Properly formatted USB thumb drive (Fat-32 or MS-DOS formatting currently supported).
+  * A code editor where you can control the programming language and line encoding. We recommend the free Visual Studio Code (https://code.visualstudio.com).
+
+#### Creating the JSON File
+
+  1. In your code editor, create a new file and set the **Language Mode** to `JSON` and the **End of Line Sequence** to **LF** (for Line Feed).
+  2. Type the following into the file:
+  ```
+    {
+      "ssid":"my_ssid",
+      "psk":"my_password"
+    }
+  ````
+
+  **Make sure you change "my_ssid" to the name of your wifi network and "my_password" to the password for your wifi network!**
+
+
+  3. Save the file and name it `credentials.json`.
+  4. Create an empty folder on your USB thumb drive called `wifi`.
+  5. Copy `credentials.json` file to the `wifi` folder.
+
+##### WiFi Networks with No Password
+
+If your WiFi network does not need a password, create a JSON file like above but only include the ssid:
+
+```
+  {
+    "ssid":"my_ssid"
+  }
+```
 
 #### SSH into the Pi to update the connectivity settings {#ssh-into-pi}
 
@@ -184,45 +273,9 @@ Once your SensorStation reboots, it should automatically connect to the existing
 
 15. If that doesn't work, check the LCD screen for the IP address, and enter `http://xxx.xxx.xxx.xxx' into your web browser address field, where the `x`'s are the IP address #s
 
-### Via a USB Drive {#wifi-usb}
-
-On V2 and V3 SensorStations, instead of manually updating the WiFi credentials via SSH, you can use the `Get WiFi` function available via the LCD menu to upload a credentials file. Follow the steps below to learn how.
-
-#### Before you get started you will need...
-
-::: {.version-v2}
-  * WiFi adapter Like this one: https://store.celltracktech.com/products/wifi-usb-adapter-add-on-for-sensorstation-v2.
-:::
-  * Properly formatted USB thumb drive (Fat-32 or MS-DOS formatting currently supported).
-  * A code editor where you can control the programming language and line encoding. We recommend the free Visual Studio Code (https://code.visualstudio.com).
-
-#### Creating the JSON File
-
-  1. In your code editor, create a new file and set the **Language Mode** to `JSON` and the **End of Line Sequence** to **LF** (for Line Feed).
-  2. Type the following into the file:
-  ```
-    {
-      "ssid":"my_ssid",
-      "psk":"my_password"
-    }
-  ````
-
-  **Make sure you change "my_ssid" to the name of your wifi network and "my_password" to the password for your wifi network!**
 
 
-  3. Save the file and name it `credentials.json`.
-  4. Create an empty folder on your USB thumb drive called `wifi`.
-  5. Copy `credentials.json` file to the `wifi` folder.
 
-##### WiFi Networks with No Password
-
-If your WiFi network does not need a password, create a JSON file like above but only include the ssid:
-
-```
-  {
-    "ssid":"my_ssid"
-  }
-```
 
 #### Loading the JSON File onto your SensorStation
 

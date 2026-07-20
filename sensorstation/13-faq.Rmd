@@ -16,14 +16,14 @@ This is one of the most common issues. Try the following steps:
 
 **Note:** Rural WiFi can be unreliable. If your station frequently drops WiFi, consider using the cellular modem for more reliable connectivity, or setting up a weekly reboot cycle to automatically reconnect.
 
-### How do I connect my SensorStation to cellular? {-}
+### How do I connect my SensorStation to the cellular network? {-}
 
 1. Your SIM must first be activated by CTT. Submit a [Customer Service Desk request](https://airtable.com/app20NXPv7qjXDfBN/pagrBcK1muqejz5os/form) to activate your SIM.
 2. Once the SIM is activated, use the LCD menu to navigate to **Network > Cellular > Enable Modem**.
 3. The station may require a reboot after enabling the modem.
 4. After reboot, check **Network > Carrier** on the LCD to verify it shows a carrier name and signal percentage.
 
-If the modem shows a signal percentage but no carrier, try disabling and re-enabling the modem. If you are in a remote area, you may also request that CTT configure your SIM for a specific carrier (e.g., Verizon) if that is the only available network.
+If the modem shows a signal percentage but no carrier, try disabling and re-enabling the modem.
 
 ### My SensorStation is connected to the internet (pings successfully) but won't upload data. What's wrong? {-}
 
@@ -82,7 +82,8 @@ This occurs when the same data files are processed more than once. The database'
 This is a known hardware issue that can affect V2 and V3 stations:
 
 - **Black boxes (two rows):** This usually indicates the LCD controller has lost communication with the Raspberry Pi. Try rebooting the station by toggling the power switch. If it persists, the LCD or its ribbon cable may need replacement.
-- **Screen lights up but shows nothing:** The Raspberry Pi compute module may have failed or the SD card/eMMC may be corrupted. Try reflashing the compute module with the latest disk image. See the [Updates appendix](#updates) for instructions.
+- **Screen lights up but shows nothing:** The Raspberry Pi compute module may have failed. Try reflashing the compute module with the latest disk image. See the [Updates appendix](#updates) for instructions.
+  - **If diagnostic ligts A and B are working** the RPi compute module is working and the screen needs to be replaced.
 - **Screen doesn't light up at all:** Check your power connection and ensure the power supply is providing adequate voltage (12V recommended).
 
 If you've tried these steps and the LCD still doesn't work, contact CTT support. You may need to send the station in for repair.
@@ -131,14 +132,6 @@ The SensorStation uses **Type N Female** connectors on its antenna ports. Theref
 
 ### My FunCube Dongles keep getting "kicked off" or the frame rate drops. What's happening? {-}
 
-::: {.version-v2}
-This is a known issue when running 3 or more FunCube Dongles (FCDs) along with the WiFi module and/or cellular modem. The USB bus can become overloaded, causing FCDs to disconnect. Solutions:
-
-1. **Disable unused network interfaces:** If using cellular, disable WiFi. If using WiFi, disable cellular. If using wired Ethernet, disable both.
-2. **Limit FCDs:** Use 2 or fewer FCDs if you must run both WiFi and cellular.
-3. **Install the PowerFilter:** Request the free PowerFilter from CTT, which reduces environmental noise and power draw. See the [Maintenance chapter](#maintenance).
-:::
-
 ::: {.version-v32 .version-v30}
 This is a known issue, particularly on V3.0–3.2 SensorStations when running 3 or more FunCube Dongles (FCDs) along with the WiFi module and/or cellular modem. The USB bus can become overloaded, causing FCDs to disconnect. Solutions:
 
@@ -183,7 +176,7 @@ If nodes individually stop reporting, it could be battery depletion (check node 
 
 ### Does the node clock automatically adjust when connected to the SensorStation? {-}
 
-Nodes synchronize their time from the SensorStation's GPS. If you notice the node clock is off when using the CTT Mobile App independently, it will correct itself once the node communicates with a SensorStation that has a GPS fix. The time displayed in the app may appear offset because it may be showing UTC time rather than local time.
+No, communication between the Node and SensorStation is strictly one way: from the Node to the SensorStation. The SensorStation does not send any data back to the Node. The Node clock is determined by the GPS unit on the Node.
 
 ## Account & Portal {-}
 
