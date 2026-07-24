@@ -5,7 +5,7 @@
 1. Connect your SensorStation to the internet through Wifi or through an Ethernet connection.
   a. You can also connect to your SensorStation using a point-to-point connection (connecting to the SensorStation to your computer with an ethernet cable and a USB-ethernet adapter).
 
-2. In any web browser (i.e. Google Chrome, Mozilla Firefox), type in your Sensor Station's IP address (which you can find on the LCD screen) or entering the `sensorstation.local` hostname into the URL bar.
+2. In a web browser like Google Chrome or Mozilla Firefox (avoid using Microsoft Edge), type in your Sensor Station's IP address (which you can find on the LCD screen) or entering the `sensorstation.local` hostname into the URL bar.
 
 ```{r sensorstation-url, echo=FALSE, fig.cap="sensorstation.local address in the URL bar"}
 knitr::include_graphics("./images/web-interface/sensorstation-url-sensorstationlocal.png")
