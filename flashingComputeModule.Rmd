@@ -37,15 +37,11 @@ While CTT offers many over-the-air updates to your `CTT SensorStation` sometimes
 ### **V2 & V3 SensorStation Long Term Stable (LTS) Image**
 *Records Tag, GPS, SensorGnome, and Telemetry data. Compatible with BlūSeries Receiver and all BlūSeries infrastructure including V3 Nodes (with V4.0.0 or later Radio Firmware)*
 
-
-[Download Current LTS Disk Image](https://media.celltracktech.com/sensor-station/images/lts_26_07/sensor-station-v2.3.4.img.xz) (**Version ID: 2.3.4 Image: 2026-07-24 Updated: 2026-07-31**)
-
-*This version is required if you are using the V3 version of the CTT Nodes, or the CTT BlūSeries Receiver.* **Note that you will also need to update your radio firmware to v4.0.0.** This is the default firmware for this disk image release. The radio firmware can now be updated directly from the LCD screen or the SensorStation Interface. 
-
-**The Changelog can now be found [here](https://github.com/cellular-tracking-technologies/sensor-station-software/releases).**
-
+Click [here](https://github.com/cellular-tracking-technologies/sensor-station-software/releases) to go to the image release and download page. You will also find information on releases and updates.
 
 ### **Old and Depreciated Disk Images**
+
+These disk images are no longer updated with the latest software.
 
 #### **V1 SensorStation Disk Image**
 *OTA Update enabled. Station health reports. RTL-SDR support. Pickup new Nodes / Tags with updated protocol.* 
@@ -54,6 +50,8 @@ While CTT offers many over-the-air updates to your `CTT SensorStation` sometimes
 #### **V2 and V3 SensorStation Disk Image**
 
 [**Version ID: 1.7.0 Image: 2025-09-17 Updated: 2025-11-24**](https://s3.amazonaws.com/media.celltracktech.com/sensor-station/images/sensor-station.latest.xz) **Replaced by `Version 2.3.4` linked above. This image is compatible with the CTT Node V3 and the BluSeries Receiver.**
+
+*This version is required if you are using the V3 version of the CTT Nodes, or the CTT BlūSeries Receiver.* **Note that you will also need to update your radio firmware to v4.0.0.** This is the default firmware for this disk image release. The radio firmware can now be updated directly from the LCD screen or the SensorStation Interface. 
 
 [**Version ID: 1.3.0 Image 2023-05-01 Updated 2023-05-01**](https://s3.amazonaws.com/media.celltracktech.com/sensor-station/images/sensor-station.2023-05-01.zip) **Replaced by `Version 1.7.0` linked above** 
 
