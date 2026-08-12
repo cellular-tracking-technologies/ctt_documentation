@@ -168,14 +168,37 @@ This indicates that the USB port has been opened, and your computer is waiting t
 7. The dialog box from `rpiboot` should disappear after displaying some messages and the module will be available as a new hard drive. (**Do not auto-fix as windows may suggest!**)
 8. Run `Raspberry Pi Imager`
 
-![](images/rpi imager main.png){#id .class width=50%}
+![](images/rpi-imager-2.x.x/select-device.png){#id .class width=50%}
 
-9.  for `Raspberry Pi Device` you can just leave it as-is.
-10. Click the button under `Operating System` and scroll down to the very bottom to `Use Custom`. Click on it and choose to the SensorStation image file you saved (it's a `.zip` or `.xz` file), and select it.
-11. Click the button under `Storage` and select your Raspberry Pi compute module as the target. `example: RPi-MSGD- 0001 - 7.8 GB`
-12. Click the `NEXT` button.
-13. If asked about applying OS customization settings, choose `NO`; if asked whether it's okay to erase the disk, choose `YES`. At this point the flashing should start.
-  *   This will take a while, but once the image is written you will get a success message and the process is complete. 
+9.  for `Raspberry Pi Device` you can just leave it as-is. You do not need to select anything.
+10. Click the button under `Operating System` and scroll down to the very bottom to `Use Custom`.
+
+![](images/rpi-imager-2.x.x/select-disk-image.png){#id .class width=50%}
+
+Click on it and choose to the SensorStation image file you saved (it's a `.zip` or `.xz` file), and select it.
+
+![](images/rpi-imager-2.x.x/select-disk-image-file.png){#id .class width=50%}
+
+11. Click the button under `Storage` and select your Raspberry Pi compute module as the target. `example: RPi-MSGD- 0001 (bootfs, rootfs), 14.6 GB`
+
+![](images/rpi-imager-2.x.x/select-storage-device.png){#id .class width=50%}
+
+12. Click the `NEXT` button. You will get a warning message saying you are about to erase all data on the RPi Module.
+
+![](images/rpi-imager-2.x.x/warning-message.png){#id .class width=50%}
+
+
+**IF YOU HAVEN'T ALREADY, DOWNLOAD YOUR DATA BEFORE PROCEEDING TO THE NEXT STEP!!!**
+
+13. Click "I UNDERSTAND, ERASE AND WRITE". You will then get this screen to monitor the disk writing completion:
+
+![](images/rpi-imager-2.x.x/writing-0-percent.png){#id .class width=50%}
+
+
+  *   This will take a while, but once the image is written you will get a success message and the process is complete. Select Finish.
+  
+![](images/rpi-imager-2.x.x/write-complete.png){#id .class width=50%}
+
 13. Move the **USB Boot Jumper Pin** to the `DISABLED` position (to the `right` 1 pin, for horizontally placed pins, or `up` 1 pin for vertically placed pins). 
 14. Restart your SensorStation, connect to the station via ethernet, and open the SensorStation Interface. 
 15. If needed, update the radio firmware to the latest version, either via the web GUI or through the LCD menu. Once updated, confirm all five 434MHz radio have taken the radio update from the SensorStation Interface.
