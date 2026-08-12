@@ -171,28 +171,25 @@ This indicates that the USB port has been opened, and your computer is waiting t
 ![](images/rpi-imager-2.x.x/select-device.png){#id .class width=50%}
 
 9.  for `Raspberry Pi Device` you can just leave it as-is. You do not need to select anything.
-10. Click the button under `Operating System` and scroll down to the very bottom to `Use Custom`.
+10. Click the `OS` button and scroll down to the very bottom to `Use Custom`.
 
 ![](images/rpi-imager-2.x.x/select-disk-image.png){#id .class width=50%}
 
-Click on it and choose to the SensorStation image file you saved (it's a `.zip` or `.xz` file), and select it.
+Click on it and choose the SensorStation image file you saved (it's a `.xz` file), and select it.
 
-![](images/rpi-imager-2.x.x/select-disk-image-file.png){#id .class width=50%}
+11. Click the button under `Storage` and select your Raspberry Pi compute module as the target. `example: RPi-MSGD-0001 (bootfs, rootfs), 29.1 GB`
 
-11. Click the button under `Storage` and select your Raspberry Pi compute module as the target. `example: RPi-MSGD- 0001 (bootfs, rootfs), 14.6 GB`
-
-![](images/rpi-imager-2.x.x/select-storage-device.png){#id .class width=50%}
+![](images/rpi-imager-2.x.x/select-storage-device2.png){#id .class width=50%}
 
 12. Click the `NEXT` button. You will get a warning message saying you are about to erase all data on the RPi Module.
 
 ![](images/rpi-imager-2.x.x/warning-message.png){#id .class width=50%}
 
-
 **IF YOU HAVEN'T ALREADY, DOWNLOAD YOUR DATA BEFORE PROCEEDING TO THE NEXT STEP!!!**
 
 13. Click "I UNDERSTAND, ERASE AND WRITE". You will then get this screen to monitor the disk writing completion:
 
-![](images/rpi-imager-2.x.x/writing-0-percent.png){#id .class width=50%}
+![](images/rpi-imager-2.x.x/write-image-1-percent.png){#id .class width=50%}
 
 
   *   This will take a while, but once the image is written you will get a success message and the process is complete. Select Finish.
