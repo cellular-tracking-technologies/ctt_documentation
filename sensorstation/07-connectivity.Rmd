@@ -25,6 +25,7 @@ If you cannot connect:
 * Restart both your computer and the SensorStation, then try again.
 * On some computers, you may need to disable WiFi temporarily so traffic routes over Ethernet.
 * On the LCD, navigate to **Network > Ping** to verify whether the station sees any network connection.
+* On Linux computers, go to Network Settings, and click the gear icon next to Wired. Select the IPv4 tab, and then select "Share to Other Computers". Click Apply.
 * If using Windows, ensure the Ethernet adapter is recognized in **Network Connections**.
 
 ## Ethernet Connection
@@ -100,17 +101,88 @@ If your WiFi network does not need a password, create a JSON file like above but
   }
 ```
 
-1. Take note of the **Wifi name** and **password** for the network you want to link with your SensorStation.
-2. Enable the WiFi module through the LCD screen by selecting Network > WiFi > Enable WiFi.
-3. Plug the formatted USB drive into any of the SensorStation USB ports.
-4. On the LCD screen, navigate to Network > WiFi > Mount USB. This will mount the USB drive onto the SensorStation. You should see a message saying "Mount: success"
+1. Enable the WiFi module through the LCD screen by selecting Network > WiFi > Enable WiFi.
+2. Plug the formatted USB drive into any of the SensorStation USB ports.
+3. On the LCD screen, navigate to Network > WiFi > Mount USB. This will mount the USB drive onto the SensorStation. You should see a message saying "Mount: success"
   a. If you don't see that message, wait a few seconds and try again.
-5. Hit the Back button, and then select "Get WiFi" from the same menu screen.
+4. Hit the Back button, and then select "Get WiFi" from the same menu screen.
   a. If you are running an older disk image, you can Mount the USB drive through File Transfer > Mount USB, and then on the same screen select "Get WiFi".
   
+## Transferring Files with SCP
+
+SCP (Secure Copy Protocol) lets you transfer files between your computer and the SensorStation over the same connection used for SSH. This is useful for retrieving data files, downloading logs, or uploading configuration files without using a USB drive.
+
+SCP is run on **your computer** through Terminal/Command Prompt, **NOT** on the SensorStation. Make sure you are not SSH'ed into the SensorStation; you should see something like `user@name-of-computer`, not `ctt@sensorstation`.
+
+### SCP Basics
+
+**Copy a file from the station to your computer:**
+
+```bash
+scp <username>@<station-address>:<remote-path> <local-path>
+```
+
+**Copy a file from your computer to the station:**
+
+```bash
+scp <local-path> <username>@<station-address>:<remote-path>
+```
+
+### Downloading Data Files {-}
+
+Radio tag detection files are stored on the station under `/data/`. To download all current radio data files to a folder on your computer:
+
+1. Open Terminal/Command Prompt
+
+2. Create the folder `station-data` using:
+
+```bash
+mkdir station-data
+```
+
+3. Run the following commands:
+
+::: {.version-v2}
+```bash
+scp -r pi@sensorstation.local:/data/ ./station-data/.
+```
+:::
+
+::: {.version-v33 .version-v32 .version-v30}
+```bash
+scp -r ctt@sensorstation.local:/data/ ./station-data/.
+```
+:::
+
+The `-r` flag copies directories recursively, so all files and subfolders are included.
+
+### Using an IP Address Instead of Hostname {-}
+
+If `sensorstation.local` does not resolve, use the IP address from the LCD screen:
+
+```bash
+scp -r ctt@169.254.12.34:/data/ ./station-data/
+```
+
+### SCP Tips {-}
+
+* **Large transfers:** For stations with a lot of data, SCP over a point-to-point Ethernet connection is significantly faster than over WiFi.
+* **Multiple stations:** If you manage multiple stations, the hostname `sensorstation.local` will resolve to whichever station is currently connected. You may see an SSH host key warning when switching between stations. To clear it, run:
+
+```bash
+ssh-keygen -R sensorstation.local
+```
+
+* **Windows users:** SCP is available natively in PowerShell and Command Prompt on Windows 10 and later. For older versions of Windows, install an SCP client such as [WinSCP](https://winscp.net) or [PuTTY's PSCP](https://www.putty.org).
+* **Preserving timestamps:** Add the `-p` flag to preserve file modification times:
+
+```bash
+scp -rp ctt@sensorstation.local:/data/ ./station-data/
+```
+
 ## SSH into your SensorStation
 
-Now that you are connected to your station through P2P, ethernet, or WiFi, we can access the station terminal through SSH.
+Besides accessing the station files, we can also access the station terminal through SSH.
 
 SSH, or Secure Shell, gives you command-line access to the SensorStation's Raspberry Pi, allowing you to configure network settings, troubleshoot issues, run updates, and transfer files.
 

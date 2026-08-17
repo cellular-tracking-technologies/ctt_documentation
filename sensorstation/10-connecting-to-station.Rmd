@@ -11,20 +11,7 @@ Before connecting, you will need:
 * A computer with a terminal application:
   * **Mac/Linux:** Terminal (built in)
   * **Windows:** PowerShell, Command Prompt, or Windows Terminal
-
-## SSH Credentials {-}
-
-Your SSH username and password depend on your board version and disk image:
-
-| Board Version | Disk Image | Username | Password |
-| :------------ | :--------- | :------- | :------- |
-| V2 | Early (< 1.2.0) | `pi` | `raspberry` |
-| V2 | Mid-age | `ctt` | `ctt-sensor` |
-| V2 | Updated (>= 1.2.0) | `ctt` | `ctt-station` |
-| V3.0 / V3.2 / V3.3 | All images | `ctt` | `ctt-station` |
-
-**Important:** If your password is still `raspberry`, change it immediately after logging in by running `passwd`.
-
+  
 ## Point-to-Point Ethernet Connection {-}
 
 A point-to-point connection lets you connect your computer directly to the SensorStation without needing a network, router, or internet access. This is the most reliable way to access your station in the field.
@@ -47,8 +34,33 @@ If you cannot connect:
 
 * Restart both your computer and the SensorStation, then try again.
 * On some computers, you may need to disable WiFi temporarily so traffic routes over Ethernet.
+* On Linux computers, go to Network Settings, and click the gear icon next to Wired. Select the IPv4 tab, and then select "Share to Other Computers". Click Apply.
 * On the LCD, navigate to **Network > Ping** to verify whether the station sees any network connection.
 * If using Windows, ensure the Ethernet adapter is recognized in **Network Connections**.
+
+## Ethernet Connection {-}
+
+If you can connect directly to your internet router or modem with an ethernet cable, plug one end in the router/modem and the other into the USB-ethernet adapter. Connect the adapter to your station through any of the USB ports. Your IP address should appear in the LCD menu in the Network --> IP Address menu.
+
+
+## WiFi Connection {-}
+
+You will first need to add your WiFi credentials to the station using the USB method. After your station is connected to your WiFi network, type in:
+
+## SSH Credentials {-}
+
+Your SSH username and password depend on your board version and disk image:
+
+| Board Version | Disk Image | Username | Password |
+| :------------ | :--------- | :------- | :------- |
+| V2 | Early (< 1.2.0) | `pi` | `raspberry` |
+| V2 | Mid-age | `ctt` | `ctt-sensor` |
+| V2 | Updated (>= 1.2.0) | `ctt` | `ctt-station` |
+| V3.0 / V3.2 / V3.3 | All images | `ctt` | `ctt-station` |
+
+**Important:** If your password is still `raspberry`, change it immediately after logging in by running `passwd`.
+
+
 
 ## Connecting via SSH {-}
 
