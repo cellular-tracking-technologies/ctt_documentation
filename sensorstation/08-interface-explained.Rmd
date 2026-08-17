@@ -11,7 +11,10 @@
 knitr::include_graphics("./images/web-interface/sensorstation-url-sensorstationlocal.png")
 ```
 
-**Note:** If you have multiple SensorStations on one WiFi/ethernet network, the sensorstation.local hostname **will not work!** You will need to use the station's IP address in order to display the Web Interface.
+**Note:** If you have multiple SensorStations on one WiFi/ethernet network, the `sensorstation.local` hostname **WILL NOT WORK!** You will need to use the station's IP address in order to display the Web Interface.
+
+You can find the SensorStation IP address on the LCD Screen by selecting Network --> IP Address.
+
 ## Nodes
 
 ```{r nodes-table, echo=FALSE, fig.cap="Nodes Table"}
@@ -79,7 +82,7 @@ knitr::include_graphics("./images/web-interface/system-versioning-details.png")
 
 * `Station Image` - The disk image release date.
 * `Update Radio Firmware` - Update the built-in and dongle 434 MHz radios (current version is 4.0.0).
-* `System` - The disk image version number. The current version is 1.8.0.
+* `System` - The disk image version number. The current version, as of 2026-07-31, is 2.3.4.
 
 ```{r memory-cpu-usage, echo=FALSE, fig.cap="Memory and CPU Usage"}
 knitr::include_graphics("./images/web-interface/memory-cpu-usage.png")
