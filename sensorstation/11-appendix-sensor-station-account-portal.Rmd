@@ -1,6 +1,6 @@
 # The SensorStation Account Portal {#data-portal}
 
-![Sensor Station Account page](./images/sensorstation-account-page-01-cropped.png)
+![Sensor Station Account Login page](./_book/images/account-portal/login-screen.png)
 
 The SensorStation Account Portal at [account.celltracktech.com](https://account.celltracktech.com) is the web-based interface for monitoring your SensorStation fleet, viewing station health, and downloading data files. This chapter walks through the main sections of the portal.
 
@@ -10,17 +10,23 @@ Navigate to [https://account.celltracktech.com](https://account.celltracktech.co
 
 ## Navigation Bar {-}
 
+![Sensor Station Account page](./_book/images/account-portal/home-screen.png)
+
 Once logged in, the top navigation bar provides access to the main sections of the portal:
 
 * **Unit List** - View your GPS/GSM transmitter units
 * **My Argos** - Access Argos satellite data (if applicable)
-* **My Stations** - View your SensorStations
+* **My Stations** - View your SensorStations, this is the tab we are interested in
 * **Map** - View all your devices on a map
 * **Export Data** - Download data exports
 * **Feedback** - Submit feedback to CTT
 * **My Account** - Manage your account settings
 
+Click on the My Stations tab to go to your sensor station fleet.
+
 ## Fleet Dashboard {-}
+
+![Fleet Dashboard](./_book/images/account-portal/fleet-dashboard.png)
 
 The Fleet Dashboard is the main landing page at `account.celltracktech.com/station/checkins/`. It provides an at-a-glance overview of all SensorStations in your fleet.
 
@@ -49,6 +55,8 @@ You can zoom in and out using the `+` and `-` buttons or your scroll wheel. The 
 
 ### Fleet Overview {-}
 
+![Fleet Overview](./_book/images/account-portal/account-fleet-overview.png)
+
 Below the map, the Fleet Overview section contains two panels:
 
 **Projects** - A list of your projects with the number of stations associated with each. Click a project name to filter the station list below.
@@ -64,6 +72,8 @@ Below the map, the Fleet Overview section contains two panels:
 This chart is useful for quickly identifying how many stations may need attention.
 
 ### Sensor Stations Table {-}
+
+![Sensor Stations Table](./_book/images/account-portal/sensor-station-table.png)
 
 The Sensor Stations table lists all stations in your fleet. You can search for a specific station using the **Search** box (e.g., by station ID, alias, or project name). The table columns are:
 
@@ -81,6 +91,8 @@ The Sensor Stations table lists all stations in your fleet. You can search for a
 Click **Open** on any row to navigate to that station's detail page.
 
 ### Recent Checkins Table {-}
+
+![Recent Checkins Table](./_book/images/account-portal/account-recent-checkins.png)
 
 Below the Sensor Stations table is the **Recent Checkins** table, which shows a chronological log of check-ins across all stations. The columns are:
 
@@ -103,6 +115,8 @@ Click **Open** on any row to view that station's detail page.
 Clicking **Open** on a station from the fleet dashboard takes you to the station's detail page at `account.celltracktech.com/station/station-home/<StationID>/`. This page provides a comprehensive view of that station's health, activity, and data.
 
 ### Station Header {-}
+
+![Sensor Station Account page](./_book/images/account-portal/map-and-station-info.png)
 
 At the top of the page you will see:
 
@@ -157,6 +171,8 @@ To the right of the map, the Station Details panel displays detailed information
 
 ### Power & System Charts {-}
 
+![Power and System Charts](./_book/images/account-portal/power-and-system.png)
+
 Four time-series charts track the station's power and system health over time:
 
 * **Battery Voltage** - Battery voltage trend over time (in Volts). A healthy station on AC power will show a steady line around 11-12V. Solar-powered stations will show daily charge/discharge cycles.
@@ -165,6 +181,8 @@ Four time-series charts track the station's power and system health over time:
 * **Modem Signal** - Cellular signal strength over time (in dBm). Values closer to 0 are stronger. A flat line at the bottom indicates no cellular connection.
 
 ### Detection Activity {-}
+
+![Power and System Charts](./_book/images/account-portal/detection-activity.png)
 
 This section summarizes the station's tag detection performance.
 
@@ -182,12 +200,16 @@ A horizontal bar chart showing the most-heard tags since the last statistics sna
 
 ### Upload Queue {-}
 
+![Upload Queue](./_book/images/account-portal/upload-queue.png)
+
 Two charts track the station's data upload backlog:
 
 * **Pending Files** - Number of data files queued but not yet uploaded over time. A low, steady count is normal. A growing backlog may indicate connectivity issues.
 * **Pending Bytes** - Total size of the upload backlog over time.
 
 ### Stability {-}
+
+![Stability chart](./_book/images/account-portal/stability.png)
 
 **Uptime & Reboots** - A chart showing the station's uptime (in days) over time. The green area represents continuous uptime, and red dots mark reboot events. Drops to zero indicate reboots. Frequent reboots may indicate power issues or USB bus overload (see the [Maintenance chapter](#maintenance)).
 
@@ -196,6 +218,8 @@ Two charts track the station's data upload backlog:
 **Nodes** - Shows the 7-day battery trend for each node connected to the station. If no nodes have checked in recently, a message will indicate this.
 
 ### Checkins Table {-}
+
+![Checkins Table](./_book/images/account-portal/recent-checkins.png)
 
 A paginated table of all historical check-ins for this station, with the following columns:
 
@@ -212,6 +236,8 @@ A paginated table of all historical check-ins for this station, with the followi
 Click **Show charts** to display battery voltage trends for individual nodes over time. This is useful for identifying nodes with failing batteries.
 
 ### Data Files {-}
+
+![Data Files](./_book/images/account-portal/data-files.png)
 
 At the bottom of the station page is the **Data Files** section, where you can browse and download raw data files. Files are organized into tabs:
 
