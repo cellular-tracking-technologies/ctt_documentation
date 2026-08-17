@@ -1,6 +1,6 @@
 # Connecting to your Station {#connecting-to-station}
 
-This chapter covers how to connect directly to your SensorStation using SSH (Secure Shell) and a point-to-point Ethernet connection, and how to transfer files to and from your station using SCP (Secure Copy Protocol).
+This chapter covers the different ways to connect to your SensorStation using SSH (Secure Shell) and how to transfer files to and from your station using SCP (Secure Copy Protocol).
 
 ## Prerequisites {-}
 
@@ -86,7 +86,7 @@ ssh ctt@169.254.x.x
 
 ### Connecting over WiFi {-}
 
-If your SensorStation is connected to the same WiFi network as your computer, you can SSH in wirelessly:
+If your SensorStation is connected to the same WiFi network as your computer, you can SSH in wirelessly. You will first need to add your WiFi credentials to the station using the USB method. After your station is connected to your WiFi network, type in:
 
 ```bash
 ssh ctt@sensorstation.local
@@ -136,7 +136,7 @@ Once connected, you are in a Linux shell on the Raspberry Pi. Here are some usef
 
 SCP (Secure Copy Protocol) lets you transfer files between your computer and the SensorStation over the same connection used for SSH. This is useful for retrieving data files, downloading logs, or uploading configuration files without using a USB drive.
 
-SCP is run on **your computer** through Terminal/Command Prompt, NOT on the SensorStation. Make sure you are not SSH'ed into the SensorStation; you should see something like `user@name-of-computer`, not `ctt@sensorstation`.
+SCP is run on **your computer** through Terminal/Command Prompt, **NOT** on the SensorStation. Make sure you are not SSH'ed into the SensorStation; you should see something like `user@name-of-computer`, not `ctt@sensorstation`.
 
 ### SCP Basics {-}
 
