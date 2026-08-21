@@ -1,10 +1,10 @@
 ---
 title: |
-  ![](/Users/davidlapuma/Dropbox/CTT_Git/ctt_documentation/images/ctt_logo.png){width=3in}  
+  ![](images/ctt_logo.png){width=3in}
   <br />
   CTT BlūSeries Receiver
 author: "support@celltracktech.com"
-date: "7/30/2024"
+date: "Draft revision: 8/21/2026"
 output:
   html_document:
     toc: yes
@@ -27,10 +27,11 @@ Welcome to the Blū Revolution! Your CTT BlūSeries Receiver provides up to four
 
 * BlūSeries Receiver with Case
 * USB-to-Ethernet Adapter (to connect the receiver to your CTT SensorStation)
-* Hardware (4x Bracket Bolts, 4x Bracket Nuts, 1x Wire Holder, 1x Screw, and 1x Cable Gland)
-* Top and Bottom Mounting Plates
+* Mounting hardware bag (4x backplate bolts, 4x standoff grommets, and 4x nuts)
+* One-piece mounting backplate
+* Wire holder, screw, and cable gland
 
-![*Everything included with the purchase of a CTT V3 Node*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/Whats in the box.png){#id .class width=50%}
+**Current-production hardware:** Each receiver ships with one full-size mounting backplate. The previous-generation separate top and bottom mounting plates are not included.
 
 
 ## What you'll need
@@ -38,7 +39,7 @@ Welcome to the Blū Revolution! Your CTT BlūSeries Receiver provides up to four
 * Ethernet Cable: CAT-5 up to CAT-8 will work. Any length under 100m. Choose a cable without a covering on the ends as this will make it difficult to impossible to fish through the cable glands and into the Receiver and SensorStation. 
 * Coaxial Cable(s) for antenna(s)
 * 2.4GHz Antenna(s)
-* Pipe clamps or similar for attaching the mounting plates to your mast
+* Hose clamps or similar hardware for attaching the mounting backplate to your mast
 
 ## Tools
 
@@ -55,7 +56,7 @@ This assumes you have a CTT SensorStation with a pre-existing cable gland for ge
 1. Unscrew the Node V3 case using a #2 Phillips screwdriver. Open the Node lid and place the lid and screws to the side.
 2. Unscrew/disassemble cable gland into its 3 plastic pieces
 
-![*Disassembled Gland. Note: The rubber grommet still inside of the main component (middle)*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/Disassembled cable gland.png){#id .class width=50%}
+![*Disassembled gland. Note: the rubber grommet is still inside the main component (middle).*](images/Disassembled cable gland.png){#id .class width=50%}
 <br />
 
 3. Push out the rubber grommet from the main gland component
@@ -65,7 +66,7 @@ This assumes you have a CTT SensorStation with a pre-existing cable gland for ge
 
 <br />
 
-![*Partially Assembled Gland on Ethernet Cable. Note: The end of the ethernet cable that will ultimately be plugged into the Node is displayed here.*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/partially assembled gland.png){#id .class width=50%}
+![*Partially assembled gland on the Ethernet cable. The end shown will plug into the receiver.*](images/partially assembled gland.png){#id .class width=50%}
 <br />
 
 7. Put the threaded cap onto the opposite end of the cable, bring it towards the end that you have already started connecting. Thread on the connector a couple of turns until the gland is on the wire snug but can still be slid up and down with some force.
@@ -78,26 +79,49 @@ This assumes you have a CTT SensorStation with a pre-existing cable gland for ge
 
 ### Installing the cable holder
 
-![*Completed Ethernet and Gland Installation*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/BR_NoMountingPlates.png){#id .class width=50%}
+![*Completed Ethernet and gland installation*](images/BR_NoMountingPlates.png){#id .class width=50%}
 
 1. Slide the cord holder around the Ethernet cord with the flat side of the holder facing down and to the left. You may want to pull the cable out, or push the cable into, the case.
 2. Connect the Ethernet cable. Be sure there is minimal kinking and twisting of the cord between the gland and the connection onto the PCB.
 3. Use the remaining screw (and washer, if provided) with a #1 Philips head screwdriver to screw the connector in place. See the photo above for the exact location of this step.
 
-### Installing the Mounting Plates
+### Installing the Mounting Backplate: Photo Guide
 
-![*BlūSeries Receiver with Mounting Plates installed](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/BR_cableAttached.png){#id .class width=50%}
+Current-production BlūSeries receivers use one full-size mounting backplate. Follow the photos below for all four corners. The four standoff grommets create the clearance needed to feed hose clamps behind the backplate.
 
-1. Insert two nuts in the channels on the top end of the node case (the channels are next to inward from the female screw holes in the corners of the node case).
-2. Line up the mounting plate labeled TOP with the top holes on the back of the Node.
-3. Using a #2 Philips screwdriver, thread the bolts into the recently placed nuts from the backside of the node, securing the bracket. 
-4. Repeat steps 1-3 with the bottom plate.
+![*The current one-piece backplate fully assembled on a BlūSeries Receiver.*](images/IMG_9404.jpg){#id .class width=55%}
 
-![*Completed BlūSeries Receiver Assembly*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/BR_closedCase.png){#id .class width=50%}
+1. **Check the hardware.** The bag contains four bolts, four black standoff grommets, and four nuts—one set for each corner.
 
-5. Place the Node lid back onto the case and screw down all 4 screws securely.
+![*One complete hardware set: bolt, standoff grommet, and nut. The receiver includes four of each.*](images/IMG_9405.jpg){#id .class width=55%}
 
-***Note: This step may be tricky. It may help to utilize gravity and fasten the bolts with the backside of the node facing down. Using this method you can also watch the nuts to make sure they stay flat as well as catch the bolts.***
+2. **Seat the nuts.** Open the receiver and keep the inside of the case facing upward. Drop one nut into each molded corner pocket. Center each nut over the bolt hole and make sure it sits flat. The pocket keeps the nut from spinning once the bolt engages.
+
+![*Drop a nut into the molded anti-rotation pocket.*](images/IMG_9407.jpg){#id .class width=44%} ![*Center the nut over the hole and make sure it sits flat.*](images/IMG_9408.jpg){#id .class width=44%}
+
+3. **Place the standoff grommets.** Put one black grommet in each corner hole on the case-facing side of the backplate. Each grommet must sit between the backplate and the receiver case.
+
+![*Place one standoff grommet in each backplate corner hole, on the side that will face the case.*](images/IMG_9409.jpg){#id .class width=55%}
+
+4. **Insert the bolts.** From the outside face of the backplate, pass one bolt through the backplate and standoff grommet, then into the receiver case.
+
+![*The bolt passes through the backplate and standoff grommet before entering the case.*](images/IMG_9410.jpg){#id .class width=55%}
+
+5. **Start all four bolts.** Turn the first bolt gently until it catches the nut. Do not tighten it fully yet. Repeat at the other three corners so all four bolts are engaged.
+
+![*Keep the inside of the case facing upward while aligning the bolt with the seated nut.*](images/IMG_9411.JPG){#id .class width=44%} ![*Turn the bolt gently until its threads catch the nut; the molded pocket prevents the nut from rotating.*](images/IMG_9412.jpg){#id .class width=44%}
+
+6. **Tighten evenly.** Tighten the four bolts gradually until the backplate is secure and parallel to the case. Do not overtighten or compress the case.
+
+![*After all four bolts have caught their nuts, tighten them gradually and evenly.*](images/IMG_9415.jpg){#id .class width=55%}
+
+7. **Check the clamp gap.** Confirm that the four grommets hold the backplate evenly away from the case. Feed the hose clamps through the rectangular slots and around the mast or other mounting structure.
+
+![*Completed backplate installation. Confirm that all four corners are secure before routing the hose clamps.*](images/IMG_9404.jpg){#id .class width=55%}
+
+8. Place the receiver lid back onto the case and tighten all four lid screws securely.
+
+***Note: Keep the open case facing upward while starting the bolts. Gravity will help the nuts remain flat and centered in their pockets until the bolt threads catch.***
 
 # Quick Start Guide
 
@@ -110,9 +134,19 @@ We recommend mounting the BlūSeries receiver within .3m from the antennas, allo
 
 ## Mounting
 
-Your BlūSeries Receiver comes with two mounting plates which each have two rectangular pass-through holes to accommodate hose clamps or other mounting hardware. Simply choose the your mounting hardware and attach your receiver to the antenna mast nearest where you'll be mounting your 2.4GHz antennas. Once the Receiver is mounted, mount your antennas (you can mount them above or below the receiver) as you wish and attach them to the Receiver with coaxial cables (coax). For the end going to the Receiver, you'll need SMA Male ends on your coax.
+Your BlūSeries Receiver comes with one full-size mounting backplate with four rectangular pass-through slots for hose clamps or similar mounting hardware. Attach the receiver to the antenna mast nearest the 2.4 GHz antennas. Once the receiver is mounted, place the antennas above or below it as appropriate and connect them with coaxial cables. The receiver end of each cable requires an SMA male connector.
 
-![*BlūSeries Receiver deployed at Las Joyas Biological Station in Jalisco, Mexico*](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/BluSeriesReceiverLasJoyas.jpeg){#id .class width=50%}
+> **Backplate generation note:** Current-production BlūSeries receivers ship with one full-size backplate, as shown in the photo guide above and in the current installation photos below. Separate upper and lower mounting plates were used only on the previous generation and are not included with current receivers. Any previous-generation field photo is labeled explicitly and is provided only as a deployment example; use the single-backplate photo guide when assembling current hardware.
+
+![*Align each antenna boom with its support tube before inserting it and securing the connection.*](images/IMG_0944.jpeg){#id .class width=70%}
+
+![*Current BlūSeries Receiver installed with the four-antenna kit. Keep the receiver close to the antennas and use short coaxial cable runs.*](images/IMG_0942.jpeg){#id .class width=72%}
+
+![*Closer view of the current receiver mounted above the antenna array, with short coaxial cable runs.*](images/IMG_0943.jpeg){#id .class width=48%}
+
+**Previous-generation example — not current mounting hardware:**
+
+![*Previous-generation BlūSeries Receiver deployed at Las Joyas Biological Station in Jalisco, Mexico. This older receiver uses separate upper and lower mounting plates; current receivers ship with one full-size backplate.*](images/BluSeriesReceiverLasJoyas.jpeg){#id .class width=50%}
 
 ## Deploying
 
@@ -129,7 +163,7 @@ Once mounted, simply run the other end of the Ethernet cable into your SensorSta
 
 If you received your SensorStation after August 1, 2024, you most likely have the latest disk image and are fully compatible with the new CTT Node V3. To confirm this, connect a computer to your SensorStation via WiFi or Ethernet [see directions here](https://cellular-tracking-technologies.github.io/ctt_documentation/SensorStation-User-Guide.html#connecting-to-your-sensorstation-web-interface) and navigate to the SensorStation Overview.  
 
-![](/Users/davidlapuma/Library/CloudStorage/Dropbox/CTT_Git/ctt_documentation/images/SensorStationImageVersion.png){#id .class width=50%}
+![](images/SensorStationImageVersion.png){#id .class width=50%}
 
 If your station indicates you are running the Disk Image from July 2024, then you have the correct one. **If not, you'll need to flash your Raspberry Pi with the newest Disk Image per the instructions** [here](https://cellular-tracking-technologies.github.io/ctt_documentation/flashingComputeModule.html).
 
