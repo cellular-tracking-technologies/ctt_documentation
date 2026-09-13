@@ -465,7 +465,7 @@ To manually download data via USB, do the following:
 
 ## What's in the folder?
 
-On your USB drive you will find several files... 
+On your USB drive you will find several files...
 
   * **gps** files - these contain the GPS coordinates of the SensorStation's location
 	  * `recorded at` - time/date stamp for the time the row was written to the file (UTC)
@@ -479,7 +479,7 @@ On your USB drive you will find several files...
 		  * `3` - 3D fix. Highest quality.
 	  * `mean lat` - in decimal degrees, based on n fixes.
 	  * `mean lng` - in decimal degrees, based on n fixes.
-	  * `n fixes` - number of fixes used to calculate mean lat and lng. 
+	  * `n fixes` - number of fixes used to calculate mean lat and lng.
 
 * **log** files
 	* `msg at` - The date/time stamp of the message.
@@ -491,12 +491,14 @@ On your USB drive you will find several files...
 	* `TagID` - The 8-digit ID of the tag that was detected. Note that for tags with 10-digit IDs (e.g. V2 LifeTag), this will be represented by the first 8 digits in that ID.
 	* `TagRSSI` - The signal strength of the transmission, measured in Decibels (DB). Values. closer to zero represent stronger signals. Values below -110 DB are typically not useful for estimating distance.
 	* `NodeId` - The unique ID of the node from which the transmission was received.
-	* `Validated` - Binary value that indicates whether the CRC value corroborated the unique tag ID. 0 = invalidated; 1 = validated. Note that only V2 LifeTags and above, and HybridTags, have a CRC value that can be read by SensorStations. If the CRC value corroborates the preceding 8 digit digital ID, then a "1" is shown in the `Validated` field. **This confirms, with a 99% accuracy, that that tag ID being detected is valid!**. *Note that PowerTags do not have a CRC value and therefore will never show a "1" in this field. PowerTags do not have variable power (like LifeTag and HybridTag) and therefore do not require the validation of a CRC value.* 
+	* `Validated` - Binary value that indicates whether the CRC value corroborated the unique tag ID. 0 = invalidated; 1 = validated. Note that only V2 LifeTags and above, and HybridTags, have a CRC value that can be read by SensorStations. If the CRC value corroborates the preceding 8 digit digital ID, then a "1" is shown in the `Validated` field. **This confirms, with a 99% accuracy, that that tag ID being detected is valid!**. *Note that PowerTags do not have a CRC value and therefore will never show a "1" in this field. PowerTags do not have variable power (like LifeTag and HybridTag) and therefore do not require the validation of a CRC value.*
 
 And two folders:
 
   * `SGData` - contains any 166MHz data collected by your station.
   * `uploaded` - contains any 434MHz data that has been previously uploaded to CTT servers.
+
+For detailed descriptions of all data file types including BluSeries, Node Health, Node GPS, and more, see [Appendix IV: Data File Descriptions](#appendix-data-files).
   
 ***
 
@@ -1096,4 +1098,169 @@ We are welcoming new collaborators and supporters each week! **For more informat
 # Appendix III: Latest Sensor Station Updates
 
 ## Full update changelog can be found [here](https://github.com/cellular-tracking-technologies/sensor-station-software/releases). {-}
+
+***
+
+# Appendix IV: Data File Descriptions {#appendix-data-files}
+
+This appendix provides detailed descriptions of each data file type produced by CTT SensorStations, including what each column means and how to interpret the values. All timestamps across all data files are recorded in **UTC** (Coordinated Universal Time).
+
+## Raw Data Files (434 MHz Detections)
+
+**File naming pattern:** `CTT-<StationID>-raw-data.<date>_<time>.csv.gz`
+
+Raw data files contain all 434 MHz tag detections from the SensorStation's built-in radios. Each row represents a single tag detection (or "beep").
+
+| Column | Description |
+|--------|-------------|
+| `Time` | Date/time stamp of the detection in `YYYY-MM-DD HH:MM:SS` format (**UTC**). |
+| `RadioId` | The ID of the radio that received the detection. These correspond to the radios 1-5 on the SensorStation (standard 434 MHz radios). |
+| `TagId` | The 8-digit ID of the detected tag. |
+| `TagRSSI` | Signal strength of the transmission in decibels (dB). Values closer to 0 represent stronger signals. Values below --110 dB are typically not useful for estimating distance. |
+| `NodeId` | The unique ID of the Node from which the transmission was received. If the tag was detected directly by the SensorStation (not relayed through a Node), this field may be empty or match the station ID. |
+| `Validated` | Binary value indicating whether the CRC (Cyclic Redundancy Check) corroborated the tag ID. `0` = not validated; `1` = validated. A value of `1` confirms with 99% accuracy that the detected tag ID is correct. **Note:** Only V2+ LifeTags and HybridTags have CRC values. PowerTags do not support CRC and will always show `0`. |
+
+## BluSeries Data Files (2.4 GHz Detections)
+
+**File naming pattern:** `CTT-<StationID>-blu.<date>_<time>.csv`
+
+BluSeries data files contain detections from the 2.4 GHz BluSeries receiver module. These files record detections from BluMorpho and BluBat tags.
+
+| Column | Description |
+|--------|-------------|
+| `Time` | Date/time stamp of the detection in `YYYY-MM-DD HH:MM:SS` format (**UTC**). |
+| `RadioId` | Identifier for the radio within the BluSeries module that received the detection. |
+| `TagId` | The unique ID of the detected BluSeries tag. |
+| `TagRSSI` | Signal strength of the transmission in decibels (dB). Values closer to 0 represent stronger signals. |
+| `NodeId` | The unique ID of the Node from which the detection was relayed. Empty if detected directly by the station. |
+| `Payload` | Hex-encoded binary data containing onboard sensor readings from the tag. Must be parsed to extract meaningful values (see Payload Parsing below). |
+
+### Payload Parsing
+
+The `Payload` column in BluSeries data files contains hex-encoded sensor data. The payload structure is:
+
+| Bytes | Value | Description |
+|-------|-------|-------------|
+| 0--3 | Battery voltage | Raw value in millivolts. Divide by 1000 to convert to volts. |
+| 4--7 | Temperature | Raw value in millidegrees Celsius. Divide by 100 to convert to degrees Celsius. |
+
+**Example:** A payload starting with `E803ED03` would decode as:
+
+- `E803` (hex, little-endian) = 1000 (decimal) = **1.0 V** battery voltage
+- `ED03` (hex, little-endian) = 1005 (decimal) = **10.05 °C** temperature
+
+For R users, the `BluPayloadParser.R` script in the documentation repository or the `celltracktech` R package can parse these payloads automatically.
+
+## GPS Files
+
+**File naming pattern:** `gps_<radio_number>.csv` (e.g., `gps_0.csv`)
+
+GPS files contain location data for the SensorStation itself. The station periodically records its GPS coordinates.
+
+| Column | Description |
+|--------|-------------|
+| `recorded_at` | Date/time stamp for when the row was written to the file (**UTC**). |
+| `gps_at` | Date/time stamp for the instantaneous time of the last GPS fix (**UTC**). |
+| `latitude` | Station latitude in decimal degrees. |
+| `longitude` | Station longitude in decimal degrees. |
+| `altitude` | Station altitude in meters above sea level. |
+| `quality` | GPS fix quality: `1` = no fix, `2` = 2D fix (medium quality), `3` = 3D fix (highest quality). |
+| `mean_lat` | Mean latitude in decimal degrees, averaged over `n_fixes` readings. |
+| `mean_lng` | Mean longitude in decimal degrees, averaged over `n_fixes` readings. |
+| `n_fixes` | Number of individual GPS fixes used to calculate the mean latitude and longitude. |
+
+## Node Health Files
+
+**File naming pattern:** `CTT-<StationID>-node-health.csv`
+
+Node health files contain periodic health reports from Nodes connected to the SensorStation. These are useful for monitoring Node battery levels, solar charging, and overall system status.
+
+| Column | Description |
+|--------|-------------|
+| `Time` | Date/time stamp of the health report (**UTC**). |
+| `RadioId` | Identifier of the radio through which the health report was received. |
+| `NodeId` | The unique ID of the Node reporting its health. |
+| `NodeRSSI` | Signal strength of the Node's health report transmission in decibels (dB). Indicates the quality of the wireless link between the Node and the SensorStation. |
+| `Battery` | Battery voltage of the Node (in volts). |
+| `Celsius` | Temperature reading from the Node in degrees Celsius. |
+| `RecordedAt` | Date/time stamp when the health report was recorded by the SensorStation (**UTC**). |
+| `Firmware` | Firmware version running on the Node. |
+| `SolarVolts` | Voltage from the Node's solar panel (in volts). |
+| `SolarCurrent` | Current being produced by the Node's solar panel (in milliamps, mA). |
+| `CumulativeSolarCurrent` | Total cumulative solar charge since last reset (in milliamp-hours, mAh). |
+| `Latitude` | Node latitude in decimal degrees (if equipped with GPS). |
+| `Longitude` | Node longitude in decimal degrees (if equipped with GPS). |
+
+### V3 Node Health (Extended Fields)
+
+V3 Nodes report additional health metrics:
+
+| Column | Description |
+|--------|-------------|
+| `time` | Date/time stamp of the health report (**UTC**). |
+| `up_time` | Time since the Node was last rebooted (in milliseconds). |
+| `power_ok` | Power status indicator: `1` = power is OK, `0` = low power condition. |
+| `batt_mv` | Battery voltage in millivolts. Divide by 1000 to get volts. |
+| `batt_temp_c` | Battery temperature in degrees Celsius. |
+| `charge_mv` | Charging voltage in millivolts. |
+| `charge_ma` | Charging current in milliamps (mA). |
+| `charge_temp_c` | Charger temperature in degrees Celsius. |
+| `node_temp_c` | Node board temperature in degrees Celsius. |
+| `energy_used_mah` | Cumulative energy consumed since last reset in milliamp-hours (mAh). |
+| `sd_free` | Free space remaining on the Node's SD card (as a percentage). |
+| `sub_ghz_det` | Count of 434 MHz (sub-GHz) tag detections since last report. |
+| `ble_det` | Count of 2.4 GHz (BLE/BluSeries) tag detections since last report. |
+| `errors` | Error status or description string. Empty if no errors. |
+
+## Log Files
+
+**File naming pattern:** `CTT-<StationID>-log.csv` or `log.csv`
+
+Log files contain system messages from the SensorStation. These are useful for diagnosing issues with the station's operation.
+
+| Column | Description |
+|--------|-------------|
+| `msg_at` | Date/time stamp of the log message (**UTC**). |
+| `msg` | The text content of the log message. These may include information about radio initialization, connectivity events, errors, uploads, and other system activities. |
+
+## SensorGnome Data (166 MHz Detections)
+
+**File location:** `SGData/` folder
+
+SensorGnome data files contain 166 MHz Lotek/Nanotag detections collected via FunCube Dongles (FCD) or RTL-SDR receivers. These detections are part of the Motus Wildlife Tracking System.
+
+The SensorGnome data format is managed by the Motus project. For detailed column descriptions, refer to the Motus documentation at [docs.motus.org](https://docs.motus.org).
+
+SensorGnome data appears in a separate section of the SensorStation's web interface and is uploaded independently from the CTT 434 MHz and BluSeries data.
+
+## Node GPS Files
+
+**File naming pattern:** `node_gps.csv`
+
+If Nodes are equipped with GPS, their location data is relayed to the SensorStation and stored in node GPS files.
+
+| Column | Description |
+|--------|-------------|
+| `latitude` | Node latitude in decimal degrees. |
+| `longitude` | Node longitude in decimal degrees. |
+| `altitude` | Node altitude in meters above sea level. |
+| `gps_at` | Date/time stamp of the GPS fix (**UTC**). |
+| `hdop` | Horizontal Dilution of Precision --- a measure of GPS accuracy in the horizontal plane. Lower values indicate better accuracy. |
+| `vdop` | Vertical Dilution of Precision --- a measure of GPS accuracy in the vertical plane. Lower values indicate better accuracy. |
+| `pdop` | Position (3D) Dilution of Precision --- a combined measure of horizontal and vertical accuracy. Lower values indicate better accuracy. |
+| `navigation_mode` | GPS navigation mode: `1` = no fix, `2` = 2D fix, `3` = 3D fix. |
+| `satellites` | Number of satellites used in the GPS fix. More satellites generally means better accuracy. |
+| `on_time` | Time spent acquiring the GPS fix (in seconds). |
+| `node_id` | The unique ID of the Node reporting its GPS location. |
+
+## Data File Organization
+
+Data files are stored on the SensorStation's SD card in the following directory structure:
+
+| Directory | Contents |
+|-----------|----------|
+| `/data/` | Active data files currently being written to (`.csv` format). |
+| `/data/uploaded/` | Data files that have already been uploaded to CTT servers. |
+| `/data/rotated/` | Older data files that have been rotated out of the active directory. |
+| `/data/SGData/` | SensorGnome (166 MHz) data files. |
 
