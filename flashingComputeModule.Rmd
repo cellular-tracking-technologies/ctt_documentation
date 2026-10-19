@@ -71,6 +71,10 @@ You will need drivers for your computer to recognize the module as a new drive, 
 
 * Drivers - Download and run the [Windows Installer](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe) which will install the `rpiboot.exe`.
 
+You will need to run the `rpiboot_setup.exe`, which installs the `rpiboot.exe` program. The `rpiboot.exe` program is usually located in `C:\Program Files (x86)\Raspberry Pi` on Windows computers. You can also search for `Raspberry Pi USB Boot` in your search bar.
+
+Once it is installed, run the `rpiboot.exe` program to put the Sensor Station into boot mode.
+
 ### Linux / Mac
 
 Linux / MAC users will have to clone the rpiboot source code, compile and run the rpiboot.exe file that is generated. Detailed instructions for **Linux** [here](https://www.raspberrypi.org/documentation/hardware/computemodule/cm-emmc-flashing.md).
