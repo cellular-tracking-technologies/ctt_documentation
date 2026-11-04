@@ -15,6 +15,21 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+# Fetch latest release info from GitHub
+lts_release <- tryCatch({
+  release_json <- jsonlite::fromJSON(
+    "https://api.github.com/repos/cellular-tracking-technologies/sensor-station-software/releases/latest"
+  )
+  list(
+    version = sub("^v", "", release_json$tag_name),
+    date    = as.Date(release_json$published_at),
+    url     = release_json$html_url
+  )
+}, error = function(e) {
+  # Fallback if the API call fails (e.g. no internet)
+  list(version = "UNKNOWN", date = Sys.Date(), url = "https://github.com/cellular-tracking-technologies/sensor-station-software/releases")
+})
 ```
 
 # Updating your SensorStation's Disk Image
@@ -37,7 +52,7 @@ While CTT offers many over-the-air updates to your `CTT SensorStation` sometimes
 ### **V2 & V3 SensorStation Long Term Stable (LTS) Image**
 *Records Tag, GPS, SensorGnome, and Telemetry data. Compatible with BlūSeries Receiver and all BlūSeries infrastructure including V3 Nodes (with V4.0.0 or later Radio Firmware)*
 
-Click [here](https://github.com/cellular-tracking-technologies/sensor-station-software/releases) to go to the image release and download page. You will also find information on releases and updates.
+You will need to go to the image release and download page. You will also find information on releases and updates. **[Download the latest LTS Disk Image (Version `r lts_release$version`) here](`r lts_release$url`)**.
 
 ### **Old and Depreciated Disk Images**
 
@@ -49,7 +64,7 @@ These disk images are no longer updated with the latest software.
 
 #### **V2 and V3 SensorStation Disk Image**
 
-[**Version ID: 1.7.0 Image: 2025-09-17 Updated: 2025-11-24**](https://s3.amazonaws.com/media.celltracktech.com/sensor-station/images/sensor-station.latest.xz) **Replaced by `Version 2.3.4` linked above. This image is compatible with the CTT Node V3 and the BluSeries Receiver.**
+[**Version ID: 1.7.0 Image: 2025-09-17 Updated: 2025-11-24**](https://s3.amazonaws.com/media.celltracktech.com/sensor-station/images/sensor-station.latest.xz) **Replaced by `Version `r lts_release$version`` linked above. This image is compatible with the CTT Node V3 and the BluSeries Receiver.**
 
 *This version is required if you are using the V3 version of the CTT Nodes, or the CTT BlūSeries Receiver.* **Note that you will also need to update your radio firmware to v4.0.0.** This is the default firmware for this disk image release. The radio firmware can now be updated directly from the LCD screen or the SensorStation Interface. 
 

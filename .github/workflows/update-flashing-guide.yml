@@ -1,0 +1,73 @@
+# Re-knit flashingComputeModule.Rmd so the embedded LTS version stays in sync
+# with the latest GitHub release of sensor-station-software.
+#
+# Triggers:
+#   - Daily schedule (checks if version changed; commits only when it has)
+#   - Manual (workflow_dispatch) for immediate re-knit
+#   - repository_dispatch from sensor-station-software (optional — requires a
+#     PAT with repo scope stored as DOCS_DISPATCH_TOKEN in that repo; see README)
+name: update-flashing-guide
+
+on:
+  schedule:
+    - cron: '30 6 * * *'       # daily at 06:30 UTC
+  workflow_dispatch:
+  repository_dispatch:
+    types: [new-release]
+
+permissions:
+  contents: write
+
+jobs:
+  re-knit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check if version changed
+        id: check
+        run: |
+          LATEST="$(curl -fsSL https://api.github.com/repos/cellular-tracking-technologies/sensor-station-software/releases/latest | jq -r .tag_name | sed 's/^v//')"
+          echo "latest=$LATEST"
+          # Look for the version already baked into the HTML
+          if grep -qF "Version $LATEST" flashingComputeModule.html 2>/dev/null; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "HTML already shows version $LATEST — nothing to do."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            echo "HTML needs update to version $LATEST."
+          fi
+
+      - name: Install R
+        if: steps.check.outputs.skip != 'true'
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: 'release'
+
+      - name: Install R dependencies
+        if: steps.check.outputs.skip != 'true'
+        run: |
+          Rscript -e 'install.packages(c("rmarkdown", "knitr", "jsonlite"), repos = "https://cloud.r-project.org")'
+
+      - name: Install pandoc
+        if: steps.check.outputs.skip != 'true'
+        uses: r-lib/actions/setup-pandoc@v2
+
+      - name: Knit flashingComputeModule.Rmd
+        if: steps.check.outputs.skip != 'true'
+        run: |
+          Rscript -e 'rmarkdown::render("flashingComputeModule.Rmd", output_format = "html_document")'
+
+      - name: Commit and push if changed
+        if: steps.check.outputs.skip != 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add flashingComputeModule.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            LATEST="$(curl -fsSL https://api.github.com/repos/cellular-tracking-technologies/sensor-station-software/releases/latest | jq -r .tag_name | sed 's/^v//')"
+            git commit -m "docs: update flashing guide to SensorStation v${LATEST}"
+            git push
+          fi
