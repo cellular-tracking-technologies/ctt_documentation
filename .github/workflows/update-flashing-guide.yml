@@ -1,11 +1,11 @@
-# Re-knit flashingComputeModule.Rmd so the embedded LTS version stays in sync
-# with the latest GitHub release of sensor-station-software.
+# Update the LTS version number in flashingComputeModule.html to match the
+# latest GitHub release of sensor-station-software.
 #
 # Triggers:
 #   - Daily schedule (checks if version changed; commits only when it has)
-#   - Manual (workflow_dispatch) for immediate re-knit
+#   - Manual (workflow_dispatch) for immediate update
 #   - repository_dispatch from sensor-station-software (optional — requires a
-#     PAT with repo scope stored as DOCS_DISPATCH_TOKEN in that repo; see README)
+#     PAT with repo scope stored as DOCS_DISPATCH_TOKEN in that repo)
 name: update-flashing-guide
 
 on:
@@ -19,55 +19,88 @@ permissions:
   contents: write
 
 jobs:
-  re-knit:
+  update-version:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Check if version changed
+      - name: Fetch latest release version
+        id: release
+        run: |
+          RELEASE_JSON="$(curl -fsSL https://api.github.com/repos/cellular-tracking-technologies/sensor-station-software/releases/latest)"
+          VERSION="$(echo "$RELEASE_JSON" | jq -r .tag_name | sed 's/^v//')"
+          URL="$(echo "$RELEASE_JSON" | jq -r .html_url)"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "url=$URL" >> "$GITHUB_OUTPUT"
+          echo "Latest release: v$VERSION ($URL)"
+
+      - name: Check if update needed
         id: check
         run: |
-          LATEST="$(curl -fsSL https://api.github.com/repos/cellular-tracking-technologies/sensor-station-software/releases/latest | jq -r .tag_name | sed 's/^v//')"
-          echo "latest=$LATEST"
-          # Look for the version already baked into the HTML
-          if grep -qF "Version $LATEST" flashingComputeModule.html 2>/dev/null; then
+          if grep -qF "Version ${{ steps.release.outputs.version }})" flashingComputeModule.html 2>/dev/null; then
             echo "skip=true" >> "$GITHUB_OUTPUT"
-            echo "HTML already shows version $LATEST — nothing to do."
+            echo "HTML already shows version ${{ steps.release.outputs.version }} — nothing to do."
           else
             echo "skip=false" >> "$GITHUB_OUTPUT"
-            echo "HTML needs update to version $LATEST."
+            echo "HTML needs update to version ${{ steps.release.outputs.version }}."
           fi
 
-      - name: Install R
+      - uses: actions/setup-python@v5
         if: steps.check.outputs.skip != 'true'
-        uses: r-lib/actions/setup-r@v2
         with:
-          r-version: 'release'
+          python-version: '3.x'
 
-      - name: Install R dependencies
+      - name: Update version in Rmd and HTML
         if: steps.check.outputs.skip != 'true'
+        shell: python
         run: |
-          Rscript -e 'install.packages(c("rmarkdown", "knitr", "jsonlite"), repos = "https://cloud.r-project.org")'
+          import re, pathlib
 
-      - name: Install pandoc
-        if: steps.check.outputs.skip != 'true'
-        uses: r-lib/actions/setup-pandoc@v2
+          version = "${{ steps.release.outputs.version }}"
+          url = "${{ steps.release.outputs.url }}"
 
-      - name: Knit flashingComputeModule.Rmd
-        if: steps.check.outputs.skip != 'true'
-        run: |
-          Rscript -e 'rmarkdown::render("flashingComputeModule.Rmd", output_format = "html_document")'
+          for filename in ("flashingComputeModule.Rmd", "flashingComputeModule.html"):
+              p = pathlib.Path(filename)
+              if not p.exists():
+                  print(f"WARN: {filename} not found, skipping")
+                  continue
+              text = p.read_text()
+
+              # 1) Update "LTS Disk Image (Version X.Y.Z)" to the new version
+              text = re.sub(
+                  r'(LTS Disk Image \(Version )\d+\.\d+\.\d+(\))',
+                  rf'\g<1>{version}\2',
+                  text,
+              )
+
+              # 2) Update the release URL next to the LTS version
+              text = re.sub(
+                  r'https://github\.com/cellular-tracking-technologies/sensor-station-software/releases/tag/v[\d.]+',
+                  url,
+                  text,
+              )
+
+              # 3) Update "Replaced by `Version X.Y.Z`" for the deprecated 1.7.0 entry
+              #    (the first occurrence that is followed by "linked above. This image")
+              text = re.sub(
+                  r'(Replaced by [`<>code]*Version [`<>code]*)\d+\.\d+\.\d+',
+                  rf'\g<1>{version}',
+                  text,
+                  count=1,
+              )
+
+              p.write_text(text)
+              print(f"Updated {filename} to version {version}")
 
       - name: Commit and push if changed
         if: steps.check.outputs.skip != 'true'
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add flashingComputeModule.html
+          git add flashingComputeModule.Rmd flashingComputeModule.html
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            LATEST="$(curl -fsSL https://api.github.com/repos/cellular-tracking-technologies/sensor-station-software/releases/latest | jq -r .tag_name | sed 's/^v//')"
-            git commit -m "docs: update flashing guide to SensorStation v${LATEST}"
+            git commit -m "docs: update flashing guide to SensorStation v${{ steps.release.outputs.version }}"
             git push
           fi
