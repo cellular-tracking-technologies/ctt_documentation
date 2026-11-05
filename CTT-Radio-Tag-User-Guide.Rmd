@@ -505,7 +505,13 @@ With the tag separated from the panel, you can still test the tag by bridging th
 
 ![*Fig 5. With the tag separated from the panel, you can still test the tag by bridging the two gold pads on the testing tab.*](images/BluBat_precut.png){#id .class width=50%}
 
-Testing is easiest with metal tweezers, but any metal will do. When bridged, the tag will beep. When unbridged, it will stop.
+To bridge the pads, briefly place metal tweezers or another metal object across both tabs so the metal touches both gold pads at the same time. When bridged, the tag will beep. Remove the metal object to stop the test transmission.
+
+<div class="critical-note">
+
+**Warning: Do NOT fold the tabs onto each other.** Folding the tabs can damage the circuitry and may permanently damage the tag.
+
+</div>
 
 The gold-pad bridging method is for instantaneous testing only. Do not leave the pads bridged for any length of time. Testing this way draws more power than an activated tag and will reduce the life of the transmitter if left bridged.
 
@@ -527,10 +533,10 @@ Confirm that the tag ID appears on your compatible 2.4GHz receiver.
 
 For local receiver testing:
 
-1. Briefly bridge the two gold pads on the testing tab so the tag begins transmitting.
+1. Briefly place metal tweezers or another metal object across both gold pads on the testing tab so the tag begins transmitting.
 2. Keep the tag within detection range of the Sidekick, V3 Node, or SensorStation with BlūSeries Receiver.
 3. Confirm that the expected tag ID appears in the receiver workflow.
-4. When testing is complete, remove the bridge from the gold pads to stop the test transmission.
+4. When testing is complete, remove the metal object from the gold pads to stop the test transmission.
 
 For Expanded Blū+ testing, confirm that the tag is active in the BlūSeries Portal and that detections appear after the tag has transmitted in compatible coverage.
 
