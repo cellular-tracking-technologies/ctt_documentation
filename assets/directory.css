@@ -87,6 +87,9 @@ svg {
   color:var(--ink);
   text-decoration:none
 }
+.brand-logo {
+  display:flex;
+}
 .brand img {
   width:167px;
   height:64px;
@@ -98,9 +101,15 @@ svg {
   background:var(--line)
 }
 .brand-label {
+  color:var(--ink);
+  text-decoration:none;
   font-size:13px;
   font-weight:600;
   letter-spacing:.02em
+}
+.brand-label:hover {
+  color:var(--blue);
+  text-decoration:underline;
 }
 .header-nav {
   display:flex;
