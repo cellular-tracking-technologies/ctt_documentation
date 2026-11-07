@@ -682,6 +682,13 @@ svg {
 .resource-links a {
   width:fit-content
 }
+.release-note {
+  display:block;
+  margin-top:4px;
+  font-size:11px;
+  line-height:1.5;
+  color:var(--muted)
+}
 .resource small {
   display:block;
   color:var(--muted);
