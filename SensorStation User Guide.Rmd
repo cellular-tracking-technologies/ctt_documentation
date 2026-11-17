@@ -724,7 +724,28 @@ Once your station has connected to your wifi network, you can connect to your Se
 
   * Connect your computer, tablet or smartphone to the same wifi network as your SensorStation.
   * open a web browser on your computer, tablet or smartphone and navigate to the IP address found via the `Network > IP Address` on your SensorStation's LCD screen. Alternatively you can use the name found in `Network > Hostname`, which is typically `sensorstation.local`.
-  
+
+## Finding your SensorStation's WiFi MAC Address
+
+Some WiFi networks (such as university, corporate, or institutional networks) require you to register a device's MAC address before it can connect. A MAC address is a unique hardware identifier for your SensorStation's WiFi adapter, formatted as six pairs of hexadecimal characters separated by colons (e.g., `aa:bb:cc:dd:ee:ff`).
+
+### Via the Command Line
+
+  1. Connect to your SensorStation via Ethernet (see the sections above for details).
+  2. SSH into your SensorStation using the appropriate credentials for your station version.
+  3. Run the following command:
+
+  `ifconfig wlan0`
+
+  4. In the output, look for the line that starts with `ether` — the value next to it is your WiFi adapter's MAC address (e.g., `ether aa:bb:cc:dd:ee:ff`).
+  5. Provide this MAC address to your network administrator so they can whitelist your SensorStation on the network.
+
+### Tips
+
+  * **Register before configuring WiFi.** On networks that require MAC registration, make sure the MAC address is registered and approved *before* you add the WiFi credentials to your SensorStation. Otherwise the station will fail to connect.
+  * **V1/V2 stations with USB WiFi adapters:** The MAC address belongs to the USB WiFi adapter, not the SensorStation itself. If you swap the USB WiFi adapter, the MAC address will change and you will need to register the new one.
+  * **V3 stations:** The WiFi is built into the board, so the MAC address is permanent for that station.
+
 ***
 
 # The SensorStation Interface Explained
